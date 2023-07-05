@@ -22,22 +22,7 @@
 			"LoadingPhase": "Default",
 			"WhitelistPlatforms": [
 				"Win32",
-				"Win64",
-				"HoloLens",
-				"Mac",
-				"XboxOne",
-				"PS4",
-				"PS5",
-				"XSX",
-				"XboxOneGDK",
-				"IOS",
-				"Android",
-				"Linux",
-				"LinuxAArch64",
-				"AllDesktop",
-				"TVOS",
-				"Switch",
-				"Lumin"
+				"Win64"
 			]
 		}
 	]

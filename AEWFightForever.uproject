@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{33333333-3333-3333-3333-333333333334}",
+	"EngineAssociation": "4.27",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -78,9 +78,7 @@
 		{
 			"Name": "OnlineSubsystemGooglePlay",
 			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Android"
-			]
+			"SupportedTargetPlatforms": []
 		},
 		{
 			"Name": "AndroidPermission",
@@ -170,16 +168,12 @@
 		{
 			"Name": "MagicLeapMedia",
 			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Lumin"
-			]
+			"SupportedTargetPlatforms": []
 		},
 		{
 			"Name": "MagicLeap",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
-				"Lumin",
-				"Mac",
 				"Win64"
 			]
 		},
@@ -187,8 +181,6 @@
 			"Name": "MagicLeapPassableWorld",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
-				"Lumin",
-				"Mac",
 				"Win64"
 			]
 		},
@@ -205,8 +197,7 @@
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win32",
-				"Win64",
-				"Android"
+				"Win64"
 			]
 		},
 		{
@@ -214,8 +205,7 @@
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win32",
-				"Win64",
-				"Linux"
+				"Win64"
 			]
 		},
 		{
@@ -263,10 +253,7 @@
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win32",
-				"Win64",
-				"Linux",
-				"HoloLens",
-				"Android"
+				"Win64"
 			]
 		},
 		{
@@ -274,10 +261,7 @@
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win32",
-				"Win64",
-				"Linux",
-				"HoloLens",
-				"Android"
+				"Win64"
 			]
 		},
 		{
@@ -285,10 +269,7 @@
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win32",
-				"Win64",
-				"Linux",
-				"Android",
-				"HoloLens"
+				"Win64"
 			]
 		},
 		{
@@ -324,26 +305,14 @@
 		}
 	],
 	"TargetPlatforms": [
-		"WindowsNoEditor",
-		"PS4",
-		"PS5",
-		"Switch",
-		"WinGDK",
-		"XboxOne",
-		"XboxOneGDK",
-		"XSX",
-		"GDK"
+		"WindowsNoEditor"
 	],
 	"PreBuildSteps":
 	{
-		"Win64": [
-			"::echo [Pre Build Steps] Start.\r\n\t\tpushd $(ProjectDir)\r\n\t\tpushd Source\\_Batches\r\n\tcall PreBuild.bat $(ProjectDir)\r\n\t\tpopd\r\n\t\techo [Pre Build Steps] Done."
-		]
+		"Win64": []
 	},
 	"PostBuildSteps":
 	{
-		"Win64": [
-			"::echo [Post Build Steps] Start.\r\n\t\tpushd $(ProjectDir)\r\n\t\tpushd Source\\_Batches\r\n\tcall PostBuild.bat $(ProjectDir)\r\n\t\tpopd\r\n\t\techo [Post Build Steps] Done."
-		]
+		"Win64": []
 	}
 }
