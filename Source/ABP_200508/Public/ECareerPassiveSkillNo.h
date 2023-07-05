@@ -1,0 +1,46 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "ECareerPassiveSkillNo.generated.h"
+
+UENUM(BlueprintType)
+enum class ECareerPassiveSkillNo : uint8 {
+    None,
+    PS_ChainWrestlingBuff,
+    PS_1stAttackBuff,
+    PS_BackAgainstTheWallBuff,
+    PS_ReboundAttackBuff,
+    PS_CornerSprintAttackBuff,
+    PS_TopeAttackBuff,
+    PS_DivingAttackBuff,
+    PS_SpringboardAttackBuff,
+    PS_EnviromentalAttackBuff,
+    PS_KickOutBuff,
+    PS_DefenderKickOutBuff,
+    PS_VariedOffenseBuff,
+    PS_TauntBuff,
+    PS_HotTagBuff,
+    PS_TagBuff,
+    PS_TandemOffenseBuff,
+    PS_2_for_1_AttackBuff,
+    PS_WeaponBuff,
+    PS_EliminationBuff,
+    PS_BattleRoyaleTimerBuff,
+    PS_ExplosionTriggerBuff,
+    PS_ExplosionDamageBuff,
+    PS_CountDownBuff,
+    PS_InjuryBuff,
+    PS_BloodBuff,
+    PS_GroggyBuff,
+    PS_Grit,
+    PS_SubmissionToughness,
+    PS_DownButNotOut,
+    PS_EliteDefense,
+    PS_SubmissionSpecialist,
+    PS_LeverageSpecialist,
+    PS_ViseGrip,
+    PS_FinisherSpecialist,
+    PS_Tit_for_Tat,
+    PS_NoDown,
+    SkillLimit,
+};
+

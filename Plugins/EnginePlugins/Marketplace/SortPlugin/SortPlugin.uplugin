@@ -1,0 +1,44 @@
+{
+	"FileVersion": 3,
+	"Version": 3,
+	"VersionName": "2.1",
+	"FriendlyName": "ArrayHelper",
+	"Description": "Various helper functions to handle arrays by copy or reference",
+	"Category": "Array",
+	"CreatedBy": "RLoris",
+	"CreatedByURL": "https://rloris.github.io",
+	"DocsURL": "https://github.com/RLoris/ArrayHelperDoc/",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/813e339b92ad4cf587a4cef56bec7020",
+	"SupportURL": "",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "SortPlugin",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win32",
+				"Win64",
+				"HoloLens",
+				"Mac",
+				"XboxOne",
+				"PS4",
+				"PS5",
+				"XSX",
+				"XboxOneGDK",
+				"IOS",
+				"Android",
+				"Linux",
+				"LinuxAArch64",
+				"AllDesktop",
+				"TVOS",
+				"Switch",
+				"Lumin"
+			]
+		}
+	]
+}

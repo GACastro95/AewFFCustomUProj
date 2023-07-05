@@ -1,0 +1,18 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "C++ Module Generator",
+	"Description": "An editor tool which allows game or plugin modules to be generated from within the editor.",
+	"Category": "Other",
+	"CreatedBy": "Sam Carey",
+	"CreatedByURL": "https://samcarey.itch.io/",
+	"DocsURL": "https://docs.google.com/document/d/1S0iQ4zKNqsqT5XwoW2836c_pnhFELW1eNchFOLbqP-8/edit?usp=sharing",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/ec36ec6e94f74075819e2a04f7cb97f3",
+	"SupportURL": "www.samcarey.tech",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true
+}

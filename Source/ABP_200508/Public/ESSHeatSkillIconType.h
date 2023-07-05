@@ -1,0 +1,45 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "ESSHeatSkillIconType.generated.h"
+
+UENUM(BlueprintType)
+enum class ESSHeatSkillIconType : uint8 {
+    None,
+    DamageBoost,
+    AttentionBoost,
+    MoveLevelUp_PunchStrong1,
+    MoveLevelUp_KickStrong1,
+    MoveLevelUp_GrappleStrong1,
+    MoveLevelUp_AirKickStrong1,
+    MoveLevelUp_AirPunchStrong1,
+    MoveLevelUp_PunchStrong2,
+    MoveLevelUp_PunchStrong3,
+    MoveLevelUp_KickStrong2,
+    MoveLevelUp_KickStrong3,
+    MoveLevelUp_GrappleStrong2,
+    MoveLevelUp_GrappleStrong3,
+    MoveLevelUp_GrappleStrong4,
+    MoveLevelUp_AirKickStrong2,
+    MoveLevelUp_AirKickStrong3,
+    MoveLevelUp_AirPunchStrong2,
+    MoveLevelUp_AirPunchStrong3,
+    MoveLevelUp_PunchCombo2,
+    MoveLevelUp_KickCombo2,
+    MoveLevelUp_PunchCombo3,
+    MoveLevelUp_KickCombo3,
+    MoveLevelUp_GrappleStrong5,
+    BlowBoost_AirPunch,
+    DamageBoost_Weapon,
+    WeaponQuantityPlus_Melee,
+    WeaponQuantityPlus_Throw,
+    WeaponQuantityPlus_Gun,
+    BlowBoost_Weapon,
+    WeaponThrowExpand,
+    WeaponGunRangeBoost,
+    DamageBoostToShield,
+    AttackCapsuleExpand,
+    GuardLevelUp,
+    MotionSpeedUp,
+    Max,
+};
+
