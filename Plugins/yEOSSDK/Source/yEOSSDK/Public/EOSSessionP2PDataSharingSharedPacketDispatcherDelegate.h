@@ -1,0 +1,10 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EEOSSessionP2PDataSharingEvent.h"
+#include "EOSSessionP2PDataSharingSharedPacketDispatcherDelegate.generated.h"
+
+class UEOSSessionP2P;
+class UEOSSessionP2PSynchronizedPacketBase;
+
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams(FEOSSessionP2PDataSharingSharedPacketDispatcher, EEOSSessionP2PDataSharingEvent, EOSSessionP2PDataSharingEvent, UEOSSessionP2P*, EOSSessionP2P, UEOSSessionP2PSynchronizedPacketBase*, EOSSessionP2PSynchronizedPacketBaseForCurrent, UEOSSessionP2PSynchronizedPacketBase*, EOSSessionP2PSynchronizedPacketBaseForReceived, const FString&, ProductUserID);
+
