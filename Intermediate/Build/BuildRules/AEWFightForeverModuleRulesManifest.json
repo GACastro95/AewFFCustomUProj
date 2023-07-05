@@ -1,0 +1,27 @@
+{
+	"SourceFiles": [
+		"D:\\AewFFCustomUProj\\Source\\ABP_200508\\ABP_200508.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\Creation\\Creation.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\ELITE\\ELITE.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\ELITE_Core\\ELITE_Core.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\ELITE_Game\\ELITE_Game.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\ELITE_LoadingScreen\\ELITE_LoadingScreen.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\OnlineSubsystemSteam\\OnlineSubsystemSteam.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\EnginePlugins\\Marketplace\\SortPlugin\\Source\\SortPlugin\\SortPlugin.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\EnginePlugins\\Runtime\\Nvidia\\NVIDIAGfeSDK\\Source\\NVIDIAGfeSDK\\NVIDIAGfeSDK.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\ImGui\\Source\\ImGui\\ImGui.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\NetImgui\\Source\\NetImgui\\NetImgui.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\Runtime\\CriWare\\CriWareCinematics\\Source\\CriWareMovieScenes\\CriWareMovieScenes.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\Runtime\\CriWare\\CriWare\\Source\\CriWareRuntime\\CriWareRuntime.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\Runtime\\DLSS\\Source\\DLSS\\DLSS.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\Runtime\\DLSS\\Source\\DLSSBlueprint\\DLSSBlueprint.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\Runtime\\Intel\\XeSS\\Source\\XeSSBlueprint\\XeSSBlueprint.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\Runtime\\Intel\\XeSS\\Source\\XeSSPlugin\\XeSSPlugin.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\yDebug\\Source\\yDebug\\yDebug.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\yEOSSDK\\Source\\yEOSSDK\\yEOSSDK.Build.cs",
+		"D:\\AewFFCustomUProj\\Plugins\\yGS2Client\\Source\\yGS2Client\\yGS2Client.Build.cs",
+		"D:\\AewFFCustomUProj\\Source\\AEWFightForeverEditor.Target.cs",
+		"D:\\AewFFCustomUProj\\Source\\AEWFightForeverGame.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

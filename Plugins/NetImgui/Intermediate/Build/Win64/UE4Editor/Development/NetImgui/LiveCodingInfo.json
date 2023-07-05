@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.NetImgui.cpp.obj": [
+			"NetImguiDemoActor.cpp.obj",
+			"NetImguiModule.cpp.obj"
+		],
+		"Module.NetImgui.gen.cpp.obj": [
+			"NetImgui.init.gen.cpp.obj",
+			"NetImguiDemoActor.gen.cpp.obj"
+		]
+	}
+}

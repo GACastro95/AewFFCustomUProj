@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.XeSSBlueprint.cpp.obj": [
+			"XeSSBlueprintLibrary.cpp.obj",
+			"XeSSBlueprintModule.cpp.obj"
+		],
+		"Module.XeSSBlueprint.gen.cpp.obj": [
+			"EXeSSQualityMode.gen.cpp.obj",
+			"XeSSBlueprint.init.gen.cpp.obj",
+			"XeSSBlueprintLibrary.gen.cpp.obj"
+		]
+	}
+}

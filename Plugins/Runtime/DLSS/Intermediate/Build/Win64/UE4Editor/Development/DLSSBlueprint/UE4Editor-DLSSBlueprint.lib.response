@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-DLSSBlueprint.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\AewFFCustomUProj\Intermediate\Build\Win64\AEWFightForeverEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\DLSS\Intermediate\Build\Win64\UE4Editor\Development\DLSSBlueprint\Module.DLSSBlueprint.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\DLSS\Intermediate\Build\Win64\UE4Editor\Development\DLSSBlueprint\Module.DLSSBlueprint.gen.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\DLSS\Intermediate\Build\Win64\UE4Editor\Development\DLSSBlueprint\Default.rc2.res"
+/OUT:"D:\AewFFCustomUProj\Plugins\Runtime\DLSS\Intermediate\Build\Win64\UE4Editor\Development\DLSSBlueprint\UE4Editor-DLSSBlueprint.lib"

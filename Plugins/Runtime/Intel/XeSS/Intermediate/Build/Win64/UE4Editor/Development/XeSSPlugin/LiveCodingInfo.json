@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.XeSSPlugin.cpp.obj": [
+			"XeSSPluginModule.cpp.obj",
+			"XeSSSettings.cpp.obj"
+		],
+		"Module.XeSSPlugin.gen.cpp.obj": [
+			"XeSSPlugin.init.gen.cpp.obj",
+			"XeSSSettings.gen.cpp.obj"
+		]
+	}
+}

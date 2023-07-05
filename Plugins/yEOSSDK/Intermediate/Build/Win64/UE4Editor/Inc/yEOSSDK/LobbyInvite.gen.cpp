@@ -1,0 +1,135 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/GeneratedCppIncludes.h"
+#include "yEOSSDK/Public/LobbyInvite.h"
+#ifdef _MSC_VER
+#pragma warning (push)
+#pragma warning (disable : 4883)
+#endif
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+void EmptyLinkFunctionForGeneratedCodeLobbyInvite() {}
+// Cross Module References
+	YEOSSDK_API UScriptStruct* Z_Construct_UScriptStruct_FLobbyInvite();
+	UPackage* Z_Construct_UPackage__Script_yEOSSDK();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FDateTime();
+	YEOSSDK_API UClass* Z_Construct_UClass_UEOSCommunityInfoBase_NoRegister();
+// End Cross Module References
+class UScriptStruct* FLobbyInvite::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern YEOSSDK_API uint32 Get_Z_Construct_UScriptStruct_FLobbyInvite_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FLobbyInvite, Z_Construct_UPackage__Script_yEOSSDK(), TEXT("LobbyInvite"), sizeof(FLobbyInvite), Get_Z_Construct_UScriptStruct_FLobbyInvite_Hash());
+	}
+	return Singleton;
+}
+template<> YEOSSDK_API UScriptStruct* StaticStruct<FLobbyInvite>()
+{
+	return FLobbyInvite::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FLobbyInvite(FLobbyInvite::StaticStruct, TEXT("/Script/yEOSSDK"), TEXT("LobbyInvite"), false, nullptr, nullptr);
+static struct FScriptStruct_yEOSSDK_StaticRegisterNativesFLobbyInvite
+{
+	FScriptStruct_yEOSSDK_StaticRegisterNativesFLobbyInvite()
+	{
+		UScriptStruct::DeferCppStructOps<FLobbyInvite>(FName(TEXT("LobbyInvite")));
+	}
+} ScriptStruct_yEOSSDK_StaticRegisterNativesFLobbyInvite;
+	struct Z_Construct_UScriptStruct_FLobbyInvite_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PUID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_PUID;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DateTime_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DateTime;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CommunityInfo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CommunityInfo;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLobbyInvite_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/LobbyInvite.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLobbyInvite>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_PUID_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "LobbyInvite" },
+		{ "ModuleRelativePath", "Public/LobbyInvite.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_PUID = { "PUID", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLobbyInvite, PUID), METADATA_PARAMS(Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_PUID_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_PUID_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_DateTime_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "LobbyInvite" },
+		{ "ModuleRelativePath", "Public/LobbyInvite.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_DateTime = { "DateTime", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLobbyInvite, DateTime), Z_Construct_UScriptStruct_FDateTime, METADATA_PARAMS(Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_DateTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_DateTime_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_CommunityInfo_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "LobbyInvite" },
+		{ "ModuleRelativePath", "Public/LobbyInvite.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_CommunityInfo = { "CommunityInfo", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLobbyInvite, CommunityInfo), Z_Construct_UClass_UEOSCommunityInfoBase_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_CommunityInfo_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_CommunityInfo_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FLobbyInvite_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_PUID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_DateTime,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLobbyInvite_Statics::NewProp_CommunityInfo,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLobbyInvite_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_yEOSSDK,
+		nullptr,
+		&NewStructOps,
+		"LobbyInvite",
+		sizeof(FLobbyInvite),
+		alignof(FLobbyInvite),
+		Z_Construct_UScriptStruct_FLobbyInvite_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLobbyInvite_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FLobbyInvite_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLobbyInvite_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FLobbyInvite()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FLobbyInvite_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_yEOSSDK();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("LobbyInvite"), sizeof(FLobbyInvite), Get_Z_Construct_UScriptStruct_FLobbyInvite_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FLobbyInvite_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FLobbyInvite_Hash() { return 407639979U; }
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif

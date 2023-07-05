@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AEWFightForeverEditor",
+			"Path": "D:\\AewFFCustomUProj\\Source\\AEWFightForeverEditor.Target.cs",
+			"Type": "Editor"
+		},
+		{
+			"Name": "AEWFightForeverGame",
+			"Path": "D:\\AewFFCustomUProj\\Source\\AEWFightForeverGame.Target.cs",
+			"Type": "Game"
+		}
+	]
+}

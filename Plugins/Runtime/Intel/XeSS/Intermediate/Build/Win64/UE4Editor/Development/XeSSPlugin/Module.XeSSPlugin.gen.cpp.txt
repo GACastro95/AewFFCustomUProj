@@ -1,0 +1,7 @@
+D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Development\XeSSPlugin\Definitions.XeSSPlugin.h
+D:/AewFFCustomUProj/Plugins/Runtime/Intel/XeSS/Intermediate/Build/Win64/UE4Editor/Inc/XeSSPlugin/XeSSPlugin.init.gen.cpp
+D:\games\engines\unreal_engines\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\games\engines\unreal_engines\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:/AewFFCustomUProj/Plugins/Runtime/Intel/XeSS/Intermediate/Build/Win64/UE4Editor/Inc/XeSSPlugin/XeSSSettings.gen.cpp
+D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Source\XeSSPlugin/Public/XeSSSettings.h
+D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Inc\XeSSPlugin\XeSSSettings.generated.h

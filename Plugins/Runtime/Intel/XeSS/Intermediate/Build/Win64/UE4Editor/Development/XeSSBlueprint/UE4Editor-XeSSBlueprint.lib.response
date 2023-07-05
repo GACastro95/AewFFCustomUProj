@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-XeSSBlueprint.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\AewFFCustomUProj\Intermediate\Build\Win64\AEWFightForeverEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Development\XeSSBlueprint\Module.XeSSBlueprint.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Development\XeSSBlueprint\Module.XeSSBlueprint.gen.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Development\XeSSBlueprint\Default.rc2.res"
+/OUT:"D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Development\XeSSBlueprint\UE4Editor-XeSSBlueprint.lib"

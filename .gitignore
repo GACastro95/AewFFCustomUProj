@@ -1,7 +1,6 @@
 Saved
 Binaries
 .vs
-Intermediate
 Intermediate/**/*.pdb
 Intermediate/**/*.dll
 Intermediate/**/*.vcxproj

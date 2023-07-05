@@ -1,0 +1,5 @@
+D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Development\XeSSPlugin\Definitions.XeSSPlugin.h
+D:/AewFFCustomUProj/Plugins/Runtime/Intel/XeSS/Source/XeSSPlugin/Private/XeSSPluginModule.cpp
+D:/AewFFCustomUProj/Plugins/Runtime/Intel/XeSS/Source/XeSSPlugin/Private/XeSSSettings.cpp
+D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Source\XeSSPlugin\Public\XeSSSettings.h
+D:\AewFFCustomUProj\Plugins\Runtime\Intel\XeSS\Intermediate\Build\Win64\UE4Editor\Inc\XeSSPlugin\XeSSSettings.generated.h

@@ -1,0 +1,27 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SortPlugin.cpp.obj": [
+			"SortPluginBPLibrary.cpp.obj",
+			"SortPluginModule.cpp.obj"
+		],
+		"Module.SortPlugin.gen.cpp.obj": [
+			"ActorFilterDelegateDelegate.gen.cpp.obj",
+			"ActorSortDelegateDelegate.gen.cpp.obj",
+			"FloatFilterDelegateDelegate.gen.cpp.obj",
+			"FloatSortDelegateDelegate.gen.cpp.obj",
+			"IntFilterDelegateDelegate.gen.cpp.obj",
+			"IntSortDelegateDelegate.gen.cpp.obj",
+			"NameFilterDelegateDelegate.gen.cpp.obj",
+			"NameSortDelegateDelegate.gen.cpp.obj",
+			"ObjectFilterDelegateDelegate.gen.cpp.obj",
+			"ObjectSortDelegateDelegate.gen.cpp.obj",
+			"SortPlugin.init.gen.cpp.obj",
+			"SortPluginBPLibrary.gen.cpp.obj",
+			"StringFilterDelegateDelegate.gen.cpp.obj",
+			"StringSortDelegateDelegate.gen.cpp.obj",
+			"VectorFilterDelegateDelegate.gen.cpp.obj",
+			"VectorSortDelegateDelegate.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ImGui.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\AewFFCustomUProj\Intermediate\Build\Win64\AEWFightForeverEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\AewFFCustomUProj\Plugins\ImGui\Intermediate\Build\Win64\UE4Editor\Development\ImGui\Module.ImGui.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\ImGui\Intermediate\Build\Win64\UE4Editor\Development\ImGui\Module.ImGui.gen.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\ImGui\Intermediate\Build\Win64\UE4Editor\Development\ImGui\Default.rc2.res"
+/OUT:"D:\AewFFCustomUProj\Plugins\ImGui\Intermediate\Build\Win64\UE4Editor\Development\ImGui\UE4Editor-ImGui.lib"
