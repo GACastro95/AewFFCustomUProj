@@ -21,12 +21,7 @@
 			"LoadingPhase": "PreDefault",
 			"WhitelistPlatforms": [
 				"Win32",
-				"Win64",
-				"PS4",
-				"PS5",
-				"XboxOneGDK",
-				"XSX",
-				"Switch"
+				"Win64"
 			]
 		}
 	],
