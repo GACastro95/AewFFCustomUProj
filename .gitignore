@@ -3,10 +3,6 @@ Binaries
 .vs
 Intermediate/**/*.pdb
 Intermediate/**/*.dll
-Intermediate/**/*.vcxproj
-Intermediate/**/*.vcxproj
-Intermediate/**/*.vcxproj.filters
-Intermediate/**/*.vcxproj.user
 Intermediate/**/*.bin
 Intermediate/**/*.pch
 Intermediate/**/*.obj
@@ -15,3 +11,11 @@ Intermediate/**/*.res
 Intermediate/**/*.dat
 Intermediate/**/*.exe
 Intermediate/**/*.response
+Intermediate/**/*.exp
+Intermediate/**/*.lib
+Plugins/**/*.obj
+Plugins/**/*.old
+Plugins/**/*.response
+*.lib
+*.exp
+*.response

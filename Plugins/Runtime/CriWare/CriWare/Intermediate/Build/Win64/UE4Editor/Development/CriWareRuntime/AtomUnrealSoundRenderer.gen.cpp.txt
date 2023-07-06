@@ -1,0 +1,7 @@
+D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\Definitions.CriWareRuntime.h
+D:\games\engines\unreal_engines\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\games\engines\unreal_engines\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime/Public/AtomUnrealSoundRenderer.h
+D:\games\engines\unreal_engines\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/SoundWaveProcedural.h
+D:\games\engines\unreal_engines\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundWaveProcedural.generated.h
+D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Inc\CriWareRuntime\AtomUnrealSoundRenderer.generated.h
