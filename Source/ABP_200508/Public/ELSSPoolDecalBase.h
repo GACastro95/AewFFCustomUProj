@@ -28,7 +28,7 @@ protected:
 public:
     AELSSPoolDecalBase();
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void PlayAttached(FVector DecalSize, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation::Type> LocationType, float LifeSpan);
+    void PlayAttached(FVector DecalSize, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, EAttachLocation::Type LocationType, float LifeSpan);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UDecalComponent* PlayAtLocation(FVector DecalSize, FVector Location, FRotator Rotation, float LifeSpan);

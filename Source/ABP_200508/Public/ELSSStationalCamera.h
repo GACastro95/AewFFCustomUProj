@@ -75,7 +75,7 @@ protected:
     AActor* TrackTgt;
     
 public:
-    AELSSStationalCamera();
+    AELSSStationalCamera(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool Setup(AActor* inTargetActor, const FVector& inWorldOffset);
     

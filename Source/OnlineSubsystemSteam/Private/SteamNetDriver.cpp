@@ -1,5 +1,6 @@
 #include "SteamNetDriver.h"
 
-USteamNetDriver::USteamNetDriver() {
+USteamNetDriver::USteamNetDriver(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer) {
 }
 

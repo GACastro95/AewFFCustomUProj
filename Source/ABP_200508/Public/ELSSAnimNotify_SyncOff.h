@@ -12,7 +12,7 @@ class ABP_200508_API UELSSAnimNotify_SyncOff : public UELSSAnimNotifyBase {
 public:
     UELSSAnimNotify_SyncOff();
     UFUNCTION(BlueprintCallable)
-    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const;
+    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     
 };
 

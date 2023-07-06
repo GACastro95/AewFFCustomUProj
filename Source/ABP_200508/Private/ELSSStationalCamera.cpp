@@ -30,7 +30,8 @@ bool AELSSStationalCamera::CheckCollision(FTransform inBaseTransform, int32 inLo
 void AELSSStationalCamera::ChangeLocator(FTransform inBaseTransform, int32 inLocatorId, float inInterpDuration, ESSStationalCameraEaseType inEaseType) {
 }
 
-AELSSStationalCamera::AELSSStationalCamera() {
+AELSSStationalCamera::AELSSStationalCamera(const FObjectInitializer& ObjectInitializer)
+    : Super(ObjectInitializer) {
     this->BlendOutDuration = 1.00f;
     this->LocatorParamTable = NULL;
     this->LocatorOwner = NULL;
