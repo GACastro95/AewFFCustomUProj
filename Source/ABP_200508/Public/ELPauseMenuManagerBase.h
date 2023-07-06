@@ -53,7 +53,7 @@ protected:
     void MenuInputEvent_Cancel();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void MenuInputEvent_AnyKey(TEnumAsByte<EInputEvent> KeyEvent);
+    void MenuInputEvent_AnyKey(EInputEvent KeyEvent);
     
     UFUNCTION(BlueprintCallable)
     UELPauseMenuBase* GetTopPauseMenu();

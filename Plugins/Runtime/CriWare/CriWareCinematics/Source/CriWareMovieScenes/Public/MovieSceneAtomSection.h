@@ -16,43 +16,43 @@ class CRIWAREMOVIESCENES_API UMovieSceneAtomSection : public UMovieSceneSection 
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundAtomCue* Sound;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FFrameNumber StartFrameOffset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel SoundVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneFloatChannel PitchMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FMovieSceneActorReferenceData AttachActorData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FScalarParameterNameAndCurve> ScalarParameterNamesAndCurves;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSuppressSubtitles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOverrideAttenuation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundAttenuation* AttenuationSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bContinueSoundWhenSequenceIsEnd;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> AsrRackIDs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAtomSelectorParam> SelectorLabels;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLooping;
     
 public:

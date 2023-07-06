@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NonTransient)
 class USteamNetDriver : public UIpNetDriver {
     GENERATED_BODY()
 public:
-    USteamNetDriver();
+    USteamNetDriver(const FObjectInitializer& ObjectInitializer);
 };
 

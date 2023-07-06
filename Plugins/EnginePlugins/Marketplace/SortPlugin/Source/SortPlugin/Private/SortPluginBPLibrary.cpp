@@ -67,10 +67,10 @@ TArray<float> USortPluginBPLibrary::SortFloat(TArray<float> Array, bool bIsAscen
     return TArray<float>();
 }
 
-void USortPluginBPLibrary::SortActorRef(TArray<AActor*>& Array, const AActor*& Actor, bool bIsAscending) {
+void USortPluginBPLibrary::SortActorRef(TArray<AActor*>& Array, AActor* Actor, bool bIsAscending) {
 }
 
-TArray<AActor*> USortPluginBPLibrary::SortActor(TArray<AActor*> Array, const AActor*& Actor, bool bIsAscending) {
+TArray<AActor*> USortPluginBPLibrary::SortActor(TArray<AActor*> Array, AActor* Actor, bool bIsAscending) {
     return TArray<AActor*>();
 }
 
@@ -226,7 +226,7 @@ FString USortPluginBPLibrary::FilterMatch(const TArray<FString>& Array, const FS
 void USortPluginBPLibrary::FarthestLocation(const TArray<FVector>& Array, FVector Origin, FVector& Farthest, float& Distance, int32& Index) {
 }
 
-void USortPluginBPLibrary::FarthestActor(const TArray<AActor*>& Array, const AActor*& Origin, AActor*& Farthest, float& Distance, int32& Index) {
+void USortPluginBPLibrary::FarthestActor(const TArray<AActor*>& Array, AActor* Origin, AActor*& Farthest, float& Distance, int32& Index) {
 }
 
 TArray<FVector> USortPluginBPLibrary::ExtractVector(const TArray<FVector>& Array, int32 StartIndex, int32 EndIndex) {
@@ -260,7 +260,7 @@ TArray<AActor*> USortPluginBPLibrary::ExtractActor(const TArray<AActor*>& Array,
 void USortPluginBPLibrary::ClosestLocation(const TArray<FVector>& Array, FVector Origin, FVector& Closest, float& Distance, int32& Index) {
 }
 
-void USortPluginBPLibrary::ClosestActor(const TArray<AActor*>& Array, const AActor*& Origin, AActor*& Closest, float& Distance, int32& Index) {
+void USortPluginBPLibrary::ClosestActor(const TArray<AActor*>& Array, AActor* Origin, AActor* Closest, float& Distance, int32& Index) {
 }
 
 void USortPluginBPLibrary::ClampVectorSizeRef(TArray<FVector>& Array, float MinSize, float MaxSize, bool bOnly2D) {

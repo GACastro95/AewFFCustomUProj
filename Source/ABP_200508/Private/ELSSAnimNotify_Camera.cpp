@@ -1,6 +1,6 @@
 #include "ELSSAnimNotify_Camera.h"
 
-void UELSSAnimNotify_Camera::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const {
+void UELSSAnimNotify_Camera::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) {
 }
 
 UELSSAnimNotify_Camera::UELSSAnimNotify_Camera() {
