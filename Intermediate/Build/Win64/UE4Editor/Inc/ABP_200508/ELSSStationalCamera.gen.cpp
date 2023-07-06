@@ -584,6 +584,7 @@ void EmptyLinkFunctionForGeneratedCodeELSSStationalCamera() {}
 		{ "IncludePath", "ELSSStationalCamera.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/ELSSStationalCamera.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -809,7 +810,7 @@ void EmptyLinkFunctionForGeneratedCodeELSSStationalCamera() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AELSSStationalCamera, 3766990859);
+	IMPLEMENT_CLASS(AELSSStationalCamera, 2140139374);
 	template<> ABP_200508_API UClass* StaticClass<AELSSStationalCamera>()
 	{
 		return AELSSStationalCamera::StaticClass();

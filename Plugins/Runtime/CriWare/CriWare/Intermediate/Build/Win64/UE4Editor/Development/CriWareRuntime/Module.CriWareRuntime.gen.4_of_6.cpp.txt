@@ -13,11 +13,6 @@ D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4
 D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Inc/CriWareRuntime/AtomTriggerTableFunctionLibrary.gen.cpp
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime/Public/AtomTriggerTableFunctionLibrary.h
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Inc\CriWareRuntime\AtomTriggerTableFunctionLibrary.generated.h
-D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Inc/CriWareRuntime/AtomUnrealSoundRenderer.gen.cpp
-D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime/Public/AtomUnrealSoundRenderer.h
-D:\games\engines\unreal_engines\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/SoundWaveProcedural.h
-D:\games\engines\unreal_engines\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundWaveProcedural.generated.h
-D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Inc\CriWareRuntime\AtomUnrealSoundRenderer.generated.h
 D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Inc/CriWareRuntime/AtomWaveInfo.gen.cpp
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime/Public/AtomWaveInfo.h
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime\Public\EAtomFormat.h
@@ -79,7 +74,6 @@ D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime\Public
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Inc\CriWareRuntime\EAtomSoundRendererType.generated.h
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Inc\CriWareRuntime\AtomAsrRackConfigUI.generated.h
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Inc\CriWareRuntime\CriWarePluginSettings.generated.h
-D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Inc/CriWareRuntime/CriWareRuntime.init.gen.cpp
 D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Inc/CriWareRuntime/DataManaMovie.gen.cpp
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime/Public/DataManaMovie.h
 D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Source\CriWareRuntime\Public\ManaMovie.h

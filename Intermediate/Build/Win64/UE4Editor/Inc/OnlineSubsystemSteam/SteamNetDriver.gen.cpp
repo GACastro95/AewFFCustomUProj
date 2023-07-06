@@ -44,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeSteamNetDriver() {}
 		{ "IncludePath", "SteamNetDriver.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/SteamNetDriver.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_USteamNetDriver_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeSteamNetDriver() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USteamNetDriver, 1645616533);
+	IMPLEMENT_CLASS(USteamNetDriver, 4176331291);
 	template<> ONLINESUBSYSTEMSTEAM_API UClass* StaticClass<USteamNetDriver>()
 	{
 		return USteamNetDriver::StaticClass();

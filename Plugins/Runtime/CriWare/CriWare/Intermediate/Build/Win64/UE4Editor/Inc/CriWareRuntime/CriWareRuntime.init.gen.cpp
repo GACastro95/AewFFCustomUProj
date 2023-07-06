@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeCriWareRuntime_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x1ED80DBE,
+				0x76DDAEE1,
 				0x00FA39B3,
 				METADATA_PARAMS(nullptr, 0)
 			};

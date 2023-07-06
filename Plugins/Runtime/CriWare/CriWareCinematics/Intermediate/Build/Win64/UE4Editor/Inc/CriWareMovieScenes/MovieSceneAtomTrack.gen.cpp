@@ -18,7 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneAtomTrack() {}
 	MOVIESCENE_API UClass* Z_Construct_UClass_UMovieSceneNameableTrack();
 	UPackage* Z_Construct_UPackage__Script_CriWareMovieScenes();
 	MOVIESCENE_API UClass* Z_Construct_UClass_UMovieSceneSection_NoRegister();
-	MOVIESCENE_API UClass* Z_Construct_UClass_UMovieSceneTrackTemplateProducer_NoRegister();
 // End Cross Module References
 	void UMovieSceneAtomTrack::StaticRegisterNativesUMovieSceneAtomTrack()
 	{
@@ -42,7 +41,6 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneAtomTrack() {}
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_AtomSections;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -80,9 +78,6 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneAtomTrack() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMovieSceneAtomTrack_Statics::NewProp_AtomSections_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMovieSceneAtomTrack_Statics::NewProp_AtomSections,
 	};
-		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UMovieSceneAtomTrack_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UMovieSceneTrackTemplateProducer_NoRegister, (int32)VTABLE_OFFSET(UMovieSceneAtomTrack, IMovieSceneTrackTemplateProducer), false },
-		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMovieSceneAtomTrack_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMovieSceneAtomTrack>::IsAbstract,
 	};
@@ -93,11 +88,11 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneAtomTrack() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_UMovieSceneAtomTrack_Statics::PropPointers,
-		InterfaceParams,
+		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UMovieSceneAtomTrack_Statics::PropPointers),
-		UE_ARRAY_COUNT(InterfaceParams),
+		0,
 		0x00A800A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UMovieSceneAtomTrack_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UMovieSceneAtomTrack_Statics::Class_MetaDataParams))
 	};
@@ -110,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneAtomTrack() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMovieSceneAtomTrack, 184544500);
+	IMPLEMENT_CLASS(UMovieSceneAtomTrack, 2816336108);
 	template<> CRIWAREMOVIESCENES_API UClass* StaticClass<UMovieSceneAtomTrack>()
 	{
 		return UMovieSceneAtomTrack::StaticClass();

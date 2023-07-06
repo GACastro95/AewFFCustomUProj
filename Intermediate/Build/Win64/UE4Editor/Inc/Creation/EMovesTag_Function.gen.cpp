@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeEMovesTag_Function() {}
 		return EMovesTag_Function_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EMovesTag_Function(EMovesTag_Function_StaticEnum, TEXT("/Script/Creation"), TEXT("EMovesTag_Function"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Creation_EMovesTag_Function_Hash() { return 1822158803U; }
+	uint32 Get_Z_Construct_UEnum_Creation_EMovesTag_Function_Hash() { return 3387225711U; }
 	UEnum* Z_Construct_UEnum_Creation_EMovesTag_Function()
 	{
 #if WITH_HOT_RELOAD
@@ -64,13 +64,19 @@ void EmptyLinkFunctionForGeneratedCodeEMovesTag_Function() {}
 				{ "FC_Def_Ringout.Name", "EMovesTag_Function::FC_Def_Ringout" },
 				{ "FC_DelayedGrapple.Name", "EMovesTag_Function::FC_DelayedGrapple" },
 				{ "FC_DirectionalThrow.Name", "EMovesTag_Function::FC_DirectionalThrow" },
+				{ "FC_Etc.Comment", "//0x200,\n" },
 				{ "FC_Etc.Name", "EMovesTag_Function::FC_Etc" },
+				{ "FC_Etc.ToolTip", "0x200," },
 				{ "FC_Injury.Name", "EMovesTag_Function::FC_Injury" },
+				{ "FC_MAX.Comment", "//0x400,\n" },
 				{ "FC_MAX.Hidden", "" },
 				{ "FC_MAX.Name", "EMovesTag_Function::FC_MAX" },
+				{ "FC_MAX.ToolTip", "0x400," },
 				{ "FC_Pincombo.Name", "EMovesTag_Function::FC_Pincombo" },
 				{ "FC_Submission.Name", "EMovesTag_Function::FC_Submission" },
+				{ "FC_WeightDetection.Comment", "//0x100,\n" },
 				{ "FC_WeightDetection.Name", "EMovesTag_Function::FC_WeightDetection" },
+				{ "FC_WeightDetection.ToolTip", "0x100," },
 				{ "FC_Whip.Name", "EMovesTag_Function::FC_Whip" },
 				{ "ModuleRelativePath", "Public/EMovesTag_Function.h" },
 				{ "PEEK_ADDED_DEFAULT.Name", "EMovesTag_Function::PEEK_ADDED_DEFAULT" },

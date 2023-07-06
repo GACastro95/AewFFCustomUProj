@@ -51,7 +51,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPlugin_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xB592E536,
+				0x8C117A3B,
 				0x6B43ED56,
 				METADATA_PARAMS(nullptr, 0)
 			};

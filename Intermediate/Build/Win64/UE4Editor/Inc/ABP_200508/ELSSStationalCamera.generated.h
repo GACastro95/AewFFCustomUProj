@@ -64,7 +64,7 @@ public: \
 
 #define AewFFCustomUProj_Source_ABP_200508_Public_ELSSStationalCamera_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AELSSStationalCamera(const FObjectInitializer& ObjectInitializer); \
+	NO_API AELSSStationalCamera(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AELSSStationalCamera) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AELSSStationalCamera); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AELSSStationalCamera); \
@@ -83,7 +83,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AELSSStationalCamera); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AELSSStationalCamera); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AELSSStationalCamera)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AELSSStationalCamera)
 
 
 #define AewFFCustomUProj_Source_ABP_200508_Public_ELSSStationalCamera_h_17_PRIVATE_PROPERTY_OFFSET \

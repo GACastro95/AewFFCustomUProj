@@ -24,8 +24,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ESSInteractPriority::GimmickInteractable) \
 	op(ESSInteractPriority::PickupDefault) \
 	op(ESSInteractPriority::PickupWeapon) \
-	op(ESSInteractPriority::PickupItem) \
-	op(ESSInteractPriority::ESSInteractPriority_MAX) 
+	op(ESSInteractPriority::PickupItem) 
 
 enum class ESSInteractPriority : uint8;
 template<> ABP_200508_API UEnum* StaticEnum<ESSInteractPriority>();

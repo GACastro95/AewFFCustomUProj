@@ -22,8 +22,7 @@ private: \
 	friend struct Z_Construct_UClass_UMovieSceneManaTrack_Statics; \
 public: \
 	DECLARE_CLASS(UMovieSceneManaTrack, UMovieSceneNameableTrack, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/CriWareMovieScenes"), CRIWAREMOVIESCENES_API) \
-	DECLARE_SERIALIZER(UMovieSceneManaTrack) \
-	virtual UObject* _getUObject() const override { return const_cast<UMovieSceneManaTrack*>(this); }
+	DECLARE_SERIALIZER(UMovieSceneManaTrack)
 
 
 #define AewFFCustomUProj_Plugins_Runtime_CriWare_CriWareCinematics_Source_CriWareMovieScenes_Public_MovieSceneManaTrack_h_12_INCLASS \
@@ -32,8 +31,7 @@ private: \
 	friend struct Z_Construct_UClass_UMovieSceneManaTrack_Statics; \
 public: \
 	DECLARE_CLASS(UMovieSceneManaTrack, UMovieSceneNameableTrack, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/CriWareMovieScenes"), CRIWAREMOVIESCENES_API) \
-	DECLARE_SERIALIZER(UMovieSceneManaTrack) \
-	virtual UObject* _getUObject() const override { return const_cast<UMovieSceneManaTrack*>(this); }
+	DECLARE_SERIALIZER(UMovieSceneManaTrack)
 
 
 #define AewFFCustomUProj_Plugins_Runtime_CriWare_CriWareCinematics_Source_CriWareMovieScenes_Public_MovieSceneManaTrack_h_12_STANDARD_CONSTRUCTORS \

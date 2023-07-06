@@ -36,7 +36,7 @@ public: \
 
 #define AewFFCustomUProj_Plugins_Runtime_CriWare_CriWare_Source_CriWareRuntime_Public_AtomUnrealSoundRenderer_h_8_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UAtomUnrealSoundRenderer(const FObjectInitializer& ObjectInitializer); \
+	NO_API UAtomUnrealSoundRenderer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UAtomUnrealSoundRenderer) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UAtomUnrealSoundRenderer); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAtomUnrealSoundRenderer); \
@@ -55,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UAtomUnrealSoundRenderer); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAtomUnrealSoundRenderer); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UAtomUnrealSoundRenderer)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UAtomUnrealSoundRenderer)
 
 
 #define AewFFCustomUProj_Plugins_Runtime_CriWare_CriWare_Source_CriWareRuntime_Public_AtomUnrealSoundRenderer_h_8_PRIVATE_PROPERTY_OFFSET

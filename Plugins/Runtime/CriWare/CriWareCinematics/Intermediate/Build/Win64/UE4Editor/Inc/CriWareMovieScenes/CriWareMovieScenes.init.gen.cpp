@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeCriWareMovieScenes_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x5508C955,
+				0x7B0D1B18,
 				0x5AA8F569,
 				METADATA_PARAMS(nullptr, 0)
 			};

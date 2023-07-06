@@ -36,7 +36,7 @@ public: \
 
 #define AewFFCustomUProj_Source_OnlineSubsystemSteam_Public_SteamNetDriver_h_8_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API USteamNetDriver(const FObjectInitializer& ObjectInitializer); \
+	NO_API USteamNetDriver(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamNetDriver) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamNetDriver); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamNetDriver); \
@@ -55,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamNetDriver); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamNetDriver); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USteamNetDriver)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamNetDriver)
 
 
 #define AewFFCustomUProj_Source_OnlineSubsystemSteam_Public_SteamNetDriver_h_8_PRIVATE_PROPERTY_OFFSET

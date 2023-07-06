@@ -2,7 +2,6 @@
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/CriWareMovieScenesModule.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/MovieSceneAtomSection.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/MovieSceneAtomSectionTemplate.cpp"
-#include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/MovieSceneAtomTrack.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/MovieSceneManaSection.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/MovieSceneManaSectionParams.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWareCinematics/Source/CriWareMovieScenes/Private/MovieSceneManaSectionTemplate.cpp"

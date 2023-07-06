@@ -7,7 +7,10 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\AewFFCustomUProj\Intermediate\Build\Win64\AEWFightForeverEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\AtomUnrealSoundRenderer.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\Module.CriWareRuntime.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\AtomUnrealSoundRenderer.gen.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\CriWareRuntime.init.gen.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\Module.CriWareRuntime.gen.1_of_6.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\Module.CriWareRuntime.gen.2_of_6.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\Runtime\CriWare\CriWare\Intermediate\Build\Win64\UE4Editor\Development\CriWareRuntime\Module.CriWareRuntime.gen.3_of_6.cpp.obj"

@@ -45,6 +45,7 @@ void EmptyLinkFunctionForGeneratedCodeAtomUnrealSoundRenderer() {}
 		{ "IncludePath", "AtomUnrealSoundRenderer.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/AtomUnrealSoundRenderer.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UAtomUnrealSoundRenderer_Statics::StaticCppClassTypeInfo = {
@@ -74,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeAtomUnrealSoundRenderer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAtomUnrealSoundRenderer, 2515808138);
+	IMPLEMENT_CLASS(UAtomUnrealSoundRenderer, 3565396053);
 	template<> CRIWARERUNTIME_API UClass* StaticClass<UAtomUnrealSoundRenderer>()
 	{
 		return UAtomUnrealSoundRenderer::StaticClass();

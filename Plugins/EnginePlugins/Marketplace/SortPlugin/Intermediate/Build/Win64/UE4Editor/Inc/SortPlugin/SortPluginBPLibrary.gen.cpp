@@ -117,13 +117,13 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execClosestActor)
 	{
 		P_GET_TARRAY_REF(AActor*,Z_Param_Out_Array);
-		P_GET_OBJECT_REF(AActor,Z_Param_Out_Origin);
-		P_GET_OBJECT_REF(AActor,Z_Param_Out_Closest);
+		P_GET_OBJECT(AActor,Z_Param_Origin);
+		P_GET_OBJECT(AActor,Z_Param_Closest);
 		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_Distance);
 		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_Index);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		USortPluginBPLibrary::ClosestActor(Z_Param_Out_Array,Z_Param_Out_Origin,Z_Param_Out_Closest,Z_Param_Out_Distance,Z_Param_Out_Index);
+		USortPluginBPLibrary::ClosestActor(Z_Param_Out_Array,Z_Param_Origin,Z_Param_Closest,Z_Param_Out_Distance,Z_Param_Out_Index);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execClosestLocation)
@@ -211,13 +211,13 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execFarthestActor)
 	{
 		P_GET_TARRAY_REF(AActor*,Z_Param_Out_Array);
-		P_GET_OBJECT_REF(AActor,Z_Param_Out_Origin);
+		P_GET_OBJECT(AActor,Z_Param_Origin);
 		P_GET_OBJECT_REF(AActor,Z_Param_Out_Farthest);
 		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_Distance);
 		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_Index);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		USortPluginBPLibrary::FarthestActor(Z_Param_Out_Array,Z_Param_Out_Origin,Z_Param_Out_Farthest,Z_Param_Out_Distance,Z_Param_Out_Index);
+		USortPluginBPLibrary::FarthestActor(Z_Param_Out_Array,Z_Param_Origin,Z_Param_Out_Farthest,Z_Param_Out_Distance,Z_Param_Out_Index);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execFarthestLocation)
@@ -605,21 +605,21 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execSortActor)
 	{
 		P_GET_TARRAY(AActor*,Z_Param_Array);
-		P_GET_OBJECT_REF(AActor,Z_Param_Out_Actor);
+		P_GET_OBJECT(AActor,Z_Param_Actor);
 		P_GET_UBOOL(Z_Param_bIsAscending);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(TArray<AActor*>*)Z_Param__Result=USortPluginBPLibrary::SortActor(Z_Param_Array,Z_Param_Out_Actor,Z_Param_bIsAscending);
+		*(TArray<AActor*>*)Z_Param__Result=USortPluginBPLibrary::SortActor(Z_Param_Array,Z_Param_Actor,Z_Param_bIsAscending);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execSortActorRef)
 	{
 		P_GET_TARRAY_REF(AActor*,Z_Param_Out_Array);
-		P_GET_OBJECT_REF(AActor,Z_Param_Out_Actor);
+		P_GET_OBJECT(AActor,Z_Param_Actor);
 		P_GET_UBOOL(Z_Param_bIsAscending);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		USortPluginBPLibrary::SortActorRef(Z_Param_Out_Array,Z_Param_Out_Actor,Z_Param_bIsAscending);
+		USortPluginBPLibrary::SortActorRef(Z_Param_Out_Array,Z_Param_Actor,Z_Param_bIsAscending);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(USortPluginBPLibrary::execSortFloat)
@@ -1262,7 +1262,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		struct SortPluginBPLibrary_eventClosestActor_Parms
 		{
 			TArray<AActor*> Array;
-			const AActor* Origin;
+			AActor* Origin;
 			AActor* Closest;
 			float Distance;
 			int32 Index;
@@ -1272,9 +1272,6 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Array_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Array;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Origin_MetaData[];
-#endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Origin;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Closest;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Distance;
@@ -1292,13 +1289,8 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Array = { "Array", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Array), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Array_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Array_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Origin_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Origin = { "Origin", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Origin), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Origin_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Origin_MetaData)) };
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Closest = { "Closest", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Closest), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Origin = { "Origin", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Origin), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Closest = { "Closest", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Closest), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Distance = { "Distance", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Distance), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventClosestActor_Parms, Index), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor_Statics::PropPointers[] = {
@@ -1794,7 +1786,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		struct SortPluginBPLibrary_eventFarthestActor_Parms
 		{
 			TArray<AActor*> Array;
-			const AActor* Origin;
+			AActor* Origin;
 			AActor* Farthest;
 			float Distance;
 			int32 Index;
@@ -1804,9 +1796,6 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Array_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Array;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Origin_MetaData[];
-#endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Origin;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Farthest;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Distance;
@@ -1824,12 +1813,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	};
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Array = { "Array", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventFarthestActor_Parms, Array), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Array_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Array_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Origin_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Origin = { "Origin", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventFarthestActor_Parms, Origin), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Origin_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Origin_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Origin = { "Origin", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventFarthestActor_Parms, Origin), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Farthest = { "Farthest", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventFarthestActor_Parms, Farthest), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Distance = { "Distance", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventFarthestActor_Parms, Distance), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventFarthestActor_Parms, Index), METADATA_PARAMS(nullptr, 0) };
@@ -4195,15 +4179,12 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		struct SortPluginBPLibrary_eventSortActor_Parms
 		{
 			TArray<AActor*> Array;
-			const AActor* Actor;
+			AActor* Actor;
 			bool bIsAscending;
 			TArray<AActor*> ReturnValue;
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Array_Inner;
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Array;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Actor_MetaData[];
-#endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Actor;
 		static void NewProp_bIsAscending_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsAscending;
@@ -4217,12 +4198,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	};
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Array_Inner = { "Array", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Array = { "Array", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventSortActor_Parms, Array), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Actor_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventSortActor_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Actor_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Actor_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventSortActor_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::NewProp_bIsAscending_SetBit(void* Obj)
 	{
 		((SortPluginBPLibrary_eventSortActor_Parms*)Obj)->bIsAscending = 1;
@@ -4243,7 +4219,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		{ "ModuleRelativePath", "Public/SortPluginBPLibrary.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USortPluginBPLibrary, nullptr, "SortActor", nullptr, nullptr, sizeof(SortPluginBPLibrary_eventSortActor_Parms), Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USortPluginBPLibrary, nullptr, "SortActor", nullptr, nullptr, sizeof(SortPluginBPLibrary_eventSortActor_Parms), Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_SortActor_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USortPluginBPLibrary_SortActor()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -4258,14 +4234,11 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		struct SortPluginBPLibrary_eventSortActorRef_Parms
 		{
 			TArray<AActor*> Array;
-			const AActor* Actor;
+			AActor* Actor;
 			bool bIsAscending;
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Array_Inner;
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Array;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Actor_MetaData[];
-#endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Actor;
 		static void NewProp_bIsAscending_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsAscending;
@@ -4277,12 +4250,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 	};
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Array_Inner = { "Array", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Array = { "Array", nullptr, (EPropertyFlags)0x0010000008000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventSortActorRef_Parms, Array), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Actor_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventSortActorRef_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Actor_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Actor_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SortPluginBPLibrary_eventSortActorRef_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef_Statics::NewProp_bIsAscending_SetBit(void* Obj)
 	{
 		((SortPluginBPLibrary_eventSortActorRef_Parms*)Obj)->bIsAscending = 1;
@@ -5241,7 +5209,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ClampIntegerRef, "ClampIntegerRef" }, // 3774202015
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ClampVectorSize, "ClampVectorSize" }, // 1078669408
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ClampVectorSizeRef, "ClampVectorSizeRef" }, // 3138591032
-		{ &Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor, "ClosestActor" }, // 1114112825
+		{ &Z_Construct_UFunction_USortPluginBPLibrary_ClosestActor, "ClosestActor" }, // 1247139568
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ClosestLocation, "ClosestLocation" }, // 505479529
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ExtractActor, "ExtractActor" }, // 256747903
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ExtractFloat, "ExtractFloat" }, // 800776851
@@ -5250,7 +5218,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ExtractObject, "ExtractObject" }, // 1465803702
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ExtractString, "ExtractString" }, // 1575005077
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ExtractVector, "ExtractVector" }, // 2722191681
-		{ &Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor, "FarthestActor" }, // 2863176944
+		{ &Z_Construct_UFunction_USortPluginBPLibrary_FarthestActor, "FarthestActor" }, // 2717659226
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_FarthestLocation, "FarthestLocation" }, // 4104204902
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_FilterMatch, "FilterMatch" }, // 3741586129
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_FilterMatches, "FilterMatches" }, // 2289216067
@@ -5291,8 +5259,8 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ReverseObject, "ReverseObject" }, // 1144196354
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ReverseString, "ReverseString" }, // 494753934
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_ReverseVector, "ReverseVector" }, // 3307034286
-		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortActor, "SortActor" }, // 2158631763
-		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef, "SortActorRef" }, // 873677770
+		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortActor, "SortActor" }, // 1788753576
+		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortActorRef, "SortActorRef" }, // 3554343256
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortFloat, "SortFloat" }, // 2299637401
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortFloatRef, "SortFloatRef" }, // 154399722
 		{ &Z_Construct_UFunction_USortPluginBPLibrary_SortInteger, "SortInteger" }, // 1914594848
@@ -5347,7 +5315,7 @@ void EmptyLinkFunctionForGeneratedCodeSortPluginBPLibrary() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USortPluginBPLibrary, 230094269);
+	IMPLEMENT_CLASS(USortPluginBPLibrary, 1841952625);
 	template<> SORTPLUGIN_API UClass* StaticClass<USortPluginBPLibrary>()
 	{
 		return USortPluginBPLibrary::StaticClass();

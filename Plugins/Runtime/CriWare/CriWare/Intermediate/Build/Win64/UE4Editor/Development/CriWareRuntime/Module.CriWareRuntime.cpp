@@ -60,7 +60,6 @@
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/AtomStringWithComment.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/AtomTriggerRow.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/AtomTriggerTableFunctionLibrary.cpp"
-#include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/AtomUnrealSoundRenderer.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/AtomWaveInfo.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/AtomWavePlayer.cpp"
 #include "D:/AewFFCustomUProj/Plugins/Runtime/CriWare/CriWare/Source/CriWareRuntime/Private/BusSendInterpolationSettings.cpp"

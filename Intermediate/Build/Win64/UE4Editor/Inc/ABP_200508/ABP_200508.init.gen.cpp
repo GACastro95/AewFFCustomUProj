@@ -619,7 +619,7 @@ void EmptyLinkFunctionForGeneratedCodeABP_200508_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xB0C710D3,
+				0x05E13391,
 				0xCFCD628E,
 				METADATA_PARAMS(nullptr, 0)
 			};

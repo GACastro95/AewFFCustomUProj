@@ -20,7 +20,6 @@
 			"ELAdjustDlcObjectForCustomWrestler.cpp.obj",
 			"ELAdjustDlcPlayerSaveDataAccessObject.cpp.obj",
 			"ELAdjustDlcSaveDataAccessObjectBase.cpp.obj",
-			"ELAnimNotify_ControlIK.cpp.obj",
 			"ELAnimNotifyState_Attach.cpp.obj",
 			"ELAnimNotifyState_AttachBS.cpp.obj",
 			"ELAnimNotifyState_AttachMine.cpp.obj",
@@ -92,7 +91,8 @@
 			"SkelMeshMergeUVTransformMapping.cpp.obj",
 			"StatsUsedWrestler.cpp.obj",
 			"TemplateScoutComponent.cpp.obj",
-			"WrestlerIDInfo.cpp.obj"
+			"WrestlerIDInfo.cpp.obj",
+			"ELAnimNotify_ControlIK.cpp.obj"
 		],
 		"Module.ELITE.gen.1_of_5.cpp.obj": [
 			"AdjustDlcSaveData.gen.cpp.obj",

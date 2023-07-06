@@ -223,6 +223,7 @@ void EmptyLinkFunctionForGeneratedCodeELEntranceCutsceneCamera() {}
 		{ "IncludePath", "ELEntranceCutsceneCamera.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/ELEntranceCutsceneCamera.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -253,7 +254,7 @@ void EmptyLinkFunctionForGeneratedCodeELEntranceCutsceneCamera() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AELEntranceCutsceneCamera, 3919772426);
+	IMPLEMENT_CLASS(AELEntranceCutsceneCamera, 2322327371);
 	template<> ABP_200508_API UClass* StaticClass<AELEntranceCutsceneCamera>()
 	{
 		return AELEntranceCutsceneCamera::StaticClass();

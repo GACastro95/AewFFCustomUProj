@@ -19,8 +19,9 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 	UPackage* Z_Construct_UPackage__Script_Creation();
 	ENGINE_API UClass* Z_Construct_UClass_UDataTable_NoRegister();
 	CREATION_API UScriptStruct* Z_Construct_UScriptStruct_FMovesSituation();
-	CREATION_API UScriptStruct* Z_Construct_UScriptStruct_FELMoves_Finisher_Part();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 	CREATION_API UScriptStruct* Z_Construct_UScriptStruct_FELMoves_Finisher();
+	CREATION_API UScriptStruct* Z_Construct_UScriptStruct_FELMoves_Finisher_Part();
 	CREATION_API UEnum* Z_Construct_UEnum_Creation_EMovesDataTable_Type();
 	CREATION_API UEnum* Z_Construct_UEnum_Creation_EMovesTag_AttackIndex();
 	CREATION_API UEnum* Z_Construct_UEnum_Creation_EMovesTag_DamagePartIndex();
@@ -58,8 +59,8 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 	}
 	DEFINE_FUNCTION(UMovesSituationUtility::execGetEnableFinisherList)
 	{
-		P_GET_TMAP_REF(FELMoves_Finisher_Part,FMovesSituation,Z_Param_Out__outList);
-		P_GET_TMAP_REF(FELMoves_Finisher_Part,FMovesSituation,Z_Param_Out__BaseList);
+		P_GET_TMAP_REF(UObject*,UObject*,Z_Param_Out__outList);
+		P_GET_TMAP_REF(UObject*,UObject*,Z_Param_Out__BaseList);
 		P_GET_STRUCT_REF(FELMoves_Finisher,Z_Param_Out_FinisherData);
 		P_GET_STRUCT_REF(FELMoves_Finisher_Part,Z_Param_Out_CurrentFinisher);
 		P_FINISH;
@@ -326,16 +327,16 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 	{
 		struct MovesSituationUtility_eventGetEnableFinisherList_Parms
 		{
-			TMap<FELMoves_Finisher_Part,FMovesSituation> _outList;
-			TMap<FELMoves_Finisher_Part,FMovesSituation> _BaseList;
+			TMap<UObject*,UObject*> _outList;
+			TMap<UObject*,UObject*> _BaseList;
 			FELMoves_Finisher FinisherData;
 			FELMoves_Finisher_Part CurrentFinisher;
 		};
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp__outList_ValueProp;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp__outList_Key_KeyProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp__outList_ValueProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp__outList_Key_KeyProp;
 		static const UE4CodeGen_Private::FMapPropertyParams NewProp__outList;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp__BaseList_ValueProp;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp__BaseList_Key_KeyProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp__BaseList_ValueProp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp__BaseList_Key_KeyProp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp__BaseList_MetaData[];
 #endif
@@ -354,11 +355,11 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__outList_ValueProp = { "_outList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FMovesSituation, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__outList_Key_KeyProp = { "_outList_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FELMoves_Finisher_Part, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__outList_ValueProp = { "_outList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__outList_Key_KeyProp = { "_outList_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__outList = { "_outList", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MovesSituationUtility_eventGetEnableFinisherList_Parms, _outList), EMapPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__BaseList_ValueProp = { "_BaseList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FMovesSituation, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__BaseList_Key_KeyProp = { "_BaseList_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FELMoves_Finisher_Part, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__BaseList_ValueProp = { "_BaseList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__BaseList_Key_KeyProp = { "_BaseList_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::NewProp__BaseList_MetaData[] = {
 		{ "NativeConst", "" },
@@ -389,7 +390,9 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// peek:  these types don't seem compatible with Tmap.  Will stub for now.\n//static void GetEnableFinisherList(TMap<FELMoves_Finisher_Part, FMovesSituation>& _outList, const TMap<FELMoves_Finisher_Part, FMovesSituation>& _BaseList, const FELMoves_Finisher& FinisherData, const FELMoves_Finisher_Part& CurrentFinisher);\n" },
 		{ "ModuleRelativePath", "Public/MovesSituationUtility.h" },
+		{ "ToolTip", "peek:  these types don't seem compatible with Tmap.  Will stub for now.\nstatic void GetEnableFinisherList(TMap<FELMoves_Finisher_Part, FMovesSituation>& _outList, const TMap<FELMoves_Finisher_Part, FMovesSituation>& _BaseList, const FELMoves_Finisher& FinisherData, const FELMoves_Finisher_Part& CurrentFinisher);" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMovesSituationUtility, nullptr, "GetEnableFinisherList", nullptr, nullptr, sizeof(MovesSituationUtility_eventGetEnableFinisherList_Parms), Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList_Statics::Function_MetaDataParams)) };
@@ -931,7 +934,7 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 		{ &Z_Construct_UFunction_UMovesSituationUtility_FindSituationDataName, "FindSituationDataName" }, // 3661015479
 		{ &Z_Construct_UFunction_UMovesSituationUtility_GetAttackTagArray, "GetAttackTagArray" }, // 4266726131
 		{ &Z_Construct_UFunction_UMovesSituationUtility_GetDamagePartTagArray, "GetDamagePartTagArray" }, // 3053889747
-		{ &Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList, "GetEnableFinisherList" }, // 3496032739
+		{ &Z_Construct_UFunction_UMovesSituationUtility_GetEnableFinisherList, "GetEnableFinisherList" }, // 1471140177
 		{ &Z_Construct_UFunction_UMovesSituationUtility_GetFunctionTagArray, "GetFunctionTagArray" }, // 3079921105
 		{ &Z_Construct_UFunction_UMovesSituationUtility_GetMovesTagArray, "GetMovesTagArray" }, // 915653740
 		{ &Z_Construct_UFunction_UMovesSituationUtility_GetSituationMovesName, "GetSituationMovesName" }, // 2909169883
@@ -978,7 +981,7 @@ void EmptyLinkFunctionForGeneratedCodeMovesSituationUtility() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMovesSituationUtility, 3565837551);
+	IMPLEMENT_CLASS(UMovesSituationUtility, 2790466945);
 	template<> CREATION_API UClass* StaticClass<UMovesSituationUtility>()
 	{
 		return UMovesSituationUtility::StaticClass();

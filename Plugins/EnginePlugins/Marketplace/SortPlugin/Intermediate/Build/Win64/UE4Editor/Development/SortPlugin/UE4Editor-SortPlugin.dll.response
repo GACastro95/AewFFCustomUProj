@@ -34,7 +34,10 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\AewFFCustomUProj\Intermediate\Build\Win64\AEWFightForeverEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\AewFFCustomUProj\Plugins\EnginePlugins\Marketplace\SortPlugin\Intermediate\Build\Win64\UE4Editor\Development\SortPlugin\SortPluginBPLibrary.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\EnginePlugins\Marketplace\SortPlugin\Intermediate\Build\Win64\UE4Editor\Development\SortPlugin\Module.SortPlugin.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\EnginePlugins\Marketplace\SortPlugin\Intermediate\Build\Win64\UE4Editor\Development\SortPlugin\SortPlugin.init.gen.cpp.obj"
+"D:\AewFFCustomUProj\Plugins\EnginePlugins\Marketplace\SortPlugin\Intermediate\Build\Win64\UE4Editor\Development\SortPlugin\SortPluginBPLibrary.gen.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\EnginePlugins\Marketplace\SortPlugin\Intermediate\Build\Win64\UE4Editor\Development\SortPlugin\Module.SortPlugin.gen.cpp.obj"
 "D:\AewFFCustomUProj\Plugins\EnginePlugins\Marketplace\SortPlugin\Intermediate\Build\Win64\UE4Editor\Development\SortPlugin\Default.rc2.res"
 "D:\games\engines\unreal_engines\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"

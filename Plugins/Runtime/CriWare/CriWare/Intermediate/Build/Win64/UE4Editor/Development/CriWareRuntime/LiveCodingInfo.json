@@ -63,7 +63,6 @@
 			"AtomStringWithComment.cpp.obj",
 			"AtomTriggerRow.cpp.obj",
 			"AtomTriggerTableFunctionLibrary.cpp.obj",
-			"AtomUnrealSoundRenderer.cpp.obj",
 			"AtomWaveInfo.cpp.obj",
 			"AtomWavePlayer.cpp.obj",
 			"BusSendInterpolationSettings.cpp.obj",
@@ -97,7 +96,8 @@
 			"SoundAtomConfig.cpp.obj",
 			"SoundAtomCue.cpp.obj",
 			"SoundAtomCueSheet.cpp.obj",
-			"StreamManaMovie.cpp.obj"
+			"StreamManaMovie.cpp.obj",
+			"AtomUnrealSoundRenderer.cpp.obj"
 		],
 		"Module.CriWareRuntime.gen.1_of_6.cpp.obj": [
 			"AcfDataTable.gen.cpp.obj",
@@ -168,7 +168,6 @@
 			"AtomStringWithComment.gen.cpp.obj",
 			"AtomTriggerRow.gen.cpp.obj",
 			"AtomTriggerTableFunctionLibrary.gen.cpp.obj",
-			"AtomUnrealSoundRenderer.gen.cpp.obj",
 			"AtomWaveInfo.gen.cpp.obj",
 			"AtomWavePlayer.gen.cpp.obj",
 			"BusSendInterpolationSettings.gen.cpp.obj",
@@ -180,7 +179,6 @@
 			"CriWareFunctionLibrary.gen.cpp.obj",
 			"CriWareInitializer.gen.cpp.obj",
 			"CriWarePluginSettings.gen.cpp.obj",
-			"CriWareRuntime.init.gen.cpp.obj",
 			"DataManaMovie.gen.cpp.obj",
 			"EAtomAudioVolumeType.gen.cpp.obj",
 			"EAtomComponentStatus.gen.cpp.obj",
@@ -197,7 +195,9 @@
 			"ECriFsBinderStatus.gen.cpp.obj",
 			"ECriFsLoaderStatus.gen.cpp.obj",
 			"ECriWareErrorType.gen.cpp.obj",
-			"ECriWareSpeakerSystem.gen.cpp.obj"
+			"ECriWareSpeakerSystem.gen.cpp.obj",
+			"AtomUnrealSoundRenderer.gen.cpp.obj",
+			"CriWareRuntime.init.gen.cpp.obj"
 		],
 		"Module.CriWareRuntime.gen.5_of_6.cpp.obj": [
 			"EEngineIniFileType.gen.cpp.obj",

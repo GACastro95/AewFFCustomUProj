@@ -154,7 +154,6 @@
 			"MovesPlayerStart.cpp.obj",
 			"MovesSituation.cpp.obj",
 			"MovesSituation_SlotDetail.cpp.obj",
-			"MovesSituationUtility.cpp.obj",
 			"MovesTempData.cpp.obj",
 			"MovesTestMenuStructDefine.cpp.obj",
 			"MyWrestlerDataEditComponent.cpp.obj",
@@ -164,7 +163,8 @@
 			"RosterInfoParam.cpp.obj",
 			"RosterPresetRaw.cpp.obj",
 			"WrestlerMoves.cpp.obj",
-			"WrestlerSetupParam.cpp.obj"
+			"WrestlerSetupParam.cpp.obj",
+			"MovesSituationUtility.cpp.obj"
 		],
 		"Module.Creation.gen.1_of_7.cpp.obj": [
 			"AttireData.gen.cpp.obj",
@@ -187,7 +187,6 @@
 			"ColorTableFunctionLibrary.gen.cpp.obj",
 			"CommonWrestlerRaw.gen.cpp.obj",
 			"CostumeParam.gen.cpp.obj",
-			"Creation.init.gen.cpp.obj",
 			"CreationSettings.gen.cpp.obj",
 			"CreationSettingsUtilityFunctions.gen.cpp.obj",
 			"CustomDataInfo.gen.cpp.obj",
@@ -195,7 +194,8 @@
 			"CustomRosterParam.gen.cpp.obj",
 			"CustomRosterRaw.gen.cpp.obj",
 			"CustomWrestlerSubsystems.gen.cpp.obj",
-			"EBasicWrestlerIntParamType.gen.cpp.obj"
+			"EBasicWrestlerIntParamType.gen.cpp.obj",
+			"Creation.init.gen.cpp.obj"
 		],
 		"Module.Creation.gen.2_of_7.cpp.obj": [
 			"EditBodyParam.gen.cpp.obj",
@@ -329,12 +329,11 @@
 			"EMovesSettingMenuType.gen.cpp.obj",
 			"EMovesState.gen.cpp.obj",
 			"EMovesTag_AttackIndex.gen.cpp.obj",
-			"EMovesTag_AttackType.gen.cpp.obj",
-			"EMovesTag_DamagePart.gen.cpp.obj"
+			"EMovesTag_DamagePart.gen.cpp.obj",
+			"EMovesTag_AttackType.gen.cpp.obj"
 		],
 		"Module.Creation.gen.6_of_7.cpp.obj": [
 			"EMovesTag_DamagePartIndex.gen.cpp.obj",
-			"EMovesTag_Function.gen.cpp.obj",
 			"EMovesTag_FunctionIndex.gen.cpp.obj",
 			"EMovesTag_MovesIndex.gen.cpp.obj",
 			"EMovesTag_MovesType.gen.cpp.obj",
@@ -354,10 +353,10 @@
 			"MovesOutputData.gen.cpp.obj",
 			"MovesPlayerStart.gen.cpp.obj",
 			"MovesSituation.gen.cpp.obj",
-			"MovesSituation_SlotDetail.gen.cpp.obj"
+			"MovesSituation_SlotDetail.gen.cpp.obj",
+			"EMovesTag_Function.gen.cpp.obj"
 		],
 		"Module.Creation.gen.7_of_7.cpp.obj": [
-			"MovesSituationUtility.gen.cpp.obj",
 			"MovesTempData.gen.cpp.obj",
 			"MovesTestMenuStructDefine.gen.cpp.obj",
 			"MyWrestlerDataEditComponent.gen.cpp.obj",
@@ -367,7 +366,8 @@
 			"RosterInfoParam.gen.cpp.obj",
 			"RosterPresetRaw.gen.cpp.obj",
 			"WrestlerMoves.gen.cpp.obj",
-			"WrestlerSetupParam.gen.cpp.obj"
+			"WrestlerSetupParam.gen.cpp.obj",
+			"MovesSituationUtility.gen.cpp.obj"
 		]
 	}
 }

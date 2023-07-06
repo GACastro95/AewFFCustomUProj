@@ -19,7 +19,6 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneManaTrack() {}
 	UPackage* Z_Construct_UPackage__Script_CriWareMovieScenes();
 	MOVIESCENE_API UClass* Z_Construct_UClass_UMovieSceneSection_NoRegister();
 	CRIWAREMOVIESCENES_API UClass* Z_Construct_UClass_UMovieSceneAtomTrack_NoRegister();
-	MOVIESCENE_API UClass* Z_Construct_UClass_UMovieSceneTrackTemplateProducer_NoRegister();
 // End Cross Module References
 	void UMovieSceneManaTrack::StaticRegisterNativesUMovieSceneManaTrack()
 	{
@@ -47,7 +46,6 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneManaTrack() {}
 #endif
 		static const UE4CodeGen_Private::FSoftObjectPropertyParams NewProp_SyncedAtomTrack;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -94,9 +92,6 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneManaTrack() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMovieSceneManaTrack_Statics::NewProp_ManaSections,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMovieSceneManaTrack_Statics::NewProp_SyncedAtomTrack,
 	};
-		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UMovieSceneManaTrack_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UMovieSceneTrackTemplateProducer_NoRegister, (int32)VTABLE_OFFSET(UMovieSceneManaTrack, IMovieSceneTrackTemplateProducer), false },
-		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMovieSceneManaTrack_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMovieSceneManaTrack>::IsAbstract,
 	};
@@ -107,11 +102,11 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneManaTrack() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_UMovieSceneManaTrack_Statics::PropPointers,
-		InterfaceParams,
+		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UMovieSceneManaTrack_Statics::PropPointers),
-		UE_ARRAY_COUNT(InterfaceParams),
+		0,
 		0x00A800A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UMovieSceneManaTrack_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UMovieSceneManaTrack_Statics::Class_MetaDataParams))
 	};
@@ -124,7 +119,7 @@ void EmptyLinkFunctionForGeneratedCodeMovieSceneManaTrack() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMovieSceneManaTrack, 613887624);
+	IMPLEMENT_CLASS(UMovieSceneManaTrack, 4166654687);
 	template<> CRIWAREMOVIESCENES_API UClass* StaticClass<UMovieSceneManaTrack>()
 	{
 		return UMovieSceneManaTrack::StaticClass();

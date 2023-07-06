@@ -30,7 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeEMovesTag_AttackType() {}
 		return EMovesTag_AttackType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EMovesTag_AttackType(EMovesTag_AttackType_StaticEnum, TEXT("/Script/Creation"), TEXT("EMovesTag_AttackType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Creation_EMovesTag_AttackType_Hash() { return 2982486893U; }
+	uint32 Get_Z_Construct_UEnum_Creation_EMovesTag_AttackType_Hash() { return 4037524760U; }
 	UEnum* Z_Construct_UEnum_Creation_EMovesTag_AttackType()
 	{
 #if WITH_HOT_RELOAD
@@ -61,21 +61,33 @@ void EmptyLinkFunctionForGeneratedCodeEMovesTag_AttackType() {}
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "AT_BreakArm.Comment", "//0x800,\n" },
 				{ "AT_BreakArm.Name", "EMovesTag_AttackType::AT_BreakArm" },
+				{ "AT_BreakArm.ToolTip", "0x800," },
+				{ "AT_BreakFeet.Comment", "//0x400,\n" },
 				{ "AT_BreakFeet.Name", "EMovesTag_AttackType::AT_BreakFeet" },
+				{ "AT_BreakFeet.ToolTip", "0x400," },
 				{ "AT_Chop.Name", "EMovesTag_AttackType::AT_Chop" },
 				{ "AT_Clothesline.Name", "EMovesTag_AttackType::AT_Clothesline" },
 				{ "AT_CornerDive.Name", "EMovesTag_AttackType::AT_CornerDive" },
+				{ "AT_Dirty.Comment", "//0x1000,\n" },
 				{ "AT_Dirty.Name", "EMovesTag_AttackType::AT_Dirty" },
+				{ "AT_Dirty.ToolTip", "0x1000," },
 				{ "AT_Elbow.Name", "EMovesTag_AttackType::AT_Elbow" },
 				{ "AT_Fist.Name", "EMovesTag_AttackType::AT_Fist" },
 				{ "AT_Head.Name", "EMovesTag_AttackType::AT_Head" },
+				{ "AT_Impact.Comment", "//0x100,\n" },
 				{ "AT_Impact.Name", "EMovesTag_AttackType::AT_Impact" },
+				{ "AT_Impact.ToolTip", "0x100," },
 				{ "AT_Kick.Name", "EMovesTag_AttackType::AT_Kick" },
 				{ "AT_Knee.Name", "EMovesTag_AttackType::AT_Knee" },
+				{ "AT_MAX.Comment", "//0x2000,\n" },
 				{ "AT_MAX.Hidden", "" },
 				{ "AT_MAX.Name", "EMovesTag_AttackType::AT_MAX" },
+				{ "AT_MAX.ToolTip", "0x2000," },
+				{ "AT_RunAtk.Comment", "//0x200,\n" },
 				{ "AT_RunAtk.Name", "EMovesTag_AttackType::AT_RunAtk" },
+				{ "AT_RunAtk.ToolTip", "0x200," },
 				{ "AT_Springboard.Name", "EMovesTag_AttackType::AT_Springboard" },
 				{ "BlueprintType", "true" },
 				{ "ModuleRelativePath", "Public/EMovesTag_AttackType.h" },

@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlineSubsystemSteam_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xFAFF0E4F,
+				0x5AB34713,
 				0xCD2A79F3,
 				METADATA_PARAMS(nullptr, 0)
 			};

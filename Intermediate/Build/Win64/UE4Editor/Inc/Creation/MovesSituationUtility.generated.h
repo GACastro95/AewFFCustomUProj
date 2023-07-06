@@ -10,7 +10,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UDataTable;
 struct FMovesSituation;
-struct FELMoves_Finisher_Part; struct FMovesSituation;
+class UObject; class UObject;
 struct FELMoves_Finisher;
 struct FELMoves_Finisher_Part;
 enum class EMovesDataTable_Type : uint8;

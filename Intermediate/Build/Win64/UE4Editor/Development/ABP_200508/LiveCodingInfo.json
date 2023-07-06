@@ -327,7 +327,6 @@
 			"ELEntranceCutsceneBeltAttachOffset.cpp.obj",
 			"ELEntranceCutsceneBGModelData.cpp.obj",
 			"ELEntranceCutsceneBGModelInfo.cpp.obj",
-			"ELEntranceCutsceneCamera.cpp.obj",
 			"ELEntranceCutsceneDataManager.cpp.obj",
 			"ELEntranceCutsceneEmitterData.cpp.obj",
 			"ELEntranceCutsceneFadeManager.cpp.obj",
@@ -395,7 +394,8 @@
 			"ELGameServerParam.cpp.obj",
 			"ELGameServerSelector.cpp.obj",
 			"ELGameSettingOprionScirptBase.cpp.obj",
-			"ELGameSystemDataUtilityFunction.cpp.obj"
+			"ELGameSystemDataUtilityFunction.cpp.obj",
+			"ELEntranceCutsceneCamera.cpp.obj"
 		],
 		"Module.ABP_200508.2_of_4.cpp.obj": [
 			"ELGameVersions.cpp.obj",
@@ -542,15 +542,8 @@
 			"ELSSAIUtility.cpp.obj",
 			"ELSSAnalyticsLog2YGS2Object.cpp.obj",
 			"ELSSAnimInstance.cpp.obj",
-			"ELSSAnimNotify_Camera.cpp.obj",
-			"ELSSAnimNotify_Down.cpp.obj",
-			"ELSSAnimNotify_Effect.cpp.obj",
-			"ELSSAnimNotify_ExecuteSituation.cpp.obj",
 			"ELSSAnimNotify_GunFire.cpp.obj",
-			"ELSSAnimNotify_ProgressActionCamera.cpp.obj",
 			"ELSSAnimNotify_PutTrap.cpp.obj",
-			"ELSSAnimNotify_SyncAttack.cpp.obj",
-			"ELSSAnimNotify_SyncOff.cpp.obj",
 			"ELSSAnimNotify_ThrowWeapon.cpp.obj",
 			"ELSSAnimNotifyBase.cpp.obj",
 			"ELSSAnimNotifyBaseBranchingPoint.cpp.obj",
@@ -711,7 +704,6 @@
 			"ELSSPlayerState.cpp.obj",
 			"ELSSPoolBlueprintBase.cpp.obj",
 			"ELSSPoolDecal_TShirt.cpp.obj",
-			"ELSSPoolDecalBase.cpp.obj",
 			"ELSSPoolManager.cpp.obj",
 			"ELSSReactionState.cpp.obj",
 			"ELSSRequestData.cpp.obj",
@@ -735,7 +727,6 @@
 			"ELSSSpreadTrap.cpp.obj",
 			"ELSSSpringArmComponent.cpp.obj",
 			"ELSSSSModeOnlineDebugMenuParam.cpp.obj",
-			"ELSSStationalCamera.cpp.obj",
 			"ELSSStorm.cpp.obj",
 			"ELSSStormAnchor.cpp.obj",
 			"ELSSStormFinalLocator.cpp.obj",
@@ -760,7 +751,16 @@
 			"ELSSWeaponGunBullet_TShirt.cpp.obj",
 			"ELSSWeaponMelee.cpp.obj",
 			"ELSSWeaponThrow.cpp.obj",
-			"ELSSWeaponThrowProjectile.cpp.obj"
+			"ELSSWeaponThrowProjectile.cpp.obj",
+			"ELSSAnimNotify_Camera.cpp.obj",
+			"ELSSAnimNotify_Down.cpp.obj",
+			"ELSSAnimNotify_Effect.cpp.obj",
+			"ELSSAnimNotify_ExecuteSituation.cpp.obj",
+			"ELSSAnimNotify_ProgressActionCamera.cpp.obj",
+			"ELSSAnimNotify_SyncAttack.cpp.obj",
+			"ELSSAnimNotify_SyncOff.cpp.obj",
+			"ELSSPoolDecalBase.cpp.obj",
+			"ELSSStationalCamera.cpp.obj"
 		],
 		"Module.ABP_200508.3_of_4.cpp.obj": [
 			"ELSSWeaponThrowProjectile_Ball.cpp.obj",
@@ -1351,7 +1351,6 @@
 			"YUnlockableItem_DebugMenu.cpp.obj"
 		],
 		"Module.ABP_200508.gen.1_of_103.cpp.obj": [
-			"ABP_200508.init.gen.cpp.obj",
 			"ABPBuild.gen.cpp.obj",
 			"AchievementParam.gen.cpp.obj",
 			"ActionQueryExternalAccountIdStats.gen.cpp.obj",
@@ -1363,7 +1362,8 @@
 			"ActionWaitReplicationConnections.gen.cpp.obj",
 			"ActivityFunctionLibrary.gen.cpp.obj",
 			"AIAutoMatchParam.gen.cpp.obj",
-			"AnimErrInfo.gen.cpp.obj"
+			"AnimErrInfo.gen.cpp.obj",
+			"ABP_200508.init.gen.cpp.obj"
 		],
 		"Module.ABP_200508.gen.2_of_103.cpp.obj": [
 			"ApplicationStatusChangedDelegate.gen.cpp.obj",
@@ -2032,13 +2032,13 @@
 			"ELEntranceCutsceneBeltAttachOffset.gen.cpp.obj",
 			"ELEntranceCutsceneBGModelData.gen.cpp.obj",
 			"ELEntranceCutsceneBGModelInfo.gen.cpp.obj",
-			"ELEntranceCutsceneCamera.gen.cpp.obj",
 			"ELEntranceCutsceneDataManager.gen.cpp.obj",
 			"ELEntranceCutsceneEmitterData.gen.cpp.obj",
 			"ELEntranceCutsceneFadeManager.gen.cpp.obj",
 			"ELEntranceCutsceneFingerSignData.gen.cpp.obj",
 			"ELEntranceCutsceneInfo.gen.cpp.obj",
-			"ELEntranceCutsceneManager.gen.cpp.obj"
+			"ELEntranceCutsceneManager.gen.cpp.obj",
+			"ELEntranceCutsceneCamera.gen.cpp.obj"
 		],
 		"Module.ABP_200508.gen.25_of_103.cpp.obj": [
 			"ELEntranceCutsceneManagerAnimationData.gen.cpp.obj",
@@ -2533,8 +2533,8 @@
 			"ELSSSpreadTrap.gen.cpp.obj",
 			"ELSSSpringArmComponent.gen.cpp.obj",
 			"ELSSSSModeOnlineDebugMenuParam.gen.cpp.obj",
-			"ELSSStationalCamera.gen.cpp.obj",
-			"ELSSStorm.gen.cpp.obj"
+			"ELSSStorm.gen.cpp.obj",
+			"ELSSStationalCamera.gen.cpp.obj"
 		],
 		"Module.ABP_200508.gen.65_of_103.cpp.obj": [
 			"ELSSStormAnchor.gen.cpp.obj",
@@ -3586,10 +3586,10 @@
 			"YMiniGameAutoPlay_DebugMenu.gen.cpp.obj",
 			"YMiniGameOptions_DebugMenu.gen.cpp.obj",
 			"YMiniGameOptions_MenuSettings.gen.cpp.obj",
-			"YPossessedItem_DebugMenu.gen.cpp.obj",
 			"YRosterModelPreview_DebugMenu.gen.cpp.obj",
 			"YScreenShot_DebugMenu.gen.cpp.obj",
-			"YUnlockableItem_DebugMenu.gen.cpp.obj"
+			"YUnlockableItem_DebugMenu.gen.cpp.obj",
+			"YPossessedItem_DebugMenu.gen.cpp.obj"
 		]
 	}
 }

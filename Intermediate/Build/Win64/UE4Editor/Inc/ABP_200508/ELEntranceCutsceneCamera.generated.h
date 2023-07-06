@@ -51,7 +51,7 @@ public: \
 
 #define AewFFCustomUProj_Source_ABP_200508_Public_ELEntranceCutsceneCamera_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer); \
+	NO_API AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AELEntranceCutsceneCamera) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AELEntranceCutsceneCamera); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AELEntranceCutsceneCamera); \
@@ -70,7 +70,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AELEntranceCutsceneCamera); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AELEntranceCutsceneCamera); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AELEntranceCutsceneCamera)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AELEntranceCutsceneCamera)
 
 
 #define AewFFCustomUProj_Source_ABP_200508_Public_ELEntranceCutsceneCamera_h_10_PRIVATE_PROPERTY_OFFSET
