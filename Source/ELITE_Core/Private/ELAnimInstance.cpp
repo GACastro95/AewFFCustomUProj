@@ -6,3 +6,7 @@ void UELAnimInstance::GetSocketTransform_N(const ACharacter* Character, const FN
 UELAnimInstance::UELAnimInstance() {
 }
 
+
+void UELAnimInstance::PostInitProperties() {
+    Super::PostInitProperties();
+}

@@ -60,6 +60,10 @@
 			"Enabled": false
 		},
 		{
+			"Name": "ChaosEditor",
+			"Enabled": false
+		}
+		{
 			"Name": "BlueprintMaterialTextureNodes",
 			"Enabled": true
 		},

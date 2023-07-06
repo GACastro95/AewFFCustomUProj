@@ -100,9 +100,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void UpdateParam(const bool bForce);
     
-    UFUNCTION(BlueprintCallable)
-    void PostInitProperties();
-    
+    virtual void PostInitProperties() override;
+
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnUpdateState();
     
