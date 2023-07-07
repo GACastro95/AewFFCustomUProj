@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_MODULE(FDefaultGameModuleImpl, yGS2Client);
+IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, yGS2Client);

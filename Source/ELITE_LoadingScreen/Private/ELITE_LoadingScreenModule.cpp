@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_MODULE(FDefaultGameModuleImpl, ELITE_LoadingScreen);
+IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, ELITE_LoadingScreen);
