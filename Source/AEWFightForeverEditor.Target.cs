@@ -5,6 +5,8 @@ public class AEWFightForeverEditorTarget : TargetRules {
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.AddRange(new string[] {
+			"Core",
+			"Engine",
 			"ABP_200508",
 			"Creation",
 			"ELITE",

@@ -5,6 +5,8 @@ public class AEWFightForeverGameTarget : TargetRules {
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.AddRange(new string[] {
+			"Core",
+			"Engine",
 			"ABP_200508",
 			"Creation",
 			"ELITE",
