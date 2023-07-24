@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELEntranceCutsceneCamera : public ACineCameraActor {
     GENERATED_BODY()
 public:
-    AELEntranceCutsceneCamera();
+    AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopCameraOffsetHeight(float InterpolationTime);
     

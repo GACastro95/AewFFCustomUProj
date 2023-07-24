@@ -19,7 +19,7 @@ public:
     
     UELSSAnimNotify_SyncAttack();
     UFUNCTION(BlueprintCallable)
-    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const;
+    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     
 };
 

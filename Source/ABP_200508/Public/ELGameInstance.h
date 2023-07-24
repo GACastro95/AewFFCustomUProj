@@ -174,7 +174,7 @@ private:
     UELTutorialManager* m_TutorialManager;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FPerPlatformFloat PlatformFPS;
     
 private:

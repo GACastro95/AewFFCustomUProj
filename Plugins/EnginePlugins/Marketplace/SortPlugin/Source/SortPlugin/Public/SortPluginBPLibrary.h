@@ -82,10 +82,10 @@ public:
     static TArray<float> SortFloat(TArray<float> Array, bool bIsAscending);
     
     UFUNCTION(BlueprintCallable)
-    static void SortActorRef(UPARAM(Ref) TArray<AActor*>& Array, const AActor*& Actor, bool bIsAscending);
+    static void SortActorRef(UPARAM(Ref) TArray<AActor*>& Array, AActor* Actor, bool bIsAscending);
     
     UFUNCTION(BlueprintCallable)
-    static TArray<AActor*> SortActor(TArray<AActor*> Array, const AActor*& Actor, bool bIsAscending);
+    static TArray<AActor*> SortActor(TArray<AActor*> Array, AActor* Actor, bool bIsAscending);
     
     UFUNCTION(BlueprintCallable)
     static TArray<FVector> ReverseVector(const TArray<FVector>& Array);
@@ -208,7 +208,7 @@ public:
     static void FarthestLocation(const TArray<FVector>& Array, FVector Origin, FVector& Farthest, float& Distance, int32& Index);
     
     UFUNCTION(BlueprintCallable)
-    static void FarthestActor(const TArray<AActor*>& Array, const AActor*& Origin, AActor*& Farthest, float& Distance, int32& Index);
+    static void FarthestActor(const TArray<AActor*>& Array, AActor* Origin, AActor*& Farthest, float& Distance, int32& Index);
     
     UFUNCTION(BlueprintCallable)
     static TArray<FVector> ExtractVector(const TArray<FVector>& Array, int32 StartIndex, int32 EndIndex);
@@ -235,7 +235,7 @@ public:
     static void ClosestLocation(const TArray<FVector>& Array, FVector Origin, FVector& Closest, float& Distance, int32& Index);
     
     UFUNCTION(BlueprintCallable)
-    static void ClosestActor(const TArray<AActor*>& Array, const AActor*& Origin, AActor*& Closest, float& Distance, int32& Index);
+    static void ClosestActor(const TArray<AActor*>& Array, AActor* Origin, AActor* Closest, float& Distance, int32& Index);
     
     UFUNCTION(BlueprintCallable)
     static void ClampVectorSizeRef(UPARAM(Ref) TArray<FVector>& Array, float MinSize, float MaxSize, bool bOnly2D);

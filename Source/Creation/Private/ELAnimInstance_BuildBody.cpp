@@ -7,6 +7,7 @@ void UELAnimInstance_BuildBody::UpdateParam(const bool bForce) {
 }
 
 void UELAnimInstance_BuildBody::PostInitProperties() {
+    Super::PostInitProperties();
 }
 
 void UELAnimInstance_BuildBody::OnUpdateState_Implementation() {

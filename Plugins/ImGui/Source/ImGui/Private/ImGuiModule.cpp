@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_MODULE(FDefaultGameModuleImpl, ImGui);
+IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, ImGui);

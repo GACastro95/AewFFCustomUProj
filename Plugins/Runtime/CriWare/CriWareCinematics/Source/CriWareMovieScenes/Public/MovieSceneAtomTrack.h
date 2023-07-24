@@ -7,7 +7,7 @@
 class UMovieSceneSection;
 
 UCLASS(Blueprintable, MinimalAPI)
-class UMovieSceneAtomTrack : public UMovieSceneNameableTrack, public IMovieSceneTrackTemplateProducer {
+class UMovieSceneAtomTrack : public UMovieSceneNameableTrack{ //}; , public IMovieSceneTrackTemplateProducer{
     GENERATED_BODY()
 public:
 private:
@@ -16,7 +16,8 @@ private:
     
 public:
     UMovieSceneAtomTrack();
-    
+
     // Fix for true pure virtual functions not being implemented
+    //FMovieSceneEvalTemplatePtr CreateTemplateForSection(const UMovieSceneSection& InSection) const;
 };
 
