@@ -1,7 +1,7 @@
 #include "ELSSPoolDecalBase.h"
 #include "Components/DecalComponent.h"
 
-void AELSSPoolDecalBase::PlayAttached_Implementation(FVector DecalSize, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, TEnumAsByte<EAttachLocation::Type> LocationType, float LifeSpan) {
+void AELSSPoolDecalBase::PlayAttached_Implementation(FVector DecalSize, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, EAttachLocation::Type LocationType, float LifeSpan) {
 }
 
 UDecalComponent* AELSSPoolDecalBase::PlayAtLocation_Implementation(FVector DecalSize, FVector Location, FRotator Rotation, float LifeSpan) {

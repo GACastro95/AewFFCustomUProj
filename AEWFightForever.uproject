@@ -60,6 +60,10 @@
 			"Enabled": false
 		},
 		{
+			"Name": "ChaosEditor",
+			"Enabled": false
+		},
+		{
 			"Name": "BlueprintMaterialTextureNodes",
 			"Enabled": true
 		},
@@ -77,8 +81,7 @@
 		},
 		{
 			"Name": "OnlineSubsystemGooglePlay",
-			"Enabled": false,
-			"SupportedTargetPlatforms": []
+			"Enabled": false
 		},
 		{
 			"Name": "AndroidPermission",
@@ -167,8 +170,7 @@
 		},
 		{
 			"Name": "MagicLeapMedia",
-			"Enabled": false,
-			"SupportedTargetPlatforms": []
+			"Enabled": false
 		},
 		{
 			"Name": "MagicLeap",
@@ -294,10 +296,7 @@
 		},
 		{
 			"Name": "LuminPlatformFeatures",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Lumin"
-			]
+			"Enabled": false
 		},
 		{
 			"Name": "MLSDK",

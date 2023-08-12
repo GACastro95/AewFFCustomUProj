@@ -12,7 +12,7 @@ class ABP_200508_API UELSSAnimNotify_ExecuteSituation : public UELSSAnimNotifyBa
 public:
     UELSSAnimNotify_ExecuteSituation();
     UFUNCTION(BlueprintCallable)
-    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const;
+    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     
 };
 

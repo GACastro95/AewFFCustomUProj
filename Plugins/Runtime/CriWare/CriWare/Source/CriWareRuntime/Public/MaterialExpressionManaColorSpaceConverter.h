@@ -10,34 +10,34 @@ UCLASS(Blueprintable, CollapseCategories)
 class CRIWARERUNTIME_API UMaterialExpressionManaColorSpaceConverter : public UMaterialExpression {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput Luma;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput ChromaB;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput ChromaR;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput Alpha;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     FExpressionInput Gamma;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bH264;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     EManaMovieType MovieType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     EManaColorSpace ColorSpace;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseGammaExponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY( EditAnywhere, meta=(AllowPrivateAccess=true))
     float ConstGamma;
     
     UMaterialExpressionManaColorSpaceConverter();

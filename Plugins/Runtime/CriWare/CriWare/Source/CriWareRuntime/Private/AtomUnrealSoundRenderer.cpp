@@ -1,5 +1,6 @@
 #include "AtomUnrealSoundRenderer.h"
 
-UAtomUnrealSoundRenderer::UAtomUnrealSoundRenderer() {
+UAtomUnrealSoundRenderer::UAtomUnrealSoundRenderer(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer) {
 }
 

@@ -12,6 +12,6 @@ enum class ESSInteractPriority : uint8 {
     PickupDefault = 0xFB,
     PickupWeapon = 0xFA,
     PickupItem = 0xF9,
-    ESSInteractPriority_MAX = 0x100,
+    ESSInteractPriority_MAX = 0xFF,
 };
 

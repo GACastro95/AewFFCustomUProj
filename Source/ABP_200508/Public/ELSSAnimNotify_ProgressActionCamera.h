@@ -21,7 +21,7 @@ protected:
 public:
     UELSSAnimNotify_ProgressActionCamera();
     UFUNCTION(BlueprintCallable)
-    void Notify(USkeletalMeshComponent* inMeshComp, UAnimSequenceBase* InAnimation) const;
+    void Notify(USkeletalMeshComponent* inMeshComp, UAnimSequenceBase* InAnimation);
     
 };
 
