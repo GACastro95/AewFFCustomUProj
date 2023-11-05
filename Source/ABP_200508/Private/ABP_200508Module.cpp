@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, ABP_200508);
+IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, ABP_200508, "AEWFightForever");
