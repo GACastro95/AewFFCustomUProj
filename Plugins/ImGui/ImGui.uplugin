@@ -12,17 +12,13 @@
 	"SupportURL": "",
 	"CanContainContent": false,
 	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
-		{
-			"Name": "ImGui",
-			"Type": "DeveloperTool",
-			"LoadingPhase": "PreDefault",
-			"WhitelistPlatforms": [
-				"Win32",
-				"Win64"
-			]
-		}
+    {
+      "Name": "ImGui",
+      "Type": "DeveloperTool",
+      "LoadingPhase": "PreDefault",
+      "WhitelistPlatforms": [ "Win32", "Win64", "PS4", "PS5", "XboxOneGDK", "XSX", "Switch" ]
+    }
 	]
 }

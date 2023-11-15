@@ -1,46 +1,36 @@
-{
-	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.0",
-	"FriendlyName": "yDebug",
-	"Description": "Debug Tools on UE4",
-	"Category": "Other",
-	"CreatedBy": "y-ando",
-	"CreatedByURL": "",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
-	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false,
-	"Modules": [
-		{
-			"Name": "yDebug",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [
-				"Win32",
-				"Win64"
-			]
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "ImGui",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Win32",
-				"Win64"
-			]
-		},
-		{
-			"Name": "NetImGui",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Win32",
-				"Win64"
-			]
-		}
-	]
+﻿{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "1.0",
+    "FriendlyName": "yDebug",
+    "Description": "Debug Tools on UE4",
+    "Category": "Other",
+    "CreatedBy": "y-ando",
+    "CreatedByURL": "",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "CanContainContent": true,
+    "IsBetaVersion": false,
+    "Installed": false,
+    "Modules": [
+        {
+            "Name": "yDebug",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "WhitelistPlatforms": [ "Win32", "Win64", "PS4", "PS5", "XboxOneGDK", "XSX", "Switch" ]
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "ImGui",
+            "Enabled": true,
+            "WhitelistPlatforms": [ "Win32", "Win64", "PS4", "PS5", "XboxOneGDK", "XSX", "Switch" ]
+        },
+        {
+            "Name": "NetImGui",
+            "Enabled": true,
+            "WhitelistPlatforms": [ "Win32", "Win64", "PS4", "PS5", "XboxOneGDK", "XSX", "Switch" ]
+        }
+    ]
 }

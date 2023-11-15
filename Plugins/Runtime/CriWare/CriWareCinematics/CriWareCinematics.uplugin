@@ -1,28 +1,33 @@
 {
-	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.30.01.01",
-	"FriendlyName": "CRIWARE Cinematics Plugin",
-	"Description": "CRIWARE addons for editing and sequencing ADX2 sounds, and compositing SOFDEC2 movies",
-	"Category": "CriWare",
-	"CreatedBy": "CRI Middleware Co., Ltd.",
-	"CreatedByURL": "http://www.cri-mw.co.jp/",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
-	"EnabledByDefault": true,
-	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false,
-	"Modules": [
+	"FileVersion" : 3,
+	"Version" : 1,
+	"VersionName" : "1.32.00.02_UE4.27Plus",
+	"FriendlyName" : "CRIWARE Cinematics Plugin",
+	"Description" : "CRIWARE addons for editing and sequencing ADX2 sounds, and compositing SOFDEC2 movies",
+	"Category" : "CriWare",
+	"CreatedBy" : "CRI Middleware Co., Ltd.",
+	"CreatedByURL" : "http://www.cri-mw.co.jp/",
+	"MarketplaceURL" : "",
+	"SupportURL" : "",
+	"EnabledByDefault" : true,
+	"CanContainContent" : true,
+	"IsBetaVersion" : false,
+	"Installed" : false,
+	"Modules" :
+	[
 		{
-			"Name": "CriWareMovieScenes",
-			"Type": "Runtime",
-			"LoadingPhase": "PostConfigInit"
+			"Name" : "CriWareMovieScenes",
+			"Type" : "Runtime",
+			"LoadingPhase" : "PostConfigInit"
+		},
+		{
+			"Name" : "CriWareSequencer",
+			"Type" : "Editor",
+			"LoadingPhase" : "PostEngineInit"
 		}
 	],
-	"Plugins": [
+	"Plugins": 
+	[
 		{
 			"Name": "CriWare",
 			"Enabled": true

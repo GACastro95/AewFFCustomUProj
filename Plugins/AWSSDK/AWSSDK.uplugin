@@ -1,5 +1,5 @@
 {
-	"FileVersion": 3,
+	"FileVersion": 1,
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "AWSSDK",
@@ -13,6 +13,12 @@
 	"EnabledByDefault": false,
 	"CanContainContent": false,
 	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false
+	"Installed": false,
+	"Modules": [
+        {
+            "Name": "AWSSDK",
+            "Type": "ClientOnly",
+            "LoadingPhase": "Default"
+        }
+	]
 }
