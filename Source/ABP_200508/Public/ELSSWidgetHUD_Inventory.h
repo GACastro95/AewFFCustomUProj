@@ -6,6 +6,7 @@
 #include "ELSSWidgetHUD_Inventory.generated.h"
 
 class UELSSWidgetHUD_InventorySlot;
+class UTexture2D;
 class UWidgetAnimation;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -21,6 +22,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SelectSlotIndex;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UTexture2D*> IconArrays;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsFGFballState;
     
 public:
     UELSSWidgetHUD_Inventory();
@@ -60,6 +67,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ApplyInventoryIcon(int32 InIndex, ESSPickupType InPickuptype, int32 InPickupID, int32 inDurability);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyFGFBallState(bool IsInDefault, int32 InBallLevel);
     
     UFUNCTION(BlueprintCallable)
     void ApplyBareIconGuideState();

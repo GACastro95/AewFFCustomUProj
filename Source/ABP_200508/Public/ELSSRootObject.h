@@ -2,14 +2,19 @@
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
 #include "ESSEndGameReason.h"
+#include "ESSGameServerError.h"
 #include "ESSLocalDebugFlag.h"
 #include "SSDebugParam.h"
+#include "SSRuleScheduleParam.h"
+#include "SSRuleStatus.h"
 #include "ELSSRootObject.generated.h"
 
 class UELDebugMenuManager;
 class UELSSCommonDatabase;
 class UELSSGameModeDataManager;
+class UELSSLobbyManager;
 class UELSSNotice;
+class UELSSRuleSelect;
 class ULevel;
 class UWorld;
 
@@ -31,10 +36,19 @@ protected:
     ESSEndGameReason LastEndGameReason;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    ESSGameServerError GameServerError;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool LocalInGameFlag;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool VisibleFadeForChangeLevel;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UELSSLobbyManager* LobbyManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UELSSRuleSelect* RuleSelect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSDebugParam SSDebugParam;
@@ -54,7 +68,13 @@ public:
     void SetSSDebugParam(const FSSDebugParam& inDebugParam);
     
     UFUNCTION(BlueprintCallable)
+    void SetSelectedRuleScheduleId(int32 inRuleScheduleId, bool inUpdateRuleStatus);
+    
+    UFUNCTION(BlueprintCallable)
     void SetLocalDebugFlag(ESSLocalDebugFlag inFlagType, bool IsOn);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetGameServerError(ESSGameServerError inGameServerError);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnInitialize();
@@ -74,8 +94,26 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnChangeLevel();
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UELSSRuleSelect* GetSSRuleSelect() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UELSSLobbyManager* GetSSLobbyManager() const;
+    
     UFUNCTION(BlueprintCallable)
     UELSSGameModeDataManager* GetSSGameDataManager();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetSelectedRuleScheduleId() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    ESSGameServerError GetGameServerError() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<FSSRuleScheduleParam> GetEnabledRuleScheduleListForBP() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FSSRuleStatus GetCurrentRuleStatusForBP() const;
     
     UFUNCTION(BlueprintCallable)
     void DeleteSSModeGameData();
@@ -85,6 +123,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearLastEndGameReason();
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearGameServerError();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void CleanupSSModeObjects();
     
 };
 

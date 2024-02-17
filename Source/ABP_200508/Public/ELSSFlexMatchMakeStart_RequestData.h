@@ -1,15 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ELSSFlexMatchUserData.h"
 #include "ELSSFlexMatchMakeStart_RequestData.generated.h"
 
 USTRUCT(BlueprintType)
 struct FELSSFlexMatchMakeStart_RequestData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FELSSFlexMatchUserData UserData;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Platform;
     

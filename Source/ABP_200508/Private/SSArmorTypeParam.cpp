@@ -20,5 +20,6 @@ FSSArmorTypeParam::FSSArmorTypeParam() {
     this->Invincible = ESSArmorType::Default;
     this->AfterDownStandUp = ESSArmorType::Default;
     this->AdditionalSuperArmor = ESSArmorType::Default;
+    this->AfterRespawn = ESSArmorType::Default;
 }
 

@@ -11,10 +11,14 @@
 #include "SSDamageReactionParam.h"
 #include "SSEffectParam.h"
 #include "SSFallParam.h"
+#include "SSFgfBallLevelParam.h"
+#include "SSFgfFieldPatternParam.h"
 #include "SSGuardConditionParam.h"
 #include "SSGuardReactionParam.h"
 #include "SSHitEffectParam.h"
 #include "SSItemResourceParam.h"
+#include "SSPlayerStartLocatorParam.h"
+#include "SSRuleAdjustParam.h"
 #include "SSShieldParam.h"
 #include "SSSystemMotionParam.h"
 #include "SSUseItemParam.h"
@@ -125,8 +129,40 @@ public:
     UDataTable* ResultStarGradeTable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* ResultJewelGradeTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* ResultBallLevelGradeTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* VictoryCutsceneParamTable;
     
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* PlayerStartLocatorParamTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSPlayerStartLocatorParam> PlayerStartLocatorParamArray;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* RuleAdjustParamTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSRuleAdjustParam> RuleAdjustParamArray;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* FgfFieldPatternParamTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSFgfFieldPatternParam> FgfFieldPatternParamArray;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* FgfBallLevelParamTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSFgfBallLevelParam> FgfBallLevelParamArray;
+    
+public:
     AELSSDatabase();
     UFUNCTION(BlueprintCallable)
     bool GetWeaponTrapParam(int32 ID, FSSWeaponTrapParam& OutRow);
@@ -192,7 +228,13 @@ public:
     ESSResultGradeABC CalcResultGradeFromKillCount(int32 inKillCount);
     
     UFUNCTION(BlueprintCallable)
+    ESSResultGradeABC CalcResultGradeFromJewelPoint(int32 inJewelPoint);
+    
+    UFUNCTION(BlueprintCallable)
     ESSResultGradeABC CalcResultGradeFromFeverCount(int32 inFeverCount);
+    
+    UFUNCTION(BlueprintCallable)
+    ESSResultGradeABC CalcResultGradeFromBallLevelPoint(int32 inBallLevelPoint);
     
     UFUNCTION(BlueprintCallable)
     ESSResultGradeABC CalcResultGradeFromAttentionPoint(int32 inAttentionPoint);

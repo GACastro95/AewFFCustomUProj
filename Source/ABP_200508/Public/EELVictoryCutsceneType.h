@@ -19,5 +19,10 @@ enum class EELVictoryCutsceneType : uint8 {
     Tournament_Tag_Male_FinalRound,
     Tournament_Tag_Female_FinalRound,
     Tournament_Tag_Mixed_FinalRound,
+    LocalTournament_Single_Male_FinalRound,
+    LocalTournament_Single_Female_FinalRound,
+    LocalTournament_Tag_Male_FinalRound,
+    LocalTournament_Tag_Female_FinalRound,
+    LocalTournament_Tag_Mixed_FinalRound,
 };
 

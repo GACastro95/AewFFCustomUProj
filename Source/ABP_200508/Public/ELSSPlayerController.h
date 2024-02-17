@@ -14,6 +14,7 @@
 #include "ESSCameraShakeType.h"
 #include "ESSCharacterHpType.h"
 #include "ESSClientFlowState.h"
+#include "ESSClientFlowStateCategory.h"
 #include "ESSEndGameReason.h"
 #include "ESSGameFlowState.h"
 #include "ESSGameStateDebugFlag.h"
@@ -24,6 +25,7 @@
 #include "ESSMouseControlMode.h"
 #include "ESSOperationGuideExecute.h"
 #include "ESSPlayerDebugFlag.h"
+#include "ESSRestrictCharacterControlFlag.h"
 #include "ESSVehicleType.h"
 #include "SSHeatLevelUpInfo.h"
 #include "SSLogTextParam.h"
@@ -42,10 +44,12 @@ class AELSSPlayer;
 class AELSSPlayerController;
 class AELSSPlayerState;
 class AELSSStationalCamera;
+class AELSSTeamState;
 class AELSSUIManagerInGame;
 class AELSSVictoryCutscene;
 class APawn;
 class UELCommonLayout;
+class UELLocalPlayer;
 class USSModeAntiCheatData;
 
 UCLASS(Blueprintable)
@@ -81,9 +85,6 @@ protected:
     FSSPlayerControllerEventDispatcher EventOnRelease_MenuCancel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool IsAllowCharacterControll;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsRestrictMoveOnly;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -97,6 +98,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D StoredMousePosition;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<int32> ScoreRankingTeamIds;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSGameplayCamera> GameplayCameraType;
@@ -123,7 +127,16 @@ protected:
     AELSSPlayerState* WatchTargetPlayerState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSTeamState* WatchTargetTeamState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WatchGameIgnoreDecisionTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsOpenedConfirmDialog_LeaveWatchTeam;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsLeavedFromWatchTeam;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AELSSVictoryCutscene* VictoryCutscene;
@@ -187,6 +200,18 @@ private:
     
 public:
     AELSSPlayerController();
+    UFUNCTION(BlueprintCallable)
+    void WatchTeam_OnReleaseMenuDecision();
+    
+    UFUNCTION(BlueprintCallable)
+    void WatchTeam_OnPressMenuRB();
+    
+    UFUNCTION(BlueprintCallable)
+    void WatchTeam_OnPressMenuLB();
+    
+    UFUNCTION(BlueprintCallable)
+    void WatchTeam_OnPressMenuDecision();
+    
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void WatchGame_ResetUI();
@@ -220,12 +245,18 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable)
+    void UpdateWaitRespawnCountdown();
+    
+    UFUNCTION(BlueprintCallable)
     void UpdateViewTarget(float InDuration);
     
     UFUNCTION(BlueprintCallable)
     void UpdateNearPlayerList();
     
 protected:
+    UFUNCTION(BlueprintCallable)
+    void UpdateNearMatchItem();
+    
     UFUNCTION(BlueprintCallable)
     void UpdateNearInteractableObjectList();
     
@@ -241,13 +272,33 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void TickClientFlowStateCategory_ResultFlow(float inDeltaSeconds);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void TickClientFlowStateCategory_GamePlay(float inDeltaSeconds);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickClientFlowState_WatchVictoryRoyale(float inDeltaSeconds);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void TickClientFlowState_WatchTeam_Native(float inDeltaSeconds);
+    
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void TickClientFlowState_WatchTeam(float inDeltaSeconds);
     
     UFUNCTION(BlueprintCallable)
     void TickClientFlowState_WatchGame_Native(float inDeltaSeconds);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickClientFlowState_WatchGame(float inDeltaSeconds);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void TickClientFlowState_WaitingRespawn(float inDeltaSeconds);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void TickClientFlowState_WaitingFinish(float inDeltaSeconds);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickClientFlowState_VictoryRoyale(float inDeltaSeconds);
@@ -270,6 +321,9 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickClientFlowState_BeforeGamePlay(float inDeltaSeconds);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void TickClientFlowState_Battle(float inDeltaSeconds);
+    
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SyncWatchTargetPlayer_Server(int32 inWatchPlayerIndex, int32 inSyncId);
@@ -288,12 +342,15 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SSAntiCheatClient_ConnectServer(const int32 Type, const int32 Platform, const FString& ipAddress, const FString& playerId, const FString& ProductUserID);
     
+    UFUNCTION(BlueprintCallable)
+    void ShowRespawnCountdown();
+    
 protected:
     UFUNCTION(BlueprintCallable)
     void SetWatchTargetPlayerState(AELSSPlayerState* inPlayerState);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetVisibleOtherPlayerOnlineID(AELSSPlayer* inTargetPlayer, bool InVisible, bool InHasCarrot);
+    void SetVisibleOtherPlayerOnlineID(AELSSPlayer* inTargetPlayer, bool InVisible, bool InHasCarrot, bool inRuleUniqueItem);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetVisibleInteractDotIcon(AActor* inTargetActor, bool InVisible);
@@ -304,6 +361,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetRestrictMoveOnly(bool isAllow);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetRestrictCharacterControlFlag(ESSRestrictCharacterControlFlag Type, bool IsOn);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SetPlayerDebugFlag_Server(ESSPlayerDebugFlag Type, bool IsOn);
@@ -346,11 +406,23 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void RequestLeaveGame_Client();
     
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void RequestLeaveFromWatchTeam_Server();
+    
+    UFUNCTION(BlueprintCallable)
+    bool RequestLeaveFromWatchTeam();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void RequestFixIncompleteTeamResult_Server();
+    
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void RequestEndGameFlow_Client(ESSEndGameReason inEndReason);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestClientFlowGamePlay();
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void RequestAfterGamePlayFlow_Client();
     
     UFUNCTION(BlueprintCallable)
     void RegisterEndGameReason(ESSEndGameReason inEndReason);
@@ -372,6 +444,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void OnReservedReturnToMainMenuByNetworkError();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnRequestAfterGamePlayFlow();
     
     UFUNCTION(BlueprintCallable)
     void OnPrepareVictoryCutscene();
@@ -410,7 +485,13 @@ public:
     void OnPlayerChangeReviveTimer(float inTimer);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnPlayerChangePossessOfFGFBall(bool flg, int32 InBallLevel);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPlayerChangePossessOfCarrot(bool flg);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnPlayerChangePossessOfBlackDia(bool flg);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPlayerChangeOperationGuide(ESSOperationGuideExecute InType);
@@ -464,6 +545,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void OnOtherPlayerHpUpdate(AELSSPlayer* inPlayer);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnFixedIncompleteTeamResult();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnDisconnectDialogShow();
@@ -539,10 +623,22 @@ public:
     bool IsDoneResultAPI() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsClientFlowStateCategory(ESSClientFlowStateCategory inCategory) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsClientFlowState(ESSClientFlowState inClientState) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsChildPlayerController() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void HideRespawnCountdown();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasRestrictCharacterControlFlag(ESSRestrictCharacterControlFlag Type) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasAnyRestrictCharacterControlFlag() const;
     
     UFUNCTION(BlueprintCallable)
     AELSSPlayer* GetWatchTargetPlayer();
@@ -593,6 +689,9 @@ public:
     ESSEndGameReason GetEndGameReasonOnServer() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    UELLocalPlayer* GetELLocalPlayer();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetCameraRotation() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -603,13 +702,33 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExitClientFlowStateCategory_ResultFlow();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExitClientFlowStateCategory_GamePlay();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ExitClientFlowState_WatchVictoryRoyale();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void ExitClientFlowState_WatchTeam_Native();
+    
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExitClientFlowState_WatchTeam();
     
     UFUNCTION(BlueprintCallable)
     void ExitClientFlowState_WatchGame_Native();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ExitClientFlowState_WatchGame();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExitClientFlowState_WaitingRespawn();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExitClientFlowState_WaitingFinish();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ExitClientFlowState_VictoryRoyale();
@@ -638,13 +757,36 @@ protected:
     void ExitClientFlowState_BeforeGamePlay();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ExitClientFlowState_Battle();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void EnterClientFlowStateCategory_ResultFlow();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void EnterClientFlowStateCategory_GamePlay();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnterClientFlowState_WatchVictoryRoyale();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void EnterClientFlowState_WatchTeam_Native();
+    
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void EnterClientFlowState_WatchTeam();
     
     UFUNCTION(BlueprintCallable)
     void EnterClientFlowState_WatchGame_Native();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnterClientFlowState_WatchGame();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void EnterClientFlowState_WaitingRespawn();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void EnterClientFlowState_WaitingFinish();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnterClientFlowState_VictoryRoyale();
@@ -671,6 +813,9 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnterClientFlowState_BeforeGamePlay();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void EnterClientFlowState_Battle();
     
 public:
     UFUNCTION(BlueprintCallable)
@@ -749,13 +894,40 @@ public:
     void DebugNetworkProfilerOnServer(bool IsOn);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugMoveFrictionScale(float Scale);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugMoveFrictionDuration(float Duration);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void DebugLobbySkip();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void DebugForciblyEndMatch();
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugForceRespawnNearTeamMember();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugForceRespawn();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugForceFeverOffense(bool Enable);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugForceFeverDefense(bool Enable);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugFgfBallOwnerSpeedScale(float Scale);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void DebugDuplicateSSPlayer(bool inPossessPlayer, bool inBaseKill);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugDestroyTeamMembers(bool excludeMyself);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void DebugDestroyExceptTeamMembers(int32 inExceptTeamId);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void DebugDestroyAllPickupObjects();
@@ -799,17 +971,20 @@ public:
     UFUNCTION(BlueprintCallable)
     bool ClosePauseMenu(bool allowedCharacterControllWhenClose);
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void ClearWatchGameHold();
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckInSightFromCameraForInteract(AActor* inCheckActor) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckInSightFromCamera(AActor* inCheckActor, float inTargetOffsetZ) const;
     
-protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckCompletePlayerSetup() const;
     
-public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckAllowCharacterControll() const;
     

@@ -44,6 +44,9 @@ protected:
     UCharacterProfilesBase* CharacterProfiles;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UAnimMontage* DefaultIdleMontage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USkeletalMesh*> SrcMeshesToMerge;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -93,6 +96,9 @@ public:
     void PlayMontage(UAnimMontage* inMontage);
     
     UFUNCTION(BlueprintCallable)
+    void PlayDefaultIdleMontage();
+    
+    UFUNCTION(BlueprintCallable)
     USkeletalMesh* MergeMeshes(TArray<USkeletalMesh*> inMeshesToMerge, TArray<USkeletalMeshComponent*> inMeshCompsToMerge);
     
 protected:
@@ -102,6 +108,12 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     int32 GetVoiceId() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    FName GetSystemMotionRowNameByWrestlerType();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    FName GetSystemMotionRowNameByWrestlerProfile();
     
     UFUNCTION(BlueprintCallable)
     UAnimMontage* GetActiveMontage();

@@ -11,5 +11,6 @@ enum class ESSWrestlerSelectState : uint8 {
     ESSWrestlerSelectState_DecisionWait,
     ESSWrestlerSelectState_Cancel,
     ESSWrestlerSelectState_End,
+    ESSWrestlerSelectState_MAX UMETA(Hidden),
 };
 

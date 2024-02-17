@@ -15,6 +15,5 @@ enum class ESSGuardBreakerType : uint8 {
     Weapon3,
     IgnoreGuard,
     Default = 0x0,
-    ESSGuardBreakerType_MAX = 0xA,
 };
 

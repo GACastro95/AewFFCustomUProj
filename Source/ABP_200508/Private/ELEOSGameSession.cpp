@@ -197,7 +197,7 @@ bool UELEOSGameSession::QuickMatchCreate(const FEOSSessionSettings& Settings) {
     return false;
 }
 
-bool UELEOSGameSession::QuickMatchCancel(bool _Force) {
+bool UELEOSGameSession::QuickMatchCancel(bool _Force, bool CallCancelEvent) {
     return false;
 }
 

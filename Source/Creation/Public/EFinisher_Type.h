@@ -56,6 +56,5 @@ enum class EFinisher_Type : uint8 {
     RopeChain_Tag,
     Ring_To_Apron_Tag,
     Rear_Apron_To_Ring_Tag,
-    EFinisher_MAX UMETA(Hidden),
 };
 

@@ -34,6 +34,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AELSSLocator*> GetLocatorListFromNear(ESSLocatorType InType, const FVector& inOrigin, float inDistance, int32 inMaxNum, bool InUseFiltering, int32 inFilterID) const;
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<AELSSLocator*> GetLocatorListForRespawn(ESSLocatorType InType, const FVector& inOrigin) const;
+    
     
     // Fix for true pure virtual functions not being implemented
 };

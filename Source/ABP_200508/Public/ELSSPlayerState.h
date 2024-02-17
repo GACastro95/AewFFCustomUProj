@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "WrestlerSetupParam.h"
 #include "EWrestlerID_N.h"
 #include "GameFramework/PlayerState.h"
@@ -12,10 +13,12 @@
 #include "ELSSLobbyPlayerInfo.h"
 #include "ELSSResultTallyPlayerData.h"
 #include "EResultTallyState.h"
+#include "ESSAI_FgfOffenseRole.h"
 #include "ESSAttentionGaugeState.h"
 #include "ESSAttentionReason.h"
 #include "ESSClientFlowState.h"
 #include "ESSEndGameReason.h"
+#include "ESSFgfPlayerProgress.h"
 #include "ESSGameStateDebugFlag.h"
 #include "ESSLocalDebugFlag.h"
 #include "ESSPlayerProgress.h"
@@ -33,6 +36,8 @@
 #include "SSReplicatedClientResultData.h"
 #include "SSSyncStatusForWatch_Owner.h"
 #include "SSSyncStatusForWatch_Replicated.h"
+#include "SSTeamMemberResult.h"
+#include "SSTeamResult.h"
 #include "SSWrestlerMovePresetParam.h"
 #include "SSWrestlerSetupParam.h"
 #include "ELSSPlayerState.generated.h"
@@ -42,6 +47,7 @@ class AELSSAIController;
 class AELSSPlayer;
 class AELSSPlayerController;
 class AELSSPlayerState;
+class AELSSTeamState;
 class UELSSMasterData;
 class UYGS2RequestBase;
 
@@ -115,6 +121,21 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSAttentionLevelParam AttentionLevelParam;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayerState* FgfDefenseTarget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSTeamState* CachedTeamState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IncompleteTeamResult, meta=(AllowPrivateAccess=true))
+    FSSTeamResult IncompleteTeamResult;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    FSSTeamMemberResult TeamMemberResult;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    float RespawnReservedTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSMoveSetDefaultSettings MoveSetSettingsOnServer;
@@ -286,10 +307,10 @@ public:
     UFUNCTION(BlueprintCallable, Server, Unreliable)
     void SyncStatusForWatch_ClientToServer_Server();
     
-protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SyncPlayerProfileForInGame_Server(const FSSPlayerProfileForInGame& inProfile);
     
+protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SyncMatchMakeInfo_Server(const FSSMatchMakeInfoForAnalytics& inMatchMakeInfo, const FSSClientInfoForAnalytics& inClientInfo);
     
@@ -317,6 +338,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetWrestlerPresetParam(const FSSWrestlerMovePresetParam& wrestlerPreset);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void SetSelectedSpawnArea_Server(int32 Area);
     
     UFUNCTION(BlueprintCallable)
     void SetResultTallyData(const FString& tallyData);
@@ -347,6 +371,18 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SetIgnoreAnalytics_Server(bool IsOn);
     
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void SetFgfPlayerProgress_Server(ESSFgfPlayerProgress InProgress);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetFgfPlayerProgress(ESSFgfPlayerProgress InProgress);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetFgfOffenseRole(ESSAI_FgfOffenseRole inRole);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetFgfDefenseTarget(AELSSPlayerState* inTarget);
+    
     UFUNCTION(BlueprintCallable)
     void SetDefaultPlayerEquipSettings_HeatSkill(int32 inDefaultPlayerEquipSettingsId);
     
@@ -375,6 +411,9 @@ private:
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ResultTallyDataToSyncBPEvent();
+    
+    UFUNCTION(BlueprintCallable)
+    void RespawnByRuleParam();
     
     UFUNCTION(BlueprintCallable)
     void ReserveExpItem(int32 inExpItemLotGroupID);
@@ -445,6 +484,9 @@ public:
     void OnRep_KillCount();
     
     UFUNCTION(BlueprintCallable)
+    void OnRep_IncompleteTeamResult();
+    
+    UFUNCTION(BlueprintCallable)
     void OnRep_FeverTimeBeginTime();
     
     UFUNCTION(BlueprintCallable)
@@ -462,17 +504,29 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnChangeLocalKillCount();
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsTeamLeader() const;
+    
     UFUNCTION(BlueprintCallable)
     bool IsResultTallyEnd();
     
     UFUNCTION(BlueprintCallable)
     bool IsPlayerResultEnable();
     
+    UFUNCTION(BlueprintCallable)
+    bool IsPlayerFine(bool checkDown);
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsPlayerAlive();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLocalPlayer() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLocallyControlled() const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsFgfPassReceiver();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDoneSyncResult() const;
@@ -482,6 +536,12 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDoneResultAPI() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsDoneFgfPlayerProgress(ESSFgfPlayerProgress InProgress) const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsAIPlayer();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAfterFeverTime() const;
@@ -502,13 +562,28 @@ public:
     int32 GetWeaponColorListIndex() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    AELSSTeamState* GetTeamState() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetTeamMemberSlotNo() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetTeamId() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSPlayerController* GetSSPlayerControllerForUIUpdate() const;
+    
+    UFUNCTION(BlueprintCallable)
+    AELSSPlayer* GetSSPlayer() const;
     
     UFUNCTION(BlueprintCallable)
     int32 GetResultPlayerEXP();
     
     UFUNCTION(BlueprintCallable)
     int32 GetRandomBadgeId() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FVector GetPlayerLocation();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSPlayerController* GetOwnerPlayerController() const;
@@ -525,11 +600,20 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetKillCount() const;
     
+    UFUNCTION(BlueprintCallable)
+    ESSAI_FgfOffenseRole GetFgfOffenseRole();
+    
+    UFUNCTION(BlueprintCallable)
+    AELSSPlayerState* GetFgfDefenseTarget();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFeverTimeRemainRate() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetFeverCount() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetEnabledTeamResult(FSSTeamResult& outTeamResult) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESSClientFlowState GetClientFlowStateOnServer() const;
@@ -574,6 +658,9 @@ public:
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void DebugResetAttention();
+    
+    UFUNCTION(BlueprintCallable)
+    bool CheckEquipFgfBall() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 CalcAttentionLevelFromPoint() const;

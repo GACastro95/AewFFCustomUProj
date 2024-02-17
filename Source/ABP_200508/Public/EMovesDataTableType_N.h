@@ -16,6 +16,5 @@ enum class EMovesDataTableType_N : uint8 {
     RopeSpringboard,
     TwoPlatoons,
     Reset,
-    EMovesDataTableType_MAX UMETA(Hidden),
 };
 

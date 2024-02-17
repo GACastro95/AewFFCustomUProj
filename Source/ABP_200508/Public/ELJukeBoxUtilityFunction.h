@@ -3,6 +3,7 @@
 #include "JukeBoxMenuInfo_N.h"
 #include "JukeBoxParam.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "EJukeBoxFilterType.h"
 #include "ELTmpJukeboxSaveData.h"
 #include "ELJukeBoxUtilityFunction.generated.h"
 
@@ -19,7 +20,13 @@ public:
     static void UpdateJukeboxSaveData(uint8 _saveDataAccessFlag);
     
     UFUNCTION(BlueprintCallable)
+    static void SortJukeBoxOrderByWriestlerName(UPARAM(Ref) TArray<FJukeBoxMenuInfo_N>& Params);
+    
+    UFUNCTION(BlueprintCallable)
     static void SortJukeBoxAtoZ(UPARAM(Ref) TArray<FJukeBoxMenuInfo_N>& Params);
+    
+    UFUNCTION(BlueprintCallable)
+    static void SortJukeBox(UPARAM(Ref) TArray<FJukeBoxMenuInfo_N>& Params, EJukeBoxFilterType FilterType);
     
     UFUNCTION(BlueprintCallable)
     static void SetRandomPlaybackCore(FELTmpJukeboxSaveData& _stJukebox, bool _random);
@@ -50,6 +57,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static void SetJukeBoxPlayedListForID(int32 _targetId, bool _Enable, bool isTmp, uint8 _saveDataAccessFlag);
+    
+    UFUNCTION(BlueprintCallable)
+    static void SetJukeBoxFilterCore(FELTmpJukeboxSaveData& _stJukebox, EJukeBoxFilterType _filter);
+    
+    UFUNCTION(BlueprintCallable)
+    static void SetJukeBoxFilter(EJukeBoxFilterType _random, bool isTmp, uint8 _saveDataAccessFlag);
     
     UFUNCTION(BlueprintCallable)
     static void SetJukeBoxCheckListForIDCore(FELTmpJukeboxSaveData& _stJukebox, int32 _targetId, bool _Enable);
@@ -151,6 +164,12 @@ public:
     static UELGameInstance* GetJukeboxGameInstance();
     
     UFUNCTION(BlueprintCallable)
+    static EJukeBoxFilterType GetJukeBoxFilterCore(FELTmpJukeboxSaveData& _stJukebox);
+    
+    UFUNCTION(BlueprintCallable)
+    static EJukeBoxFilterType GetJukeBoxFilter(bool isTmp, uint8 _saveDataAccessFlag);
+    
+    UFUNCTION(BlueprintCallable)
     static bool GetJukeBoxDataTableRowFromName(UDataTable* Table, FName RowName, FJukeBoxParam& OutRow);
     
     UFUNCTION(BlueprintCallable)
@@ -178,7 +197,16 @@ public:
     static USoundAtomCue* GetCurrentJukeBoxPlayCue();
     
     UFUNCTION(BlueprintCallable)
+    static TArray<FJukeBoxMenuInfo_N> FilterJukeBoxItemList(UPARAM(Ref) TArray<FJukeBoxMenuInfo_N>& Params, EJukeBoxFilterType FilterType);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool FilterJukeBoxItem(const FJukeBoxMenuInfo_N& JukeBoxMenuInfo, EJukeBoxFilterType FilterType);
+    
+    UFUNCTION(BlueprintCallable)
     static bool ConvertJukeboxSaveData(bool tmpUpdate, uint8 _saveDataAccessFlag);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool AnyJukeBoxItem(UPARAM(Ref) TArray<FJukeBoxMenuInfo_N>& Params, EJukeBoxFilterType FilterType);
     
 };
 

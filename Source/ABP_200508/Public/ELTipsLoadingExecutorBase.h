@@ -14,10 +14,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTipsLoadingCompleteDelegate CompleteDelegate;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ZOrder_N;
+    
 public:
     AELTipsLoadingExecutorBase();
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void OnStartLoadingScreen(ETipsLoadingCategory _Category, FTipsLoadingResourceInfo _resourceInfo, bool _isFadeInStart);
+    void OnStartLoadingScreen(ETipsLoadingCategory _Category, ETipsLoadingCategory _resourceCategory, FTipsLoadingResourceInfo _resourceInfo, bool _isFadeInStart);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnEndLoadingScreen();

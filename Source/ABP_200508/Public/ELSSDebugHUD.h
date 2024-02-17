@@ -32,10 +32,10 @@ protected:
     UDataTable* DebugStringParamTable;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FSSDebugStringParam DebugStringParam[27];
+    FSSDebugStringParam DebugStringParam[31];
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FSSDebugStringStatus DebugStringStatus[27];
+    FSSDebugStringStatus DebugStringStatus[31];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DebugStringBuffer;

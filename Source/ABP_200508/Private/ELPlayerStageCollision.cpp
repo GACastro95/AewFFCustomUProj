@@ -1,5 +1,8 @@
 #include "ELPlayerStageCollision.h"
 
+void UELPlayerStageCollision::SetStageCollisionManualEnable(bool bEnable) {
+}
+
 void UELPlayerStageCollision::ResetAlreadyInterpolateFlag() {
 }
 
@@ -14,6 +17,10 @@ bool UELPlayerStageCollision::IsMyMovesStageCollisionValue_Implementation() {
     return false;
 }
 
+bool UELPlayerStageCollision::IsEnableStageCollision() {
+    return false;
+}
+
 bool UELPlayerStageCollision::IsCompletedInterpolation() {
     return false;
 }
@@ -22,9 +29,12 @@ bool UELPlayerStageCollision::IsAlreadyHit_Implementation(const FName& Tag) {
     return false;
 }
 
+
+
 UELPlayerStageCollision::UELPlayerStageCollision() {
     this->Player_Native = NULL;
     this->Enable = false;
     this->OldEnableState = false;
+    this->OldCollisionType = 0;
 }
 

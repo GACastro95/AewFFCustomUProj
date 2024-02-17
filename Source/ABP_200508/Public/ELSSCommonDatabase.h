@@ -28,6 +28,7 @@
 #include "SSMoveParam.h"
 #include "SSPlayerRankParam.h"
 #include "SSPlayerRankRangeParam.h"
+#include "SSRuleResourceParam.h"
 #include "SSStampedeRankParam.h"
 #include "SSWeaponCommonParam.h"
 #include "SSWrestlerParam.h"
@@ -114,6 +115,12 @@ protected:
     TArray<FSSLoadoutPresetDefaultParam> LoadoutPresetDefaultParamArray;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UDataTable* RuleResourceParamTable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSRuleResourceParam> RuleResourceParamArray;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* GameRuleParamTable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -197,7 +204,7 @@ public:
     bool GetAttackParamListFromMoveId(int32 MoveId, TArray<FSSAttackParam>& outRows);
     
     UFUNCTION(BlueprintCallable)
-    bool GetAttackParam(int32 MoveId, int32 AttackHitId, FSSAttackParam& OutParam) const;
+    bool GetAttackParam(int32 MoveId, int32 AttackHitId, int32 DataGroup, FSSAttackParam& OutParam) const;
     
     UFUNCTION(BlueprintCallable)
     ESSArmorType GetArmorType(ESSDamageReason inDamageReason, ESSDamageReceiverState inDamageReceiverState) const;

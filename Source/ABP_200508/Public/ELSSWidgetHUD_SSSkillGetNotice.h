@@ -20,6 +20,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* LayoutWidget;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWidget* AnnounceWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWidget* NoticeWidget;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> SkillIDArray;
     
@@ -53,6 +59,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void Reset();
+    
+    UFUNCTION(BlueprintCallable)
+    void PlayInBeatTopTeamNotice();
     
     UFUNCTION(BlueprintCallable)
     void PlayIn(const FString& InSkillCategory, int32 HeatSkillId);

@@ -6,6 +6,7 @@
 #include "PersonParamBase.h"
 #include "PersonalityParamView.h"
 #include "WrestlingSkillParamView.h"
+#include "CommunityWrestlerData.h"
 #include "WrestlerMoves.h"
 #include "RosterInfoParam.generated.h"
 
@@ -56,6 +57,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWrestlingSkillParamView Skill;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FCommunityWrestlerData CommunityWrestlerData;
     
     FRosterInfoParam();
 };

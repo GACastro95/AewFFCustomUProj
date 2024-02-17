@@ -26,6 +26,9 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCAW_DebugDelegate OutputFile_DebugDelegate;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FCAW_DebugDelegate OutputFileNT_DebugDelegate;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ReadFileSlot;
     
@@ -79,7 +82,7 @@ public:
     void ReadFile(int32 Slot);
     
     UFUNCTION(BlueprintCallable)
-    void OutputFile(int32 Slot);
+    void OutputFile(int32 Slot, bool bThumbnail);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Initialize();

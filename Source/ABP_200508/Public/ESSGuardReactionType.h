@@ -12,5 +12,8 @@ enum class ESSGuardReactionType : uint8 {
     Break1,
     Break2,
     Break3,
+    BreakByWeapon1,
+    BreakByWeapon2,
+    BreakByWeapon3,
 };
 

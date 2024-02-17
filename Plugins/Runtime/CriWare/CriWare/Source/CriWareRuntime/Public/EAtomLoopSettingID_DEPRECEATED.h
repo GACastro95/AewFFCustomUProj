@@ -7,6 +7,5 @@ enum class EAtomLoopSettingID_DEPRECEATED : uint8 {
     DefaultLoop_DEPRECATED,
     ForceLoop_DEPRECATED,
     IgnoreLoop_DEPRECATED,
-    EAtomLoopSettingID_MAX UMETA(Hidden),
 };
 

@@ -39,5 +39,6 @@ enum class ECareerEventState : uint8 {
     ECareerEventState_StoryEndCheck,
     ECareerEventState_CheckTutorial,
     ECareerEventState_StoryEnd,
+    ECareerEventState_MAX UMETA(Hidden),
 };
 

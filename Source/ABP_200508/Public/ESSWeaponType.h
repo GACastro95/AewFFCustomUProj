@@ -9,6 +9,7 @@ enum class ESSWeaponType : uint8 {
     Gun,
     Throw,
     Trap,
+    FgfBall,
     Max,
 };
 

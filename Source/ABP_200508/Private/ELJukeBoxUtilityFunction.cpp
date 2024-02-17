@@ -3,7 +3,13 @@
 void UELJukeBoxUtilityFunction::UpdateJukeboxSaveData(uint8 _saveDataAccessFlag) {
 }
 
+void UELJukeBoxUtilityFunction::SortJukeBoxOrderByWriestlerName(TArray<FJukeBoxMenuInfo_N>& Params) {
+}
+
 void UELJukeBoxUtilityFunction::SortJukeBoxAtoZ(TArray<FJukeBoxMenuInfo_N>& Params) {
+}
+
+void UELJukeBoxUtilityFunction::SortJukeBox(TArray<FJukeBoxMenuInfo_N>& Params, EJukeBoxFilterType FilterType) {
 }
 
 void UELJukeBoxUtilityFunction::SetRandomPlaybackCore(FELTmpJukeboxSaveData& _stJukebox, bool _random) {
@@ -34,6 +40,12 @@ void UELJukeBoxUtilityFunction::SetJukeBoxPlayedListForIDCore(FELTmpJukeboxSaveD
 }
 
 void UELJukeBoxUtilityFunction::SetJukeBoxPlayedListForID(int32 _targetId, bool _Enable, bool isTmp, uint8 _saveDataAccessFlag) {
+}
+
+void UELJukeBoxUtilityFunction::SetJukeBoxFilterCore(FELTmpJukeboxSaveData& _stJukebox, EJukeBoxFilterType _filter) {
+}
+
+void UELJukeBoxUtilityFunction::SetJukeBoxFilter(EJukeBoxFilterType _random, bool isTmp, uint8 _saveDataAccessFlag) {
 }
 
 void UELJukeBoxUtilityFunction::SetJukeBoxCheckListForIDCore(FELTmpJukeboxSaveData& _stJukebox, int32 _targetId, bool _Enable) {
@@ -156,6 +168,14 @@ UELGameInstance* UELJukeBoxUtilityFunction::GetJukeboxGameInstance() {
     return NULL;
 }
 
+EJukeBoxFilterType UELJukeBoxUtilityFunction::GetJukeBoxFilterCore(FELTmpJukeboxSaveData& _stJukebox) {
+    return EJukeBoxFilterType::All;
+}
+
+EJukeBoxFilterType UELJukeBoxUtilityFunction::GetJukeBoxFilter(bool isTmp, uint8 _saveDataAccessFlag) {
+    return EJukeBoxFilterType::All;
+}
+
 bool UELJukeBoxUtilityFunction::GetJukeBoxDataTableRowFromName(UDataTable* Table, FName RowName, FJukeBoxParam& OutRow) {
     return false;
 }
@@ -192,7 +212,19 @@ USoundAtomCue* UELJukeBoxUtilityFunction::GetCurrentJukeBoxPlayCue() {
     return NULL;
 }
 
+TArray<FJukeBoxMenuInfo_N> UELJukeBoxUtilityFunction::FilterJukeBoxItemList(TArray<FJukeBoxMenuInfo_N>& Params, EJukeBoxFilterType FilterType) {
+    return TArray<FJukeBoxMenuInfo_N>();
+}
+
+bool UELJukeBoxUtilityFunction::FilterJukeBoxItem(const FJukeBoxMenuInfo_N& JukeBoxMenuInfo, EJukeBoxFilterType FilterType) {
+    return false;
+}
+
 bool UELJukeBoxUtilityFunction::ConvertJukeboxSaveData(bool tmpUpdate, uint8 _saveDataAccessFlag) {
+    return false;
+}
+
+bool UELJukeBoxUtilityFunction::AnyJukeBoxItem(TArray<FJukeBoxMenuInfo_N>& Params, EJukeBoxFilterType FilterType) {
     return false;
 }
 

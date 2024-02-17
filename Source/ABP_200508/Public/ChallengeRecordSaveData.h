@@ -9,7 +9,7 @@ struct FChallengeRecordSaveData {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FChallengeWrestlerMatchRecord WrestlerMatchRecordList[90];
+    FChallengeWrestlerMatchRecord WrestlerMatchRecordList[110];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChallengeAttackSkillRecord AttackSkillRecord;

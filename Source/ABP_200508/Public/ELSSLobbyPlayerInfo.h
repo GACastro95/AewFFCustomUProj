@@ -63,6 +63,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 weaponColorListIndex;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool Synced;
+    
     ABP_200508_API FELSSLobbyPlayerInfo();
 };
 

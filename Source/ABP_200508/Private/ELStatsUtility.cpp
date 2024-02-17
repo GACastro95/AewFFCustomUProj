@@ -118,6 +118,18 @@ int32 UELStatsUtility::GetSSTotalScore(const UObject* WorldContextObject) {
     return 0;
 }
 
+int32 UELStatsUtility::GetSSTopCountSurvive(const UObject* WorldContextObject) {
+    return 0;
+}
+
+int32 UELStatsUtility::GetSSTopCountPoint(const UObject* WorldContextObject) {
+    return 0;
+}
+
+int32 UELStatsUtility::GetSSTopCountAll(const UObject* WorldContextObject) {
+    return 0;
+}
+
 int32 UELStatsUtility::GetSSTopCount(const UObject* WorldContextObject) {
     return 0;
 }
@@ -230,6 +242,18 @@ int32 UELStatsUtility::AddSSWrestlerCount(const UObject* WorldContextObject, EWr
 }
 
 int32 UELStatsUtility::AddSSTotalScore(const UObject* WorldContextObject, int32 Value, bool bIngestEOS) {
+    return 0;
+}
+
+int32 UELStatsUtility::AddSSTopCountSurvive(const UObject* WorldContextObject, int32 Value, bool bIngestEOS) {
+    return 0;
+}
+
+int32 UELStatsUtility::AddSSTopCountPoint(const UObject* WorldContextObject, int32 Value, bool bIngestEOS) {
+    return 0;
+}
+
+int32 UELStatsUtility::AddSSTopCountAll(const UObject* WorldContextObject, int32 Value, bool bIngestEOS) {
     return 0;
 }
 

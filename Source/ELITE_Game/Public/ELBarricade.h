@@ -7,6 +7,11 @@ UCLASS(Blueprintable)
 class ELITE_GAME_API AELBarricade : public AActor {
     GENERATED_BODY()
 public:
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bNeedCheckCanClimbEdge;
+    
+public:
     AELBarricade();
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void IsEnableClimbUseImpl(bool& Out_IsEnable);

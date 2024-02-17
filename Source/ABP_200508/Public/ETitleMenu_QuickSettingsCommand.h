@@ -9,6 +9,5 @@ enum class ETitleMenu_QuickSettingsCommand : uint8 {
     Integer,
     Real,
     Boolean,
-    ETitleMenu_MAX UMETA(Hidden),
 };
 

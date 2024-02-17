@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct ABP_200508_API FELDebugMenuSimpleUIParam : public FELDebugMenuSimpleUIParamBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UELDebugMenuCallbackBase> Callback;
     
     FELDebugMenuSimpleUIParam();

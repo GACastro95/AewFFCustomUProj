@@ -5,6 +5,7 @@
 #include "ELSSManagerActorInterface.h"
 #include "ESSAnnounce.h"
 #include "ESSDamageSE.h"
+#include "ESSFgfTeamAnnounce.h"
 #include "ESSHitGroundSE.h"
 #include "ESSSpawnPickupSE.h"
 #include "ELSSSoundManager.generated.h"
@@ -56,6 +57,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 PlayLoop2DSE(const FString& CueName);
+    
+    UFUNCTION(BlueprintCallable)
+    void PlayFgfTeamAnnounce(ESSFgfTeamAnnounce inAnnounce, bool isDragonTeam);
     
     UFUNCTION(BlueprintCallable)
     void PlayAnnounce(ESSAnnounce inAnnounce);

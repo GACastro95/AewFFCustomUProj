@@ -580,7 +580,7 @@ public:
     bool QuickMatchCreate(const FEOSSessionSettings& Settings);
     
     UFUNCTION(BlueprintCallable)
-    bool QuickMatchCancel(bool _Force);
+    bool QuickMatchCancel(bool _Force, bool CallCancelEvent);
     
     UFUNCTION(BlueprintCallable)
     bool QuickMatch(const FEOSSessionSettings& _Settings, const TArray<UEOSAttribute*>& _SearchSettings, int32 MaxResults);

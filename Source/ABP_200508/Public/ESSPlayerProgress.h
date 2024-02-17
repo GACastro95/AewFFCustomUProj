@@ -12,6 +12,7 @@ enum class ESSPlayerProgress : uint8 {
     DoneOpenGamePlayScreen,
     DoneDescription,
     DoneActorSpawned,
+    DoneSyncTeamState,
     ReadyToNext_FromLoading = 0xA,
     ReadyToNext_FromSetup,
     ReadyToNext_FromEntrance,

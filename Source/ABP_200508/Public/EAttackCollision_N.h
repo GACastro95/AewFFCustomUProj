@@ -12,6 +12,5 @@ enum class EAttackCollision_N : uint8 {
     LeftFoot,
     RightKnee,
     LeftKnee,
-    EAttackCollision_MAX UMETA(Hidden),
 };
 

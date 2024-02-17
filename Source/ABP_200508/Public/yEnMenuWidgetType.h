@@ -74,6 +74,11 @@ enum class yEnMenuWidgetType : uint8 {
     TutorialCommon,
     MainMenuTournamentSelect,
     TournamentProgress,
+    LocalTournamentSetting,
+    LocalTournamentBracket,
+    LocalTournamentWrestlerSelect,
+    LocalTournamentMatchup,
+    LocalTournamentMatchTypeSelect,
     Max,
 };
 

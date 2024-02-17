@@ -4,6 +4,9 @@ bool UELSSGameMatchMakeSystem::UpdateMatchMakeRequest() {
     return false;
 }
 
+void UELSSGameMatchMakeSystem::UpdateEOSLobby(UELSSLobbyManager* inLobbyMng) {
+}
+
 bool UELSSGameMatchMakeSystem::StopMatchMakeRequest() {
     return false;
 }

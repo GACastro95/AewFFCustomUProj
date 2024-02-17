@@ -23,6 +23,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DisableStick;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ForceEnableOnCategoryDisableShieldVisible;
+    
     ABP_200508_API FSSWrestlerVisualModifyParam();
 };
 

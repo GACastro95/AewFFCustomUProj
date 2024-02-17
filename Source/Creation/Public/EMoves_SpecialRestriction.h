@@ -8,6 +8,5 @@ enum class EMoves_SpecialRestriction : uint8 {
     Special,
     Finisher,
     Signature,
-    EMoves_MAX UMETA(Hidden),
 };
 

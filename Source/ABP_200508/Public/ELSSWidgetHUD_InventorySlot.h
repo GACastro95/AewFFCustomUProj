@@ -106,6 +106,9 @@ public:
     void SetDurability(int32 inDurability);
     
     UFUNCTION(BlueprintCallable)
+    void SetDefaultIcon(UTexture2D* InIcon);
+    
+    UFUNCTION(BlueprintCallable)
     bool IsEmpty();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ELITE_CORE_API UTableRowNameUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
-    UTableRowNameUtilityFunction(const FObjectInitializer& ObjectInitializer);
+    UTableRowNameUtilityFunction();
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTableRowName ToTableRowName(const FName& RowName);
     

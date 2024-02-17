@@ -5,6 +5,6 @@ UELEOSSanitizeTextPartyChat::UELEOSSanitizeTextPartyChat() {
     this->PacketType = 0;
     this->StickerID = 0;
     this->Sender = NULL;
-    this->DataID = TEXT("4FB03B354E899DA2D11DAC856962884B");
+    this->DataID = TEXT("D1A6FF2D4E9FEBA3C7F003A004A5D768");
 }
 

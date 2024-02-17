@@ -132,6 +132,9 @@ public:
     void SetDisplay_DLSS_OptionIndex(int32 Index);
     
     UFUNCTION(BlueprintCallable)
+    void SetCreatorSetting_StreamerMode(bool _value);
+    
+    UFUNCTION(BlueprintCallable)
     void SetAudio_VoiceVolume(int32 _value);
     
     UFUNCTION(BlueprintCallable)
@@ -307,6 +310,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetDisplay_DLSS_OptionIndex() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool GetCreatorSetting_StreamerMode() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAudio_VoiceVolume() const;

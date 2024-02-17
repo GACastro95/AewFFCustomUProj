@@ -19,5 +19,10 @@ enum class ESSAttentionReason : uint8 {
     HorseMoving,
     NegativePenalty,
     Fever,
+    FgfGoal,
+    FgfGoalTeamMember,
+    FgfPassSuccess,
+    FgfBallStole,
+    FgfDefenseSuccess,
 };
 

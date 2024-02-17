@@ -1,35 +1,24 @@
 #include "TableRowNameUtilityFunction.h"
 
 FTableRowName UTableRowNameUtilityFunction::ToTableRowName(const FName& RowName) {
-    FTableRowName x;
-    x.Name = RowName;
-    return x;
-    //return FTableRowName{};
+    return FTableRowName{};
 }
 
 FName UTableRowNameUtilityFunction::ToFName(const FTableRowName& TableRowName) {
-    return TableRowName.Name;
+    return NAME_None;
 }
 
 FDataTableRowHandle UTableRowNameUtilityFunction::ToDataTableRowHandle(const FTableRowName& TableRowName) {
-    FDataTableRowHandle x;
-    x.RowName = TableRowName.Name;
-    return x;
+    return FDataTableRowHandle{};
 }
 
 bool UTableRowNameUtilityFunction::IsEqual_FName(const FTableRowName& TableRowName, const FName& Name) {
-    return TableRowName.Name == Name;
+    return false;
 }
 
 void UTableRowNameUtilityFunction::ConvertToNameSet(const TSet<FTableRowName>& TableRowNameSet, TSet<FName>& NameSet) {
-    for (auto& Elem : TableRowNameSet)
-    {
-        NameSet.Emplace(Elem.Name);
-    }
-    return;
 }
 
-UTableRowNameUtilityFunction::UTableRowNameUtilityFunction(const FObjectInitializer& ObjectInitializer)
-    : Super(ObjectInitializer) {
+UTableRowNameUtilityFunction::UTableRowNameUtilityFunction() {
 }
 

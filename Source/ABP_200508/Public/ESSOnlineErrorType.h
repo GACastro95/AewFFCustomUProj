@@ -30,6 +30,7 @@ enum class ESSOnlineErrorType : uint8 {
     BlockedByCheat,
     MovementTimeout,
     GetSSMasterDataTimeout,
+    GameServerError_RuleIsExpired,
     End = 0xFF,
 };
 

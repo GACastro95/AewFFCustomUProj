@@ -7,6 +7,7 @@ enum class EManaPlayerTrack : uint8 {
     Audio,
     SubAudio,
     ExtraAudio,
+    EventPoint,
     Subtitle,
     Video,
     Alpha,

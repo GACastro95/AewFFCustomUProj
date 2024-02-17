@@ -24,10 +24,13 @@ AActor* AELSSItemManager::SpawnPickupItemObject(int32 inDatabaseId, const FVecto
 void AELSSItemManager::SpawnItemBoxFromRound(FSSItemBoxSpawnParamForRound& inSpawnParam) {
 }
 
-void AELSSItemManager::SpawnItemBoxFromAbility(ESSItemBoxType InType, const FVector& InLocation, const FRotator& InRotation) {
+void AELSSItemManager::SpawnItemBoxFromFgf(bool first, int32 SpawnNum, int32 filterId) {
 }
 
-bool AELSSItemManager::SpawnItemBox(ESSItemBoxType InType, AELSSLocator_ItemBox* inLocator, bool inSkipAnim) {
+void AELSSItemManager::SpawnItemBoxFromAbility(ESSItemBoxType InType, int32 InTeamId, const FVector& InLocation, const FRotator& InRotation) {
+}
+
+bool AELSSItemManager::SpawnItemBox(ESSItemBoxType InType, int32 InTeamId, AELSSLocator_ItemBox* inLocator, bool inSkipAnim) {
     return false;
 }
 
@@ -67,6 +70,18 @@ int32 AELSSItemManager::LotItem(int32 inLotGroupID, ESSSpawnItemCategory inCateg
     return 0;
 }
 
+bool AELSSItemManager::LotAndSpawnJewel_NotLaunch(ESSJewelSpawnReason inReason, const FVector& InLocation, const FRotator& InRotation, AELSSPlayer* inDamageCauser, TArray<AELSSPickupBase*>& outPickups, bool withResetArray) {
+    return false;
+}
+
+bool AELSSItemManager::LotAndSpawnJewel(ESSJewelSpawnReason inReason, const FVector& InLocation, const FRotator& InRotation, AELSSPlayer* inDamageCauser) {
+    return false;
+}
+
+bool AELSSItemManager::LotAndReserveJewel(ESSJewelSpawnReason inReason, AELSSPlayer* inDamageCauser) {
+    return false;
+}
+
 void AELSSItemManager::LoadAsyncItemClasses() {
 }
 
@@ -76,7 +91,6 @@ void AELSSItemManager::LaunchPickupObject(AActor* inPickupObject, const FVector&
 bool AELSSItemManager::IsLoadCompleted() const {
     return false;
 }
-
 
 TSubclassOf<AActor> AELSSItemManager::GetPickupObjectClass(ESSSpawnItemCategory inCategory, int32 inDatabaseId) {
     return NULL;
@@ -103,11 +117,15 @@ AELSSItemManager::AELSSItemManager() {
     this->AttentionExpItem_SpawnVelocityXY = 20.00f;
     this->AttentionExpItem_SpawnVelocityZ = -1200.00f;
     this->AttentionExpItem_GravityScale = 2.00f;
+    this->FrontOfActor_SpawnVelocityXY = 0.00f;
+    this->FrontOfActor_SpawnVelocityZ = 60.00f;
+    this->FrontOfActor_GravityScale = 2.00f;
     this->WeaponClass = NULL;
     this->WeaponMeleeClass = NULL;
     this->WeaponGunClass = NULL;
     this->WeaponThrowClass = NULL;
     this->WeaponTrapClass = NULL;
+    this->WeaponFgfBallClass = NULL;
     this->ShieldClass = NULL;
     this->DefaultSpawnVelocityXY = 300.00f;
     this->DefaultSpawnVelocityZ = 60.00f;

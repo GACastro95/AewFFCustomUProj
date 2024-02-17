@@ -24,6 +24,8 @@ UELSSMasterDataRawData::UELSSMasterDataRawData() {
     this->HeatSkillTreeParamTable = NULL;
     this->HeatMoveSetTable = NULL;
     this->GeneralParamTable = NULL;
+    this->RuleParamTable = NULL;
+    this->RuleScheduleParamTable = NULL;
     this->DataVersion = 0;
 }
 

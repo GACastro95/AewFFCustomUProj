@@ -107,6 +107,9 @@ public:
     static void SetDisplay_DLSS_OptionIndex(int32 Index, UObject* _pWorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
+    static void SetCreatorSetting_StreamerMode(bool _value, UObject* _pWorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     static void SetAudio_VoiceVolume(int32 _value, UObject* _pWorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
@@ -252,6 +255,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="_pWorldContextObject"))
     static int32 GetDisplay_DLSS_OptionIndex(UObject* _pWorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="_pWorldContextObject"))
+    static bool GetCreatorSetting_StreamerMode(UObject* _pWorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="_pWorldContextObject"))
     static int32 GetAudio_VoiceVolume(UObject* _pWorldContextObject);

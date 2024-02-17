@@ -21,5 +21,7 @@ enum class ESSRound : uint8 {
     Round14,
     Round15,
     RoundFinal,
+    BeforeTimeup,
+    Timeup,
 };
 

@@ -1,6 +1,7 @@
 #include "SSDamageEvent.h"
 
 FSSDamageEvent::FSSDamageEvent() {
+    this->TeamId = 0;
     this->DamageReason = ESSDamageReason::None;
     this->DamageCoef = 0.00f;
     this->FixedDamage = 0.00f;

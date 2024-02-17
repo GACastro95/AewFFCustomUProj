@@ -36,6 +36,12 @@ void UELSSDebugUtility::SetSSDebugLowQuarity(const UObject* WorldContextObject) 
 void UELSSDebugUtility::SetSSDebugInfo_Version(const UObject* WorldContextObject, bool IsOn) {
 }
 
+void UELSSDebugUtility::SetSSDebugInfo_TeamInfo(const UObject* WorldContextObject, bool IsOn) {
+}
+
+void UELSSDebugUtility::SetSSDebugInfo_RuleInfo(const UObject* WorldContextObject, bool IsOn) {
+}
+
 void UELSSDebugUtility::SetSSDebugInfo_Region(const UObject* WorldContextObject, bool IsOn, const FString& inRegionName) {
 }
 

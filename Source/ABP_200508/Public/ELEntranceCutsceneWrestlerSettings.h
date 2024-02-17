@@ -17,6 +17,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UseRingModelWhenTagEntrance;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool UseRingModelWhenManager;
+    
     ABP_200508_API FELEntranceCutsceneWrestlerSettings();
 };
 

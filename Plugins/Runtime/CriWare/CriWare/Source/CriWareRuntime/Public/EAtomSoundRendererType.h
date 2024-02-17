@@ -9,11 +9,13 @@ namespace EAtomSoundRendererType {
         Native,
         Asr,
         Hardware1 = 0x1,
-        Hardware2 = 0x5,
-        Hardware3 = 0x9,
-        Hardware4 = 0xD,
-        VibrationHardware = 0x1D,
-        Pad = 0xFF,
+        Hardware2 = 0x10001,
+        Hardware3 = 0x20001,
+        Hardware4 = 0x30001,
+        Spatial = 0x4,
+        VibrationHardware = 0x30011,
+        RESTRICTED = 0xFE,
+        Pad,
     };
 }
 

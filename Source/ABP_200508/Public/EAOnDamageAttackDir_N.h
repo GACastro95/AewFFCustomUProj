@@ -7,6 +7,5 @@ enum class EAOnDamageAttackDir_N : uint8 {
     Front,
     Right,
     Left,
-    EAOnDamageAttackDir_MAX UMETA(Hidden),
 };
 

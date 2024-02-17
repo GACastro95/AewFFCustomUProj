@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ELSaveGameBase.h"
+#include "EJukeBoxFilterType.h"
 #include "SaveData_JukeBox.generated.h"
 
 UCLASS(Blueprintable)
@@ -21,6 +22,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bCreateSavedata;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EJukeBoxFilterType m_JukeBoxFilter;
     
     USaveData_JukeBox();
 };

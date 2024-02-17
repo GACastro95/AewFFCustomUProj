@@ -31,6 +31,7 @@ enum class ESSHeatSkillTarget : uint8 {
     KO,
     Taunt,
     Destructible,
+    SpecialRule,
     All,
     WeakAll,
     StrongAll,
@@ -53,8 +54,8 @@ enum class ESSHeatSkillTarget : uint8 {
     StrikeAll,
     HighFlyAll,
     Max,
-    FilterStart = 0x1B,
-    FilterEnd = 0x2F,
-    CategoryNum = 0x1B,
+    FilterStart = 0x1C,
+    FilterEnd = 0x30,
+    CategoryNum = 0x1C,
 };
 

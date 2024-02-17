@@ -11,6 +11,10 @@ TArray<AActor*> UUtilityFunction::SortArray(TArray<AActor*> _Array) {
     return TArray<AActor*>();
 }
 
+bool UUtilityFunction::ShowFloatingGamepadTextInput(const UObject* pWorldContextObject, int32 TextFieldXPosition, int32 TextFieldYPosition, int32 TextFieldWidth, int32 TextFieldHeight) {
+    return false;
+}
+
 void UUtilityFunction::SetXeSS_OptionIndex(int32 Index) {
 }
 
@@ -100,6 +104,10 @@ bool UUtilityFunction::IsPlatformXBox(const UObject* WorldContextObject) {
 }
 
 bool UUtilityFunction::IsPlatformWindows(const UObject* WorldContextObject) {
+    return false;
+}
+
+bool UUtilityFunction::IsPlatformSteamRunningOnSteamDeck(const UObject* pWorldContextObject) {
     return false;
 }
 

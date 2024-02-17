@@ -21,10 +21,16 @@ void UAtomComponent::SetSelectorLabel(const FString& Selector, const FString& La
 void UAtomComponent::SetRegion(UAtom3dRegion* InRegion) {
 }
 
+void UAtomComponent::SetPreferredOutputPort(const FString& port_name) {
+}
+
 void UAtomComponent::SetPitchMultiplier(float NewPitchMultiplier) {
 }
 
 void UAtomComponent::SetPitch(float Pitch) {
+}
+
+void UAtomComponent::SetOutputPort(const FString& port_name) {
 }
 
 void UAtomComponent::SetNextBlockIndex(int32 BlockIndex) {
@@ -52,6 +58,12 @@ void UAtomComponent::SetAsrRackID(int32 asr_rack_id) {
 }
 
 void UAtomComponent::SetAisacByName(const FString& ControlName, float ControlValue) {
+}
+
+void UAtomComponent::RemovePreferredOutputPort(const FString& port_name) {
+}
+
+void UAtomComponent::RemoveOutputPort(const FString& port_name) {
 }
 
 void UAtomComponent::Play(float StartTime) {
@@ -104,6 +116,9 @@ int32 UAtomComponent::GetNumQueuedSounds() const {
     return 0;
 }
 
+void UAtomComponent::GetNumPlayedSamples(int64& NumSamples, int32& SamplingRate) const {
+}
+
 float UAtomComponent::GetMaxAttenuationDistance() const {
     return 0.0f;
 }
@@ -148,6 +163,10 @@ float UAtomComponent::GetCurrentCullingBoundaryDistance() const {
     return 0.0f;
 }
 
+int32 UAtomComponent::GetCurrentBlockIndex() const {
+    return 0;
+}
+
 AAtomAudioVolume* UAtomComponent::GetCurrentBelongingAudioVolume(EAtomAudioVolumeType Type, bool IsNeighbor) const {
     return NULL;
 }
@@ -176,7 +195,11 @@ UAtomComponent* UAtomComponent::GetAtomComponentFromID(int32 TargetID) {
     return NULL;
 }
 
-void UAtomComponent::FadeOut(float FadeOutDuration, float FadeVolumeLevel) {
+FAtomAppliedValueParam UAtomComponent::GetAtomAppliedValueParam() {
+    return FAtomAppliedValueParam{};
+}
+
+void UAtomComponent::FadeOut(float FadeOutDuration) {
 }
 
 void UAtomComponent::FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime) {
@@ -189,6 +212,12 @@ void UAtomComponent::DestroyComponentByID(int32 TargetID) {
 }
 
 void UAtomComponent::ClearSelectorLabels() {
+}
+
+void UAtomComponent::ClearPreferredOutputPort() {
+}
+
+void UAtomComponent::ClearOutputPort() {
 }
 
 bool UAtomComponent::BP_GetAttenuationSettingsToApply(FSoundAttenuationSettings& OutAttenuationSettings) {
@@ -217,6 +246,7 @@ UAtomComponent::UAtomComponent() {
     this->bUseAreaSoundVolume = true;
     this->SoundObject = NULL;
     this->DefaultBlockIndex = 0;
+    this->bIsOverrideAisacControlSettingsWithVelocity = false;
     this->LoopSetting = EAtomLoopSetting::Inherited;
     this->bOnly2DSound = false;
     this->PlayWorld = NULL;

@@ -25,6 +25,9 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<AActor*> SortArray(TArray<AActor*> _Array);
     
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="pWorldContextObject"))
+    static bool ShowFloatingGamepadTextInput(const UObject* pWorldContextObject, int32 TextFieldXPosition, int32 TextFieldYPosition, int32 TextFieldWidth, int32 TextFieldHeight);
+    
     UFUNCTION(BlueprintCallable)
     static void SetXeSS_OptionIndex(int32 Index);
     
@@ -108,6 +111,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsPlatformWindows(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="pWorldContextObject"))
+    static bool IsPlatformSteamRunningOnSteamDeck(const UObject* pWorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsPlatformSteam(const UObject* WorldContextObject);

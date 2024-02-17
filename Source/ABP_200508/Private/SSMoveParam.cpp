@@ -3,6 +3,8 @@
 FSSMoveParam::FSSMoveParam() {
     this->ID = 0;
     this->StateBP = NULL;
+    this->MovementAdjustDurationOverride = 0.00f;
+    this->MovementAdjustFrictionOverride = 0.00f;
     this->RotationSpeedScale = 0.00f;
     this->IsWeaponMove = false;
     this->AttackWithArmor = false;

@@ -3,6 +3,8 @@
 #include "ELMenuWidgetBase.h"
 #include "ESaveDataAccessorEvent.h"
 #include "ESaveDataProcResult.h"
+#include "EndOutAnimationDelegateDelegate.h"
+#include "EndScreenDelegateDelegate.h"
 #include "ELTitleWidgetBase.generated.h"
 
 class AELGameCommonPlayerControllerBase;
@@ -18,6 +20,16 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USaveData_AccessorBase*> m_ConvertSaveDataAccessors;
+    
+protected:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FEndScreenDelegate EndScreen_N;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FEndOutAnimationDelegate EndOutAnimation_N;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsConverting_N;
     
 public:
     UELTitleWidgetBase();
@@ -42,6 +54,12 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEndConvertSaveData(const bool IsConvertFailed, const bool IsChangeLanguageType, const int32 ChangeLanguageType, const ESaveDataProcResult SaveDataProcResult);
+    
+    UFUNCTION(BlueprintCallable)
+    void ExecuteEndScreen(int32 DecideControllerID, bool IsExitGame);
+    
+    UFUNCTION(BlueprintCallable)
+    void ExecuteEndOutAnimation();
     
     UFUNCTION(BlueprintCallable)
     void DeleteSaveData();

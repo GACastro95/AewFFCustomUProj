@@ -79,6 +79,7 @@ USoundAtomCue::USoundAtomCue() {
     this->bUseAreaSoundVolume = false;
     this->UpdateRateForFrame = 1;
     this->Region = NULL;
+    this->bIsEnableChangingAisacValueWithComponentVelocity = false;
     this->bEconomicTick = false;
     this->bOverrideEconomicTickSettings = false;
     this->EconomicTickDistanceMargin = 2097152.00f;

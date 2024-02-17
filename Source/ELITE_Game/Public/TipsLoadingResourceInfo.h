@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TipsLoadingBackGroundInfo.h"
 #include "TipsLoadingDisplayTextInfo.h"
 #include "TipsLoadingResourceInfo.generated.h"
-
-class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct FTipsLoadingResourceInfo {
@@ -13,7 +12,7 @@ public:
     FString Memo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftObjectPtr<UTexture2D> BackGoundTexture;
+    TArray<FTipsLoadingBackGroundInfo> BackGroundList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTipsLoadingDisplayTextInfo> DisplayTextList;

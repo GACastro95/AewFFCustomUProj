@@ -5,5 +5,6 @@
 
 
 AELBarricade::AELBarricade() {
+    this->bNeedCheckCanClimbEdge = false;
 }
 

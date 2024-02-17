@@ -1,6 +1,9 @@
 #include "ELSSUtility.h"
 #include "Templates/SubclassOf.h"
 
+void UELSSUtility::UpdateSSCurrentRuleStatus(const UObject* WorldContextObject) {
+}
+
 bool UELSSUtility::TryYGS2ResumeRequests(const UObject* WorldContextObject) {
     return false;
 }
@@ -28,7 +31,13 @@ UYGS2Req_GetSSPlayerData* UELSSUtility::SSLoginRequest() {
 void UELSSUtility::SetVisibleFadeForChangeLevel(const UObject* WorldContextObject, bool inEnable, bool inWithLoadingIcon) {
 }
 
+void UELSSUtility::SetSSSelectedRuleScheduleId(const UObject* WorldContextObject, int32 inRuleScheduleId) {
+}
+
 void UELSSUtility::SetSSPlayerData(const UObject* WorldContextObject, const FYGS2SSPlayerData& dat) {
+}
+
+void UELSSUtility::SetSSMainMenuFootStamp(const UObject* WorldContextObject) {
 }
 
 void UELSSUtility::SetSSInGamePlayFlag(const UObject* WorldContextObject, bool IsOn) {
@@ -54,6 +63,9 @@ void UELSSUtility::SetInputMode(APlayerController* pController) {
 
 bool UELSSUtility::RestartYGS2SetupStep(const UObject* WorldContextObject, bool inForceExec, bool inResetRequest) {
     return false;
+}
+
+void UELSSUtility::ResetSSSelectedRuleScheduleId(const UObject* WorldContextObject) {
 }
 
 bool UELSSUtility::RequestDownloadSSModeServiceParam(const UObject* WorldContextObject, bool inSSModeOnly) {
@@ -83,7 +95,14 @@ bool UELSSUtility::NeedsRestartYGS2SetupStep(const UObject* WorldContextObject) 
     return false;
 }
 
+void UELSSUtility::MakeSSEnabledRuleScheduleList(const UObject* WorldContextObject) {
+}
+
 bool UELSSUtility::IsSSPlayableUser(const UObject* WorldContextObject) {
+    return false;
+}
+
+bool UELSSUtility::IsSSPartyHostOrSolo(const UObject* WorldContextObject) {
     return false;
 }
 
@@ -103,7 +122,15 @@ bool UELSSUtility::IsSSDebugLocalCheckMode() {
     return false;
 }
 
+bool UELSSUtility::IsSSCurrentRuleEnabled(const UObject* WorldContextObject) {
+    return false;
+}
+
 bool UELSSUtility::IsSSCheatDetected(const UObject* WorldContextObject) {
+    return false;
+}
+
+bool UELSSUtility::IsJoinedSSModeParty(const UObject* WorldContextObject) {
     return false;
 }
 
@@ -124,6 +151,10 @@ bool UELSSUtility::IsDevMode() {
 }
 
 bool UELSSUtility::IsAccountLogin(const bool isMissed) {
+    return false;
+}
+
+bool UELSSUtility::HasSSModeMainMenuFootStamp(const UObject* WorldContextObject) {
     return false;
 }
 
@@ -171,7 +202,15 @@ EWrestlerID_N UELSSUtility::GetSSSelectedWrestlerID(const UObject* WorldContextO
     return EWrestlerID_N::None;
 }
 
+int32 UELSSUtility::GetSSSelectedRuleScheduleId(const UObject* WorldContextObject) {
+    return 0;
+}
+
 AELSSSaveDataManager* UELSSUtility::GetSSSaveDataManager(const UObject* WorldContextObject) {
+    return NULL;
+}
+
+UELSSRuleSelect* UELSSUtility::GetSSRuleSelect(const UObject* WorldContextObject) {
     return NULL;
 }
 
@@ -251,6 +290,10 @@ FText UELSSUtility::GetSSLocalizeText(const FString& stKey) {
     return FText::GetEmpty();
 }
 
+UELSSLobbyManager* UELSSUtility::GetSSLobbyManager(const UObject* WorldContextObject) {
+    return NULL;
+}
+
 UELSSLevelTransitionEvent* UELSSUtility::GetSSLevelTransitionEvent(const UObject* WorldContextObject) {
     return NULL;
 }
@@ -281,6 +324,50 @@ bool UELSSUtility::GetSSCurrentStampedeLevelExp(const UObject* WorldContextObjec
 
 bool UELSSUtility::GetSSCurrentStampedeLevel(const UObject* WorldContextObject, int32& outLevel) {
     return false;
+}
+
+ESSVictoryCondition UELSSUtility::GetSSCurrentRuleVictoryCondition(const UObject* WorldContextObject) {
+    return ESSVictoryCondition::Survival;
+}
+
+ESSRuleType UELSSUtility::GetSSCurrentRuleType(const UObject* WorldContextObject) {
+    return ESSRuleType::BattleRoyale;
+}
+
+ESSTeamType UELSSUtility::GetSSCurrentRuleTeamType(const UObject* WorldContextObject) {
+    return ESSTeamType::Single;
+}
+
+int32 UELSSUtility::GetSSCurrentRuleTeamSize(const UObject* WorldContextObject) {
+    return 0;
+}
+
+ESSRespawnType UELSSUtility::GetSSCurrentRuleRespawnType(const UObject* WorldContextObject) {
+    return ESSRespawnType::None;
+}
+
+ESSRespawnLocationType UELSSUtility::GetSSCurrentRuleRespawnLocationType(const UObject* WorldContextObject) {
+    return ESSRespawnLocationType::Default;
+}
+
+int32 UELSSUtility::GetSSCurrentRuleMaxPlayersInParty(const UObject* WorldContextObject) {
+    return 0;
+}
+
+int32 UELSSUtility::GetSSCurrentRuleMaxPlayers(const UObject* WorldContextObject) {
+    return 0;
+}
+
+ESSMatchmakeType UELSSUtility::GetSSCurrentRuleMatchmakeType(const UObject* WorldContextObject) {
+    return ESSMatchmakeType::Default;
+}
+
+int32 UELSSUtility::GetSSCurrentRuleId(const UObject* WorldContextObject) {
+    return 0;
+}
+
+int32 UELSSUtility::GetSSCurrentRuleDataGroup(const UObject* WorldContextObject) {
+    return 0;
 }
 
 bool UELSSUtility::GetSSCurrentPlayerRank(const UObject* WorldContextObject, int32& outRank) {
@@ -361,6 +448,10 @@ FSSErrorTextLinkDialogMessage UELSSUtility::GetErrorTextLinkMessage(const EErrDi
 
 FString UELSSUtility::GetEOSAuthToken() {
     return TEXT("");
+}
+
+bool UELSSUtility::GetEnabledRuleScheduleList(const UObject* WorldContextObject, bool inRefresh, TArray<FSSRuleScheduleParam>& outScheduleParamList) {
+    return false;
 }
 
 UELEOSManager* UELSSUtility::GetELEOSManager(const UObject* WorldContextObject) {

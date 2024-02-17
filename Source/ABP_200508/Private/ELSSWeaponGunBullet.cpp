@@ -15,6 +15,7 @@ void AELSSWeaponGunBullet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(AELSSWeaponGunBullet, BulletOwner);
+    DOREPLIFETIME(AELSSWeaponGunBullet, TeamId);
     DOREPLIFETIME(AELSSWeaponGunBullet, MoveId);
     DOREPLIFETIME(AELSSWeaponGunBullet, WeaponID);
 }
@@ -25,6 +26,7 @@ AELSSWeaponGunBullet::AELSSWeaponGunBullet() {
     this->SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponent"));
     this->ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
     this->BulletOwner = NULL;
+    this->TeamId = 0;
     this->MoveId = 0;
     this->WeaponID = 0;
     this->DoneHit = false;

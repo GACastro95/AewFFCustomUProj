@@ -17,5 +17,6 @@ enum class eSSGameMatchMakeState : uint8 {
     eSSGameMatchMakeState_Error,
     eSSGameMatchMakeState_Restart,
     eSSGameMatchMakeState_Failed,
+    eSSGameMatchMakeState_MAX UMETA(Hidden),
 };
 

@@ -64,7 +64,7 @@ public:
     bool RequestUpdateLocalFileList(bool _bProjectSavedDir);
     
     UFUNCTION(BlueprintCallable)
-    bool RequestLoad(USaveData_AccessorBase*& _pcSaveDataAccessor, const FString& _strKey, int32 _sFileUserIndex, bool _bDownload, bool _bCache);
+    bool RequestLoad(USaveData_AccessorBase*& _pcSaveDataAccessor, const FString& _strKey, int32 _sFileUserIndex, bool _bDownload, bool _bCache, bool _bBackGroundDecrypt);
     
     UFUNCTION(BlueprintCallable)
     bool RequestGetLocalQuotaInfo();

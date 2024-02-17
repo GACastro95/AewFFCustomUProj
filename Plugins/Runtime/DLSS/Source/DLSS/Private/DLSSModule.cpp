@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, DLSS);
+IMPLEMENT_MODULE(FDefaultGameModuleImpl, DLSS);

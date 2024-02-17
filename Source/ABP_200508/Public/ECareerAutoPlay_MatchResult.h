@@ -16,6 +16,5 @@ enum class ECareerAutoPlay_MatchResult : uint8 {
     WinOppC,
     WinOppD,
     None,
-    ECareerAutoPlay_MAX UMETA(Hidden),
 };
 

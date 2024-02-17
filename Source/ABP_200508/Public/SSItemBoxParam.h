@@ -35,6 +35,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LotGroup_Weapon;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 LotGroup_Jewel;
+    
     ABP_200508_API FSSItemBoxParam();
 };
 

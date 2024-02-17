@@ -5,9 +5,12 @@
 #include "ESSAreaCountDownTextType.h"
 #include "ESSAttentionReason.h"
 #include "ESSCharacterHpType.h"
+#include "ESSFGFIconType.h"
+#include "ESSGuideIconType.h"
 #include "ESSInteractExecute.h"
 #include "ESSInteractOperate.h"
 #include "ESSLogIconType.h"
+#include "ESSMatchIconType.h"
 #include "ESSOperationGuideExecute.h"
 #include "ESSPickupType.h"
 #include "ESSVehicleType.h"
@@ -22,14 +25,20 @@ class UELSSWidgetHUD_AbilityContainer;
 class UELSSWidgetHUD_AreaCountDown;
 class UELSSWidgetHUD_AttentionGauge;
 class UELSSWidgetHUD_CharacterHpGaugeContainer;
+class UELSSWidgetHUD_FGFScoreboard;
 class UELSSWidgetHUD_HeatMeter;
 class UELSSWidgetHUD_Interact;
 class UELSSWidgetHUD_InteractPointContainer;
 class UELSSWidgetHUD_Inventory;
+class UELSSWidgetHUD_JewelList;
+class UELSSWidgetHUD_JewelRadar;
 class UELSSWidgetHUD_MapUI;
 class UELSSWidgetHUD_OnlineIDContainer;
 class UELSSWidgetHUD_OperationGuide;
+class UELSSWidgetHUD_RespawnCount;
+class UELSSWidgetHUD_SSGuideIconContainer;
 class UELSSWidgetHUD_SSLogSet;
+class UELSSWidgetHUD_SSSessionMemberIconContainer;
 class UELSSWidgetHUD_SSSkillGetNotice;
 class UELSSWidgetHUD_SSSpectateWindow;
 class UELSSWidgetHUD_SSSpectators;
@@ -49,10 +58,19 @@ protected:
     UELSSWidgetHUD_CharacterHpGaugeContainer* CharacterHpgaugeContainer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UELSSWidgetHUD_SSSessionMemberIconContainer* MemberIconContainer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UELSSWidgetHUD_OnlineIDContainer* OnlineIDContainer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UELSSWidgetHUD_InteractPointContainer* InteractPointContainer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UELSSWidgetHUD_WrestlerStatus*> AllyWrestlerStatus;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UELSSWidgetHUD_HeatMeter*> AllyHeatMeter;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UELSSWidgetHUD_AttentionGauge* AttentionGauge;
@@ -102,6 +120,21 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsPlayingPlayInAnimation;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UELSSWidgetHUD_JewelList* JewelList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UELSSWidgetHUD_JewelRadar* JewelRadar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UELSSWidgetHUD_SSGuideIconContainer* GuideIconContainer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UELSSWidgetHUD_RespawnCount* RespawnCount;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UELSSWidgetHUD_FGFScoreboard* FGFScoreboard;
+    
 public:
     UELSSPanelInGameBase();
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -110,8 +143,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void UpdateKeyConfig();
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void UpdateAlly(float DeltaTime);
+    
+public:
     UFUNCTION(BlueprintCallable)
     void SwitchWrestlerHpType(bool InIsDownHpGaugeShow);
+    
+    UFUNCTION(BlueprintCallable)
+    void SwitchOtherWrestlerHpType(bool InIsDownHpGaugeShow, int32 InIndex);
     
     UFUNCTION(BlueprintCallable)
     void SwitchMapMode(bool InIsWholeMapMode);
@@ -132,7 +173,31 @@ public:
     void SetVisibleToInteractUI(ESSInteractExecute InType);
     
     UFUNCTION(BlueprintCallable)
+    void SetVisibleRespawnCountTime(bool InPlayIn);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleOtherWrestlerStats(int32 InIndex, bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleOtherWrestlerAllStats(bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleOffenceInfo(bool InOwnSide, bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleGuideIconMatchIcon(bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable)
     void SetVisibleFeverEffect(bool inIsVisible, bool InPlayStartSE, bool InPlayEndSE);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleDefenceBoostText(bool InOwnSide, bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleBeatTopTeamNotice();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleAllyIconContainer(bool inIsVisible);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetVisibleAimReticle(bool InVisible);
@@ -155,11 +220,32 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetSpectatedInfo(AELSSPlayerState* inPlayerState);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetShowVCOnEndPlay(bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetShowAllyVC(int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSessionIndex(int32 InSessionIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOtherWrestlerVC(const FString& InProductUserID, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOtherWrestlerSessionIndex(int32 InSessionIndex, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOtherWrestlerGamerTag(const FString& InGamerTagText, int32 InIndex);
+    
     UFUNCTION(BlueprintCallable)
     void SetOperationGuideVisibleInPause(bool InVisible);
     
     UFUNCTION(BlueprintCallable)
     void SetOperationGuideGuardState(bool InGuardState);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMyWrestlerVC(const FString& InProductUserID);
     
     UFUNCTION(BlueprintCallable)
     void SetMinimapTexture(int32 InMinimapID);
@@ -194,6 +280,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAndApplyMaxAttentionValue(int32 InMaxAttentionValue);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetAllyPUID(const FString& InProductUserID, int32 InIndex);
+    
     UFUNCTION(BlueprintCallable)
     void SetActorUICanShow(bool InCanShow);
     
@@ -211,6 +300,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ResetAttentionGauge();
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetAllyIcon();
     
     UFUNCTION(BlueprintCallable)
     void ResetAllLogs();
@@ -233,6 +325,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnChangeSpectateUser(bool InIsNextUser);
     
+    UFUNCTION(BlueprintCallable)
+    void OnChangeActive_GuideIcon(bool IsActive);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool IsItemProgressBarShow();
     
@@ -247,6 +342,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CancelSpectateWindowHold();
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyWrestlerMatchIcon(bool inIsVisible, ESSMatchIconType InIconType);
     
     UFUNCTION(BlueprintCallable)
     void ApplyWrestlerHp(int32 InWrestlerHp, int32 inMaxHP, bool InGaugeTransition);
@@ -267,19 +365,52 @@ public:
     void ApplyShieldDurableValue(int32 InShieldDurableValue, int32 InMaxShieldDurableValue, bool InGaugeTransition);
     
     UFUNCTION(BlueprintCallable)
+    void ApplyRespawnCountTime(float InSecond);
+    
+    UFUNCTION(BlueprintCallable)
     void ApplyRatioToInteractUI(float InRatio);
     
     UFUNCTION(BlueprintCallable)
-    void ApplyOnlineID(AActor* inTargetActor, const FString& InOnlineID, bool inIsVisible, bool InHasCarrot);
+    void ApplyRadarLevel(int32 inLevel);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOtherWrestlrStatusMatchIcon(bool inIsVisible, ESSMatchIconType InIconType, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOtherWrestlerHp(int32 InWrestlerHp, int32 inMaxHP, bool InGaugeTransition, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOtherWrestlerHeatMeater(int32 inHeatLevel, float InExpRatio, bool InGaugeTransition, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOtherWrestlerHasCarrotMedal(bool inIsVisible, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOtherWrestlerDownHp(int32 InWrestlerDownHp, int32 InMaxWrestlerDownHp, bool InGaugeTransition, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOtherShieldDurableValue(int32 InShieldDurableValue, int32 InMaxShieldDurableValue, bool InGaugeTransition, int32 InIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyOnlineID(AActor* inTargetActor, const FString& InOnlineID, bool inIsVisible, bool InHasCarrot, ESSMatchIconType InIconType);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyMatchTimeCountDown(float InSecond);
     
     UFUNCTION(BlueprintCallable)
     void ApplyKOCount(int32 InCount);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyJewelRankData(int32 InRank, int32 InJewelNum, int32 InMaxJewelNum, bool InSelfData, int32 InSlot, bool InPlayChangeRankAnim);
     
     UFUNCTION(BlueprintCallable)
     void ApplyInventoryIcon(int32 InIndex, ESSPickupType InPickuptype, int32 InItemId, int32 InDurableValue);
     
     UFUNCTION(BlueprintCallable)
     void ApplyInventoryBareIconGuideState();
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyInventoryBareIconFGFState(bool InIsDefault, int32 InBallLevel);
     
     UFUNCTION(BlueprintCallable)
     void ApplyInteractPoint(AActor* inTargetActor, bool inIsVisible);
@@ -294,6 +425,24 @@ public:
     void ApplyHasCarrotMedal(bool inIsVisible);
     
     UFUNCTION(BlueprintCallable)
+    void ApplyGuideIcon(AActor* InActor, ESSGuideIconType InIconType, bool inIsVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyFGFTeamIcon(ESSFGFIconType InIconType, bool InOwnSide);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyFGFScore(int32 InOwnScore, int32 InOppositeScore);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyFGFRoundTime(float InSecond);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyFGFRound(int32 InRound);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyFGFBallLevel(int32 inLevel, int32 inBallLevelPoint, int32 InMaxBallLevelPoint, bool InOwnSide);
+    
+    UFUNCTION(BlueprintCallable)
     void ApplyCharacterHpGauge(AActor* inTargetActor, int32 InNowHp, int32 InIdealHp, int32 inMaxHP, ESSCharacterHpType InType, bool& Out);
     
     UFUNCTION(BlueprintCallable)
@@ -304,6 +453,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ApplyAnnouncePlate(bool inIsVisible, float InSecond, ESSAreaCountDownTextType InTextType);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyAllyIcon(AActor* InActor, int32 InPlayerIndex, bool inIsVisible);
     
     UFUNCTION(BlueprintCallable)
     void ApplyAliveCount(int32 InCount);

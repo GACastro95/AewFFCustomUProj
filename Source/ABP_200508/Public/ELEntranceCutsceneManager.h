@@ -291,7 +291,7 @@ protected:
     int32 GetMusicIndex();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    bool GetMoviePath(FString& MoviePath, int32 MovieDataID);
+    bool GetMoviePath(FString& MoviePath, bool& bUseStreamerModeVideo, bool& ChangeLoop, int32 MovieDataID);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool GetMovieNumber(int32 UnlockItemId, int32& Number);

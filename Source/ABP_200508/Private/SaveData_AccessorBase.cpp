@@ -48,7 +48,7 @@ ESaveDataProcResult USaveData_AccessorBase::RequestSave(bool _bUpload) {
     return ESaveDataProcResult::None;
 }
 
-ESaveDataProcResult USaveData_AccessorBase::RequestLoad(bool _bDownload) {
+ESaveDataProcResult USaveData_AccessorBase::RequestLoad(bool _bDownload, bool _bBackGroundDecrypt) {
     return ESaveDataProcResult::None;
 }
 

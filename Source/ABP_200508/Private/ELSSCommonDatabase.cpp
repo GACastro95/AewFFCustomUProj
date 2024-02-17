@@ -87,7 +87,7 @@ bool UELSSCommonDatabase::GetAttackParamListFromMoveId(int32 MoveId, TArray<FSSA
     return false;
 }
 
-bool UELSSCommonDatabase::GetAttackParam(int32 MoveId, int32 AttackHitId, FSSAttackParam& OutParam) const {
+bool UELSSCommonDatabase::GetAttackParam(int32 MoveId, int32 AttackHitId, int32 DataGroup, FSSAttackParam& OutParam) const {
     return false;
 }
 
@@ -136,6 +136,7 @@ UELSSCommonDatabase::UELSSCommonDatabase() {
     this->PlayerRankParamTable = NULL;
     this->PlayerRankRangeParamTable = NULL;
     this->LoadoutPresetDefaultParamTable = NULL;
+    this->RuleResourceParamTable = NULL;
     this->GameRuleParamTable = NULL;
     this->StateInfoTable = NULL;
 }

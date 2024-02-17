@@ -8,5 +8,6 @@ enum class eHottestWrestlerID : uint8 {
     eHottestWrestlerID_2ND,
     eHottestWrestlerID_3RD,
     eHottestWrestlerID_Num,
+    eHottestWrestlerID_MAX UMETA(Hidden),
 };
 

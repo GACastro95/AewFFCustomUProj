@@ -12,5 +12,6 @@ enum class EMainMenuState : uint8 {
     EMainMenuState_Login,
     EMainMenuState_Menu,
     EMainMenuState_End,
+    EMainMenuState_MAX UMETA(Hidden),
 };
 

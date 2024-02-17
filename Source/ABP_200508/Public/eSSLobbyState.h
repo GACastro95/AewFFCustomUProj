@@ -11,5 +11,6 @@ enum class eSSLobbyState : uint8 {
     eSSLobbyState_HotPlayer,
     eSSLobbyState_END,
     eSSLobbyState_EmptyLobby,
+    eSSLobbyState_MAX UMETA(Hidden),
 };
 

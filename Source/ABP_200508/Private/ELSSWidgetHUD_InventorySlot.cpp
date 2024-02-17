@@ -24,6 +24,9 @@ void UELSSWidgetHUD_InventorySlot::SetDurabilityValue(int32 inDurability) {
 }
 
 
+void UELSSWidgetHUD_InventorySlot::SetDefaultIcon(UTexture2D* InIcon) {
+}
+
 bool UELSSWidgetHUD_InventorySlot::IsEmpty() {
     return false;
 }

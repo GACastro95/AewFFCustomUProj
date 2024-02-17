@@ -9,6 +9,7 @@ enum class ESSInteractExecute : uint8 {
     GetOnVehicle,
     GetOnHorse,
     OpenTreasureBox,
+    OpenedTreasureBox,
     SituationMove,
     PickupItemInfo,
     PickupWeaponInfo,

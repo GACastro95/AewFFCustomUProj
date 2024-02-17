@@ -203,6 +203,9 @@ bool UELEOSManager::GetQuitGameOnFailedEAC() {
     return false;
 }
 
+void UELEOSManager::GetQuickPlayMatchTypePool(TArray<int32>& outMatchTypePool) {
+}
+
 float UELEOSManager::GetP2PTimeoutLatency() const {
     return 0.0f;
 }

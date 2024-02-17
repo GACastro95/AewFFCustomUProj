@@ -2,10 +2,12 @@
 
 FSSAttackParam::FSSAttackParam() {
     this->MoveId = 0;
+    this->DataGroup = 0;
     this->AttackHitId = 0;
     this->AttackType = ESSAttackType::None;
     this->GuardBreakerType = ESSGuardBreakerType::Default;
     this->AttackToDown = false;
+    this->FriendlyFireType = ESSFriendlyFireType::NoDamage;
     this->Damage = 0;
     this->AttentionPoint = 0;
     this->ReactionType = ESSReactionType::None;

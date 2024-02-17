@@ -84,7 +84,15 @@ ESSResultGradeABC AELSSDatabase::CalcResultGradeFromKillCount(int32 inKillCount)
     return ESSResultGradeABC::A_High;
 }
 
+ESSResultGradeABC AELSSDatabase::CalcResultGradeFromJewelPoint(int32 inJewelPoint) {
+    return ESSResultGradeABC::A_High;
+}
+
 ESSResultGradeABC AELSSDatabase::CalcResultGradeFromFeverCount(int32 inFeverCount) {
+    return ESSResultGradeABC::A_High;
+}
+
+ESSResultGradeABC AELSSDatabase::CalcResultGradeFromBallLevelPoint(int32 inBallLevelPoint) {
     return ESSResultGradeABC::A_High;
 }
 
@@ -125,6 +133,12 @@ AELSSDatabase::AELSSDatabase() {
     this->ResultAttentionGradeTable = NULL;
     this->ResultFeverGradeTable = NULL;
     this->ResultStarGradeTable = NULL;
+    this->ResultJewelGradeTable = NULL;
+    this->ResultBallLevelGradeTable = NULL;
     this->VictoryCutsceneParamTable = NULL;
+    this->PlayerStartLocatorParamTable = NULL;
+    this->RuleAdjustParamTable = NULL;
+    this->FgfFieldPatternParamTable = NULL;
+    this->FgfBallLevelParamTable = NULL;
 }
 

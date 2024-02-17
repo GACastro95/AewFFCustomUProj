@@ -18,5 +18,7 @@ enum class ESSOperationGuideExecute : uint8 {
     RidingHorse,
     DefaultJump,
     HighFlyJump,
+    FGFShortPass,
+    FGFShoot,
 };
 

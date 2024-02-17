@@ -8,6 +8,5 @@ enum class EMoves_PreviewDistOffsetType : uint8 {
     Equality,
     Player1Only,
     Player2Only,
-    EMoves_MAX UMETA(Hidden),
 };
 

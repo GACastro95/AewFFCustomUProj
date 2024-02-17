@@ -7,5 +7,6 @@ enum class EWrestlerPresetButtonType : uint8 {
     EWrestlerPresetButtonType_Preset,
     EWrestlerPresetButtonType_Start,
     EWrestlerPresetButtonType_NUM,
+    EWrestlerPresetButtonType_MAX UMETA(Hidden),
 };
 

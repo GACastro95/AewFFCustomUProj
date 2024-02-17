@@ -1539,5 +1539,6 @@ FELTmpJukeboxSaveData::FELTmpJukeboxSaveData() {
     this->m_sJukeBoxPlaylistSortNumArray[511] = 0;
     this->m_bRandomPlayback = false;
     this->m_bCreateSavedata = false;
+    this->m_JukeBoxFilter = EJukeBoxFilterType::All;
 }
 

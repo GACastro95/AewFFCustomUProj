@@ -3,6 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ELSSWidgetBase.h"
+#include "ESSMatchIconType.h"
 #include "ELSSWidgetHUD_OnlineID.generated.h"
 
 class AActor;
@@ -19,6 +20,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* MedalWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWidget* MatchIconWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* TargetActor;
@@ -61,13 +65,16 @@ public:
     void SetVisibleText(bool inIsVisible);
     
     UFUNCTION(BlueprintCallable)
-    void SetTargetActorandOnlineID(AActor* inTargetActor, const FString& InOnlineID, bool InHasCarrot);
+    void SetTargetActorandOnlineID(AActor* inTargetActor, const FString& InOnlineID, bool InHasCarrot, ESSMatchIconType InIconType);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetOnlineID(const FString& InOnlineID);
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetMatchIcon(ESSMatchIconType InIconType);
+    
     UFUNCTION(BlueprintCallable)
     void SetCarrotMedal(bool InHasCarrot);
     

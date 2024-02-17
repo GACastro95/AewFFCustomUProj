@@ -27,6 +27,9 @@ int32 AELSSSoundManager::PlayLoop2DSE_Implementation(const FString& CueName) {
     return 0;
 }
 
+void AELSSSoundManager::PlayFgfTeamAnnounce(ESSFgfTeamAnnounce inAnnounce, bool isDragonTeam) {
+}
+
 void AELSSSoundManager::PlayAnnounce(ESSAnnounce inAnnounce) {
 }
 

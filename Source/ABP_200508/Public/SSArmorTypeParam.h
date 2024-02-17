@@ -65,6 +65,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESSArmorType AdditionalSuperArmor;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    ESSArmorType AfterRespawn;
+    
     ABP_200508_API FSSArmorTypeParam();
 };
 

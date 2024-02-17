@@ -7,6 +7,5 @@ enum class ESeesawRelationType_N : uint8 {
     Neutral,
     Offense,
     Defense,
-    ESeesawRelationType_MAX UMETA(Hidden),
 };
 

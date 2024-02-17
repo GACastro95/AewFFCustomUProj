@@ -60,6 +60,10 @@ bool UWrestlerDataObjectBase::IsDisable() const {
     return false;
 }
 
+bool UWrestlerDataObjectBase::IsCommunityWrestler() const {
+    return false;
+}
+
 bool UWrestlerDataObjectBase::HasWrestlerDataFlag(const EWrestlerDataObjectFlag FlagType) const {
     return false;
 }

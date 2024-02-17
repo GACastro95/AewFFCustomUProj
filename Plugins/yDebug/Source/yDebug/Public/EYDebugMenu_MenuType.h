@@ -7,6 +7,5 @@ enum class EYDebugMenu_MenuType : uint8 {
     None,
     MenuBar,
     ContextMenu,
-    EYDebugMenu_MAX UMETA(Hidden),
 };
 

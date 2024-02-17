@@ -4,6 +4,7 @@ void UELSSSoundData::SetOwner(AActor* inOwner) {
 }
 
 
+
 void UELSSSoundData::Initialize(AActor* inOwner) {
 }
 

@@ -22,6 +22,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlayingTime;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 PlayedNumSamples;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString PlayerState;
     

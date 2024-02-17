@@ -13,6 +13,12 @@ bool UELTitleWidgetBase::PreStartConvertSaveData() {
 
 
 
+void UELTitleWidgetBase::ExecuteEndScreen(int32 DecideControllerID, bool IsExitGame) {
+}
+
+void UELTitleWidgetBase::ExecuteEndOutAnimation() {
+}
+
 void UELTitleWidgetBase::DeleteSaveData() {
 }
 
@@ -23,5 +29,6 @@ void UELTitleWidgetBase::CallBack_EndConvert(ESaveDataAccessorEvent Event, USave
 }
 
 UELTitleWidgetBase::UELTitleWidgetBase() {
+    this->IsConverting_N = false;
 }
 

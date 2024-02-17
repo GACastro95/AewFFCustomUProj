@@ -5,6 +5,9 @@
 void AELSSGameState::UpdateSurvivorNum() {
 }
 
+void AELSSGameState::TickTeamScore(float inDeltaSeconds) {
+}
+
 
 void AELSSGameState::TickState_Ready_Implementation(float inDeltaSeconds) {
 }
@@ -19,8 +22,20 @@ void AELSSGameState::TickState_GamePlay_Implementation(float inDeltaSeconds) {
 
 
 
+void AELSSGameState::SyncLocalTeamStatusFirst() {
+}
+
+void AELSSGameState::StopPreloadAssetInfoReplicate() {
+}
+
+void AELSSGameState::StopBehaviourTreeAll() {
+}
+
 bool AELSSGameState::StartOfMatch_Implementation() {
     return false;
+}
+
+void AELSSGameState::StartBehaviourTreeAll() {
 }
 
 AELSSPlayer* AELSSGameState::SpawnSSPlayerByPlayerState(const FTransform& InTransform, AELSSPlayerState* inPlayerState) {
@@ -29,6 +44,9 @@ AELSSPlayer* AELSSGameState::SpawnSSPlayerByPlayerState(const FTransform& InTran
 
 AActor* AELSSGameState::SpawnManagerActor(TSubclassOf<AActor> InClass) {
     return NULL;
+}
+
+void AELSSGameState::SpawnFgfManager() {
 }
 
 
@@ -48,6 +66,9 @@ void AELSSGameState::ShutdownNetDriverOnFinishedMatch() {
 }
 
 void AELSSGameState::SetupServerPlayerStateIndex() {
+}
+
+void AELSSGameState::SetupPlayerStartLocatorParam() {
 }
 
 void AELSSGameState::SetDummyPlayerName() {
@@ -72,6 +93,9 @@ void AELSSGameState::PlayMatchPointPay() {
 void AELSSGameState::OnRep_VehicleManager() {
 }
 
+void AELSSGameState::OnRep_SurvivorTeamNum_Implementation() {
+}
+
 void AELSSGameState::OnRep_SurvivorNum_Implementation() {
 }
 
@@ -79,10 +103,25 @@ void AELSSGameState::OnRep_StateSyncParam() {
 }
 
 
+void AELSSGameState::OnRep_RuleInfo() {
+}
+
 void AELSSGameState::OnRep_RoundManager() {
 }
 
+void AELSSGameState::OnRep_ReplicatedTeamNum() {
+}
+
+void AELSSGameState::OnRep_NoOpponents() {
+}
+
 void AELSSGameState::OnRep_ItemManager() {
+}
+
+void AELSSGameState::OnRep_GameStateFlags() {
+}
+
+void AELSSGameState::OnRep_GameServerError() {
 }
 
 void AELSSGameState::OnRep_DebugServerState() {
@@ -103,6 +142,7 @@ void AELSSGameState::OnCompletePreload_VariableAsset() {
 void AELSSGameState::OnCompletePreload_StationalAsset() {
 }
 
+
 void AELSSGameState::OnCompletedSpawnManagerActorsLocal() {
 }
 
@@ -118,11 +158,26 @@ void AELSSGameState::NotifyKilled_Multicast_Implementation(APlayerState* killerP
 void AELSSGameState::NotifyAnnouceAttention_Multicast_Implementation(int32 inServerPlayerStateIndex, int32 inAttentionPoint) {
 }
 
-bool AELSSGameState::NeedsReadyStateForServer() const {
+bool AELSSGameState::NeedsServerShutdown() const {
+    return false;
+}
+
+bool AELSSGameState::NeedsReadyStateForServer_Implementation() const {
     return false;
 }
 
 bool AELSSGameState::NeedsEnableAIForServer() const {
+    return false;
+}
+
+void AELSSGameState::ModifySpawnLocation(const UObject* WorldContextObject, AELSSPlayerState* inPlayerState, FVector InLocation, FRotator inRotator, float Radius, float helfHeight, FName ProfileName, FVector& OutLocation, FRotator& outRotator) {
+}
+
+bool AELSSGameState::IsSyncedTeamInfo() const {
+    return false;
+}
+
+bool AELSSGameState::IsSyncedRule() const {
     return false;
 }
 
@@ -134,12 +189,32 @@ bool AELSSGameState::IsServerState(ESSServerState inState) const {
     return false;
 }
 
+bool AELSSGameState::IsNoOpponentsGame() const {
+    return false;
+}
+
 
 bool AELSSGameState::IsMatchPlayerLobbyEnd() const {
     return false;
 }
 
 bool AELSSGameState::IsInitialized() const {
+    return false;
+}
+
+bool AELSSGameState::IsGameServerError() const {
+    return false;
+}
+
+bool AELSSGameState::IsFixedTeamResultAll() const {
+    return false;
+}
+
+bool AELSSGameState::IsFinishedMatch() const {
+    return false;
+}
+
+bool AELSSGameState::IsFgf() const {
     return false;
 }
 
@@ -183,11 +258,27 @@ bool AELSSGameState::HasProgressFlagForAllPlayers(ESSPlayerProgress Type) const 
     return false;
 }
 
+bool AELSSGameState::HasFlag(ESSGameStateFlag Type) const {
+    return false;
+}
+
 bool AELSSGameState::HasDebugFlag(ESSGameStateDebugFlag Type) const {
     return false;
 }
 
+AELSSTeamState* AELSSGameState::GetVictoryTeamState() const {
+    return NULL;
+}
+
+int32 AELSSGameState::GetVictoryTeamId() const {
+    return 0;
+}
+
 AELSSVehicleManager* AELSSGameState::GetVehicleManager() const {
+    return NULL;
+}
+
+AELSSTeamState* AELSSGameState::GetTeamStateByTeamId(int32 InTeamId) const {
     return NULL;
 }
 
@@ -213,6 +304,9 @@ AELSSItemManager* AELSSGameState::GetItemManager() const {
 
 AELSSDatabase* AELSSGameState::GetDatabase() const {
     return NULL;
+}
+
+void AELSSGameState::FixTeamResult() {
 }
 
 AELSSPlayerState* AELSSGameState::FindSSPlayerStateForWatch_Random(bool inCheckPawn) const {
@@ -286,7 +380,14 @@ void AELSSGameState::CreatePreloadAssetInfo() {
 void AELSSGameState::ClearShouldShutdownGameFlag() {
 }
 
+void AELSSGameState::CheckValidRuleSchedule() {
+}
+
 bool AELSSGameState::CheckMultiPlayFeature() const {
+    return false;
+}
+
+bool AELSSGameState::CheckFinishedMatch() {
     return false;
 }
 
@@ -319,24 +420,30 @@ void AELSSGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(AELSSGameState, StateSyncParamRep);
-    DOREPLIFETIME(AELSSGameState, PreloadAssetInfoRep);
+    DOREPLIFETIME(AELSSGameState, GameServerError);
     DOREPLIFETIME(AELSSGameState, RoundManager);
     DOREPLIFETIME(AELSSGameState, ItemManager);
     DOREPLIFETIME(AELSSGameState, VehicleManager);
     DOREPLIFETIME(AELSSGameState, SurvivorNum);
+    DOREPLIFETIME(AELSSGameState, SurvivorTeamNum);
+    DOREPLIFETIME(AELSSGameState, ReplicatedRuleInfo);
+    DOREPLIFETIME(AELSSGameState, ReplicatedTeamNum);
     DOREPLIFETIME(AELSSGameState, SSModeLobby);
     DOREPLIFETIME(AELSSGameState, Activity_ReplicatedMatchId);
     DOREPLIFETIME(AELSSGameState, Activity_Result);
+    DOREPLIFETIME(AELSSGameState, GameStateFlags);
     DOREPLIFETIME(AELSSGameState, DebugFlags);
     DOREPLIFETIME(AELSSGameState, DebugServerState);
     DOREPLIFETIME(AELSSGameState, DebugServerLobbyState);
     DOREPLIFETIME(AELSSGameState, DebugServerAverageFPS);
     DOREPLIFETIME(AELSSGameState, DebugServerMaxDeltaSec_Recently5sec);
     DOREPLIFETIME(AELSSGameState, DebugServerCrashRequestedTime);
+    DOREPLIFETIME(AELSSGameState, bNoOpponents);
 }
 
 AELSSGameState::AELSSGameState() {
     this->PrevState = ESSGameFlowState::None;
+    this->GameServerError = ESSGameServerError::None;
     this->bShouldShutdownGame = false;
     this->bDoneShutdownNetDriver = false;
     this->SSPlayerClass = NULL;
@@ -344,6 +451,7 @@ AELSSGameState::AELSSGameState() {
     this->LocationCheckOffsetZ_Top = 100;
     this->LocationCheckOffsetZ_Bottom = -100;
     this->AINpcIdCount = 0;
+    this->PreloadAssetInfoReplicator = NULL;
     this->LocatorManagerType = NULL;
     this->LocatorManager = NULL;
     this->SoundManagerType = NULL;
@@ -354,12 +462,18 @@ AELSSGameState::AELSSGameState() {
     this->ItemManager = NULL;
     this->VehicleManagerType = NULL;
     this->VehicleManager = NULL;
+    this->SSTeamStateClass = NULL;
     this->SaveDataManager = NULL;
     this->SaveDataManagerType = NULL;
     this->SurvivorNum = 0;
+    this->SurvivorTeamNum = 0;
     this->LastSurvivorIndex = -1;
     this->ValidObjectTrapLimit = 15;
     this->FadeManager = NULL;
+    this->TeamScoreUpdateInterval = 0.20f;
+    this->ReplicatedTeamNum = 0;
+    this->FgfManagerClass = NULL;
+    this->FgfManager = NULL;
     this->DatabaseType = NULL;
     this->Database = NULL;
     this->PoolManager = NULL;
@@ -372,6 +486,7 @@ AELSSGameState::AELSSGameState() {
     this->BackUpCVarMaxTempMemoryAllowed = 0;
     this->DesiredCVarMaxTempMemoryAllowed = 128;
     this->Activity_ExecPlayerState = NULL;
+    this->GameStateFlags = 0;
     this->DebugFlags = 0;
     this->DebugServerState = ESSServerState::None;
     this->DebugServerLobbyState = eSSLobbyState::eSSLobbyState_None;
@@ -380,5 +495,6 @@ AELSSGameState::AELSSGameState() {
     this->DebugServerAverageFPS = 0.00f;
     this->DebugServerMaxDeltaSec_Recently5sec = 0.00f;
     this->DebugServerCrashRequestedTime = 0.00f;
+    this->bNoOpponents = false;
 }
 

@@ -22,6 +22,8 @@
 #include "SSPlayerRankRangeParam.h"
 #include "SSRoundAdjustParam.h"
 #include "SSRoundParam.h"
+#include "SSRuleParam.h"
+#include "SSRuleScheduleParam.h"
 #include "SSStormFinalParam.h"
 #include "SSWeaponCommonParam.h"
 #include "SSWrestlerTypeParam.h"
@@ -113,6 +115,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSSGeneralParam> GeneralParamArray;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSRuleParam> RuleParamArray;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSRuleScheduleParam> RuleScheduleParamArray;
     
 public:
     UELSSMasterData();

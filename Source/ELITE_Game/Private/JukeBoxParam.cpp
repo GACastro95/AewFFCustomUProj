@@ -9,9 +9,13 @@ FJukeBoxParam::FJukeBoxParam() {
     this->UseCreate = false;
     this->JukeBox = false;
     this->DefaultSelect = false;
-    this->JacketImage = NULL;
     this->JukeBoxCue = NULL;
     this->JukeBoxCueInGame = NULL;
     this->UnlockItemId = 0;
+    this->EnableStreamer = false;
+    this->Entrance = false;
+    this->GameOriginal = false;
+    this->Premium = false;
+    this->FreeDLC = false;
 }
 

@@ -13,5 +13,6 @@ enum class ESSMainMenuInputType : uint8 {
     ESSMainMenuInputType_ResetCamera,
     ESSMainMenuInputType_MatchCancel,
     ESSMainMenuInputType_ButtonStartPlayRelease,
+    ESSMainMenuInputType_MAX UMETA(Hidden),
 };
 

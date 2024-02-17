@@ -31,6 +31,7 @@
 #include "SSHitEffectParam.h"
 #include "SSItemParam.h"
 #include "SSMoveParam.h"
+#include "SSPlayerStartLocatorParam.h"
 #include "SSShieldParam.h"
 #include "SSSystemMotionParam.h"
 #include "SSUseItemParam.h"
@@ -98,6 +99,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetSystemMotionParam(const UObject* WorldContextObject, const FName& RowName, FSSSystemMotionParam& OutRow);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSPlayerStartLocatorParam(const UObject* WorldContextObject, int32 ID, FSSPlayerStartLocatorParam& OutRow);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetShieldParam(const UObject* WorldContextObject, int32 ID, FSSShieldParam& OutRow);
@@ -199,7 +203,13 @@ public:
     static ESSResultGradeABC CalcResultGradeFromKillCount(const UObject* WorldContextObject, int32 inKillCount);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static ESSResultGradeABC CalcResultGradeFromJewelPoint(const UObject* WorldContextObject, int32 inJewelPoint);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static ESSResultGradeABC CalcResultGradeFromFeverCount(const UObject* WorldContextObject, int32 inFeverCount);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static ESSResultGradeABC CalcResultGradeFromBallLevelPoint(const UObject* WorldContextObject, int32 inBallLevelPoint);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static ESSResultGradeABC CalcResultGradeFromAttentionPoint(const UObject* WorldContextObject, int32 inAttentionPoint);

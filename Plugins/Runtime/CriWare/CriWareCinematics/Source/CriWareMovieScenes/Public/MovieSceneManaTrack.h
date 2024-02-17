@@ -8,7 +8,7 @@ class UMovieSceneAtomTrack;
 class UMovieSceneSection;
 
 UCLASS(Blueprintable, MinimalAPI)
-class UMovieSceneManaTrack : public UMovieSceneNameableTrack{ //}; , public IMovieSceneTrackTemplateProducer{
+class UMovieSceneManaTrack : public UMovieSceneNameableTrack {//}; , public IMovieSceneTrackTemplateProducer{
     GENERATED_BODY()
 public:
 private:

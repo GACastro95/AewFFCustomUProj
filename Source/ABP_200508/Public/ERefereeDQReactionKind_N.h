@@ -9,6 +9,5 @@ enum class ERefereeDQReactionKind_N : uint8 {
     Anger,
     PreDQ,
     DQ,
-    ERefereeDQReactionKind_MAX UMETA(Hidden),
 };
 

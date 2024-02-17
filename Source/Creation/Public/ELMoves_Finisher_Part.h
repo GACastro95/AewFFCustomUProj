@@ -9,15 +9,15 @@ USTRUCT(BlueprintType)
 struct CREATION_API FELMoves_Finisher_Part : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     EFinisher_Type Type;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     EFinisher_RS_Direction RSDir;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     int32 MovesIndex;
-    
+
     FELMoves_Finisher_Part();
 
     FELMoves_Finisher_Part(const FELMoves_Finisher_Part& Other);

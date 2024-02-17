@@ -4,6 +4,8 @@
 #include "Components/SceneComponent.h"
 #include "Sound/SoundAttenuation.h"
 #include "AtomAisacControlParam.h"
+#include "AtomAisacControlWithVelocityParam.h"
+#include "AtomAppliedValueParam.h"
 #include "AtomBeatSyncInfo.h"
 #include "AtomCallback.h"
 #include "AtomSelectorParam.h"
@@ -31,6 +33,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnStatusChanged, EAtomComponentStatus, Status, UAtomComponent*, AtomComponent);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnAudioVolumeChanged, EAtomAudioVolumeType, Type, AAtomAudioVolume*, AtomAudioVolume, bool, bIsCalledFromTick);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnAudioFinished);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAtomSoundCueBlockIndexChanged, int32, BlockIndex);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FAtomSequenceCallbackDelegate, UAtomComponent*, AtomComponent, const FAtomSequenceInfo&, SequenceInfo);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FAtomBeatSyncCallbackDelegate, UAtomComponent*, AtomComponent, const FAtomBeatSyncInfo&, BeatSyncInfo);
     
@@ -86,6 +89,12 @@ public:
     TArray<FAtomSelectorParam> DefaultSelectorLabel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsOverrideAisacControlSettingsWithVelocity;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FAtomAisacControlWithVelocityParam> OverrideAisacControlSettingsWithVelocity;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAtomLoopSetting LoopSetting;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -99,6 +108,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnAudioFinished OnAudioFinished;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnAtomSoundCueBlockIndexChanged OnAtomSoundCueBlockIndexChanged;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWorld* PlayWorld;
@@ -155,10 +167,16 @@ public:
     void SetRegion(UAtom3dRegion* InRegion);
     
     UFUNCTION(BlueprintCallable)
+    void SetPreferredOutputPort(const FString& port_name);
+    
+    UFUNCTION(BlueprintCallable)
     void SetPitchMultiplier(float NewPitchMultiplier);
     
     UFUNCTION(BlueprintCallable)
     void SetPitch(float Pitch);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOutputPort(const FString& port_name);
     
     UFUNCTION(BlueprintCallable)
     void SetNextBlockIndex(int32 BlockIndex);
@@ -186,6 +204,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetAisacByName(const FString& ControlName, float ControlValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemovePreferredOutputPort(const FString& port_name);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveOutputPort(const FString& port_name);
     
     UFUNCTION(BlueprintCallable)
     void Play(float StartTime);
@@ -226,6 +250,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNumQueuedSounds() const;
     
+    UFUNCTION(BlueprintPure)
+    void GetNumPlayedSamples(int64& NumSamples, int32& SamplingRate) const;
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxAttenuationDistance() const;
     
@@ -260,6 +287,9 @@ public:
     float GetCurrentCullingBoundaryDistance() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetCurrentBlockIndex() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AAtomAudioVolume* GetCurrentBelongingAudioVolume(EAtomAudioVolumeType Type, bool IsNeighbor) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -281,7 +311,10 @@ public:
     static UAtomComponent* GetAtomComponentFromID(int32 TargetID);
     
     UFUNCTION(BlueprintCallable)
-    void FadeOut(float FadeOutDuration, float FadeVolumeLevel);
+    FAtomAppliedValueParam GetAtomAppliedValueParam();
+    
+    UFUNCTION(BlueprintCallable)
+    void FadeOut(float FadeOutDuration);
     
     UFUNCTION(BlueprintCallable)
     void FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime);
@@ -294,6 +327,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearSelectorLabels();
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearPreferredOutputPort();
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearOutputPort();
     
     UFUNCTION(BlueprintCallable)
     bool BP_GetAttenuationSettingsToApply(FSoundAttenuationSettings& OutAttenuationSettings);

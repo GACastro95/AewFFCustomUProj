@@ -20,6 +20,10 @@ int32 UEOSTitleStorageBinary::GetOffset() const {
     return 0;
 }
 
+FString UEOSTitleStorageBinary::GetAsText2() {
+    return TEXT("");
+}
+
 FString UEOSTitleStorageBinary::GetAsText() {
     return TEXT("");
 }

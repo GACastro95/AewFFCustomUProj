@@ -27,6 +27,7 @@
 #include "EStickinputDir.h"
 #include "EWhipState.h"
 #include "EWrestlerID_N.h"
+#include "IndexedColorList.h"
 #include "StMatchRule.h"
 #include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
@@ -108,8 +109,10 @@ class UELReplayBase;
 class UELSeesawSystem;
 class UELShockCounter;
 class UEnum;
+class UMaterialInstance;
 class UMaterialInterface;
 class UMatineeCameraShake;
+class UObject;
 class UParticleSystem;
 class UParticleSystemComponent;
 class UPrimitiveComponent;
@@ -475,6 +478,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     EReserveReversalType AttackKind_N;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    bool InputState_LongPressIrishWhip;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStPinchMoves LastUsePinchMoveMotion_N;
@@ -1446,6 +1452,12 @@ protected:
     bool bSkipResetMeshLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVector DeltaMoveDir;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float DamageAreaOverlapDownDuration_N;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FStDQReactionAndPlayer> ReserveDQReactions_N;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -1552,6 +1564,12 @@ private:
     FAttireExParam AttireEditParam;
     
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TSoftObjectPtr<UObject>> AsyncLoadList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UObject*> AsyncLoadObjectList;
+    
     AELCharacter_Native();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
@@ -2059,6 +2077,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestDQReaction_Impl();
     
+    UFUNCTION(BlueprintCallable)
+    void RequestAsyncLoadObject(const TArray<TSoftObjectPtr<UObject>>& LoadObjectList);
+    
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlayPassiveSkillEffectandCameraImpl(const FStPassiveSkillData& Passive);
@@ -2126,6 +2147,11 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCompletedTutorials_Impl();
     
+public:
+    UFUNCTION(BlueprintCallable)
+    void OnCompletedAsyncLoad();
+    
+protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnChangeRefereeMeshMode(ERefereeMeshMode inMode);
     
@@ -2146,10 +2172,10 @@ public:
     void OnApplyAttireExtoEye(USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, FLinearColor EyeColor, float EyeEmissivePower);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void OnApplyAttireExtoAttire(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyDarkSkinMode);
+    void OnApplyAttireExtoAttire(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyPatternTextureChangeColor, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinMode);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void OnApplyAttireEx(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList);
+    void OnApplyAttireEx(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyPatternTextureChangeColorToAttire, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -2161,6 +2187,11 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void MotionChangeResetParam_Impl(UAnimMontage* Montage);
     
+public:
+    UFUNCTION(BlueprintCallable)
+    bool MaterialStaticParameterSameCheck(UMaterialInstance* Material1, UMaterialInterface* Material2);
+    
+protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void M_SetDeferredUpdateYawMainMontage_N(float Yaw);
     
@@ -3381,10 +3412,10 @@ public:
     void ApplyAttireExtoEye(USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, FLinearColor EyeColor, float EyeEmissivePower);
     
     UFUNCTION(BlueprintCallable)
-    void ApplyAttireExtoAttire(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyDarkSkinMode);
+    void ApplyAttireExtoAttire(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyPatternTextureChangeColor, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinMode);
     
     UFUNCTION(BlueprintCallable)
-    void ApplyAttireEx(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList);
+    void ApplyAttireEx(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyPatternTextureChangeColorToAttire, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList);
     
     UFUNCTION(BlueprintCallable)
     void AimTarget_N();

@@ -64,6 +64,9 @@ void AELSSPlayer::UpdateCurrentShieldDurabilityUI(AELSSShieldBase* shield) {
 void AELSSPlayer::UpdateCarrotUI() {
 }
 
+void AELSSPlayer::UpdateBlackDiaUI() {
+}
+
 void AELSSPlayer::UpdateAutonomousSyncRotate() {
 }
 
@@ -177,6 +180,9 @@ void AELSSPlayer::SetPutTrapAimMode_Server_Implementation(bool inEnable) {
 void AELSSPlayer::SetPickupedCarrot(AELSSPickupBase* newPickup, AELSSPickupBase* lastPickup) {
 }
 
+void AELSSPlayer::SetPickupedBlackDia(AELSSPickupBase* newPickup, AELSSPickupBase* lastPickup) {
+}
+
 void AELSSPlayer::SetMoveCollisionHeightScale(float inHeightScale, float inRadiusScale) {
 }
 
@@ -248,10 +254,19 @@ bool AELSSPlayer::Revive(float inRecoverHpRate) {
 void AELSSPlayer::ResponseSyncRotationMulticast_Implementation(float inYaw) {
 }
 
+void AELSSPlayer::Respawn_Multicast_Implementation(const FTransform& inRespawnTransform) {
+}
+
+void AELSSPlayer::Respawn(const FTransform& inRespawnTransform) {
+}
+
 void AELSSPlayer::ResetStationalCamera(float InDuration) {
 }
 
 void AELSSPlayer::ResetRestrictWaitSituationMove() {
+}
+
+void AELSSPlayer::ResetPlayerPositionForFgf_Multicast_Implementation(const FTransform& inRespawnTransform) {
 }
 
 void AELSSPlayer::ResetInteractStateLocalInfo() {
@@ -342,6 +357,10 @@ bool AELSSPlayer::PickupCarrot(AELSSPickupBase* Pickup) {
     return false;
 }
 
+bool AELSSPlayer::PickupBlackDia(AELSSPickupBase* Pickup) {
+    return false;
+}
+
 void AELSSPlayer::PerformDamage(const FSSAttackParam& inAttackParam, const FSSDamageResult& damageResult) {
 }
 
@@ -374,6 +393,9 @@ void AELSSPlayer::OnRep_PlayerDebugFlags() {
 }
 
 void AELSSPlayer::OnRep_PickupedCarrot(AELSSPickupBase* lastPickup) {
+}
+
+void AELSSPlayer::OnRep_PickupedBlackDia(AELSSPickupBase* lastPickup) {
 }
 
 void AELSSPlayer::OnRep_KoHP() {
@@ -588,6 +610,10 @@ bool AELSSPlayer::IsDown() const {
     return false;
 }
 
+bool AELSSPlayer::IsDisappear() const {
+    return false;
+}
+
 bool AELSSPlayer::IsDead() const {
     return false;
 }
@@ -609,6 +635,10 @@ bool AELSSPlayer::HasDebugFlag(ESSPlayerDebugFlag Flag) const {
 }
 
 bool AELSSPlayer::HasCarrot() const {
+    return false;
+}
+
+bool AELSSPlayer::HasBlackDia() const {
     return false;
 }
 
@@ -635,6 +665,22 @@ AELSSPlayerController* AELSSPlayer::GetWatcherPlayerController() const {
     return NULL;
 }
 
+AELSSTeamState* AELSSPlayer::GetTeamStateForUIUpdate() const {
+    return NULL;
+}
+
+AELSSTeamState* AELSSPlayer::GetTeamState() const {
+    return NULL;
+}
+
+int32 AELSSPlayer::GetTeamMemberSlotNo() const {
+    return 0;
+}
+
+int32 AELSSPlayer::GetTeamId() const {
+    return 0;
+}
+
 UELSSTargetComponent* AELSSPlayer::GetTargetComponent() const {
     return NULL;
 }
@@ -642,8 +688,6 @@ UELSSTargetComponent* AELSSPlayer::GetTargetComponent() const {
 AActor* AELSSPlayer::GetTargetActor() const {
     return NULL;
 }
-
-
 
 AELSSPlayer* AELSSPlayer::GetSyncTargetPlayer() const {
     return NULL;
@@ -806,6 +850,10 @@ float AELSSPlayer::GetGravityScaleByNotify() const {
     return 0.0f;
 }
 
+
+AELSSPlayerController* AELSSPlayer::GetFirstLocalSSPlayerController() const {
+    return NULL;
+}
 
 AELSSStationalCamera* AELSSPlayer::GetExternalStationalCamera() const {
     return NULL;
@@ -1005,6 +1053,10 @@ AELSSPickupBase* AELSSPlayer::DropCarrot() {
     return NULL;
 }
 
+AELSSPickupBase* AELSSPlayer::DropBlackDia() {
+    return NULL;
+}
+
 TArray<AELSSPickupBase*> AELSSPlayer::DropAllPickupsFromInventory() {
     return TArray<AELSSPickupBase*>();
 }
@@ -1124,11 +1176,19 @@ bool AELSSPlayer::CheckForSpecialCaseDoInteract() const {
     return false;
 }
 
+bool AELSSPlayer::CheckEquipFgfBall() const {
+    return false;
+}
+
 bool AELSSPlayer::CheckAttackedLocalPlayer() const {
     return false;
 }
 
 bool AELSSPlayer::CheckAlreadyHitKoFinisher() const {
+    return false;
+}
+
+bool AELSSPlayer::CheckAllyTeamPlayer(const AELSSPlayer* otherPlayer) const {
     return false;
 }
 
@@ -1277,6 +1337,12 @@ void AELSSPlayer::ApplyCurrentInventory() {
 void AELSSPlayer::ApplyAdjustParam_Implementation() {
 }
 
+void AELSSPlayer::AddTeamScoreByItem(int32 inScore, int32 itemDatabaseId) {
+}
+
+void AELSSPlayer::AddTeamScore(ESSTeamScoreReason inReason, int32 inScore) {
+}
+
 bool AELSSPlayer::AddPickupToInventoryAt(AELSSPickupBase* Pickup, int32 Index) {
     return false;
 }
@@ -1340,11 +1406,14 @@ void AELSSPlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     DOREPLIFETIME(AELSSPlayer, CurrentPickup);
     DOREPLIFETIME(AELSSPlayer, ReplicatedVehicleStateParam);
     DOREPLIFETIME(AELSSPlayer, PickupedCarrot);
+    DOREPLIFETIME(AELSSPlayer, PickupedBlackDia);
     DOREPLIFETIME(AELSSPlayer, InteractHoldBeginTimeRep);
     DOREPLIFETIME(AELSSPlayer, MoveSetSettings);
     DOREPLIFETIME(AELSSPlayer, equipSettings);
     DOREPLIFETIME(AELSSPlayer, ReplicatedSyncMotionPlayState);
     DOREPLIFETIME(AELSSPlayer, PlayerFlags);
+    DOREPLIFETIME(AELSSPlayer, TeamId);
+    DOREPLIFETIME(AELSSPlayer, TeamMemberSlotNo);
     DOREPLIFETIME(AELSSPlayer, PlayerDebugFlags);
     DOREPLIFETIME(AELSSPlayer, DebugReceivedServerRPCReliable);
     DOREPLIFETIME(AELSSPlayer, DebugReceivedServerRPCUnreliable);
@@ -1354,6 +1423,7 @@ AELSSPlayer::AELSSPlayer() {
     this->LastFallReason = ESSFallReason::None;
     this->LandingFrameCount = 0;
     this->ForceThinMode = false;
+    this->CachedFirstLocalSSPlayerController = NULL;
     this->CostumeID = 0;
     this->WrestlerID = EWrestlerID_N::None;
     this->HeatLevel = 0;
@@ -1402,6 +1472,9 @@ AELSSPlayer::AELSSPlayer() {
     this->ThrowPredictionSimFrequency = 25.00f;
     this->DirectionalThrow_PredictionSimFrequency = 30.00f;
     this->DirectionalThrow_BlowPowerScale = 1.30f;
+    this->bEquipFgfBall = false;
+    this->FgfBall = NULL;
+    this->FgfPassTarget = NULL;
     this->StickedWeapon = NULL;
     this->InventoryAvailableLocalCount = 0;
     this->currentInventoryIndex = 0;
@@ -1418,6 +1491,7 @@ AELSSPlayer::AELSSPlayer() {
     this->SlipGroundFriction = 0.01f;
     this->EnableSlipFlag = false;
     this->SlipSETriggerWaitTimeCount = 0.00f;
+    this->RespawnEffect = NULL;
     this->DamageComponent = CreateDefaultSubobject<UELSSDamageComponent>(TEXT("DmgComp"));
     this->ReservedSuicideTimeByDisconnect = 0.10f;
     this->KoFinisherTarget = NULL;
@@ -1433,6 +1507,7 @@ AELSSPlayer::AELSSPlayer() {
     this->KoStunLoopSEUniqueId = 0;
     this->IsKoTick = false;
     this->KoDamageCycleTimer = 0.00f;
+    this->LastKoCauserPlayer = NULL;
     this->ReviveEffect = NULL;
     this->IsInReviveArea = false;
     this->ReviveTimer = 0.00f;
@@ -1441,12 +1516,14 @@ AELSSPlayer::AELSSPlayer() {
     this->ReviveRecoveryKoHPRate = 0.00f;
     this->DeadTimeCount = 0.00f;
     this->DisappearTimeCount = 0.00f;
+    this->LastDeadCauserPlayer = NULL;
     this->AttackerComponent = CreateDefaultSubobject<UELSSAttackerComponent>(TEXT("AtkComp"));
     this->CharaBaseSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("CharaBase"));
     this->HitCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("HitCollision"));
     this->PhysicsCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("PhysicsCollision"));
     this->CurrentVehiclePawn = NULL;
     this->PickupedCarrot = NULL;
+    this->PickupedBlackDia = NULL;
     this->InteractTarget = NULL;
     this->LastInteractExecute = ESSInteractExecute::None;
     this->InteractHoldBeginTimeRep = -1.00f;
@@ -1500,6 +1577,8 @@ AELSSPlayer::AELSSPlayer() {
     this->ChangeAreaCheckIntervalTime = 0.50f;
     this->CurrentCameraPlaceType = ESSCameraPlaceType::Default;
     this->PlayerFlags = 0;
+    this->TeamId = 0;
+    this->TeamMemberSlotNo = 0;
     this->HudHpGaugeOffsetZ = 120.00f;
     this->HudHpGaugeOffsetZOnVehicle = 30.00f;
     this->Purpose = ESSPlayerPurpose::GamePlay;
@@ -1518,6 +1597,7 @@ AELSSPlayer::AELSSPlayer() {
     this->AccumulatedPendingSimulatedTickTime = 0.00f;
     this->bDisableLocalAttack = false;
     this->bDisableSimulateMove = false;
+    this->bDisableCollisionForDrivingState = false;
     this->bDisableMoveCollision = false;
     this->bDisableMoveSmoothing = false;
     this->bDisableSound = false;
@@ -1528,6 +1608,8 @@ AELSSPlayer::AELSSPlayer() {
     this->bForceInvisible = false;
     this->Insignificance = 0.00f;
     this->CameraToActorDistanceSqr = 0.00f;
+    this->FgfBallRunDistance = 0.00f;
+    this->FgfBallRunTimeCount = 0.00f;
     this->PlayerDebugFlags = 0;
     this->DebugTickAutoInputPressInterval = 0.15f;
 }

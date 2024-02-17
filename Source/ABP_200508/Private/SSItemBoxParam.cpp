@@ -10,5 +10,6 @@ FSSItemBoxParam::FSSItemBoxParam() {
     this->LotGroup_OtherItem = 0;
     this->LotGroup_WeaponRarity = 0;
     this->LotGroup_Weapon = 0;
+    this->LotGroup_Jewel = 0;
 }
 

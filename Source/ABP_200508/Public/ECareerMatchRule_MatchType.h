@@ -13,6 +13,5 @@ enum class ECareerMatchRule_MatchType : uint8 {
     CASINO_BATTLE_ROYAL,
     CASINO_BATTLE_ROYAL_TEAM,
     NONE,
-    ECareerMatchRule_MAX UMETA(Hidden),
 };
 

@@ -43,6 +43,7 @@ class UELEOSLobbyMiniGameInfo;
 class UELEOSLobbyMiniGameOwnerSelectInfo;
 class UELEOSLobbyWrestlerDataMap;
 class UELNetworkObserverBase;
+class UELSSLobbyManager;
 class UEOSAttribute;
 class UEOSCommunityBase;
 class UEOSCommunityInfoBase;
@@ -355,6 +356,14 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnStatusUpdatedOnJoinedStep OnStatusUpdatedOnJoinedStep;
     
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UELSSLobbyManager* SSLobbyManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bShouldChangeGameModeToJoinInvitedLobby;
+    
+public:
     UELEOSLobby();
 private:
     UFUNCTION(BlueprintCallable)
@@ -375,6 +384,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool ShowPacketQueueInfo();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool ShouldChangeGameModeToJoinInvitedLobby() const;
     
     UFUNCTION(BlueprintCallable)
     bool SetVoiceChatStartMuted(bool _bMuted);
@@ -837,13 +849,16 @@ public:
     void Destroy();
     
     UFUNCTION(BlueprintCallable)
+    bool CreateSSMode(int32 MaxMember);
+    
+    UFUNCTION(BlueprintCallable)
     void CreateMPASessionEvent();
     
     UFUNCTION(BlueprintCallable)
     bool CreateDefault();
     
     UFUNCTION(BlueprintCallable)
-    bool Create(int32 MaxMember, EEOSCommunityPermission Permission, bool AllowInvite);
+    bool Create(int32 MaxMember, EEOSCommunityPermission Permission, bool AllowInvite, bool SSMode);
     
     UFUNCTION(BlueprintCallable)
     bool ClearTextBlock(const FString& ProductUserID, EEOSLobbyUserMuteFlag Flag);

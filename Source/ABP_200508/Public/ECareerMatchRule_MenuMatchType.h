@@ -19,6 +19,5 @@ enum class ECareerMatchRule_MenuMatchType : uint8 {
     CASINO_BATTLE_ROYAL,
     HANDICAP_1ON2,
     NONE,
-    ECareerMatchRule_MAX UMETA(Hidden),
 };
 

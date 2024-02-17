@@ -4,6 +4,9 @@ FVector2D UELSSWidgetHUD_MiniMapZoom::WorldPosToCanvasPos(const FVector& InWorld
     return FVector2D{};
 }
 
+void UELSSWidgetHUD_MiniMapZoom::UpdateTeamTreasureBox() {
+}
+
 void UELSSWidgetHUD_MiniMapZoom::UpdateStormZone() {
 }
 
@@ -16,16 +19,28 @@ void UELSSWidgetHUD_MiniMapZoom::UpdateItemBoxAndTreasureBox() {
 void UELSSWidgetHUD_MiniMapZoom::UpdateHorseSaddle() {
 }
 
+void UELSSWidgetHUD_MiniMapZoom::UpdateFGFGoal() {
+}
+
+void UELSSWidgetHUD_MiniMapZoom::UpdateFGFBall() {
+}
+
 void UELSSWidgetHUD_MiniMapZoom::UpdateEnemy() {
 }
 
 void UELSSWidgetHUD_MiniMapZoom::UpdateCarrotMedal() {
 }
 
+void UELSSWidgetHUD_MiniMapZoom::UpdateBlackDiamond() {
+}
+
 void UELSSWidgetHUD_MiniMapZoom::UpdateAnnounceStorm() {
 }
 
 void UELSSWidgetHUD_MiniMapZoom::UpdateAnnounceGuide() {
+}
+
+void UELSSWidgetHUD_MiniMapZoom::UpdateAlly() {
 }
 
 void UELSSWidgetHUD_MiniMapZoom::Update() {
@@ -106,6 +121,7 @@ void UELSSWidgetHUD_MiniMapZoom::ApplyAliveCount(int32 InAliveCount) {
 }
 
 UELSSWidgetHUD_MiniMapZoom::UELSSWidgetHUD_MiniMapZoom() {
+    this->SSPlayerController = NULL;
     this->KOMaterial_10 = NULL;
     this->KOMaterial_01 = NULL;
     this->AliveMaterial_10 = NULL;
@@ -129,6 +145,7 @@ UELSSWidgetHUD_MiniMapZoom::UELSSWidgetHUD_MiniMapZoom() {
     this->CarrotMedal01Widgets = NULL;
     this->CarrotMedal02Widgets = NULL;
     this->ItemManager = NULL;
+    this->FgfManager = NULL;
     this->PlayerActor = NULL;
     this->StormActor = NULL;
     this->IsDoneInit = false;
@@ -139,5 +156,14 @@ UELSSWidgetHUD_MiniMapZoom::UELSSWidgetHUD_MiniMapZoom() {
     this->MiniMapTypeIndex = 0;
     this->Minutes = 0;
     this->Seconds = 0;
+    this->RuleType = ESSRuleType::BattleRoyale;
+    this->BlackDiamondIcon01Widget = NULL;
+    this->BlackDiamondIcon02Widget = NULL;
+    this->TeamTreasureBoxIcon01Widget = NULL;
+    this->TeamTreasureBoxIcon02Widget = NULL;
+    this->FGFBallIcon01Widget = NULL;
+    this->FGFBallIcon02Widget = NULL;
+    this->FGFOpponentBallIcon01Widget = NULL;
+    this->FGFOpponentBallIcon02Widget = NULL;
 }
 

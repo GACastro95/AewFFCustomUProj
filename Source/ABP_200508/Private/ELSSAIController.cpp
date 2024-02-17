@@ -3,6 +3,9 @@
 void AELSSAIController::UpdateHateActors(AActor* newActor) {
 }
 
+void AELSSAIController::StartBehaviourTree_Implementation() {
+}
+
 void AELSSAIController::SetupAI_Implementation() {
 }
 
@@ -87,6 +90,7 @@ AActor* AELSSAIController::CalcNewAITargetByHate() const {
 }
 
 AELSSAIController::AELSSAIController() {
+    this->MoveToFgfGoalObstructed = false;
     this->HateActorsMax = 1;
 }
 

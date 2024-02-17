@@ -11,5 +11,6 @@ enum class eErrorStatusType : uint8 {
     eErrorStatusType_GameSessionNotActive,
     eErrorStatusType_BuildVersionMissmatch,
     eErrorStatusType_Maintenance,
+    eErrorStatusType_MAX UMETA(Hidden),
 };
 

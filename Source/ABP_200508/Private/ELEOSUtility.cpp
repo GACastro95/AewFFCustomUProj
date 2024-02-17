@@ -216,6 +216,10 @@ bool UELEOSUtility::IsEASLogin(const UObject* WorldContextObject) {
     return false;
 }
 
+bool UELEOSUtility::IsDigestingJoinRequest(const UObject* WorldContextObject) {
+    return false;
+}
+
 bool UELEOSUtility::IsCompleteCurrentWrestler(const UObject* WorldContextObject) {
     return false;
 }

@@ -27,6 +27,10 @@ FString UEOSPresenceBase::GetJoinedInSession() const {
     return TEXT("");
 }
 
+bool UEOSPresenceBase::FindRecord(const FString& _strKey, FString& _strValue) const {
+    return false;
+}
+
 UEOSPresenceBase::UEOSPresenceBase() {
 }
 

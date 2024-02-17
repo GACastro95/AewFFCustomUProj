@@ -40,5 +40,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsEditWrestlerID(const EWrestlerID_N ID);
     
+    UFUNCTION(BlueprintCallable)
+    static bool IsCommunityWrestlerIDImpl(const EWrestlerID_N ID);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsCommunityWrestlerID(const EWrestlerID_N ID);
+    
 };
 

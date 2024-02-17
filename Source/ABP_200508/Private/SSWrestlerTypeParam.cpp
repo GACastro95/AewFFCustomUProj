@@ -1,6 +1,7 @@
 #include "SSWrestlerTypeParam.h"
 
 FSSWrestlerTypeParam::FSSWrestlerTypeParam() {
+    this->DataGroup = 0;
     this->WrestlerType = ESSWrestlerType::None;
     this->MaxHpBase = 0;
     this->KoMaxHpBase = 0;

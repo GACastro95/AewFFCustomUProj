@@ -9,5 +9,6 @@ FSSRoundParam::FSSRoundParam() {
     this->TargetRadiusMeter = 0.00f;
     this->DamageCycle = 0.00f;
     this->DamageRate = 0.00f;
+    this->DataGroup = 0;
 }
 

@@ -14,5 +14,6 @@ enum class eErrorID : uint8 {
     eErrorID_Platform,
     eErrorID_Unique,
     eErrorID_Num,
+    eErrorID_MAX UMETA(Hidden),
 };
 

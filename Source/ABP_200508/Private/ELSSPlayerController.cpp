@@ -1,6 +1,18 @@
 #include "ELSSPlayerController.h"
 #include "ELSSGameplayCamera.h"
 
+void AELSSPlayerController::WatchTeam_OnReleaseMenuDecision() {
+}
+
+void AELSSPlayerController::WatchTeam_OnPressMenuRB() {
+}
+
+void AELSSPlayerController::WatchTeam_OnPressMenuLB() {
+}
+
+void AELSSPlayerController::WatchTeam_OnPressMenuDecision() {
+}
+
 
 
 
@@ -19,10 +31,16 @@ void AELSSPlayerController::WatchGame_OnPressMenuDecision() {
 
 
 
+void AELSSPlayerController::UpdateWaitRespawnCountdown() {
+}
+
 void AELSSPlayerController::UpdateViewTarget(float InDuration) {
 }
 
 void AELSSPlayerController::UpdateNearPlayerList() {
+}
+
+void AELSSPlayerController::UpdateNearMatchItem() {
 }
 
 void AELSSPlayerController::UpdateNearInteractableObjectList() {
@@ -36,8 +54,17 @@ void AELSSPlayerController::ToggleMinimapMode() {
 
 
 
+
+
+void AELSSPlayerController::TickClientFlowState_WatchTeam_Native(float inDeltaSeconds) {
+}
+
+
 void AELSSPlayerController::TickClientFlowState_WatchGame_Native(float inDeltaSeconds) {
 }
+
+
+
 
 
 
@@ -60,6 +87,9 @@ void AELSSPlayerController::SSAntiCheatClient_DisconnectServer_Implementation() 
 void AELSSPlayerController::SSAntiCheatClient_ConnectServer_Implementation(const int32 Type, const int32 Platform, const FString& ipAddress, const FString& playerId, const FString& ProductUserID) {
 }
 
+void AELSSPlayerController::ShowRespawnCountdown() {
+}
+
 void AELSSPlayerController::SetWatchTargetPlayerState(AELSSPlayerState* inPlayerState) {
 }
 
@@ -69,6 +99,9 @@ void AELSSPlayerController::SetRStickInputZero() {
 }
 
 void AELSSPlayerController::SetRestrictMoveOnly(bool isAllow) {
+}
+
+void AELSSPlayerController::SetRestrictCharacterControlFlag(ESSRestrictCharacterControlFlag Type, bool IsOn) {
 }
 
 void AELSSPlayerController::SetPlayerDebugFlag_Server_Implementation(ESSPlayerDebugFlag Type, bool IsOn) {
@@ -108,9 +141,22 @@ void AELSSPlayerController::ResultMenuPrepare_RPC_Implementation() {
 void AELSSPlayerController::RequestLeaveGame_Client_Implementation() {
 }
 
+void AELSSPlayerController::RequestLeaveFromWatchTeam_Server_Implementation() {
+}
+
+bool AELSSPlayerController::RequestLeaveFromWatchTeam() {
+    return false;
+}
+
+void AELSSPlayerController::RequestFixIncompleteTeamResult_Server_Implementation() {
+}
+
 void AELSSPlayerController::RequestEndGameFlow_Client_Implementation(ESSEndGameReason inEndReason) {
 }
 
+
+void AELSSPlayerController::RequestAfterGamePlayFlow_Client_Implementation() {
+}
 
 void AELSSPlayerController::RegisterEndGameReason(ESSEndGameReason inEndReason) {
 }
@@ -131,6 +177,7 @@ bool AELSSPlayerController::OpenPauseMenu(bool disallowedCharacterControllWhenOp
 
 void AELSSPlayerController::OnReservedReturnToMainMenuByNetworkError() {
 }
+
 
 void AELSSPlayerController::OnPrepareVictoryCutscene() {
 }
@@ -167,8 +214,11 @@ void AELSSPlayerController::OnPlayerDead_Implementation(AELSSPlayerState* inDead
 
 
 
+
+
 void AELSSPlayerController::OnOtherPlayerHpUpdate(AELSSPlayer* inPlayer) {
 }
+
 
 
 
@@ -231,11 +281,26 @@ bool AELSSPlayerController::IsDoneResultAPI() const {
     return false;
 }
 
+bool AELSSPlayerController::IsClientFlowStateCategory(ESSClientFlowStateCategory inCategory) const {
+    return false;
+}
+
 bool AELSSPlayerController::IsClientFlowState(ESSClientFlowState inClientState) const {
     return false;
 }
 
 bool AELSSPlayerController::IsChildPlayerController() const {
+    return false;
+}
+
+void AELSSPlayerController::HideRespawnCountdown() {
+}
+
+bool AELSSPlayerController::HasRestrictCharacterControlFlag(ESSRestrictCharacterControlFlag Type) const {
+    return false;
+}
+
+bool AELSSPlayerController::HasAnyRestrictCharacterControlFlag() const {
     return false;
 }
 
@@ -297,6 +362,10 @@ ESSEndGameReason AELSSPlayerController::GetEndGameReasonOnServer() const {
     return ESSEndGameReason::None;
 }
 
+UELLocalPlayer* AELSSPlayerController::GetELLocalPlayer() {
+    return NULL;
+}
+
 FRotator AELSSPlayerController::GetCameraRotation() const {
     return FRotator{};
 }
@@ -310,8 +379,16 @@ AELSSPlayer* AELSSPlayerController::GetAssociatedSSPlayer() const {
 }
 
 
+
+
+void AELSSPlayerController::ExitClientFlowState_WatchTeam_Native() {
+}
+
+
 void AELSSPlayerController::ExitClientFlowState_WatchGame_Native() {
 }
+
+
 
 
 
@@ -325,6 +402,13 @@ void AELSSPlayerController::ExitClientFlowState_Dialog_Native() {
 
 
 
+
+
+
+void AELSSPlayerController::EnterClientFlowState_WatchTeam_Native() {
+}
+
+
 void AELSSPlayerController::EnterClientFlowState_WatchGame_Native() {
 }
 
@@ -334,8 +418,11 @@ void AELSSPlayerController::EnterClientFlowState_WatchGame_Native() {
 
 
 
+
+
 void AELSSPlayerController::EnterClientFlowState_Dialog_Native() {
 }
+
 
 
 
@@ -406,13 +493,40 @@ void AELSSPlayerController::DebugNoResponseMode_Implementation(bool IsOn) {
 void AELSSPlayerController::DebugNetworkProfilerOnServer_Implementation(bool IsOn) {
 }
 
+void AELSSPlayerController::DebugMoveFrictionScale_Implementation(float Scale) {
+}
+
+void AELSSPlayerController::DebugMoveFrictionDuration_Implementation(float Duration) {
+}
+
 void AELSSPlayerController::DebugLobbySkip_Implementation() {
 }
 
 void AELSSPlayerController::DebugForciblyEndMatch_Implementation() {
 }
 
+void AELSSPlayerController::DebugForceRespawnNearTeamMember_Implementation() {
+}
+
+void AELSSPlayerController::DebugForceRespawn_Implementation() {
+}
+
+void AELSSPlayerController::DebugForceFeverOffense_Implementation(bool Enable) {
+}
+
+void AELSSPlayerController::DebugForceFeverDefense_Implementation(bool Enable) {
+}
+
+void AELSSPlayerController::DebugFgfBallOwnerSpeedScale_Implementation(float Scale) {
+}
+
 void AELSSPlayerController::DebugDuplicateSSPlayer_Implementation(bool inPossessPlayer, bool inBaseKill) {
+}
+
+void AELSSPlayerController::DebugDestroyTeamMembers_Implementation(bool excludeMyself) {
+}
+
+void AELSSPlayerController::DebugDestroyExceptTeamMembers_Implementation(int32 inExceptTeamId) {
 }
 
 void AELSSPlayerController::DebugDestroyAllPickupObjects_Implementation() {
@@ -457,6 +571,9 @@ bool AELSSPlayerController::ClosePauseMenu(bool allowedCharacterControllWhenClos
     return false;
 }
 
+void AELSSPlayerController::ClearWatchGameHold() {
+}
+
 bool AELSSPlayerController::CheckInSightFromCameraForInteract(AActor* inCheckActor) const {
     return false;
 }
@@ -482,7 +599,6 @@ void AELSSPlayerController::BeginViewControlledPawn() {
 
 
 AELSSPlayerController::AELSSPlayerController() {
-    this->IsAllowCharacterControll = false;
     this->IsRestrictMoveOnly = false;
     this->IsNetworkError = false;
     this->IsApiDisabled = false;
@@ -495,7 +611,10 @@ AELSSPlayerController::AELSSPlayerController() {
     this->EndGameReason = ESSEndGameReason::None;
     this->MenuOperationalWidgetManager = NULL;
     this->WatchTargetPlayerState = NULL;
+    this->WatchTargetTeamState = NULL;
     this->WatchGameIgnoreDecisionTime = 1.00f;
+    this->IsOpenedConfirmDialog_LeaveWatchTeam = false;
+    this->IsLeavedFromWatchTeam = false;
     this->VictoryCutscene = NULL;
     this->ShowNearPlayerStatusDistance = 500.00f;
     this->InteractableObjectDotIconDistance = 1000.00f;

@@ -7,5 +7,6 @@ enum class ESSAliveStateType : uint8 {
     Default,
     Ko,
     Dead,
+    Disappear,
 };
 

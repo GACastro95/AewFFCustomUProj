@@ -7,6 +7,5 @@ enum class ERA_Slot_ChampionState : uint8 {
     NONE,
     CHAMPION,
     CHALLENGER,
-    ERA_Slot_MAX UMETA(Hidden),
 };
 

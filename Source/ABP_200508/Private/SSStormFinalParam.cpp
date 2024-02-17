@@ -5,5 +5,6 @@ FSSStormFinalParam::FSSStormFinalParam() {
     this->intervalDuration = 0.00f;
     this->radiusScale = 0.00f;
     this->moveRangeMeter = 0.00f;
+    this->DataGroup = 0;
 }
 

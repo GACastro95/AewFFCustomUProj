@@ -10,6 +10,5 @@ enum class EEditConditionBit : uint8 {
     Entrance = 0x4,
     Plain = 0x8,
     Match = 0x6,
-    EEditConditionBit_MAX = 0x9,
 };
 

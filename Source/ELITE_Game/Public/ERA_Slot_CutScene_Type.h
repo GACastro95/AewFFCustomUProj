@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class ERA_Slot_CutScene_Type : uint8 {
     SINGLE,
     TAG,
-    ERA_Slot_CutScene_MAX UMETA(Hidden),
 };
 

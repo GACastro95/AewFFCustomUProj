@@ -19,6 +19,5 @@ enum class EKeyConfig_KeyType_C : uint8 {
     L3,
     Start,
     Back,
-    EKeyConfig_KeyType_MAX UMETA(Hidden),
 };
 

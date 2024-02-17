@@ -4,8 +4,8 @@
 #include "PickableItemID.h"
 #include "GrantedItemID_UtilitieFunctions.generated.h"
 
-UCLASS(Blueprintable) //, MinimalAPI)
-class ELITE_CORE_API UGrantedItemID_UtilitieFunctions : public UBlueprintFunctionLibrary {
+UCLASS(Blueprintable, MinimalAPI)
+class UGrantedItemID_UtilitieFunctions : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UGrantedItemID_UtilitieFunctions();

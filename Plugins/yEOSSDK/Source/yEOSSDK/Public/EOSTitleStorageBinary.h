@@ -25,6 +25,9 @@ public:
     int32 GetOffset() const;
     
     UFUNCTION(BlueprintCallable)
+    FString GetAsText2();
+    
+    UFUNCTION(BlueprintCallable)
     FString GetAsText();
     
     UFUNCTION(BlueprintCallable)

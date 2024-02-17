@@ -9,6 +9,5 @@ enum class ECareerDebug_AutoPlayType : uint8 {
     DataDriven_All,
     DataDriven_Range,
     DataDriven_Individual,
-    ECareerDebug_MAX UMETA(Hidden),
 };
 

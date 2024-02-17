@@ -10,6 +10,5 @@ enum class ECareerAutoPlay_MatchWeek : uint8 {
     Week3,
     Week4,
     Week4EX,
-    ECareerAutoPlay_MAX UMETA(Hidden),
 };
 

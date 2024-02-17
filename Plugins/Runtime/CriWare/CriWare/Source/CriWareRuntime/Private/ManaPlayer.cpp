@@ -4,6 +4,10 @@ bool UManaPlayer::SetVolume(float Volume, EManaPlayerTrack TrackType) {
     return false;
 }
 
+bool UManaPlayer::SetTrackFormat(EManaPlayerTrack TrackType, int32 TrackIndex, int32 FormatIndex) {
+    return false;
+}
+
 void UManaPlayer::SetTimeSyncedSource(UAtomComponent* SyncedSource) {
 }
 
@@ -100,6 +104,9 @@ bool UManaPlayer::HasError() const {
     return false;
 }
 
+void UManaPlayer::HandleManaComponentSubtitleChanged(FText Subtitle) {
+}
+
 void UManaPlayer::HandleManaComponentStatusChanged(EManaComponentStatus Status, UManaComponent* InManaComponent) {
 }
 
@@ -115,8 +122,27 @@ void UManaPlayer::HandleManaComponentMovieChanged(UManaMovie* InManaMovie, UMana
 void UManaPlayer::HandleManaComponentFrameOnTime(int32 InFrameNumber, UManaComponent* InManaComponent) {
 }
 
+void UManaPlayer::HandleManaComponentEventPoint(FManaEventPointInfo EventPointInfo) {
+}
+
 float UManaPlayer::GetVolume(EManaPlayerTrack TrackType) {
     return 0.0f;
+}
+
+FString UManaPlayer::GetTrackLanguage(EManaPlayerTrack TrackType, int32 TrackIndex) const {
+    return TEXT("");
+}
+
+int32 UManaPlayer::GetTrackFormat(EManaPlayerTrack TrackType, int32 TrackIndex) const {
+    return 0;
+}
+
+FText UManaPlayer::GetTrackDisplayName(EManaPlayerTrack TrackType, int32 TrackIndex) const {
+    return FText::GetEmpty();
+}
+
+UAtomComponent* UManaPlayer::GetTimeSyncedSource() {
+    return NULL;
 }
 
 FTimespan UManaPlayer::GetTime() const {
@@ -127,8 +153,16 @@ UManaTexture* UManaPlayer::GetTexture() const {
     return NULL;
 }
 
+EManaSubtitlesEncoding UManaPlayer::GetSubtitleTrackEncoding(int32 TrackIndex) {
+    return EManaSubtitlesEncoding::Default;
+}
+
 EManaComponentStatus UManaPlayer::GetStatus() const {
     return EManaComponentStatus::Stop;
+}
+
+int32 UManaPlayer::GetSelectedTrack(EManaPlayerTrack TrackType) const {
+    return 0;
 }
 
 float UManaPlayer::GetRate() const {
@@ -136,6 +170,14 @@ float UManaPlayer::GetRate() const {
 }
 
 int32 UManaPlayer::GetPlaylistIndex() const {
+    return 0;
+}
+
+int32 UManaPlayer::GetNumTracks(EManaPlayerTrack TrackType) const {
+    return 0;
+}
+
+int32 UManaPlayer::GetNumTrackFormats(EManaPlayerTrack TrackType, int32 TrackIndex) const {
     return 0;
 }
 

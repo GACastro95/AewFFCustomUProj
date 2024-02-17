@@ -22,6 +22,5 @@ enum class EELEntranceCamera_ChameleonEffectType : uint8 {
     Mosaic_BothHand,
     Drug,
     Pulse,
-    EELEntranceCamera_MAX UMETA(Hidden),
 };
 

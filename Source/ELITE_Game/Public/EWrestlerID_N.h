@@ -94,6 +94,13 @@ enum class EWrestlerID_N : uint8 {
     AnthonyBowens,
     MaxCaster,
     ToniStorm,
-    EWrestlerID_MAX UMETA(Hidden),
+    SwerveStrickland,
+    ClaudioCastagnoli,
+    JamieHayter,
+    COMMUNITY_WRESTLER_0001 = 0x61,
+    COMMUNITY_WRESTLER_0002,
+    COMMUNITY_WRESTLER_0003,
+    COMMUNITY_WRESTLER_0004,
+    COMMUNITY_WRESTLER_0005,
 };
 

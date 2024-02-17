@@ -7,6 +7,7 @@
 #include "GameFramework/Actor.h"
 #include "ELSSManagerActorInterface.h"
 #include "ESSItemBoxType.h"
+#include "ESSJewelSpawnReason.h"
 #include "ESSRarity.h"
 #include "ESSSpawnItemCategory.h"
 #include "ESSSpawnPickupReason.h"
@@ -21,6 +22,7 @@ class AELSSItemBase;
 class AELSSItemBox;
 class AELSSLocator_ItemBox;
 class AELSSPickupBase;
+class AELSSPlayer;
 class AELSSShieldBase;
 class AELSSWeaponBase;
 class UDataTable;
@@ -44,6 +46,24 @@ protected:
     float AttentionExpItem_GravityScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVector FrontOfActor_SpawnOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FrontOfActor_SpawnVelocityXY;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FrontOfActor_SpawnVelocityZ;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FrontOfActor_GravityScale;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AELSSItemBox*> TeamTreasureBoxes;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<int32> SpawnedTeamTreasureBoxTeamIds;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSWeaponBase> WeaponClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -57,6 +77,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSWeaponBase> WeaponTrapClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AELSSWeaponBase> WeaponFgfBallClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSShieldBase> ShieldClass;
@@ -98,6 +121,9 @@ protected:
     TArray<int32> ExcludedPikcup_Weapon;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<int32> ExcludedPikcup_Jewel;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSSItemBoxSpawnParamForRound> ItemBoxSpawnParam;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -134,6 +160,9 @@ protected:
     TMap<int32, TSubclassOf<AELSSItemBase>> LoadedItemClassMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<int32> ReservedJewelItemIdList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AELSSItemBox*> ValidItemBoxList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -141,6 +170,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AELSSPickupBase*> ValidCarrotList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AELSSPickupBase*> ValidBlackDiaList;
     
 public:
     AELSSItemManager();
@@ -163,10 +195,13 @@ public:
     void SpawnItemBoxFromRound(FSSItemBoxSpawnParamForRound& inSpawnParam);
     
     UFUNCTION(BlueprintCallable)
-    void SpawnItemBoxFromAbility(ESSItemBoxType InType, const FVector& InLocation, const FRotator& InRotation);
+    void SpawnItemBoxFromFgf(bool first, int32 SpawnNum, int32 filterId);
     
     UFUNCTION(BlueprintCallable)
-    bool SpawnItemBox(ESSItemBoxType InType, AELSSLocator_ItemBox* inLocator, bool inSkipAnim);
+    void SpawnItemBoxFromAbility(ESSItemBoxType InType, int32 InTeamId, const FVector& InLocation, const FRotator& InRotation);
+    
+    UFUNCTION(BlueprintCallable)
+    bool SpawnItemBox(ESSItemBoxType InType, int32 InTeamId, AELSSLocator_ItemBox* inLocator, bool inSkipAnim);
     
     UFUNCTION(BlueprintCallable)
     void SpawnExpItemFromAttention(AActor* inPlayerActor, int32 inExpItemLotGroupID);
@@ -199,6 +234,15 @@ public:
     int32 LotItem(int32 inLotGroupID, ESSSpawnItemCategory inCategory);
     
     UFUNCTION(BlueprintCallable)
+    bool LotAndSpawnJewel_NotLaunch(ESSJewelSpawnReason inReason, const FVector& InLocation, const FRotator& InRotation, AELSSPlayer* inDamageCauser, TArray<AELSSPickupBase*>& outPickups, bool withResetArray);
+    
+    UFUNCTION(BlueprintCallable)
+    bool LotAndSpawnJewel(ESSJewelSpawnReason inReason, const FVector& InLocation, const FRotator& InRotation, AELSSPlayer* inDamageCauser);
+    
+    UFUNCTION(BlueprintCallable)
+    bool LotAndReserveJewel(ESSJewelSpawnReason inReason, AELSSPlayer* inDamageCauser);
+    
+    UFUNCTION(BlueprintCallable)
     void LoadAsyncItemClasses();
     
     UFUNCTION(BlueprintCallable)
@@ -207,11 +251,6 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLoadCompleted() const;
     
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void InitializeItemBoxSpawnParam();
-    
-public:
     UFUNCTION(BlueprintCallable)
     TSubclassOf<AActor> GetPickupObjectClass(ESSSpawnItemCategory inCategory, int32 inDatabaseId);
     

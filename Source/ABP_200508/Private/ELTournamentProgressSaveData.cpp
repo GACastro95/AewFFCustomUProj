@@ -3,6 +3,7 @@
 FELTournamentProgressSaveData::FELTournamentProgressSaveData() {
     this->ClearCount = 0;
     this->bPlaying = false;
+    this->Flag = 0;
     this->Round = 0;
     this->RetryCount = 0;
     this->RetryCountLimit = 0;

@@ -1,6 +1,7 @@
 #include "SSItemBoxSpawnParamForRound.h"
 
 FSSItemBoxSpawnParamForRound::FSSItemBoxSpawnParamForRound() {
+    this->DataGroup = 0;
     this->Round = ESSRound::Round0;
     this->LogType = ESSRoundEventLogType::None;
     this->SpawnTime = 0.00f;

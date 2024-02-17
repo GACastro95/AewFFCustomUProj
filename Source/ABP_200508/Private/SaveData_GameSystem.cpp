@@ -18,6 +18,7 @@ USaveData_GameSystem::USaveData_GameSystem() {
     this->m_Audio_VoiceChat = true;
     this->m_Audio_VoiceChatNotifySFX = true;
     this->m_Audio_Subtitle = true;
+    this->m_CreatorSetting_StreamerMode = false;
     this->m_Region_MatchMakeArea = -1;
     this->m_SSModeRegion_MatchMakeArea = 0;
     this->m_Region_Language = -1;

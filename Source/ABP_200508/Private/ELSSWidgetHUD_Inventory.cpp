@@ -32,11 +32,15 @@ void UELSSWidgetHUD_Inventory::ApplyWatchGameMode() {
 void UELSSWidgetHUD_Inventory::ApplyInventoryIcon(int32 InIndex, ESSPickupType InPickuptype, int32 InPickupID, int32 inDurability) {
 }
 
+void UELSSWidgetHUD_Inventory::ApplyFGFBallState(bool IsInDefault, int32 InBallLevel) {
+}
+
 void UELSSWidgetHUD_Inventory::ApplyBareIconGuideState() {
 }
 
 UELSSWidgetHUD_Inventory::UELSSWidgetHUD_Inventory() {
     this->PlayInWeaponNameAnim = NULL;
     this->SelectSlotIndex = 0;
+    this->IsFGFballState = false;
 }
 

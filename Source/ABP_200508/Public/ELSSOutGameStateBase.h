@@ -4,6 +4,7 @@
 #include "Templates/SubclassOf.h"
 #include "ELSSOutGameStateBase.generated.h"
 
+class AELSSMainMenuFlow;
 class AELSSOutGameDatabase;
 class AELSSSaveDataManager;
 
@@ -25,8 +26,40 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSSaveDataManager> SaveDataManagerClass;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSMainMenuFlow* SSMainMenuFlow;
+    
 public:
     AELSSOutGameStateBase();
+protected:
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyStart();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyPrint();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyLeave();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyInviteApprove(const FString& ProductUserID);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyInvite(const FString& ProductUserID);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyEnd();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyChangeRule(int32 RuleId);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSLobbyChangeMenuState(int32 menuStateId);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetSSMainMenuFlow(AELSSMainMenuFlow* inFlow);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnScreenUpdateToBP();
     

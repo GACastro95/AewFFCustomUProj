@@ -3,6 +3,7 @@
 #include "UObject/Object.h"
 #include "ESSAnnounce.h"
 #include "ESSDamageSE.h"
+#include "ESSFgfTeamAnnounce.h"
 #include "ESSHitGroundSE.h"
 #include "ESSRarity.h"
 #include "ESSSpawnPickupSE.h"
@@ -41,6 +42,9 @@ public:
     UELSSSoundData();
     UFUNCTION(BlueprintCallable)
     void SetOwner(AActor* inOwner);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void PlayFgfTeamAnnounce(ESSFgfTeamAnnounce inAnnounce, bool isDragonTeam);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlayAnnounce(ESSAnnounce inAnnounce);

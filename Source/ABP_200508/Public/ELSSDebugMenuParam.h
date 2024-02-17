@@ -2,7 +2,9 @@
 #include "CoreMinimal.h"
 #include "EWrestlerID_N.h"
 #include "Engine/DataTable.h"
+#include "ESSGameStateDebugFlag.h"
 #include "ESSLocalDebugFlag.h"
+#include "ESSPlayerDebugFlag.h"
 #include "ELSSDebugMenuParam.generated.h"
 
 USTRUCT(BlueprintType)
@@ -46,7 +48,16 @@ public:
     bool SkipReadyState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 RuleId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ESSLocalDebugFlag> LocalDebugFlags;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<ESSGameStateDebugFlag> GameStateDebugFlags_Reserved;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<ESSPlayerDebugFlag> PlayerDebugFlags_Reserved;
     
     ABP_200508_API FELSSDebugMenuParam();
 };

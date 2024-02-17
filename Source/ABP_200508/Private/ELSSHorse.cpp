@@ -162,6 +162,7 @@ AELSSHorse::AELSSHorse() {
     this->IsEnableRunOver = false;
     this->RunOverSpeed = 30.00f;
     this->ReduceDurabilityValueWhenRunOver = 20;
+    this->RunOverInterval = 3.00f;
     this->IsLockInputBrake = false;
     this->LimitActionSpeed = 300.00f;
     this->NeighMontage = NULL;
@@ -170,5 +171,7 @@ AELSSHorse::AELSSHorse() {
     this->ReserveActionTimeMax = 3.00f;
     this->ReserveAction = ESSHorseAction::None;
     this->ReserveActionRemainTime = 0.00f;
+    this->NeighDurabilityCost = 2;
+    this->NeighHitDurabilityCost = 5;
 }
 

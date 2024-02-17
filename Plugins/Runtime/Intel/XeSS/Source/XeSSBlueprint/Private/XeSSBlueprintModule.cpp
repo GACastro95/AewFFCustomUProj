@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, XeSSBlueprint);
+IMPLEMENT_MODULE(FDefaultGameModuleImpl, XeSSBlueprint);

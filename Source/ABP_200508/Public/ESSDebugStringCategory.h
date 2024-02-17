@@ -14,6 +14,7 @@ enum class ESSDebugStringCategory : uint8 {
     UniqueError,
     DiffPlayerData,
     DebugStatus,
+    RuleInfo,
     RTT,
     ActionStatePlayer,
     RoundInfo,
@@ -25,12 +26,15 @@ enum class ESSDebugStringCategory : uint8 {
     RPCTest,
     Result,
     NotifyDebugCommand,
+    TeamInfo,
+    FieldGoalFrenzy,
     MatchMake,
     MatchMakeRegion,
     DataLoading,
     SSMainMenu,
     Tips,
     TitleStorage,
+    EOSLobby,
     Max,
 };
 

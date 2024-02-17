@@ -39,6 +39,8 @@ float UManaMovie::GetAverageBitrate() {
 UManaMovie::UManaMovie() {
     this->NumSubtitleChannels = 0;
     this->MaxSubtitleSize = 0;
+    this->MinBufferSize = 0;
+    this->MaxChunkSize = 0;
     this->bIsAlpha = false;
 }
 

@@ -15,6 +15,5 @@ enum class ESeesawBuffType_N : uint8 {
     P_EndExciteState,
     P_CriticalDamage,
     P_InjuryDamage,
-    ESeesawBuffType_MAX UMETA(Hidden),
 };
 

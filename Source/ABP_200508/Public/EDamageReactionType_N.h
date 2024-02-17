@@ -12,6 +12,5 @@ enum class EDamageReactionType_N : uint8 {
     Body_B,
     Leg_R,
     Leg_L,
-    EDamageReactionType_MAX UMETA(Hidden),
 };
 

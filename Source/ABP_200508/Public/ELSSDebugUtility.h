@@ -55,6 +55,12 @@ public:
     static void SetSSDebugInfo_Version(const UObject* WorldContextObject, bool IsOn);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void SetSSDebugInfo_TeamInfo(const UObject* WorldContextObject, bool IsOn);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void SetSSDebugInfo_RuleInfo(const UObject* WorldContextObject, bool IsOn);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetSSDebugInfo_Region(const UObject* WorldContextObject, bool IsOn, const FString& inRegionName);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))

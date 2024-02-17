@@ -24,6 +24,11 @@ FSSAttentionAdjustParam::FSSAttentionAdjustParam() {
     this->AddAttention_HorseMoving = 0;
     this->AddAttentionIntervalWhenHorseMoving = 0.00f;
     this->AddAttention_HorseMovingSpeedKph = 0.00f;
+    this->AddAttention_FgfGoal = 0.00f;
+    this->AddAttention_FgfGoalTeamMember = 0.00f;
+    this->AddAttention_FgfPassSuccess = 0.00f;
+    this->AddAttention_FgfBallStole = 0.00f;
+    this->AddAttention_FgfDefenseSuccess = 0.00f;
     this->AnnounceAttentionLevel = 0;
     this->AttentionCoolTimeByTaunt = 0.00f;
     this->AnnounceAttentionPoint = 0;

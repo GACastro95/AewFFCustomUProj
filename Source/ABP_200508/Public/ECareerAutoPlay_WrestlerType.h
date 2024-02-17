@@ -18,6 +18,5 @@ enum class ECareerAutoPlay_WrestlerType : uint8 {
     Female_Enigma,
     Female_Jerk,
     Direct,
-    ECareerAutoPlay_MAX UMETA(Hidden),
 };
 

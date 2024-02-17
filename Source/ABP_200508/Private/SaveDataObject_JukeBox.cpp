@@ -21,6 +21,9 @@ void USaveDataObject_JukeBox::SetJukeBoxSortListForID(int32 _targetId, int32 _so
 void USaveDataObject_JukeBox::SetJukeBoxPlayedListForID(int32 _targetId, bool _Enable) {
 }
 
+void USaveDataObject_JukeBox::SetJukeBoxFilter(EJukeBoxFilterType _filter) {
+}
+
 void USaveDataObject_JukeBox::SetJukeBoxCheckListForID(int32 _targetId, bool _Enable) {
 }
 
@@ -74,6 +77,10 @@ TArray<int32> USaveDataObject_JukeBox::GetJukeBoxPlayedList() {
 
 USoundAtomCue* USaveDataObject_JukeBox::GetJukeBoxPlayCue(int32 _targetId, bool _inGameFlg) {
     return NULL;
+}
+
+EJukeBoxFilterType USaveDataObject_JukeBox::GetJukeBoxFilter() {
+    return EJukeBoxFilterType::All;
 }
 
 bool USaveDataObject_JukeBox::GetJukeBoxCheckListForID(int32 _targetId, bool& _findParam) {

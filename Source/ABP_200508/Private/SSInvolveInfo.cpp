@@ -2,5 +2,6 @@
 
 FSSInvolveInfo::FSSInvolveInfo() {
     this->AttackUser = NULL;
+    this->TeamId = 0;
 }
 

@@ -38,6 +38,9 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OpenVictoryroyaleNamePlate(AELSSPlayer* inPlayer, int32 InChampionNum, const FString& InRingName, const FString& InGamerTag);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OpenMultiVictoryroyaleNamePlate(const TArray<FString>& InRingNameArray, const TArray<FString>& InGamerTags, const TArray<FString>& InProductUserIds, const TArray<int32>& InValueTypes, const TArray<int32>& InValueIndex);
+    
     UFUNCTION(BlueprintCallable)
     UELSSUIManagerHandle* LoadAsync(TSoftClassPtr<UELSSPanelBase> WidgetClass);
     

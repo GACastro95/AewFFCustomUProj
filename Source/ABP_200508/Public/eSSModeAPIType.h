@@ -8,5 +8,6 @@ enum class eSSModeAPIType : uint8 {
     eSSModeAPIType_FlexMatchStart,
     eSSModeAPIType_FlexMatchStatus,
     eSSModeAPIType_FlexMatchCancel,
+    eSSModeAPIType_MAX UMETA(Hidden),
 };
 

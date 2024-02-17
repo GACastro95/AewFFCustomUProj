@@ -35,5 +35,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetJoinedInSession() const;
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool FindRecord(const FString& _strKey, FString& _strValue) const;
+    
 };
 

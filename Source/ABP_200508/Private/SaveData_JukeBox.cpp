@@ -1539,5 +1539,6 @@ USaveData_JukeBox::USaveData_JukeBox() {
     this->m_sJukeBoxPlaylistSortNumArray[511] = -1;
     this->m_bRandomPlayback = false;
     this->m_bCreateSavedata = true;
+    this->m_JukeBoxFilter = EJukeBoxFilterType::All;
 }
 

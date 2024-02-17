@@ -5,10 +5,14 @@
 #include "EManaComponentStatus.h"
 #include "EManaMaxFrameDrop.h"
 #include "EManaPlayerTrack.h"
+#include "EManaSubtitlesEncoding.h"
+#include "ManaEventPointInfo.h"
 #include "ManaPlayerOptions.h"
+#include "OnManaPlayerEventPointDelegate.h"
 #include "OnManaPlayerManaEventDelegate.h"
 #include "OnManaPlayerMovieOpenFailedDelegate.h"
 #include "OnManaPlayerMovieOpenedDelegate.h"
+#include "OnManaPlayerSubtitleChangedDelegate.h"
 #include "ManaPlayer.generated.h"
 
 class UAtomComponent;
@@ -59,6 +63,12 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnManaPlayerManaEvent OnTracksChanged;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnManaPlayerSubtitleChanged OnSubtitleChanged;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnManaPlayerEventPoint OnEventPoint;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UManaTexture* ManaTexture;
     
@@ -79,6 +89,9 @@ public:
     UManaPlayer();
     UFUNCTION(BlueprintCallable)
     bool SetVolume(float Volume, EManaPlayerTrack TrackType);
+    
+    UFUNCTION(BlueprintCallable)
+    bool SetTrackFormat(EManaPlayerTrack TrackType, int32 TrackIndex, int32 FormatIndex);
     
     UFUNCTION(BlueprintCallable)
     void SetTimeSyncedSource(UAtomComponent* SyncedSource);
@@ -157,6 +170,9 @@ public:
     
 private:
     UFUNCTION(BlueprintCallable)
+    void HandleManaComponentSubtitleChanged(FText Subtitle);
+    
+    UFUNCTION(BlueprintCallable)
     void HandleManaComponentStatusChanged(EManaComponentStatus Status, UManaComponent* InManaComponent);
     
     UFUNCTION(BlueprintCallable)
@@ -171,9 +187,24 @@ private:
     UFUNCTION(BlueprintCallable)
     void HandleManaComponentFrameOnTime(int32 InFrameNumber, UManaComponent* InManaComponent);
     
+    UFUNCTION(BlueprintCallable)
+    void HandleManaComponentEventPoint(FManaEventPointInfo EventPointInfo);
+    
 public:
     UFUNCTION(BlueprintCallable)
     float GetVolume(EManaPlayerTrack TrackType);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FString GetTrackLanguage(EManaPlayerTrack TrackType, int32 TrackIndex) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetTrackFormat(EManaPlayerTrack TrackType, int32 TrackIndex) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FText GetTrackDisplayName(EManaPlayerTrack TrackType, int32 TrackIndex) const;
+    
+    UFUNCTION(BlueprintCallable)
+    UAtomComponent* GetTimeSyncedSource();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FTimespan GetTime() const;
@@ -181,14 +212,26 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UManaTexture* GetTexture() const;
     
+    UFUNCTION(BlueprintCallable)
+    EManaSubtitlesEncoding GetSubtitleTrackEncoding(int32 TrackIndex);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EManaComponentStatus GetStatus() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetSelectedTrack(EManaPlayerTrack TrackType) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRate() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetPlaylistIndex() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetNumTracks(EManaPlayerTrack TrackType) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetNumTrackFormats(EManaPlayerTrack TrackType, int32 TrackIndex) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FTimespan GetMovieTime() const;

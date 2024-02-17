@@ -9,5 +9,8 @@ enum class ESSItemType : uint8 {
     Exp,
     RecoveryShield,
     Carrot,
+    Jewel,
+    BlackDia,
+    JewelRadar,
 };
 

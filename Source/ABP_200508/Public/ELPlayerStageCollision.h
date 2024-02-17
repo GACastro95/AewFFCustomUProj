@@ -27,12 +27,18 @@ public:
     bool OldEnableState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 OldCollisionType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<bool> CollisionCheckStart;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FVector> tmpPos;
     
     UELPlayerStageCollision();
+    UFUNCTION(BlueprintCallable)
+    void SetStageCollisionManualEnable(bool bEnable);
+    
     UFUNCTION(BlueprintCallable)
     void ResetAlreadyInterpolateFlag();
     
@@ -48,10 +54,19 @@ public:
     bool IsMyMovesStageCollisionValue();
     
     UFUNCTION(BlueprintCallable)
+    bool IsEnableStageCollision();
+    
+    UFUNCTION(BlueprintCallable)
     bool IsCompletedInterpolation();
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsAlreadyHit(const FName& Tag);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    int32 GetTargetMovesStageCollisionValue();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    int32 GetMovesStageCollisionValue();
     
 };
 

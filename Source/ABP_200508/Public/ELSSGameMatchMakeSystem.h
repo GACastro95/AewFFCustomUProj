@@ -17,6 +17,7 @@
 #include "ELSSGameMatchMakeSystem.generated.h"
 
 class UELSSGameMatchMakeSystem;
+class UELSSLobbyManager;
 
 UCLASS(Blueprintable)
 class ABP_200508_API UELSSGameMatchMakeSystem : public UObject {
@@ -61,6 +62,11 @@ public:
     UFUNCTION(BlueprintCallable)
     bool UpdateMatchMakeRequest();
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void UpdateEOSLobby(UELSSLobbyManager* inLobbyMng);
+    
+public:
     UFUNCTION(BlueprintCallable)
     bool StopMatchMakeRequest();
     

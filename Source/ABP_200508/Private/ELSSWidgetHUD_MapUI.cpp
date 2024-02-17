@@ -4,6 +4,9 @@ FVector2D UELSSWidgetHUD_MapUI::WorldLocationToUI(const FVector& InWorldLocation
     return FVector2D{};
 }
 
+void UELSSWidgetHUD_MapUI::UpdateTeamTreasureBox() {
+}
+
 void UELSSWidgetHUD_MapUI::UpdateStormZone() {
 }
 
@@ -19,16 +22,28 @@ void UELSSWidgetHUD_MapUI::UpdateItemBox() {
 void UELSSWidgetHUD_MapUI::UpdateHorseSaddle() {
 }
 
+void UELSSWidgetHUD_MapUI::UpdateFGFGoal() {
+}
+
+void UELSSWidgetHUD_MapUI::UpdateFGFBall() {
+}
+
 void UELSSWidgetHUD_MapUI::UpdateEnemy() {
 }
 
 void UELSSWidgetHUD_MapUI::UpdateCarrotMedal() {
 }
 
+void UELSSWidgetHUD_MapUI::UpdateBlackDiamond() {
+}
+
 void UELSSWidgetHUD_MapUI::UpdateAnnounceStorm() {
 }
 
 void UELSSWidgetHUD_MapUI::UpdateAnnounceGuide() {
+}
+
+void UELSSWidgetHUD_MapUI::UpdateAlly() {
 }
 
 void UELSSWidgetHUD_MapUI::Update() {
@@ -99,6 +114,7 @@ void UELSSWidgetHUD_MapUI::ApplyAliveCount(int32 InAliveCount) {
 }
 
 UELSSWidgetHUD_MapUI::UELSSWidgetHUD_MapUI() {
+    this->SSPlayerController = NULL;
     this->PlayerFloor = 0;
     this->MiniMapTypeIndex = 0;
     this->DefaultMinimapId = 10000;
@@ -113,6 +129,7 @@ UELSSWidgetHUD_MapUI::UELSSWidgetHUD_MapUI() {
     this->CarrotMedal01Widgets = NULL;
     this->CarrotMedal02Widgets = NULL;
     this->ItemManager = NULL;
+    this->FgfManager = NULL;
     this->MapImage = NULL;
     this->PlayerIcon = NULL;
     this->PlayerSight = NULL;
@@ -127,5 +144,12 @@ UELSSWidgetHUD_MapUI::UELSSWidgetHUD_MapUI() {
     this->MiniMapInfo = NULL;
     this->MapTypeDataTable = NULL;
     this->TextureMaterial = NULL;
+    this->RuleType = ESSRuleType::BattleRoyale;
+    this->BlackDiamondIcon01Widget = NULL;
+    this->BlackDiamondIcon02Widget = NULL;
+    this->TeamTreasureBoxIcon01Widget = NULL;
+    this->TeamTreasureBoxIcon02Widget = NULL;
+    this->FGFBallIcon01Widget = NULL;
+    this->FGFBallIcon02Widget = NULL;
 }
 

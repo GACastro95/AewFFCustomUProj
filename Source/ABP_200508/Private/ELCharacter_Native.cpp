@@ -281,6 +281,9 @@ void AELCharacter_Native::RequestTutorial_N(FName TutorialName) {
 
 
 
+void AELCharacter_Native::RequestAsyncLoadObject(const TArray<TSoftObjectPtr<UObject>>& LoadObjectList) {
+}
+
 
 void AELCharacter_Native::PlayMontageCore_N(UAnimMontage*& Montage, const FString& Section, float InTimeToStartMontageAt, bool bInitMovementMode, float DelayClearMoveIgnoreActors) {
 }
@@ -332,6 +335,9 @@ void AELCharacter_Native::OnCurseEvent_N(float InDuration) {
 }
 
 
+void AELCharacter_Native::OnCompletedAsyncLoad() {
+}
+
 
 void AELCharacter_Native::OnChangedTrainingReversalKind(ETrainingReversalKind Kind) {
 }
@@ -348,14 +354,18 @@ void AELCharacter_Native::OnApplyAttireExToHair_Implementation(USkeletalMeshComp
 void AELCharacter_Native::OnApplyAttireExtoEye_Implementation(USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, FLinearColor EyeColor, float EyeEmissivePower) {
 }
 
-void AELCharacter_Native::OnApplyAttireExtoAttire_Implementation(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyDarkSkinMode) {
+void AELCharacter_Native::OnApplyAttireExtoAttire_Implementation(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyPatternTextureChangeColor, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinMode) {
 }
 
-void AELCharacter_Native::OnApplyAttireEx_Implementation(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList) {
+void AELCharacter_Native::OnApplyAttireEx_Implementation(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyPatternTextureChangeColorToAttire, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList) {
 }
 
 
 
+
+bool AELCharacter_Native::MaterialStaticParameterSameCheck(UMaterialInstance* Material1, UMaterialInterface* Material2) {
+    return false;
+}
 
 void AELCharacter_Native::M_SetDeferredUpdateYawMainMontage_N_Implementation(float Yaw) {
 }
@@ -1541,10 +1551,10 @@ void AELCharacter_Native::ApplyAttireExToHair(USkeletalMeshComponent* SkeletalMe
 void AELCharacter_Native::ApplyAttireExtoEye(USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, FLinearColor EyeColor, float EyeEmissivePower) {
 }
 
-void AELCharacter_Native::ApplyAttireExtoAttire(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyDarkSkinMode) {
+void AELCharacter_Native::ApplyAttireExtoAttire(EWrestlerID_N WrestlerID, USkeletalMeshComponent* SkeletalMesh, int32 MaterialIndex, FName MaterialSlotName, bool bApplyMaterial, UMaterialInterface* SourceMaterial, bool bApplyPatternTexture, UTexture2D* PatternTexture, bool bApplyPatternTextureChangeColor, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinMode) {
 }
 
-void AELCharacter_Native::ApplyAttireEx(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList) {
+void AELCharacter_Native::ApplyAttireEx(EWrestlerID_N WrestlerID, bool bApplyToLeftEye, UMaterialInterface* LeftEyeMaterial, FLinearColor LeftEyeColor, float LeftEyeEmissivePower, bool bApplyToRightEye, UMaterialInterface* RightEyeMaterial, FLinearColor RightEyeColor, float RightEyeEmissivePower, bool bApplyToHair, UTexture2D* HairColorTexture, bool bApplyDarkSkinModeToHair, bool bApplyToSkin, UMaterialInterface* SkinMaterial, bool bApplyDarkSkinModeToSkin, bool bApplyToAttire, UMaterialInterface* AttireMaterial, bool bApplyPatternTextureToAttire, UTexture2D* AttirePatternTexture, bool bApplyPatternTextureChangeColorToAttire, UTexture2D* AttirePatternMaskTexture, FIndexedColorList AttirePatternTextureColorIDList, bool bApplyDarkSkinModeToAttire, const TMap<uint8, bool>& PartsApplyList) {
 }
 
 void AELCharacter_Native::AimTarget_N() {
@@ -1586,6 +1596,7 @@ void AELCharacter_Native::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(AELCharacter_Native, MovesType_N);
     DOREPLIFETIME(AELCharacter_Native, MovesCategoryValue_N);
     DOREPLIFETIME(AELCharacter_Native, AttackKind_N);
+    DOREPLIFETIME(AELCharacter_Native, InputState_LongPressIrishWhip);
     DOREPLIFETIME(AELCharacter_Native, MiniGameMashInputs_N);
     DOREPLIFETIME(AELCharacter_Native, HP_N);
     DOREPLIFETIME(AELCharacter_Native, LimbHP_N);
@@ -1701,6 +1712,7 @@ AELCharacter_Native::AELCharacter_Native() {
     this->MovesType_N = EMovesDataTableType_N::ChainStrike;
     this->MovesCategoryValue_N = 0;
     this->AttackKind_N = EReserveReversalType::None;
+    this->InputState_LongPressIrishWhip = false;
     this->GameSystemParam_PinchMoveMomentumPercent = 0.00f;
     this->RingActor_N = NULL;
     this->bAlreadyDonePlaceRing_N = false;
@@ -1891,6 +1903,7 @@ AELCharacter_Native::AELCharacter_Native() {
     this->bBattleRoyaleAfterAI_N = false;
     this->bIsWinScene_N = false;
     this->bSkipResetMeshLocation = false;
+    this->DamageAreaOverlapDownDuration_N = 0.00f;
     this->DQReactionObserveDuration_N = 0.00f;
     this->LastDQReactionPlayer_N = NULL;
     this->LastWeaponReactionPlayer_N = NULL;

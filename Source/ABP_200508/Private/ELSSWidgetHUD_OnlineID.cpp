@@ -13,8 +13,9 @@ void UELSSWidgetHUD_OnlineID::ShowOff() {
 void UELSSWidgetHUD_OnlineID::SetVisibleText(bool inIsVisible) {
 }
 
-void UELSSWidgetHUD_OnlineID::SetTargetActorandOnlineID(AActor* inTargetActor, const FString& InOnlineID, bool InHasCarrot) {
+void UELSSWidgetHUD_OnlineID::SetTargetActorandOnlineID(AActor* inTargetActor, const FString& InOnlineID, bool InHasCarrot, ESSMatchIconType InIconType) {
 }
+
 
 
 void UELSSWidgetHUD_OnlineID::SetCarrotMedal(bool InHasCarrot) {
@@ -33,6 +34,7 @@ AActor* UELSSWidgetHUD_OnlineID::GetTargetActor() {
 UELSSWidgetHUD_OnlineID::UELSSWidgetHUD_OnlineID() {
     this->TextWidget = NULL;
     this->MedalWidget = NULL;
+    this->MatchIconWidget = NULL;
     this->TargetActor = NULL;
     this->PlayerController = NULL;
     this->Validratio = 0.05f;

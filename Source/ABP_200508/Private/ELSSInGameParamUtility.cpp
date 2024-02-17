@@ -56,6 +56,10 @@ bool UELSSInGameParamUtility::GetSystemMotionParam(const UObject* WorldContextOb
     return false;
 }
 
+bool UELSSInGameParamUtility::GetSSPlayerStartLocatorParam(const UObject* WorldContextObject, int32 ID, FSSPlayerStartLocatorParam& OutRow) {
+    return false;
+}
+
 bool UELSSInGameParamUtility::GetShieldParam(const UObject* WorldContextObject, int32 ID, FSSShieldParam& OutRow) {
     return false;
 }
@@ -186,7 +190,15 @@ ESSResultGradeABC UELSSInGameParamUtility::CalcResultGradeFromKillCount(const UO
     return ESSResultGradeABC::A_High;
 }
 
+ESSResultGradeABC UELSSInGameParamUtility::CalcResultGradeFromJewelPoint(const UObject* WorldContextObject, int32 inJewelPoint) {
+    return ESSResultGradeABC::A_High;
+}
+
 ESSResultGradeABC UELSSInGameParamUtility::CalcResultGradeFromFeverCount(const UObject* WorldContextObject, int32 inFeverCount) {
+    return ESSResultGradeABC::A_High;
+}
+
+ESSResultGradeABC UELSSInGameParamUtility::CalcResultGradeFromBallLevelPoint(const UObject* WorldContextObject, int32 inBallLevelPoint) {
     return ESSResultGradeABC::A_High;
 }
 

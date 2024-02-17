@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EJukeBoxFilterType.h"
 #include "ELTmpJukeboxSaveData.h"
 #include "SaveDataObjectBase.h"
 #include "SaveDataObject_JukeBox.generated.h"
@@ -31,6 +32,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetJukeBoxPlayedListForID(int32 _targetId, bool _Enable);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetJukeBoxFilter(EJukeBoxFilterType _filter);
     
     UFUNCTION(BlueprintCallable)
     void SetJukeBoxCheckListForID(int32 _targetId, bool _Enable);
@@ -76,6 +80,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     USoundAtomCue* GetJukeBoxPlayCue(int32 _targetId, bool _inGameFlg);
+    
+    UFUNCTION(BlueprintCallable)
+    EJukeBoxFilterType GetJukeBoxFilter();
     
     UFUNCTION(BlueprintCallable)
     bool GetJukeBoxCheckListForID(int32 _targetId, bool& _findParam);

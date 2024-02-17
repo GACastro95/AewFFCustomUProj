@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ELSSWidgetBase.h"
+#include "ESSMatchIconType.h"
 #include "ELSSWidgetHUD_WrestlerStatus.generated.h"
 
 class UImage;
@@ -29,10 +30,25 @@ protected:
     UMaterialInstanceDynamic* KOGaugeMaterial;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMaterialInstanceDynamic* FGFBallMaterial;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidgetAnimation* MedalGetAnim;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidgetAnimation* MedalReleaseAnim;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UWidgetAnimation* BlackDiaIconGetAnim;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UWidgetAnimation* BlackDiaIconReleaseAnim;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UWidgetAnimation* FGFBallIconGetAnim;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UWidgetAnimation* FGFBallIconReleaseAnim;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* HpGaugeImage;
@@ -42,6 +58,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* ShieldWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWidget* FGFBallWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ShieldDurableMaxValue;
@@ -103,6 +122,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsShowShieldGauge;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsOtherWrestler;
+    
 public:
     UELSSWidgetHUD_WrestlerStatus();
 protected:
@@ -123,14 +145,35 @@ public:
     void SwitchHpType(bool InIsDownHpShow);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetUserVC(const FString& InProductUserID);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetUserGamerTag(const FString& InGamerTag);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetSessionIndex(int32 InSessionIndex);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetOutlineAnim(bool inIsVisible, bool InIsHpGauge);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOtherWrestlerFlag(bool InIsOtherWrstler);
+    
 protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetMatchIconTexture(ESSMatchIconType InIconType);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetGamerTag();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPauseGetMedalAnim();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnPauseGetFGFBallIconAnim();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnPauseGetBlackDiaIconAnim();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Init();
@@ -152,6 +195,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void ApplyShieldDurableValue(int32 InShieldDurableValue, int32 InMaxShieldDurableValue, bool InGaugeTransition);
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyMatchIcon(bool inIsVisible, ESSMatchIconType InIconType);
     
     UFUNCTION(BlueprintCallable)
     void ApplyDownHp(int32 InWrestlerDownHp, int32 InMaxWrestlerDownHp, bool InGaugeTransition);

@@ -90,6 +90,5 @@ enum class EWrestlerAP : uint8 {
     LegR_Thigh_04,
     LegR_Thigh_05,
     LegR_Thigh_06,
-    EWrestlerAP_MAX = 0xFF,
 };
 

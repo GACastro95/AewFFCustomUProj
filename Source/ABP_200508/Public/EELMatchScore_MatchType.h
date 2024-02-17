@@ -10,6 +10,5 @@ enum class EELMatchScore_MatchType : uint8 {
     ThreeWay,
     FourWay,
     CasinoBattleRoyale,
-    EELMatchScore_MAX UMETA(Hidden),
 };
 

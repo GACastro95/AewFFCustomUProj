@@ -12,6 +12,10 @@ TArray<AELSSLocator*> AELSSLocatorManager::GetLocatorListFromNear(ESSLocatorType
     return TArray<AELSSLocator*>();
 }
 
+TArray<AELSSLocator*> AELSSLocatorManager::GetLocatorListForRespawn(ESSLocatorType InType, const FVector& inOrigin) const {
+    return TArray<AELSSLocator*>();
+}
+
 AELSSLocatorManager::AELSSLocatorManager() {
 }
 

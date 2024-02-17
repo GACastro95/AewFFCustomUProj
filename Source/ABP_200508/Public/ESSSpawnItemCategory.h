@@ -10,6 +10,9 @@ enum class ESSSpawnItemCategory : uint8 {
     ShieldItem,
     OtherItem,
     Weapon,
+    Jewel,
+    BlackDia,
+    JewelRadar,
     Max,
 };
 

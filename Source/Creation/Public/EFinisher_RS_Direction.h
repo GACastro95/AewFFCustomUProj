@@ -7,6 +7,5 @@ enum class EFinisher_RS_Direction : uint8 {
     All,
     Up,
     Down,
-    EFinisher_RS_MAX UMETA(Hidden),
 };
 

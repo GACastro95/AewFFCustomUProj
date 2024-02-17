@@ -12,6 +12,7 @@
 #include "ESSDamageReason.h"
 #include "ESSHorseAction.h"
 #include "SSHorseAttackInfo.h"
+#include "SSHorseAttackedHistory.h"
 #include "ELSSHorse.generated.h"
 
 class AActor;
@@ -129,6 +130,12 @@ protected:
     int32 ReduceDurabilityValueWhenRunOver;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSHorseAttackedHistory> AttackedHistory;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RunOverInterval;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector CameraBasisLocationOffset;
     
 private:
@@ -159,6 +166,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReserveActionRemainTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NeighDurabilityCost;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NeighHitDurabilityCost;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector AdjustedLocationDiff;

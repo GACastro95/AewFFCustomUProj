@@ -22,18 +22,12 @@ protected:
     ESSPlayerStartLocatorAreaId PlayerStartAreaId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 FilterID;
+    int32 filterId;
     
 public:
     AELSSLocator();
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSortOrder() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    ESSPlayerStartLocatorType GetPlayerStartLocatorType() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    ESSPlayerStartLocatorAreaId GetPlayerStartLocatorAreaId() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESSLocatorType GetLocatorType() const;

@@ -13,6 +13,7 @@
 #include "ESSSpawnPickupSE.h"
 #include "ELSSItemBox.generated.h"
 
+class AELSSPlayer;
 class UMeshComponent;
 
 UCLASS(Blueprintable)
@@ -97,6 +98,9 @@ protected:
     bool BlockCollisionEnabled;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayer* OpenCauser;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LandCheckCapsuleHeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -111,15 +115,30 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TEnumAsByte<EObjectTypeQuery>> LandCheckTraceObjectTypes;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    int32 TeamId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 MaxLockNum;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_UnLockedPlayerSlotNos, meta=(AllowPrivateAccess=true))
+    TArray<int32> UnLockedPlayerSlotNos;
+    
 public:
     AELSSItemBox();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void UpdateTeamView();
     
 protected:
     UFUNCTION(BlueprintCallable)
     bool UpdateFalling_Native(float inDeltaSeconds, bool inApplyToTransform);
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void Unlock(AELSSPlayer* inPlayer);
+    
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SpawnItems();
     
@@ -156,6 +175,14 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OpenBox();
     
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void OnUnLock();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_UnLockedPlayerSlotNos();
+    
+public:
     UFUNCTION(BlueprintCallable)
     void OnRep_SpawnPickupSE();
     
@@ -165,17 +192,46 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnRep_BlockCollisionEnabled();
     
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsViewTargetTeamBox() const;
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsTreasureBox() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsTeamBox() const;
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsOpened() const;
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsMultiLockedBox() const;
+    
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool IsInteractableObject() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetUnLockedCount() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetTeamId() const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     UMeshComponent* GetMeshForPlaySE() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetMaxLock() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ESSItemBoxType GetItemBoxType() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool CheckWaitingUnLock(const AELSSPlayer* inPlayer) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool CheckUnLockedPlayer(const AELSSPlayer* inPlayer) const;
     
 protected:
     UFUNCTION(BlueprintCallable)

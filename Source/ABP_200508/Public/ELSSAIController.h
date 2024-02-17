@@ -11,6 +11,10 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSAIController : public AAIController {
     GENERATED_BODY()
 public:
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool MoveToFgfGoalObstructed;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> HateActors;
@@ -22,6 +26,9 @@ public:
     AELSSAIController();
     UFUNCTION(BlueprintCallable)
     void UpdateHateActors(AActor* newActor);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void StartBehaviourTree();
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

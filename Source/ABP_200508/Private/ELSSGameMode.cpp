@@ -10,6 +10,8 @@ void AELSSGameMode::TickState_WaitStartGameSession_Implementation(float inDeltaS
 
 
 
+void AELSSGameMode::TickState_InProgress_Implementation(float inDeltaSeconds) {
+}
 
 
 
@@ -31,6 +33,9 @@ AActor* AELSSGameMode::SpawnManagerActor(TSubclassOf<AActor> InClass) {
     return NULL;
 }
 
+void AELSSGameMode::SetupLaunchType_Implementation() {
+}
+
 bool AELSSGameMode::SetupCharacterPlacement_Implementation() {
     return false;
 }
@@ -42,6 +47,7 @@ bool AELSSGameMode::RequestDownloadTitleStorage() {
 
 void AELSSGameMode::PrintLog(const FString& Log) {
 }
+
 
 void AELSSGameMode::OnStartTipsLoading() {
 }
@@ -93,7 +99,7 @@ ESSServerState AELSSGameMode::GetServerState() const {
     return ESSServerState::None;
 }
 
-AELSSLocator* AELSSGameMode::GetReservedPlayerStartLocator(AELSSPlayerState* inPlayerState, bool inConsume) {
+AELSSLocator_PlayerStart* AELSSGameMode::GetReservedPlayerStartLocator(AELSSPlayerState* inPlayerState, bool inConsume) {
     return NULL;
 }
 
@@ -107,6 +113,8 @@ void AELSSGameMode::ExitState_WaitStartGameSession_Implementation() {
 
 
 
+void AELSSGameMode::ExitState_InProgress_Implementation() {
+}
 
 
 
@@ -122,6 +130,8 @@ void AELSSGameMode::EnterState_WaitStartGameSession_Implementation() {
 
 
 
+void AELSSGameMode::EnterState_InProgress_Implementation() {
+}
 
 
 
@@ -134,6 +144,12 @@ void AELSSGameMode::EnterState_Closing_Implementation() {
 
 bool AELSSGameMode::EndOfMatch_Implementation() {
     return false;
+}
+
+void AELSSGameMode::DoneDataLoading() {
+}
+
+void AELSSGameMode::DebugSetupTeamInfos() {
 }
 
 bool AELSSGameMode::DebugIsAIOnlyMode() const {
@@ -176,6 +192,7 @@ TArray<EWrestlerID_N> AELSSGameMode::CalcRandomWrestlerIDs(int32 Amount) const {
 }
 
 AELSSGameMode::AELSSGameMode() {
+    this->IsDoneInitGame = false;
     this->DataVersion = 0;
     this->GroupId = 0;
     this->ChangeList = 0;

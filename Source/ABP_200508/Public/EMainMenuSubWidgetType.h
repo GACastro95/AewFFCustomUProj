@@ -10,5 +10,6 @@ enum class EMainMenuSubWidgetType : uint8 {
     EMainMenuSubWidgetType_Num,
     EMainMenuSubWidgetType_SelectWrestler,
     EMainMenuSubWidgetType_Preset,
+    EMainMenuSubWidgetType_MAX UMETA(Hidden),
 };
 

@@ -7,5 +7,6 @@ enum class EMainMenuBattlePassWidgetType : uint8 {
     EMainMenuBattlePassWidgetType_Item00,
     EMainMenuBattlePassWidgetType_Item01,
     EMainMenuBattlePassWidgetType_Num,
+    EMainMenuBattlePassWidgetType_MAX UMETA(Hidden),
 };
 

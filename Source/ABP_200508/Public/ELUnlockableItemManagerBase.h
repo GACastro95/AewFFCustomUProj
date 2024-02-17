@@ -33,7 +33,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FUnlockableItemParam> m_ConsumeGoldCoinItemList;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UELGoldCoinPossessManager> m_ptrGoldCoinPossessManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -54,7 +54,7 @@ public:
     void UnlockingItem(int32 _targetId);
     
     UFUNCTION(BlueprintCallable)
-    void SortUnlockItemParamMap(UPARAM(Ref) TMap<int32, int32>& _SortedMap);
+    void SortUnlockItemParamMap(UPARAM(Ref) TMap<int32, int32>& _SortedMap, bool bInvalidItemAscending);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     void SetupUnlockableItemDataTable(TSoftObjectPtr<UDataTable> _itemDT, UObject* _pWorldContextObject);

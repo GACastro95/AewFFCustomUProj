@@ -17,6 +17,9 @@ public:
     static void GetLevels(TArray<float>& spectra);
     
     UFUNCTION(BlueprintCallable)
+    static void DestroyDspSpectra();
+    
+    UFUNCTION(BlueprintCallable)
     static void CreateDspSpectra(UAtomAsrRack* asr_rack, const FString& bus_name, int32 num_bands);
     
 };

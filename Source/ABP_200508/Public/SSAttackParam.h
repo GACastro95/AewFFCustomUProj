@@ -5,6 +5,7 @@
 #include "ESSAttackType.h"
 #include "ESSCameraShakeType.h"
 #include "ESSDamageSE.h"
+#include "ESSFriendlyFireType.h"
 #include "ESSGuardBreakerType.h"
 #include "ESSHitStopType.h"
 #include "ESSLogIconType.h"
@@ -19,6 +20,9 @@ public:
     int32 MoveId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 DataGroup;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AttackHitId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -29,6 +33,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AttackToDown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    ESSFriendlyFireType FriendlyFireType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Damage;

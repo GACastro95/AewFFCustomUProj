@@ -7,6 +7,5 @@ enum class ECrowdChantType_N : uint8 {
     Momentum_High,
     Momentum_Low,
     TagTeamPartner,
-    ECrowdChantType_MAX UMETA(Hidden),
 };
 

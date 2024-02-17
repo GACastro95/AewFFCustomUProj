@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EJukeBoxFilterType.h"
 #include "ELTmpJukeboxSaveData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -20,6 +21,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bCreateSavedata;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EJukeBoxFilterType m_JukeBoxFilter;
     
     ABP_200508_API FELTmpJukeboxSaveData();
 };

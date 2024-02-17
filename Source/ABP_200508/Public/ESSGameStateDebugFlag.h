@@ -24,6 +24,10 @@ enum class ESSGameStateDebugFlag : uint8 {
     AIDisableAll,
     BlockSaveAnalyticsLog,
     OutputAnalyticsToUELog,
+    FgfAutoGoal,
+    FgfAutoTimeup,
+    FgfForceEndMatch,
+    FgfIgnoreFinishRound,
     Max,
 };
 

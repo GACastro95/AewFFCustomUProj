@@ -7,11 +7,15 @@ bool UELTournamentUtilityFunction::SetupTournamentSaveData() {
 void UELTournamentUtilityFunction::SetTournamentClearCount(UObject* WorldContextObject, EELTournamentType TournamentType, EELTournamentDifficulty Difficulty, int32 Count) {
 }
 
-bool UELTournamentUtilityFunction::SaveTournamentProgressData(UObject* WorldContextObject) {
+bool UELTournamentUtilityFunction::SaveTournamentProgressData(UObject* WorldContextObject, bool bCheckModify) {
     return false;
 }
 
 void UELTournamentUtilityFunction::SaveRequestTournamentData(uint8 _saveDataAccessFlag) {
+}
+
+bool UELTournamentUtilityFunction::SaveLocalTournamentProgressData(UObject* WorldContextObject, bool bCheckModify) {
+    return false;
 }
 
 bool UELTournamentUtilityFunction::ResetTournamentProgressData(UObject* WorldContextObject) {
@@ -21,10 +25,18 @@ bool UELTournamentUtilityFunction::ResetTournamentProgressData(UObject* WorldCon
 void UELTournamentUtilityFunction::MakeTournamentBracket(UObject* WorldContextObject, TArray<FELTournamentBracket>& TournamentBracket) {
 }
 
-void UELTournamentUtilityFunction::LotteryTournamentWrestler(UObject* WorldContextObject, int32 InLotteryNum, const TArray<EWrestlerID_N>& InIgnoreWrestler, TArray<EWrestlerID_N>& OutLotteryList) {
+TArray<FELTournamentWrestlerIdentifier> UELTournamentUtilityFunction::MakeLocalTournamentEntryWrestlerList(UObject* WorldContextObject) {
+    return TArray<FELTournamentWrestlerIdentifier>();
+}
+
+void UELTournamentUtilityFunction::LotteryTournamentWrestler(UObject* WorldContextObject, int32 InLotteryNum, const TArray<FELTournamentWrestlerIdentifier>& InIgnoreWrestler, TArray<FELTournamentWrestlerIdentifier>& OutLotteryList, bool bPickupEditWrestler) {
 }
 
 bool UELTournamentUtilityFunction::IsUnlockingTournament(UObject* WorldContextObject, const FString& TournamentName, const UDataTable* TournamentDataTable) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::IsUnlockingLocalTournament(UObject* WorldContextObject, int32 UnlockableItemID) {
     return false;
 }
 
@@ -36,7 +48,19 @@ bool UELTournamentUtilityFunction::IsTournamentPlaying(UObject* WorldContextObje
     return false;
 }
 
+bool UELTournamentUtilityFunction::IsTournamentNoRetryClear(UObject* WorldContextObject, EELTournamentType TournamentType, EELTournamentDifficulty Difficulty) {
+    return false;
+}
+
 bool UELTournamentUtilityFunction::IsTournamentClear(UObject* WorldContextObject, EELTournamentType TournamentType, EELTournamentDifficulty Difficulty) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::IsLocalTournamentEntryWrestler(UObject* WorldContextObject, EWrestlerID_N WrestlerID, FGuid Guid) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::IsLocalTournamentBracketCompleted(UObject* WorldContextObject) {
     return false;
 }
 
@@ -66,6 +90,17 @@ int32 UELTournamentUtilityFunction::GetTournamentClearCount(UObject* WorldContex
     return 0;
 }
 
+bool UELTournamentUtilityFunction::GetLocalTournamentWrestlerList(UObject* WorldContextObject, int32 MatchNo, TArray<FELTournamentWrestlerIdentifier>& List) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::GetLocalTournamentVictoryCutsceneType(UObject* WorldContextObject, TArray<EGender> GenderList, EELVictoryCutsceneType& CutSceneType) {
+    return false;
+}
+
+void UELTournamentUtilityFunction::GetLocalTournamentAllMatchBracketList(UObject* WorldContextObject, TArray<FELTournamentBracket>& BracketList) {
+}
+
 bool UELTournamentUtilityFunction::CheckUnavaliableWrestler(UObject* WorldContextObject, EWrestlerID_N WrestlerID) {
     return false;
 }
@@ -78,10 +113,14 @@ bool UELTournamentUtilityFunction::ApplyTournamentProgressData(UObject* WorldCon
     return false;
 }
 
+bool UELTournamentUtilityFunction::ApplyLocalTournamentProgressData(UObject* WorldContextObject) {
+    return false;
+}
+
 void UELTournamentUtilityFunction::AdjustDlcTournametSaveData(UObject* WorldContextObject) {
 }
 
-bool UELTournamentUtilityFunction::AddTournamentClearCount(UObject* WorldContextObject, EELTournamentType TournamentType, EELTournamentDifficulty TournamentDifficulty) {
+bool UELTournamentUtilityFunction::AddTournamentClearCount(UObject* WorldContextObject, EELTournamentType TournamentType, EELTournamentDifficulty TournamentDifficulty, bool bNoRetryClear) {
     return false;
 }
 

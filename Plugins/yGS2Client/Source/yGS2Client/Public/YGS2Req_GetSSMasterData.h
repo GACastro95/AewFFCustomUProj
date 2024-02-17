@@ -15,5 +15,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FYGS2SSMasterData GetMasterData() const;
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetElapsedTime() const;
+    
 };
 

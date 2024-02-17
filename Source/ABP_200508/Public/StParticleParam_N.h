@@ -10,7 +10,7 @@ struct FStParticleParam_N : public FTableRowBase {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UParticleSystem* Particle;
+    TSoftObjectPtr<UParticleSystem> Particle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SFXID;

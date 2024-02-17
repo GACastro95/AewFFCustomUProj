@@ -44,6 +44,10 @@ bool UELMovieControlBase::PlayAll(TArray<int32> Excludes) {
     return false;
 }
 
+bool UELMovieControlBase::IsStreamerMode() {
+    return false;
+}
+
 bool UELMovieControlBase::IsPreparedAll(TArray<int32> Excludes) {
     return false;
 }

@@ -7,6 +7,5 @@ enum class ETagMatchAutoPinBreakStep_N : uint8 {
     None,
     RingIn,
     Run,
-    ETagMatchAutoPinBreakStep_MAX UMETA(Hidden),
 };
 

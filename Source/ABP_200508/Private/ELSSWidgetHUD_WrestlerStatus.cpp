@@ -19,6 +19,15 @@ void UELSSWidgetHUD_WrestlerStatus::SwitchHpType(bool InIsDownHpShow) {
 
 
 
+void UELSSWidgetHUD_WrestlerStatus::SetOtherWrestlerFlag(bool InIsOtherWrstler) {
+}
+
+
+
+
+
+
+
 void UELSSWidgetHUD_WrestlerStatus::ApplyWrestlerHpGauge(float InWrestlerHpRatio) {
 }
 
@@ -34,6 +43,9 @@ void UELSSWidgetHUD_WrestlerStatus::ApplyShieldGauge(float InShieldDurableValueR
 void UELSSWidgetHUD_WrestlerStatus::ApplyShieldDurableValue(int32 InShieldDurableValue, int32 InMaxShieldDurableValue, bool InGaugeTransition) {
 }
 
+void UELSSWidgetHUD_WrestlerStatus::ApplyMatchIcon(bool inIsVisible, ESSMatchIconType InIconType) {
+}
+
 void UELSSWidgetHUD_WrestlerStatus::ApplyDownHp(int32 InWrestlerDownHp, int32 InMaxWrestlerDownHp, bool InGaugeTransition) {
 }
 
@@ -46,11 +58,17 @@ UELSSWidgetHUD_WrestlerStatus::UELSSWidgetHUD_WrestlerStatus() {
     this->HpGaugeMaterial = NULL;
     this->HpGaugeDiffMaterial = NULL;
     this->KOGaugeMaterial = NULL;
+    this->FGFBallMaterial = NULL;
     this->MedalGetAnim = NULL;
     this->MedalReleaseAnim = NULL;
+    this->BlackDiaIconGetAnim = NULL;
+    this->BlackDiaIconReleaseAnim = NULL;
+    this->FGFBallIconGetAnim = NULL;
+    this->FGFBallIconReleaseAnim = NULL;
     this->HpGaugeImage = NULL;
     this->DownHpGaugeImage = NULL;
     this->ShieldWidget = NULL;
+    this->FGFBallWidget = NULL;
     this->ShieldDurableMaxValue = 0;
     this->HpMaxValue = 0;
     this->DownHpMaxValue = 0;
@@ -71,5 +89,6 @@ UELSSWidgetHUD_WrestlerStatus::UELSSWidgetHUD_WrestlerStatus() {
     this->IsCompleteDownHpDuration = false;
     this->IsShowDownHp = false;
     this->IsShowShieldGauge = false;
+    this->IsOtherWrestler = false;
 }
 

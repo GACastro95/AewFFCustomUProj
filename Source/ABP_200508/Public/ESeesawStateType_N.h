@@ -9,6 +9,5 @@ enum class ESeesawStateType_N : uint8 {
     Special,
     Buff,
     PenaltyBuff,
-    ESeesawStateType_MAX UMETA(Hidden),
 };
 

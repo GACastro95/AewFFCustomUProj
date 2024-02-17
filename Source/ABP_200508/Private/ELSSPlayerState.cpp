@@ -48,6 +48,9 @@ void AELSSPlayerState::SetWrestlerSetupParam(const FSSWrestlerSetupParam& NewWre
 void AELSSPlayerState::SetWrestlerPresetParam(const FSSWrestlerMovePresetParam& wrestlerPreset) {
 }
 
+void AELSSPlayerState::SetSelectedSpawnArea_Server_Implementation(int32 Area) {
+}
+
 void AELSSPlayerState::SetResultTallyData(const FString& tallyData) {
 }
 
@@ -71,6 +74,18 @@ void AELSSPlayerState::SetPlayerEquipSettings(const FSSPlayerEquipSettings& equi
 
 
 void AELSSPlayerState::SetIgnoreAnalytics_Server_Implementation(bool IsOn) {
+}
+
+void AELSSPlayerState::SetFgfPlayerProgress_Server_Implementation(ESSFgfPlayerProgress InProgress) {
+}
+
+void AELSSPlayerState::SetFgfPlayerProgress(ESSFgfPlayerProgress InProgress) {
+}
+
+void AELSSPlayerState::SetFgfOffenseRole(ESSAI_FgfOffenseRole inRole) {
+}
+
+void AELSSPlayerState::SetFgfDefenseTarget(AELSSPlayerState* inTarget) {
 }
 
 void AELSSPlayerState::SetDefaultPlayerEquipSettings_HeatSkill(int32 inDefaultPlayerEquipSettingsId) {
@@ -97,6 +112,9 @@ void AELSSPlayerState::SendPlayerInfoSyncData_Server_Implementation(const FELSSL
 void AELSSPlayerState::RetryErrorAPIEvent(const FRequest_ErrSetupData& apiErrData, const int32 errRetryCnt) {
 }
 
+
+void AELSSPlayerState::RespawnByRuleParam() {
+}
 
 void AELSSPlayerState::ReserveExpItem(int32 inExpItemLotGroupID) {
 }
@@ -161,6 +179,9 @@ void AELSSPlayerState::OnRep_PlayerDataSync() {
 void AELSSPlayerState::OnRep_KillCount() {
 }
 
+void AELSSPlayerState::OnRep_IncompleteTeamResult() {
+}
+
 void AELSSPlayerState::OnRep_FeverTimeBeginTime() {
 }
 
@@ -177,6 +198,10 @@ void AELSSPlayerState::OnRep_AttentionPoint() {
 }
 
 
+bool AELSSPlayerState::IsTeamLeader() const {
+    return false;
+}
+
 bool AELSSPlayerState::IsResultTallyEnd() {
     return false;
 }
@@ -185,11 +210,23 @@ bool AELSSPlayerState::IsPlayerResultEnable() {
     return false;
 }
 
+bool AELSSPlayerState::IsPlayerFine(bool checkDown) {
+    return false;
+}
+
+bool AELSSPlayerState::IsPlayerAlive() {
+    return false;
+}
+
 bool AELSSPlayerState::IsLocalPlayer() const {
     return false;
 }
 
 bool AELSSPlayerState::IsLocallyControlled() const {
+    return false;
+}
+
+bool AELSSPlayerState::IsFgfPassReceiver() {
     return false;
 }
 
@@ -202,6 +239,14 @@ bool AELSSPlayerState::IsDoneSyncChallengeCount() const {
 }
 
 bool AELSSPlayerState::IsDoneResultAPI() const {
+    return false;
+}
+
+bool AELSSPlayerState::IsDoneFgfPlayerProgress(ESSFgfPlayerProgress InProgress) const {
+    return false;
+}
+
+bool AELSSPlayerState::IsAIPlayer() {
     return false;
 }
 
@@ -229,7 +274,23 @@ int32 AELSSPlayerState::GetWeaponColorListIndex() const {
     return 0;
 }
 
+AELSSTeamState* AELSSPlayerState::GetTeamState() const {
+    return NULL;
+}
+
+int32 AELSSPlayerState::GetTeamMemberSlotNo() const {
+    return 0;
+}
+
+int32 AELSSPlayerState::GetTeamId() const {
+    return 0;
+}
+
 AELSSPlayerController* AELSSPlayerState::GetSSPlayerControllerForUIUpdate() const {
+    return NULL;
+}
+
+AELSSPlayer* AELSSPlayerState::GetSSPlayer() const {
     return NULL;
 }
 
@@ -239,6 +300,10 @@ int32 AELSSPlayerState::GetResultPlayerEXP() {
 
 int32 AELSSPlayerState::GetRandomBadgeId() const {
     return 0;
+}
+
+FVector AELSSPlayerState::GetPlayerLocation() {
+    return FVector{};
 }
 
 AELSSPlayerController* AELSSPlayerState::GetOwnerPlayerController() const {
@@ -261,12 +326,24 @@ int32 AELSSPlayerState::GetKillCount() const {
     return 0;
 }
 
+ESSAI_FgfOffenseRole AELSSPlayerState::GetFgfOffenseRole() {
+    return ESSAI_FgfOffenseRole::None;
+}
+
+AELSSPlayerState* AELSSPlayerState::GetFgfDefenseTarget() {
+    return NULL;
+}
+
 float AELSSPlayerState::GetFeverTimeRemainRate() const {
     return 0.0f;
 }
 
 int32 AELSSPlayerState::GetFeverCount() const {
     return 0;
+}
+
+bool AELSSPlayerState::GetEnabledTeamResult(FSSTeamResult& outTeamResult) const {
+    return false;
 }
 
 ESSClientFlowState AELSSPlayerState::GetClientFlowStateOnServer() const {
@@ -310,6 +387,10 @@ void AELSSPlayerState::DebugSendGameStateDebugFlag_Server_Implementation(ESSGame
 }
 
 void AELSSPlayerState::DebugResetAttention_Implementation() {
+}
+
+bool AELSSPlayerState::CheckEquipFgfBall() const {
+    return false;
 }
 
 int32 AELSSPlayerState::CalcAttentionLevelFromPoint() const {
@@ -374,6 +455,9 @@ void AELSSPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AELSSPlayerState, SurvivorRanking);
     DOREPLIFETIME(AELSSPlayerState, ExpItemPoint);
     DOREPLIFETIME(AELSSPlayerState, ExpItemPointLoopCount);
+    DOREPLIFETIME(AELSSPlayerState, IncompleteTeamResult);
+    DOREPLIFETIME(AELSSPlayerState, TeamMemberResult);
+    DOREPLIFETIME(AELSSPlayerState, RespawnReservedTime);
     DOREPLIFETIME(AELSSPlayerState, WrestlerSetupParamRep);
     DOREPLIFETIME(AELSSPlayerState, ProgressFlags);
     DOREPLIFETIME(AELSSPlayerState, EndGameReasonOnServer);
@@ -400,6 +484,9 @@ AELSSPlayerState::AELSSPlayerState() {
     this->SurvivorRanking = 0;
     this->ExpItemPoint = 0;
     this->ExpItemPointLoopCount = 0;
+    this->FgfDefenseTarget = NULL;
+    this->CachedTeamState = NULL;
+    this->RespawnReservedTime = -1.00f;
     this->SettingAbilityId_1 = 0;
     this->SettingAbilityId_2 = 0;
     this->SettingAbilityId_3 = 0;

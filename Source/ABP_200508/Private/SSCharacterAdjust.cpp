@@ -43,6 +43,11 @@ FSSCharacterAdjust::FSSCharacterAdjust() {
     this->TargetPriorityDistanceCoef = 0.00f;
     this->TargetPriorityAngleCoef = 0.00f;
     this->TargetPriorityObjectTypeCoef = 0.00f;
+    this->FeverBuff_Speedup = 0.00f;
+    this->FeverBuff_DamageBoost = 0.00f;
+    this->FeverBuff_WeaponDamageBoost = 0.00f;
+    this->AfterRespawnInvincibleDuration = 0.00f;
+    this->FgfBallOwnerMoveScale = 0.00f;
     this->RefreshParamOnEveryTick = false;
 }
 

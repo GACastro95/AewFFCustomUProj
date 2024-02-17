@@ -162,6 +162,12 @@ public:
     void SSMoveIdOverride(ESSMoveCommand MoveCommand, int32 MoveId, bool isEquip, bool withSetEnable);
     
     UFUNCTION(BlueprintCallable, Exec)
+    void SSMoveFrictionScale(float Scale);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSMoveFrictionDuration(float Scale);
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void SSMapIconForceVisible(bool IsOn);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -174,10 +180,22 @@ public:
     void SSForciblyEndMatch();
     
     UFUNCTION(BlueprintCallable, Exec)
+    void SSForceRespawnNearTeamMember();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSForceRespawn();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void SSForceNoResponseMode(bool IsOn);
     
     UFUNCTION(BlueprintCallable, Exec)
     void SSForceGuardToTarget(float guardTime);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSForceFeverOffense(bool IsOn);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSForceFeverDefense(bool IsOn);
     
     UFUNCTION(BlueprintCallable, Exec)
     void SSDisableNoResponseTimeOut(bool IsOn);
@@ -187,6 +205,12 @@ public:
     
     UFUNCTION(BlueprintCallable, Exec)
     void SSDestroyThemAll(bool excludeMyself);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSDestroyTeamMembers(bool excludeMyself);
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void SSDestroyExceptTeamMembers(int32 exceptTeamId);
     
     UFUNCTION(BlueprintCallable, Exec)
     void SSDestroyAllPickupObjects();
@@ -201,16 +225,19 @@ public:
     void SSChangeCameraTarget(int32 playerStateIndex);
     
     UFUNCTION(BlueprintCallable, Exec)
+    void SSBallOwnerSpeedScale(float Scale);
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void SSAssembleThemAll();
     
     UFUNCTION(BlueprintCallable, Exec)
     void SSAIPlayerSpawnPresetByName(const FString& InName);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void SSAIPlayerSpawnPreset(int32 InFaceID, int32 InBodyID, int32 InHairID, int32 InBottomsID, int32 InShoesID, int32 InSuitID, bool InRandom);
+    void SSAIPlayerSpawnPreset(int32 InFaceID, int32 InBodyID, int32 InHairID, int32 InBottomsID, int32 InShoesID, int32 InSuitID, bool InRandom, int32 InTeamId);
     
     UFUNCTION(BlueprintCallable, Exec)
-    void SSAIPlayerSpawn(EWrestlerID_N WrestlerID);
+    void SSAIPlayerSpawn(EWrestlerID_N WrestlerID, int32 InTeamId);
     
     UFUNCTION(BlueprintCallable, Exec)
     void SSAIPlayerNoDamage(bool IsOn);

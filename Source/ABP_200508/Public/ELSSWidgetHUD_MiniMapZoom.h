@@ -6,12 +6,16 @@
 #include "EKeyMappingType.h"
 #include "ELSSWidgetBase.h"
 #include "ESSItemBoxType.h"
+#include "ESSRuleType.h"
 #include "ELSSWidgetHUD_MiniMapZoom.generated.h"
 
 class AActor;
+class AELSSFgfManager;
 class AELSSItemManager;
+class AELSSPlayerController;
 class AELSSStorm;
 class UCanvasPanel;
+class UELSSWidgetHUD_ArrowMiniMapIcon;
 class UELSSWidgetHUD_MiniMapImage;
 class UImage;
 class UMaterialInstanceDynamic;
@@ -24,6 +28,9 @@ class ABP_200508_API UELSSWidgetHUD_MiniMapZoom : public UELSSWidgetBase {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayerController* SSPlayerController;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInstanceDynamic* KOMaterial_10;
     
@@ -114,8 +121,17 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUserWidget* CarrotMedal02Widgets;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UELSSWidgetHUD_ArrowMiniMapIcon*> Ally01Widgets;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UELSSWidgetHUD_ArrowMiniMapIcon*> Ally02Widgets;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AELSSItemManager* ItemManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSFgfManager* FgfManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* PlayerActor;
@@ -156,11 +172,47 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Seconds;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    ESSRuleType RuleType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* BlackDiamondIcon01Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* BlackDiamondIcon02Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* TeamTreasureBoxIcon01Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* TeamTreasureBoxIcon02Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UUserWidget*> FGFGoalIcon01Widgets;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UUserWidget*> FGFGoalIcon02Widgets;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* FGFBallIcon01Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* FGFBallIcon02Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* FGFOpponentBallIcon01Widget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* FGFOpponentBallIcon02Widget;
+    
 public:
     UELSSWidgetHUD_MiniMapZoom();
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D WorldPosToCanvasPos(const FVector& InWorldPos);
+    
+    UFUNCTION(BlueprintCallable)
+    void UpdateTeamTreasureBox();
     
     UFUNCTION(BlueprintCallable)
     void UpdateStormZone();
@@ -175,16 +227,28 @@ protected:
     void UpdateHorseSaddle();
     
     UFUNCTION(BlueprintCallable)
+    void UpdateFGFGoal();
+    
+    UFUNCTION(BlueprintCallable)
+    void UpdateFGFBall();
+    
+    UFUNCTION(BlueprintCallable)
     void UpdateEnemy();
     
     UFUNCTION(BlueprintCallable)
     void UpdateCarrotMedal();
     
     UFUNCTION(BlueprintCallable)
+    void UpdateBlackDiamond();
+    
+    UFUNCTION(BlueprintCallable)
     void UpdateAnnounceStorm();
     
     UFUNCTION(BlueprintCallable)
     void UpdateAnnounceGuide();
+    
+    UFUNCTION(BlueprintCallable)
+    void UpdateAlly();
     
 public:
     UFUNCTION(BlueprintCallable)

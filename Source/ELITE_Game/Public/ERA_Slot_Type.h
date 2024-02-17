@@ -17,6 +17,5 @@ enum class ERA_Slot_Type : uint8 {
     TagClose,
     Victory,
     VictoryChampionship,
-    ERA_Slot_MAX UMETA(Hidden),
 };
 

@@ -7,7 +7,9 @@
 #include "EWrestlerID_N.h"
 #include "GameFramework/GameState.h"
 #include "ESSGameFlowState.h"
+#include "ESSGameServerError.h"
 #include "ESSGameStateDebugFlag.h"
+#include "ESSGameStateFlag.h"
 #include "ESSLogIconType.h"
 #include "ESSPlayerProgress.h"
 #include "ESSRoundEventLogType.h"
@@ -17,8 +19,13 @@
 #include "SSGameFlowStateSyncParam.h"
 #include "SSGameRuleParam.h"
 #include "SSGameStateEventDispatcherDelegate.h"
+#include "SSGeneralParam.h"
 #include "SSPlayerEquipSettings.h"
 #include "SSPreloadAssetInfo.h"
+#include "SSReplicatedRuleInfo.h"
+#include "SSRuleAdjustParam.h"
+#include "SSRuleParam.h"
+#include "SSTeamInfos.h"
 #include "SSWrestlerParam.h"
 #include "SSWrestlerSetupParam.h"
 #include "Templates/SubclassOf.h"
@@ -29,13 +36,16 @@ class AActor;
 class AELSSAIController;
 class AELSSDatabase;
 class AELSSFadeManager;
+class AELSSFgfManager;
 class AELSSItemManager;
 class AELSSLocatorManager;
 class AELSSPlayer;
 class AELSSPlayerState;
+class AELSSPreloadAssetInfoReplicator;
 class AELSSRoundManager;
 class AELSSSaveDataManager;
 class AELSSSoundManager;
+class AELSSTeamState;
 class AELSSVehicleManager;
 class AELSSWeaponThrowProjectile;
 class AELSSWeaponTrapObject;
@@ -45,6 +55,7 @@ class UDataTable;
 class UELSSGameLobby;
 class UELSSOptimizeManager;
 class UELSSPoolManager;
+class UObject;
 
 UCLASS(Blueprintable)
 class ABP_200508_API AELSSGameState : public AGameState {
@@ -54,11 +65,19 @@ protected:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSGameStateEventDispatcher EventOnPreEndPlay;
     
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSSGeneralParam GeneralParam;
+    
+protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESSGameFlowState PrevState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_StateSyncParam, meta=(AllowPrivateAccess=true))
     FSSGameFlowStateSyncParam StateSyncParamRep;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_GameServerError, meta=(AllowPrivateAccess=true))
+    ESSGameServerError GameServerError;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShouldShutdownGame;
@@ -90,8 +109,11 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AINpcIdCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSPreloadAssetInfo PreloadAssetInfoRep;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPreloadAssetInfoReplicator* PreloadAssetInfoReplicator;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSLocatorManager> LocatorManagerType;
@@ -131,11 +153,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AELSSPlayer*> ValidPlayerList;
     
-public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<AELSSPlayerState*> SSPlayerArray;
+    TArray<AELSSTeamState*> ValidTeamStateList;
     
-protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AELSSTeamState> SSTeamStateClass;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AELSSSaveDataManager* SaveDataManager;
     
@@ -144,6 +167,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SurvivorNum, meta=(AllowPrivateAccess=true))
     int32 SurvivorNum;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SurvivorNum, meta=(AllowPrivateAccess=true))
+    int32 SurvivorTeamNum;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LastSurvivorIndex;
@@ -178,7 +204,34 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSGameRuleParam GameRule;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RuleInfo, meta=(AllowPrivateAccess=true))
+    FSSReplicatedRuleInfo ReplicatedRuleInfo;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSSRuleParam RuleParam;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AELSSTeamState*> TeamScoreRanking;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float TeamScoreUpdateInterval;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSSTeamInfos TeamInfosForServer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ReplicatedTeamNum, meta=(AllowPrivateAccess=true))
+    int32 ReplicatedTeamNum;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSSRuleAdjustParam RuleAdjustParam;
+    
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AELSSFgfManager> FgfManagerClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSFgfManager* FgfManager;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSDatabase> DatabaseType;
     
@@ -231,6 +284,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FSSActivityMatchResult Activity_Result;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_GameStateFlags, meta=(AllowPrivateAccess=true))
+    int32 GameStateFlags;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DebugFlags, meta=(AllowPrivateAccess=true))
     int32 DebugFlags;
     
@@ -261,12 +317,18 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSPreloadAssetInfo PreloadAssetInfoForDebug;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_NoOpponents, meta=(AllowPrivateAccess=true))
+    bool bNoOpponents;
+    
 public:
     AELSSGameState();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)
     void UpdateSurvivorNum();
+    
+    UFUNCTION(BlueprintCallable)
+    void TickTeamScore(float inDeltaSeconds);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -299,10 +361,24 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickState_AfterGamePlay(float inDeltaSeconds);
     
+public:
+    UFUNCTION(BlueprintCallable)
+    void SyncLocalTeamStatusFirst();
+    
+    UFUNCTION(BlueprintCallable)
+    void StopPreloadAssetInfoReplicate();
+    
+    UFUNCTION(BlueprintCallable)
+    void StopBehaviourTreeAll();
+    
+protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool StartOfMatch();
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void StartBehaviourTreeAll();
+    
     UFUNCTION(BlueprintCallable)
     AELSSPlayer* SpawnSSPlayerByPlayerState(const FTransform& InTransform, AELSSPlayerState* inPlayerState);
     
@@ -311,6 +387,9 @@ protected:
     AActor* SpawnManagerActor(TSubclassOf<AActor> InClass);
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void SpawnFgfManager();
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     TArray<AELSSPlayer*> SpawnAISSPlayers(const TArray<EWrestlerID_N>& wrestlerIDs);
     
@@ -334,6 +413,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetupServerPlayerStateIndex();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetupPlayerStartLocatorParam();
     
     UFUNCTION(BlueprintCallable)
     void SetDummyPlayerName();
@@ -360,6 +442,9 @@ public:
     void OnRep_VehicleManager();
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void OnRep_SurvivorTeamNum();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnRep_SurvivorNum();
     
     UFUNCTION(BlueprintCallable)
@@ -369,10 +454,27 @@ public:
     void OnRep_SSModeLobby();
     
     UFUNCTION(BlueprintCallable)
+    void OnRep_RuleInfo();
+    
+    UFUNCTION(BlueprintCallable)
     void OnRep_RoundManager();
     
     UFUNCTION(BlueprintCallable)
+    void OnRep_ReplicatedTeamNum();
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnRep_NoOpponents();
+    
+public:
+    UFUNCTION(BlueprintCallable)
     void OnRep_ItemManager();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_GameStateFlags();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_GameServerError();
     
     UFUNCTION(BlueprintCallable)
     void OnRep_DebugServerState();
@@ -392,6 +494,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnCompletePreload_StationalAsset();
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnCompletedSyncTeamStateForClient();
+    
     UFUNCTION(BlueprintCallable)
     void OnCompletedSpawnManagerActorsLocal();
     
@@ -408,16 +513,31 @@ public:
     void NotifyAnnouceAttention_Multicast(int32 inServerPlayerStateIndex, int32 inAttentionPoint);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool NeedsServerShutdown() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool NeedsReadyStateForServer() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool NeedsEnableAIForServer() const;
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    void ModifySpawnLocation(const UObject* WorldContextObject, AELSSPlayerState* inPlayerState, FVector InLocation, FRotator inRotator, float Radius, float helfHeight, FName ProfileName, FVector& OutLocation, FRotator& outRotator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsSyncedTeamInfo() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsSyncedRule() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsState(ESSGameFlowState inState) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsServerState(ESSServerState inState) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsNoOpponentsGame() const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool IsNetworkStatusOnline() const;
@@ -427,6 +547,18 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsInitialized() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsGameServerError() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsFixedTeamResultAll() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsFinishedMatch() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsFgf() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnabledServerConnection() const;
@@ -466,10 +598,22 @@ private:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool HasFlag(ESSGameStateFlag Type) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasDebugFlag(ESSGameStateDebugFlag Type) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    AELSSTeamState* GetVictoryTeamState() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetVictoryTeamId() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSVehicleManager* GetVehicleManager() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    AELSSTeamState* GetTeamStateByTeamId(int32 InTeamId) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSSoundManager* GetSoundManager() const;
@@ -488,6 +632,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     AELSSDatabase* GetDatabase() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void FixTeamResult();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSPlayerState* FindSSPlayerStateForWatch_Random(bool inCheckPawn) const;
@@ -590,8 +737,14 @@ public:
     UFUNCTION(BlueprintCallable)
     void ClearShouldShutdownGameFlag();
     
+    UFUNCTION(BlueprintCallable)
+    void CheckValidRuleSchedule();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckMultiPlayFeature() const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool CheckFinishedMatch();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckDoneShutdownNetDriver() const;

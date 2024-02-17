@@ -23,6 +23,12 @@ public:
     void SetBusSendLevelByName(const FString& SourceBusName, const FString& DestBusName, float Level);
     
     UFUNCTION(BlueprintCallable)
+    void SetAisacControlByName(const FString& control_name, float control_value);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool IsEnabledBinauralizer();
+    
+    UFUNCTION(BlueprintCallable)
     static UAtomAsrRack* GetDefaultAsrRack();
     
     UFUNCTION(BlueprintCallable)
@@ -33,6 +39,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static UAtomAsrRack* GetAsrRack(int32 AsrRackID);
+    
+    UFUNCTION(BlueprintCallable)
+    static void EnableBinauralizer(bool bIsEnabled);
     
     UFUNCTION(BlueprintCallable)
     void DetachDspBusSetting();

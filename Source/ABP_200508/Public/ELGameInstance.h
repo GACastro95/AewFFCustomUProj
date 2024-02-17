@@ -29,15 +29,21 @@
 #include "ECareerStoryResultCondition.h"
 #include "EELEOSEventResult.h"
 #include "EELEOSEventType.h"
+#include "EELLocalTournamentEntryScale.h"
+#include "EELLocalTournamentState.h"
+#include "EELLocalTournamentType.h"
 #include "EELTournamentDifficulty.h"
 #include "EELTournamentState.h"
 #include "EELTournamentType.h"
+#include "ELLocalTournamentArenaSetting.h"
+#include "ELLocalTournamentBaseSetting.h"
 #include "ELSSMatchResultSpareDataParam.h"
 #include "ELTmpJukeboxSaveData.h"
 #include "ELTournamentBracket.h"
 #include "ELTournamentInfo.h"
 #include "ELTournamentRoundInfo.h"
 #include "ELTournamentWrestler.h"
+#include "ELTournamentWrestlerIdentifier.h"
 #include "ELWrestlerSelectParam.h"
 #include "ELWrestlerSelectParamForNative.h"
 #include "EMiniGameID.h"
@@ -51,6 +57,7 @@ class AELCharacter_Native;
 class AELMenuOperationalWidgetManagerBase;
 class APlayerController;
 class AyDebugCamera;
+class UAtomComponent;
 class UDataTable;
 class UELBattlePassManager;
 class UELCareerDelivery;
@@ -172,6 +179,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_ELSfxListDatatable;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UAtomComponent*> m_MuteAtomList;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UELCrateManager* m_CrateManager;
     
@@ -182,7 +192,7 @@ private:
     UELTutorialManager* m_TutorialManager;
     
 protected:
-    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FPerPlatformFloat PlatformFPS;
     
 private:
@@ -276,6 +286,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartTournamentMode(EELTournamentType Type, EELTournamentDifficulty Difficulty, FELTournamentInfo Info);
     
+    UFUNCTION(BlueprintCallable)
+    void StartLocalTournamentMode();
+    
 private:
     UFUNCTION(BlueprintCallable)
     void Shutdown();
@@ -283,6 +296,9 @@ private:
 public:
     UFUNCTION(BlueprintCallable)
     void SetWholeLevelBGMID(int32 _sData, int32 _sIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVolumeByMuteAtomList(bool bStreamerMode);
     
     UFUNCTION(BlueprintCallable)
     void SetValidNewWrestlerSelect(bool bValid);
@@ -435,6 +451,36 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetMatchResult(FELMatchResultParam _value);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentWrestler(int32 EntryNo, int32 PositionIndex, FELTournamentWrestlerIdentifier WrestlerIdentifier);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentType(EELLocalTournamentType Type);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentState(EELLocalTournamentState State);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentSetting(const FELLocalTournamentBaseSetting& Setting);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentName(const FString& Name);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentMatchResult(const TArray<uint8>& Result);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentLastMatchResult(int32 WinTeamNo);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentEntryScale(EELLocalTournamentEntryScale Type);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentBracket(const TArray<FELTournamentBracket>& Brackt);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentArenaSetting(FELLocalTournamentArenaSetting& Setting);
     
     UFUNCTION(BlueprintCallable)
     void SetLastSelectedMenuByDevice(bool IsGamepad);
@@ -682,6 +728,12 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetTextureStreamingPoolSize();
     
+    UFUNCTION(BlueprintCallable)
+    void ResetLocalTournamentWrestler(int32 EntryNo, int32 PositionIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetLocalTournamentSetting();
+    
 private:
     UFUNCTION(BlueprintCallable)
     void OnQueryStatsInternal();
@@ -756,6 +808,9 @@ public:
     bool IsShowBuldFlow();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsReadyLocalTournamentBracket() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayCareerMiniGame();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -769,6 +824,15 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMiniGameEnd();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsLocalTournamentMode() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsLocalTournamentFinalMatch() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsLocalTournamentCompleteMatch() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLastSelectedMenuByGamepad() const;
@@ -1026,6 +1090,30 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     int32 GetMainMenuDecideControllerID_Impl();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    EELLocalTournamentType GetLocalTournamentType() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    EELLocalTournamentState GetLocalTournamentState() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FString GetLocalTournamentName() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<uint8> GetLocalTournamentMatchResult() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    EELLocalTournamentEntryScale GetLocalTournamentEntryScale() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetLocalTournamentEntryNum() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    TArray<FELTournamentBracket> GetLocalTournamentBracket() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FELLocalTournamentArenaSetting GetLocalTournamentArenaSetting() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UELKeyConfigManager* GetKeyConfigManager() const;
@@ -1331,6 +1419,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddTournamentRetryCount();
+    
+    UFUNCTION(BlueprintCallable)
+    void AddMuteAtomList(UAtomComponent* AtomComponent);
     
     UFUNCTION(BlueprintCallable)
     int32 AddAchievementLocalCountArray(EELAchievementList _Achievement, int32 _Add);

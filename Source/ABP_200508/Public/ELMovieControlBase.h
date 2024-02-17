@@ -57,6 +57,11 @@ public:
     UFUNCTION(BlueprintCallable)
     bool PlayAll(TArray<int32> Excludes);
     
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsStreamerMode();
+    
+public:
     UFUNCTION(BlueprintCallable)
     bool IsPreparedAll(TArray<int32> Excludes);
     
@@ -68,7 +73,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    bool GetMoviePath(const FName& MovieDataID, FString& MoviePath);
+    bool GetMoviePath(const FName& MovieDataID, FString& MoviePath, bool& bUseStreamerModeVideo, bool& ChangeLoop);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

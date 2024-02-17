@@ -16,5 +16,6 @@ FELSSLobbyPlayerInfo::FELSSLobbyPlayerInfo() {
     this->weaponDecalSymbolId = 0;
     this->weaponColorUniqueId = 0;
     this->weaponColorListIndex = 0;
+    this->Synced = false;
 }
 

@@ -8,6 +8,8 @@ enum class ESSLocatorType : uint8 {
     PlayerStart,
     ItemBox,
     Vehicle,
+    FgfGoal,
+    FgfRespawn,
     Max,
 };
 

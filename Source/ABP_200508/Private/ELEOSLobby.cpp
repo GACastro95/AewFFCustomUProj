@@ -23,6 +23,10 @@ bool UELEOSLobby::ShowPacketQueueInfo() {
     return false;
 }
 
+bool UELEOSLobby::ShouldChangeGameModeToJoinInvitedLobby() const {
+    return false;
+}
+
 bool UELEOSLobby::SetVoiceChatStartMuted(bool _bMuted) {
     return false;
 }
@@ -578,6 +582,10 @@ void UELEOSLobby::ExecConsoleInviteEvent() {
 void UELEOSLobby::Destroy() {
 }
 
+bool UELEOSLobby::CreateSSMode(int32 MaxMember) {
+    return false;
+}
+
 void UELEOSLobby::CreateMPASessionEvent() {
 }
 
@@ -585,7 +593,7 @@ bool UELEOSLobby::CreateDefault() {
     return false;
 }
 
-bool UELEOSLobby::Create(int32 MaxMember, EEOSCommunityPermission Permission, bool AllowInvite) {
+bool UELEOSLobby::Create(int32 MaxMember, EEOSCommunityPermission Permission, bool AllowInvite, bool SSMode) {
     return false;
 }
 
@@ -655,5 +663,7 @@ UELEOSLobby::UELEOSLobby() {
     this->RequestResendCurrentWrestlerDataFlag = false;
     this->RequestResendCurrentWrestlerDataTimer = 0.00f;
     this->LobbyMPAStatus = ELobbyMPAStatus::MPA_Destroy;
+    this->SSLobbyManager = NULL;
+    this->bShouldChangeGameModeToJoinInvitedLobby = false;
 }
 

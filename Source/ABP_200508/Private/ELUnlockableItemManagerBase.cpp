@@ -6,7 +6,7 @@ void UELUnlockableItemManagerBase::UnlockingItemList(TArray<int32> _targetIdList
 void UELUnlockableItemManagerBase::UnlockingItem(int32 _targetId) {
 }
 
-void UELUnlockableItemManagerBase::SortUnlockItemParamMap(TMap<int32, int32>& _SortedMap) {
+void UELUnlockableItemManagerBase::SortUnlockItemParamMap(TMap<int32, int32>& _SortedMap, bool bInvalidItemAscending) {
 }
 
 void UELUnlockableItemManagerBase::SetupUnlockableItemDataTable(TSoftObjectPtr<UDataTable> _itemDT, UObject* _pWorldContextObject) {

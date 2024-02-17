@@ -108,6 +108,15 @@ public:
     static int32 GetSSTotalScore(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSTopCountSurvive(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSTopCountPoint(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSTopCountAll(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 GetSSTopCount(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
@@ -193,6 +202,15 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 AddSSTotalScore(const UObject* WorldContextObject, int32 Value, bool bIngestEOS);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 AddSSTopCountSurvive(const UObject* WorldContextObject, int32 Value, bool bIngestEOS);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 AddSSTopCountPoint(const UObject* WorldContextObject, int32 Value, bool bIngestEOS);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 AddSSTopCountAll(const UObject* WorldContextObject, int32 Value, bool bIngestEOS);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 AddSSTopCount(const UObject* WorldContextObject, int32 Value, bool bIngestEOS);

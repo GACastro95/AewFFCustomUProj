@@ -74,7 +74,7 @@ public:
     ESaveDataProcResult RequestSave(bool _bUpload);
     
     UFUNCTION(BlueprintCallable)
-    ESaveDataProcResult RequestLoad(bool _bDownload);
+    ESaveDataProcResult RequestLoad(bool _bDownload, bool _bBackGroundDecrypt);
     
     UFUNCTION(BlueprintCallable)
     ESaveDataProcResult RequestGetLocalQuotaInfo();

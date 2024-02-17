@@ -10,6 +10,5 @@ enum class ERA_SceneData_Type : uint8 {
     EntranceBattle,
     CreateName,
     CreateTeam,
-    ERA_SceneData_MAX UMETA(Hidden),
 };
 

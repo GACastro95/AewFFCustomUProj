@@ -8,6 +8,5 @@ enum class ERefereeDQKind_N : uint8 {
     ManagerDisturbance,
     ManagerWeapon,
     ManagerApron,
-    ERefereeDQKind_MAX UMETA(Hidden),
 };
 

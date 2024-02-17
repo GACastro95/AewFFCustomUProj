@@ -49,6 +49,7 @@ AELSSWeaponThrowProjectile::AELSSWeaponThrowProjectile() {
     this->OwnerWeapon = NULL;
     this->WeaponID = 0;
     this->MoveId = 0;
+    this->TeamId = 0;
     this->State = ESSWeaponThrowProjectileState::Stocked;
     this->EffectRadius = 100.00f;
 }

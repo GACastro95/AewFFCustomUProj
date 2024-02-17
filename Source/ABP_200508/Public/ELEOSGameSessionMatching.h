@@ -144,7 +144,7 @@ public:
     void SearchSessionInitParam();
     
     UFUNCTION(BlueprintCallable)
-    bool SearchSessionCancel();
+    bool SearchSessionCancel(bool CallCancelEvent);
     
     UFUNCTION(BlueprintCallable)
     bool SearchSession(const TArray<UEOSAttribute*>& _Array, int32 _ResultCount, int32 _RetryCount);

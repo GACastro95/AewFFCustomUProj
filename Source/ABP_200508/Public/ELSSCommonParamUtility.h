@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "EWrestlerID_N.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "YGS2SSPlayerData.h"
@@ -19,6 +20,7 @@
 #include "SSAttentionLevelParam.h"
 #include "SSCharacterAdjust.h"
 #include "SSGameRuleParam.h"
+#include "SSGeneralParam.h"
 #include "SSHeatLevelParam.h"
 #include "SSHeatMoveSet.h"
 #include "SSHeatSkillDefaultSettings.h"
@@ -29,6 +31,10 @@
 #include "SSPlayerRankParam.h"
 #include "SSPlayerRankRangeParam.h"
 #include "SSRoundAdjustParam.h"
+#include "SSRuleParam.h"
+#include "SSRuleResourceParam.h"
+#include "SSRuleScheduleParam.h"
+#include "SSRuleStatus.h"
 #include "SSWeaponCommonParam.h"
 #include "SSWrestlerParam.h"
 #include "SSWrestlerTypeParam.h"
@@ -45,6 +51,9 @@ class ABP_200508_API UELSSCommonParamUtility : public UBlueprintFunctionLibrary 
 public:
     UELSSCommonParamUtility();
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool MakeSSRuleStatusByScheduleId(const UObject* WorldContextObject, int32 inRuleScheduleId, FSSRuleStatus& OutParam);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetSSWrestlerTypeResourceParam(const UObject* WorldContextObject, ESSWrestlerType inWrestlerType, FSSWrestlerTypeResourceParam& OutRow);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
@@ -55,6 +64,27 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetSSWeaponCommonParam(const UObject* WorldContextObject, int32 ID, FSSWeaponCommonParam& OutRow);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleScheduleParamArray(const UObject* WorldContextObject, TArray<FSSRuleScheduleParam>& OutParam);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleScheduleParam(const UObject* WorldContextObject, int32 inRuleScheduleId, FSSRuleScheduleParam& OutParam);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleScheduleList(const UObject* WorldContextObject, FDateTime inDateTimeUTC, TArray<FSSRuleScheduleParam>& outParamList);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleResourceParamByRuleId(const UObject* WorldContextObject, int32 inRuleId, FSSRuleResourceParam& OutParam);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleResourceParam(const UObject* WorldContextObject, int32 inRuleResourceId, FSSRuleResourceParam& OutParam);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleParamArray(const UObject* WorldContextObject, TArray<FSSRuleParam>& OutParam);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSRuleParam(const UObject* WorldContextObject, int32 inRuleId, FSSRuleParam& OutParam);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetSSRoundAdjustParam(const UObject* WorldContextObject, FSSRoundAdjustParam& outData);
@@ -125,6 +155,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static int32 GetSSHeatLevelExp(const UObject* WorldContextObject, int32 inHeatLevel);
     
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static bool GetSSGeneralParam(const UObject* WorldContextObject, FSSGeneralParam& OutRow);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetSSGameRuleParam(const UObject* WorldContextObject, FSSGameRuleParam& outData);
     
@@ -166,6 +199,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     ESSAbilityCalcMethod GetSSAbilityCalcMethod(const UObject* WorldContextObject, ESSAbilityKind Kind);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool FindSSRuleScheduleParamByRuleId(const UObject* WorldContextObject, int32 inRuleId, FSSRuleScheduleParam& OutParam);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 CalcSSStampedeLevelFromExp(const UObject* WorldContextObject, int32 inExp);

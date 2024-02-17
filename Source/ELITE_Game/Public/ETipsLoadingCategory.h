@@ -23,5 +23,10 @@ enum class ETipsLoadingCategory : uint8 {
     MainMenuFromSS,
     Training,
     CareerAlbum,
+    Title,
+    DLC,
+    UserTip,
+    CommunityWrestler,
+    TitleDLC,
 };
 

@@ -20,6 +20,10 @@ UDataTable* UEliteGameSettingsUtilityFunctions::GetDisplayOptionSettingDataTable
     return NULL;
 }
 
+UDataTable* UEliteGameSettingsUtilityFunctions::GetCommunityWrestlerTable() {
+    return NULL;
+}
+
 UDataTable* UEliteGameSettingsUtilityFunctions::GetCharacterProfilesTable() {
     return NULL;
 }

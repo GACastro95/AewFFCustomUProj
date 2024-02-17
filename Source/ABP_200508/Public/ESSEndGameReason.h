@@ -13,5 +13,6 @@ enum class ESSEndGameReason : uint8 {
     EOSSignout,
     Illegal,
     NetworkFailure,
+    GameServerError,
 };
 

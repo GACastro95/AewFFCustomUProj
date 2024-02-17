@@ -12,5 +12,7 @@ enum class ESSRoundEventLogType : uint8 {
     TreasureBoxLegendary,
     CarrotTreasureBox,
     Vehicle,
+    DefenseTeamTreasureBox,
+    MultiLockedTeamTreasureBox,
 };
 

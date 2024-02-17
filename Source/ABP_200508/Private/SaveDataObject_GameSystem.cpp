@@ -123,6 +123,9 @@ void USaveDataObject_GameSystem::SetDisplay_FpsValueIndex(int32 _Index) {
 void USaveDataObject_GameSystem::SetDisplay_DLSS_OptionIndex(int32 Index) {
 }
 
+void USaveDataObject_GameSystem::SetCreatorSetting_StreamerMode(bool _value) {
+}
+
 void USaveDataObject_GameSystem::SetAudio_VoiceVolume(int32 _value) {
 }
 
@@ -339,6 +342,10 @@ int32 USaveDataObject_GameSystem::GetDisplay_FpsValueIndex() const {
 
 int32 USaveDataObject_GameSystem::GetDisplay_DLSS_OptionIndex() const {
     return 0;
+}
+
+bool USaveDataObject_GameSystem::GetCreatorSetting_StreamerMode() const {
+    return false;
 }
 
 int32 USaveDataObject_GameSystem::GetAudio_VoiceVolume() const {

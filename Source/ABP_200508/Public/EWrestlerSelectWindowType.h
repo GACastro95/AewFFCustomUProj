@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class EWrestlerSelectWindowType : uint8 {
     EWrestlerSelectWindowType_Select,
     EWrestlerSelectWindowType_Preset,
+    EWrestlerSelectWindowType_MAX UMETA(Hidden),
 };
 

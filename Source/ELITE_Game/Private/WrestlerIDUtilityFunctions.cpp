@@ -39,6 +39,14 @@ bool UWrestlerIDUtilityFunctions::IsEditWrestlerID(const EWrestlerID_N ID) {
     return false;
 }
 
+bool UWrestlerIDUtilityFunctions::IsCommunityWrestlerIDImpl(const EWrestlerID_N ID) {
+    return false;
+}
+
+bool UWrestlerIDUtilityFunctions::IsCommunityWrestlerID(const EWrestlerID_N ID) {
+    return false;
+}
+
 UWrestlerIDUtilityFunctions::UWrestlerIDUtilityFunctions() {
 }
 

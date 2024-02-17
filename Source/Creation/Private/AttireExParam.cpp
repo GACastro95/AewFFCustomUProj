@@ -11,6 +11,7 @@ FAttireExParam::FAttireExParam() {
     this->bApplyDarkSkinModeToSkin = false;
     this->bApplyToAttire = false;
     this->bApplyPatternTextureToAttire = false;
+    this->bApplyPatternTextureChangeColorToAttire = false;
     this->bApplyDarkSkinModeToAttire = false;
 }
 

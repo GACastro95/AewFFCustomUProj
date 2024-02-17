@@ -15,6 +15,8 @@ enum class ESSSpawnPickupSE : uint8 {
     Epic,
     ExpLegendary,
     Legendary,
+    JewelAppear,
+    JewelRadarAppear,
     Max,
 };
 

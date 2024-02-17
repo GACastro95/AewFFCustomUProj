@@ -77,6 +77,10 @@ UAtomComponent* UAtomStatics::PlaySoundAttached(USoundAtomCue* Sound, USceneComp
 void UAtomStatics::PlaySoundAtLocation(UObject* WorldContextObject, USoundAtomCue* Sound, FVector Location, FRotator Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundAttenuation* AttenuationSettings, USoundConcurrency* ConcurrencySettings) {
 }
 
+UAtomComponent* UAtomStatics::PlayAtomSoundForAnimNotify(USoundAtomCue* Sound, const FAtomComponentParams& Params, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundAttenuation* AttenuationSettings, bool bFollow) {
+    return NULL;
+}
+
 void UAtomStatics::PlayAtomSoundAtLocationByName(const UObject* WorldContextObject, USoundAtomCueSheet* CueSheet, const FString& CueName, FVector Location, const FAtomComponentParams& Params) {
 }
 

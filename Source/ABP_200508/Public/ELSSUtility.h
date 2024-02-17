@@ -13,8 +13,14 @@
 #include "EELNetworkStatus.h"
 #include "EELYGS2RequestFunctionType.h"
 #include "ESSEndGameReason.h"
+#include "ESSMatchmakeType.h"
 #include "ESSModeServiceState.h"
 #include "ESSOnlineErrorType.h"
+#include "ESSRespawnLocationType.h"
+#include "ESSRespawnType.h"
+#include "ESSRuleType.h"
+#include "ESSTeamType.h"
+#include "ESSVictoryCondition.h"
 #include "ESSWrestlerType.h"
 #include "SSErrorTextDataToAWS.h"
 #include "SSErrorTextDataToHTTPCode.h"
@@ -24,6 +30,7 @@
 #include "SSErrorTextDataToYGS2API.h"
 #include "SSErrorTextLinkDialogMessage.h"
 #include "SSPlayerRankParam.h"
+#include "SSRuleScheduleParam.h"
 #include "SSStampedeRankParam.h"
 #include "SSWrestlerSetupParam.h"
 #include "Templates/SubclassOf.h"
@@ -37,11 +44,13 @@ class APlayerController;
 class UELEOSManager;
 class UELSSGameModeDataManager;
 class UELSSLevelTransitionEvent;
+class UELSSLobbyManager;
 class UELSSMasterData;
 class UELSSMasterDataRawData;
 class UELSSModeConfigData;
 class UELSSModeServiceParam;
 class UELSSRootObject;
+class UELSSRuleSelect;
 class UGameLiftObjectBase;
 class UObject;
 class UYGS2Req_GetSSPlayerData;
@@ -52,6 +61,9 @@ class ABP_200508_API UELSSUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSUtility();
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void UpdateSSCurrentRuleStatus(const UObject* WorldContextObject);
+    
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool TryYGS2ResumeRequests(const UObject* WorldContextObject);
     
@@ -77,7 +89,13 @@ public:
     static void SetVisibleFadeForChangeLevel(const UObject* WorldContextObject, bool inEnable, bool inWithLoadingIcon);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void SetSSSelectedRuleScheduleId(const UObject* WorldContextObject, int32 inRuleScheduleId);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetSSPlayerData(const UObject* WorldContextObject, const FYGS2SSPlayerData& dat);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void SetSSMainMenuFootStamp(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetSSInGamePlayFlag(const UObject* WorldContextObject, bool IsOn);
@@ -104,6 +122,9 @@ public:
     static bool RestartYGS2SetupStep(const UObject* WorldContextObject, bool inForceExec, bool inResetRequest);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void ResetSSSelectedRuleScheduleId(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool RequestDownloadSSModeServiceParam(const UObject* WorldContextObject, bool inSSModeOnly);
     
     UFUNCTION(BlueprintCallable)
@@ -127,8 +148,14 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool NeedsRestartYGS2SetupStep(const UObject* WorldContextObject);
     
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static void MakeSSEnabledRuleScheduleList(const UObject* WorldContextObject);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsSSPlayableUser(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool IsSSPartyHostOrSolo(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsSSMode(const UObject* WorldContextObject);
@@ -142,8 +169,14 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool IsSSDebugLocalCheckMode();
     
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static bool IsSSCurrentRuleEnabled(const UObject* WorldContextObject);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsSSCheatDetected(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool IsJoinedSSModeParty(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsExecuteYGS2SetupStep(const UObject* WorldContextObject);
@@ -159,6 +192,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static bool IsAccountLogin(const bool isMissed);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static bool HasSSModeMainMenuFootStamp(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EYGS2Api GetYGS2RequestType(const int32 apiID);
@@ -193,8 +229,14 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static EWrestlerID_N GetSSSelectedWrestlerID(const UObject* WorldContextObject);
     
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSSelectedRuleScheduleId(const UObject* WorldContextObject);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static AELSSSaveDataManager* GetSSSaveDataManager(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static UELSSRuleSelect* GetSSRuleSelect(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UELSSRootObject* GetSSRootObject(const UObject* WorldContextObject);
@@ -254,6 +296,9 @@ public:
     static FText GetSSLocalizeText(const FString& stKey);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static UELSSLobbyManager* GetSSLobbyManager(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UELSSLevelTransitionEvent* GetSSLevelTransitionEvent(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
@@ -276,6 +321,39 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool GetSSCurrentStampedeLevel(const UObject* WorldContextObject, int32& outLevel);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static ESSVictoryCondition GetSSCurrentRuleVictoryCondition(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static ESSRuleType GetSSCurrentRuleType(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static ESSTeamType GetSSCurrentRuleTeamType(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSCurrentRuleTeamSize(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static ESSRespawnType GetSSCurrentRuleRespawnType(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static ESSRespawnLocationType GetSSCurrentRuleRespawnLocationType(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSCurrentRuleMaxPlayersInParty(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSCurrentRuleMaxPlayers(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static ESSMatchmakeType GetSSCurrentRuleMatchmakeType(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSCurrentRuleId(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static int32 GetSSCurrentRuleDataGroup(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool GetSSCurrentPlayerRank(const UObject* WorldContextObject, int32& outRank);
@@ -336,6 +414,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static FString GetEOSAuthToken();
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    static bool GetEnabledRuleScheduleList(const UObject* WorldContextObject, bool inRefresh, TArray<FSSRuleScheduleParam>& outScheduleParamList);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UELEOSManager* GetELEOSManager(const UObject* WorldContextObject);

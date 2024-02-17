@@ -36,7 +36,7 @@ bool USaveDataSystem::RequestUpdateLocalFileList(bool _bProjectSavedDir) {
     return false;
 }
 
-bool USaveDataSystem::RequestLoad(USaveData_AccessorBase*& _pcSaveDataAccessor, const FString& _strKey, int32 _sFileUserIndex, bool _bDownload, bool _bCache) {
+bool USaveDataSystem::RequestLoad(USaveData_AccessorBase*& _pcSaveDataAccessor, const FString& _strKey, int32 _sFileUserIndex, bool _bDownload, bool _bCache, bool _bBackGroundDecrypt) {
     return false;
 }
 

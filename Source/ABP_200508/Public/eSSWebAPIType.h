@@ -5,5 +5,6 @@
 UENUM(BlueprintType)
 enum class eSSWebAPIType : uint8 {
     eSSWebAPIType_SessionMatch,
+    eSSWebAPIType_MAX UMETA(Hidden),
 };
 

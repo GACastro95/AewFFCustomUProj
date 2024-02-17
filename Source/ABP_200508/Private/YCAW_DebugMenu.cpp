@@ -5,7 +5,7 @@
 void UYCAW_DebugMenu::ReadFile(int32 Slot) {
 }
 
-void UYCAW_DebugMenu::OutputFile(int32 Slot) {
+void UYCAW_DebugMenu::OutputFile(int32 Slot, bool bThumbnail) {
 }
 
 

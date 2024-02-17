@@ -4,6 +4,7 @@
 #include "ManaAudioTrackInfo.h"
 #include "ManaEventPointInfo.h"
 #include "ManaSource.h"
+#include "ManaSubtitleTrackInfo.h"
 #include "ManaVideoTrackInfo.h"
 #include "ManaMovie.generated.h"
 
@@ -24,11 +25,20 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FManaEventPointInfo> EventPoints;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    TArray<FManaSubtitleTrackInfo> SubtitleTracks;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumSubtitleChannels;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxSubtitleSize;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 MinBufferSize;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 MaxChunkSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsAlpha: 1;

@@ -4,6 +4,7 @@
 #include "ETipsLoadingCategory.h"
 #include "TipsLoadingExecCountInfo_Ref.h"
 #include "TipsLoadingResourceInfo.h"
+#include "TipsLoadingSequence.h"
 #include "TipsLoadingCompleteDelegateDelegate.h"
 #include "ELTipsLoadingManager.generated.h"
 
@@ -33,10 +34,16 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AELTipsLoadingExecutorBase* m_pLoadingExecuteActor;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 m_TipsTypeProgress;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FTipsLoadingSequence m_SequenceParam;
+    
 public:
     UELTipsLoadingManager();
     UFUNCTION(BlueprintCallable)
-    bool StartScreen(ETipsLoadingCategory _displayCategory, FTipsLoadingCompleteDelegate _completeDelegate, bool _isFadeInStart);
+    bool StartScreen(ETipsLoadingCategory _displayCategory, FTipsLoadingCompleteDelegate _completeDelegate, bool _isFadeInStart, int32 _baseZOrder);
     
     UFUNCTION(BlueprintCallable)
     void SetOverrideNextLevel(const FName& _nextLevel, const FString& _optionString);
@@ -53,7 +60,7 @@ public:
     void EndScreen();
     
     UFUNCTION(BlueprintCallable)
-    bool Debug_StartScreen(ETipsLoadingCategory _displayCategory, int32 _selectTipsIndex, FTipsLoadingCompleteDelegate _completeDelegate);
+    bool Debug_StartScreen(ETipsLoadingCategory _displayCategory, int32 _selectTipsIndex, FTipsLoadingCompleteDelegate _completeDelegate, int32 _selectCategoryIndex);
     
     UFUNCTION(BlueprintCallable)
     void ClearOverrideNextLevel();

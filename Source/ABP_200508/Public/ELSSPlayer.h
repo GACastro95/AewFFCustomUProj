@@ -35,6 +35,7 @@
 #include "ESSPlayerPurpose.h"
 #include "ESSPlayerStartLocatorAreaId.h"
 #include "ESSPlayerStartLocatorType.h"
+#include "ESSTeamScoreReason.h"
 #include "ESSWeaponType.h"
 #include "ESSWrestlerType.h"
 #include "SSAbilityParam.h"
@@ -77,8 +78,10 @@ class AELSSShieldBase;
 class AELSSSilhouetteActorManager;
 class AELSSSituationMoveTrigger;
 class AELSSStationalCamera;
+class AELSSTeamState;
 class AELSSThrowPrediction;
 class AELSSWeaponBase;
+class AELSSWeaponFgfBall;
 class AELSSWeaponThrowProjectile_Pushpin;
 class APawn;
 class UAnimMontage;
@@ -129,6 +132,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> ActorsToIgnoreSelf;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayerController* CachedFirstLocalSSPlayerController;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -385,6 +391,15 @@ protected:
     float DirectionalThrow_BlowPowerScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bEquipFgfBall;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSWeaponFgfBall* FgfBall;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayer* FgfPassTarget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AELSSWeaponBase* StickedWeapon;
     
 private:
@@ -444,6 +459,12 @@ protected:
     float SlipSETriggerWaitTimeCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FName RespawnEffectDatabaseRowName;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AActor* RespawnEffect;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ESSDamageReceiverState> DamageReceiverStateOverride;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -501,6 +522,9 @@ private:
     float KoDamageCycleTimer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayer* LastKoCauserPlayer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ReviveEffectDatabaseRowName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -528,6 +552,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DisappearTimeCount;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AELSSPlayer* LastDeadCauserPlayer;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UELSSAttackerComponent* AttackerComponent;
     
@@ -549,6 +576,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PickupedCarrot, meta=(AllowPrivateAccess=true))
     AELSSPickupBase* PickupedCarrot;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PickupedBlackDia, meta=(AllowPrivateAccess=true))
+    AELSSPickupBase* PickupedBlackDia;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -782,6 +812,12 @@ protected:
     int32 PlayerFlags;
     
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    int32 TeamId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    int32 TeamMemberSlotNo;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HudHpGaugeOffsetZ;
     
@@ -855,6 +891,9 @@ protected:
     bool bDisableSimulateMove;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bDisableCollisionForDrivingState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDisableMoveCollision;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -883,6 +922,15 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CameraToActorDistanceSqr;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVector LastLocationFgfBallRunCheck;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FgfBallRunDistance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FgfBallRunTimeCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_PlayerDebugFlags, meta=(AllowPrivateAccess=true))
     int32 PlayerDebugFlags;
@@ -967,6 +1015,9 @@ public:
 private:
     UFUNCTION(BlueprintCallable)
     void UpdateCarrotUI();
+    
+    UFUNCTION(BlueprintCallable)
+    void UpdateBlackDiaUI();
     
 public:
     UFUNCTION(BlueprintCallable)
@@ -1103,6 +1154,9 @@ public:
     void SetPickupedCarrot(AELSSPickupBase* newPickup, AELSSPickupBase* lastPickup);
     
     UFUNCTION(BlueprintCallable)
+    void SetPickupedBlackDia(AELSSPickupBase* newPickup, AELSSPickupBase* lastPickup);
+    
+    UFUNCTION(BlueprintCallable)
     void SetMoveCollisionHeightScale(float inHeightScale, float inRadiusScale);
     
     UFUNCTION(BlueprintCallable)
@@ -1185,11 +1239,20 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void ResponseSyncRotationMulticast(float inYaw);
     
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Respawn_Multicast(const FTransform& inRespawnTransform);
+    
+    UFUNCTION(BlueprintCallable)
+    void Respawn(const FTransform& inRespawnTransform);
+    
     UFUNCTION(BlueprintCallable)
     void ResetStationalCamera(float InDuration);
     
     UFUNCTION(BlueprintCallable)
     void ResetRestrictWaitSituationMove();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void ResetPlayerPositionForFgf_Multicast(const FTransform& inRespawnTransform);
     
     UFUNCTION(BlueprintCallable)
     void ResetInteractStateLocalInfo();
@@ -1287,6 +1350,9 @@ public:
     bool PickupCarrot(AELSSPickupBase* Pickup);
     
     UFUNCTION(BlueprintCallable)
+    bool PickupBlackDia(AELSSPickupBase* Pickup);
+    
+    UFUNCTION(BlueprintCallable)
     void PerformDamage(const FSSAttackParam& inAttackParam, const FSSDamageResult& damageResult);
     
 private:
@@ -1330,6 +1396,9 @@ public:
 private:
     UFUNCTION(BlueprintCallable)
     void OnRep_PickupedCarrot(AELSSPickupBase* lastPickup);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_PickupedBlackDia(AELSSPickupBase* lastPickup);
     
 protected:
     UFUNCTION(BlueprintCallable)
@@ -1555,6 +1624,9 @@ public:
     bool IsDown() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsDisappear() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDead() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -1571,6 +1643,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool HasCarrot() const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool HasBlackDia() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasAnyWeaponInInventory(ESSWeaponType WeaponType) const;
@@ -1591,16 +1666,22 @@ public:
     AELSSPlayerController* GetWatcherPlayerController() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    AELSSTeamState* GetTeamStateForUIUpdate() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    AELSSTeamState* GetTeamState() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetTeamMemberSlotNo() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetTeamId() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UELSSTargetComponent* GetTargetComponent() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetTargetActor() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    FName GetSystemMotionRowNameByWrestlerType();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    FName GetSystemMotionRowNameByWrestlerProfile();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSPlayer* GetSyncTargetPlayer() const;
@@ -1732,6 +1813,9 @@ protected:
     UELSSFootIK* GetFootIKComponent() const;
     
 public:
+    UFUNCTION(BlueprintCallable)
+    AELSSPlayerController* GetFirstLocalSSPlayerController() const;
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELSSStationalCamera* GetExternalStationalCamera() const;
     
@@ -1908,6 +1992,9 @@ public:
     UFUNCTION(BlueprintCallable)
     AELSSPickupBase* DropCarrot();
     
+    UFUNCTION(BlueprintCallable)
+    AELSSPickupBase* DropBlackDia();
+    
 private:
     UFUNCTION(BlueprintCallable)
     TArray<AELSSPickupBase*> DropAllPickupsFromInventory();
@@ -2029,11 +2116,17 @@ private:
     bool CheckForSpecialCaseDoInteract() const;
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool CheckEquipFgfBall() const;
+    
     UFUNCTION(BlueprintCallable)
     bool CheckAttackedLocalPlayer() const;
     
     UFUNCTION(BlueprintCallable)
     bool CheckAlreadyHitKoFinisher() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool CheckAllyTeamPlayer(const AELSSPlayer* otherPlayer) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckAllowCharacterControll(bool inForMove) const;
@@ -2178,6 +2271,12 @@ private:
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ApplyAdjustParam();
+    
+    UFUNCTION(BlueprintCallable)
+    void AddTeamScoreByItem(int32 inScore, int32 itemDatabaseId);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddTeamScore(ESSTeamScoreReason inReason, int32 inScore);
     
     UFUNCTION(BlueprintCallable)
     bool AddPickupToInventoryAt(AELSSPickupBase* Pickup, int32 Index);

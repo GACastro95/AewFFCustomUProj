@@ -8,6 +8,5 @@ enum class EEliteMeterStateType_N : uint8 {
     Excite,
     Special,
     Danger,
-    EEliteMeterStateType_MAX UMETA(Hidden),
 };
 

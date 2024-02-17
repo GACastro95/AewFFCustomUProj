@@ -1,6 +1,6 @@
 #include "ELTipsLoadingManager.h"
 
-bool UELTipsLoadingManager::StartScreen(ETipsLoadingCategory _displayCategory, FTipsLoadingCompleteDelegate _completeDelegate, bool _isFadeInStart) {
+bool UELTipsLoadingManager::StartScreen(ETipsLoadingCategory _displayCategory, FTipsLoadingCompleteDelegate _completeDelegate, bool _isFadeInStart, int32 _baseZOrder) {
     return false;
 }
 
@@ -17,7 +17,7 @@ bool UELTipsLoadingManager::GetResourceInfo(ETipsLoadingCategory _displayCategor
 void UELTipsLoadingManager::EndScreen() {
 }
 
-bool UELTipsLoadingManager::Debug_StartScreen(ETipsLoadingCategory _displayCategory, int32 _selectTipsIndex, FTipsLoadingCompleteDelegate _completeDelegate) {
+bool UELTipsLoadingManager::Debug_StartScreen(ETipsLoadingCategory _displayCategory, int32 _selectTipsIndex, FTipsLoadingCompleteDelegate _completeDelegate, int32 _selectCategoryIndex) {
     return false;
 }
 
@@ -27,5 +27,6 @@ void UELTipsLoadingManager::ClearOverrideNextLevel() {
 UELTipsLoadingManager::UELTipsLoadingManager() {
     this->UseOverrideNextLevel = false;
     this->m_pLoadingExecuteActor = NULL;
+    this->m_TipsTypeProgress = 0;
 }
 

@@ -17,6 +17,8 @@ FAttireExData::FAttireExData() {
     this->AttireMaterial = NULL;
     this->bApplyPatternTextureToAttire = false;
     this->AttirePatternTexture = NULL;
+    this->bApplyPatternTextureChangeColorToAttire = false;
+    this->AttirePatternMaskTexture = NULL;
     this->bApplyDarkSkinModeToAttire = false;
 }
 

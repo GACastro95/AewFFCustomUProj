@@ -33,6 +33,7 @@ UELSSWidgetHUD_Interact::UELSSWidgetHUD_Interact() {
     this->PlayInAnim = NULL;
     this->PlayOutAnim = NULL;
     this->GeneralInteract = NULL;
+    this->TeamTreasureBoxInteract = NULL;
     this->LayoutWidget = NULL;
     this->ItemInteract = NULL;
     this->VehicleGauge = NULL;

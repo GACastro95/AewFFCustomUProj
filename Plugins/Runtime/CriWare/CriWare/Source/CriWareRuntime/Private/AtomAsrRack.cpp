@@ -9,6 +9,13 @@ void UAtomAsrRack::SetBusVolumeByName(const FString& BusName, float Volume) {
 void UAtomAsrRack::SetBusSendLevelByName(const FString& SourceBusName, const FString& DestBusName, float Level) {
 }
 
+void UAtomAsrRack::SetAisacControlByName(const FString& control_name, float control_value) {
+}
+
+bool UAtomAsrRack::IsEnabledBinauralizer() {
+    return false;
+}
+
 UAtomAsrRack* UAtomAsrRack::GetDefaultAsrRack() {
     return NULL;
 }
@@ -23,6 +30,9 @@ bool UAtomAsrRack::GetBusAnalyzerInfo(const FString& DspBusName, int32& num_chan
 
 UAtomAsrRack* UAtomAsrRack::GetAsrRack(int32 AsrRackID) {
     return NULL;
+}
+
+void UAtomAsrRack::EnableBinauralizer(bool bIsEnabled) {
 }
 
 void UAtomAsrRack::DetachDspBusSetting() {

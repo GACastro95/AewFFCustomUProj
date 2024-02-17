@@ -9,7 +9,7 @@ class YGS2CLIENT_API UYGS2Req_SetPlayerData : public UYGS2RequestBase {
 public:
     UYGS2Req_SetPlayerData();
     UFUNCTION(BlueprintCallable)
-    void SetDebugGamerTag(const FString& _strGameTag);
+    void SetGamerTag(const FString& _strGameTag);
     
     UFUNCTION(BlueprintCallable)
     void SetAEWGoldTolal(int32 _sAEWGoldTotal);

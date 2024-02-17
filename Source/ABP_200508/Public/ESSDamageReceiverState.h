@@ -24,5 +24,6 @@ enum class ESSDamageReceiverState : uint8 {
     Invincible,
     AfterDownStandUp,
     AdditionalSuperArmor,
+    AfterRespawn,
 };
 

@@ -234,6 +234,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<int32, int32> LastErrors;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString DebugQuickPlayMatchList;
+    
 public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEOSEvent OnEOSEvent;
@@ -434,6 +437,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool GetQuitGameOnFailedEAC();
+    
+    UFUNCTION(BlueprintCallable)
+    void GetQuickPlayMatchTypePool(TArray<int32>& outMatchTypePool);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetP2PTimeoutLatency() const;

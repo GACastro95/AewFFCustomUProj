@@ -13,5 +13,6 @@ FELSSDebugMenuParam::FELSSDebugMenuParam() {
     this->Ability2 = 0;
     this->Ability3 = 0;
     this->SkipReadyState = false;
+    this->RuleId = 0;
 }
 

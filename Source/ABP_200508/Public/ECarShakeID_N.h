@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class ECarShakeID_N : uint8 {
     WeakShake,
     StrongShake,
-    ECarShakeID_MAX UMETA(Hidden),
 };
 

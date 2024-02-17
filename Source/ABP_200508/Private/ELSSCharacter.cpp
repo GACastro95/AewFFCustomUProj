@@ -34,6 +34,9 @@ void AELSSCharacter::ReductionBodyMaterial(USkeletalMeshComponent* inBodyMesh) {
 void AELSSCharacter::PlayMontage(UAnimMontage* inMontage) {
 }
 
+void AELSSCharacter::PlayDefaultIdleMontage() {
+}
+
 USkeletalMesh* AELSSCharacter::MergeMeshes(TArray<USkeletalMesh*> inMeshesToMerge, TArray<USkeletalMeshComponent*> inMeshCompsToMerge) {
     return NULL;
 }
@@ -41,6 +44,8 @@ USkeletalMesh* AELSSCharacter::MergeMeshes(TArray<USkeletalMesh*> inMeshesToMerg
 FELWrestlerProfile AELSSCharacter::GetWrestlerProfile() const {
     return FELWrestlerProfile{};
 }
+
+
 
 
 UAnimMontage* AELSSCharacter::GetActiveMontage() {
@@ -56,6 +61,7 @@ AELSSCharacter::AELSSCharacter() {
     this->HairMesh = NULL;
     this->CharacterProfilesClass = UCharacterBasicProfiles::StaticClass();
     this->CharacterProfiles = NULL;
+    this->DefaultIdleMontage = NULL;
     this->MergedMeshComp = NULL;
     this->bVisibleMergedMesh = false;
 }

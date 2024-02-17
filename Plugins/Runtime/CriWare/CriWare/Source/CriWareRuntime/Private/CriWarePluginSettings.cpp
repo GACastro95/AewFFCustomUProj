@@ -36,6 +36,13 @@ UCriWarePluginSettings::UCriWarePluginSettings() {
     this->EconomicTickMarginDistance = 1000000.00f;
     this->EconomicTickFrequency = 15;
     this->CullingMarginDistance = 1000000.00f;
+    this->EnableDirectDbasConfig = false;
+    this->DbasIdentifier = 0;
+    this->DbasMaxStreams = 8;
+    this->DbasMaxBps = 3456000;
+    this->DbasMaxManaStreams = 0;
+    this->DbasMaxManaBps = 0;
+    this->DbasNumSecurementBuffers = 4;
     this->HcaMxVoiceSamplingRate = 48000;
     this->NumHcaMxMemoryVoices = 0;
     this->HcaMxMemoryVoiceNumChannels = 2;
@@ -68,6 +75,10 @@ UCriWarePluginSettings::UCriWarePluginSettings() {
     this->MaxManaBPS = 0;
     this->MaxManaStreams = 0;
     this->UseH264Decoder = false;
+    this->UseDecoderOutputBuffers = false;
+    this->ForceSoftwareDecodingOnXboxOne = false;
+    this->ForceSoftwareDecodingOnXboxSeries = false;
+    this->ForceDisableManaStreamerManager = false;
     this->InitializeAdxLipSync = true;
     this->MaxNumAnalyzerHandles = 0;
     this->bUseManaStartupMovies = false;

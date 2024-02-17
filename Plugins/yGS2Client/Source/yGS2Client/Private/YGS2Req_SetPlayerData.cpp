@@ -1,6 +1,6 @@
 #include "YGS2Req_SetPlayerData.h"
 
-void UYGS2Req_SetPlayerData::SetDebugGamerTag(const FString& _strGameTag) {
+void UYGS2Req_SetPlayerData::SetGamerTag(const FString& _strGameTag) {
 }
 
 void UYGS2Req_SetPlayerData::SetAEWGoldTolal(int32 _sAEWGoldTotal) {

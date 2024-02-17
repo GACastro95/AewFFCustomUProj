@@ -6,5 +6,6 @@ FSSWrestlerVisualModifyParam::FSSWrestlerVisualModifyParam() {
     this->ForceRemove = false;
     this->DisableShieldVisible = false;
     this->DisableStick = false;
+    this->ForceEnableOnCategoryDisableShieldVisible = false;
 }
 

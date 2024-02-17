@@ -70,6 +70,9 @@ public:
     bool IsDisable() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsCommunityWrestler() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasWrestlerDataFlag(const EWrestlerDataObjectFlag FlagType) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

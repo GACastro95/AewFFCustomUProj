@@ -10,6 +10,7 @@
 #include "ESSDamageReason.h"
 #include "ESSWheeledVehicleDamagedState.h"
 #include "ESSWheeledVehicleDrivingPose.h"
+#include "SSVehicleAttackedHistory.h"
 #include "ELSSWheeledVehicle.generated.h"
 
 class AActor;
@@ -141,6 +142,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ReduceDurabilityValueWhenRunOver;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSSVehicleAttackedHistory> AttackedHistory;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RunOverInterval;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 IsExploded: 1;

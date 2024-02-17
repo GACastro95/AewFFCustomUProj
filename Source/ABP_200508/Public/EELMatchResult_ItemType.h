@@ -9,6 +9,5 @@ enum class EELMatchResult_ItemType : uint8 {
     Rematch,
     NextMatch,
     QuitMatch,
-    EELMatchResult_MAX UMETA(Hidden),
 };
 

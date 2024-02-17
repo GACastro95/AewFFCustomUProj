@@ -16,10 +16,10 @@ protected:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, TWeakObjectPtr<UYDebugMenuSubMenuBase>> m_cSubMenus;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UYDebugMenuRootBase> m_cRefParentRoot;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UYDebugMenuSubMenuBase> m_cRefParentSubMenu;
     
 public:

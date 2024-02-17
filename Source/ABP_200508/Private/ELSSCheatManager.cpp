@@ -144,6 +144,12 @@ void UELSSCheatManager::SSMoveIdOverrideEnable(bool IsOn) {
 void UELSSCheatManager::SSMoveIdOverride(ESSMoveCommand MoveCommand, int32 MoveId, bool isEquip, bool withSetEnable) {
 }
 
+void UELSSCheatManager::SSMoveFrictionScale(float Scale) {
+}
+
+void UELSSCheatManager::SSMoveFrictionDuration(float Scale) {
+}
+
 void UELSSCheatManager::SSMapIconForceVisible(bool IsOn) {
 }
 
@@ -156,10 +162,22 @@ void UELSSCheatManager::SSGameStateDebugFlag(ESSGameStateDebugFlag Type, bool Is
 void UELSSCheatManager::SSForciblyEndMatch() {
 }
 
+void UELSSCheatManager::SSForceRespawnNearTeamMember() {
+}
+
+void UELSSCheatManager::SSForceRespawn() {
+}
+
 void UELSSCheatManager::SSForceNoResponseMode(bool IsOn) {
 }
 
 void UELSSCheatManager::SSForceGuardToTarget(float guardTime) {
+}
+
+void UELSSCheatManager::SSForceFeverOffense(bool IsOn) {
+}
+
+void UELSSCheatManager::SSForceFeverDefense(bool IsOn) {
 }
 
 void UELSSCheatManager::SSDisableNoResponseTimeOut(bool IsOn) {
@@ -169,6 +187,12 @@ void UELSSCheatManager::SSDisableCameraAction(bool IsOn) {
 }
 
 void UELSSCheatManager::SSDestroyThemAll(bool excludeMyself) {
+}
+
+void UELSSCheatManager::SSDestroyTeamMembers(bool excludeMyself) {
+}
+
+void UELSSCheatManager::SSDestroyExceptTeamMembers(int32 exceptTeamId) {
 }
 
 void UELSSCheatManager::SSDestroyAllPickupObjects() {
@@ -183,16 +207,19 @@ void UELSSCheatManager::SSCheatDetection() {
 void UELSSCheatManager::SSChangeCameraTarget(int32 playerStateIndex) {
 }
 
+void UELSSCheatManager::SSBallOwnerSpeedScale(float Scale) {
+}
+
 void UELSSCheatManager::SSAssembleThemAll() {
 }
 
 void UELSSCheatManager::SSAIPlayerSpawnPresetByName(const FString& InName) {
 }
 
-void UELSSCheatManager::SSAIPlayerSpawnPreset(int32 InFaceID, int32 InBodyID, int32 InHairID, int32 InBottomsID, int32 InShoesID, int32 InSuitID, bool InRandom) {
+void UELSSCheatManager::SSAIPlayerSpawnPreset(int32 InFaceID, int32 InBodyID, int32 InHairID, int32 InBottomsID, int32 InShoesID, int32 InSuitID, bool InRandom, int32 InTeamId) {
 }
 
-void UELSSCheatManager::SSAIPlayerSpawn(EWrestlerID_N WrestlerID) {
+void UELSSCheatManager::SSAIPlayerSpawn(EWrestlerID_N WrestlerID, int32 InTeamId) {
 }
 
 void UELSSCheatManager::SSAIPlayerNoDamage(bool IsOn) {

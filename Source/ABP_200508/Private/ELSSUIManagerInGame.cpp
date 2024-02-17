@@ -8,6 +8,7 @@ void AELSSUIManagerInGame::ResetAbility() {
 
 AELSSUIManagerInGame::AELSSUIManagerInGame() {
     this->Panel = NULL;
+    this->DirectionPanelNative = NULL;
     this->IsCanPushSwitchMapMode = false;
 }
 

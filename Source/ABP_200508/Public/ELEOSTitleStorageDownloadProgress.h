@@ -13,7 +13,7 @@ private:
     
 public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
-        UObject* OnCompleteDownloadFilesDelegate;
+    UObject* OnCompleteDownloadFilesDelegate;
     //FOnCompleteDownloadFiles OnCompleteDownloadFilesDelegate;
     
     UELEOSTitleStorageDownloadProgress();

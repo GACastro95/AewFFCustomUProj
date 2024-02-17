@@ -10,7 +10,7 @@
 
 class AActor;
 class AELSSGameState;
-class AELSSLocator;
+class AELSSLocator_PlayerStart;
 class AELSSPlayerState;
 class UELSSAnalyticsLog2YGS2Object;
 
@@ -19,6 +19,9 @@ class ABP_200508_API AELSSGameMode : public AGameLiftGameServerMode {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsDoneInitGame;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString GameServerEnvName;
     
@@ -71,7 +74,7 @@ protected:
     AELSSGameState* SSGameState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<AELSSPlayerState*, AELSSLocator*> ReservedPlayerStartMap;
+    TMap<AELSSPlayerState*, AELSSLocator_PlayerStart*> ReservedPlayerStartMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WaitJoinElapsedTime;
@@ -118,7 +121,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickState_Matching(float inDeltaSeconds);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void TickState_InProgress(float inDeltaSeconds);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -149,6 +152,9 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void SetupLaunchType();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool SetupCharacterPlacement();
     
 protected:
@@ -161,6 +167,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void PrintLog(const FString& Log);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void PostInitGame();
     
     UFUNCTION(BlueprintCallable)
     void OnStartTipsLoading();
@@ -209,7 +218,7 @@ public:
     ESSServerState GetServerState() const;
     
     UFUNCTION(BlueprintCallable)
-    AELSSLocator* GetReservedPlayerStartLocator(AELSSPlayerState* inPlayerState, bool inConsume);
+    AELSSLocator_PlayerStart* GetReservedPlayerStartLocator(AELSSPlayerState* inPlayerState, bool inConsume);
     
 private:
     UFUNCTION(BlueprintCallable)
@@ -229,7 +238,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ExitState_Matching();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ExitState_InProgress();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -256,7 +265,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnterState_Matching();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void EnterState_InProgress();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -278,6 +287,12 @@ protected:
     bool EndOfMatch();
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void DoneDataLoading();
+    
+    UFUNCTION(BlueprintCallable)
+    void DebugSetupTeamInfos();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool DebugIsAIOnlyMode() const;
     

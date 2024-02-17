@@ -9,6 +9,5 @@ enum class ERA_SlotIntro_Order : uint8 {
     PARTNER,
     THEREAFTER,
     CAREEROPPONENT,
-    ERA_SlotIntro_MAX UMETA(Hidden),
 };
 

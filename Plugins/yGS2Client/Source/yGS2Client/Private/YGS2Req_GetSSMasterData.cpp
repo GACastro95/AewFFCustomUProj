@@ -7,6 +7,10 @@ FYGS2SSMasterData UYGS2Req_GetSSMasterData::GetMasterData() const {
     return FYGS2SSMasterData{};
 }
 
+float UYGS2Req_GetSSMasterData::GetElapsedTime() const {
+    return 0.0f;
+}
+
 UYGS2Req_GetSSMasterData::UYGS2Req_GetSSMasterData() {
 }
 

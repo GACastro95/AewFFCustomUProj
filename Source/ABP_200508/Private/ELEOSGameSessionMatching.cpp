@@ -10,7 +10,7 @@ void UELEOSGameSessionMatching::SetOnlineMatchCount(int32 Count) {
 void UELEOSGameSessionMatching::SearchSessionInitParam() {
 }
 
-bool UELEOSGameSessionMatching::SearchSessionCancel() {
+bool UELEOSGameSessionMatching::SearchSessionCancel(bool CallCancelEvent) {
     return false;
 }
 

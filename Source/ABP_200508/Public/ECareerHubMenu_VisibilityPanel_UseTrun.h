@@ -7,6 +7,5 @@ enum class ECareerHubMenu_VisibilityPanel_UseTrun : uint8 {
     CommandPanel,
     ActionPanel,
     Both,
-    ECareerHubMenu_VisibilityPanel_MAX UMETA(Hidden),
 };
 

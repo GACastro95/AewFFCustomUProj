@@ -1,26 +1,19 @@
 #include "ELSSVictoryCutscene.h"
 
 
+
+
 void AELSSVictoryCutscene::Skip() {
 }
 
-bool AELSSVictoryCutscene::Prepare_Implementation(EWrestlerID_N NewWrestlerID, ESSWrestlerType WrestlerType, ACharacter* NewTargetCharacter, AELSSPlayer* TargetPlayer) {
+bool AELSSVictoryCutscene::Prepare_Implementation(const TArray<FSSVictoryCutsceneCharaSetting>& inCharaSettings) {
     return false;
 }
 
-void AELSSVictoryCutscene::PlaySoundAnnounce() {
-}
-
-void AELSSVictoryCutscene::PlayCharacterMontage() {
-}
-
-void AELSSVictoryCutscene::PlayCharacterLoopMontage() {
-}
-
-
-bool AELSSVictoryCutscene::Play_Implementation() {
+bool AELSSVictoryCutscene::PlayCutscene() {
     return false;
 }
+
 
 void AELSSVictoryCutscene::OnSkip_Implementation() {
 }
@@ -35,8 +28,10 @@ AELSSVictoryCutscene::AELSSVictoryCutscene() {
     this->LevelSequence = NULL;
     this->LSPlayer = NULL;
     this->LSActor = NULL;
-    this->WrestlerID = EWrestlerID_N::None;
-    this->targetCharacter = NULL;
+    this->Locator = NULL;
     this->IsDonePlay = false;
+    this->TeamCharaPlaceWidth = 800.00f;
+    this->TeamCharaEffectDelayTime = 1.00f;
+    this->TeamCharaMotionDelayTime = 2.00f;
 }
 

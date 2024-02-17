@@ -8,6 +8,5 @@ enum class ECareerDebug_AutoPlay_RepeatUseTurn : uint8 {
     Training,
     Dining,
     SightSeeing,
-    ECareerDebug_AutoPlay_MAX UMETA(Hidden),
 };
 

@@ -28,6 +28,9 @@ enum class ESSMoveCommand : uint8 {
     AbilityMove1,
     AbilityMove2,
     AbilityMove3,
+    FgfPass,
+    FgfThrow,
+    FgfAimThrow,
     Max,
 };
 

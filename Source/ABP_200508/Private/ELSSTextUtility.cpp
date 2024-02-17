@@ -4,6 +4,22 @@ FText UELSSTextUtility::GetSSWeaponName(int32 inDatabaseId) {
     return FText::GetEmpty();
 }
 
+FText UELSSTextUtility::GetSSRuleType(ESSRuleType Type) {
+    return FText::GetEmpty();
+}
+
+FText UELSSTextUtility::GetSSRuleTitle(int32 inDatabaseId) {
+    return FText::GetEmpty();
+}
+
+FText UELSSTextUtility::GetSSRuleTeam(ESSTeamType Type) {
+    return FText::GetEmpty();
+}
+
+FText UELSSTextUtility::GetSSRuleExplanation(int32 inDatabaseId) {
+    return FText::GetEmpty();
+}
+
 FText UELSSTextUtility::GetSSMoveName(int32 inDatabaseId) {
     return FText::GetEmpty();
 }

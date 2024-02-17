@@ -96,6 +96,9 @@ void UELGameSystemDataUtilityFunction::SetDisplay_FpsValueIndex(int32 _Index, UO
 void UELGameSystemDataUtilityFunction::SetDisplay_DLSS_OptionIndex(int32 Index, UObject* _pWorldContextObject) {
 }
 
+void UELGameSystemDataUtilityFunction::SetCreatorSetting_StreamerMode(bool _value, UObject* _pWorldContextObject) {
+}
+
 void UELGameSystemDataUtilityFunction::SetAudio_VoiceVolume(int32 _value, UObject* _pWorldContextObject) {
 }
 
@@ -273,6 +276,10 @@ int32 UELGameSystemDataUtilityFunction::GetDisplay_FpsValueIndex(UObject* _pWorl
 
 int32 UELGameSystemDataUtilityFunction::GetDisplay_DLSS_OptionIndex(UObject* _pWorldContextObject) {
     return 0;
+}
+
+bool UELGameSystemDataUtilityFunction::GetCreatorSetting_StreamerMode(UObject* _pWorldContextObject) {
+    return false;
 }
 
 int32 UELGameSystemDataUtilityFunction::GetAudio_VoiceVolume(UObject* _pWorldContextObject) {

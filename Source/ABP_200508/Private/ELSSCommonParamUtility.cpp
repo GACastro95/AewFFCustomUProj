@@ -1,5 +1,9 @@
 #include "ELSSCommonParamUtility.h"
 
+bool UELSSCommonParamUtility::MakeSSRuleStatusByScheduleId(const UObject* WorldContextObject, int32 inRuleScheduleId, FSSRuleStatus& OutParam) {
+    return false;
+}
+
 bool UELSSCommonParamUtility::GetSSWrestlerTypeResourceParam(const UObject* WorldContextObject, ESSWrestlerType inWrestlerType, FSSWrestlerTypeResourceParam& OutRow) {
     return false;
 }
@@ -13,6 +17,34 @@ bool UELSSCommonParamUtility::GetSSWrestlerParam(const UObject* WorldContextObje
 }
 
 bool UELSSCommonParamUtility::GetSSWeaponCommonParam(const UObject* WorldContextObject, int32 ID, FSSWeaponCommonParam& OutRow) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleScheduleParamArray(const UObject* WorldContextObject, TArray<FSSRuleScheduleParam>& OutParam) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleScheduleParam(const UObject* WorldContextObject, int32 inRuleScheduleId, FSSRuleScheduleParam& OutParam) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleScheduleList(const UObject* WorldContextObject, FDateTime inDateTimeUTC, TArray<FSSRuleScheduleParam>& outParamList) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleResourceParamByRuleId(const UObject* WorldContextObject, int32 inRuleId, FSSRuleResourceParam& OutParam) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleResourceParam(const UObject* WorldContextObject, int32 inRuleResourceId, FSSRuleResourceParam& OutParam) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleParamArray(const UObject* WorldContextObject, TArray<FSSRuleParam>& OutParam) {
+    return false;
+}
+
+bool UELSSCommonParamUtility::GetSSRuleParam(const UObject* WorldContextObject, int32 inRuleId, FSSRuleParam& OutParam) {
     return false;
 }
 
@@ -106,6 +138,10 @@ int32 UELSSCommonParamUtility::GetSSHeatLevelExp(const UObject* WorldContextObje
     return 0;
 }
 
+bool UELSSCommonParamUtility::GetSSGeneralParam(const UObject* WorldContextObject, FSSGeneralParam& OutRow) {
+    return false;
+}
+
 bool UELSSCommonParamUtility::GetSSGameRuleParam(const UObject* WorldContextObject, FSSGameRuleParam& outData) {
     return false;
 }
@@ -160,6 +196,10 @@ UTexture2D* UELSSCommonParamUtility::GetSSAbilityIconTexture(const UObject* Worl
 
 ESSAbilityCalcMethod UELSSCommonParamUtility::GetSSAbilityCalcMethod(const UObject* WorldContextObject, ESSAbilityKind Kind) {
     return ESSAbilityCalcMethod::None;
+}
+
+bool UELSSCommonParamUtility::FindSSRuleScheduleParamByRuleId(const UObject* WorldContextObject, int32 inRuleId, FSSRuleScheduleParam& OutParam) {
+    return false;
 }
 
 int32 UELSSCommonParamUtility::CalcSSStampedeLevelFromExp(const UObject* WorldContextObject, int32 inExp) {

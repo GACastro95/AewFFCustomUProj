@@ -29,6 +29,9 @@ public:
     static UDataTable* GetDisplayOptionSettingDataTable();
     
     UFUNCTION(BlueprintCallable)
+    static UDataTable* GetCommunityWrestlerTable();
+    
+    UFUNCTION(BlueprintCallable)
     static UDataTable* GetCharacterProfilesTable();
     
     UFUNCTION(BlueprintCallable)

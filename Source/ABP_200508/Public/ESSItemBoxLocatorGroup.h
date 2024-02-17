@@ -16,5 +16,7 @@ enum class ESSItemBoxLocatorGroup : uint8 {
     RarityEpic,
     RarityLegend,
     Carrot,
+    DefenseTeamTreasureBox,
+    MultiLockedTeamTreasureBox,
 };
 

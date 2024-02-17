@@ -11,6 +11,9 @@ class ABP_200508_API UYUnlockableItem_DebugMenu : public UELDebugMenuRootBase {
 public:
     UYUnlockableItem_DebugMenu();
     UFUNCTION(BlueprintCallable)
+    void SetEnableUnlockSkip(bool bEnable);
+    
+    UFUNCTION(BlueprintCallable)
     void ExecuteRevertDefault();
     
     UFUNCTION(BlueprintCallable)

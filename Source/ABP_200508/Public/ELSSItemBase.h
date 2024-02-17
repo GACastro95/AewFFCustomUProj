@@ -89,6 +89,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void OnRep_AbsorbMoveTo();
     
+protected:
     UFUNCTION(BlueprintCallable)
     void OnEndPerformAbsorbMovement();
     

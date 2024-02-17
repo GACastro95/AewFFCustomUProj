@@ -92,6 +92,9 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void PlaySoundAtLocation(UObject* WorldContextObject, USoundAtomCue* Sound, FVector Location, FRotator Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundAttenuation* AttenuationSettings, USoundConcurrency* ConcurrencySettings);
     
+    UFUNCTION(BlueprintCallable)
+    static UAtomComponent* PlayAtomSoundForAnimNotify(USoundAtomCue* Sound, const FAtomComponentParams& Params, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundAttenuation* AttenuationSettings, bool bFollow);
+    
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void PlayAtomSoundAtLocationByName(const UObject* WorldContextObject, USoundAtomCueSheet* CueSheet, const FString& CueName, FVector Location, const FAtomComponentParams& Params);
     

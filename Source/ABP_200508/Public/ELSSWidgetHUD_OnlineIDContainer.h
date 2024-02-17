@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ELSSWidgetBase.h"
+#include "ESSMatchIconType.h"
 #include "ELSSWidgetHUD_OnlineIDContainer.generated.h"
 
 class AActor;
@@ -25,7 +26,7 @@ public:
     void SetVisibleContainer(bool inIsVisible);
     
     UFUNCTION(BlueprintCallable)
-    void ApplyOnlineID(AActor* InActor, const FString& InOnlineID, bool inIsVisible, bool InHasCarrot);
+    void ApplyOnlineID(AActor* InActor, const FString& InOnlineID, bool inIsVisible, bool InHasCarrot, ESSMatchIconType InIconType);
     
 };
 

@@ -17,5 +17,7 @@ FUnlockableItemParam::FUnlockableItemParam() {
     this->PremiumB_PassItem = false;
     this->ChallengeItem = false;
     this->EnableChangeColor = false;
+    this->DefaultNewUnlocked = false;
+    this->NeedAdditionalCondition = false;
 }
 

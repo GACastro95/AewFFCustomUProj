@@ -9,10 +9,16 @@ void UELGameInstance::WrestlerSelectEnd() {
 void UELGameInstance::StartTournamentMode(EELTournamentType Type, EELTournamentDifficulty Difficulty, FELTournamentInfo Info) {
 }
 
+void UELGameInstance::StartLocalTournamentMode() {
+}
+
 void UELGameInstance::Shutdown() {
 }
 
 void UELGameInstance::SetWholeLevelBGMID(int32 _sData, int32 _sIndex) {
+}
+
+void UELGameInstance::SetVolumeByMuteAtomList(bool bStreamerMode) {
 }
 
 void UELGameInstance::SetValidNewWrestlerSelect(bool bValid) {
@@ -163,6 +169,36 @@ void UELGameInstance::SetMatchResultType_N(EELMatchResultType _type) {
 }
 
 void UELGameInstance::SetMatchResult(FELMatchResultParam _value) {
+}
+
+void UELGameInstance::SetLocalTournamentWrestler(int32 EntryNo, int32 PositionIndex, FELTournamentWrestlerIdentifier WrestlerIdentifier) {
+}
+
+void UELGameInstance::SetLocalTournamentType(EELLocalTournamentType Type) {
+}
+
+void UELGameInstance::SetLocalTournamentState(EELLocalTournamentState State) {
+}
+
+void UELGameInstance::SetLocalTournamentSetting(const FELLocalTournamentBaseSetting& Setting) {
+}
+
+void UELGameInstance::SetLocalTournamentName(const FString& Name) {
+}
+
+void UELGameInstance::SetLocalTournamentMatchResult(const TArray<uint8>& Result) {
+}
+
+void UELGameInstance::SetLocalTournamentLastMatchResult(int32 WinTeamNo) {
+}
+
+void UELGameInstance::SetLocalTournamentEntryScale(EELLocalTournamentEntryScale Type) {
+}
+
+void UELGameInstance::SetLocalTournamentBracket(const TArray<FELTournamentBracket>& Brackt) {
+}
+
+void UELGameInstance::SetLocalTournamentArenaSetting(FELLocalTournamentArenaSetting& Setting) {
 }
 
 void UELGameInstance::SetLastSelectedMenuByDevice(bool IsGamepad) {
@@ -411,6 +447,12 @@ void UELGameInstance::ResetTournamentRound() {
 void UELGameInstance::ResetTextureStreamingPoolSize() {
 }
 
+void UELGameInstance::ResetLocalTournamentWrestler(int32 EntryNo, int32 PositionIndex) {
+}
+
+void UELGameInstance::ResetLocalTournamentSetting() {
+}
+
 void UELGameInstance::OnQueryStatsInternal() {
 }
 
@@ -482,6 +524,10 @@ bool UELGameInstance::IsShowBuldFlow() {
     return false;
 }
 
+bool UELGameInstance::IsReadyLocalTournamentBracket() const {
+    return false;
+}
+
 bool UELGameInstance::IsPlayCareerMiniGame() {
     return false;
 }
@@ -499,6 +545,18 @@ bool UELGameInstance::IsOpenAttireEXMenu() {
 }
 
 bool UELGameInstance::IsMiniGameEnd() {
+    return false;
+}
+
+bool UELGameInstance::IsLocalTournamentMode() const {
+    return false;
+}
+
+bool UELGameInstance::IsLocalTournamentFinalMatch() const {
+    return false;
+}
+
+bool UELGameInstance::IsLocalTournamentCompleteMatch() const {
     return false;
 }
 
@@ -819,6 +877,38 @@ FELMatchResultParam UELGameInstance::GetMatchResult() {
 }
 
 
+
+EELLocalTournamentType UELGameInstance::GetLocalTournamentType() const {
+    return EELLocalTournamentType::Single;
+}
+
+EELLocalTournamentState UELGameInstance::GetLocalTournamentState() const {
+    return EELLocalTournamentState::None;
+}
+
+FString UELGameInstance::GetLocalTournamentName() const {
+    return TEXT("");
+}
+
+TArray<uint8> UELGameInstance::GetLocalTournamentMatchResult() const {
+    return TArray<uint8>();
+}
+
+EELLocalTournamentEntryScale UELGameInstance::GetLocalTournamentEntryScale() const {
+    return EELLocalTournamentEntryScale::EntryScale_x4;
+}
+
+int32 UELGameInstance::GetLocalTournamentEntryNum() const {
+    return 0;
+}
+
+TArray<FELTournamentBracket> UELGameInstance::GetLocalTournamentBracket() const {
+    return TArray<FELTournamentBracket>();
+}
+
+FELLocalTournamentArenaSetting UELGameInstance::GetLocalTournamentArenaSetting() const {
+    return FELLocalTournamentArenaSetting{};
+}
 
 UELKeyConfigManager* UELGameInstance::GetKeyConfigManager() const {
     return NULL;
@@ -1200,6 +1290,9 @@ void UELGameInstance::AddTournamentRetryCountLimit(int32 Add) {
 }
 
 void UELGameInstance::AddTournamentRetryCount() {
+}
+
+void UELGameInstance::AddMuteAtomList(UAtomComponent* AtomComponent) {
 }
 
 int32 UELGameInstance::AddAchievementLocalCountArray(EELAchievementList _Achievement, int32 _Add) {

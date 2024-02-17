@@ -1,5 +1,8 @@
 #include "YUnlockableItem_DebugMenu.h"
 
+void UYUnlockableItem_DebugMenu::SetEnableUnlockSkip(bool bEnable) {
+}
+
 void UYUnlockableItem_DebugMenu::ExecuteRevertDefault() {
 }
 
