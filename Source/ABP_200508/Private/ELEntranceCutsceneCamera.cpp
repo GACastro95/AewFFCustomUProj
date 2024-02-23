@@ -13,7 +13,6 @@ float AELEntranceCutsceneCamera::GetCameraOffsetHeightRate() {
     return 0.0f;
 }
 
-AELEntranceCutsceneCamera::AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer)
-    : Super(ObjectInitializer) {
+AELEntranceCutsceneCamera::AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

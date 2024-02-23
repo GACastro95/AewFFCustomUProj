@@ -12,9 +12,8 @@ private:
     TMap<FString, float> FileDownloadProgress;
     
 public:
-    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* OnCompleteDownloadFilesDelegate;
-    //FOnCompleteDownloadFiles OnCompleteDownloadFilesDelegate;
     
     UELEOSTitleStorageDownloadProgress();
 };

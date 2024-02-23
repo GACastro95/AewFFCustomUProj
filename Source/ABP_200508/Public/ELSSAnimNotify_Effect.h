@@ -27,7 +27,7 @@ protected:
 public:
     UELSSAnimNotify_Effect();
     UFUNCTION(BlueprintCallable)
-    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const;
+    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     
 };
 

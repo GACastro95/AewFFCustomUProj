@@ -66,17 +66,12 @@ void UELSSBTDecoratorBase::SetBlackboardValue_SSPlayerState(const FBlackboardKey
 void UELSSBTDecoratorBase::SetBlackboardValue_Actor(const FBlackboardKeySelector& Key, AActor* InActor) {
 }
 
-
-
-
-
-
-
-
-
-
-
-
+//void UELSSBTDecoratorBase::ReceiveExecutionFinishAI(AELSSAIController* OwnerController, AELSSPlayer* ControlledPawn, EBTNodeResult::Type NodeResult) {
+//}
+//
+//
+//void UELSSBTDecoratorBase::ReceiveExecutionFinish(AActor* OwnerActor, EBTNodeResult::Type NodeResult) {
+//}
 
 bool UELSSBTDecoratorBase::IsSSFgfBallFree() const {
     return false;

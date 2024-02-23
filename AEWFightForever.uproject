@@ -170,10 +170,7 @@
 		},
 		{
 			"Name": "MagicLeapMedia",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Lumin"
-			]
+			"Enabled": false
 		},
 		{
 			"Name": "MagicLeap",
@@ -299,10 +296,7 @@
 		},
 		{
 			"Name": "LuminPlatformFeatures",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Lumin"
-			]
+			"Enabled": false
 		},
 		{
 			"Name": "MLSDK",

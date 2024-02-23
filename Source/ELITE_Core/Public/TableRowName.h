@@ -10,5 +10,20 @@ public:
     FName Name;
     
     FTableRowName();
+
+    FTableRowName(const FTableRowName& Other);
+
+    bool operator==(const  FTableRowName& Other) const;
+
+    bool operator!=(const  FTableRowName& Other) const;
+
+    bool Equals(const  FTableRowName& Other) const;
+
 };
+
+FORCEINLINE uint32 GetTypeHash(const  FTableRowName& This)
+{
+    const uint32 Hash = FCrc::MemCrc32(&This, sizeof(FTableRowName));
+    return Hash;
+}
 

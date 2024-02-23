@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, ELITE_Game);
+IMPLEMENT_MODULE(FDefaultGameModuleImpl, ELITE_Game);
