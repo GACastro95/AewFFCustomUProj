@@ -10,6 +10,7 @@ class YEOSSDK_API UEOSAntiCheatDedicatedServer : public UEOSIDs {
     GENERATED_BODY()
 public:
     UEOSAntiCheatDedicatedServer();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

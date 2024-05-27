@@ -21,6 +21,7 @@ private:
     
 public:
     UELCareerAutoPlayManager();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetDataTable_Scenario_Setting(UDataTable* pDataTable);

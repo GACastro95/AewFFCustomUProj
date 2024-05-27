@@ -1,5 +1,6 @@
 #include "CDebugCareerBase.h"
 
-ACDebugCareerBase::ACDebugCareerBase() {
+ACDebugCareerBase::ACDebugCareerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

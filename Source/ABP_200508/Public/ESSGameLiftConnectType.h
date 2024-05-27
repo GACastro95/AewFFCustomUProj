@@ -9,6 +9,5 @@ enum class ESSGameLiftConnectType : uint8 {
     EGameLiftConnectType_Test1,
     EGameLiftConnectType_Test2,
     EGameLiftConnectType_Num,
-    EGameLiftConnectType_MAX UMETA(Hidden),
 };
 

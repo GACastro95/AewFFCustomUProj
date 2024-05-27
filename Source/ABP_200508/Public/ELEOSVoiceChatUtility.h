@@ -14,6 +14,7 @@ class UELEOSVoiceChatUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELEOSVoiceChatUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool UpdateVoiceMutedAllMembers(const UObject* WorldContextObject);
     

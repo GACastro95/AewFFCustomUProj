@@ -19,7 +19,8 @@ protected:
     bool Enabled;
     
 public:
-    AELSSActionArea();
+    AELSSActionArea(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetEnable(bool inEnable);
     

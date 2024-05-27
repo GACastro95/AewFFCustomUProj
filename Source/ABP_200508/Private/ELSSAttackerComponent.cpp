@@ -1,6 +1,21 @@
 #include "ELSSAttackerComponent.h"
 #include "Components/CapsuleComponent.h"
 
+UELSSAttackerComponent::UELSSAttackerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->AttackCollisions.AddDefaulted(4);
+    this->ParentComponent = NULL;
+    this->BlendTimeCount = 0.00f;
+    this->InvolveCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("InvolveCollision"));
+    this->InvolvePropDuration = 0.00f;
+    this->InvolvePlayerDuration = 0.00f;
+    this->TrampCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("TrampCollision"));
+    this->TrampVelocityDirectionFactor = 0.00f;
+    this->TrampDuration = 0.80f;
+    this->TrampVelocityCoef = 0.10f;
+    this->TrampVelocityMax = 50.00f;
+    this->bExecutingAttack = false;
+}
+
 void UELSSAttackerComponent::UpdateInvolveCollision() {
 }
 
@@ -78,18 +93,4 @@ bool UELSSAttackerComponent::CheckDamage(AActor* inOtherActor, const FSSDamageEv
 void UELSSAttackerComponent::ActivateAttack(const FSSAttackCollisionParam& inCollisionParam, const FSSAttackCollisionShapeBlend& inShapeBlend) {
 }
 
-UELSSAttackerComponent::UELSSAttackerComponent() {
-    this->AttackCollisions.AddDefaulted(4);
-    this->ParentComponent = NULL;
-    this->BlendTimeCount = 0.00f;
-    this->InvolveCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("InvolveCollision"));
-    this->InvolvePropDuration = 0.00f;
-    this->InvolvePlayerDuration = 0.00f;
-    this->TrampCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("TrampCollision"));
-    this->TrampVelocityDirectionFactor = 0.00f;
-    this->TrampDuration = 0.80f;
-    this->TrampVelocityCoef = 0.10f;
-    this->TrampVelocityMax = 50.00f;
-    this->bExecutingAttack = false;
-}
 

@@ -37,6 +37,7 @@ protected:
     
 public:
     UELSSPanelOutGameBase();
+
     UFUNCTION(BlueprintCallable)
     void Setup(const int32 ID, AELSSUIManagerBase* uiManager, UUserWidget* commonWidget, UUserWidget* movieWidget);
     

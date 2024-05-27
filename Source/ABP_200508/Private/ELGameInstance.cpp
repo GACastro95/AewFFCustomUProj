@@ -1,5 +1,57 @@
 #include "ELGameInstance.h"
 
+UELGameInstance::UELGameInstance() {
+    this->ELEOSManager = NULL;
+    this->ELStats = NULL;
+    this->ELLeaderboards = NULL;
+    this->ELYGS2Manager = NULL;
+    this->AOnDataTable_N = NULL;
+    this->bUseVictory_N = false;
+    this->MatchResultType_N = EELMatchResultType::None;
+    this->m_cDebugCameraClass = NULL;
+    this->m_pMusicList = NULL;
+    this->m_pAchievement = NULL;
+    this->m_pCareerGameParam = NULL;
+    this->m_pCareerDelivery = NULL;
+    this->MenuOperationalWidgetManager = NULL;
+    this->m_UnlockableItemManager = NULL;
+    this->m_BattlePassManager = NULL;
+    this->m_ChallengeManager = NULL;
+    this->m_PossessedItemManager = NULL;
+    this->bDebugGameplayEnableAllActionSkill_N = false;
+    this->bDebugGameplayHUDOff_N = false;
+    this->bDebugGameplayEffectOff_N = false;
+    this->DebugMenu_DispPlayerStatus_N = 0;
+    this->m_GoldCoinPossessManager = NULL;
+    this->m_ELSoundInfo = NULL;
+    this->m_ELSfxListDatatable = NULL;
+    this->m_CrateManager = NULL;
+    this->m_KeyConfigManager = NULL;
+    this->m_TutorialManager = NULL;
+    this->m_GameOptionManager = NULL;
+    this->m_UserProfileManager = NULL;
+    this->TitleHolderSaveDataManager = NULL;
+    this->m_ScoreRankingManager = NULL;
+    this->m_InputDeviceObserveManager = NULL;
+    this->m_CommentaryLoadingManager = NULL;
+    this->m_TipsLoadingManager = NULL;
+    this->m_SaveIconScreenManager = NULL;
+    this->MatchRecordsInfoSaveDataManager = NULL;
+    this->SSRootObject = NULL;
+    this->SSMasterData = NULL;
+    this->SSLevelTransitionEvent = NULL;
+    this->SSEndGameReason = ESSEndGameReason::None;
+    this->SSModePlayCountToDay = 0;
+    this->SSModeGameLiftParam = NULL;
+    this->SSModeConfigData = NULL;
+    this->SSMainMenuFootStamp = false;
+    this->m_pSSGameDataManager = NULL;
+    this->ELMovieControlBase = NULL;
+    this->BackUpCVarPoolSize = -1;
+    this->BackUpCVarMaxTempMemoryAllowed = -1;
+    this->bTexturePoolResized = false;
+}
+
 void UELGameInstance::WrestlerSelectStart() {
 }
 
@@ -183,10 +235,25 @@ void UELGameInstance::SetLocalTournamentState(EELLocalTournamentState State) {
 void UELGameInstance::SetLocalTournamentSetting(const FELLocalTournamentBaseSetting& Setting) {
 }
 
+void UELGameInstance::SetLocalTournamentSelectWrestler(int32 PositionIndex, const FELTournamentWrestlerIdentifier& SelectWrester) {
+}
+
+void UELGameInstance::SetLocalTournamentSelectEntryNo(int32 EntryNo) {
+}
+
 void UELGameInstance::SetLocalTournamentName(const FString& Name) {
 }
 
-void UELGameInstance::SetLocalTournamentMatchResult(const TArray<uint8>& Result) {
+void UELGameInstance::SetLocalTournamentMode(bool bSet) {
+}
+
+void UELGameInstance::SetLocalTournamentMatchResultAll(const TArray<uint8>& Result) {
+}
+
+void UELGameInstance::SetLocalTournamentMatchResult(int32 MatchNo, int32 WinTeamNo) {
+}
+
+void UELGameInstance::SetLocalTournamentMatchNo(int32 MatchNo) {
 }
 
 void UELGameInstance::SetLocalTournamentLastMatchResult(int32 WinTeamNo) {
@@ -198,7 +265,7 @@ void UELGameInstance::SetLocalTournamentEntryScale(EELLocalTournamentEntryScale 
 void UELGameInstance::SetLocalTournamentBracket(const TArray<FELTournamentBracket>& Brackt) {
 }
 
-void UELGameInstance::SetLocalTournamentArenaSetting(FELLocalTournamentArenaSetting& Setting) {
+void UELGameInstance::SetLocalTournamentArenaSetting(const FELLocalTournamentArenaSetting& Setting) {
 }
 
 void UELGameInstance::SetLastSelectedMenuByDevice(bool IsGamepad) {
@@ -453,6 +520,9 @@ void UELGameInstance::ResetLocalTournamentWrestler(int32 EntryNo, int32 Position
 void UELGameInstance::ResetLocalTournamentSetting() {
 }
 
+void UELGameInstance::ResetLocalTournamentBracket() {
+}
+
 void UELGameInstance::OnQueryStatsInternal() {
 }
 
@@ -521,10 +591,6 @@ bool UELGameInstance::IsShowCommonLayoutWidget() const {
 }
 
 bool UELGameInstance::IsShowBuldFlow() {
-    return false;
-}
-
-bool UELGameInstance::IsReadyLocalTournamentBracket() const {
     return false;
 }
 
@@ -886,12 +952,27 @@ EELLocalTournamentState UELGameInstance::GetLocalTournamentState() const {
     return EELLocalTournamentState::None;
 }
 
+void UELGameInstance::GetLocalTournamentSelectWrestler(int32 PositionIndex, FELTournamentWrestlerIdentifier& SelectWrester) const {
+}
+
+int32 UELGameInstance::GetLocalTournamentSelectEntryNo() const {
+    return 0;
+}
+
 FString UELGameInstance::GetLocalTournamentName() const {
     return TEXT("");
 }
 
-TArray<uint8> UELGameInstance::GetLocalTournamentMatchResult() const {
+TArray<uint8> UELGameInstance::GetLocalTournamentMatchResultAll() const {
     return TArray<uint8>();
+}
+
+uint8 UELGameInstance::GetLocalTournamentMatchResult(int32 MatchNo) const {
+    return 0;
+}
+
+int32 UELGameInstance::GetLocalTournamentMatchNo() const {
+    return 0;
 }
 
 EELLocalTournamentEntryScale UELGameInstance::GetLocalTournamentEntryScale() const {
@@ -1275,11 +1356,17 @@ void UELGameInstance::DebugChangeCurrentLanguage(int32 LangType) {
 void UELGameInstance::ClearWrestlerSelectParams() {
 }
 
+void UELGameInstance::ClearLocalTournamentSelectWrestler() {
+}
+
 
 void UELGameInstance::CareerChangeToHubLevel(FName PreLevelName, FName NextLevelName) {
 }
 
 void UELGameInstance::CareerBackToLevel() {
+}
+
+void UELGameInstance::ApplyLocalTournamentSelectWrestler() {
 }
 
 
@@ -1299,55 +1386,4 @@ int32 UELGameInstance::AddAchievementLocalCountArray(EELAchievementList _Achieve
     return 0;
 }
 
-UELGameInstance::UELGameInstance() {
-    this->ELEOSManager = NULL;
-    this->ELStats = NULL;
-    this->ELLeaderboards = NULL;
-    this->ELYGS2Manager = NULL;
-    this->AOnDataTable_N = NULL;
-    this->bUseVictory_N = false;
-    this->MatchResultType_N = EELMatchResultType::None;
-    this->m_cDebugCameraClass = NULL;
-    this->m_pMusicList = NULL;
-    this->m_pAchievement = NULL;
-    this->m_pCareerGameParam = NULL;
-    this->m_pCareerDelivery = NULL;
-    this->MenuOperationalWidgetManager = NULL;
-    this->m_UnlockableItemManager = NULL;
-    this->m_BattlePassManager = NULL;
-    this->m_ChallengeManager = NULL;
-    this->m_PossessedItemManager = NULL;
-    this->bDebugGameplayEnableAllActionSkill_N = false;
-    this->bDebugGameplayHUDOff_N = false;
-    this->bDebugGameplayEffectOff_N = false;
-    this->DebugMenu_DispPlayerStatus_N = 0;
-    this->m_GoldCoinPossessManager = NULL;
-    this->m_ELSoundInfo = NULL;
-    this->m_ELSfxListDatatable = NULL;
-    this->m_CrateManager = NULL;
-    this->m_KeyConfigManager = NULL;
-    this->m_TutorialManager = NULL;
-    this->m_GameOptionManager = NULL;
-    this->m_UserProfileManager = NULL;
-    this->TitleHolderSaveDataManager = NULL;
-    this->m_ScoreRankingManager = NULL;
-    this->m_InputDeviceObserveManager = NULL;
-    this->m_CommentaryLoadingManager = NULL;
-    this->m_TipsLoadingManager = NULL;
-    this->m_SaveIconScreenManager = NULL;
-    this->MatchRecordsInfoSaveDataManager = NULL;
-    this->SSRootObject = NULL;
-    this->SSMasterData = NULL;
-    this->SSLevelTransitionEvent = NULL;
-    this->SSEndGameReason = ESSEndGameReason::None;
-    this->SSModePlayCountToDay = 0;
-    this->SSModeGameLiftParam = NULL;
-    this->SSModeConfigData = NULL;
-    this->SSMainMenuFootStamp = false;
-    this->m_pSSGameDataManager = NULL;
-    this->ELMovieControlBase = NULL;
-    this->BackUpCVarPoolSize = -1;
-    this->BackUpCVarMaxTempMemoryAllowed = -1;
-    this->bTexturePoolResized = false;
-}
 

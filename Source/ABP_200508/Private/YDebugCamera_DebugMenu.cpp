@@ -1,5 +1,8 @@
 #include "YDebugCamera_DebugMenu.h"
 
+UYDebugCamera_DebugMenu::UYDebugCamera_DebugMenu() {
+}
+
 void UYDebugCamera_DebugMenu::SetUseDebugCamera(bool _bHilights) {
 }
 
@@ -17,6 +20,4 @@ int32 UYDebugCamera_DebugMenu::GetDebugCameraControllerNo() const {
     return 0;
 }
 
-UYDebugCamera_DebugMenu::UYDebugCamera_DebugMenu() {
-}
 

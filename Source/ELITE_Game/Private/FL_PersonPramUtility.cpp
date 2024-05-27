@@ -1,5 +1,8 @@
 #include "FL_PersonPramUtility.h"
 
+UFL_PersonPramUtility::UFL_PersonPramUtility() {
+}
+
 FText UFL_PersonPramUtility::GetDisplayText(const EBodyWeightToWightClass BodyWeightRank) {
     return FText::GetEmpty();
 }
@@ -23,6 +26,4 @@ FText UFL_PersonPramUtility::GenerateBirthDayText(int32 Month, int32 Day) {
     return FText::GetEmpty();
 }
 
-UFL_PersonPramUtility::UFL_PersonPramUtility() {
-}
 

@@ -1,5 +1,8 @@
 #include "ELSSWidgetHUD_OtherWrestlerStatus.h"
 
+UELSSWidgetHUD_OtherWrestlerStatus::UELSSWidgetHUD_OtherWrestlerStatus() {
+}
+
 void UELSSWidgetHUD_OtherWrestlerStatus::Update(float InDeltaTime) {
 }
 
@@ -31,6 +34,4 @@ void UELSSWidgetHUD_OtherWrestlerStatus::ApplyDownHp(int32 InWrestlerDownHp, int
 void UELSSWidgetHUD_OtherWrestlerStatus::ApplyCarrotMedal(bool inIsVisible, int32 InIndex) {
 }
 
-UELSSWidgetHUD_OtherWrestlerStatus::UELSSWidgetHUD_OtherWrestlerStatus() {
-}
 

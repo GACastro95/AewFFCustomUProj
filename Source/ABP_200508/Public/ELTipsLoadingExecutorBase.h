@@ -18,7 +18,8 @@ protected:
     int32 ZOrder_N;
     
 public:
-    AELTipsLoadingExecutorBase();
+    AELTipsLoadingExecutorBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnStartLoadingScreen(ETipsLoadingCategory _Category, ETipsLoadingCategory _resourceCategory, FTipsLoadingResourceInfo _resourceInfo, bool _isFadeInStart);
     

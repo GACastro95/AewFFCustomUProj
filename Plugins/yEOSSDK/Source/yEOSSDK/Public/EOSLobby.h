@@ -22,6 +22,7 @@ private:
     
 public:
     UEOSLobby();
+
     UFUNCTION(BlueprintCallable)
     void SetVoiceChatStartMuted(bool _bMuted);
     

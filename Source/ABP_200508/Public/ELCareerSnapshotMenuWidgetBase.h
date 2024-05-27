@@ -18,6 +18,7 @@ protected:
     
 public:
     UELCareerSnapshotMenuWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartMovie();
     

@@ -7,6 +7,5 @@ enum class eSSRequestResultType : uint8 {
     eSSRequestResultType_Success,
     eSSRequestResultType_Failed,
     eSSRequestResultType_ErrDialog,
-    eSSRequestResultType_MAX UMETA(Hidden),
 };
 

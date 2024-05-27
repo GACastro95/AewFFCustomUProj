@@ -127,9 +127,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AppliedSpeedScale;
     
-    AELSSFgfManager();
+    AELSSFgfManager(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void TickState_RoundSetup(float inDeltaSeconds);

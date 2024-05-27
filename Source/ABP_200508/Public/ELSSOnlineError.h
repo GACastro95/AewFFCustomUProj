@@ -49,6 +49,7 @@ public:
     TMap<EELServerType, EELNetworkConnectionStatus> NetworkConnectionStatus;
     
     UELSSOnlineError();
+
 private:
     UFUNCTION(BlueprintCallable)
     void YGS2API_RequestResult(EYGS2ErrorType ErrorType, UYGS2RequestBase* Request);

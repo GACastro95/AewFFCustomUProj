@@ -1,5 +1,8 @@
 #include "ELMenuUtilityFunction.h"
 
+UELMenuUtilityFunction::UELMenuUtilityFunction() {
+}
+
 void UELMenuUtilityFunction::StartTipsLoadingScreenWithOverrideNextLevel(UObject* _pWorldContextObject, ETipsLoadingCategory _nextGameMode, const FName& _nextLevel, const FString& _nextLevelOption) {
 }
 
@@ -87,6 +90,4 @@ void UELMenuUtilityFunction::CalcListCursor(int32 Current, int32 ChangeNum, int3
 void UELMenuUtilityFunction::CalcGridCursor(int32 Current, int32 ChangeXNum, int32 ChangeYNum, int32 Size, int32 Width, bool IsRepeat, int32& Next, bool& bMoved) {
 }
 
-UELMenuUtilityFunction::UELMenuUtilityFunction() {
-}
 

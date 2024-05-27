@@ -21,6 +21,7 @@ protected:
     
 public:
     UELSSWidgetHUD_ItemInteract();
+
     UFUNCTION(BlueprintCallable)
     void SetKeyConfig(EKeyMappingType InKeyMapType);
     

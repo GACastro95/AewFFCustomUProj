@@ -1,5 +1,8 @@
 #include "EOSAntiCheatClient.h"
 
+UEOSAntiCheatClient::UEOSAntiCheatClient() {
+}
+
 bool UEOSAntiCheatClient::SetupInternalCallback() {
     return false;
 }
@@ -19,6 +22,4 @@ bool UEOSAntiCheatClient::BeginSession(EEOSAntiCheatClientMode _enClinetMode) {
     return false;
 }
 
-UEOSAntiCheatClient::UEOSAntiCheatClient() {
-}
 

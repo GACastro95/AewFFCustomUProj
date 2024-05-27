@@ -30,5 +30,6 @@ private:
     
 public:
     UELEOSSanitizeTextWrestlerData();
+
 };
 

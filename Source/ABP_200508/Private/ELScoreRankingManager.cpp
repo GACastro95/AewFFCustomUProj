@@ -5,3 +5,4 @@ UELScoreRankingManager::UELScoreRankingManager() {
     this->m_MiniGameScoreRankingDataList.AddDefaulted(22);
 }
 
+

@@ -25,6 +25,7 @@ private:
     
 public:
     UYDebugMenuManager();
+
     UFUNCTION(BlueprintCallable)
     bool UnregistRoot(const FString& _strRegistKey);
     

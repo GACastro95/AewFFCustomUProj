@@ -8,5 +8,6 @@ class ABP_200508_API USaveData_Archiver : public UObject {
     GENERATED_BODY()
 public:
     USaveData_Archiver();
+
 };
 

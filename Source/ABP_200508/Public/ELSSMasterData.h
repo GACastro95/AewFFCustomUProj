@@ -124,6 +124,7 @@ protected:
     
 public:
     UELSSMasterData();
+
     UFUNCTION(BlueprintCallable)
     void SetRawData(UELSSMasterDataRawData* inData);
     

@@ -8,6 +8,7 @@ class UELCareerPropAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
     UELCareerPropAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void UpdateVariables(float fDeltaTime);
     

@@ -1,5 +1,11 @@
 #include "ELSSOnlineTestPlayerController.h"
 
+AELSSOnlineTestPlayerController::AELSSOnlineTestPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ClickEventKeys.AddDefaulted(1);
+    this->rotSpeedYaw = 4.00f;
+    this->rotSpeedPitch = 4.00f;
+}
+
 void AELSSOnlineTestPlayerController::UIPrepare_RPC_Implementation() {
 }
 
@@ -31,8 +37,4 @@ void AELSSOnlineTestPlayerController::MoveForward(float Value) {
 
 
 
-AELSSOnlineTestPlayerController::AELSSOnlineTestPlayerController() {
-    this->rotSpeedYaw = 4.00f;
-    this->rotSpeedPitch = 4.00f;
-}
 

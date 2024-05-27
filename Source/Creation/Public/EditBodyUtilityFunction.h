@@ -11,6 +11,7 @@ class CREATION_API UEditBodyUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UEditBodyUtilityFunction();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FBaseBodyTypeName MakeLiteralBaseBodyTypeName(const FName RowName);
     

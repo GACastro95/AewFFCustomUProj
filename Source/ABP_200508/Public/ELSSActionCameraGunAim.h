@@ -8,5 +8,6 @@ class ABP_200508_API UELSSActionCameraGunAim : public UELSSActionCameraControlle
     GENERATED_BODY()
 public:
     UELSSActionCameraGunAim();
+
 };
 

@@ -10,6 +10,7 @@ class ABP_200508_API UELUserPrivilegesSubsystem : public UGameInstanceSubsystem 
     GENERATED_BODY()
 public:
     UELUserPrivilegesSubsystem();
+
     UFUNCTION(BlueprintCallable)
     bool IsCanUseUserGeneratedContent(APlayerController* _playerController, const bool _showPrivilegeUI);
     

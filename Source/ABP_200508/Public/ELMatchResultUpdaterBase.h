@@ -41,7 +41,8 @@ protected:
     int32 HostTeamNo;
     
 public:
-    AELMatchResultUpdaterBase();
+    AELMatchResultUpdaterBase(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void Update_Native();

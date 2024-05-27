@@ -23,6 +23,7 @@ private:
     
 public:
     UEOSSessionInfo();
+
     UFUNCTION(BlueprintCallable)
     bool SetHostMigrationTarget(bool _bIsHostMigrationTarget);
     

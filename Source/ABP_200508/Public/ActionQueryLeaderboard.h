@@ -37,6 +37,7 @@ public:
     UELLeaderboards* Leaderboards;
     
     UActionQueryLeaderboard();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UActionQueryLeaderboard* ActionQueryLeaderboard(UObject* WorldContextObject, const FString& Name, int32 Season, bool PlatformOnly, float ScoreScale, bool bForce);
     

@@ -16,6 +16,7 @@ private:
     
 public:
     UELLocalizeFontManager();
+
     UFUNCTION(BlueprintCallable)
     void SetDataTable(UDataTable* FontDataTable);
     

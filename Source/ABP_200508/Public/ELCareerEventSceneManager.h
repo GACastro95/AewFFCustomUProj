@@ -47,7 +47,8 @@ private:
     TArray<FName> m_SelectResultList;
     
 public:
-    AELCareerEventSceneManager();
+    AELCareerEventSceneManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartSkipFade(ECareerEventFade eFade, float fFadeTime);
     
@@ -88,7 +89,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void ChangeStateSnapShotPrepare();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

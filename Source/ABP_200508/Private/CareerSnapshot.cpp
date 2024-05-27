@@ -1,5 +1,9 @@
 #include "CareerSnapshot.h"
 
+UCareerSnapshot::UCareerSnapshot() {
+    this->Image = NULL;
+}
+
 void UCareerSnapshot::SetSnapshotParam(const FCareerSnapshotParam& NewParam) {
 }
 
@@ -98,7 +102,4 @@ void UCareerSnapshot::Callback_LoadEnd(ESaveDataAccessorEvent Event, USaveData_A
 void UCareerSnapshot::Callback_DeleteEnd(ESaveDataAccessorEvent Event, USaveData_AccessorBase* SaveDataAccessor, ESaveDataProcResult Result) {
 }
 
-UCareerSnapshot::UCareerSnapshot() {
-    this->Image = NULL;
-}
 

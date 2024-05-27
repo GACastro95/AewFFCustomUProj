@@ -23,6 +23,7 @@ private:
     
 public:
     UEOSLeaderboard();
+
     UFUNCTION(BlueprintCallable)
     static void SetLeaderboardApiVersion(FEOSLeaderboardAPIVersionSettings _stAPIVerSetting);
     

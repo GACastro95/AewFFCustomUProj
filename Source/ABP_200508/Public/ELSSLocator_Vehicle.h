@@ -18,6 +18,7 @@ protected:
     AActor* SpawnedVehicle;
     
 public:
-    AELSSLocator_Vehicle();
+    AELSSLocator_Vehicle(const FObjectInitializer& ObjectInitializer);
+
 };
 

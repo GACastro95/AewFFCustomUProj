@@ -11,6 +11,7 @@ class ABP_200508_API UELSkillMenuWidgetBase : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELSkillMenuWidgetBase();
+
     UFUNCTION(BlueprintCallable)
     void SetTabTick(bool _bTick);
     

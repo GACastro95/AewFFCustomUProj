@@ -1,5 +1,8 @@
 #include "ELDBG_ReferBase.h"
 
+UELDBG_ReferBase::UELDBG_ReferBase() {
+}
+
 void UELDBG_ReferBase::RemRef() {
 }
 
@@ -10,6 +13,4 @@ bool UELDBG_ReferBase::IsRef() {
 void UELDBG_ReferBase::AddRef() {
 }
 
-UELDBG_ReferBase::UELDBG_ReferBase() {
-}
 

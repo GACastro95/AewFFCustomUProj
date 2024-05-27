@@ -1,6 +1,33 @@
 #include "ELEntranceCutsceneManager.h"
 #include "ELEntranceCutsceneDataManager.h"
 
+AELEntranceCutsceneManager::AELEntranceCutsceneManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->EntranceCutsceneAnimationData = NULL;
+    this->EntranceCutsceneMultiBeltAnimationData = NULL;
+    this->EntranceCutsceneParticleData = NULL;
+    this->EntranceCutsceneBGModelData = NULL;
+    this->EntranceCutsceneManagerAnimationData = NULL;
+    this->EntranceCutsceneFingerSignData = NULL;
+    this->EntranceCutsceneScreenFilterData = NULL;
+    this->EntranceCutsceneMusicData = NULL;
+    this->EntranceCutsceneWrestlerSettingsData = NULL;
+    this->EntranceCutsceneBeltAttachOffset = NULL;
+    this->EntranceCutsceneManagerParam = NULL;
+    this->DataManager = CreateDefaultSubobject<UELEntranceCutsceneDataManager>(TEXT("DataManager"));
+    this->RibbonActor = NULL;
+    this->RibbonActor_R = NULL;
+    this->RibbonActor_G = NULL;
+    this->RibbonActor_B = NULL;
+    this->RibbonActor_Y = NULL;
+    this->DroppedRibbonActor = NULL;
+    this->UseMovieSlotForTitantron = 0;
+    this->SequenceIndex_N = 0;
+    this->LastFadeDuration = 0.00f;
+    this->bEnabledInput = true;
+    this->LevelSequenceActor = NULL;
+    this->DroppedRibbonInstance = NULL;
+}
+
 FELEntranceCutsceneInfo AELEntranceCutsceneManager::UpdateDefaultEntranceFlag(const FELEntranceCutsceneInfo& CutsceneInfo, const FELWrestlerProfile_CutScene& CustomData, UDataTable* TeamParamDataTable, bool CAE) {
     return FELEntranceCutsceneInfo{};
 }
@@ -167,30 +194,4 @@ void AELEntranceCutsceneManager::DestroyAssets() {
 void AELEntranceCutsceneManager::AssetLoadCompleteEvent() {
 }
 
-AELEntranceCutsceneManager::AELEntranceCutsceneManager() {
-    this->EntranceCutsceneAnimationData = NULL;
-    this->EntranceCutsceneMultiBeltAnimationData = NULL;
-    this->EntranceCutsceneParticleData = NULL;
-    this->EntranceCutsceneBGModelData = NULL;
-    this->EntranceCutsceneManagerAnimationData = NULL;
-    this->EntranceCutsceneFingerSignData = NULL;
-    this->EntranceCutsceneScreenFilterData = NULL;
-    this->EntranceCutsceneMusicData = NULL;
-    this->EntranceCutsceneWrestlerSettingsData = NULL;
-    this->EntranceCutsceneBeltAttachOffset = NULL;
-    this->EntranceCutsceneManagerParam = NULL;
-    this->DataManager = CreateDefaultSubobject<UELEntranceCutsceneDataManager>(TEXT("DataManager"));
-    this->RibbonActor = NULL;
-    this->RibbonActor_R = NULL;
-    this->RibbonActor_G = NULL;
-    this->RibbonActor_B = NULL;
-    this->RibbonActor_Y = NULL;
-    this->DroppedRibbonActor = NULL;
-    this->UseMovieSlotForTitantron = 0;
-    this->SequenceIndex_N = 0;
-    this->LastFadeDuration = 0.00f;
-    this->bEnabledInput = true;
-    this->LevelSequenceActor = NULL;
-    this->DroppedRibbonInstance = NULL;
-}
 

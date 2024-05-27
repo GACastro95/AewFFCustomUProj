@@ -69,6 +69,7 @@ protected:
     
 public:
     UManaTexture();
+
     UFUNCTION(BlueprintCallable)
     void SetMovieSource(UManaSource* InSource);
     

@@ -1,5 +1,24 @@
 #include "ELSSCommonDatabase.h"
 
+UELSSCommonDatabase::UELSSCommonDatabase() {
+    this->MasterData = NULL;
+    this->AbilityResourceParamTable = NULL;
+    this->AbilityKindParamTable = NULL;
+    this->WrestlerParamTable = NULL;
+    this->WrestlerTypeResourceParamTable = NULL;
+    this->HeatSkillDefaultSettingsTable = NULL;
+    this->HeatSkillIconTable = NULL;
+    this->CommonAttackParamTable = NULL;
+    this->MoveParamTable = NULL;
+    this->StampedeRankParamTable = NULL;
+    this->PlayerRankParamTable = NULL;
+    this->PlayerRankRangeParamTable = NULL;
+    this->LoadoutPresetDefaultParamTable = NULL;
+    this->RuleResourceParamTable = NULL;
+    this->GameRuleParamTable = NULL;
+    this->StateInfoTable = NULL;
+}
+
 void UELSSCommonDatabase::MakeSortedAbilityParamArray(ESSAbilitySortType inSortType) {
 }
 
@@ -122,22 +141,4 @@ int32 UELSSCommonDatabase::CalcAttentionLevelFromPoint(int32 inPoint) {
     return 0;
 }
 
-UELSSCommonDatabase::UELSSCommonDatabase() {
-    this->MasterData = NULL;
-    this->AbilityResourceParamTable = NULL;
-    this->AbilityKindParamTable = NULL;
-    this->WrestlerParamTable = NULL;
-    this->WrestlerTypeResourceParamTable = NULL;
-    this->HeatSkillDefaultSettingsTable = NULL;
-    this->HeatSkillIconTable = NULL;
-    this->CommonAttackParamTable = NULL;
-    this->MoveParamTable = NULL;
-    this->StampedeRankParamTable = NULL;
-    this->PlayerRankParamTable = NULL;
-    this->PlayerRankRangeParamTable = NULL;
-    this->LoadoutPresetDefaultParamTable = NULL;
-    this->RuleResourceParamTable = NULL;
-    this->GameRuleParamTable = NULL;
-    this->StateInfoTable = NULL;
-}
 

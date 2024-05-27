@@ -17,7 +17,8 @@ protected:
     ESSDataLoadingFlowState PrevState;
     
 public:
-    AELSSDataLoadingFlow();
+    AELSSDataLoadingFlow(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TickState_NextLevelLoading(float inDeltaSeconds);

@@ -1,6 +1,7 @@
 #include "AtomUnrealSoundRenderer.h"
 
-UAtomUnrealSoundRenderer::UAtomUnrealSoundRenderer(const FObjectInitializer& ObjectInitializer)
-	: Super(ObjectInitializer) {
+UAtomUnrealSoundRenderer::UAtomUnrealSoundRenderer() : USoundWaveProcedural(FObjectInitializer::Get()) {
+    this->FrequenciesToAnalyze.AddDefaulted(4);
 }
+
 

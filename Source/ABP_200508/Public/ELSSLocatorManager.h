@@ -24,7 +24,8 @@ protected:
     TArray<AELSSLocator*> LocatorList_PlayerStart;
     
 public:
-    AELSSLocatorManager();
+    AELSSLocatorManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AELSSLocator*> GetPlayerStartLocatorList(ESSPlayerStartLocatorType StartType) const;
     
@@ -37,7 +38,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AELSSLocator*> GetLocatorListForRespawn(ESSLocatorType InType, const FVector& inOrigin) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -23,6 +23,7 @@ private:
     
 public:
     UEOSStats();
+
     UFUNCTION(BlueprintCallable)
     static void SetApiVersion(FEOSStatsAPIVersionSettings _stAPIVerSetting);
     

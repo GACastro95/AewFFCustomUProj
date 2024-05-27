@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSSessionP2PEventPacket : public UEOSSessionP2PPacketBase {
     GENERATED_BODY()
 public:
     UEOSSessionP2PEventPacket();
+
     UFUNCTION(BlueprintCallable)
     void SetNotificationWithPUID(EEOSSessionNotificationType _enNotificationType, const FString& _strProductUserID);
     

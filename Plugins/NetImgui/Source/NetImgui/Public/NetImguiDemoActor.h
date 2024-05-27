@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class NETIMGUI_API ANetImguiDemoActor : public AActor {
     GENERATED_BODY()
 public:
-    ANetImguiDemoActor();
+    ANetImguiDemoActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

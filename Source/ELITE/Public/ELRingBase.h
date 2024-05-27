@@ -13,7 +13,8 @@ protected:
     TArray<AActor*> RopesList_N;
     
 public:
-    AELRingBase();
+    AELRingBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetNearRope(const FVector& Location) const;
     

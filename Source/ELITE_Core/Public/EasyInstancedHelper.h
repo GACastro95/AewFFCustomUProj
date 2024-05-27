@@ -5,7 +5,7 @@
 
 class UEasyGameInstanceSubsystem;
 
-UCLASS(Abstract, Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Abstract, Blueprintable, DefaultConfig, Config=Engine)
 class ELITE_CORE_API UEasyInstancedHelper : public UObject {
     GENERATED_BODY()
 public:
@@ -22,6 +22,7 @@ public:
     UEasyGameInstanceSubsystem* OwnerSubsystem;
     
     UEasyInstancedHelper();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTick(float DeltaTime);
     

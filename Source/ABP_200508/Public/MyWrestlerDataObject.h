@@ -82,6 +82,7 @@ public:
     FOnChangedValue OnChangedValue;
     
     UMyWrestlerDataObject();
+
     UFUNCTION(BlueprintCallable)
     void UpdatePresetAttireExParamForDLCLocking(bool IsEntrance, int32 PresetIndex, const FAttireExParam& AttireExParam);
     

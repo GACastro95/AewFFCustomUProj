@@ -1,5 +1,8 @@
 #include "ELLeaderboardsUtility.h"
 
+UELLeaderboardsUtility::UELLeaderboardsUtility() {
+}
+
 FDateTime UELLeaderboardsUtility::GetUserScoreQueryDateTime(const UObject* WorldContextObject, const FString& LeaderboardName, int32 Season, bool bPlatformOnly) {
     return FDateTime{};
 }
@@ -71,6 +74,4 @@ int32 UELLeaderboardsUtility::FindLeaderboardUserData(const UObject* WorldContex
     return 0;
 }
 
-UELLeaderboardsUtility::UELLeaderboardsUtility() {
-}
 

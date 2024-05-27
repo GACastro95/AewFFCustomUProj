@@ -1,8 +1,9 @@
 #include "ELGaugeFire.h"
 
+UELGaugeFire::UELGaugeFire() : UUserWidget(FObjectInitializer::Get()) {
+}
+
 void UELGaugeFire::SetNativeParam(UWidgetAnimation* StartEnd) {
 }
 
-UELGaugeFire::UELGaugeFire() : UUserWidget(FObjectInitializer::Get()) {
-}
 

@@ -1,5 +1,6 @@
 #include "ELApron.h"
 
-AELApron::AELApron() {
+AELApron::AELApron(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

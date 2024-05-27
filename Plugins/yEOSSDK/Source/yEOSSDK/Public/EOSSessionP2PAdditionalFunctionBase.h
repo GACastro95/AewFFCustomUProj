@@ -15,5 +15,6 @@ protected:
     
 public:
     UEOSSessionP2PAdditionalFunctionBase();
+
 };
 

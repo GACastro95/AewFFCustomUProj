@@ -10,3 +10,4 @@ UELLeaderboardsQueryUserScoreTask::UELLeaderboardsQueryUserScoreTask() {
     this->QueryCountPerRequest = 64;
 }
 
+

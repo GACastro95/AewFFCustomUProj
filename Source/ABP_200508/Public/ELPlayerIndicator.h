@@ -30,6 +30,7 @@ private:
     AELCharacter_Native* Player;
     
 public:
-    UELPlayerIndicator();
+    UELPlayerIndicator(const FObjectInitializer& ObjectInitializer);
+
 };
 

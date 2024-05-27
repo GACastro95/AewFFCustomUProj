@@ -1,5 +1,8 @@
 #include "EditWrestlerSkillUtilityFunction.h"
 
+UEditWrestlerSkillUtilityFunction::UEditWrestlerSkillUtilityFunction() {
+}
+
 void UEditWrestlerSkillUtilityFunction::SetPassiveSkill(FWrestlingSkillParam& Param, const int32 Type, const bool Value) {
 }
 
@@ -30,6 +33,4 @@ int32 UEditWrestlerSkillUtilityFunction::GetAbilityScore(const FWrestlingSkillPa
     return 0;
 }
 
-UEditWrestlerSkillUtilityFunction::UEditWrestlerSkillUtilityFunction() {
-}
 

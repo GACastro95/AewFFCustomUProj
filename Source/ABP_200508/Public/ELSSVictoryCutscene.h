@@ -58,7 +58,8 @@ protected:
     TArray<UAnimMontage*> TeamMontages;
     
 public:
-    AELSSVictoryCutscene();
+    AELSSVictoryCutscene(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StopBGM();

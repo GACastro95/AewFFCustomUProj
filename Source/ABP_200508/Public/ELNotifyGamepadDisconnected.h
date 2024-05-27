@@ -10,7 +10,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELNotifyGamepadDisconnected : public AActor {
     GENERATED_BODY()
 public:
-    AELNotifyGamepadDisconnected();
+    AELNotifyGamepadDisconnected(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnManipulateDecideBtn(APlayerController* PlayerController);
     

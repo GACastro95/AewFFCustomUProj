@@ -17,6 +17,7 @@
 
 class AActor;
 class AELSSPlayer;
+class AELSSWeaponThrowProjectile_FireBottle;
 class UAnimMontage;
 class UBoxComponent;
 class UCapsuleComponent;
@@ -185,10 +186,17 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> VeloSavedDeltaTimes;
     
-public:
-    AELSSHorse();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AELSSWeaponThrowProjectile_FireBottle*> FireBottles;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FireBottleTimeCount;
+    
+public:
+    AELSSHorse(const FObjectInitializer& ObjectInitializer);
+
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
     UFUNCTION(BlueprintCallable)
     void TryTramp(AActor* inReceiveActor, const FVector& inIdealLocation, float inTrampDuration);
     
@@ -314,7 +322,7 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 AddDurability(int32 Value);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

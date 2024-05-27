@@ -14,6 +14,7 @@ public:
     FEOSGeneralEventDispatcher GeneralEventDispatcher;
     
     UEOSInstanceManagerBase();
+
     UFUNCTION(BlueprintCallable)
     int32 GetInstanceList(TArray<UEOSInstanceBase*>& _cInstanceList);
     

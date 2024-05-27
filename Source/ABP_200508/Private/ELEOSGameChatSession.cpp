@@ -1,5 +1,13 @@
 #include "ELEOSGameChatSession.h"
 
+UELEOSGameChatSession::UELEOSGameChatSession() {
+    this->EOSLobby = NULL;
+    this->EOSLobbyInfo = NULL;
+    this->EOSUser = NULL;
+    this->bVoiceChatStartMuted = false;
+    this->MuteFlag = EEOSLobbyUserMuteFlag::None;
+}
+
 bool UELEOSGameChatSession::Unmute(const FString& ProductUserID) {
     return false;
 }
@@ -110,11 +118,4 @@ bool UELEOSGameChatSession::Block(const FString& ProductUserID) {
     return false;
 }
 
-UELEOSGameChatSession::UELEOSGameChatSession() {
-    this->EOSLobby = NULL;
-    this->EOSLobbyInfo = NULL;
-    this->EOSUser = NULL;
-    this->bVoiceChatStartMuted = false;
-    this->MuteFlag = EEOSLobbyUserMuteFlag::None;
-}
 

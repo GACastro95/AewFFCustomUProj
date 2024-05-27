@@ -10,6 +10,7 @@ class ABP_200508_API UELSSWidgetBase : public UUserWidget {
     GENERATED_BODY()
 public:
     UELSSWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SetVisible(bool inIsVisible);
     

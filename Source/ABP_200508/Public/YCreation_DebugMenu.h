@@ -8,5 +8,6 @@ class ABP_200508_API UYCreation_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYCreation_DebugMenu();
+
 };
 

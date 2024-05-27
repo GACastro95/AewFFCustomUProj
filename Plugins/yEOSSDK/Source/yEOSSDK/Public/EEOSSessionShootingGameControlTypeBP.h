@@ -26,6 +26,6 @@ enum class EEOSSessionShootingGameControlTypeBP : uint8 {
     Reload,
     GetOn,
     GetOff,
-    Max = 0x20,
+    Max = 32,
 };
 

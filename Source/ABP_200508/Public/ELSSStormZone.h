@@ -23,9 +23,10 @@ protected:
     TArray<FSSStormSchedule> schedules;
     
 public:
-    AELSSStormZone();
+    AELSSStormZone(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateTransform();
     

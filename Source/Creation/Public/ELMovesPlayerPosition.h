@@ -18,6 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlayerIndex;
     
-    AELMovesPlayerPosition();
+    AELMovesPlayerPosition(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -23,6 +23,7 @@ protected:
     
 public:
     USingletonBase();
+
     UFUNCTION(BlueprintCallable)
     void SetWorldContextObject(UObject* Object);
     

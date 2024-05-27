@@ -1,6 +1,37 @@
 #include "ELSSActionStateBase.h"
 #include "Templates/SubclassOf.h"
 
+UELSSActionStateBase::UELSSActionStateBase() {
+    this->SyncMode = ESSActionStateSyncMode::Predict;
+    this->MontageSt = NULL;
+    this->MontageLo = NULL;
+    this->EnableMovement = false;
+    this->FallLimitDuration = -1.00f;
+    this->EnableUpperBodyAnim = false;
+    this->ContinueInvolveParam = false;
+    this->LastUpdatedMovementAdjustTime = 0.00f;
+    this->RotationRateScale = 1.00f;
+    this->CollisionHeightScale = 1.00f;
+    this->CollisionRadiusScale = 1.00f;
+    this->MaxLandingLevel = -1;
+    this->DefaultTransitable = ESSActionTransitableCondition::Action;
+    this->CancelTransitable = ESSActionTransitableCondition::ActionCancel;
+    this->PlayingTime = 0.00f;
+    this->OwnerComponent = NULL;
+    this->AnimInstance = NULL;
+    this->CurrentMontageReplaced = NULL;
+    this->CurrentMontageBeforeReplace = NULL;
+    this->ReservedMontage = NULL;
+    this->EnableCancelTransit = false;
+    this->EnableMovableTransit = false;
+    this->FallTimeCount = 0.00f;
+    this->LandingStarted = false;
+    this->DisableBlendOut = false;
+    this->DamageReceiverState = ESSDamageReceiverState::Default;
+    this->RootMotionDisabled = false;
+    this->InactiveMontageTimeCount = 0.00f;
+}
+
 void UELSSActionStateBase::UpdateMovementParam() {
 }
 
@@ -205,34 +236,4 @@ bool UELSSActionStateBase::CanDisappear_Implementation() const {
 void UELSSActionStateBase::Activate() {
 }
 
-UELSSActionStateBase::UELSSActionStateBase() {
-    this->SyncMode = ESSActionStateSyncMode::Predict;
-    this->MontageSt = NULL;
-    this->MontageLo = NULL;
-    this->EnableMovement = false;
-    this->FallLimitDuration = -1.00f;
-    this->EnableUpperBodyAnim = false;
-    this->ContinueInvolveParam = false;
-    this->LastUpdatedMovementAdjustTime = 0.00f;
-    this->RotationRateScale = 1.00f;
-    this->CollisionHeightScale = 1.00f;
-    this->CollisionRadiusScale = 1.00f;
-    this->MaxLandingLevel = -1;
-    this->DefaultTransitable = ESSActionTransitableCondition::Action;
-    this->CancelTransitable = ESSActionTransitableCondition::ActionCancel;
-    this->PlayingTime = 0.00f;
-    this->OwnerComponent = NULL;
-    this->AnimInstance = NULL;
-    this->CurrentMontageReplaced = NULL;
-    this->CurrentMontageBeforeReplace = NULL;
-    this->ReservedMontage = NULL;
-    this->EnableCancelTransit = false;
-    this->EnableMovableTransit = false;
-    this->FallTimeCount = 0.00f;
-    this->LandingStarted = false;
-    this->DisableBlendOut = false;
-    this->DamageReceiverState = ESSDamageReceiverState::Default;
-    this->RootMotionDisabled = false;
-    this->InactiveMontageTimeCount = 0.00f;
-}
 

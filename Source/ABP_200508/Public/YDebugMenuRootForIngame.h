@@ -13,6 +13,7 @@ class ABP_200508_API UYDebugMenuRootForIngame : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYDebugMenuRootForIngame();
+
     UFUNCTION(BlueprintCallable)
     bool CreateMenu(const FYDebugMenuParamForIngame& _stParam);
     

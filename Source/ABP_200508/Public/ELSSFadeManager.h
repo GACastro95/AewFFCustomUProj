@@ -12,7 +12,8 @@ protected:
     float SimpleFadeTime;
     
 public:
-    AELSSFadeManager();
+    AELSSFadeManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool SimpleFadeReady();
     

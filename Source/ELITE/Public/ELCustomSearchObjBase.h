@@ -8,6 +8,7 @@ class ELITE_API UELCustomSearchObjBase : public UObject {
     GENERATED_BODY()
 public:
     UELCustomSearchObjBase();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void InitializeSearchMenu();
     

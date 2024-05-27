@@ -71,7 +71,8 @@ private:
     bool IsInputLimit;
     
 public:
-    AELGameCommonPlayerControllerBase();
+    AELGameCommonPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetInputParam(const FyMenuInputParam InParam);
     

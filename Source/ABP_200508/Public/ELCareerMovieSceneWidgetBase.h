@@ -9,6 +9,7 @@ class ABP_200508_API UELCareerMovieSceneWidgetBase : public UELCareerWidgetBase 
     GENERATED_BODY()
 public:
     UELCareerMovieSceneWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TriggerEventOut();
     

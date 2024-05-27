@@ -18,6 +18,7 @@ class ELITE_GAME_API UELSoundUtilityFunction : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UELSoundUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SetDebugDisableSound(bool IsDisable);
     

@@ -9,6 +9,7 @@ class ABP_200508_API UELDialogBoxBattlePassWidgetBase : public UELMenuWidgetBase
     GENERATED_BODY()
 public:
     UELDialogBoxBattlePassWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Setup(int32 _addPoint);

@@ -17,6 +17,7 @@ class ABP_200508_API UELSSFgfUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSFgfUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool IsSyncedSSFgfMatchInfo(const UObject* WorldContextObject);
     

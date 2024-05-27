@@ -1,5 +1,8 @@
 #include "ELCareerStoryDataActor.h"
 
+AELCareerStoryDataActor::AELCareerStoryDataActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 
 void AELCareerStoryDataActor::SetStoryDataTable(TArray<FCareerStory> _Table) {
 }
@@ -30,6 +33,4 @@ void AELCareerStoryDataActor::ClearStoryDataTable() {
 void AELCareerStoryDataActor::AddCareerStoryData(FCareerStory _Data) {
 }
 
-AELCareerStoryDataActor::AELCareerStoryDataActor() {
-}
 

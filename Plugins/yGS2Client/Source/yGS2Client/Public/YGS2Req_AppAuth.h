@@ -8,6 +8,7 @@ class YGS2CLIENT_API UYGS2Req_AppAuth : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_AppAuth();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetSecret() const;
     

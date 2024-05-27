@@ -1,5 +1,12 @@
 #include "SoundAtomCueSheet.h"
 
+USoundAtomCueSheet::USoundAtomCueSheet() {
+    this->Contains = false;
+    this->NumSlots = -1;
+    this->bOverrideAwbDirectory = false;
+    this->AdditionalData = NULL;
+}
+
 void USoundAtomCueSheet::ReleaseAcb(FName AcbName) {
 }
 
@@ -52,10 +59,4 @@ void USoundAtomCueSheet::AttachDspBusSetting(const FString& SettingName) {
 void USoundAtomCueSheet::ApplyDspBusSnapshot(const FString& SnapshotName, int32 Milliseconds) {
 }
 
-USoundAtomCueSheet::USoundAtomCueSheet() {
-    this->Contains = false;
-    this->NumSlots = -1;
-    this->bOverrideAwbDirectory = false;
-    this->AdditionalData = NULL;
-}
 

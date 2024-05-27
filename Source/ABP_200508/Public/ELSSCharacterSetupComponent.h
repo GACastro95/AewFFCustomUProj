@@ -10,7 +10,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ABP_200508_API UELSSCharacterSetupComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UELSSCharacterSetupComponent();
+    UELSSCharacterSetupComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateDefaultMotion(EWrestlerID_N inWrestlerId, const FWrestlerSetupParam& inWrestlerSetupParam);
     

@@ -34,6 +34,7 @@ protected:
     
 public:
     UELAnimInstance_IK();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateVector(float DeltaSeconds);

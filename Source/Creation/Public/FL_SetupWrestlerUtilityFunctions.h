@@ -15,6 +15,7 @@ class CREATION_API UFL_SetupWrestlerUtilityFunctions : public UBlueprintFunction
     GENERATED_BODY()
 public:
     UFL_SetupWrestlerUtilityFunctions();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetWrestlerNameText(const FWrestlerSetupParam& SetupWrestler, const bool bUpper, FText& Out);
     

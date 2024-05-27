@@ -1,6 +1,9 @@
 #include "ELSSEffectUtility.h"
 #include "Templates/SubclassOf.h"
 
+UELSSEffectUtility::UELSSEffectUtility() {
+}
+
 void UELSSEffectUtility::StopEffectAndSinkToPool(const UObject* WorldContextObject, AActor* effectActor, int32 loopSEUniqueId) {
 }
 
@@ -35,6 +38,4 @@ AELSSPoolDecalBase* UELSSEffectUtility::PlayDecalAtLocationFromPool(const UObjec
     return NULL;
 }
 
-UELSSEffectUtility::UELSSEffectUtility() {
-}
 

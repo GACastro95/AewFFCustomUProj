@@ -17,6 +17,7 @@ protected:
     
 public:
     UELGaugeStatusIcon();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetNativeParam(UWidgetAnimation* Out, UWidgetAnimation* In, UImage* Icon);

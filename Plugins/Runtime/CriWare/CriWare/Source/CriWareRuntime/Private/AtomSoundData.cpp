@@ -1,6 +1,7 @@
 #include "AtomSoundData.h"
 
-AAtomSoundData::AAtomSoundData() {
+AAtomSoundData::AAtomSoundData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CueSheet = NULL;
 }
+
 

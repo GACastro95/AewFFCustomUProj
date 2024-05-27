@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class EELEOSSessionState : uint8 {
     STATE_SESSION_NONE,
     STATE_SESSION_EXIST,
-    STATE_SESSION_MAX UMETA(Hidden),
 };
 

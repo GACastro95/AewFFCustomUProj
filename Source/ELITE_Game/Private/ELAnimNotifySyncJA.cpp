@@ -5,3 +5,4 @@ UELAnimNotifySyncJA::UELAnimNotifySyncJA() {
     this->MontageB_N = NULL;
 }
 
+

@@ -1,5 +1,9 @@
 #include "ELEOSManagerUtility.h"
 
+UELEOSManagerUtility::UELEOSManagerUtility() {
+    this->DebugDisableTextFilter = false;
+}
+
 void UELEOSManagerUtility::RequestSanitizeWrestlerName(FEOSSanitizeWrestlerNameTextEvent Delegate, UELEOSSanitizeTextWrestlerData* UserData) {
 }
 
@@ -36,7 +40,4 @@ bool UELEOSManagerUtility::IsValidOnlineWrestlerData_Implementation(UObject* Onl
 
 
 
-UELEOSManagerUtility::UELEOSManagerUtility() {
-    this->DebugDisableTextFilter = false;
-}
 

@@ -1,5 +1,9 @@
 #include "EOSSessionInfo.h"
 
+UEOSSessionInfo::UEOSSessionInfo() {
+    this->m_pcSessionP2P = NULL;
+}
+
 bool UEOSSessionInfo::SetHostMigrationTarget(bool _bIsHostMigrationTarget) {
     return false;
 }
@@ -76,7 +80,4 @@ bool UEOSSessionInfo::DestroySessionP2P() {
     return false;
 }
 
-UEOSSessionInfo::UEOSSessionInfo() {
-    this->m_pcSessionP2P = NULL;
-}
 

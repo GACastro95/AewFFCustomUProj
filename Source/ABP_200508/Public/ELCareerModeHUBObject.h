@@ -10,7 +10,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerModeHUBObject : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerModeHUBObject();
+    AELCareerModeHUBObject(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateUseTableInfo();
     

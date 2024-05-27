@@ -76,9 +76,10 @@ protected:
     int32 MaxDurability;
     
 public:
-    AELSSWeaponTrapObject();
+    AELSSWeaponTrapObject(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateGuideVisual(bool NewCanPut);
     
@@ -157,7 +158,7 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 AddDurability(int32 Value);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

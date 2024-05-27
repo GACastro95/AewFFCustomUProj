@@ -1,5 +1,8 @@
 #include "ELSSUserData.h"
 
+UELSSUserData::UELSSUserData() {
+}
+
 void UELSSUserData::SetSSUserData(const FYGS2SSPlayerData& dat) {
 }
 
@@ -38,6 +41,4 @@ int32 UELSSUserData::GetPlayerRankExp() {
 void UELSSUserData::DebugPrintDiff() {
 }
 
-UELSSUserData::UELSSUserData() {
-}
 

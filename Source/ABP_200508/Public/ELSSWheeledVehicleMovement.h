@@ -12,9 +12,10 @@ protected:
     float ReplicatedRawThrottleInput;
     
 public:
-    UELSSWheeledVehicleMovement();
+    UELSSWheeledVehicleMovement(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerUpdateStateExtend(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32 CurrentGear, float InRawThrottleInput);

@@ -40,7 +40,8 @@ private:
     FResetWidgetAll OnResetWidgetAll;
     
 public:
-    AELMenuOperationalWidgetManagerBase();
+    AELMenuOperationalWidgetManagerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetManagedMenuWidget(UELOperationalWidgetBase* MenuWidget, yEnMenuWidgetType Type);
     
@@ -52,6 +53,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UELOperationalWidgetBase*> GetMenuWidgetArray() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    yEnMenuWidgetType GetManagedMenuWidgetType(UELOperationalWidgetBase* MenuWidget) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     yEnMenuWidgetType GetCurrentWidgetType() const;

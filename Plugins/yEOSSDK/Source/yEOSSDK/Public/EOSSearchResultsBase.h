@@ -15,6 +15,7 @@ protected:
     
 public:
     UEOSSearchResultsBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetSearchName() const;
     

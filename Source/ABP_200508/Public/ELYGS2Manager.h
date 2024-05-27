@@ -47,6 +47,7 @@ protected:
     
 public:
     UELYGS2Manager();
+
     UFUNCTION(BlueprintCallable)
     bool SetServerListData(const FString& Data);
     

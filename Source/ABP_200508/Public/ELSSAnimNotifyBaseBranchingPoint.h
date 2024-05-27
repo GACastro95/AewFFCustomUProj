@@ -8,5 +8,6 @@ class ABP_200508_API UELSSAnimNotifyBaseBranchingPoint : public UELSSAnimNotifyB
     GENERATED_BODY()
 public:
     UELSSAnimNotifyBaseBranchingPoint();
+
 };
 

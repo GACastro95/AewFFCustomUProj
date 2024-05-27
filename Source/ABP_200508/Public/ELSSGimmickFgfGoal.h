@@ -29,7 +29,8 @@ protected:
     bool bAlly;
     
 public:
-    AELSSGimmickFgfGoal();
+    AELSSGimmickFgfGoal(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateVisual(bool inAlly);
     

@@ -1,5 +1,9 @@
 #include "ELSSWebAPIFactoryBase.h"
 
+UELSSWebAPIFactoryBase::UELSSWebAPIFactoryBase() {
+    this->ssOnlineError = NULL;
+}
+
 void UELSSWebAPIFactoryBase::SetInstance(UELSSWebAPIFactoryBase* Instance) {
 }
 
@@ -10,7 +14,4 @@ UELGameInstance* UELSSWebAPIFactoryBase::GetGameInstance() {
     return NULL;
 }
 
-UELSSWebAPIFactoryBase::UELSSWebAPIFactoryBase() {
-    this->ssOnlineError = NULL;
-}
 

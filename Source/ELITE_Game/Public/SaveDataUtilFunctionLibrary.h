@@ -11,6 +11,7 @@ class ELITE_GAME_API USaveDataUtilFunctionLibrary : public UBlueprintFunctionLib
     GENERATED_BODY()
 public:
     USaveDataUtilFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static int32 ConvertRenderTargetToBufferJPEG(UTextureRenderTarget2D* TextureRenderTarget, TArray<uint8>& OutBuffer, int32 Quality);
     

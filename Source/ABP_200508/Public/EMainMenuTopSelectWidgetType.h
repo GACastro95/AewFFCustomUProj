@@ -10,6 +10,5 @@ enum class EMainMenuTopSelectWidgetType : uint8 {
     EMainMenuTopSelectWidgetType_Wrestler,
     EMainMenuTopSelectWidgetType_Reward,
     EMainMenuTopSelectWidgetType_Num,
-    EMainMenuTopSelectWidgetType_MAX UMETA(Hidden),
 };
 

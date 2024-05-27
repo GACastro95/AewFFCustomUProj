@@ -8,6 +8,7 @@ class ABP_200508_API UELMenuCheatManager : public UCheatManager {
     GENERATED_BODY()
 public:
     UELMenuCheatManager();
+
     UFUNCTION(BlueprintCallable, Exec)
     bool ToggleDisplayUnitType();
     

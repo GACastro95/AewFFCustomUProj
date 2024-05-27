@@ -26,6 +26,7 @@ public:
     FErrorRequestRetryEvent mErrRetryEvent;
     
     UYGS2RequestBase();
+
     UFUNCTION(BlueprintCallable)
     static FString YGS2GenIDForDebug(int32 _uLength);
     

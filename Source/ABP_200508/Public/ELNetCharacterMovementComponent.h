@@ -30,7 +30,8 @@ protected:
     float NetworkPositionDiffAccelScale;
     
 public:
-    UELNetCharacterMovementComponent();
+    UELNetCharacterMovementComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetNoReplication(bool flg);
     

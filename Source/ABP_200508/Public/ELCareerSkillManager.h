@@ -34,7 +34,8 @@ private:
     TArray<int32> m_PassiveSkillState;
     
 public:
-    AELCareerSkillManager();
+    AELCareerSkillManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool UnlockSkill(int32 _SelectIndex, int32 _LevelIndex);
     

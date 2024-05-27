@@ -1,5 +1,8 @@
 #include "EOSLobby.h"
 
+UEOSLobby::UEOSLobby() {
+}
+
 void UEOSLobby::SetVoiceChatStartMuted(bool _bMuted) {
 }
 
@@ -136,6 +139,4 @@ bool UEOSLobby::GetDetailsByInvite(UEOSCommunityInfoBase*& _pcCommunityInfo) {
     return false;
 }
 
-UEOSLobby::UEOSLobby() {
-}
 

@@ -1,5 +1,8 @@
 #include "ELOnlineNewsData.h"
 
+UELOnlineNewsData::UELOnlineNewsData() {
+}
+
 FString UELOnlineNewsData::ToJson(bool PlatformSwitch) {
     return TEXT("");
 }
@@ -25,6 +28,4 @@ bool UELOnlineNewsData::FromJson(const FString& _JsonData) {
     return false;
 }
 
-UELOnlineNewsData::UELOnlineNewsData() {
-}
 

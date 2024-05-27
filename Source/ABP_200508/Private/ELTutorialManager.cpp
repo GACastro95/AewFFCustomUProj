@@ -1,5 +1,9 @@
 #include "ELTutorialManager.h"
 
+UELTutorialManager::UELTutorialManager() {
+    this->m_pTutorialExecuteActor = NULL;
+}
+
 void UELTutorialManager::SetDisableAutoEndTutorial(FTutorialStartWaitState OnStartWaotStateDelegate) {
 }
 
@@ -46,7 +50,4 @@ bool UELTutorialManager::CancelTutorial(bool WithForceCloseDialog) {
     return false;
 }
 
-UELTutorialManager::UELTutorialManager() {
-    this->m_pTutorialExecuteActor = NULL;
-}
 

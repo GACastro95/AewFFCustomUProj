@@ -9,7 +9,7 @@
 class UDataTable;
 class UEliteGameSettings;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ELITE_GAME_API UEliteGameSettings : public UELDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -65,6 +65,7 @@ public:
     TArray<FPSTitleInfo> PSTitleInfos;
     
     UEliteGameSettings();
+
     UFUNCTION(BlueprintCallable)
     static UDataTable* GetSfxListTable();
     

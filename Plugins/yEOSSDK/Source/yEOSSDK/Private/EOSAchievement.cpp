@@ -1,5 +1,8 @@
 #include "EOSAchievement.h"
 
+UEOSAchievement::UEOSAchievement() {
+}
+
 bool UEOSAchievement::SetupInternalCallback() {
     return false;
 }
@@ -31,6 +34,4 @@ bool UEOSAchievement::GetAchievements(TArray<FEOSAchievementInfo>& _stAchievemen
     return false;
 }
 
-UEOSAchievement::UEOSAchievement() {
-}
 

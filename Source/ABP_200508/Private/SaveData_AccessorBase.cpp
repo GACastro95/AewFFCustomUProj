@@ -1,5 +1,10 @@
 #include "SaveData_AccessorBase.h"
 
+USaveData_AccessorBase::USaveData_AccessorBase() {
+    this->m_pcSaveGameBaseShared = NULL;
+    this->m_pcSaveGame_RawData = NULL;
+}
+
 bool USaveData_AccessorBase::SetupSaveGame_RawData(USaveGame_RawData* _pcRawData, bool _bCopyData) {
     return false;
 }
@@ -168,8 +173,4 @@ bool USaveData_AccessorBase::ConvertSaveDataTypeAndIndexFromFileKey(ESaveDataTyp
     return false;
 }
 
-USaveData_AccessorBase::USaveData_AccessorBase() {
-    this->m_pcSaveGameBaseShared = NULL;
-    this->m_pcSaveGame_RawData = NULL;
-}
 

@@ -30,6 +30,7 @@ private:
     
 public:
     USaveData_AccessorBase();
+
     UFUNCTION(BlueprintCallable)
     bool SetupSaveGame_RawData(USaveGame_RawData* _pcRawData, bool _bCopyData);
     

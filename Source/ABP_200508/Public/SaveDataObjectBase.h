@@ -17,6 +17,7 @@ protected:
     
 public:
     USaveDataObjectBase();
+
     UFUNCTION(BlueprintCallable)
     void SetProductUserID(const FString& _strProductUserID);
     

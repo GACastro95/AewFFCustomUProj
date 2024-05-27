@@ -20,7 +20,8 @@ protected:
     bool IsCanPushSwitchMapMode;
     
 public:
-    AELSSUIManagerInGame();
+    AELSSUIManagerInGame(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetAbilityVisible(bool inIsVisible);
     

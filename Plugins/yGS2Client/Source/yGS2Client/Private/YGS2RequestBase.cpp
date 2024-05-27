@@ -1,5 +1,8 @@
 #include "YGS2RequestBase.h"
 
+UYGS2RequestBase::UYGS2RequestBase() {
+}
+
 FString UYGS2RequestBase::YGS2GenIDForDebug(int32 _uLength) {
     return TEXT("");
 }
@@ -159,6 +162,4 @@ void UYGS2RequestBase::ClearYGS2AuthCache() {
 void UYGS2RequestBase::AddRef() {
 }
 
-UYGS2RequestBase::UYGS2RequestBase() {
-}
 

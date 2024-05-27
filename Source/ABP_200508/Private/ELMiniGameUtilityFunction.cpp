@@ -1,5 +1,8 @@
 #include "ELMiniGameUtilityFunction.h"
 
+UELMiniGameUtilityFunction::UELMiniGameUtilityFunction() {
+}
+
 bool UELMiniGameUtilityFunction::SetupMiniGameSaveData() {
     return false;
 }
@@ -31,6 +34,4 @@ void UELMiniGameUtilityFunction::GetMiniGamePlayedList(TArray<bool>& _AlreadyPla
 void UELMiniGameUtilityFunction::CheckUnlockProGamerAchievement(EMiniGameID _NowPlayMiniGameID) {
 }
 
-UELMiniGameUtilityFunction::UELMiniGameUtilityFunction() {
-}
 

@@ -29,5 +29,6 @@ public:
     TEnumAsByte<TextureAddress> AddressY;
     
     UManaComponentTexture();
+
 };
 

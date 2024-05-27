@@ -36,7 +36,8 @@ protected:
     UDataTable* CareerResultDataTable;
     
 public:
-    AELCareerStateManager();
+    AELCareerStateManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OpenTutorialArchive();
     

@@ -152,7 +152,8 @@ private:
     AActor* DroppedRibbonInstance;
     
 public:
-    AELEntranceCutsceneManager();
+    AELEntranceCutsceneManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     FELEntranceCutsceneInfo UpdateDefaultEntranceFlag(const FELEntranceCutsceneInfo& CutsceneInfo, const FELWrestlerProfile_CutScene& CustomData, UDataTable* TeamParamDataTable, bool CAE);

@@ -49,6 +49,7 @@ protected:
     
 public:
     UELAdjustDlcObjectForCustomWrestler();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnCheckScout(UMyWrestlerDataObject* Object);

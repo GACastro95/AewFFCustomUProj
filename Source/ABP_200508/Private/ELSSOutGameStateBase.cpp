@@ -1,5 +1,13 @@
 #include "ELSSOutGameStateBase.h"
 
+AELSSOutGameStateBase::AELSSOutGameStateBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DatabaseType = NULL;
+    this->Database = NULL;
+    this->SaveDataManager = NULL;
+    this->SaveDataManagerClass = NULL;
+    this->SSMainMenuFlow = NULL;
+}
+
 void AELSSOutGameStateBase::SSLobbyStart() {
 }
 
@@ -32,11 +40,4 @@ AELSSOutGameDatabase* AELSSOutGameStateBase::GetOutGameDatabase() const {
     return NULL;
 }
 
-AELSSOutGameStateBase::AELSSOutGameStateBase() {
-    this->DatabaseType = NULL;
-    this->Database = NULL;
-    this->SaveDataManager = NULL;
-    this->SaveDataManagerClass = NULL;
-    this->SSMainMenuFlow = NULL;
-}
 

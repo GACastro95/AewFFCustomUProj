@@ -12,5 +12,6 @@ public:
     TArray<FTeamSaveData> TeamSaveDataArray;
     
     USaveData_UGC_Team();
+
 };
 

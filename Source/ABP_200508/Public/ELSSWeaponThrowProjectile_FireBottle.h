@@ -3,6 +3,7 @@
 #include "Engine/EngineTypes.h"
 #include "Engine/NetSerialization.h"
 #include "ELSSWeaponThrowProjectile.h"
+#include "SSCharacterAdjust.h"
 #include "ELSSWeaponThrowProjectile_FireBottle.generated.h"
 
 class AActor;
@@ -43,8 +44,15 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BadStatusIntervalTime;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSSCharacterAdjust CharaAdjustParam;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float HitTimeCount;
+    
 public:
-    AELSSWeaponThrowProjectile_FireBottle();
+    AELSSWeaponThrowProjectile_FireBottle(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     int32 PlayBurnLoopSE_Impl();

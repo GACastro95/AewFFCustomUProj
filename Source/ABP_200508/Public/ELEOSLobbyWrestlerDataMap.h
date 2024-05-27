@@ -17,6 +17,7 @@ private:
     
 public:
     UELEOSLobbyWrestlerDataMap();
+
     UFUNCTION(BlueprintCallable)
     void SetWrestlerNum(int32 _WrestlerNum);
     

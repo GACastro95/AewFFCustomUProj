@@ -1,5 +1,8 @@
 #include "ELGameModeMiniGameBase.h"
 
+AELGameModeMiniGameBase::AELGameModeMiniGameBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELGameModeMiniGameBase::SetUpSplitScreenLayout() {
 }
 
@@ -38,6 +41,4 @@ bool AELGameModeMiniGameBase::CanEnableChangeSplitScreen(UObject* Context) {
     return false;
 }
 
-AELGameModeMiniGameBase::AELGameModeMiniGameBase() {
-}
 

@@ -3,6 +3,36 @@
 #include "Components/SphereComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSPickupBase::AELSSPickupBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bNetUseOwnerRelevancy = true;
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
+    this->SphereComponent = (USphereComponent*)RootComponent;
+    this->InteractCollision = CreateDefaultSubobject<USphereComponent>(TEXT("InteractCollision"));
+    this->ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
+    this->PickupType = ESSPickupType::None;
+    this->DatabaseId = 0;
+    this->Rarity = ESSRarity::None;
+    this->IsLaunchStop = false;
+    this->IsCanTouch = false;
+    this->PickupOwner = NULL;
+    this->IsLastOwnerLocallyControlled = false;
+    this->IsCurrentEquipped = false;
+    this->RarityEffect = NULL;
+    this->LostEffectDelaySec = 0.00f;
+    this->DestroyAfterLostEffectDelaySec = 3.00f;
+    this->CalledLostEffect = false;
+    this->LostSec = 0.00f;
+    this->LostTimer = 0.00f;
+    this->bReservedLostByTimer = false;
+    this->SpawnedTime = 0.00f;
+    this->PlaySpawnedSEConditionTime = 0.50f;
+    this->SpawnReason = ESSSpawnPickupReason::None;
+    this->InteractCollision->SetupAttachment(RootComponent);
+}
+
 void AELSSPickupBase::UpdateLostTimer(float DeltaTime) {
 }
 
@@ -136,27 +166,4 @@ void AELSSPickupBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AELSSPickupBase, SpawnReason);
 }
 
-AELSSPickupBase::AELSSPickupBase() {
-    this->SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
-    this->InteractCollision = CreateDefaultSubobject<USphereComponent>(TEXT("InteractCollision"));
-    this->ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
-    this->PickupType = ESSPickupType::None;
-    this->DatabaseId = 0;
-    this->Rarity = ESSRarity::None;
-    this->IsLaunchStop = false;
-    this->IsCanTouch = false;
-    this->PickupOwner = NULL;
-    this->IsLastOwnerLocallyControlled = false;
-    this->IsCurrentEquipped = false;
-    this->RarityEffect = NULL;
-    this->LostEffectDelaySec = 0.00f;
-    this->DestroyAfterLostEffectDelaySec = 3.00f;
-    this->CalledLostEffect = false;
-    this->LostSec = 0.00f;
-    this->LostTimer = 0.00f;
-    this->bReservedLostByTimer = false;
-    this->SpawnedTime = 0.00f;
-    this->PlaySpawnedSEConditionTime = 0.50f;
-    this->SpawnReason = ESSSpawnPickupReason::None;
-}
 

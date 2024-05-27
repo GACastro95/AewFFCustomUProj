@@ -1,5 +1,8 @@
 #include "ELBattlePassMenuRewardWidgetBase.h"
 
+UELBattlePassMenuRewardWidgetBase::UELBattlePassMenuRewardWidgetBase() {
+}
+
 void UELBattlePassMenuRewardWidgetBase::SetupParameter() {
 }
 
@@ -18,6 +21,4 @@ int32 UELBattlePassMenuRewardWidgetBase::GetKeyRepeatCount() {
 void UELBattlePassMenuRewardWidgetBase::GetCurrentBattlePassRewardItemList(FBattlePassRewardMenuParam& _currentItem, TArray<FBattlePassRewardMenuParam>& _leftItemList, TArray<FBattlePassRewardMenuParam>& _rightItemList) {
 }
 
-UELBattlePassMenuRewardWidgetBase::UELBattlePassMenuRewardWidgetBase() {
-}
 

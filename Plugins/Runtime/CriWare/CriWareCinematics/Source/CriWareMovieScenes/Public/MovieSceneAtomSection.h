@@ -57,6 +57,7 @@ private:
     
 public:
     UMovieSceneAtomSection();
+
     UFUNCTION(BlueprintCallable)
     void SetStartOffset(FFrameNumber InStartOffset);
     

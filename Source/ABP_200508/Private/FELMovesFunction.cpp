@@ -1,5 +1,8 @@
 #include "FELMovesFunction.h"
 
+UFELMovesFunction::UFELMovesFunction() {
+}
+
 void UFELMovesFunction::SetSceneCaptureOnly(TArray<AActor*> SceneActors, bool Flag) {
 }
 
@@ -126,6 +129,4 @@ FText UFELMovesFunction::FormatCurrentPathName(const FText& Left, const FText& R
     return FText::GetEmpty();
 }
 
-UFELMovesFunction::UFELMovesFunction() {
-}
 

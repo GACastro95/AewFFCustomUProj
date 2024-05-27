@@ -18,6 +18,7 @@ public:
     UObject* WorldContextObject;
     
     UActionWaitReplicationConnections();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void PollStatus();

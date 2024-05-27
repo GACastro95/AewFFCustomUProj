@@ -1,5 +1,8 @@
 #include "EditWrestlerCareerUtilityFunction.h"
 
+UEditWrestlerCareerUtilityFunction::UEditWrestlerCareerUtilityFunction() {
+}
+
 void UEditWrestlerCareerUtilityFunction::SetIntParam(FPersonalityParam& Param, const EPersonalityIntParamType Type, const int32 Value) {
 }
 
@@ -17,6 +20,4 @@ bool UEditWrestlerCareerUtilityFunction::GetBitParam(const FPersonalityParam& Pa
     return false;
 }
 
-UEditWrestlerCareerUtilityFunction::UEditWrestlerCareerUtilityFunction() {
-}
 

@@ -26,6 +26,5 @@ enum class EWrestlerSkillAbilityType : uint8 {
     Type_019,
     Type_020,
     Type_021,
-    Type_MAX UMETA(Hidden),
 };
 

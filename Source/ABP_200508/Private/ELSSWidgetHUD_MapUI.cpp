@@ -1,5 +1,45 @@
 #include "ELSSWidgetHUD_MapUI.h"
 
+UELSSWidgetHUD_MapUI::UELSSWidgetHUD_MapUI() {
+    this->SSPlayerController = NULL;
+    this->PlayerFloor = 0;
+    this->MiniMapTypeIndex = 0;
+    this->DefaultMinimapId = 10000;
+    this->MapCanvasSize = 0.00f;
+    this->IsWholeMap = false;
+    this->IsDoneInit = false;
+    this->IsSearchAbilityUsing = false;
+    this->IsWatchGameMode = false;
+    this->MapCanvas = NULL;
+    this->MiniMapCashed = NULL;
+    this->MapOperationButton = NULL;
+    this->CarrotMedal01Widgets = NULL;
+    this->CarrotMedal02Widgets = NULL;
+    this->ItemManager = NULL;
+    this->FgfManager = NULL;
+    this->MapImage = NULL;
+    this->PlayerIcon = NULL;
+    this->PlayerSight = NULL;
+    this->StormGuide = NULL;
+    this->StormZone = NULL;
+    this->AnnounceStorm = NULL;
+    this->MiniMapFrameWidget = NULL;
+    this->PlayerActor = NULL;
+    this->PlayerController = NULL;
+    this->StormActor = NULL;
+    this->MiniMapZoom = NULL;
+    this->MiniMapInfo = NULL;
+    this->MapTypeDataTable = NULL;
+    this->TextureMaterial = NULL;
+    this->RuleType = ESSRuleType::BattleRoyale;
+    this->BlackDiamondIcon01Widget = NULL;
+    this->BlackDiamondIcon02Widget = NULL;
+    this->TeamTreasureBoxIcon01Widget = NULL;
+    this->TeamTreasureBoxIcon02Widget = NULL;
+    this->FGFBallIcon01Widget = NULL;
+    this->FGFBallIcon02Widget = NULL;
+}
+
 FVector2D UELSSWidgetHUD_MapUI::WorldLocationToUI(const FVector& InWorldLocation) {
     return FVector2D{};
 }
@@ -113,43 +153,4 @@ void UELSSWidgetHUD_MapUI::ApplyAreaShrinkTime(float InSecond) {
 void UELSSWidgetHUD_MapUI::ApplyAliveCount(int32 InAliveCount) {
 }
 
-UELSSWidgetHUD_MapUI::UELSSWidgetHUD_MapUI() {
-    this->SSPlayerController = NULL;
-    this->PlayerFloor = 0;
-    this->MiniMapTypeIndex = 0;
-    this->DefaultMinimapId = 10000;
-    this->MapCanvasSize = 0.00f;
-    this->IsWholeMap = false;
-    this->IsDoneInit = false;
-    this->IsSearchAbilityUsing = false;
-    this->IsWatchGameMode = false;
-    this->MapCanvas = NULL;
-    this->MiniMapCashed = NULL;
-    this->MapOperationButton = NULL;
-    this->CarrotMedal01Widgets = NULL;
-    this->CarrotMedal02Widgets = NULL;
-    this->ItemManager = NULL;
-    this->FgfManager = NULL;
-    this->MapImage = NULL;
-    this->PlayerIcon = NULL;
-    this->PlayerSight = NULL;
-    this->StormGuide = NULL;
-    this->StormZone = NULL;
-    this->AnnounceStorm = NULL;
-    this->MiniMapFrameWidget = NULL;
-    this->PlayerActor = NULL;
-    this->PlayerController = NULL;
-    this->StormActor = NULL;
-    this->MiniMapZoom = NULL;
-    this->MiniMapInfo = NULL;
-    this->MapTypeDataTable = NULL;
-    this->TextureMaterial = NULL;
-    this->RuleType = ESSRuleType::BattleRoyale;
-    this->BlackDiamondIcon01Widget = NULL;
-    this->BlackDiamondIcon02Widget = NULL;
-    this->TeamTreasureBoxIcon01Widget = NULL;
-    this->TeamTreasureBoxIcon02Widget = NULL;
-    this->FGFBallIcon01Widget = NULL;
-    this->FGFBallIcon02Widget = NULL;
-}
 

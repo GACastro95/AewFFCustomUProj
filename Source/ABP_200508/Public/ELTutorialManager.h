@@ -20,6 +20,7 @@ private:
     
 public:
     UELTutorialManager();
+
     UFUNCTION(BlueprintCallable)
     void SetDisableAutoEndTutorial(FTutorialStartWaitState OnStartWaotStateDelegate);
     

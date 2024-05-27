@@ -1,5 +1,35 @@
 #include "ELSSWidgetHUD_HpGauge.h"
 
+UELSSWidgetHUD_HpGauge::UELSSWidgetHUD_HpGauge() {
+    this->HpGaugeMaterial = NULL;
+    this->HpGaugeDiffMaterial = NULL;
+    this->KOGaugeMaterial = NULL;
+    this->GaugeWidget = NULL;
+    this->KOGaugeWidget = NULL;
+    this->HPGaugeWidget = NULL;
+    this->TargetActor = NULL;
+    this->PlayerController = NULL;
+    this->HpMaxValue = 0;
+    this->DownHpMaxValue = 0;
+    this->IdealHp = 0;
+    this->IdealDownHp = 0;
+    this->WrestlerHp = 0.00f;
+    this->WrestlerDownHp = 0.00f;
+    this->HpDuration = 0.00f;
+    this->DownHpDuration = 0.00f;
+    this->HpElapsed = 0.00f;
+    this->DownHpElapsed = 0.00f;
+    this->IsCompleteHpDuration = false;
+    this->IsCompleteDownHpDuration = false;
+    this->BarShowElapsed = 0.00f;
+    this->IsShowDownHp = false;
+    this->IsGaugeVisible = false;
+    this->MaxDistance = 1300.00f;
+    this->MinDistance = 300.00f;
+    this->MAXSCALE = 1.00f;
+    this->MINSCALE = 0.50f;
+}
+
 void UELSSWidgetHUD_HpGauge::UpdateWrestlerHp(float InDeltaTime) {
 }
 
@@ -50,33 +80,4 @@ void UELSSWidgetHUD_HpGauge::ApplyWrestlerDownHpGauge(float InWrestlerDownHpRati
 void UELSSWidgetHUD_HpGauge::ApplyDownHp(int32 InNowWrestlerDownHp, int32 InWrestlerDownHp, int32 InMaxWrestlerDownHp) {
 }
 
-UELSSWidgetHUD_HpGauge::UELSSWidgetHUD_HpGauge() {
-    this->HpGaugeMaterial = NULL;
-    this->HpGaugeDiffMaterial = NULL;
-    this->KOGaugeMaterial = NULL;
-    this->GaugeWidget = NULL;
-    this->KOGaugeWidget = NULL;
-    this->HPGaugeWidget = NULL;
-    this->TargetActor = NULL;
-    this->PlayerController = NULL;
-    this->HpMaxValue = 0;
-    this->DownHpMaxValue = 0;
-    this->IdealHp = 0;
-    this->IdealDownHp = 0;
-    this->WrestlerHp = 0.00f;
-    this->WrestlerDownHp = 0.00f;
-    this->HpDuration = 0.00f;
-    this->DownHpDuration = 0.00f;
-    this->HpElapsed = 0.00f;
-    this->DownHpElapsed = 0.00f;
-    this->IsCompleteHpDuration = false;
-    this->IsCompleteDownHpDuration = false;
-    this->BarShowElapsed = 0.00f;
-    this->IsShowDownHp = false;
-    this->IsGaugeVisible = false;
-    this->MaxDistance = 1300.00f;
-    this->MinDistance = 300.00f;
-    this->MAXSCALE = 1.00f;
-    this->MINSCALE = 0.50f;
-}
 

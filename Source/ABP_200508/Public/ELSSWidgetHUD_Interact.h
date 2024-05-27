@@ -80,6 +80,7 @@ protected:
     
 public:
     UELSSWidgetHUD_Interact();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateOpacityAnimation(float InDeltaTime);

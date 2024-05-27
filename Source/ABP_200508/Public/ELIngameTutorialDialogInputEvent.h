@@ -7,7 +7,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ABP_200508_API UELIngameTutorialDialogInputEvent : public UELInGameMenuInputEventBase {
     GENERATED_BODY()
 public:
-    UELIngameTutorialDialogInputEvent();
+    UELIngameTutorialDialogInputEvent(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnOpenedDisconnectedDialog();

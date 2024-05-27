@@ -9,6 +9,5 @@ enum class EMiniGameDebugChipType : uint8 {
     ChipGather_SpawnSpeedUpItem,
     ChipGather_SpawnSpeedDownItem,
     ChipGather_TypeMax,
-    ChipGather_MAX UMETA(Hidden),
 };
 

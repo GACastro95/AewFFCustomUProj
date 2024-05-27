@@ -14,6 +14,7 @@ public:
     FEOSPresenceEventDispatcher PresenceEventDispatcher;
     
     UEOSPresenceBase();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

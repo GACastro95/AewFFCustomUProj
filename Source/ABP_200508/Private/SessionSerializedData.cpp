@@ -1,5 +1,9 @@
 #include "SessionSerializedData.h"
 
+USessionSerializedData::USessionSerializedData() {
+    this->SerializedData.AddDefaulted(8);
+}
+
 bool USessionSerializedData::SetObject(UObject* Object, int32 Index) {
     return false;
 }
@@ -16,7 +20,4 @@ UObject* USessionSerializedData::CreateObject(UObject* Outer) {
     return NULL;
 }
 
-USessionSerializedData::USessionSerializedData() {
-    this->SerializedData.AddDefaulted(8);
-}
 

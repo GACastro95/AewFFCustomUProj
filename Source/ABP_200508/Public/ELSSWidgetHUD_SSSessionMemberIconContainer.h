@@ -16,6 +16,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSSessionMemberIconContainer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

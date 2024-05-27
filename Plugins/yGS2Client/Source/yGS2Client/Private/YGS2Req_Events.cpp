@@ -1,5 +1,8 @@
 #include "YGS2Req_Events.h"
 
+UYGS2Req_Events::UYGS2Req_Events() {
+}
+
 void UYGS2Req_Events::SetEventData(const FString& _strEventName, const FString& _strDataType, const FString& _strTextData, bool _bAddToDB, bool _bAddToRAW) {
 }
 
@@ -10,6 +13,4 @@ FString UYGS2Req_Events::GetResultID() const {
     return TEXT("");
 }
 
-UYGS2Req_Events::UYGS2Req_Events() {
-}
 

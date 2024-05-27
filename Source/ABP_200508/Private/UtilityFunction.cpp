@@ -1,5 +1,8 @@
 #include "UtilityFunction.h"
 
+UUtilityFunction::UUtilityFunction() {
+}
+
 float UUtilityFunction::TwoVectorsFromAngle(FVector _Vec1, FVector _Vec2) {
     return 0.0f;
 }
@@ -170,6 +173,4 @@ FString UUtilityFunction::GetCpuInfo() {
 void UUtilityFunction::AdjustFullScreenResolution(UObject* _pWorldContextObject) {
 }
 
-UUtilityFunction::UUtilityFunction() {
-}
 

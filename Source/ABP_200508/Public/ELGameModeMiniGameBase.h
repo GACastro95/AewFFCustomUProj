@@ -10,7 +10,8 @@ UCLASS(Blueprintable, NonTransient)
 class ABP_200508_API AELGameModeMiniGameBase : public AGameMode {
     GENERATED_BODY()
 public:
-    AELGameModeMiniGameBase();
+    AELGameModeMiniGameBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetUpSplitScreenLayout();
     

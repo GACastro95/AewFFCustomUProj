@@ -23,6 +23,7 @@ protected:
     
 public:
     UEOSNatP2PPacketBase();
+
     UFUNCTION(BlueprintCallable)
     bool SetupByCachedTransfer(UEOSUserBase* _pcUserBase, UEOSNatP2PCachedTransfer* _pcCachedTransfer, EEOSPacketReliability _Reliability);
     

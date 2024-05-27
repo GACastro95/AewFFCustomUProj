@@ -63,7 +63,8 @@ private:
     TArray<EWrestlerID_N> m_OpponentJERK;
     
 public:
-    AELCareerStoryCardLottery();
+    AELCareerStoryCardLottery(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Lottery(ECareerStoryTiming timing);
     

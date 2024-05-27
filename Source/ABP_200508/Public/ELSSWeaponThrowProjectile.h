@@ -63,9 +63,10 @@ protected:
     float EffectRadius;
     
 public:
-    AELSSWeaponThrowProjectile();
+    AELSSWeaponThrowProjectile(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetInternalVisible(bool flg);
@@ -95,7 +96,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

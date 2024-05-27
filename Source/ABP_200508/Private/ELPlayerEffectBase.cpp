@@ -1,5 +1,9 @@
 #include "ELPlayerEffectBase.h"
 
+UELPlayerEffectBase::UELPlayerEffectBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->EffectDataTable = NULL;
+}
+
 void UELPlayerEffectBase::Setup(int32 ControllerId) {
 }
 
@@ -20,7 +24,4 @@ UParticleSystem* UELPlayerEffectBase::GetGuardBreakEffect() {
     return NULL;
 }
 
-UELPlayerEffectBase::UELPlayerEffectBase() {
-    this->EffectDataTable = NULL;
-}
 

@@ -1,6 +1,20 @@
 #include "ELSSCharacter.h"
 #include "ELBuildBody.h"
 #include "CharacterBasicProfiles.h"
+#include "ELSSCharaMeshComponent.h"
+
+AELSSCharacter::AELSSCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UELSSCharaMeshComponent>(TEXT("CharacterMesh0"))) {
+    this->BuildBody = CreateDefaultSubobject<UELBuildBody>(TEXT("BuildBody"));
+    this->SpawnedMeshChara = NULL;
+    this->HairMesh = NULL;
+    this->CharacterProfilesClass = UCharacterBasicProfiles::StaticClass();
+    this->CharacterProfiles = NULL;
+    this->DefaultIdleMontage = NULL;
+    this->MergedMeshComp = NULL;
+    this->bVisibleMergedMesh = false;
+    const FProperty* p_Mesh = GetClass()->FindPropertyByName("Mesh");
+    (*p_Mesh->ContainerPtrToValuePtr<USkeletalMeshComponent*>(this))->SetupAttachment(RootComponent);
+}
 
 bool AELSSCharacter::ShouldPlayFootstepSound() const {
     return false;
@@ -55,14 +69,4 @@ UAnimMontage* AELSSCharacter::GetActiveMontage() {
 void AELSSCharacter::ApplySourceMeshMaterials(USkeletalMeshComponent* inMergedMesh, const EEditPartsSlot Slot, USkeletalMeshComponent* inSrcMesh) {
 }
 
-AELSSCharacter::AELSSCharacter() {
-    this->BuildBody = CreateDefaultSubobject<UELBuildBody>(TEXT("BuildBody"));
-    this->SpawnedMeshChara = NULL;
-    this->HairMesh = NULL;
-    this->CharacterProfilesClass = UCharacterBasicProfiles::StaticClass();
-    this->CharacterProfiles = NULL;
-    this->DefaultIdleMontage = NULL;
-    this->MergedMeshComp = NULL;
-    this->bVisibleMergedMesh = false;
-}
 

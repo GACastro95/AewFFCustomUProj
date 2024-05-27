@@ -27,7 +27,7 @@ enum class EEditPartsSlot : uint8 {
     FaceAccessory,
     BodyAccessory,
     Num,
-    ExtraParts_01 = 0x64,
+    ExtraParts_01 = 100,
     ExtraParts_02,
     ExtraParts_03,
     ExtraParts_04,

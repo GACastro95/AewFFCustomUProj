@@ -1,5 +1,8 @@
 #include "YAutoPlay_DebugMenu.h"
 
+UYAutoPlay_DebugMenu::UYAutoPlay_DebugMenu() {
+}
+
 void UYAutoPlay_DebugMenu::SetStopAutoPlay(bool _bStop) {
 }
 
@@ -83,6 +86,4 @@ int32 UYAutoPlay_DebugMenu::GetAutoPlayDTFileIndex() {
 void UYAutoPlay_DebugMenu::AddResultText(const FString& _text) {
 }
 
-UYAutoPlay_DebugMenu::UYAutoPlay_DebugMenu() {
-}
 

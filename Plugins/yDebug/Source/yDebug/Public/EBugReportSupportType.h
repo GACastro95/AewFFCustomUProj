@@ -7,7 +7,7 @@ enum class EBugReportSupportType : uint8 {
     None,
     Mail,
     Mail_JIRA,
-    JIRA = 0x4,
+    JIRA = 4,
     Max,
 };
 

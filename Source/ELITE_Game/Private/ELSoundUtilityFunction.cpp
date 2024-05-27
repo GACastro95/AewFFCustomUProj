@@ -1,5 +1,8 @@
 #include "ELSoundUtilityFunction.h"
 
+UELSoundUtilityFunction::UELSoundUtilityFunction() {
+}
+
 void UELSoundUtilityFunction::SetDebugDisableSound(bool IsDisable) {
 }
 
@@ -62,6 +65,4 @@ USoundAtomCue* UELSoundUtilityFunction::GetCrowdChantCue(FName RowName, UDataTab
     return NULL;
 }
 
-UELSoundUtilityFunction::UELSoundUtilityFunction() {
-}
 

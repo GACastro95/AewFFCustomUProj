@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ELITE_GAME_API AELSteelStep : public AActor {
     GENERATED_BODY()
 public:
-    AELSteelStep();
+    AELSteelStep(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,5 +1,11 @@
 #include "ELSSOnlineError.h"
 
+UELSSOnlineError::UELSSOnlineError() {
+    this->isErrorProcess = false;
+    this->EnableNetworkStatus = false;
+    this->CurrentNetworkStatus = EELNetworkStatus::Disabled;
+}
+
 void UELSSOnlineError::YGS2API_RequestResult(EYGS2ErrorType ErrorType, UYGS2RequestBase* Request) {
 }
 
@@ -111,9 +117,4 @@ bool UELSSOnlineError::AddErrDialogData(const FSSPlatformNetworkData& dat, FStri
     return false;
 }
 
-UELSSOnlineError::UELSSOnlineError() {
-    this->isErrorProcess = false;
-    this->EnableNetworkStatus = false;
-    this->CurrentNetworkStatus = EELNetworkStatus::Disabled;
-}
 

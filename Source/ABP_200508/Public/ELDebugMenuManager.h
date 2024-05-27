@@ -15,6 +15,7 @@ class ABP_200508_API UELDebugMenuManager : public UELDBG_ReferBase {
     GENERATED_BODY()
 public:
     UELDebugMenuManager();
+
     UFUNCTION(BlueprintCallable)
     bool UnregistRoot(const FString& _strRegistKey);
     

@@ -19,7 +19,7 @@ enum class EELTeamID : uint8 {
     TayAnna,
     TheAcclaimed,
     ExistingMax,
-    Custom_00 = 0xE,
+    Custom_00 = ExistingMax,
     Custom_01,
     Custom_02,
     Custom_03,

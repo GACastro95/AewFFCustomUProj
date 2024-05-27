@@ -5,6 +5,5 @@
 UENUM(BlueprintType)
 enum class EELMatchTypeStat : uint8 {
     MatchTime_Min,
-    MatchTime_Max,
 };
 

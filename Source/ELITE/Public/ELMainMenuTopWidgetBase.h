@@ -8,6 +8,7 @@ class ELITE_API UELMainMenuTopWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELMainMenuTopWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnUpdateCheckEOSSSParamEvent();

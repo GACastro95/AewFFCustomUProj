@@ -1,5 +1,8 @@
 #include "ELJukeBoxUtilityFunction.h"
 
+UELJukeBoxUtilityFunction::UELJukeBoxUtilityFunction() {
+}
+
 void UELJukeBoxUtilityFunction::UpdateJukeboxSaveData(uint8 _saveDataAccessFlag) {
 }
 
@@ -228,6 +231,4 @@ bool UELJukeBoxUtilityFunction::AnyJukeBoxItem(TArray<FJukeBoxMenuInfo_N>& Param
     return false;
 }
 
-UELJukeBoxUtilityFunction::UELJukeBoxUtilityFunction() {
-}
 

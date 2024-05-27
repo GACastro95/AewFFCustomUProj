@@ -39,6 +39,7 @@ class ABP_200508_API UELSSInGameUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSInGameUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static TArray<FELSSLobbyMatchPlayerDataToClient> SortClientMatchPlayerList(const UObject* WorldContextObject, TArray<FELSSLobbyMatchPlayerDataToClient> Source);
     

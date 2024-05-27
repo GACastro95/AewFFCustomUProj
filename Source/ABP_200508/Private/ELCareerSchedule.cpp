@@ -1,5 +1,8 @@
 #include "ELCareerSchedule.h"
 
+AELCareerSchedule::AELCareerSchedule(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 
 void AELCareerSchedule::SetScenarioTable(ECareerScenario _Scenario) {
 }
@@ -65,6 +68,4 @@ void AELCareerSchedule::CareerInitSaveScheduleParam(ECareerScenario _Scenario) {
 void AELCareerSchedule::AddCareerScheduleData(FCareerSchedule _Data) {
 }
 
-AELCareerSchedule::AELCareerSchedule() {
-}
 

@@ -14,6 +14,6 @@ enum class ESSResultGradeABC : uint8 {
     C_Mid,
     C_Low,
     Max,
-    Default = 0x8,
+    Default = C_Low,
 };
 

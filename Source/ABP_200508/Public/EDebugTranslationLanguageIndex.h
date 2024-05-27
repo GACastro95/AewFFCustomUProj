@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class EDebugTranslationLanguageIndex : uint8 {
     Lang_EN,
     Lang_JP,
-    Lang_Max,
 };
 

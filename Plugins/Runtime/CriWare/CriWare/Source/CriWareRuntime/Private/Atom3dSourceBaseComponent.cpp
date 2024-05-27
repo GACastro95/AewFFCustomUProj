@@ -1,9 +1,6 @@
 #include "Atom3dSourceBaseComponent.h"
 
-void UAtom3dSourceBaseComponent::SetRegion(UAtom3dRegion* InRegion) {
-}
-
-UAtom3dSourceBaseComponent::UAtom3dSourceBaseComponent() {
+UAtom3dSourceBaseComponent::UAtom3dSourceBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DefaultOutputVolumeScale = 0.00f;
     this->DefaultRegion = NULL;
     this->bIsAttenuationDistanceDebugSpheresVisible = false;
@@ -14,4 +11,8 @@ UAtom3dSourceBaseComponent::UAtom3dSourceBaseComponent() {
     this->DefaultInteriorDistance = 0.00f;
     this->bIsDebugStringsForDetailsVisible = false;
 }
+
+void UAtom3dSourceBaseComponent::SetRegion(UAtom3dRegion* InRegion) {
+}
+
 

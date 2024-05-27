@@ -10,6 +10,7 @@ class ELITE_GAME_API UWrestlerIDUtilityFunctions : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UWrestlerIDUtilityFunctions();
+
     UFUNCTION(BlueprintCallable)
     static void SwitchCharacterType(const EWrestlerID_N ID, ECharacterType& resultType);
     

@@ -8,6 +8,5 @@ enum class EGameLiftActivateStatus : uint8 {
     eACTIVATE_NoGameLift,
     eACTIVATE_NoSuccessCallback,
     eACTIVATE_NoFailCallback,
-    eACTIVATE_MAX UMETA(Hidden),
 };
 

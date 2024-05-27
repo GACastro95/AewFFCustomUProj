@@ -11,7 +11,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELWeaponModelCaptureManagerBase : public AActor {
     GENERATED_BODY()
 public:
-    AELWeaponModelCaptureManagerBase();
+    AELWeaponModelCaptureManagerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnRotaionWeaponModel(float AddRotaion);
     

@@ -9,6 +9,7 @@ class ABP_200508_API UELBattlePassMenuRewardWidgetBase : public UELMenuWidgetBas
     GENERATED_BODY()
 public:
     UELBattlePassMenuRewardWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetupParameter();

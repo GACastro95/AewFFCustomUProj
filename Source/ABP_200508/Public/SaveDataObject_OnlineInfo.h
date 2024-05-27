@@ -8,5 +8,6 @@ class ABP_200508_API USaveDataObject_OnlineInfo : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_OnlineInfo();
+
 };
 

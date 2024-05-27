@@ -1,5 +1,17 @@
 #include "ELSSWidgetHUD_ItemInteractParts.h"
 
+UELSSWidgetHUD_ItemInteractParts::UELSSWidgetHUD_ItemInteractParts() {
+    this->PlayActiveAnim = NULL;
+    this->PlayInActiveAnim = NULL;
+    this->IconImage = NULL;
+    this->ItemDurabilityWidget = NULL;
+    this->ArrowWidget = NULL;
+    this->CommandWidget = NULL;
+    this->UnlockableItemRarityDataTable = NULL;
+    this->BareIconTexture = NULL;
+    this->PreInventoryInteractOperate = ESSInteractOperate::None;
+}
+
 
 
 void UELSSWidgetHUD_ItemInteractParts::SetItemTexture(ESSInteractOperate InInteractOperate, ESSPickupType InPickuptype, int32 InItemId, int32 InItemDurability, int32 inSlotIndex) {
@@ -32,15 +44,4 @@ FString UELSSWidgetHUD_ItemInteractParts::GetItemName(int32 InID, ESSPickupType 
 }
 
 
-UELSSWidgetHUD_ItemInteractParts::UELSSWidgetHUD_ItemInteractParts() {
-    this->PlayActiveAnim = NULL;
-    this->PlayInActiveAnim = NULL;
-    this->IconImage = NULL;
-    this->ItemDurabilityWidget = NULL;
-    this->ArrowWidget = NULL;
-    this->CommandWidget = NULL;
-    this->UnlockableItemRarityDataTable = NULL;
-    this->BareIconTexture = NULL;
-    this->PreInventoryInteractOperate = ESSInteractOperate::None;
-}
 

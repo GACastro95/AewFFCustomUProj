@@ -19,6 +19,7 @@ public:
     TMap<FString, int32> StatsMap;
     
     UELLeaderboardUserSeasonStats();
+
     UFUNCTION(BlueprintCallable)
     void UpdateRequestDateTime();
     

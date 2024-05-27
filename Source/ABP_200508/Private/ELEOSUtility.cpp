@@ -1,5 +1,8 @@
 #include "ELEOSUtility.h"
 
+UELEOSUtility::UELEOSUtility() {
+}
+
 void UELEOSUtility::YGS2AnlyticsLobbyParams(const UObject* WorldContextObject, FYGS2AnalyticsData& AnalyticsData) {
 }
 
@@ -509,6 +512,4 @@ bool UELEOSUtility::CheckPartyAttributeGameMode(const UObject* WorldContextObjec
 void UELEOSUtility::ApplyWrestlerNameText(const UObject* WorldContextObject, UObject* OnlineWrestlerData, const FWrestlerNameText& WrestlerName) {
 }
 
-UELEOSUtility::UELEOSUtility() {
-}
 

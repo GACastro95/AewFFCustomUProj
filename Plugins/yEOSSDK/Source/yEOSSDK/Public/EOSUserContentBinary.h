@@ -8,6 +8,7 @@ class YEOSSDK_API UEOSUserContentBinary : public UEOSCommon {
     GENERATED_BODY()
 public:
     UEOSUserContentBinary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsValid() const;
     

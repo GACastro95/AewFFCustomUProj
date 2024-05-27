@@ -1,5 +1,10 @@
 #include "EOSCommunityInfoBase.h"
 
+UEOSCommunityInfoBase::UEOSCommunityInfoBase() {
+    this->m_pcOwnerUser = NULL;
+    this->m_pcInviteUser = NULL;
+}
+
 bool UEOSCommunityInfoBase::IsOwnerUser(const UEOSUserBase* User) const {
     return false;
 }
@@ -98,8 +103,4 @@ bool UEOSCommunityInfoBase::FindAttribute(UEOSAttribute*& _pcAttribute, const FS
     return false;
 }
 
-UEOSCommunityInfoBase::UEOSCommunityInfoBase() {
-    this->m_pcOwnerUser = NULL;
-    this->m_pcInviteUser = NULL;
-}
 

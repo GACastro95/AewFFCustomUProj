@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSCutsceneLocator : public AActor {
     GENERATED_BODY()
 public:
-    AELSSCutsceneLocator();
+    AELSSCutsceneLocator(const FObjectInitializer& ObjectInitializer);
+
 };
 

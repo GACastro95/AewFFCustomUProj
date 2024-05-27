@@ -8,6 +8,7 @@ class ABP_200508_API UELStageStartWidgetBase : public UELCareerLayoutSceneWidget
     GENERATED_BODY()
 public:
     UELStageStartWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetTextSubject();

@@ -15,10 +15,11 @@ protected:
     
 public:
     UELKeyConfigDeviceWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EKeyConfigDeviceType GetDeviceType() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

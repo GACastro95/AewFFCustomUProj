@@ -1,5 +1,8 @@
 #include "DataMiningUtility.h"
 
+UDataMiningUtility::UDataMiningUtility() {
+}
+
 void UDataMiningUtility::WriteMiniGamePlayData(const UObject* WorldContextObject, const FMiniGamePlayData& SendData) {
 }
 
@@ -18,6 +21,4 @@ void UDataMiningUtility::SendMatchPlayData(const UObject* WorldContextObject, co
 void UDataMiningUtility::SendCareerPlayData(const UObject* WorldContextObject, const FCareerPlayData& _SendData) {
 }
 
-UDataMiningUtility::UDataMiningUtility() {
-}
 

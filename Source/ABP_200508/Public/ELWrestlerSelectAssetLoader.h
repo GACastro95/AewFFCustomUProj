@@ -37,6 +37,7 @@ private:
     
 public:
     UELWrestlerSelectAssetLoader();
+
     UFUNCTION(BlueprintCallable)
     void ReleaseAssets();
     

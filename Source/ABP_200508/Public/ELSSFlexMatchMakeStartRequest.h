@@ -24,6 +24,7 @@ public:
     FELSSFlexMatchMakeStart_ResponseData ssResponseData;
     
     UELSSFlexMatchMakeStartRequest();
+
 private:
     UFUNCTION(BlueprintCallable)
     void RequestResult(const int32 responseCode, const FString& responseData, eSSRequestResultType resultType);

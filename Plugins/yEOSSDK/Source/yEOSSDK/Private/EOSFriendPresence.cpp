@@ -1,5 +1,8 @@
 #include "EOSFriendPresence.h"
 
+UEOSFriendPresence::UEOSFriendPresence() {
+}
+
 FString UEOSFriendPresence::GetProductVersion() const {
     return TEXT("");
 }
@@ -16,6 +19,4 @@ FString UEOSFriendPresence::GetPlatform() const {
     return TEXT("");
 }
 
-UEOSFriendPresence::UEOSFriendPresence() {
-}
 

@@ -38,6 +38,7 @@ protected:
     
 public:
     UELSSWidgetHUD_AbilityContainer();
+
     UFUNCTION(BlueprintCallable)
     void SetVisibleGuide(bool inIsVisible);
     

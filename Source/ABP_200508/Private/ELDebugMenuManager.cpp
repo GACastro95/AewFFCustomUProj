@@ -1,5 +1,8 @@
 #include "ELDebugMenuManager.h"
 
+UELDebugMenuManager::UELDebugMenuManager() {
+}
+
 bool UELDebugMenuManager::UnregistRoot(const FString& _strRegistKey) {
     return false;
 }
@@ -98,6 +101,4 @@ bool UELDebugMenuManager::ClearELDebugMenuManagerGlobalInstance() {
     return false;
 }
 
-UELDebugMenuManager::UELDebugMenuManager() {
-}
 

@@ -45,6 +45,7 @@ protected:
     
 public:
     UManaMovie();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool Validate() const;
     

@@ -11,5 +11,6 @@ public:
     float LeftChildSelectingRate;
     
     UELSSBTCompositeNode_WeightedRandom();
+
 };
 

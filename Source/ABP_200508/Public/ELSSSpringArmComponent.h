@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsCameraFixedPrev;
     
-    UELSSSpringArmComponent();
+    UELSSSpringArmComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

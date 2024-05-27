@@ -5,18 +5,18 @@
 UENUM(BlueprintType)
 enum class ESSClientFlowState : uint8 {
     None,
-    BeforeGamePlay = 0x10,
-    GamePlay = 0x20,
+    BeforeGamePlay = 16,
+    GamePlay = 32,
     Battle,
     WatchTeam,
     WaitingFinish,
     WaitingRespawn,
-    Finish = 0x40,
+    Finish = 64,
     VictoryRoyale,
     Result,
-    WatchGame = 0x50,
+    WatchGame = 80,
     WatchVictoryRoyale,
-    Closing = 0x70,
+    Closing = 112,
     Exit,
 };
 

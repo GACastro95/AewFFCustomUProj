@@ -8,6 +8,7 @@ class ELITE_API UELShopCrateWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELShopCrateWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnStopLevelSequence();

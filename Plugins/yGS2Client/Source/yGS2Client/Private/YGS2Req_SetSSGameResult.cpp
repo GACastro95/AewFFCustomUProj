@@ -1,5 +1,8 @@
 #include "YGS2Req_SetSSGameResult.h"
 
+UYGS2Req_SetSSGameResult::UYGS2Req_SetSSGameResult() {
+}
+
 void UYGS2Req_SetSSGameResult::SetGameResult(const FString& gid, const FString& pid, const FString& gameResult) {
 }
 
@@ -11,6 +14,4 @@ FYGS2SSPlayerData UYGS2Req_SetSSGameResult::GetPlayerData() const {
     return FYGS2SSPlayerData{};
 }
 
-UYGS2Req_SetSSGameResult::UYGS2Req_SetSSGameResult() {
-}
 

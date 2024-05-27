@@ -1,5 +1,9 @@
 #include "ELEOSLobbyPacketRequest.h"
 
+UELEOSLobbyPacketRequest::UELEOSLobbyPacketRequest() {
+    this->RequestType = EELEOSLobbyPacketRequestType::RequestMiniGameInfo;
+}
+
 void UELEOSLobbyPacketRequest::SetData(EELEOSLobbyPacketRequestType Type, UObject* Data) {
 }
 
@@ -11,7 +15,4 @@ UObject* UELEOSLobbyPacketRequest::GetRequestData() const {
     return NULL;
 }
 
-UELEOSLobbyPacketRequest::UELEOSLobbyPacketRequest() {
-    this->RequestType = EELEOSLobbyPacketRequestType::RequestMiniGameInfo;
-}
 

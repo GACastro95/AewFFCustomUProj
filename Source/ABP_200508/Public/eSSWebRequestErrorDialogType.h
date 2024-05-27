@@ -7,6 +7,5 @@ enum class eSSWebRequestErrorDialogType : uint8 {
     eSSWebRequestErrorDialogType_Notice,
     eSSWebRequestErrorDialogType_Caution,
     eSSWebRequestErrorDialogType_Help,
-    eSSWebRequestErrorDialogType_MAX UMETA(Hidden),
 };
 

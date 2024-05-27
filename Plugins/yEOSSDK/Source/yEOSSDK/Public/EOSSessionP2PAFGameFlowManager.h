@@ -17,6 +17,7 @@ private:
     
 public:
     UEOSSessionP2PAFGameFlowManager();
+
     UFUNCTION(BlueprintCallable)
     bool UnregistGameFlowCallbackInterface(TScriptInterface<IEOSSessionP2PAFGameFlowCallbackInterface> _pcIntarface);
     

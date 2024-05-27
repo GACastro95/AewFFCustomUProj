@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ELITE_GAME_API AELBarbedWireBoard : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:
-    AELBarbedWireBoard();
+    AELBarbedWireBoard(const FObjectInitializer& ObjectInitializer);
+
 };
 

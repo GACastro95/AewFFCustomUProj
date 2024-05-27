@@ -10,6 +10,7 @@ class YGS2CLIENT_API UYGS2Req_PurchaseHistory : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_PurchaseHistory();
+
     UFUNCTION(BlueprintCallable)
     void SetPurchaseData(const FString& _strPlatform, const FString& _strTransactionID, const FString& _strShopItemID, int32 _sGoldAdd, int32 _sGoldBefore, int32 _sGoldAfter, int32 _sCurrencyValue, const FString& _strCurrencyType);
     

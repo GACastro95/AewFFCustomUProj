@@ -1,5 +1,8 @@
 #include "SteamNetDriver.h"
 
-USteamNetDriver::USteamNetDriver(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+USteamNetDriver::USteamNetDriver() : UIpNetDriver(FObjectInitializer::Get()) {
+    this->NetConnectionClassName = TEXT("OnlineSubsystemSteam.SteamNetConnection");
+    this->ChannelDefinitions.AddDefaulted(3);
 }
+
 

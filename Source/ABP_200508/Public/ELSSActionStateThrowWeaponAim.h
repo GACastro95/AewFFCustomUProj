@@ -8,5 +8,6 @@ class ABP_200508_API UELSSActionStateThrowWeaponAim : public UELSSActionStateBas
     GENERATED_BODY()
 public:
     UELSSActionStateThrowWeaponAim();
+
 };
 

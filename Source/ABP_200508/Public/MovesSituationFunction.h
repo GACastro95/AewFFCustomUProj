@@ -11,6 +11,7 @@ class ABP_200508_API UMovesSituationFunction : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UMovesSituationFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SearchSpecialDataArray(UPARAM(Ref) TArray<FMovesSituation>& OutKeys, const TArray<FMovesSituation>& SortedMovesSituetionArray, bool bIsFinisher, bool bIsTeamFinisher);
     

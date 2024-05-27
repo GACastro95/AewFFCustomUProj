@@ -21,6 +21,7 @@ protected:
     
 public:
     UELSSWidgetHUD_CharacterHpGaugeContainer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

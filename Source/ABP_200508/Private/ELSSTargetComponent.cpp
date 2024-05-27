@@ -1,6 +1,19 @@
 #include "ELSSTargetComponent.h"
 #include "Components/SphereComponent.h"
 
+UELSSTargetComponent::UELSSTargetComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->TargetRangeCollision = CreateDefaultSubobject<USphereComponent>(TEXT("TargetRangeCollision"));
+    this->TargetVectorKeepTime = 0.00f;
+    this->SearchTargetDistance = 500.00f;
+    this->SearchTargetAngleNeutral = 360.00f;
+    this->SearchTargetAngleDirectional = 180.00f;
+    this->SearchTargetHeight = 200.00f;
+    this->SearchTargetDistanceDifficultyScale = 0.50f;
+    this->SearchTargetAngleDifficultyScale = 1.00f;
+    this->SearchTargetPriorityDifficultyScale = 0.10f;
+    this->TargetActor = NULL;
+}
+
 void UELSSTargetComponent::UpdateTargetOnAttack() {
 }
 
@@ -28,16 +41,4 @@ void UELSSTargetComponent::EndCameraHoming(bool inApplyRemainTime) {
 void UELSSTargetComponent::BeginCameraHoming(const FSSCameraHomingParam& inHomingParam, float InDuration) {
 }
 
-UELSSTargetComponent::UELSSTargetComponent() {
-    this->TargetRangeCollision = CreateDefaultSubobject<USphereComponent>(TEXT("TargetRangeCollision"));
-    this->TargetVectorKeepTime = 0.00f;
-    this->SearchTargetDistance = 500.00f;
-    this->SearchTargetAngleNeutral = 360.00f;
-    this->SearchTargetAngleDirectional = 180.00f;
-    this->SearchTargetHeight = 200.00f;
-    this->SearchTargetDistanceDifficultyScale = 0.50f;
-    this->SearchTargetAngleDifficultyScale = 1.00f;
-    this->SearchTargetPriorityDifficultyScale = 0.10f;
-    this->TargetActor = NULL;
-}
 

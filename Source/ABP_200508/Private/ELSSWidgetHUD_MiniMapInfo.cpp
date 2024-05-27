@@ -1,17 +1,5 @@
 #include "ELSSWidgetHUD_MiniMapInfo.h"
 
-void UELSSWidgetHUD_MiniMapInfo::SetAreaShrinkTime(float InSecond) {
-}
-
-void UELSSWidgetHUD_MiniMapInfo::ApplyKOCount(int32 InKOCount) {
-}
-
-void UELSSWidgetHUD_MiniMapInfo::ApplyAreaShrinkTime(float InSecond) {
-}
-
-void UELSSWidgetHUD_MiniMapInfo::ApplyAliveCount(int32 InAliveCount) {
-}
-
 UELSSWidgetHUD_MiniMapInfo::UELSSWidgetHUD_MiniMapInfo() {
     this->KOMaterial_10 = NULL;
     this->KOMaterial_01 = NULL;
@@ -28,4 +16,17 @@ UELSSWidgetHUD_MiniMapInfo::UELSSWidgetHUD_MiniMapInfo() {
     this->Seconds = 0;
     this->IsShowShrinkTime = false;
 }
+
+void UELSSWidgetHUD_MiniMapInfo::SetAreaShrinkTime(float InSecond) {
+}
+
+void UELSSWidgetHUD_MiniMapInfo::ApplyKOCount(int32 InKOCount) {
+}
+
+void UELSSWidgetHUD_MiniMapInfo::ApplyAreaShrinkTime(float InSecond) {
+}
+
+void UELSSWidgetHUD_MiniMapInfo::ApplyAliveCount(int32 InAliveCount) {
+}
+
 

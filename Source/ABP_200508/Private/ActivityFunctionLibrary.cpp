@@ -1,5 +1,8 @@
 #include "ActivityFunctionLibrary.h"
 
+UActivityFunctionLibrary::UActivityFunctionLibrary() {
+}
+
 void UActivityFunctionLibrary::StartActivity(const FString& ActivityId) {
 }
 
@@ -64,6 +67,4 @@ void UActivityFunctionLibrary::AvailabilityChangeAllCareerActivity() {
 void UActivityFunctionLibrary::AvailabilityChangeActivity(const FString& ActivityId, const bool _isEnable) {
 }
 
-UActivityFunctionLibrary::UActivityFunctionLibrary() {
-}
 

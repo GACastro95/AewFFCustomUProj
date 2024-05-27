@@ -35,7 +35,8 @@ private:
     USoundAtomCueSheet* CueSheet;
     
 public:
-    UAtomCueSheetLoaderComponent();
+    UAtomCueSheetLoaderComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void LoadAtomCueSheet(UObject* WorldContextObject, TSoftObjectPtr<USoundAtomCueSheet> Asset, UAtomCueSheetLoaderComponent::FOnAtomCueSheetLoaded OnLoaded, FLatentActionInfo LatentInfo);
     

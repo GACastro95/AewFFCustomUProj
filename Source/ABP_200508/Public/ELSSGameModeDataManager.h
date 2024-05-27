@@ -45,6 +45,7 @@ protected:
     
 public:
     UELSSGameModeDataManager();
+
     UFUNCTION(BlueprintCallable)
     void SetSSUserDataToDummy();
     

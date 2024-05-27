@@ -27,6 +27,7 @@ class USortPluginBPLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     USortPluginBPLibrary();
+
     UFUNCTION(BlueprintCallable)
     static TSet<FVector> ToVectorSet(const TArray<FVector>& Array);
     

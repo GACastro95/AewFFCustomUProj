@@ -11,6 +11,7 @@ class ABP_200508_API UOnlinePlayerData : public UObject {
     GENERATED_BODY()
 public:
     UOnlinePlayerData();
+
     UFUNCTION(BlueprintCallable)
     int32 SubGamePoint(int32 _sValue);
     

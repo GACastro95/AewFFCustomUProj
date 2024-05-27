@@ -1,5 +1,8 @@
 #include "YGS2Req_GetSSMasterData.h"
 
+UYGS2Req_GetSSMasterData::UYGS2Req_GetSSMasterData() {
+}
+
 void UYGS2Req_GetSSMasterData::SetRequestParams(const FString& stage, const FString& app_ver, bool only_data_id) {
 }
 
@@ -11,6 +14,4 @@ float UYGS2Req_GetSSMasterData::GetElapsedTime() const {
     return 0.0f;
 }
 
-UYGS2Req_GetSSMasterData::UYGS2Req_GetSSMasterData() {
-}
 

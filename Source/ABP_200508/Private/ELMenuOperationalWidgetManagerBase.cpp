@@ -1,5 +1,12 @@
 #include "ELMenuOperationalWidgetManagerBase.h"
 
+AELMenuOperationalWidgetManagerBase::AELMenuOperationalWidgetManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->IsEnableInput1P = true;
+    this->IsChangeBrother = false;
+    this->IsUpdateKeyConfig = false;
+    this->MenuWidgetArray.AddDefaulted(75);
+}
+
 void AELMenuOperationalWidgetManagerBase::SetManagedMenuWidget(UELOperationalWidgetBase* MenuWidget, yEnMenuWidgetType Type) {
 }
 
@@ -14,6 +21,10 @@ TArray<UELOperationalWidgetBase*> AELMenuOperationalWidgetManagerBase::GetMenuWi
     return TArray<UELOperationalWidgetBase*>();
 }
 
+yEnMenuWidgetType AELMenuOperationalWidgetManagerBase::GetManagedMenuWidgetType(UELOperationalWidgetBase* MenuWidget) const {
+    return yEnMenuWidgetType::None;
+}
+
 yEnMenuWidgetType AELMenuOperationalWidgetManagerBase::GetCurrentWidgetType() const {
     return yEnMenuWidgetType::None;
 }
@@ -25,10 +36,4 @@ UELOperationalWidgetBase* AELMenuOperationalWidgetManagerBase::GetCurrentWidget(
 void AELMenuOperationalWidgetManagerBase::CloseAllWidgets() {
 }
 
-AELMenuOperationalWidgetManagerBase::AELMenuOperationalWidgetManagerBase() {
-    this->IsEnableInput1P = true;
-    this->IsChangeBrother = false;
-    this->IsUpdateKeyConfig = false;
-    this->MenuWidgetArray.AddDefaulted(75);
-}
 

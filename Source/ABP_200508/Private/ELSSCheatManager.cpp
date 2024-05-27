@@ -1,5 +1,8 @@
 #include "ELSSCheatManager.h"
 
+UELSSCheatManager::UELSSCheatManager() {
+}
+
 void UELSSCheatManager::SSVisualizeStormCourse(bool IsOn) {
 }
 
@@ -240,6 +243,4 @@ void UELSSCheatManager::SSAIDisableAll(bool IsOn) {
 void UELSSCheatManager::SSAddAttentionPoint(int32 AddValue, ESSAttentionReason Reason) {
 }
 
-UELSSCheatManager::UELSSCheatManager() {
-}
 

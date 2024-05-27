@@ -7,6 +7,7 @@ UCLASS(Blueprintable, NonTransient)
 class ABP_200508_API AGameLiftGameServerModeTest : public AGameMode {
     GENERATED_BODY()
 public:
-    AGameLiftGameServerModeTest();
+    AGameLiftGameServerModeTest(const FObjectInitializer& ObjectInitializer);
+
 };
 

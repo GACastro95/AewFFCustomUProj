@@ -1,5 +1,8 @@
 #include "ELSSSyncMotion.h"
 
+UELSSSyncMotion::UELSSSyncMotion() {
+}
+
 void UELSSSyncMotion::UpdateTransform(float DeltaTime) {
 }
 
@@ -40,6 +43,4 @@ float UELSSSyncMotion::GetAnimScaleZ(ACharacter* Chara) {
     return 0.0f;
 }
 
-UELSSSyncMotion::UELSSSyncMotion() {
-}
 

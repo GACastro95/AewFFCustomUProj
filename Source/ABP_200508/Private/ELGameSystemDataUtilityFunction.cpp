@@ -1,5 +1,8 @@
 #include "ELGameSystemDataUtilityFunction.h"
 
+UELGameSystemDataUtilityFunction::UELGameSystemDataUtilityFunction() {
+}
+
 void UELGameSystemDataUtilityFunction::SetSystem_NewsLatestVersion(int32 _value, UObject* _pWorldContextObject) {
 }
 
@@ -350,6 +353,4 @@ bool UELGameSystemDataUtilityFunction::ApplyTmpSystemDataToSaveData(UObject* _pW
     return false;
 }
 
-UELGameSystemDataUtilityFunction::UELGameSystemDataUtilityFunction() {
-}
 

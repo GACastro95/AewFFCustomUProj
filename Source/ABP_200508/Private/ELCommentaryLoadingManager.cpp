@@ -1,5 +1,9 @@
 #include "ELCommentaryLoadingManager.h"
 
+UELCommentaryLoadingManager::UELCommentaryLoadingManager() {
+    this->m_pLoadingExecuteActor = NULL;
+}
+
 bool UELCommentaryLoadingManager::StartScreen(FCommentaryLoadingCompleteDelegate _completeDelegate, int32 BaseZOrder) {
     return false;
 }
@@ -17,7 +21,4 @@ bool UELCommentaryLoadingManager::Debug_StartSelectedScreen(FCommentaryLoadingCo
     return false;
 }
 
-UELCommentaryLoadingManager::UELCommentaryLoadingManager() {
-    this->m_pLoadingExecuteActor = NULL;
-}
 

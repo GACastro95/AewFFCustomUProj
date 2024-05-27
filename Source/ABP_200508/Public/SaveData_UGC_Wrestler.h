@@ -16,6 +16,7 @@ public:
     TArray<FEditWrestlerRaw> Scouts;
     
     USaveData_UGC_Wrestler();
+
     UFUNCTION()
     uint32 GetScoutNum() const;
     

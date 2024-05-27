@@ -1,6 +1,20 @@
 #include "ELMomentumMeterBase.h"
 #include "Net/UnrealNetwork.h"
 
+UELMomentumMeterBase::UELMomentumMeterBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MeterValue_N = 0.00f;
+    this->MeterDefaultValue_N = 0.00f;
+    this->bExciteState = false;
+    this->bSpecialState = false;
+    this->bDangerState = false;
+    this->EliteMeterState_N = EEliteMeterStateType_N::Neutral;
+    this->UnlimitedState_N = false;
+    this->RemoveState_N = false;
+    this->RemoveSec_N = 0.00f;
+    this->RemoveValue_N = 0.00f;
+    this->RemoveEndPercent_N = 0.00f;
+}
+
 
 
 void UELMomentumMeterBase::SetParam(float inHandsInPocketAddRate, float inHandsInPocketDuration) {
@@ -58,17 +72,4 @@ void UELMomentumMeterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(UELMomentumMeterBase, RemoveState_N);
 }
 
-UELMomentumMeterBase::UELMomentumMeterBase() {
-    this->MeterValue_N = 0.00f;
-    this->MeterDefaultValue_N = 0.00f;
-    this->bExciteState = false;
-    this->bSpecialState = false;
-    this->bDangerState = false;
-    this->EliteMeterState_N = EEliteMeterStateType_N::Neutral;
-    this->UnlimitedState_N = false;
-    this->RemoveState_N = false;
-    this->RemoveSec_N = 0.00f;
-    this->RemoveValue_N = 0.00f;
-    this->RemoveEndPercent_N = 0.00f;
-}
 

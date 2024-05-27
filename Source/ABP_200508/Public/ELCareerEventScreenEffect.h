@@ -8,6 +8,7 @@ class ABP_200508_API UELCareerEventScreenEffect : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerEventScreenEffect();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartOutAnimation();
     

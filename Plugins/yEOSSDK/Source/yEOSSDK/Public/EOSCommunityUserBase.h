@@ -20,6 +20,7 @@ protected:
     
 public:
     UEOSCommunityUserBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetInviteID() const;
     

@@ -16,5 +16,6 @@ protected:
     
 public:
     UELSSAnimNotifyState_Collision();
+
 };
 

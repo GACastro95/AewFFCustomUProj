@@ -1,5 +1,8 @@
 #include "YDebugMenuForBugReport.h"
 
+UYDebugMenuForBugReport::UYDebugMenuForBugReport() {
+}
+
 void UYDebugMenuForBugReport::Setup(const FBugReportSettings& _stSettings) {
 }
 
@@ -7,6 +10,4 @@ bool UYDebugMenuForBugReport::CreateYDebugMenuForBugReport(UYDebugMenuForBugRepo
     return false;
 }
 
-UYDebugMenuForBugReport::UYDebugMenuForBugReport() {
-}
 

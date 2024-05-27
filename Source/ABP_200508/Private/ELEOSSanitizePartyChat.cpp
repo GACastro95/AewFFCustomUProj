@@ -2,6 +2,7 @@
 
 UELEOSSanitizePartyChat::UELEOSSanitizePartyChat() {
     this->UserData = NULL;
-    this->DataID = TEXT("95E2ED4D4BACA3EFFD663386B33225FB");
+    this->DataID = TEXT("2BC95249415371F09CFE0BAC91F91D34");
 }
+
 

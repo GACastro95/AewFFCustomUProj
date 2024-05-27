@@ -1,5 +1,8 @@
 #include "yMenuUI_DebugMenu.h"
 
+UyMenuUI_DebugMenu::UyMenuUI_DebugMenu() {
+}
+
 void UyMenuUI_DebugMenu::SetDebugWindow(bool _Flg) {
 }
 
@@ -14,6 +17,4 @@ bool UyMenuUI_DebugMenu::IsDebugString() const {
     return false;
 }
 
-UyMenuUI_DebugMenu::UyMenuUI_DebugMenu() {
-}
 

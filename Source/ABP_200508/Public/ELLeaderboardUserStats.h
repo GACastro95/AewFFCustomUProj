@@ -20,6 +20,7 @@ public:
     TMap<int32, UELLeaderboardUserSeasonStats*> SeasonStatsMap;
     
     UELLeaderboardUserStats();
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     UELLeaderboardUserSeasonStats* GetUserSeasonStats(int32 Season) const;
     

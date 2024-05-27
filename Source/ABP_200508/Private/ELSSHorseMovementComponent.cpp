@@ -1,13 +1,6 @@
 #include "ELSSHorseMovementComponent.h"
 
-void UELSSHorseMovementComponent::SendForward_Implementation(float inYaw, bool inBackMoving) {
-}
-
-bool UELSSHorseMovementComponent::IsBraking() const {
-    return false;
-}
-
-UELSSHorseMovementComponent::UELSSHorseMovementComponent() {
+UELSSHorseMovementComponent::UELSSHorseMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BackMoving = false;
     this->Braking = false;
     this->PrevSpeed = 0.00f;
@@ -26,4 +19,12 @@ UELSSHorseMovementComponent::UELSSHorseMovementComponent() {
     this->InputVectorInterpSpeedOnBraking = 10.00f;
     this->MinInputAccelerationLength = 0.10f;
 }
+
+void UELSSHorseMovementComponent::SendForward_Implementation(float inYaw, bool inBackMoving) {
+}
+
+bool UELSSHorseMovementComponent::IsBraking() const {
+    return false;
+}
+
 

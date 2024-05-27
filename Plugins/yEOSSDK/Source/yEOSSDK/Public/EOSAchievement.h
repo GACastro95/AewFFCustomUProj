@@ -20,6 +20,7 @@ public:
     FEOSPlayerAchievementUnlockEventDispatcher PlayerAchievementUnlockEventDispatcher;
     
     UEOSAchievement();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

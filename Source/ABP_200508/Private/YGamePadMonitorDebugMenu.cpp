@@ -1,5 +1,8 @@
 #include "YGamePadMonitorDebugMenu.h"
 
+UYGamePadMonitorDebugMenu::UYGamePadMonitorDebugMenu() {
+}
+
 void UYGamePadMonitorDebugMenu::SetMonitorType(int32 _sMonitorType) {
 }
 
@@ -28,6 +31,4 @@ int32 UYGamePadMonitorDebugMenu::GetMonitorNum() {
     return 0;
 }
 
-UYGamePadMonitorDebugMenu::UYGamePadMonitorDebugMenu() {
-}
 

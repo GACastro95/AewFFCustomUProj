@@ -15,6 +15,7 @@ private:
     
 public:
     USessionSerializedData();
+
     UFUNCTION(BlueprintCallable)
     bool SetObject(UObject* Object, int32 Index);
     

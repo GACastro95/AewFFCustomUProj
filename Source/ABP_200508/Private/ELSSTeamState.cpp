@@ -1,6 +1,20 @@
 #include "ELSSTeamState.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSTeamState::AELSSTeamState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->CachedSSGameState = NULL;
+    this->CachedFirstLocalSSPlayerController = NULL;
+    this->TeamLeaderSlotNo = 1;
+    this->TeamScore = 0;
+    this->TeamScoreRanking = 0;
+    this->JewelRadarLevel = 0;
+    this->CacheFgfBallHoldPlayer = NULL;
+    this->SelectedSpawnArea = -1;
+}
+
 void AELSSTeamState::UpdateUI_WaitingFinish() {
 }
 
@@ -127,14 +141,4 @@ void AELSSTeamState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AELSSTeamState, SelectedSpawnArea);
 }
 
-AELSSTeamState::AELSSTeamState() {
-    this->CachedSSGameState = NULL;
-    this->CachedFirstLocalSSPlayerController = NULL;
-    this->TeamLeaderSlotNo = 1;
-    this->TeamScore = 0;
-    this->TeamScoreRanking = 0;
-    this->JewelRadarLevel = 0;
-    this->CacheFgfBallHoldPlayer = NULL;
-    this->SelectedSpawnArea = -1;
-}
 

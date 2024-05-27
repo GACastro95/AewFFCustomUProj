@@ -8,6 +8,7 @@ class ABP_200508_API UELSSModeRewardWidget : public UELBattlePassMenuChallengeWi
     GENERATED_BODY()
 public:
     UELSSModeRewardWidget();
+
     UFUNCTION(BlueprintCallable)
     void OperationStickUpDown(const bool IsUp);
     

@@ -1,5 +1,8 @@
 #include "GameLiftGameServerMode.h"
 
+AGameLiftGameServerMode::AGameLiftGameServerMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AGameLiftGameServerMode::UpdatePlayerSessionPolicyIsStopPlayerJoin() {
 }
 
@@ -69,6 +72,4 @@ int32 AGameLiftGameServerMode::GetCreatePlayerPawnNum() {
 void AGameLiftGameServerMode::GameServerEnd() {
 }
 
-AGameLiftGameServerMode::AGameLiftGameServerMode() {
-}
 

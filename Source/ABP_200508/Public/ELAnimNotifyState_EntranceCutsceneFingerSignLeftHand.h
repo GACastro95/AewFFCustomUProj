@@ -8,5 +8,6 @@ class ABP_200508_API UELAnimNotifyState_EntranceCutsceneFingerSignLeftHand : pub
     GENERATED_BODY()
 public:
     UELAnimNotifyState_EntranceCutsceneFingerSignLeftHand();
+
 };
 

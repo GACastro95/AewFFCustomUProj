@@ -33,7 +33,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool StatusIsLoadCompleted;
     
-    AELSSSoundManager();
+    AELSSSoundManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StopLoopSE(int32 loopSEUniqueId);
     
@@ -94,7 +95,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void CompleteLoading();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

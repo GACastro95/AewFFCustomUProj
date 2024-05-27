@@ -35,6 +35,7 @@ private:
     
 public:
     UELEOSDebug();
+
     UFUNCTION(BlueprintCallable)
     void ToggleDebugUser();
     

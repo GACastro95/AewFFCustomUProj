@@ -1,5 +1,8 @@
 #include "YGS2Req_ShopItems.h"
 
+UYGS2Req_ShopItems::UYGS2Req_ShopItems() {
+}
+
 void UYGS2Req_ShopItems::SetListMode(int32 _sOffset, int32 _sLimit) {
 }
 
@@ -10,6 +13,4 @@ TArray<FYGS2Record_ShopItems> UYGS2Req_ShopItems::Records() const {
     return TArray<FYGS2Record_ShopItems>();
 }
 
-UYGS2Req_ShopItems::UYGS2Req_ShopItems() {
-}
 

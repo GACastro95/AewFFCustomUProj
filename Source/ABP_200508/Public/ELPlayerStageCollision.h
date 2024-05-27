@@ -35,7 +35,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FVector> tmpPos;
     
-    UELPlayerStageCollision();
+    UELPlayerStageCollision(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetStageCollisionManualEnable(bool bEnable);
     

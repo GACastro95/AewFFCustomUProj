@@ -1,5 +1,8 @@
 #include "SaveDataObject_UGC_Wrestler.h"
 
+USaveDataObject_UGC_Wrestler::USaveDataObject_UGC_Wrestler() {
+}
+
 bool USaveDataObject_UGC_Wrestler::WriteDataFromMyWrestler(UObject* MyWrestler) {
     return false;
 }
@@ -24,6 +27,4 @@ bool USaveDataObject_UGC_Wrestler::GetFileIndexesForUpdate(TArray<int32>& OutFil
     return false;
 }
 
-USaveDataObject_UGC_Wrestler::USaveDataObject_UGC_Wrestler() {
-}
 

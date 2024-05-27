@@ -1,5 +1,6 @@
 #include "ELEntranceCutsceneDataManager.h"
 
-UELEntranceCutsceneDataManager::UELEntranceCutsceneDataManager() {
+UELEntranceCutsceneDataManager::UELEntranceCutsceneDataManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

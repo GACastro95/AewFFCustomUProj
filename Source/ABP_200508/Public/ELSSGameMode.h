@@ -106,7 +106,8 @@ protected:
     FELSSDebugMenuParam DebugMenuParam;
     
 public:
-    AELSSGameMode();
+    AELSSGameMode(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     EWrestlerID_N WrestlerIdToCastEnum(const int32 idx);

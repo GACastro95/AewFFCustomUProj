@@ -57,6 +57,7 @@ private:
     
 public:
     UELSaveDataAccessObjectBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool WriteData(USaveDataObjectBase* SaveDataObject, const bool bInitialize);

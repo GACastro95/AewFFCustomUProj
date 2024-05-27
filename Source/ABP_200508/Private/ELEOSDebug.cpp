@@ -1,5 +1,14 @@
 #include "ELEOSDebug.h"
 
+UELEOSDebug::UELEOSDebug() {
+    this->ELEOSManager = NULL;
+    this->ELEOSDebugUser = NULL;
+    this->ELEOSDebugLobby = NULL;
+    this->ELEOSDebugGameSession = NULL;
+    this->ELEOSDebugFriend = NULL;
+    this->ELEOSDebugCommon = NULL;
+}
+
 void UELEOSDebug::ToggleDebugUser() {
 }
 
@@ -30,12 +39,4 @@ void UELEOSDebug::DispDebugFriend(bool Disp) {
 void UELEOSDebug::DispDebugCommon(bool Disp) {
 }
 
-UELEOSDebug::UELEOSDebug() {
-    this->ELEOSManager = NULL;
-    this->ELEOSDebugUser = NULL;
-    this->ELEOSDebugLobby = NULL;
-    this->ELEOSDebugGameSession = NULL;
-    this->ELEOSDebugFriend = NULL;
-    this->ELEOSDebugCommon = NULL;
-}
 

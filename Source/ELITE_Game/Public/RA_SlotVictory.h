@@ -11,6 +11,7 @@ class ELITE_GAME_API URA_SlotVictory : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URA_SlotVictory();
+
 private:
     UFUNCTION(BlueprintCallable)
     static USoundAtomCue* GetSlotVictorySoundAtom(ERA_Slot_CutScene_Type _eRA_Slot_CutScene_Type);

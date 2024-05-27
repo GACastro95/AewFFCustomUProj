@@ -12,6 +12,7 @@ class CREATION_API UFL_EditItemUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFL_EditItemUtility();
+
     UFUNCTION(BlueprintCallable)
     static bool CheckEditPartsConditions(const FEditParts& EditParts, const EGender Gender, const EFaceType FaceType);
     

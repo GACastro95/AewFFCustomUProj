@@ -1,5 +1,8 @@
 #include "FELWrestlerProfileUtility.h"
 
+UFELWrestlerProfileUtility::UFELWrestlerProfileUtility() {
+}
+
 void UFELWrestlerProfileUtility::GetWrestlerSNS(FString& _outName, EWrestlerID_N _WrestlerID, bool Capital) {
 }
 
@@ -27,6 +30,4 @@ EAttireType UFELWrestlerProfileUtility::GetThumbnailAttireType(const EWrestlerID
     return EAttireType::Ring;
 }
 
-UFELWrestlerProfileUtility::UFELWrestlerProfileUtility() {
-}
 

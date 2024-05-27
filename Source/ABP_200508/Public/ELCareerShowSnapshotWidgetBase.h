@@ -15,6 +15,7 @@ protected:
     
 public:
     UELCareerShowSnapshotWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetLocationTextKey();

@@ -1,6 +1,13 @@
 #include "MenuWidgetSubsystem.h"
 #include "Templates/SubclassOf.h"
 
+UMenuWidgetSubsystem::UMenuWidgetSubsystem() {
+    this->m_BottomHelpManager = NULL;
+    this->m_LocalizeFontManager = NULL;
+    this->m_MenuNotifyOnlineErrorManager = NULL;
+    this->bLayoutWidgetVisible = true;
+}
+
 void UMenuWidgetSubsystem::SetupBottomHelpManager() {
 }
 
@@ -27,10 +34,4 @@ UELBottomHelpManager* UMenuWidgetSubsystem::GetBottomHelpManager() const {
     return NULL;
 }
 
-UMenuWidgetSubsystem::UMenuWidgetSubsystem() {
-    this->m_BottomHelpManager = NULL;
-    this->m_LocalizeFontManager = NULL;
-    this->m_MenuNotifyOnlineErrorManager = NULL;
-    this->bLayoutWidgetVisible = true;
-}
 

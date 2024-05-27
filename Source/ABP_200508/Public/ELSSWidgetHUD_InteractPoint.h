@@ -30,6 +30,7 @@ protected:
     
 public:
     UELSSWidgetHUD_InteractPoint();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateShow(float inDistance, float InDeltaTime);

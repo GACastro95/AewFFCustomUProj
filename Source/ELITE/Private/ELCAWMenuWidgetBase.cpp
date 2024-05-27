@@ -1,5 +1,11 @@
 #include "ELCAWMenuWidgetBase.h"
 
+UELCAWMenuWidgetBase::UELCAWMenuWidgetBase() {
+    this->ZoomSpeed = 1.00f;
+    this->TriggerAccSpeed = 0.50f;
+    this->TriggerCurve = NULL;
+}
+
 void UELCAWMenuWidgetBase::UnlockBlockAllInput(const bool bBlockAllInput) {
 }
 
@@ -31,9 +37,4 @@ bool UELCAWMenuWidgetBase::GetBlockLock() const {
     return false;
 }
 
-UELCAWMenuWidgetBase::UELCAWMenuWidgetBase() {
-    this->ZoomSpeed = 1.00f;
-    this->TriggerAccSpeed = 0.50f;
-    this->TriggerCurve = NULL;
-}
 

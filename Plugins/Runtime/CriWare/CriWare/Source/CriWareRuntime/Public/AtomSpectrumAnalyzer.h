@@ -10,6 +10,7 @@ class CRIWARERUNTIME_API UAtomSpectrumAnalyzer : public UBlueprintFunctionLibrar
     GENERATED_BODY()
 public:
     UAtomSpectrumAnalyzer();
+
     UFUNCTION(BlueprintCallable)
     static void GetLevelsDB(float display_range, TArray<float>& spectra);
     

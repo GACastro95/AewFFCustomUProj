@@ -1,5 +1,8 @@
 #include "EOSPresenceBase.h"
 
+UEOSPresenceBase::UEOSPresenceBase() {
+}
+
 bool UEOSPresenceBase::SetupInternalCallback() {
     return false;
 }
@@ -31,6 +34,4 @@ bool UEOSPresenceBase::FindRecord(const FString& _strKey, FString& _strValue) co
     return false;
 }
 
-UEOSPresenceBase::UEOSPresenceBase() {
-}
 

@@ -1,5 +1,8 @@
 #include "YDBGSettingReader.h"
 
+UYDBGSettingReader::UYDBGSettingReader() {
+}
+
 bool UYDBGSettingReader::SetValue(const float _fValue, const FString& _strKey) {
     return false;
 }
@@ -48,6 +51,4 @@ bool UYDBGSettingReader::CreateYDBGSettingReader(UYDBGSettingReader*& _pcInst) {
     return false;
 }
 
-UYDBGSettingReader::UYDBGSettingReader() {
-}
 

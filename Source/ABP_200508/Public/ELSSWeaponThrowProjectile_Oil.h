@@ -22,7 +22,8 @@ protected:
     float TraceDistanceOnImpact;
     
 public:
-    AELSSWeaponThrowProjectile_Oil();
+    AELSSWeaponThrowProjectile_Oil(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void PerformOnImpact_Multicast(const FVector_NetQuantize10& NewLocation, float inYaw);

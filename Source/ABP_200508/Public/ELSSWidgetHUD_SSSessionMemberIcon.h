@@ -44,6 +44,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSSessionMemberIcon();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdatePosAndVisible(float InDeltaTime);

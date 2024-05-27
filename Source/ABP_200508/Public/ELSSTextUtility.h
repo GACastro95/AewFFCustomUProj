@@ -10,6 +10,7 @@ class ABP_200508_API UELSSTextUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSTextUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FText GetSSWeaponName(int32 inDatabaseId);
     

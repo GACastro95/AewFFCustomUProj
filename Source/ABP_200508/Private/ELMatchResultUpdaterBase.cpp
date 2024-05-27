@@ -1,5 +1,17 @@
 #include "ELMatchResultUpdaterBase.h"
 
+AELMatchResultUpdaterBase::AELMatchResultUpdaterBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StarData = NULL;
+    this->IsCareer = false;
+    this->Is1on1Match = false;
+    this->CompetitorCount = 0;
+    this->WinTeamNo = 0;
+    this->IsOnline = false;
+    this->IsTagRule = false;
+    this->HostPadNo = -1;
+    this->HostTeamNo = -1;
+}
+
 void AELMatchResultUpdaterBase::Update_Native() {
 }
 
@@ -27,15 +39,4 @@ void AELMatchResultUpdaterBase::Check_AchievementStatus() {
 }
 
 
-AELMatchResultUpdaterBase::AELMatchResultUpdaterBase() {
-    this->StarData = NULL;
-    this->IsCareer = false;
-    this->Is1on1Match = false;
-    this->CompetitorCount = 0;
-    this->WinTeamNo = 0;
-    this->IsOnline = false;
-    this->IsTagRule = false;
-    this->HostPadNo = -1;
-    this->HostTeamNo = -1;
-}
 

@@ -1,5 +1,8 @@
 #include "EOSReports.h"
 
+UEOSReports::UEOSReports() {
+}
+
 void UEOSReports::SetApiVersion(FEOSReportsAPIVersionSettings _stAPIVerSetting) {
 }
 
@@ -7,6 +10,4 @@ bool UEOSReports::SendReport(const FString& _strReportedProductUserId, EEOSPlaye
     return false;
 }
 
-UEOSReports::UEOSReports() {
-}
 

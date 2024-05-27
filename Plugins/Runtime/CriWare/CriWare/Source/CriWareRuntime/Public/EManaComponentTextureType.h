@@ -11,6 +11,5 @@ enum class EManaComponentTextureType : uint8 {
     Texture_UV,
     Texture_RGB,
     Texture_External,
-    Texture_MAX UMETA(Hidden),
 };
 

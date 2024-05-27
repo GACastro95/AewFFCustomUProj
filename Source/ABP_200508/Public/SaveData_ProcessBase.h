@@ -8,5 +8,6 @@ class ABP_200508_API USaveData_ProcessBase : public UObject {
     GENERATED_BODY()
 public:
     USaveData_ProcessBase();
+
 };
 

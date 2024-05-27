@@ -39,6 +39,7 @@ private:
     
 public:
     UCareerSnapshot();
+
     UFUNCTION(BlueprintCallable)
     void SetSnapshotParam(const FCareerSnapshotParam& NewParam);
     

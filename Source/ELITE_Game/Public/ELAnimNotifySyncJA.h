@@ -16,5 +16,6 @@ public:
     UAnimMontage* MontageB_N;
     
     UELAnimNotifySyncJA();
+
 };
 

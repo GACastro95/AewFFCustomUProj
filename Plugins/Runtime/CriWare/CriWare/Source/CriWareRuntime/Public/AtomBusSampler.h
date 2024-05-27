@@ -17,6 +17,7 @@ public:
     FOnRecordingFinished OnRecordingFinished;
     
     UAtomBusSampler();
+
     UFUNCTION(BlueprintCallable)
     void StopRecordedSoundWithoutReleaseTime();
     

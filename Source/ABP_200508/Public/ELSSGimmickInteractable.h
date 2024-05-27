@@ -39,14 +39,15 @@ protected:
     float DotIconBaseLocationOffsetZ;
     
 public:
-    AELSSGimmickInteractable();
+    AELSSGimmickInteractable(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnEndOverlapInteract(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
     UFUNCTION(BlueprintCallable)
     void OnBeginOverlapInteract(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -54,8 +54,8 @@ enum class ESSHeatSkillTarget : uint8 {
     StrikeAll,
     HighFlyAll,
     Max,
-    FilterStart = 0x1C,
-    FilterEnd = 0x30,
-    CategoryNum = 0x1C,
+    FilterStart = All,
+    FilterEnd = HighFlyAll,
+    CategoryNum = All,
 };
 

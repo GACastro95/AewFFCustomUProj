@@ -19,6 +19,7 @@ protected:
     
 public:
     AELSSPoolDecal_TShirt();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ApplyBadge(int32 NewBadgeId);
     

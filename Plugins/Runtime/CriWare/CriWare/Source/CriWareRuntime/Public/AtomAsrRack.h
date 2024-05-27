@@ -13,6 +13,7 @@ public:
     int32 RackId;
     
     UAtomAsrRack();
+
     UFUNCTION(BlueprintCallable)
     void SetEffectBypass(const FString& BusName, const FString& EffectName, bool Bypasses);
     

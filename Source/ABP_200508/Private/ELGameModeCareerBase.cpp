@@ -1,5 +1,12 @@
 #include "ELGameModeCareerBase.h"
 
+AELGameModeCareerBase::AELGameModeCareerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_pExtraLight = NULL;
+    this->m_ActionInfoCounter = 0;
+    this->m_pCareerScriptManager = NULL;
+    this->m_pCareerDebugInfoWidget = NULL;
+}
+
 
 
 
@@ -463,10 +470,4 @@ void AELGameModeCareerBase::AddCareerEventArenaLocationData(FCareerEventLocation
 void AELGameModeCareerBase::AddCareerCAWHeightConvertData(FCareerCAWHeightConvert _Data) {
 }
 
-AELGameModeCareerBase::AELGameModeCareerBase() {
-    this->m_pExtraLight = NULL;
-    this->m_ActionInfoCounter = 0;
-    this->m_pCareerScriptManager = NULL;
-    this->m_pCareerDebugInfoWidget = NULL;
-}
 

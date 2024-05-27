@@ -1,5 +1,8 @@
 #include "ELCAEUtilityFunction.h"
 
+UELCAEUtilityFunction::UELCAEUtilityFunction() {
+}
+
 void UELCAEUtilityFunction::SortUnlockableItems(const TArray<FELCAEMenuItemInfo>& UnlockItems, UELUnlockableItemManagerBase* UnlockableItemManager, TArray<FELCAEMenuItemInfo>& SortedItems) {
 }
 
@@ -16,6 +19,4 @@ bool UELCAEUtilityFunction::CanSelectableMusic(const FJukeBoxParam& JukeBoxParam
     return false;
 }
 
-UELCAEUtilityFunction::UELCAEUtilityFunction() {
-}
 

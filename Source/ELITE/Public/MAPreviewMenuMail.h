@@ -22,7 +22,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMAPreviewMenuMailCloseDelegate SetShowMailDelegate;
     
-    AMAPreviewMenuMail();
+    AMAPreviewMenuMail(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void LoadSettings();
     

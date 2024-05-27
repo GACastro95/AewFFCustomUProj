@@ -8,6 +8,7 @@ class ABP_200508_API UELSSWidgetHUD_FightAnnouncement : public UELSSWidgetBase {
     GENERATED_BODY()
 public:
     UELSSWidgetHUD_FightAnnouncement();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlayFightAnnounceAnimation();
     

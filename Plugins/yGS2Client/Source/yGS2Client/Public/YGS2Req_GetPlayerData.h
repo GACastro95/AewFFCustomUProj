@@ -8,6 +8,7 @@ class YGS2CLIENT_API UYGS2Req_GetPlayerData : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_GetPlayerData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAEWGoldTotal() const;
     

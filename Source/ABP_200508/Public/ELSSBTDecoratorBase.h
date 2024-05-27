@@ -49,6 +49,7 @@ protected:
     
 public:
     UELSSBTDecoratorBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     bool SSPlayerShouldUnlockDefenseTeamTreasureBox(const UObject* WorldContextObject, float inDist, AELSSItemBox*& outBox) const;
     

@@ -19,6 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Tran;
     
-    AELPlayerStageCollisionActor();
+    AELPlayerStageCollisionActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

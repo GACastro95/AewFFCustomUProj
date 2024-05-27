@@ -1,6 +1,6 @@
 #include "ELSSCharaMeshComponent.h"
 
-UELSSCharaMeshComponent::UELSSCharaMeshComponent() {
+UELSSCharaMeshComponent::UELSSCharaMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bUpdatingAnimation = false;
     this->bActiveInterpMove = false;
     this->InterpMoveTimeCount = 0.00f;
@@ -12,4 +12,5 @@ UELSSCharaMeshComponent::UELSSCharaMeshComponent() {
     this->bInitializingInterpMove = false;
     this->bPerformCharacterMovement = false;
 }
+
 

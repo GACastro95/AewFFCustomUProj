@@ -1,6 +1,11 @@
 #include "ELSSStormZone.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSStormZone::AELSSStormZone(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Radius = 0.00f;
+    this->timeSinceStart = 0.00f;
+}
+
 void AELSSStormZone::UpdateTransform() {
 }
 
@@ -42,8 +47,4 @@ void AELSSStormZone::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AELSSStormZone, timeSinceStart);
 }
 
-AELSSStormZone::AELSSStormZone() {
-    this->Radius = 0.00f;
-    this->timeSinceStart = 0.00f;
-}
 

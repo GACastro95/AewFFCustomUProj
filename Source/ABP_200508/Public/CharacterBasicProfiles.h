@@ -9,11 +9,12 @@ class UCharacterBasicProfiles : public UCharacterProfilesBase, public ICharacter
     GENERATED_BODY()
 public:
     UCharacterBasicProfiles();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FText GetCharacterNameText_Implementation(const bool bUpper) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

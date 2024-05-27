@@ -9,7 +9,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerOtherMenuManager : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerOtherMenuManager();
+    AELCareerOtherMenuManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TransitionLevel(ECareerOtherMenuExit eOtherMenuExit);
     

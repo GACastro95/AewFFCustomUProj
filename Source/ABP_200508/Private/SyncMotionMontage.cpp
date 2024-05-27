@@ -1,5 +1,9 @@
 #include "SyncMotionMontage.h"
 
+ASyncMotionMontage::ASyncMotionMontage(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DisableChannel = ECC_Pawn;
+}
+
 void ASyncMotionMontage::Setup(TArray<AELCharacter_Native*>& characters, const FVector& SyncLocation, const FRotator& SyncRotation, ESyncPosRotKind posSyncKind, ESyncPosRotKind rotSyncKind, float InterpolateTime, bool ignoreSweep, bool noSyncRotation, int32 Priority, bool useCharacterHeight) {
 }
 
@@ -58,7 +62,4 @@ int32 ASyncMotionMontage::GetPriority() const {
 void ASyncMotionMontage::GetBasePointLocationAndRotation(FVector& Location, FRotator& Rotation) {
 }
 
-ASyncMotionMontage::ASyncMotionMontage() {
-    this->DisableChannel = ECC_Pawn;
-}
 

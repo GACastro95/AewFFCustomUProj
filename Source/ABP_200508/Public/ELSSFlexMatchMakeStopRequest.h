@@ -15,6 +15,7 @@ public:
     FFlexMatchMakeCancel_RequestEvent onFlexMatchMakeCancelRequestEvent;
     
     UELSSFlexMatchMakeStopRequest();
+
 private:
     UFUNCTION(BlueprintCallable)
     void RequestResult(const int32 responseCode, const FString& responseData, eSSRequestResultType resultType);

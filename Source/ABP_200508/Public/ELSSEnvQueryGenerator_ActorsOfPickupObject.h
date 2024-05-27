@@ -15,5 +15,6 @@ public:
     bool IsNeedInteract;
     
     UELSSEnvQueryGenerator_ActorsOfPickupObject();
+
 };
 

@@ -12,6 +12,7 @@ class ABP_200508_API UChangeKeyconfigMapping : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UChangeKeyconfigMapping();
+
     UFUNCTION(BlueprintCallable)
     static void ReleaseAxisMapping(APlayerController* _TargetPlayerController, const FName& NowActionName);
     

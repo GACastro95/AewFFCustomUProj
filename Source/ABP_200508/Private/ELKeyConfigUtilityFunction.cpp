@@ -1,5 +1,8 @@
 #include "ELKeyConfigUtilityFunction.h"
 
+UELKeyConfigUtilityFunction::UELKeyConfigUtilityFunction() {
+}
+
 void UELKeyConfigUtilityFunction::SwapKeyMapSettingData(FKeyMapSettingData& _dataA, FKeyMapSettingData& _dataB) {
 }
 
@@ -16,6 +19,4 @@ void UELKeyConfigUtilityFunction::GetDefaultKeyMapSettingData(bool _isGamepad, T
 void UELKeyConfigUtilityFunction::ConvertKeyConfigToButtonIconTag(UObject* _pWorldContextObject, const FText& _TargetText, int32 _localPlayerNo, bool _isGamepad, EKeyMappingType& _resultMappingType, int32& _arrowButtonType) {
 }
 
-UELKeyConfigUtilityFunction::UELKeyConfigUtilityFunction() {
-}
 

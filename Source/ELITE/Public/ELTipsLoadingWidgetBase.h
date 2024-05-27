@@ -8,6 +8,7 @@ class ELITE_API UELTipsLoadingWidgetBase : public UELMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELTipsLoadingWidgetBase();
+
     UFUNCTION(BlueprintCallable)
     void SetCheckMode(bool IsValid);
     

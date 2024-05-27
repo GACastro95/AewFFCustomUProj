@@ -13,7 +13,8 @@ protected:
     int32 MaxRetryCount;
     
 public:
-    AELSSMasterDataLoaderForServer();
+    AELSSMasterDataLoaderForServer(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetVersionInfo(int32 inDataVersion, const FString& inYGS2URL);
     

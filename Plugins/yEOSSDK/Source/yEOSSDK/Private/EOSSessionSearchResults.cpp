@@ -4,3 +4,4 @@ UEOSSessionSearchResults::UEOSSessionSearchResults() {
     this->m_pcSession = NULL;
 }
 
+

@@ -8,5 +8,6 @@ class ULobbyPacketBase : public UObject {
     GENERATED_BODY()
 public:
     ULobbyPacketBase();
+
 };
 

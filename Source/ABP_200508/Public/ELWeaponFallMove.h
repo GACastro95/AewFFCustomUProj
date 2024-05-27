@@ -17,7 +17,8 @@ protected:
     bool bEnableFootIKOnly_N;
     
 public:
-    AELWeaponFallMove();
+    AELWeaponFallMove(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnableFootIKOnly() const;
     

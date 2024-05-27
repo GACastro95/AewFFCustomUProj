@@ -30,6 +30,7 @@ protected:
     FRotator SatelliteMoveSpeed;
     
 public:
-    UELSSCameraLocatorComponent();
+    UELSSCameraLocatorComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

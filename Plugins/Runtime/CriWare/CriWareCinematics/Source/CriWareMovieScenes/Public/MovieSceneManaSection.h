@@ -35,5 +35,6 @@ public:
     UManaPlayer* ExternalManaPlayer;
     
     UMovieSceneManaSection();
+
 };
 

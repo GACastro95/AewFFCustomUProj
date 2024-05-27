@@ -10,7 +10,7 @@
 
 class UYGS2RequestBase;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=OnlineServer)
+UCLASS(Blueprintable, DefaultConfig, Config=OnlineServer)
 class ABP_200508_API UELGameServerSelector : public UObject {
     GENERATED_BODY()
 public:
@@ -18,6 +18,7 @@ public:
     FOnPingCheckFinishedDispatcher OnPingCheckFinishedDispatcher;
     
     UELGameServerSelector();
+
     UFUNCTION(BlueprintCallable)
     bool SetupServers(const FString& Data, const FString& Key, const FString& SubKey);
     

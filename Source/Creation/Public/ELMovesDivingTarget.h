@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class CREATION_API AELMovesDivingTarget : public AELMovesPlayerPosition {
     GENERATED_BODY()
 public:
-    AELMovesDivingTarget();
+    AELMovesDivingTarget(const FObjectInitializer& ObjectInitializer);
+
 };
 

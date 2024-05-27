@@ -1,5 +1,8 @@
 #include "EOSNatP2PSerializedObjectPacket.h"
 
+UEOSNatP2PSerializedObjectPacket::UEOSNatP2PSerializedObjectPacket() {
+}
+
 bool UEOSNatP2PSerializedObjectPacket::SetObject(UObject* _pcObject, int32 _sType, int32 _sId) {
     return false;
 }
@@ -16,6 +19,4 @@ UObject* UEOSNatP2PSerializedObjectPacket::CreateObject(UObject* Outer) {
     return NULL;
 }
 
-UEOSNatP2PSerializedObjectPacket::UEOSNatP2PSerializedObjectPacket() {
-}
 

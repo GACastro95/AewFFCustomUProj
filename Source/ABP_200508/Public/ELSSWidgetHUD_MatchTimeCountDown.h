@@ -27,6 +27,7 @@ protected:
     
 public:
     UELSSWidgetHUD_MatchTimeCountDown();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Init();

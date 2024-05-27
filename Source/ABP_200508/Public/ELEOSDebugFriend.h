@@ -24,6 +24,7 @@ private:
     bool bShow;
     
 public:
-    AELEOSDebugFriend();
+    AELEOSDebugFriend(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,5 +1,9 @@
 #include "ELGeneralFontBase.h"
 
+UELGeneralFontBase::UELGeneralFontBase() : UUserWidget(FObjectInitializer::Get()) {
+    this->m_ButtonIconType = EDisplayButtonIconType::NotSpecified;
+}
+
 void UELGeneralFontBase::ValidForceDisplayIconType(EDisplayButtonIconType _changeIconType) {
 }
 
@@ -14,7 +18,4 @@ void UELGeneralFontBase::InvalidForceDisplayIconType() {
 void UELGeneralFontBase::ChangeForceDisplayIconType_Implementation(EDisplayButtonIconType _changeIconType) {
 }
 
-UELGeneralFontBase::UELGeneralFontBase() : UUserWidget(FObjectInitializer::Get()) {
-    this->m_ButtonIconType = EDisplayButtonIconType::NotSpecified;
-}
 

@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_SetSSGameResult : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_SetSSGameResult();
+
     UFUNCTION(BlueprintCallable)
     void SetGameResult(const FString& gid, const FString& pid, const FString& gameResult);
     

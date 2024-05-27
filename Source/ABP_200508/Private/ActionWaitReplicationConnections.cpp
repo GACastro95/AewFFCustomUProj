@@ -1,5 +1,9 @@
 #include "ActionWaitReplicationConnections.h"
 
+UActionWaitReplicationConnections::UActionWaitReplicationConnections() {
+    this->WorldContextObject = NULL;
+}
+
 void UActionWaitReplicationConnections::PollStatus() {
 }
 
@@ -13,7 +17,4 @@ UActionWaitReplicationConnections* UActionWaitReplicationConnections::ActionWait
 void UActionWaitReplicationConnections::Abort() {
 }
 
-UActionWaitReplicationConnections::UActionWaitReplicationConnections() {
-    this->WorldContextObject = NULL;
-}
 

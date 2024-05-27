@@ -1,5 +1,12 @@
 #include "ELInputDeviceObserveManager.h"
 
+UELInputDeviceObserveManager::UELInputDeviceObserveManager() {
+    this->m_NotifyGamepadDisconnectedActor = NULL;
+    this->m_GameFlowType = EInputDeviceGameFlowType::None;
+    this->m_GameHostControllerID = -1;
+    this->m_ManipulateKeyboardeMode = false;
+}
+
 void UELInputDeviceObserveManager::UpdateInputDeviceMap(const int32 _updateSrcDeviceIndex, const int32 _updateDstDeviceIndex) {
 }
 
@@ -119,10 +126,4 @@ void UELInputDeviceObserveManager::BackupOldDeviceInfo() {
 void UELInputDeviceObserveManager::AddJoinLocalExhibition(int32 _targetControllerID) {
 }
 
-UELInputDeviceObserveManager::UELInputDeviceObserveManager() {
-    this->m_NotifyGamepadDisconnectedActor = NULL;
-    this->m_GameFlowType = EInputDeviceGameFlowType::None;
-    this->m_GameHostControllerID = -1;
-    this->m_ManipulateKeyboardeMode = false;
-}
 

@@ -18,7 +18,7 @@ enum class EELAchievementList : uint8 {
     AC_Hall_of_Famer,
     AC_T_Shirt_Collector,
     AC_Food_Critic,
-    AC_Train_to_the_Max,
+    AC_Train_to_the_Max UMETA(Hidden),
     AC_Casual_Gamer,
     AC_Professional_Gamer,
     AC_Making_Their_Debut,
@@ -48,6 +48,5 @@ enum class EELAchievementList : uint8 {
     AC_Triple_Crown,
     AC_Watch_Your_Step,
     AC_None,
-    AC_MAX UMETA(Hidden),
 };
 

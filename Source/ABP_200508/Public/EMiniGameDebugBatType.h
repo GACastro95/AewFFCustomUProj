@@ -8,6 +8,5 @@ enum class EMiniGameDebugBatType : uint8 {
     List_Sinai,
     List_Normal,
     List_WireBat,
-    List_Max,
 };
 

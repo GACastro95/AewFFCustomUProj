@@ -9,6 +9,7 @@ class ELITE_CORE_API UELITE_BitUtil : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELITE_BitUtil();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool CheckBit(const int32& Value, uint8 BitIndex);
     

@@ -1,5 +1,8 @@
 #include "AtomStatics.h"
 
+UAtomStatics::UAtomStatics() {
+}
+
 void UAtomStatics::UpdateDistanceFactorForAllSounds(float ArgDistanceFactor) {
 }
 
@@ -121,6 +124,4 @@ UAtomComponent* UAtomStatics::CreateRootedAtomComponent(const UObject* WorldCont
 void UAtomStatics::AddToAtomComponentIds(UObject* AtomPlayGateRef, UObject* SkeltalMeshComponentRef, int32 AtomComponentID) {
 }
 
-UAtomStatics::UAtomStatics() {
-}
 

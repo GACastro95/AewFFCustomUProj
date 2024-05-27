@@ -1,5 +1,13 @@
 #include "SaveDataAccessComponentBase.h"
 
+USaveDataAccessComponentBase::USaveDataAccessComponentBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bBusy = false;
+    this->JobIndex = 0;
+    this->Params.AddDefaulted(13);
+    this->bSilent = false;
+    this->bCreateNew = false;
+}
+
 void USaveDataAccessComponentBase::StartSave(const TArray<ESaveDataType>& List) {
 }
 
@@ -16,11 +24,4 @@ UELSaveDataAccessObjectBase* USaveDataAccessComponentBase::GetSaveDataAccessObje
     return NULL;
 }
 
-USaveDataAccessComponentBase::USaveDataAccessComponentBase() {
-    this->bBusy = false;
-    this->JobIndex = 0;
-    this->Params.AddDefaulted(13);
-    this->bSilent = false;
-    this->bCreateNew = false;
-}
 

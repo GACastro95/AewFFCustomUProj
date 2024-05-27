@@ -5,3 +5,4 @@ UELAnimNotifyState_HeightOffsetToMedium::UELAnimNotifyState_HeightOffsetToMedium
     this->OutBlendSeconds = 0.00f;
 }
 
+

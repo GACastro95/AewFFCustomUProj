@@ -12,7 +12,8 @@ private:
     bool bStartGame;
     
 public:
-    AELGameModeBase();
+    AELGameModeBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnStartGame();
     

@@ -31,6 +31,7 @@ protected:
     
 public:
     UELSSWidgetHUD_Inventory();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetWeaponName(const FString& InWeaponName);

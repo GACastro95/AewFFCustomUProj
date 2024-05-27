@@ -16,6 +16,7 @@ public:
     FOnCriWareError OnCriWareError;
     
     UCriWareError();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static UCriWareError* GetCriWareError();
     

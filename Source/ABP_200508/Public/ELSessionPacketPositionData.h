@@ -13,6 +13,7 @@ private:
     
 public:
     UELSessionPacketPositionData();
+
     UFUNCTION(BlueprintCallable)
     TArray<int32> GetPositionData();
     

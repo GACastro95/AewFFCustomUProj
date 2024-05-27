@@ -22,6 +22,7 @@ private:
     
 public:
     UELAdjustDlcSaveDataAccessObjectBase();
+
     UFUNCTION(BlueprintCallable)
     void StartCheck(FUnavailableDlcData _unavailableDlcData, FAdjustedDlcSaveDataDelegate _delegate);
     

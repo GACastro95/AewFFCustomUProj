@@ -1,5 +1,8 @@
 #include "SessionGamePlayerData.h"
 
+USessionGamePlayerData::USessionGamePlayerData() {
+}
+
 bool USessionGamePlayerData::SetParameters(const FSessionGamePlayerDataBP& _stPlayerData) {
     return false;
 }
@@ -68,6 +71,4 @@ FString USessionGamePlayerData::GetAccountDisplayName() const {
     return TEXT("");
 }
 
-USessionGamePlayerData::USessionGamePlayerData() {
-}
 

@@ -23,6 +23,7 @@ protected:
     
 public:
     UEOSUserContentsBase();
+
     UFUNCTION(BlueprintCallable)
     void SetRequestReadBytes(int32 _sRequestReadBytes);
     

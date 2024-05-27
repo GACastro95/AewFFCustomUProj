@@ -19,6 +19,7 @@ class ABP_200508_API UELTitleUtilityFunction : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UELTitleUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static bool SortByPriority(TArray<EELBelt>& Out, const TArray<EELBelt>& In, bool PrioritizeTagBelt);
     

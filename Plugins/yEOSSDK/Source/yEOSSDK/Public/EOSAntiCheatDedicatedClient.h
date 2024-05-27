@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSAntiCheatDedicatedClient : public UEOSIDs {
     GENERATED_BODY()
 public:
     UEOSAntiCheatDedicatedClient();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

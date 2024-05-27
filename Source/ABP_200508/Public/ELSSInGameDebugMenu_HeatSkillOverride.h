@@ -8,5 +8,6 @@ class ABP_200508_API UELSSInGameDebugMenu_HeatSkillOverride : public UELSSInGame
     GENERATED_BODY()
 public:
     UELSSInGameDebugMenu_HeatSkillOverride();
+
 };
 

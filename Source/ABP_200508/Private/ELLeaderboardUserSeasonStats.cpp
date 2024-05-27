@@ -1,5 +1,8 @@
 #include "ELLeaderboardUserSeasonStats.h"
 
+UELLeaderboardUserSeasonStats::UELLeaderboardUserSeasonStats() {
+}
+
 void UELLeaderboardUserSeasonStats::UpdateRequestDateTime() {
 }
 
@@ -43,6 +46,4 @@ bool UELLeaderboardUserSeasonStats::FindStat(const FString& StatName, int32& Val
     return false;
 }
 
-UELLeaderboardUserSeasonStats::UELLeaderboardUserSeasonStats() {
-}
 

@@ -33,6 +33,7 @@ protected:
     
 public:
     UELOperationalWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetLastCursorIndex(int32 LastIndex);

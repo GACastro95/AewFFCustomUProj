@@ -8,5 +8,6 @@ class ELITE_API UELAdjustDlcPlayerSaveDataAccessObject : public UELAdjustDlcSave
     GENERATED_BODY()
 public:
     UELAdjustDlcPlayerSaveDataAccessObject();
+
 };
 

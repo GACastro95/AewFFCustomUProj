@@ -47,7 +47,8 @@ protected:
     float ReplayActiveSec_N;
     
 public:
-    AELReplayEmitterRecorder();
+    AELReplayEmitterRecorder(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RecordSfx_N(const FString& SfxName);
     

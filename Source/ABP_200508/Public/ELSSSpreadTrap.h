@@ -15,8 +15,9 @@ protected:
     float WholeRadius;
     
 public:
-    AELSSSpreadTrap();
+    AELSSSpreadTrap(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 };
 

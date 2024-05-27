@@ -18,7 +18,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELVictoryCutsceneManager : public AELVictoryCutsceneManagerCore {
     GENERATED_BODY()
 public:
-    AELVictoryCutsceneManager();
+    AELVictoryCutsceneManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartSpecialScene(const FELInteractiveVictoryCutsceneSpecialSceneParam& SpecialSceneParam);
     

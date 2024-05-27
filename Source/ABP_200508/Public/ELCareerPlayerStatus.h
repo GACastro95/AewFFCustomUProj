@@ -8,6 +8,7 @@ class ABP_200508_API UELCareerPlayerStatus : public UELMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerPlayerStatus();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateSkillPointBuff(bool bFlag);

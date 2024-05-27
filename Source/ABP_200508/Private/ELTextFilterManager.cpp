@@ -1,5 +1,9 @@
 #include "ELTextFilterManager.h"
 
+UELTextFilterManager::UELTextFilterManager() {
+    this->isinit = false;
+}
+
 bool UELTextFilterManager::TextFilterSteam(int32 filterCategory, const FString& _SrcText, FString& _DstText, const FString& ExternalAccountId) {
     return false;
 }
@@ -12,7 +16,4 @@ bool UELTextFilterManager::TextFilter(const FString& SrcText, const FOnSanitizeT
     return false;
 }
 
-UELTextFilterManager::UELTextFilterManager() {
-    this->isinit = false;
-}
 

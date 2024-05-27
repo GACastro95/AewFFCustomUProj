@@ -1,5 +1,8 @@
 #include "ELSSWidgetHUD_SSGuideIconContainer.h"
 
+UELSSWidgetHUD_SSGuideIconContainer::UELSSWidgetHUD_SSGuideIconContainer() {
+}
+
 void UELSSWidgetHUD_SSGuideIconContainer::Update(float InDeltaTime) {
 }
 
@@ -15,6 +18,4 @@ void UELSSWidgetHUD_SSGuideIconContainer::ResetIconAll() {
 void UELSSWidgetHUD_SSGuideIconContainer::ApplyGuideIcon(AActor* InActor, ESSGuideIconType InIconType, bool inIsVisible) {
 }
 
-UELSSWidgetHUD_SSGuideIconContainer::UELSSWidgetHUD_SSGuideIconContainer() {
-}
 

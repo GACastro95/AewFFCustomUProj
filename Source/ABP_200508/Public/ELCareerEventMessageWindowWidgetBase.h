@@ -11,6 +11,7 @@ class ABP_200508_API UELCareerEventMessageWindowWidgetBase : public UELCareerWid
     GENERATED_BODY()
 public:
     UELCareerEventMessageWindowWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupTextCutscene(FName MessageKey, ECareerCutsceneMessageCastType eMessageCast, ECareerCutsceneExtraInfo eExtraInfo);
     

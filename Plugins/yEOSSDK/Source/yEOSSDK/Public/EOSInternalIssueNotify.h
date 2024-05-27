@@ -14,6 +14,7 @@ public:
     FEOSInternalIssueDispatcher InternalIssueDispatcher;
     
     UEOSInternalIssueNotify();
+
     UFUNCTION(BlueprintCallable)
     static void SetEnable(bool _bEnable);
     

@@ -1,5 +1,52 @@
 #include "ELSSWidgetHUD_MiniMapZoom.h"
 
+UELSSWidgetHUD_MiniMapZoom::UELSSWidgetHUD_MiniMapZoom() {
+    this->SSPlayerController = NULL;
+    this->KOMaterial_10 = NULL;
+    this->KOMaterial_01 = NULL;
+    this->AliveMaterial_10 = NULL;
+    this->AliveMaterial_01 = NULL;
+    this->ShrinkTimeMinMaterial_10 = NULL;
+    this->ShrinkTimeMinMaterial_01 = NULL;
+    this->ShrinkTimeSecMaterial_10 = NULL;
+    this->ShrinkTimeSecMaterial_01 = NULL;
+    this->PlayInAnim = NULL;
+    this->PlayOutAnim = NULL;
+    this->ShrinkTimeWidget = NULL;
+    this->KO10Widget = NULL;
+    this->Alive10Widget = NULL;
+    this->OperationButtonWidget = NULL;
+    this->StormGuide = NULL;
+    this->StormZone = NULL;
+    this->AnnounceStorm = NULL;
+    this->PlayerIcon = NULL;
+    this->MapCanvas = NULL;
+    this->MiniMapImage = NULL;
+    this->CarrotMedal01Widgets = NULL;
+    this->CarrotMedal02Widgets = NULL;
+    this->ItemManager = NULL;
+    this->FgfManager = NULL;
+    this->PlayerActor = NULL;
+    this->StormActor = NULL;
+    this->IsDoneInit = false;
+    this->IsShowShrinkTime = false;
+    this->IsSearchAbilityUsing = false;
+    this->IsWatchGameMode = false;
+    this->PlayerFloor = 0;
+    this->MiniMapTypeIndex = 0;
+    this->Minutes = 0;
+    this->Seconds = 0;
+    this->RuleType = ESSRuleType::BattleRoyale;
+    this->BlackDiamondIcon01Widget = NULL;
+    this->BlackDiamondIcon02Widget = NULL;
+    this->TeamTreasureBoxIcon01Widget = NULL;
+    this->TeamTreasureBoxIcon02Widget = NULL;
+    this->FGFBallIcon01Widget = NULL;
+    this->FGFBallIcon02Widget = NULL;
+    this->FGFOpponentBallIcon01Widget = NULL;
+    this->FGFOpponentBallIcon02Widget = NULL;
+}
+
 FVector2D UELSSWidgetHUD_MiniMapZoom::WorldPosToCanvasPos(const FVector& InWorldPos) {
     return FVector2D{};
 }
@@ -120,50 +167,4 @@ void UELSSWidgetHUD_MiniMapZoom::ApplyAreaShrinkTime(float InSecond) {
 void UELSSWidgetHUD_MiniMapZoom::ApplyAliveCount(int32 InAliveCount) {
 }
 
-UELSSWidgetHUD_MiniMapZoom::UELSSWidgetHUD_MiniMapZoom() {
-    this->SSPlayerController = NULL;
-    this->KOMaterial_10 = NULL;
-    this->KOMaterial_01 = NULL;
-    this->AliveMaterial_10 = NULL;
-    this->AliveMaterial_01 = NULL;
-    this->ShrinkTimeMinMaterial_10 = NULL;
-    this->ShrinkTimeMinMaterial_01 = NULL;
-    this->ShrinkTimeSecMaterial_10 = NULL;
-    this->ShrinkTimeSecMaterial_01 = NULL;
-    this->PlayInAnim = NULL;
-    this->PlayOutAnim = NULL;
-    this->ShrinkTimeWidget = NULL;
-    this->KO10Widget = NULL;
-    this->Alive10Widget = NULL;
-    this->OperationButtonWidget = NULL;
-    this->StormGuide = NULL;
-    this->StormZone = NULL;
-    this->AnnounceStorm = NULL;
-    this->PlayerIcon = NULL;
-    this->MapCanvas = NULL;
-    this->MiniMapImage = NULL;
-    this->CarrotMedal01Widgets = NULL;
-    this->CarrotMedal02Widgets = NULL;
-    this->ItemManager = NULL;
-    this->FgfManager = NULL;
-    this->PlayerActor = NULL;
-    this->StormActor = NULL;
-    this->IsDoneInit = false;
-    this->IsShowShrinkTime = false;
-    this->IsSearchAbilityUsing = false;
-    this->IsWatchGameMode = false;
-    this->PlayerFloor = 0;
-    this->MiniMapTypeIndex = 0;
-    this->Minutes = 0;
-    this->Seconds = 0;
-    this->RuleType = ESSRuleType::BattleRoyale;
-    this->BlackDiamondIcon01Widget = NULL;
-    this->BlackDiamondIcon02Widget = NULL;
-    this->TeamTreasureBoxIcon01Widget = NULL;
-    this->TeamTreasureBoxIcon02Widget = NULL;
-    this->FGFBallIcon01Widget = NULL;
-    this->FGFBallIcon02Widget = NULL;
-    this->FGFOpponentBallIcon01Widget = NULL;
-    this->FGFOpponentBallIcon02Widget = NULL;
-}
 

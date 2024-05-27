@@ -87,6 +87,7 @@ protected:
     
 public:
     UManaPlayer();
+
     UFUNCTION(BlueprintCallable)
     bool SetVolume(float Volume, EManaPlayerTrack TrackType);
     

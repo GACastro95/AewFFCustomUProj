@@ -20,6 +20,7 @@ protected:
     
 public:
     UEOSFriendUser();
+
     UFUNCTION(BlueprintCallable)
     bool RequestGetPresence();
     

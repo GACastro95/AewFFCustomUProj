@@ -47,6 +47,7 @@ private:
     
 public:
     UELChallengeManager();
+
     UFUNCTION(BlueprintCallable)
     void StopChallengeRecordMonitor();
     

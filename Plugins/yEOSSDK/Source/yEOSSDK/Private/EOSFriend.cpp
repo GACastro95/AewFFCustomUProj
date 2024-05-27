@@ -1,5 +1,8 @@
 #include "EOSFriend.h"
 
+UEOSFriend::UEOSFriend() {
+}
+
 bool UEOSFriend::SetupInternalCallback() {
     return false;
 }
@@ -33,6 +36,4 @@ void UEOSFriend::FindFriendByEpicID(UEOSFriendUser*& _FriendUser, const FString&
 void UEOSFriend::FindFriend(UEOSFriendUser*& _FriendUser, const FString& _PUID) const {
 }
 
-UEOSFriend::UEOSFriend() {
-}
 

@@ -1,5 +1,8 @@
 #include "EOSInternalIssueNotify.h"
 
+UEOSInternalIssueNotify::UEOSInternalIssueNotify() {
+}
+
 void UEOSInternalIssueNotify::SetEnable(bool _bEnable) {
 }
 
@@ -18,6 +21,4 @@ bool UEOSInternalIssueNotify::Create(UEOSInternalIssueNotify*& _pcInstance) {
     return false;
 }
 
-UEOSInternalIssueNotify::UEOSInternalIssueNotify() {
-}
 

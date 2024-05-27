@@ -1,5 +1,14 @@
 #include "ELSSStorm.h"
 
+AELSSStorm::AELSSStorm(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CurrentTime = 0.00f;
+    this->zoneClass = NULL;
+    this->zone = NULL;
+    this->finalParamTable = NULL;
+    this->EndShrinkSE_PlayTime = -0.50f;
+    this->RandomSeed = 0;
+}
+
 void AELSSStorm::UpdateZone(float timeSinceStart) {
 }
 
@@ -75,12 +84,4 @@ FVector AELSSStorm::CalcAnchorLocation(const FSSStormPhaseParam& phaseParam, AEL
 void AELSSStorm::AddSchedule(int32 phaseLevel) {
 }
 
-AELSSStorm::AELSSStorm() {
-    this->CurrentTime = 0.00f;
-    this->zoneClass = NULL;
-    this->zone = NULL;
-    this->finalParamTable = NULL;
-    this->EndShrinkSE_PlayTime = -0.50f;
-    this->RandomSeed = 0;
-}
 

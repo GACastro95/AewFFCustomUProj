@@ -1,5 +1,8 @@
 #include "ELLeaderboardUserStats.h"
 
+UELLeaderboardUserStats::UELLeaderboardUserStats() {
+}
+
 UELLeaderboardUserSeasonStats* UELLeaderboardUserStats::GetUserSeasonStats(int32 Season) const {
     return NULL;
 }
@@ -37,6 +40,4 @@ bool UELLeaderboardUserStats::FindLatestStat(const FString& StatName, int32& Val
     return false;
 }
 
-UELLeaderboardUserStats::UELLeaderboardUserStats() {
-}
 

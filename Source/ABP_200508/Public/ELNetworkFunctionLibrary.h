@@ -12,6 +12,7 @@ class UELNetworkFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELNetworkFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool Switch_TestNetworkServiceAccountAvailable();
     

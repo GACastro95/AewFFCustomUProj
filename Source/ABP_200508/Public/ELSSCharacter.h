@@ -59,7 +59,8 @@ protected:
     bool bVisibleMergedMesh;
     
 public:
-    AELSSCharacter();
+    AELSSCharacter(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool ShouldPlayFootstepSound() const;
     

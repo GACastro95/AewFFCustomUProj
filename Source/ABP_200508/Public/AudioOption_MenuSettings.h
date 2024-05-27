@@ -32,5 +32,6 @@ public:
     FOpenTrigger_DebugDispatcher OpenTrigger_DebugDispatcher;
     
     UAudioOption_MenuSettings();
+
 };
 

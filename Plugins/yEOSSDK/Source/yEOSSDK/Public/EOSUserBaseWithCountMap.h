@@ -13,6 +13,7 @@ public:
     UEOSUserBase* m_pcUserBase;
     
     UEOSUserBaseWithCountMap();
+
     UFUNCTION(BlueprintCallable)
     UEOSUserBase* GetUser();
     

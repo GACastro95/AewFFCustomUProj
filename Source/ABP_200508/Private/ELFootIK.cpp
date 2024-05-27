@@ -1,10 +1,6 @@
 #include "ELFootIK.h"
 
-bool UELFootIK::IsCheckFloor() const {
-    return false;
-}
-
-UELFootIK::UELFootIK() {
+UELFootIK::UELFootIK(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bComplexTrace = true;
     this->HipsBoneName_L = TEXT("J_Hips");
     this->FootBoneName_L = TEXT("J_Foot_L");
@@ -28,4 +24,9 @@ UELFootIK::UELFootIK() {
     this->bResetHipsOffset = false;
     this->bTemporaryOverrideHipOffset = false;
 }
+
+bool UELFootIK::IsCheckFloor() const {
+    return false;
+}
+
 

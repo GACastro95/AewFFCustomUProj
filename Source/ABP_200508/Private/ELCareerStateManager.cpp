@@ -1,5 +1,14 @@
 #include "ELCareerStateManager.h"
 
+AELCareerStateManager::AELCareerStateManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_ELGameInstance = NULL;
+    this->m_pEventComponent = NULL;
+    this->TShirtDataTable = NULL;
+    this->SpecialRewardDataTable = NULL;
+    this->GotAEWCashDataTable = NULL;
+    this->CareerResultDataTable = NULL;
+}
+
 
 
 
@@ -22,12 +31,4 @@ void AELCareerStateManager::CheckState(int32 _WidgetOperationResult) {
 void AELCareerStateManager::CheckMatchOperationFromWidget(UELMenuWidgetBase* pWidget) {
 }
 
-AELCareerStateManager::AELCareerStateManager() {
-    this->m_ELGameInstance = NULL;
-    this->m_pEventComponent = NULL;
-    this->TShirtDataTable = NULL;
-    this->SpecialRewardDataTable = NULL;
-    this->GotAEWCashDataTable = NULL;
-    this->CareerResultDataTable = NULL;
-}
 

@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_Analytics : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_Analytics();
+
     UFUNCTION(BlueprintCallable)
     void SetAnalyticsData(const FYGS2AnalyticsData& _stAnalyticsData);
     

@@ -11,6 +11,7 @@ class ABP_200508_API UELSSSaveDataUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSSaveDataUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetUsingLoadoutPresetFlag(const UObject* WorldContextObject, int32 inPresetIndex, bool InFlag);
     

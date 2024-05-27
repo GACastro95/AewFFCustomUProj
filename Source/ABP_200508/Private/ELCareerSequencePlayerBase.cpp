@@ -1,6 +1,7 @@
 #include "ELCareerSequencePlayerBase.h"
 
-
-AELCareerSequencePlayerBase::AELCareerSequencePlayerBase() {
+AELCareerSequencePlayerBase::AELCareerSequencePlayerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

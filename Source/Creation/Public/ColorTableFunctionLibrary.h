@@ -13,6 +13,7 @@ class CREATION_API UColorTableFunctionLibrary : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UColorTableFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void MakeEditColorPack(const int32 ColorSlotNo, const int32 DefaultColorID, const TArray<FEditColorGroupID> Groups, FEditColorPack& Out);
     

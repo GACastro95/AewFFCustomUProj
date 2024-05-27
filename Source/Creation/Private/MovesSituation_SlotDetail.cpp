@@ -1,5 +1,8 @@
 #include "MovesSituation_SlotDetail.h"
 
+UMovesSituation_SlotDetail::UMovesSituation_SlotDetail() {
+}
+
 void UMovesSituation_SlotDetail::GetSlotDetailArray(const FMovesSituation& _Moves, TArray<FELMovesSituation_SlotDetail>& _SlotDetailArray) {
 }
 
@@ -15,6 +18,4 @@ void UMovesSituation_SlotDetail::ConvertMovesData(FELMoves& _Moves, const FELMov
 void UMovesSituation_SlotDetail::ConvertFinisherType() {
 }
 
-UMovesSituation_SlotDetail::UMovesSituation_SlotDetail() {
-}
 

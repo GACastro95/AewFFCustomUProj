@@ -1,5 +1,10 @@
 #include "EOSActionQueryCommunityUserInfo.h"
 
+UEOSActionQueryCommunityUserInfo::UEOSActionQueryCommunityUserInfo() {
+    this->WorldContextObject = NULL;
+    this->User = NULL;
+}
+
 UEOSActionQueryCommunityUserInfo* UEOSActionQueryCommunityUserInfo::EOSActionQueryCommunityUserInfo(UObject* NewWorldContextObject, UEOSCommunityUserBase* NewUser) {
     return NULL;
 }
@@ -7,8 +12,4 @@ UEOSActionQueryCommunityUserInfo* UEOSActionQueryCommunityUserInfo::EOSActionQue
 void UEOSActionQueryCommunityUserInfo::Abort() {
 }
 
-UEOSActionQueryCommunityUserInfo::UEOSActionQueryCommunityUserInfo() {
-    this->WorldContextObject = NULL;
-    this->User = NULL;
-}
 

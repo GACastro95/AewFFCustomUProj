@@ -15,7 +15,8 @@ private:
     TArray<FCareerSchedule> m_CareerScheduleTableBase;
     
 public:
-    AELCareerSchedule();
+    AELCareerSchedule(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupCareerPostCommandEventList(ECareerScenarioNo eScenarioNo);
     

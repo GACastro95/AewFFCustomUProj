@@ -13,6 +13,7 @@ class YEOSSDK_API UEOSSessionP2PSynchronizedPacketBase : public UEOSSessionP2PPa
     GENERATED_BODY()
 public:
     UEOSSessionP2PSynchronizedPacketBase();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateFrameCount();
     

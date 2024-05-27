@@ -10,6 +10,7 @@ class UHighlightsFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UHighlightsFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void Poll();
     

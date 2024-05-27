@@ -40,6 +40,7 @@ private:
     
 public:
     UELUserProfileManager();
+
     UFUNCTION(BlueprintCallable)
     void UpdateWeaponSymbolIcon(int32 _iconID);
     

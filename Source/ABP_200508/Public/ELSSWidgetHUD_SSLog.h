@@ -41,6 +41,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSLog();
+
     UFUNCTION(BlueprintCallable)
     void SetTextAndColorByList(const TArray<FSSLogTextParam>& inTextParam, UTexture2D* InIcon);
     

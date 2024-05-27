@@ -9,6 +9,7 @@ class ABP_200508_API UELCareerRecordsWidgetBase : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerRecordsWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPressedMoveTab(bool _isLeft);

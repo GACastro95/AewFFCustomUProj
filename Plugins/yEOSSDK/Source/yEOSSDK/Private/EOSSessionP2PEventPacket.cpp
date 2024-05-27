@@ -1,5 +1,8 @@
 #include "EOSSessionP2PEventPacket.h"
 
+UEOSSessionP2PEventPacket::UEOSSessionP2PEventPacket() {
+}
+
 void UEOSSessionP2PEventPacket::SetNotificationWithPUID(EEOSSessionNotificationType _enNotificationType, const FString& _strProductUserID) {
 }
 
@@ -14,6 +17,4 @@ EEOSSessionNotificationType UEOSSessionP2PEventPacket::GetNotificationType() con
     return EEOSSessionNotificationType::UpdateReceived;
 }
 
-UEOSSessionP2PEventPacket::UEOSSessionP2PEventPacket() {
-}
 

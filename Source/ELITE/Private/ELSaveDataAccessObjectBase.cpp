@@ -1,6 +1,13 @@
 #include "ELSaveDataAccessObjectBase.h"
 #include "Templates/SubclassOf.h"
 
+UELSaveDataAccessObjectBase::UELSaveDataAccessObjectBase() {
+    this->bAccessCache = true;
+    this->m_IsCachedData = false;
+    this->m_SaveDataType = ESaveDataType::Unknown;
+    this->LastResult = ESaveDataProcResult::None;
+}
+
 bool UELSaveDataAccessObjectBase::WriteData_Implementation(USaveDataObjectBase* SaveDataObject, const bool bInitialize) {
     return false;
 }
@@ -89,10 +96,4 @@ void UELSaveDataAccessObjectBase::CreateData(ESaveDataType _saveDataType, FSaveD
 void UELSaveDataAccessObjectBase::Callback_RequestProcessEnd(ESaveDataAccessorEvent Event, USaveData_AccessorBase* SaveDataAccessor, ESaveDataProcResult Result) {
 }
 
-UELSaveDataAccessObjectBase::UELSaveDataAccessObjectBase() {
-    this->bAccessCache = true;
-    this->m_IsCachedData = false;
-    this->m_SaveDataType = ESaveDataType::Unknown;
-    this->LastResult = ESaveDataProcResult::None;
-}
 

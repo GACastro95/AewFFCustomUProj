@@ -1,5 +1,8 @@
 #include "YDebugMenuCallbackBase.h"
 
+UYDebugMenuCallbackBase::UYDebugMenuCallbackBase() {
+}
+
 void UYDebugMenuCallbackBase::OnUIValueChanged_Direct(const FYDebugMenuSimpleUIParamBase& UIParam, const FString& RegistKey) {
 }
 
@@ -32,6 +35,4 @@ bool UYDebugMenuCallbackBase::CreateDebugMenuCallbackInstance(UYDebugMenuCallbac
     return false;
 }
 
-UYDebugMenuCallbackBase::UYDebugMenuCallbackBase() {
-}
 

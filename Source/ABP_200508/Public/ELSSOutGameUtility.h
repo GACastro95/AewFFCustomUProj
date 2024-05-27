@@ -18,6 +18,7 @@ class ABP_200508_API UELSSOutGameUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSOutGameUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void SetSSMainMenuWrestlerVisibility(const UObject* WorldContextObject, bool IsVisible);
     

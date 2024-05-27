@@ -11,6 +11,7 @@ class ABP_200508_API UELSSWidgetHUD_HeatLevelSkillAnnounce : public UELSSWidgetB
     GENERATED_BODY()
 public:
     UELSSWidgetHUD_HeatLevelSkillAnnounce();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Update(float InDeltaTime);

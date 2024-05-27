@@ -8,5 +8,6 @@ class ABP_200508_API USaveData_Comparator : public USaveData_ProcessBase {
     GENERATED_BODY()
 public:
     USaveData_Comparator();
+
 };
 

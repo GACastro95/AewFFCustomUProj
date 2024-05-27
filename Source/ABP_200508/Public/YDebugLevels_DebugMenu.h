@@ -8,5 +8,6 @@ class ABP_200508_API UYDebugLevels_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYDebugLevels_DebugMenu();
+
 };
 

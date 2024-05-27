@@ -1,5 +1,13 @@
 #include "EOSSession.h"
 
+UEOSSession::UEOSSession() {
+    this->DebugSessionCreateErr = false;
+    this->DebugSessionDestroyErr = false;
+    this->DebugSessionJoinErr = false;
+    this->DebugSessionLeaveErr = false;
+    this->DebugSessionStartErr = false;
+}
+
 bool UEOSSession::SetupInternalCallback() {
     return false;
 }
@@ -117,11 +125,4 @@ bool UEOSSession::BeginPlayerSession(const FEOSMetricsSettings& _rstSettings) {
     return false;
 }
 
-UEOSSession::UEOSSession() {
-    this->DebugSessionCreateErr = false;
-    this->DebugSessionDestroyErr = false;
-    this->DebugSessionJoinErr = false;
-    this->DebugSessionLeaveErr = false;
-    this->DebugSessionStartErr = false;
-}
 

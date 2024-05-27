@@ -12,7 +12,8 @@ protected:
     bool bNeedCheckCanClimbEdge;
     
 public:
-    AELBarricade();
+    AELBarricade(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void IsEnableClimbUseImpl(bool& Out_IsEnable);
     

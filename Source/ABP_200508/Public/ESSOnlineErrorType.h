@@ -31,6 +31,6 @@ enum class ESSOnlineErrorType : uint8 {
     MovementTimeout,
     GetSSMasterDataTimeout,
     GameServerError_RuleIsExpired,
-    End = 0xFF,
+    End = 255,
 };
 

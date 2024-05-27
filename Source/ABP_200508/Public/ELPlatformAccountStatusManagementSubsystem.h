@@ -24,6 +24,7 @@ public:
     FSwapLoginEventHandler OnSwapLoginEventHandler;
     
     UELPlatformAccountStatusManagementSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void SwitchProfile();
     

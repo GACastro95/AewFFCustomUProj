@@ -13,6 +13,7 @@ class CREATION_API UMovesPlayerStart : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UMovesPlayerStart();
+
 private:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetMovesPlayerStartData(TArray<AELMovesPlayerPosition*>& _outList, const TArray<AELMovesPlayerPosition*>& _Array, const FMovesMovesCategory& Category);

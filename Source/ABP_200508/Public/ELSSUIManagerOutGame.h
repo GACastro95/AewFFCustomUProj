@@ -20,7 +20,8 @@ protected:
     USSMenuWrestlerSelectData* selectWrestlerData;
     
 public:
-    AELSSUIManagerOutGame();
+    AELSSUIManagerOutGame(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool SetupOutGameUI(UELOperationalWidgetBase* mainWidget, const yEnMenuWidgetType addType, bool isCurrentUI);
     

@@ -7,7 +7,7 @@ namespace EEngineIniFileType {
     enum Type {
         EngBaseEngineIni,
         EngWindowsEngineIni,
-        ProjDefaultEngineIni = 0x4,
+        ProjDefaultEngineIni = 4,
         ProjWindowsEngineIni,
     };
 }

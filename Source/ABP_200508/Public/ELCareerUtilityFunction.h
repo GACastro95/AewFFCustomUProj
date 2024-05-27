@@ -43,6 +43,7 @@ class ABP_200508_API UELCareerUtilityFunction : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UELCareerUtilityFunction();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void UpdateSceneCapture(const UObject* WorldContextObject, ASceneCapture2D* pSceneCapture2D);
     

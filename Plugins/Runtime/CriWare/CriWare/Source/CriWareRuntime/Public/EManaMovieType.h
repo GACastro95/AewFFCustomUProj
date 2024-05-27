@@ -8,6 +8,6 @@ enum class EManaMovieType : uint8 {
     H264,
     VP9,
     Num,
-    Unknown = 0xFF,
+    Unknown = 255,
 };
 

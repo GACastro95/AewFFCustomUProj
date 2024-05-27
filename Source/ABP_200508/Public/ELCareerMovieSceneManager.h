@@ -13,7 +13,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AELCareerSequencePlayerBase* m_pSequencePlayer;
     
-    AELCareerMovieSceneManager();
+    AELCareerMovieSceneManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSubtitles(const FString& TextID, float fDispTime);
     

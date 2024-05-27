@@ -8,5 +8,6 @@ class ABP_200508_API UELSSActionStateGunAimFire : public UELSSActionStateGunFire
     GENERATED_BODY()
 public:
     UELSSActionStateGunAimFire();
+
 };
 

@@ -12,5 +12,6 @@ public:
     EELEOSLobbyMiniGameSteps Step;
     
     UELEOSLobbyMiniGameSteps();
+
 };
 

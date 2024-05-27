@@ -8,6 +8,7 @@ class ABP_200508_API UELSSMainMenuWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELSSMainMenuWidgetBase();
+
     UFUNCTION(BlueprintCallable)
     void UpdateTick(float inDeltaSeconds);
     

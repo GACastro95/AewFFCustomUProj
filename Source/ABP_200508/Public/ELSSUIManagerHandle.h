@@ -13,6 +13,7 @@ public:
     TSoftClassPtr<UELSSPanelBase> SoftClassPtr;
     
     UELSSUIManagerHandle();
+
     UFUNCTION(BlueprintCallable)
     bool IsLoadComplete();
     

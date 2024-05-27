@@ -1,5 +1,14 @@
 #include "ELCareerHUBMenuItem.h"
 
+UELCareerHUBMenuItem::UELCareerHUBMenuItem() {
+    this->NumHorizontalItems = 1;
+    this->NumVerticalItems = 1;
+    this->CurrentMode = ECareerHUBMenuItemMode::None;
+    this->Operation = ECareerHUBMenuItemOperation::Default;
+    this->TShirtData = NULL;
+    this->m_bOpenDirLeft = false;
+}
+
 void UELCareerHUBMenuItem::SetCanMoveCursor(bool bFlag) {
 }
 
@@ -41,12 +50,4 @@ bool UELCareerHUBMenuItem::CanPurchaseItem(const FCareerItemData& ItemData) cons
     return false;
 }
 
-UELCareerHUBMenuItem::UELCareerHUBMenuItem() {
-    this->NumHorizontalItems = 1;
-    this->NumVerticalItems = 1;
-    this->CurrentMode = ECareerHUBMenuItemMode::None;
-    this->Operation = ECareerHUBMenuItemOperation::Default;
-    this->TShirtData = NULL;
-    this->m_bOpenDirLeft = false;
-}
 

@@ -125,9 +125,10 @@ protected:
     TArray<int32> UnLockedPlayerSlotNos;
     
 public:
-    AELSSItemBox();
+    AELSSItemBox(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateTeamView();
     
@@ -237,7 +238,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ApplyLocationToTransform();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

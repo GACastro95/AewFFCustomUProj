@@ -13,6 +13,7 @@ public:
     FOnDeviceUpdated OnDeviceUpdated;
     
     UAtomDeviceWatcher();
+
     UFUNCTION(BlueprintCallable)
     FString GetDeviceName();
     

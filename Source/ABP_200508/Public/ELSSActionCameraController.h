@@ -57,6 +57,7 @@ protected:
     
 public:
     UELSSActionCameraController();
+
     UFUNCTION(BlueprintCallable)
     void UpdateOnTick(float inDeltaSeconds);
     

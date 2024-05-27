@@ -11,6 +11,7 @@ class YDEBUG_API UYJIRAMailSender : public UObject {
     GENERATED_BODY()
 public:
     UYJIRAMailSender();
+
     UFUNCTION(BlueprintCallable)
     bool Send(const FYJIRAMailData& _stMailData);
     

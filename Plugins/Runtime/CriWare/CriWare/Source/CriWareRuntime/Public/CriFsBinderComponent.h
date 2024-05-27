@@ -20,7 +20,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnBindError OnBindError;
     
-    UCriFsBinderComponent();
+    UCriFsBinderComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Stop();
     

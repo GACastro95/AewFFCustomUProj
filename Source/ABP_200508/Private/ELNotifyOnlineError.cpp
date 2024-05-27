@@ -1,8 +1,9 @@
 #include "ELNotifyOnlineError.h"
 
-
-
-
-AELNotifyOnlineError::AELNotifyOnlineError() {
+AELNotifyOnlineError::AELNotifyOnlineError(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
+
 

@@ -33,6 +33,7 @@ public:
     bool bForce;
     
     UActionQueryUserStats();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UActionQueryUserStats* ActionQueryUserSeasonStats(UObject* NewWorldContextObject, const FString& NewProductUserID, const FString& NewDisplayName, int32 Season, bool NewBForce);
     

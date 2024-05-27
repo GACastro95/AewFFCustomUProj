@@ -58,8 +58,9 @@ protected:
     
 public:
     UELSSGameLobby();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void Update(const float DeltaTime);
     

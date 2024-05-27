@@ -1,5 +1,8 @@
 #include "ChangeKeyconfigMapping.h"
 
+UChangeKeyconfigMapping::UChangeKeyconfigMapping() {
+}
+
 void UChangeKeyconfigMapping::ReleaseAxisMapping(APlayerController* _TargetPlayerController, const FName& NowActionName) {
 }
 
@@ -20,6 +23,4 @@ void UChangeKeyconfigMapping::AddAxisMapping(APlayerController* _TargetPlayerCon
 void UChangeKeyconfigMapping::AddActionMapping(APlayerController* _TargetPlayerController, const FName& NowActionName, const FKey& NewKey) {
 }
 
-UChangeKeyconfigMapping::UChangeKeyconfigMapping() {
-}
 

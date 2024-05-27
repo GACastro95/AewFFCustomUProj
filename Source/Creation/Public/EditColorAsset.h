@@ -14,6 +14,7 @@ public:
     TMap<FEditColorGroupID, FEditColorList> Items;
     
     UEditColorAsset();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIndexedColor(const int32 ColorID, FLinearColor& Out) const;
     

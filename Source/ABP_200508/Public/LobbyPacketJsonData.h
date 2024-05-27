@@ -13,6 +13,7 @@ private:
     
 public:
     ULobbyPacketJsonData();
+
     UFUNCTION(BlueprintCallable)
     bool Setup(const FString& _JsonData);
     

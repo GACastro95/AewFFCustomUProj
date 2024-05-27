@@ -1,5 +1,8 @@
 #include "WrestlerIDUtilityFunctions.h"
 
+UWrestlerIDUtilityFunctions::UWrestlerIDUtilityFunctions() {
+}
+
 void UWrestlerIDUtilityFunctions::SwitchCharacterType(const EWrestlerID_N ID, ECharacterType& resultType) {
 }
 
@@ -47,6 +50,4 @@ bool UWrestlerIDUtilityFunctions::IsCommunityWrestlerID(const EWrestlerID_N ID) 
     return false;
 }
 
-UWrestlerIDUtilityFunctions::UWrestlerIDUtilityFunctions() {
-}
 

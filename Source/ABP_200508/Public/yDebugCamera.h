@@ -17,7 +17,8 @@ private:
     APlayerController* m_pcController;
     
 public:
-    AyDebugCamera();
+    AyDebugCamera(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void TakeScreenShot();
     

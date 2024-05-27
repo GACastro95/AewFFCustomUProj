@@ -25,7 +25,8 @@ protected:
     int32 filterId;
     
 public:
-    AELSSLocator();
+    AELSSLocator(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSortOrder() const;
     

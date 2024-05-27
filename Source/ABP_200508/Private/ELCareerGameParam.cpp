@@ -1,5 +1,50 @@
 #include "ELCareerGameParam.h"
 
+UELCareerGameParam::UELCareerGameParam() {
+    this->m_Condition = 100;
+    this->m_Motivation = 2;
+    this->m_SkillPoint = 0;
+    this->m_CareerMoney = 0;
+    this->m_PlayerWrestlerID = EWrestlerID_N::None;
+    this->m_PlayerEditWrestlerPersonality = EPersonalityType::Hero;
+    this->m_sPresetNo = 0;
+    this->m_PartnerID = EWrestlerID_N::None;
+    this->m_RivalID = EWrestlerID_N::ChuckTaylor;
+    this->m_DateID = EWrestlerID_N::HikaruShida;
+    this->m_CareerModeDifficulty = ECareerModeDifficulty::Easy;
+    this->m_bVegetarian = false;
+    this->m_bDispSubtitles = true;
+    this->m_bInjury = false;
+    this->m_MomentumUpRate = 100.00f;
+    this->m_SkillPointUpRate = 100.00f;
+    this->m_ParameterSkillState.AddDefaulted(21);
+    this->m_ActionSkillState.AddDefaulted(22);
+    this->m_PassiveSkillState.AddDefaulted(37);
+    this->m_PostCommandEventList.AddDefaulted(16);
+    this->m_PostCommandEventType = ECareerPostCommandEventType::NONE;
+    this->m_PostCommandEventResult = ECareerMenuActionLotteryResult::NONE;
+    this->m_ChoicesSelectionInfo.AddDefaulted(21);
+    this->m_bPlayDarkMatch = false;
+    this->m_Scenario = ECareerScenario::Prologue;
+    this->m_CurrentWeek = 0;
+    this->m_CurrentTurn = 0;
+    this->m_MaxTurn = 0;
+    this->m_TotalScenarioTurn = 0;
+    this->m_MatchVenue = ECareerCity::None;
+    this->m_bUseTurnEnding = false;
+    this->m_MainMatchResult.AddDefaulted(19);
+    this->m_SpecialRewardParams.AddDefaulted(17);
+    this->m_bOuting = false;
+    this->m_MenuActionSelectedFlag = 0;
+    this->m_pCareerMyRosterData = NULL;
+    this->m_pCareerMyScoutData = NULL;
+    this->m_bInitLoaded = false;
+    this->m_ClearCountWrestler.AddDefaulted(128);
+    this->m_TutorialUseFlag.AddDefaulted(128);
+    this->m_AutoPlayManager = NULL;
+    this->m_AutoEventManager = NULL;
+}
+
 void UELCareerGameParam::SetWinnerWrestler(EWrestlerID_N eWrestlerID) {
 }
 
@@ -627,48 +672,4 @@ void UELCareerGameParam::AddDarkMatchStoryCard(FCareerStoryCard _StoryCardInfo) 
 void UELCareerGameParam::AddDarkMatchCardInfo(FCareerMatchCardCore _MatchCardInfo) {
 }
 
-UELCareerGameParam::UELCareerGameParam() {
-    this->m_Condition = 100;
-    this->m_Motivation = 2;
-    this->m_SkillPoint = 0;
-    this->m_CareerMoney = 0;
-    this->m_PlayerWrestlerID = EWrestlerID_N::None;
-    this->m_PlayerEditWrestlerPersonality = EPersonalityType::Hero;
-    this->m_sPresetNo = 0;
-    this->m_PartnerID = EWrestlerID_N::None;
-    this->m_RivalID = EWrestlerID_N::ChuckTaylor;
-    this->m_DateID = EWrestlerID_N::HikaruShida;
-    this->m_CareerModeDifficulty = ECareerModeDifficulty::Easy;
-    this->m_bVegetarian = false;
-    this->m_bDispSubtitles = true;
-    this->m_bInjury = false;
-    this->m_MomentumUpRate = 100.00f;
-    this->m_SkillPointUpRate = 100.00f;
-    this->m_ParameterSkillState.AddDefaulted(21);
-    this->m_ActionSkillState.AddDefaulted(22);
-    this->m_PassiveSkillState.AddDefaulted(37);
-    this->m_PostCommandEventList.AddDefaulted(16);
-    this->m_PostCommandEventType = ECareerPostCommandEventType::NONE;
-    this->m_PostCommandEventResult = ECareerMenuActionLotteryResult::NONE;
-    this->m_ChoicesSelectionInfo.AddDefaulted(21);
-    this->m_bPlayDarkMatch = false;
-    this->m_Scenario = ECareerScenario::Prologue;
-    this->m_CurrentWeek = 0;
-    this->m_CurrentTurn = 0;
-    this->m_MaxTurn = 0;
-    this->m_TotalScenarioTurn = 0;
-    this->m_MatchVenue = ECareerCity::None;
-    this->m_bUseTurnEnding = false;
-    this->m_MainMatchResult.AddDefaulted(19);
-    this->m_SpecialRewardParams.AddDefaulted(17);
-    this->m_bOuting = false;
-    this->m_MenuActionSelectedFlag = 0;
-    this->m_pCareerMyRosterData = NULL;
-    this->m_pCareerMyScoutData = NULL;
-    this->m_bInitLoaded = false;
-    this->m_ClearCountWrestler.AddDefaulted(128);
-    this->m_TutorialUseFlag.AddDefaulted(128);
-    this->m_AutoPlayManager = NULL;
-    this->m_AutoEventManager = NULL;
-}
 

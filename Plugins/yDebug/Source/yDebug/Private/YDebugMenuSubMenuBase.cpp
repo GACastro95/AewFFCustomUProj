@@ -1,5 +1,8 @@
 #include "YDebugMenuSubMenuBase.h"
 
+UYDebugMenuSubMenuBase::UYDebugMenuSubMenuBase() {
+}
+
 bool UYDebugMenuSubMenuBase::UpdateSimpleMenuUIRecursive(const FYDebugMenuSimpleUIParam& _rstSubRootMenu, const FString& _strRegistKey) {
     return false;
 }
@@ -47,6 +50,4 @@ bool UYDebugMenuSubMenuBase::AddSubMenu(UYDebugMenuSubMenuBase* _pcSubMenu, cons
     return false;
 }
 
-UYDebugMenuSubMenuBase::UYDebugMenuSubMenuBase() {
-}
 

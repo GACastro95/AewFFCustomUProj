@@ -18,7 +18,8 @@ protected:
     USceneComponent* OwnerRoot;
     
 public:
-    UELCharacterComponent();
+    UELCharacterComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     ACharacter* GetOwnerAsCharacter();
     

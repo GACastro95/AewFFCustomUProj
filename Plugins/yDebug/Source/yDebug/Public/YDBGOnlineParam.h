@@ -10,6 +10,7 @@ class YDEBUG_API UYDBGOnlineParam : public UObject {
     GENERATED_BODY()
 public:
     UYDBGOnlineParam();
+
     UFUNCTION(BlueprintCallable)
     bool Setup(const FString& _strSettingFileName);
     

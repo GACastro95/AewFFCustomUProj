@@ -3,7 +3,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "XeSSSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class XESSPLUGIN_API UXeSSSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -14,5 +14,6 @@ public:
     FString DebugDataDumpPath;
     
     UXeSSSettings();
+
 };
 

@@ -1,5 +1,8 @@
 #include "ELNetworkFunctionLibrary.h"
 
+UELNetworkFunctionLibrary::UELNetworkFunctionLibrary() {
+}
+
 bool UELNetworkFunctionLibrary::Switch_TestNetworkServiceAccountAvailable() {
     return false;
 }
@@ -32,6 +35,4 @@ UELReplicationManager* UELNetworkFunctionLibrary::GetELReplicationManager(const 
     return NULL;
 }
 
-UELNetworkFunctionLibrary::UELNetworkFunctionLibrary() {
-}
 

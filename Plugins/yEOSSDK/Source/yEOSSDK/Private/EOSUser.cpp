@@ -1,5 +1,10 @@
 #include "EOSUser.h"
 
+UEOSUser::UEOSUser() {
+    this->m_pcFriends = NULL;
+    this->m_pcPresence = NULL;
+}
+
 bool UEOSUser::RequestSetPresenceStatus(EEOSPresenceStatus _enStatus) {
     return false;
 }
@@ -43,8 +48,4 @@ UEOSFriend* UEOSUser::GetEOSFriend() {
     return NULL;
 }
 
-UEOSUser::UEOSUser() {
-    this->m_pcFriends = NULL;
-    this->m_pcPresence = NULL;
-}
 

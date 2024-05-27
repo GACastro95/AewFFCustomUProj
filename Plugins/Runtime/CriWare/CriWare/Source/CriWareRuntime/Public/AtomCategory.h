@@ -9,6 +9,7 @@ class CRIWARERUNTIME_API UAtomCategory : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAtomCategory();
+
     UFUNCTION(BlueprintCallable)
     static void StopByName(const FString& CategoryName);
     

@@ -17,6 +17,7 @@ protected:
     
 public:
     UELSSWidgetHUD_OnlineIDContainer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

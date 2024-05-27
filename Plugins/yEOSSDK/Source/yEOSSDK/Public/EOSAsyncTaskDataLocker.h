@@ -16,6 +16,7 @@ private:
     
 public:
     UEOSAsyncTaskDataLocker();
+
     UFUNCTION(BlueprintCallable)
     static UEOSAsyncTaskDataLocker* CreateAsyncTaskLocker(UEOSAsyncTask* _pcTask);
     

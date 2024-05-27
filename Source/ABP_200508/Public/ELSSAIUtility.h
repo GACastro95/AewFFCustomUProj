@@ -16,6 +16,7 @@ class ABP_200508_API UELSSAIUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSAIUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void UpdateFgfAI(const UObject* WorldContextObject);
     

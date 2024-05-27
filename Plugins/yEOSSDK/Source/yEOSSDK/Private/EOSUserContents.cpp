@@ -1,5 +1,8 @@
 #include "EOSUserContents.h"
 
+UEOSUserContents::UEOSUserContents() {
+}
+
 void UEOSUserContents::SetRequestWriteBytes(int32 _sRequestWriteBytes) {
 }
 
@@ -27,6 +30,4 @@ bool UEOSUserContents::ClearUploadProgress(const FString& _strFileName) {
     return false;
 }
 
-UEOSUserContents::UEOSUserContents() {
-}
 

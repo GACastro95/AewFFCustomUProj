@@ -1,5 +1,9 @@
 #include "GameLiftObjectBase.h"
 
+UGameLiftObjectBase::UGameLiftObjectBase() {
+    this->LastTitleStorageEvent = EEOSTitleStorageEvent::GetFileList;
+}
+
 void UGameLiftObjectBase::UpdateTargetRegionLatencyData() {
 }
 
@@ -33,7 +37,4 @@ bool UGameLiftObjectBase::IsDownloadingSSModeServiceParam() const {
     return false;
 }
 
-UGameLiftObjectBase::UGameLiftObjectBase() {
-    this->LastTitleStorageEvent = EEOSTitleStorageEvent::GetFileList;
-}
 

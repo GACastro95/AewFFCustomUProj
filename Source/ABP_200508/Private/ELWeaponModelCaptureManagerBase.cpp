@@ -1,12 +1,13 @@
 #include "ELWeaponModelCaptureManagerBase.h"
 
-
-
-
-
-
-
-
-AELWeaponModelCaptureManagerBase::AELWeaponModelCaptureManagerBase() {
+AELWeaponModelCaptureManagerBase::AELWeaponModelCaptureManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
+
+
+
+
+
 

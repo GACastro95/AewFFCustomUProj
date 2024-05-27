@@ -1,5 +1,8 @@
 #include "ELLadderMatchMiniGameHUDBase.h"
 
+UELLadderMatchMiniGameHUDBase::UELLadderMatchMiniGameHUDBase() {
+}
+
 
 
 
@@ -20,6 +23,4 @@ void UELLadderMatchMiniGameHUDBase::CallSucceedEvent() {
 void UELLadderMatchMiniGameHUDBase::CallFailedEvent() {
 }
 
-UELLadderMatchMiniGameHUDBase::UELLadderMatchMiniGameHUDBase() {
-}
 

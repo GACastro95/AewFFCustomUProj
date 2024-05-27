@@ -28,6 +28,7 @@ protected:
     
 public:
     UELSSOnlineTestAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetEnableDirectionSlot(bool inEnable);
     

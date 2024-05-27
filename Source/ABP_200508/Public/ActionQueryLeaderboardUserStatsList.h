@@ -35,6 +35,7 @@ public:
     TArray<UELLeaderboardUserStats*> Results;
     
     UActionQueryLeaderboardUserStatsList();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UActionQueryLeaderboardUserStatsList* ActionQueryLeaderboardUserStatsList(UObject* NewWorldContextObject, const TArray<FELLeaderboardUserData>& NewUserData, bool NewBForce);
     

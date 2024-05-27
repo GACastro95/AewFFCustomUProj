@@ -1,5 +1,8 @@
 #include "ELCareerStoryCardLottery.h"
 
+AELCareerStoryCardLottery::AELCareerStoryCardLottery(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELCareerStoryCardLottery::Lottery(ECareerStoryTiming timing) {
 }
 
@@ -70,6 +73,4 @@ void AELCareerStoryCardLottery::Add_StoryCard_RowData_Command(FCareerStoryCard _
 void AELCareerStoryCardLottery::Add_StoryCard_RowData(FCareerStoryCard _Data) {
 }
 
-AELCareerStoryCardLottery::AELCareerStoryCardLottery() {
-}
 

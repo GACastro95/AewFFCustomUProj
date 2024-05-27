@@ -1,5 +1,9 @@
 #include "GameLiftMatchMakeSystem.h"
 
+UGameLiftMatchMakeSystem::UGameLiftMatchMakeSystem() {
+    this->SelectedWrestlerID = EWrestlerID_N::KennyOmega;
+}
+
 void UGameLiftMatchMakeSystem::Update(const float& Delta) {
 }
 
@@ -101,7 +105,4 @@ bool UGameLiftMatchMakeSystem::ActivateMatchMakeAPI(UGLAPI_Base* Api) {
     return false;
 }
 
-UGameLiftMatchMakeSystem::UGameLiftMatchMakeSystem() {
-    this->SelectedWrestlerID = EWrestlerID_N::KennyOmega;
-}
 

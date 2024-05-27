@@ -1,5 +1,8 @@
 #include "ELOSSLocalPlayer.h"
 
+UELOSSLocalPlayer::UELOSSLocalPlayer() {
+}
+
 void UELOSSLocalPlayer::UnlockOSSAchievement(const FName AchievementName) {
 }
 
@@ -140,6 +143,4 @@ void UELOSSLocalPlayer::AsyncHasCanPlayOnlinePrivilege(const FOnCanPlayOnlinePri
 void UELOSSLocalPlayer::AsyncHasCanCommunicateOnlinePrivilege(const FOnCanPlayOnlinePrivilege& OnCanCommunicateOnlinePrivilege) {
 }
 
-UELOSSLocalPlayer::UELOSSLocalPlayer() {
-}
 

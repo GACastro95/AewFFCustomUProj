@@ -86,6 +86,7 @@ protected:
     
 public:
     UELSSWidgetHUD_AttentionGauge();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateAttentionValue(float InDeltaTime);

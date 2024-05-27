@@ -29,6 +29,7 @@ protected:
     
 public:
     UTemplateScoutAsset();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FGuid GetUID() const;
     

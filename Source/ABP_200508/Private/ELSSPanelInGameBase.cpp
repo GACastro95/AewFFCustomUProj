@@ -1,5 +1,34 @@
 #include "ELSSPanelInGameBase.h"
 
+UELSSPanelInGameBase::UELSSPanelInGameBase() {
+    this->AbilityContainer = NULL;
+    this->CharacterHpgaugeContainer = NULL;
+    this->MemberIconContainer = NULL;
+    this->OnlineIDContainer = NULL;
+    this->InteractPointContainer = NULL;
+    this->AttentionGauge = NULL;
+    this->AreaCountDown = NULL;
+    this->WrestlerStatus = NULL;
+    this->HeatMeater = NULL;
+    this->MiniMap = NULL;
+    this->Inventory = NULL;
+    this->OperationGuide = NULL;
+    this->LogSet = NULL;
+    this->Interact = NULL;
+    this->SSSkillNotice = NULL;
+    this->SpectateWindow = NULL;
+    this->Spectators = NULL;
+    this->VehicleStatus = NULL;
+    this->PlayInAnim = NULL;
+    this->PlayInAnimationElapsed = 0.00f;
+    this->IsPlayingPlayInAnimation = false;
+    this->JewelList = NULL;
+    this->JewelRadar = NULL;
+    this->GuideIconContainer = NULL;
+    this->RespawnCount = NULL;
+    this->FGFScoreboard = NULL;
+}
+
 
 void UELSSPanelInGameBase::UpdateKeyConfig() {
 }
@@ -313,32 +342,4 @@ void UELSSPanelInGameBase::AddMultiColorLogMessage(const TArray<FSSLogTextParam>
 void UELSSPanelInGameBase::AddMessage(const FString& InNewItem, ESSLogIconType InIconType) {
 }
 
-UELSSPanelInGameBase::UELSSPanelInGameBase() {
-    this->AbilityContainer = NULL;
-    this->CharacterHpgaugeContainer = NULL;
-    this->MemberIconContainer = NULL;
-    this->OnlineIDContainer = NULL;
-    this->InteractPointContainer = NULL;
-    this->AttentionGauge = NULL;
-    this->AreaCountDown = NULL;
-    this->WrestlerStatus = NULL;
-    this->HeatMeater = NULL;
-    this->MiniMap = NULL;
-    this->Inventory = NULL;
-    this->OperationGuide = NULL;
-    this->LogSet = NULL;
-    this->Interact = NULL;
-    this->SSSkillNotice = NULL;
-    this->SpectateWindow = NULL;
-    this->Spectators = NULL;
-    this->VehicleStatus = NULL;
-    this->PlayInAnim = NULL;
-    this->PlayInAnimationElapsed = 0.00f;
-    this->IsPlayingPlayInAnimation = false;
-    this->JewelList = NULL;
-    this->JewelRadar = NULL;
-    this->GuideIconContainer = NULL;
-    this->RespawnCount = NULL;
-    this->FGFScoreboard = NULL;
-}
 

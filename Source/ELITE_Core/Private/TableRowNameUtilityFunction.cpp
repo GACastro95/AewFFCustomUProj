@@ -1,5 +1,8 @@
 #include "TableRowNameUtilityFunction.h"
 
+UTableRowNameUtilityFunction::UTableRowNameUtilityFunction() {
+}
+
 FTableRowName UTableRowNameUtilityFunction::ToTableRowName(const FName& RowName) {
     return FTableRowName{};
 }
@@ -19,6 +22,4 @@ bool UTableRowNameUtilityFunction::IsEqual_FName(const FTableRowName& TableRowNa
 void UTableRowNameUtilityFunction::ConvertToNameSet(const TSet<FTableRowName>& TableRowNameSet, TSet<FName>& NameSet) {
 }
 
-UTableRowNameUtilityFunction::UTableRowNameUtilityFunction() {
-}
 

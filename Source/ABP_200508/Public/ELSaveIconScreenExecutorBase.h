@@ -8,6 +8,7 @@ class ABP_200508_API UELSaveIconScreenExecutorBase : public USingletonBase {
     GENERATED_BODY()
 public:
     UELSaveIconScreenExecutorBase();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnStartScreen();
     

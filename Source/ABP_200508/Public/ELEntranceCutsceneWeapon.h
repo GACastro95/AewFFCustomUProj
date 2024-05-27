@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool VanishedWhenNonDefaultEntrance;
     
-    AELEntranceCutsceneWeapon();
+    AELEntranceCutsceneWeapon(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -1,5 +1,9 @@
 #include "ELCareerSnapshotMenuWidgetBase.h"
 
+UELCareerSnapshotMenuWidgetBase::UELCareerSnapshotMenuWidgetBase() {
+    this->DeleteMode = false;
+}
+
 
 
 void UELCareerSnapshotMenuWidgetBase::SetDeleteModeOnce() {
@@ -26,7 +30,4 @@ void UELCareerSnapshotMenuWidgetBase::CreateSnapshots(TArray<UCareerSnapshot*>& 
 void UELCareerSnapshotMenuWidgetBase::CallMoveCursor(int32 AddValue, bool IsEnabledLoop) {
 }
 
-UELCareerSnapshotMenuWidgetBase::UELCareerSnapshotMenuWidgetBase() {
-    this->DeleteMode = false;
-}
 

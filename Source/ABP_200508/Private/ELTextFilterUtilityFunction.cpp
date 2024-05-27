@@ -1,5 +1,8 @@
 #include "ELTextFilterUtilityFunction.h"
 
+UELTextFilterUtilityFunction::UELTextFilterUtilityFunction() {
+}
+
 bool UELTextFilterUtilityFunction::TextFilterSteam(int32 _FilterCategory, const FString& _SrcText, FString& _DstText, const FString& ExternalAccountId) {
     return false;
 }
@@ -12,6 +15,4 @@ bool UELTextFilterUtilityFunction::TextFilter(const FString& SrcText, const FOnS
     return false;
 }
 
-UELTextFilterUtilityFunction::UELTextFilterUtilityFunction() {
-}
 

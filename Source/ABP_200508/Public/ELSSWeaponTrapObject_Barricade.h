@@ -41,9 +41,10 @@ protected:
     float LifeSpanAfterBroken;
     
 public:
-    AELSSWeaponTrapObject_Barricade();
+    AELSSWeaponTrapObject_Barricade(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable)
     void TakeDamage_Imple(int32 Damage, const FSSDamageEvent& SSDamageEvent, AActor* DamageCauser);

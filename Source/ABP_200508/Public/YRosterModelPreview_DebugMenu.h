@@ -8,6 +8,7 @@ class ABP_200508_API UYRosterModelPreview_DebugMenu : public UELDebugMenuRootBas
     GENERATED_BODY()
 public:
     UYRosterModelPreview_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetStartRosterModelPreviewLevel(bool _bStart);
     

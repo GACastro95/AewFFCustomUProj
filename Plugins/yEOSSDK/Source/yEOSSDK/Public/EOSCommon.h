@@ -8,6 +8,7 @@ class YEOSSDK_API UEOSCommon : public UObject {
     GENERATED_BODY()
 public:
     UEOSCommon();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetLastResult() const;
     

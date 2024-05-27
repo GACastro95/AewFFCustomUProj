@@ -19,6 +19,7 @@ protected:
     
 public:
     UELNatP2PRPCPacket();
+
 protected:
     UFUNCTION(BlueprintCallable)
     bool SendPacketBuffer(const TArray<uint8>& Buffer, EEOSPacketReliability Reliability);

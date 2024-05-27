@@ -1,5 +1,6 @@
 #include "ELSSStormFinalLocator.h"
 
-AELSSStormFinalLocator::AELSSStormFinalLocator() {
+AELSSStormFinalLocator::AELSSStormFinalLocator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

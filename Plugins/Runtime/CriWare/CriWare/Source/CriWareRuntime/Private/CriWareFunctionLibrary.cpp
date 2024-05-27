@@ -1,5 +1,8 @@
 #include "CriWareFunctionLibrary.h"
 
+UCriWareFunctionLibrary::UCriWareFunctionLibrary() {
+}
+
 void UCriWareFunctionLibrary::SetSpeakerAngleArray(ECriWareSpeakerSystem SpeakerSystem, const TArray<float>& Angles) {
 }
 
@@ -13,6 +16,4 @@ TArray<USoundAtomCue*> UCriWareFunctionLibrary::SearchAtomCuesInAssetRegistry(co
     return TArray<USoundAtomCue*>();
 }
 
-UCriWareFunctionLibrary::UCriWareFunctionLibrary() {
-}
 

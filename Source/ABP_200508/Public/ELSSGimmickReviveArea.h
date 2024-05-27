@@ -33,7 +33,8 @@ protected:
     bool isAnyOverlap;
     
 public:
-    AELSSGimmickReviveArea();
+    AELSSGimmickReviveArea(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateRiveArea(bool NewIsAnyOverlap);
     

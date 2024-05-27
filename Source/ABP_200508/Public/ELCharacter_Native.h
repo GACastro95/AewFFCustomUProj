@@ -1570,9 +1570,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> AsyncLoadObjectList;
     
-    AELCharacter_Native();
+    AELCharacter_Native(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void VanishWeapon_Impl();
@@ -2563,6 +2564,9 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExplodingOvertheTopRopeMotion_N() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    bool IsExceptionDownMotion_Impl() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnvGroggy_N() const;

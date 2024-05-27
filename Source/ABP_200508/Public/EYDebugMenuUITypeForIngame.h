@@ -32,5 +32,6 @@ enum class EYDebugMenuUITypeForIngame : uint8 {
     RosterModelPreview,
     Credit,
     StadiumStampede,
+    Store,
 };
 

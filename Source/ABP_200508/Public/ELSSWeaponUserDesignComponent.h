@@ -32,6 +32,7 @@ protected:
     USkeletalMeshComponent* TargetSkeletalMeshComponent;
     
 public:
-    UELSSWeaponUserDesignComponent();
+    UELSSWeaponUserDesignComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

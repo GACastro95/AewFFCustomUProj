@@ -12,7 +12,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInGameMovesPreviewMenu* PreviewMenu;
     
-    AInGameMovesPreviewManager();
+    AInGameMovesPreviewManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SortMontageKeyArray(UPARAM(Ref) TArray<FString>& OutKeys);
     

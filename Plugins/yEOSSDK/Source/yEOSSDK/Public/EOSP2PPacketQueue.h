@@ -8,5 +8,6 @@ class YEOSSDK_API UEOSP2PPacketQueue : public UObject {
     GENERATED_BODY()
 public:
     UEOSP2PPacketQueue();
+
 };
 

@@ -15,7 +15,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FyMenuInputParam DefaultMenuInputParam;
     
-    UELInGameMenuInputEventBase();
+    UELInGameMenuInputEventBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void InputEvent_AnyKey(TEnumAsByte<EInputEvent> KeyEvent);

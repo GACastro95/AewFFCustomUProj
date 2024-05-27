@@ -14,5 +14,6 @@ public:
     bool EnableCategoryCueLimitScope;
     
     UAtomSoundObject();
+
 };
 

@@ -1,5 +1,8 @@
 #include "SortPluginBPLibrary.h"
 
+USortPluginBPLibrary::USortPluginBPLibrary() {
+}
+
 TSet<FVector> USortPluginBPLibrary::ToVectorSet(const TArray<FVector>& Array) {
     return TSet<FVector>();
 }
@@ -292,6 +295,4 @@ float USortPluginBPLibrary::AverageFloat(const TArray<float>& Array) {
     return 0.0f;
 }
 
-USortPluginBPLibrary::USortPluginBPLibrary() {
-}
 

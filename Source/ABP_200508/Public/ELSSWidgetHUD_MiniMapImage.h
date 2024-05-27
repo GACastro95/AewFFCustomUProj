@@ -22,6 +22,7 @@ protected:
     
 public:
     UELSSWidgetHUD_MiniMapImage();
+
     UFUNCTION(BlueprintCallable)
     bool SetMapTexture(int32 InMapIndex);
     

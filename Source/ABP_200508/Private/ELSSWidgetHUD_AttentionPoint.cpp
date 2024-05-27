@@ -1,5 +1,14 @@
 #include "ELSSWidgetHUD_AttentionPoint.h"
 
+UELSSWidgetHUD_AttentionPoint::UELSSWidgetHUD_AttentionPoint() {
+    this->PlayInAnim = NULL;
+    this->PlayOutAnim = NULL;
+    this->FontPoint = NULL;
+    this->HorizonalBox = NULL;
+    this->ShowAttentionPointTime = 0.00f;
+    this->IsDoneStartPlayOutPoint = false;
+}
+
 void UELSSWidgetHUD_AttentionPoint::Update(float InDeltaTime) {
 }
 
@@ -32,12 +41,4 @@ FString UELSSWidgetHUD_AttentionPoint::GetActText(ESSAttentionReason InActType) 
     return TEXT("");
 }
 
-UELSSWidgetHUD_AttentionPoint::UELSSWidgetHUD_AttentionPoint() {
-    this->PlayInAnim = NULL;
-    this->PlayOutAnim = NULL;
-    this->FontPoint = NULL;
-    this->HorizonalBox = NULL;
-    this->ShowAttentionPointTime = 0.00f;
-    this->IsDoneStartPlayOutPoint = false;
-}
 

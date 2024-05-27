@@ -64,7 +64,8 @@ protected:
     TMap<FName, ULevelStreaming*> SubLevels;
     
 public:
-    AELSSMainMenuSubLevelManager();
+    AELSSMainMenuSubLevelManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestChangeLevel(ESSMainMenuSubLevelSituation inSituation);
     

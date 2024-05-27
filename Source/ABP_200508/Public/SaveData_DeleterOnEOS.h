@@ -13,6 +13,7 @@ class ABP_200508_API USaveData_DeleterOnEOS : public USaveData_DeleterBase {
     GENERATED_BODY()
 public:
     USaveData_DeleterOnEOS();
+
     UFUNCTION(BlueprintCallable)
     bool SetupEOS(UEOSUserContents* _pcEOSUserContents);
     

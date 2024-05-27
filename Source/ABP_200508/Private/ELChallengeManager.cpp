@@ -1,5 +1,10 @@
 #include "ELChallengeManager.h"
 
+UELChallengeManager::UELChallengeManager() {
+    this->m_ChallengeRecordDataList.AddDefaulted(3);
+    this->m_pPlayerData = NULL;
+}
+
 void UELChallengeManager::StopChallengeRecordMonitor() {
 }
 
@@ -77,8 +82,4 @@ void UELChallengeManager::CheckChallengeExpirationDate() {
 void UELChallengeManager::AcquiredChallengeReward(UObject* _pWorldContextObject, int32 _targetId) {
 }
 
-UELChallengeManager::UELChallengeManager() {
-    this->m_ChallengeRecordDataList.AddDefaulted(3);
-    this->m_pPlayerData = NULL;
-}
 

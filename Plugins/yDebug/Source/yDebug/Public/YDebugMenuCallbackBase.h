@@ -25,6 +25,7 @@ public:
     FYDebugMenuCallbackDispatcher OnUIValueChangedDispatcher;
     
     UYDebugMenuCallbackBase();
+
     UFUNCTION(BlueprintCallable)
     void OnUIValueChanged_Direct(const FYDebugMenuSimpleUIParamBase& UIParam, const FString& RegistKey);
     

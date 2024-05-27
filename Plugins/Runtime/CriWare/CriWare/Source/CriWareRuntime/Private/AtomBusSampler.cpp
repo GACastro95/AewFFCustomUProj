@@ -1,5 +1,8 @@
 #include "AtomBusSampler.h"
 
+UAtomBusSampler::UAtomBusSampler() {
+}
+
 void UAtomBusSampler::StopRecordedSoundWithoutReleaseTime() {
 }
 
@@ -44,6 +47,4 @@ bool UAtomBusSampler::CanPlayRecordedSound() const {
     return false;
 }
 
-UAtomBusSampler::UAtomBusSampler() {
-}
 

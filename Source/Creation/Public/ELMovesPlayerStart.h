@@ -21,6 +21,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator WeaponRotatorOffset;
     
-    AELMovesPlayerStart();
+    AELMovesPlayerStart(const FObjectInitializer& ObjectInitializer);
+
 };
 

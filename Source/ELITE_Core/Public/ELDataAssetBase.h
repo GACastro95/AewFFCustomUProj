@@ -8,5 +8,6 @@ class ELITE_CORE_API UELDataAssetBase : public UPrimaryDataAsset {
     GENERATED_BODY()
 public:
     UELDataAssetBase();
+
 };
 

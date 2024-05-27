@@ -21,6 +21,7 @@ private:
     
 public:
     UCareerSnapshotTitleItem();
+
     UFUNCTION(BlueprintCallable)
     void RemoveSnapshot(UCareerSnapshot* Snapshot);
     

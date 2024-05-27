@@ -38,6 +38,7 @@ protected:
     
 public:
     UEOSUserBase();
+
     UFUNCTION(BlueprintCallable)
     void SetExternalPlatformType(EExternalAccountType _sExternalPlatformType);
     

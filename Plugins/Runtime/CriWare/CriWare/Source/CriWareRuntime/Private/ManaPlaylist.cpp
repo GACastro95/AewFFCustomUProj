@@ -1,5 +1,11 @@
 #include "ManaPlaylist.h"
 
+UManaPlaylist::UManaPlaylist() {
+    this->bIsAlpha = false;
+    this->bIsMixedTypes = false;
+    this->bIsSeamless = false;
+}
+
 void UManaPlaylist::RemoveAt(int32 Index) {
 }
 
@@ -44,9 +50,4 @@ UManaMovie* UManaPlaylist::Get(int32 Index) {
 void UManaPlaylist::Add(UManaMovie* ManaMovie) {
 }
 
-UManaPlaylist::UManaPlaylist() {
-    this->bIsAlpha = false;
-    this->bIsMixedTypes = false;
-    this->bIsSeamless = false;
-}
 

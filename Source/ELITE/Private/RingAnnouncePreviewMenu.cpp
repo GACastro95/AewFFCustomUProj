@@ -1,9 +1,6 @@
 #include "RingAnnouncePreviewMenu.h"
 
-void ARingAnnouncePreviewMenu::ChangeNextState() {
-}
-
-ARingAnnouncePreviewMenu::ARingAnnouncePreviewMenu() {
+ARingAnnouncePreviewMenu::ARingAnnouncePreviewMenu(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RA_SceneData = ERA_SceneData_Type::Loading;
     this->RA_Slot_MatchRule = ERA_Slot_MatchRule::RA_MR_1V1;
     this->RA_Slot_Championship = ERA_Slot_Championship::RA_CHAMPIONSHIP_NONE;
@@ -15,4 +12,8 @@ ARingAnnouncePreviewMenu::ARingAnnouncePreviewMenu() {
     this->RA_Slot_TeamName = ERA_Slot_TeamName::RA_TN_NONE;
     this->AutoPlay = false;
 }
+
+void ARingAnnouncePreviewMenu::ChangeNextState() {
+}
+
 

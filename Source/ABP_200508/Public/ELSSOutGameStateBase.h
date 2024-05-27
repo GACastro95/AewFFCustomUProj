@@ -30,7 +30,8 @@ protected:
     AELSSMainMenuFlow* SSMainMenuFlow;
     
 public:
-    AELSSOutGameStateBase();
+    AELSSOutGameStateBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Exec)
     void SSLobbyStart();

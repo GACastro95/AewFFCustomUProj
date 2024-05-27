@@ -1,5 +1,24 @@
 #include "ELSSWidgetHUD_AttentionGauge.h"
 
+UELSSWidgetHUD_AttentionGauge::UELSSWidgetHUD_AttentionGauge() {
+    this->FeverEndAnim = NULL;
+    this->FeverStartAnim = NULL;
+    this->FeverLoopAnim = NULL;
+    this->BuffInAnim = NULL;
+    this->BuffOutAnim = NULL;
+    this->PtsVerticalBox = NULL;
+    this->IsCompleteDuration = true;
+    this->IsFeverTime = false;
+    this->IsBoostTextShow = false;
+    this->AttentionElapsed = 0.00f;
+    this->MaxAttentionValue = 0;
+    this->AttentionDuration = 0;
+    this->AttentionValue = 0;
+    this->IdealAttentionValue = 0;
+    this->StackIndex = 0;
+    this->BaseDigits = 0;
+}
+
 void UELSSWidgetHUD_AttentionGauge::UpdateAttentionValue(float InDeltaTime) {
 }
 
@@ -45,22 +64,4 @@ void UELSSWidgetHUD_AttentionGauge::ApplyAttentionPts(int32 InAttentionValue) {
 void UELSSWidgetHUD_AttentionGauge::ApplyAttentionBoostValue(float InAttentionBoostValue) {
 }
 
-UELSSWidgetHUD_AttentionGauge::UELSSWidgetHUD_AttentionGauge() {
-    this->FeverEndAnim = NULL;
-    this->FeverStartAnim = NULL;
-    this->FeverLoopAnim = NULL;
-    this->BuffInAnim = NULL;
-    this->BuffOutAnim = NULL;
-    this->PtsVerticalBox = NULL;
-    this->IsCompleteDuration = true;
-    this->IsFeverTime = false;
-    this->IsBoostTextShow = false;
-    this->AttentionElapsed = 0.00f;
-    this->MaxAttentionValue = 0;
-    this->AttentionDuration = 0;
-    this->AttentionValue = 0;
-    this->IdealAttentionValue = 0;
-    this->StackIndex = 0;
-    this->BaseDigits = 0;
-}
 

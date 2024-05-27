@@ -8,5 +8,6 @@ class ABP_200508_API UELSSAnimNotifyState_SyncRotate : public UELSSAnimNotifySta
     GENERATED_BODY()
 public:
     UELSSAnimNotifyState_SyncRotate();
+
 };
 

@@ -5,3 +5,4 @@ UEOSCommunitySearchRequest::UEOSCommunitySearchRequest() {
     this->m_pcSearchResultsBase = NULL;
 }
 
+

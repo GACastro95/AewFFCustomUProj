@@ -1,5 +1,8 @@
 #include "ELCareerEventBase.h"
 
+AELCareerEventBase::AELCareerEventBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 
 void AELCareerEventBase::SetWrestlerAnimation(FCareerEventActionInfo _Info) {
 }
@@ -69,6 +72,4 @@ void AELCareerEventBase::DebugAnimeSetting() {
 void AELCareerEventBase::ChangeCameraPosition(FCareerEventActionInfo _Info, int32 CameraSwitchIndex) {
 }
 
-AELCareerEventBase::AELCareerEventBase() {
-}
 

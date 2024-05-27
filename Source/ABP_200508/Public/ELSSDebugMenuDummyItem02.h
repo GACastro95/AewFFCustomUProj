@@ -8,5 +8,6 @@ class ABP_200508_API UELSSDebugMenuDummyItem02 : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UELSSDebugMenuDummyItem02();
+
 };
 

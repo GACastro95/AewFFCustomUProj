@@ -25,6 +25,7 @@ protected:
     
 public:
     UELMainMenuWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetEnableHoldOkPerController(int32 ControllerId, bool bEnable);

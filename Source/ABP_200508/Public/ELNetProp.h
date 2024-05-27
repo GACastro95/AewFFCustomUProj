@@ -30,7 +30,8 @@ protected:
     TArray<UAnimMontage*> MontageList_BlockPose_N;
     
 public:
-    AELNetProp();
+    AELNetProp(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetNetOwnerCharacter(AELNetCharacter* NewOwner);
     

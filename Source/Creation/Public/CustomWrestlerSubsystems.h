@@ -16,6 +16,7 @@ class CREATION_API UCustomWrestlerSubsystems : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UCustomWrestlerSubsystems();
+
     UFUNCTION(BlueprintCallable)
     void SetEditPartsListTableOnlyEditor(UDataTable* DataTable);
     

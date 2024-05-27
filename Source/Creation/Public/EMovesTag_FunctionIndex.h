@@ -15,6 +15,5 @@ enum class EMovesTag_FunctionIndex : uint8 {
     FC_Injury,
     FC_WeightDetection,
     FC_Etc,
-    FC_MAX UMETA(Hidden),
 };
 

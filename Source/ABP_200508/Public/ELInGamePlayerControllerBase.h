@@ -7,7 +7,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELInGamePlayerControllerBase : public AELNetPlayerController {
     GENERATED_BODY()
 public:
-    AELInGamePlayerControllerBase();
+    AELInGamePlayerControllerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnbindAcceptAction();
     

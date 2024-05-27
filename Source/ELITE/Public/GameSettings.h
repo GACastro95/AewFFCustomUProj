@@ -8,7 +8,7 @@
 #include "SaveDataAccessParam.h"
 #include "GameSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ELITE_API UGameSettings : public UELDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -22,6 +22,7 @@ public:
     TMap<ESaveDataType, FAdjustDlcSaveData> AdjustDlcSaveDataSetting;
     
     UGameSettings();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsValidSSmode();
     

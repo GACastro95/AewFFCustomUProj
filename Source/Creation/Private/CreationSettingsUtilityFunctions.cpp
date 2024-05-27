@@ -1,5 +1,8 @@
 #include "CreationSettingsUtilityFunctions.h"
 
+UCreationSettingsUtilityFunctions::UCreationSettingsUtilityFunctions() {
+}
+
 UDataTable* UCreationSettingsUtilityFunctions::GetVoiceTypeTable() {
     return NULL;
 }
@@ -36,6 +39,4 @@ UDataTable* UCreationSettingsUtilityFunctions::GetBodyTypeTable() {
     return NULL;
 }
 
-UCreationSettingsUtilityFunctions::UCreationSettingsUtilityFunctions() {
-}
 

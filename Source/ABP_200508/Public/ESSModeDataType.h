@@ -5,6 +5,5 @@
 UENUM(BlueprintType)
 enum class ESSModeDataType : uint8 {
     ESSModeDataType_UserData,
-    ESSModeDataType_MAX UMETA(Hidden),
 };
 

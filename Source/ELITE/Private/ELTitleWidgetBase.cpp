@@ -1,5 +1,9 @@
 #include "ELTitleWidgetBase.h"
 
+UELTitleWidgetBase::UELTitleWidgetBase() {
+    this->IsConverting_N = false;
+}
+
 bool UELTitleWidgetBase::StartConvertSaveData() {
     return false;
 }
@@ -28,7 +32,4 @@ void UELTitleWidgetBase::CallBack_EndDelete(ESaveDataAccessorEvent Event, USaveD
 void UELTitleWidgetBase::CallBack_EndConvert(ESaveDataAccessorEvent Event, USaveData_AccessorBase* SaveDataAccessor, ESaveDataProcResult Result) {
 }
 
-UELTitleWidgetBase::UELTitleWidgetBase() {
-    this->IsConverting_N = false;
-}
 

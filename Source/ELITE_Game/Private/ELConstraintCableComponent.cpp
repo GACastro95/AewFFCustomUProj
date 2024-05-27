@@ -1,5 +1,10 @@
 #include "ELConstraintCableComponent.h"
 
+UELConstraintCableComponent::UELConstraintCableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bCheckInsideOfMontageAnimNotifyState = false;
+    this->KeyNamePrefix = TEXT("#");
+}
+
 void UELConstraintCableComponent::UpdateConstraintLocation_Implementation(const FName SocketName, const FVector SocketLocation, const AActor* Actor, const bool bDirX) {
 }
 
@@ -23,8 +28,4 @@ void UELConstraintCableComponent::AutoConstraintFinish(UAnimMontage* Montage, bo
 void UELConstraintCableComponent::AllConstraint_Finish(UAnimSequenceBase* Animation) {
 }
 
-UELConstraintCableComponent::UELConstraintCableComponent() {
-    this->bCheckInsideOfMontageAnimNotifyState = false;
-    this->KeyNamePrefix = TEXT("#");
-}
 

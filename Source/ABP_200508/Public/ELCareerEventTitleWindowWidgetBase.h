@@ -8,6 +8,7 @@ class ABP_200508_API UELCareerEventTitleWindowWidgetBase : public UELCareerWidge
     GENERATED_BODY()
 public:
     UELCareerEventTitleWindowWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupText();
     

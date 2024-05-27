@@ -1,6 +1,12 @@
 #include "AtomEntranceVolume.h"
 #include "Net/UnrealNetwork.h"
 
+AAtomEntranceVolume::AAtomEntranceVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bColored = true;
+    this->Priority = 0.00f;
+    this->bEnabled = true;
+}
+
 void AAtomEntranceVolume::SetPriority(float NewPriority) {
 }
 
@@ -25,8 +31,4 @@ void AAtomEntranceVolume::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(AAtomEntranceVolume, NeighbourhoodAudioVolumeArray);
 }
 
-AAtomEntranceVolume::AAtomEntranceVolume() {
-    this->Priority = 0.00f;
-    this->bEnabled = true;
-}
 

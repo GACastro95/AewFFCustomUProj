@@ -1,5 +1,8 @@
 #include "YGS2Req_GetInfo.h"
 
+UYGS2Req_GetInfo::UYGS2Req_GetInfo() {
+}
+
 void UYGS2Req_GetInfo::SetAccountInfo(const FString& EpicAccountID, const FString& ProductUserID, const FString& EOSIDHash) {
 }
 
@@ -23,6 +26,4 @@ int32 UYGS2Req_GetInfo::GetPermission() const {
     return 0;
 }
 
-UYGS2Req_GetInfo::UYGS2Req_GetInfo() {
-}
 

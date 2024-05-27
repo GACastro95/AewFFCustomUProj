@@ -1,5 +1,9 @@
 #include "ELSSLocator_PlayerStart.h"
 
+AELSSLocator_PlayerStart::AELSSLocator_PlayerStart(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PlayerStartLocatorId = 0;
+}
+
 ESSPlayerStartLocatorType AELSSLocator_PlayerStart::GetPlayerStartLocatorType() const {
     return ESSPlayerStartLocatorType::P1;
 }
@@ -8,7 +12,4 @@ ESSPlayerStartLocatorAreaId AELSSLocator_PlayerStart::GetPlayerStartLocatorAreaI
     return ESSPlayerStartLocatorAreaId::Area_A;
 }
 
-AELSSLocator_PlayerStart::AELSSLocator_PlayerStart() {
-    this->PlayerStartLocatorId = 0;
-}
 

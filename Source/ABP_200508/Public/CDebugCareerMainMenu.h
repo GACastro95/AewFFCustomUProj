@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API ACDebugCareerMainMenu : public ACDebugCareerBase {
     GENERATED_BODY()
 public:
-    ACDebugCareerMainMenu();
+    ACDebugCareerMainMenu(const FObjectInitializer& ObjectInitializer);
+
 };
 

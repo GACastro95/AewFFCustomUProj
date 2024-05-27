@@ -22,6 +22,7 @@ public:
     FJIRAAccessorEventDispatcher JIRAAccessorEventDispatcher;
     
     UYJIRAAccessor();
+
     UFUNCTION(BlueprintCallable)
     void Setup(const FJIRASetupParam& _pstSetupParam);
     

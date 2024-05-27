@@ -1,5 +1,8 @@
 #include "FL_EditWrestlerUtilityFunctions.h"
 
+UFL_EditWrestlerUtilityFunctions::UFL_EditWrestlerUtilityFunctions() {
+}
+
 void UFL_EditWrestlerUtilityFunctions::UpdateCompatiable(FAttireData& AttireData, TSet<EEditPartsSlot>& ExcludeParts, const TSet<FName>& ExcludeCategories) {
 }
 
@@ -16,6 +19,4 @@ void UFL_EditWrestlerUtilityFunctions::Append_AttireParam(const FAttireParam& A,
 void UFL_EditWrestlerUtilityFunctions::Append_AttireData(const FAttireData& A, const FAttireData& B, FAttireData& Out) {
 }
 
-UFL_EditWrestlerUtilityFunctions::UFL_EditWrestlerUtilityFunctions() {
-}
 

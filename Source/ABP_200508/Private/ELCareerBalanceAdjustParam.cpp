@@ -1,5 +1,8 @@
 #include "ELCareerBalanceAdjustParam.h"
 
+AELCareerBalanceAdjustParam::AELCareerBalanceAdjustParam(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELCareerBalanceAdjustParam::SetDataTable_WorkOut_Reward_SuccessRate(UDataTable* pDataTable) {
 }
 
@@ -87,6 +90,4 @@ FName AELCareerBalanceAdjustParam::GetKey_Dining_Reward_Description(ECareerPostC
     return NAME_None;
 }
 
-AELCareerBalanceAdjustParam::AELCareerBalanceAdjustParam() {
-}
 

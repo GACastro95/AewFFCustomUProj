@@ -2,6 +2,63 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+AELSSGameState::AELSSGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PrevState = ESSGameFlowState::None;
+    this->GameServerError = ESSGameServerError::None;
+    this->bShouldShutdownGame = false;
+    this->bDoneShutdownNetDriver = false;
+    this->SSPlayerClass = NULL;
+    this->AIControllerClass = NULL;
+    this->LocationCheckOffsetZ_Top = 100;
+    this->LocationCheckOffsetZ_Bottom = -100;
+    this->AINpcIdCount = 0;
+    this->PreloadAssetInfoReplicator = NULL;
+    this->LocatorManagerType = NULL;
+    this->LocatorManager = NULL;
+    this->SoundManagerType = NULL;
+    this->SoundManager = NULL;
+    this->RoundManagerType = NULL;
+    this->RoundManager = NULL;
+    this->ItemManagerType = NULL;
+    this->ItemManager = NULL;
+    this->VehicleManagerType = NULL;
+    this->VehicleManager = NULL;
+    this->SSTeamStateClass = NULL;
+    this->SaveDataManager = NULL;
+    this->SaveDataManagerType = NULL;
+    this->SurvivorNum = 0;
+    this->SurvivorTeamNum = 0;
+    this->LastSurvivorIndex = -1;
+    this->ValidObjectTrapLimit = 15;
+    this->FadeManager = NULL;
+    this->TeamScoreUpdateInterval = 0.20f;
+    this->ReplicatedTeamNum = 0;
+    this->FgfManagerClass = NULL;
+    this->FgfManager = NULL;
+    this->DatabaseType = NULL;
+    this->Database = NULL;
+    this->PoolManager = NULL;
+    this->PoolableRegistTable = NULL;
+    this->OptimizeManager = NULL;
+    this->SSModeLobby = NULL;
+    this->BackUpCVarPoolSize = 0;
+    this->DesiredCVarPoolSize = 500;
+    this->SwicthDesiredCVarPoolSize = 400;
+    this->BackUpCVarMaxTempMemoryAllowed = 0;
+    this->DesiredCVarMaxTempMemoryAllowed = 128;
+    this->Activity_ExecPlayerState = NULL;
+    this->GameStateFlags = 0;
+    this->DebugFlags = 0;
+    this->DebugServerState = ESSServerState::None;
+    this->DebugServerLobbyState = eSSLobbyState::eSSLobbyState_None;
+    this->DebugLocalLobbyState = eSSLobbyState::eSSLobbyState_None;
+    this->DebugLocalLobbyStateBP = eSSLobbyState::eSSLobbyState_None;
+    this->DebugServerAverageFPS = 0.00f;
+    this->DebugServerMaxDeltaSec_Recently5sec = 0.00f;
+    this->DebugServerCrashRequestedTime = 0.00f;
+    this->bNoOpponents = false;
+}
+
 void AELSSGameState::UpdateSurvivorNum() {
 }
 
@@ -441,60 +498,4 @@ void AELSSGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AELSSGameState, bNoOpponents);
 }
 
-AELSSGameState::AELSSGameState() {
-    this->PrevState = ESSGameFlowState::None;
-    this->GameServerError = ESSGameServerError::None;
-    this->bShouldShutdownGame = false;
-    this->bDoneShutdownNetDriver = false;
-    this->SSPlayerClass = NULL;
-    this->AIControllerClass = NULL;
-    this->LocationCheckOffsetZ_Top = 100;
-    this->LocationCheckOffsetZ_Bottom = -100;
-    this->AINpcIdCount = 0;
-    this->PreloadAssetInfoReplicator = NULL;
-    this->LocatorManagerType = NULL;
-    this->LocatorManager = NULL;
-    this->SoundManagerType = NULL;
-    this->SoundManager = NULL;
-    this->RoundManagerType = NULL;
-    this->RoundManager = NULL;
-    this->ItemManagerType = NULL;
-    this->ItemManager = NULL;
-    this->VehicleManagerType = NULL;
-    this->VehicleManager = NULL;
-    this->SSTeamStateClass = NULL;
-    this->SaveDataManager = NULL;
-    this->SaveDataManagerType = NULL;
-    this->SurvivorNum = 0;
-    this->SurvivorTeamNum = 0;
-    this->LastSurvivorIndex = -1;
-    this->ValidObjectTrapLimit = 15;
-    this->FadeManager = NULL;
-    this->TeamScoreUpdateInterval = 0.20f;
-    this->ReplicatedTeamNum = 0;
-    this->FgfManagerClass = NULL;
-    this->FgfManager = NULL;
-    this->DatabaseType = NULL;
-    this->Database = NULL;
-    this->PoolManager = NULL;
-    this->PoolableRegistTable = NULL;
-    this->OptimizeManager = NULL;
-    this->SSModeLobby = NULL;
-    this->BackUpCVarPoolSize = 0;
-    this->DesiredCVarPoolSize = 500;
-    this->SwicthDesiredCVarPoolSize = 400;
-    this->BackUpCVarMaxTempMemoryAllowed = 0;
-    this->DesiredCVarMaxTempMemoryAllowed = 128;
-    this->Activity_ExecPlayerState = NULL;
-    this->GameStateFlags = 0;
-    this->DebugFlags = 0;
-    this->DebugServerState = ESSServerState::None;
-    this->DebugServerLobbyState = eSSLobbyState::eSSLobbyState_None;
-    this->DebugLocalLobbyState = eSSLobbyState::eSSLobbyState_None;
-    this->DebugLocalLobbyStateBP = eSSLobbyState::eSSLobbyState_None;
-    this->DebugServerAverageFPS = 0.00f;
-    this->DebugServerMaxDeltaSec_Recently5sec = 0.00f;
-    this->DebugServerCrashRequestedTime = 0.00f;
-    this->bNoOpponents = false;
-}
 

@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class ELobbyProcStatus : uint8 {
     STATUS_NONE,
     STATUS_PROCESSING,
-    STATUS_MAX UMETA(Hidden),
 };
 

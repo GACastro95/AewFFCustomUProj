@@ -51,7 +51,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsDebugStringsForDetailsVisible: 1;
     
-    UAtom3dSourceBaseComponent();
+    UAtom3dSourceBaseComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetRegion(UAtom3dRegion* InRegion);
     

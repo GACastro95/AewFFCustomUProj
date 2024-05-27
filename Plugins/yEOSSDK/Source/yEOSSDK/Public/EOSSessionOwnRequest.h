@@ -27,5 +27,6 @@ public:
     UEOSCommunityUserBase* m_pcCommunityUserBase;
     
     UEOSSessionOwnRequest();
+
 };
 

@@ -175,7 +175,8 @@ protected:
     TArray<AELSSPickupBase*> ValidBlackDiaList;
     
 public:
-    AELSSItemManager();
+    AELSSItemManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     TArray<AActor*> SpawnSpecifiedNumFromItemBox(ESSItemBoxType inItemBoxType, int32 inSpawnNum, const FVector& InLocation, const FRotator& InRotation);
     
@@ -271,7 +272,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FTransform CalcAbilityItemBoxLocation(const FVector& inOriginLocation, const FRotator& inOriginRotation);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

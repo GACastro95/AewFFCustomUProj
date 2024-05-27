@@ -6,3 +6,4 @@ UEOSSessionOwnRequest::UEOSSessionOwnRequest() {
     this->m_pcCommunityUserBase = NULL;
 }
 
+

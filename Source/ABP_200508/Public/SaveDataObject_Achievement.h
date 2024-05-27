@@ -9,6 +9,7 @@ class ABP_200508_API USaveDataObject_Achievement : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_Achievement();
+
     UFUNCTION(BlueprintCallable)
     void SetAchievementStatus(EELAchievementList _Achievement, bool _Status);
     

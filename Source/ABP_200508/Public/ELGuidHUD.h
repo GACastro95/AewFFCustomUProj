@@ -26,6 +26,7 @@ protected:
     
 public:
     UELGuidHUD();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetPlayer(AELCharacter_Native* Player);

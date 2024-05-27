@@ -1,5 +1,8 @@
 #include "SaveData_DebugBase.h"
 
+USaveData_DebugBase::USaveData_DebugBase() {
+}
+
 bool USaveData_DebugBase::StartDataReset(bool _bProjectSavedDir, const FString& _strTargetFileName, USaveDataSystem* _pcSaveDataSystem) {
     return false;
 }
@@ -38,6 +41,4 @@ bool USaveData_DebugBase::ExportFiles(bool _bProjectSavedDir, const FString& _st
     return false;
 }
 
-USaveData_DebugBase::USaveData_DebugBase() {
-}
 

@@ -8,6 +8,5 @@ enum class ESessionStatus : uint8 {
     STATUS_SEARCH,
     STATUS_CREATE,
     STATUS_JOIN,
-    STATUS_MAX UMETA(Hidden),
 };
 

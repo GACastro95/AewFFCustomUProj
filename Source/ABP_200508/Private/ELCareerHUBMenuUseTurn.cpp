@@ -1,5 +1,8 @@
 #include "ELCareerHUBMenuUseTurn.h"
 
+UELCareerHUBMenuUseTurn::UELCareerHUBMenuUseTurn() {
+}
+
 void UELCareerHUBMenuUseTurn::SetMenuTopState(bool IsTop) {
 }
 
@@ -28,6 +31,4 @@ ECareerPostCommandEventMark UELCareerHUBMenuUseTurn::GetEventMark(ECareerPostCom
 }
 
 
-UELCareerHUBMenuUseTurn::UELCareerHUBMenuUseTurn() {
-}
 

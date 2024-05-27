@@ -4,3 +4,4 @@ UELSSEnvQueryGenerator_ActorsOfWeaponTrapObject::UELSSEnvQueryGenerator_ActorsOf
     this->WeaponTrapObjectType = ESSWeaponTrapObjectType::None;
 }
 
+

@@ -9,6 +9,7 @@ class UELEOSSessionAttributeTypes : public UObject {
     GENERATED_BODY()
 public:
     UELEOSSessionAttributeTypes();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetSessionAttributeName(const EELEOSSessionAttributeTypes& Type);
     

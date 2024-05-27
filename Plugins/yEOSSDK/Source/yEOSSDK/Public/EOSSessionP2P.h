@@ -84,6 +84,7 @@ protected:
     
 public:
     UEOSSessionP2P();
+
     UFUNCTION(BlueprintCallable)
     bool Update();
     

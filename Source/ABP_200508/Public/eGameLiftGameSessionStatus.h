@@ -11,6 +11,5 @@ enum class eGameLiftGameSessionStatus : uint8 {
     eSTATE_Terminating,
     eSTATE_Terminated,
     eSTATE_Not,
-    eSTATE_MAX UMETA(Hidden),
 };
 

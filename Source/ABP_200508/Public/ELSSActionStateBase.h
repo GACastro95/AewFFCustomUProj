@@ -117,6 +117,7 @@ public:
     float InactiveMontageTimeCount;
     
     UELSSActionStateBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateMovementParam();

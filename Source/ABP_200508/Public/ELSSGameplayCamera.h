@@ -116,7 +116,8 @@ protected:
     FRotator Rotation;
     
 public:
-    AELSSGameplayCamera();
+    AELSSGameplayCamera(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SwitchCameraPosition();
     

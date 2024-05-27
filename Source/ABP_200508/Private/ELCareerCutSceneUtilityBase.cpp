@@ -1,6 +1,7 @@
 #include "ELCareerCutSceneUtilityBase.h"
 
-
-AELCareerCutSceneUtilityBase::AELCareerCutSceneUtilityBase() {
+AELCareerCutSceneUtilityBase::AELCareerCutSceneUtilityBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

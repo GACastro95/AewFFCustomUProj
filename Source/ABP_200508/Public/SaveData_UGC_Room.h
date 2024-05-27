@@ -8,5 +8,6 @@ class USaveData_UGC_Room : public UELSaveGameBase {
     GENERATED_BODY()
 public:
     USaveData_UGC_Room();
+
 };
 

@@ -1,5 +1,8 @@
 #include "SaveDataObject_UGC_Arena.h"
 
+USaveDataObject_UGC_Arena::USaveDataObject_UGC_Arena() {
+}
+
 void USaveDataObject_UGC_Arena::SortArenaCustomizeParam(TArray<FArenaCustomizeParam>& Param) {
 }
 
@@ -215,6 +218,4 @@ void USaveDataObject_UGC_Arena::GetArenaCustomizeParam_All(TArray<FArenaCustomiz
 void USaveDataObject_UGC_Arena::GetArenaCustomizeParam(int32 Index, FArenaCustomizeParam& Param) const {
 }
 
-USaveDataObject_UGC_Arena::USaveDataObject_UGC_Arena() {
-}
 

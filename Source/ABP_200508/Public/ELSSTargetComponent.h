@@ -56,7 +56,8 @@ private:
     FSSCameraHomingParam CameraHomingParam;
     
 public:
-    UELSSTargetComponent();
+    UELSSTargetComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateTargetOnAttack();
     

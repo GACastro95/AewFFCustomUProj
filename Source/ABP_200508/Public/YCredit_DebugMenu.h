@@ -16,5 +16,6 @@ public:
     FOnChangePauseResume OnChangePauseResume_DebugDelegate;
     
     UYCredit_DebugMenu();
+
 };
 

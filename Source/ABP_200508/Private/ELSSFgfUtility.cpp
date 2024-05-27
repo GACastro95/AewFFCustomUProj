@@ -1,5 +1,8 @@
 #include "ELSSFgfUtility.h"
 
+UELSSFgfUtility::UELSSFgfUtility() {
+}
+
 bool UELSSFgfUtility::IsSyncedSSFgfMatchInfo(const UObject* WorldContextObject) {
     return false;
 }
@@ -64,6 +67,4 @@ bool UELSSFgfUtility::CheckSSFgfMatchInfo(const UObject* WorldContextObject, boo
     return false;
 }
 
-UELSSFgfUtility::UELSSFgfUtility() {
-}
 

@@ -1,5 +1,8 @@
 #include "EOSPresence.h"
 
+UEOSPresence::UEOSPresence() {
+}
+
 bool UEOSPresence::RequestSetStatus(EEOSPresenceStatus _enStatus) {
     return false;
 }
@@ -20,6 +23,4 @@ bool UEOSPresence::RequestDeleteData(TArray<FString> _cArrayData) {
     return false;
 }
 
-UEOSPresence::UEOSPresence() {
-}
 

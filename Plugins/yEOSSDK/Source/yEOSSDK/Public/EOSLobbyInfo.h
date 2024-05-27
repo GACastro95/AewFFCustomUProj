@@ -13,6 +13,7 @@ private:
     
 public:
     UEOSLobbyInfo();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRTCRoomEnabled() const;
     

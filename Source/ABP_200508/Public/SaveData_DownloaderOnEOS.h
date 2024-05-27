@@ -17,6 +17,7 @@ class ABP_200508_API USaveData_DownloaderOnEOS : public USaveData_DownloaderBase
     GENERATED_BODY()
 public:
     USaveData_DownloaderOnEOS();
+
     UFUNCTION(BlueprintCallable)
     bool SetupEOS(UEOSUserContents* _pcEOSUserContents, UEOSTitleStorage* _pcEOSTitleStorage);
     

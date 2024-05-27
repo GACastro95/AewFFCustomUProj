@@ -1,5 +1,8 @@
 #include "ELSoundInfo.h"
 
+UELSoundInfo::UELSoundInfo() {
+}
+
 void UELSoundInfo::SetStackPlaySound(bool _stack) {
 }
 
@@ -21,6 +24,4 @@ FyStSoundAssetDataTable UELSoundInfo::GetSoundAssetDataTables() const {
     return FyStSoundAssetDataTable{};
 }
 
-UELSoundInfo::UELSoundInfo() {
-}
 

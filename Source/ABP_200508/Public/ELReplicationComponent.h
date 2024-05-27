@@ -20,7 +20,8 @@ protected:
     bool bTickReplication;
     
 public:
-    UELReplicationComponent();
+    UELReplicationComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void EnableTickFunctions(bool bRPC, bool bReplication);
     

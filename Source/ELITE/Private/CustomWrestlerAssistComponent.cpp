@@ -1,5 +1,20 @@
 #include "CustomWrestlerAssistComponent.h"
 
+UCustomWrestlerAssistComponent::UCustomWrestlerAssistComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CurrentPresetNo = 0;
+    this->PresetNameLimit = 12;
+    this->CurrentAttireType = EAttireType::Ring;
+    this->bPreviewBodyMode = false;
+    this->PreviewData = NULL;
+    this->ActivePartsSlot = EEditPartsSlot::Unknown;
+    this->PreviewModel_Match = NULL;
+    this->PreviewModel_Entrance = NULL;
+    this->PreviewModel_Plain = NULL;
+    this->bAssetLoading = false;
+    this->OriginalData = NULL;
+    this->EditingData = NULL;
+}
+
 void UCustomWrestlerAssistComponent::ValidateFaceType(EFaceType& NowFaceType) {
 }
 
@@ -318,18 +333,4 @@ void UCustomWrestlerAssistComponent::AddEditPartsParam(const EPreviewAttire Atti
 void UCustomWrestlerAssistComponent::AddEditPaintParam(const EPreviewAttire AttireType, const EEditTexTarget PaintSlot, const FEditPaintParam& NewParam, int32 PresetNo) {
 }
 
-UCustomWrestlerAssistComponent::UCustomWrestlerAssistComponent() {
-    this->CurrentPresetNo = 0;
-    this->PresetNameLimit = 12;
-    this->CurrentAttireType = EAttireType::Ring;
-    this->bPreviewBodyMode = false;
-    this->PreviewData = NULL;
-    this->ActivePartsSlot = EEditPartsSlot::Unknown;
-    this->PreviewModel_Match = NULL;
-    this->PreviewModel_Entrance = NULL;
-    this->PreviewModel_Plain = NULL;
-    this->bAssetLoading = false;
-    this->OriginalData = NULL;
-    this->EditingData = NULL;
-}
 

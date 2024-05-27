@@ -1,5 +1,8 @@
 #include "ELCareerEventMessageWindowWidgetBase.h"
 
+UELCareerEventMessageWindowWidgetBase::UELCareerEventMessageWindowWidgetBase() {
+}
+
 
 
 void UELCareerEventMessageWindowWidgetBase::SetNowSpeaker(ECareerEventActionMember eMember) {
@@ -12,6 +15,4 @@ bool UELCareerEventMessageWindowWidgetBase::IsCutOffMessage() {
 
 
 
-UELCareerEventMessageWindowWidgetBase::UELCareerEventMessageWindowWidgetBase() {
-}
 

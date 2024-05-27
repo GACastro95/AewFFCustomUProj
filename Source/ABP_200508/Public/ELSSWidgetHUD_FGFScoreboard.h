@@ -131,6 +131,7 @@ protected:
     
 public:
     UELSSWidgetHUD_FGFScoreboard();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateScore(int32 inScore, bool InOwnSide);

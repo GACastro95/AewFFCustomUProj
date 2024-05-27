@@ -1,6 +1,7 @@
 #include "ELMenuStackManagerBase.h"
 
-
-AELMenuStackManagerBase::AELMenuStackManagerBase() {
+AELMenuStackManagerBase::AELMenuStackManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

@@ -7,10 +7,10 @@ enum class ECareerMenuActionAlreadySelectedFlag : uint8 {
     None,
     bSightSeeing,
     bPressConference,
-    bMiniGame = 0x4,
-    bAutographSession = 0x8,
-    bMovieAppearance = 0x10,
-    bCasino = 0x20,
-    bTVShow = 0x40,
+    bMiniGame = 4,
+    bAutographSession = 8,
+    bMovieAppearance = 16,
+    bCasino = 32,
+    bTVShow = 64,
 };
 

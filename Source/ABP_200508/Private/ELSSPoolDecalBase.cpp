@@ -1,5 +1,14 @@
 #include "ELSSPoolDecalBase.h"
 #include "Components/DecalComponent.h"
+#include "Components/SceneComponent.h"
+
+AELSSPoolDecalBase::AELSSPoolDecalBase() {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    this->DecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("DecalComponent"));
+    this->RemainTime = 0.00f;
+    this->IsDisplay = false;
+    this->DecalComponent->SetupAttachment(RootComponent);
+}
 
 void AELSSPoolDecalBase::PlayAttached_Implementation(FVector DecalSize, USceneComponent* AttachToComponent, FName AttachPointName, FVector Location, FRotator Rotation, EAttachLocation::Type LocationType, float LifeSpan) {
 }
@@ -12,9 +21,4 @@ UDecalComponent* AELSSPoolDecalBase::GetDecalComponent() const {
     return NULL;
 }
 
-AELSSPoolDecalBase::AELSSPoolDecalBase() {
-    this->DecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("DecalComponent"));
-    this->RemainTime = 0.00f;
-    this->IsDisplay = false;
-}
 

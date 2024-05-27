@@ -1,5 +1,14 @@
 #include "ELMenuWidgetBase.h"
 
+UELMenuWidgetBase::UELMenuWidgetBase() {
+    this->MenuTop = NULL;
+    this->TabIndex = 0;
+    this->PreTabIndex = 0;
+    this->PreTabIndex2P = 0;
+    this->LastTabIndex = 0;
+    this->bDecisionKeyboard = false;
+}
+
 void UELMenuWidgetBase::UpdateFromStackPrevious_Implementation() {
 }
 
@@ -47,12 +56,4 @@ void UELMenuWidgetBase::BroadcastFinishedMenu() {
 void UELMenuWidgetBase::BroadcastCanceledMenu() {
 }
 
-UELMenuWidgetBase::UELMenuWidgetBase() {
-    this->MenuTop = NULL;
-    this->TabIndex = 0;
-    this->PreTabIndex = 0;
-    this->PreTabIndex2P = 0;
-    this->LastTabIndex = 0;
-    this->bDecisionKeyboard = false;
-}
 

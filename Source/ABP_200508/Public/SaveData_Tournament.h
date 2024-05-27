@@ -16,5 +16,6 @@ public:
     FELLocalTournamentProgressSaveData LocalTournamentData;
     
     USaveData_Tournament();
+
 };
 

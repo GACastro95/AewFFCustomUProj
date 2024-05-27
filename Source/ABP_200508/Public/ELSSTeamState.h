@@ -53,9 +53,10 @@ protected:
     int32 SelectedSpawnArea;
     
 public:
-    AELSSTeamState();
+    AELSSTeamState(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void UpdateUI_WaitingFinish();
     

@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_ShopItems : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_ShopItems();
+
     UFUNCTION(BlueprintCallable)
     void SetListMode(int32 _sOffset, int32 _sLimit);
     

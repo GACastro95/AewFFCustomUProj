@@ -1,5 +1,16 @@
 #include "ELLeaderboards.h"
 
+UELLeaderboards::UELLeaderboards() {
+    this->ELStats = NULL;
+    this->EOSLeaderboards = NULL;
+    this->EOSFriend = NULL;
+    this->EOSUser = NULL;
+    this->EOSUserManager = NULL;
+    this->LeaderboardStatNames.AddDefaulted(18);
+    this->SeasonNum = 0;
+    this->CurrentSeason = 0;
+}
+
 void UELLeaderboards::SetEOSLeaderboards(UEOSLeaderboard* InEOSLeaderboards) {
 }
 
@@ -56,14 +67,4 @@ void UELLeaderboards::ClearLeaderboardsCache(const TArray<FString>& ExcludeLeade
 void UELLeaderboards::ClearCache() {
 }
 
-UELLeaderboards::UELLeaderboards() {
-    this->ELStats = NULL;
-    this->EOSLeaderboards = NULL;
-    this->EOSFriend = NULL;
-    this->EOSUser = NULL;
-    this->EOSUserManager = NULL;
-    this->LeaderboardStatNames.AddDefaulted(18);
-    this->SeasonNum = 0;
-    this->CurrentSeason = 0;
-}
 

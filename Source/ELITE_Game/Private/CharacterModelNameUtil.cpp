@@ -1,5 +1,8 @@
 #include "CharacterModelNameUtil.h"
 
+UCharacterModelNameUtil::UCharacterModelNameUtil() {
+}
+
 bool UCharacterModelNameUtil::IsValid(const FCharacterModelName& Name) {
     return false;
 }
@@ -7,6 +10,4 @@ bool UCharacterModelNameUtil::IsValid(const FCharacterModelName& Name) {
 void UCharacterModelNameUtil::GetData(const FCharacterModelName& ModelName, bool& bFind, FELWrestlerMeshParam& Param) {
 }
 
-UCharacterModelNameUtil::UCharacterModelNameUtil() {
-}
 

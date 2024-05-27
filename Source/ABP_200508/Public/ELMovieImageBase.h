@@ -13,6 +13,7 @@ class ABP_200508_API UELMovieImageBase : public UUserWidget {
     GENERATED_BODY()
 public:
     UELMovieImageBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StopMovie_N();

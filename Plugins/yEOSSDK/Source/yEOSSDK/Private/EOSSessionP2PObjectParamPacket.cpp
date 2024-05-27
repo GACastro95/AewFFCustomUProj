@@ -1,5 +1,8 @@
 #include "EOSSessionP2PObjectParamPacket.h"
 
+UEOSSessionP2PObjectParamPacket::UEOSSessionP2PObjectParamPacket() {
+}
+
 bool UEOSSessionP2PObjectParamPacket::SetPacketInfo(int32 _sIndex, int32 _sMaxNum) {
     return false;
 }
@@ -52,6 +55,4 @@ bool UEOSSessionP2PObjectParamPacket::AddCharacter(int32 _sIndex, const FTransfo
     return false;
 }
 
-UEOSSessionP2PObjectParamPacket::UEOSSessionP2PObjectParamPacket() {
-}
 

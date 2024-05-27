@@ -36,5 +36,6 @@ protected:
     
 public:
     UELSSAnimNotifyState_Attack();
+
 };
 

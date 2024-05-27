@@ -1,5 +1,6 @@
 #include "UserArrowComponent.h"
 
-UUserArrowComponent::UUserArrowComponent() {
+UUserArrowComponent::UUserArrowComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

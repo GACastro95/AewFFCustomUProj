@@ -28,6 +28,7 @@ protected:
     
 public:
     UELSSWidgetHUD_JewelRadar();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetBonusText();

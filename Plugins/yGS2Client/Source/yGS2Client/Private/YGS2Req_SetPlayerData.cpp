@@ -1,5 +1,8 @@
 #include "YGS2Req_SetPlayerData.h"
 
+UYGS2Req_SetPlayerData::UYGS2Req_SetPlayerData() {
+}
+
 void UYGS2Req_SetPlayerData::SetGamerTag(const FString& _strGameTag) {
 }
 
@@ -17,6 +20,4 @@ int32 UYGS2Req_SetPlayerData::GetAEWGold() const {
     return 0;
 }
 
-UYGS2Req_SetPlayerData::UYGS2Req_SetPlayerData() {
-}
 

@@ -3,3 +3,4 @@
 USaveDataObject_CareerModeSnapshot::USaveDataObject_CareerModeSnapshot() {
 }
 
+

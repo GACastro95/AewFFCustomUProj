@@ -1,5 +1,8 @@
 #include "MovesSituationUtility.h"
 
+UMovesSituationUtility::UMovesSituationUtility() {
+}
+
 void UMovesSituationUtility::SearchDataArray_DataTable(TArray<FMovesSituation>& OutKeys, UDataTable* inSituationTable, UDataTable* inTable) {
 }
 
@@ -46,6 +49,4 @@ void UMovesSituationUtility::GetAttackTagArray(TArray<bool>& _OutAttackTagArray,
 void UMovesSituationUtility::FindSituationDataName(int32& OutIndex, const UDataTable* UpdateTable, int32 DT_ID) {
 }
 
-UMovesSituationUtility::UMovesSituationUtility() {
-}
 

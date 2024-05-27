@@ -1,8 +1,9 @@
 #include "ELSSSilhouetteActor.h"
 
-
-
-AELSSSilhouetteActor::AELSSSilhouetteActor() {
+AELSSSilhouetteActor::AELSSSilhouetteActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TargetPlayer = NULL;
 }
+
+
+
 

@@ -18,6 +18,7 @@ public:
     ESSAttackHitDirMode HitDirMode;
     
     UELSSAnimNotify_SyncAttack();
+
     UFUNCTION(BlueprintCallable)
     void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     

@@ -1,5 +1,8 @@
 #include "YDBGOnlineParam.h"
 
+UYDBGOnlineParam::UYDBGOnlineParam() {
+}
+
 bool UYDBGOnlineParam::Setup(const FString& _strSettingFileName) {
     return false;
 }
@@ -48,6 +51,4 @@ bool UYDBGOnlineParam::CreateYDBGOnlineParamerter(UYDBGOnlineParam*& _pcInst, UO
     return false;
 }
 
-UYDBGOnlineParam::UYDBGOnlineParam() {
-}
 

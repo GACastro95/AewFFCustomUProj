@@ -40,6 +40,7 @@ protected:
     
 public:
     USoundAtomCueSheet();
+
     UFUNCTION(BlueprintCallable)
     static void ReleaseAcb(FName AcbName);
     

@@ -17,8 +17,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableDanageEffect;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AActor*> HitActorList_N;
+    
 public:
-    AELHandsDamageArea();
+    AELHandsDamageArea(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnableEffect();
     
@@ -27,6 +31,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     int32 GetDamageAmount();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool AlreadyHit(AActor* Target);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddHitActor(AActor* Target);
     
 };
 

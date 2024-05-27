@@ -15,6 +15,7 @@ class UELLeaderboardsUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELLeaderboardsUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static FDateTime GetUserScoreQueryDateTime(const UObject* WorldContextObject, const FString& LeaderboardName, int32 Season, bool bPlatformOnly);
     

@@ -8,5 +8,6 @@ class CRIWARERUNTIME_API UCriWareInitializer : public UObject {
     GENERATED_BODY()
 public:
     UCriWareInitializer();
+
 };
 

@@ -1,5 +1,9 @@
 #include "ELEOSLobbyWrestlerDataMap.h"
 
+UELEOSLobbyWrestlerDataMap::UELEOSLobbyWrestlerDataMap() {
+    this->WrestlerNum = 1;
+}
+
 void UELEOSLobbyWrestlerDataMap::SetWrestlerNum(int32 _WrestlerNum) {
 }
 
@@ -27,7 +31,4 @@ void UELEOSLobbyWrestlerDataMap::ClearWrestlerDataMap() {
 void UELEOSLobbyWrestlerDataMap::AddWrestlerData(const FString& _PUID, UObject* _WrestlerData, int32 _WrestlerIndex) {
 }
 
-UELEOSLobbyWrestlerDataMap::UELEOSLobbyWrestlerDataMap() {
-    this->WrestlerNum = 1;
-}
 

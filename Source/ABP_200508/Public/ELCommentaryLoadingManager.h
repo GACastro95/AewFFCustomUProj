@@ -27,6 +27,7 @@ private:
     
 public:
     UELCommentaryLoadingManager();
+
     UFUNCTION(BlueprintCallable)
     bool StartScreen(FCommentaryLoadingCompleteDelegate _completeDelegate, int32 BaseZOrder);
     

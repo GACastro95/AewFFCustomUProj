@@ -8,6 +8,7 @@ class ELITE_CORE_API UStringUtil : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UStringUtil();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString ToASCIIOnly(const FString& Str, bool& isChanged);
     

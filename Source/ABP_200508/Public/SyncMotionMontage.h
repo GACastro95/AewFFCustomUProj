@@ -17,7 +17,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionChannel> DisableChannel;
     
-    ASyncMotionMontage();
+    ASyncMotionMontage(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Setup(UPARAM(Ref) TArray<AELCharacter_Native*>& characters, const FVector& SyncLocation, const FRotator& SyncRotation, ESyncPosRotKind posSyncKind, ESyncPosRotKind rotSyncKind, float InterpolateTime, bool ignoreSweep, bool noSyncRotation, int32 Priority, bool useCharacterHeight);
     

@@ -8,6 +8,7 @@ class ABP_200508_API UELSSPanelResultBase : public UELSSPanelBase {
     GENERATED_BODY()
 public:
     UELSSPanelResultBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ShowResultWindow();
     

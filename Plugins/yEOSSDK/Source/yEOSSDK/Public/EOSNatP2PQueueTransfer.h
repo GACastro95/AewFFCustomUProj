@@ -26,6 +26,7 @@ protected:
     
 public:
     UEOSNatP2PQueueTransfer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     bool AddToSendPacketQueue(UEOSNatP2PPacketBase* _pcData, bool _bAllUser, EEOSPacketReliability _enReliability);

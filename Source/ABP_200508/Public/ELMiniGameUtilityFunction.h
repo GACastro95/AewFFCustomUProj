@@ -12,6 +12,7 @@ class ABP_200508_API UELMiniGameUtilityFunction : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UELMiniGameUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static bool SetupMiniGameSaveData();
     

@@ -12,6 +12,7 @@ public:
     TArray<FTemplateScoutParam> Items;
     
     UTemplateScoutListAsset();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetItems(TArray<FTemplateScoutParam>& List) const;
     

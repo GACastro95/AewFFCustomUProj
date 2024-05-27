@@ -26,5 +26,6 @@ public:
     float OutBlendSecondsRight;
     
     UELAnimInstance_FingerSign();
+
 };
 

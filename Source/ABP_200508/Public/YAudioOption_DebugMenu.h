@@ -8,6 +8,7 @@ class ABP_200508_API UYAudioOption_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYAudioOption_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetShowSurfaceDebug(bool _show);
     

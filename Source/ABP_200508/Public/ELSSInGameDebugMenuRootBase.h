@@ -8,6 +8,7 @@ class ABP_200508_API UELSSInGameDebugMenuRootBase : public UELDebugMenuRootBase 
     GENERATED_BODY()
 public:
     UELSSInGameDebugMenuRootBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetDebugMenuInputMode(bool inEnable);

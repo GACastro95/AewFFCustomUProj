@@ -110,7 +110,8 @@ protected:
     EManaMaxFrameDrop MaxFrameDrop;
     
 public:
-    UManaComponent();
+    UManaComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool ToIndex(int32 Index);
     

@@ -8,5 +8,6 @@ class ABP_200508_API UYCrate_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYCrate_DebugMenu();
+
 };
 

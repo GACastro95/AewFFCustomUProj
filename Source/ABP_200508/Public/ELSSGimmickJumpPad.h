@@ -14,6 +14,7 @@ protected:
     USkeletalMeshComponent* JumpPadMeshComponent;
     
 public:
-    AELSSGimmickJumpPad();
+    AELSSGimmickJumpPad(const FObjectInitializer& ObjectInitializer);
+
 };
 

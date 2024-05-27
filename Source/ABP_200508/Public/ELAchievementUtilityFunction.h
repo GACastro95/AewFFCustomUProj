@@ -12,6 +12,7 @@ class ABP_200508_API UELAchievementUtilityFunction : public UBlueprintFunctionLi
     GENERATED_BODY()
 public:
     UELAchievementUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void UnlockCareerStackAchievment();
     

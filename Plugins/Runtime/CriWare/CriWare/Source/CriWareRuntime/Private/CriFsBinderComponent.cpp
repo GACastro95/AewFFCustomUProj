@@ -1,5 +1,9 @@
 #include "CriFsBinderComponent.h"
 
+UCriFsBinderComponent::UCriFsBinderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoActivate = true;
+}
+
 void UCriFsBinderComponent::Stop() {
 }
 
@@ -10,6 +14,4 @@ ECriFsBinderStatus UCriFsBinderComponent::GetStatus() {
 void UCriFsBinderComponent::Bind() {
 }
 
-UCriFsBinderComponent::UCriFsBinderComponent() {
-}
 

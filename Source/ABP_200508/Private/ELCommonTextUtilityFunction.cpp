@@ -1,5 +1,8 @@
 #include "ELCommonTextUtilityFunction.h"
 
+UELCommonTextUtilityFunction::UELCommonTextUtilityFunction() {
+}
+
 FText UELCommonTextUtilityFunction::GetTextEntryBase(UObject* _pWorldContextObject) {
     return FText::GetEmpty();
 }
@@ -28,6 +31,4 @@ FText UELCommonTextUtilityFunction::GetBackText(UObject* _pWorldContextObject) {
     return FText::GetEmpty();
 }
 
-UELCommonTextUtilityFunction::UELCommonTextUtilityFunction() {
-}
 

@@ -12,5 +12,6 @@ public:
     TMap<FName, FELEntranceChangeMaterialSet> MaterialSetArray;
     
     UELAnimNotifyState_EntranceChangeMaterial();
+
 };
 

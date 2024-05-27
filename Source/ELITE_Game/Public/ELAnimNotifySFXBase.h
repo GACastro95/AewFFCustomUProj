@@ -11,6 +11,7 @@ class ELITE_GAME_API UELAnimNotifySFXBase : public UAnimNotify {
     GENERATED_BODY()
 public:
     UELAnimNotifySFXBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     bool GetNaviMontageData_N(const UAnimSequenceBase* Animation, FStSoundNaviAnimData& Data) const;

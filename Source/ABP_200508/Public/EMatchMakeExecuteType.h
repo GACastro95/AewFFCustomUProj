@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class EMatchMakeExecuteType : uint8 {
     eMatchMakeExecuteType_Step,
     eMatchMakeExecuteType_End,
-    eMatchMakeExecuteType_MAX UMETA(Hidden),
 };
 

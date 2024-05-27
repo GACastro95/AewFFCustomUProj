@@ -20,5 +20,6 @@ public:
     UUserWidget* m_LoadingUWidget;
     
     ULoadingScreenSubsystem();
+
 };
 

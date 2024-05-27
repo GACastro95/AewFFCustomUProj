@@ -9,6 +9,7 @@ class CREATION_API UFL_EditItemUtilityFunctions : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UFL_EditItemUtilityFunctions();
+
     UFUNCTION(BlueprintCallable)
     static void GetUnlockItemID_Common(const FEditItem_Common& EditItem, int32& UnlockItemId);
     

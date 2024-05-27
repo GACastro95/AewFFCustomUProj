@@ -134,6 +134,7 @@ protected:
     
 public:
     UELSSCommonDatabase();
+
     UFUNCTION(BlueprintCallable)
     void MakeSortedAbilityParamArray(ESSAbilitySortType inSortType);
     

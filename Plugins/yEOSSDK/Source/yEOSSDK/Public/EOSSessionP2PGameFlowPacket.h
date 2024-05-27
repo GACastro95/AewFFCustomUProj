@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSSessionP2PGameFlowPacket : public UEOSSessionP2PSynchroniz
     GENERATED_BODY()
 public:
     UEOSSessionP2PGameFlowPacket();
+
     UFUNCTION(BlueprintCallable)
     bool SetResultForPossibleToChange(EEOSSessionP2PAFGameFlowStep _enGameFlowStep, bool _bResult, bool _bAutoChangeGameFlow);
     

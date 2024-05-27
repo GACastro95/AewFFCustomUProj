@@ -1,5 +1,16 @@
 #include "ManaPlayer.h"
 
+UManaPlayer::UManaPlayer() {
+    this->PlayOnOpen = false;
+    this->Loop = false;
+    this->MaxFrameDrop = EManaMaxFrameDrop::Disabled;
+    this->ManaTexture = NULL;
+    this->ManaMovie = NULL;
+    this->Playlist = NULL;
+    this->PlaylistIndex = 0;
+    this->ManaComponent = NULL;
+}
+
 bool UManaPlayer::SetVolume(float Volume, EManaPlayerTrack TrackType) {
     return false;
 }
@@ -211,14 +222,4 @@ void UManaPlayer::Close() {
 void UManaPlayer::BindOnFrameUpdated(const UManaPlayer::FOnFrameUpdatedDelegate& Event) {
 }
 
-UManaPlayer::UManaPlayer() {
-    this->PlayOnOpen = false;
-    this->Loop = false;
-    this->MaxFrameDrop = EManaMaxFrameDrop::Disabled;
-    this->ManaTexture = NULL;
-    this->ManaMovie = NULL;
-    this->Playlist = NULL;
-    this->PlaylistIndex = 0;
-    this->ManaComponent = NULL;
-}
 

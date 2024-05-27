@@ -1,5 +1,11 @@
 #include "ELNetCharacter.h"
+#include "ELNetCharacterMovementComponent.h"
 #include "Net/UnrealNetwork.h"
+
+AELNetCharacter::AELNetCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UELNetCharacterMovementComponent>(TEXT("CharMoveComp"))) {
+    this->GuidOffset = 0;
+    this->ELNetRole = EELNetRole::ROLE_None;
+}
 
 bool AELNetCharacter::SetELNetTemporaryAuthorityBP(bool bEnabled) {
     return false;
@@ -75,8 +81,4 @@ void AELNetCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AELNetCharacter, RandomStream);
 }
 
-AELNetCharacter::AELNetCharacter() {
-    this->GuidOffset = 0;
-    this->ELNetRole = EELNetRole::ROLE_None;
-}
 

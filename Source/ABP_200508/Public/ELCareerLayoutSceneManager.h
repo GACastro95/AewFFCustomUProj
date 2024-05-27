@@ -15,7 +15,8 @@ private:
     UELGameInstance* m_pELGameInstance;
     
 public:
-    AELCareerLayoutSceneManager();
+    AELCareerLayoutSceneManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetState(ECareerLayoutSceneState State);
     

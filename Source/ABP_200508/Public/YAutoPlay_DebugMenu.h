@@ -9,6 +9,7 @@ class ABP_200508_API UYAutoPlay_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYAutoPlay_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetStopAutoPlay(bool _bStop);
     

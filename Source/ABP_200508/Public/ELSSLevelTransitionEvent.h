@@ -11,6 +11,7 @@ class ABP_200508_API UELSSLevelTransitionEvent : public UObject {
     GENERATED_BODY()
 public:
     UELSSLevelTransitionEvent();
+
     UFUNCTION(BlueprintCallable)
     void OnInitialize();
     

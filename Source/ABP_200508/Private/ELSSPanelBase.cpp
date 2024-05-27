@@ -1,5 +1,9 @@
 #include "ELSSPanelBase.h"
 
+UELSSPanelBase::UELSSPanelBase() : UUserWidget(FObjectInitializer::Get()) {
+    this->CommonLayoutWidget = NULL;
+}
+
 void UELSSPanelBase::SetZOrderInPanel(UELSSWidgetBase* widgetBase, int32 ZOrder) {
 }
 
@@ -25,7 +29,4 @@ bool UELSSPanelBase::GetVisible_Implementation() {
     return false;
 }
 
-UELSSPanelBase::UELSSPanelBase() : UUserWidget(FObjectInitializer::Get()) {
-    this->CommonLayoutWidget = NULL;
-}
 

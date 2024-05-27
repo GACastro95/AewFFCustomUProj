@@ -8,5 +8,6 @@ class ABP_200508_API UELAnimNotifyState_MaskHideTimedParticleEffect : public UAn
     GENERATED_BODY()
 public:
     UELAnimNotifyState_MaskHideTimedParticleEffect();
+
 };
 

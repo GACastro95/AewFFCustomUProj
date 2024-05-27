@@ -1,5 +1,6 @@
 #include "GameLiftGameServerModeTest.h"
 
-AGameLiftGameServerModeTest::AGameLiftGameServerModeTest() {
+AGameLiftGameServerModeTest::AGameLiftGameServerModeTest(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

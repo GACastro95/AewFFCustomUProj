@@ -118,6 +118,7 @@ public:
     USoundAttenuation* DefaultAttenuation;
     
     USoundAtomCue();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool Validate() const;
     

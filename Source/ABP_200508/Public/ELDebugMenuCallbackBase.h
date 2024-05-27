@@ -15,6 +15,7 @@ class ABP_200508_API UELDebugMenuCallbackBase : public UELDBG_ReferBase {
     GENERATED_BODY()
 public:
     UELDebugMenuCallbackBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetDispDebug(bool IsDisp);
     

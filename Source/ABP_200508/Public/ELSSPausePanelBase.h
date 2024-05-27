@@ -17,6 +17,7 @@ protected:
     
 public:
     UELSSPausePanelBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateKeyConfig();
     

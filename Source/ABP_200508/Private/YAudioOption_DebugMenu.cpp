@@ -1,5 +1,8 @@
 #include "YAudioOption_DebugMenu.h"
 
+UYAudioOption_DebugMenu::UYAudioOption_DebugMenu() {
+}
+
 void UYAudioOption_DebugMenu::SetShowSurfaceDebug(bool _show) {
 }
 
@@ -21,6 +24,4 @@ bool UYAudioOption_DebugMenu::IsShowCrowdDebug() const {
     return false;
 }
 
-UYAudioOption_DebugMenu::UYAudioOption_DebugMenu() {
-}
 

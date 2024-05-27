@@ -1,5 +1,11 @@
 #include "ELSSWidgetHUD_SSLogSet.h"
 
+UELSSWidgetHUD_SSLogSet::UELSSWidgetHUD_SSLogSet() {
+    this->LogMessageShowTimeElapsed = 0.00f;
+    this->MAXLOGSHOWTIME = 4.00f;
+    this->LogSetVerticalBox = NULL;
+}
+
 void UELSSWidgetHUD_SSLogSet::UpdateLogShowState(float InDeltaTime) {
 }
 
@@ -23,9 +29,4 @@ void UELSSWidgetHUD_SSLogSet::DeleteLogTextMessage() {
 void UELSSWidgetHUD_SSLogSet::AddMultiColorLogMessage(const TArray<FSSLogTextParam>& inTextParam, ESSLogIconType InIconType) {
 }
 
-UELSSWidgetHUD_SSLogSet::UELSSWidgetHUD_SSLogSet() {
-    this->LogMessageShowTimeElapsed = 0.00f;
-    this->MAXLOGSHOWTIME = 4.00f;
-    this->LogSetVerticalBox = NULL;
-}
 

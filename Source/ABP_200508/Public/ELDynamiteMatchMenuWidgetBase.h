@@ -8,5 +8,6 @@ class ABP_200508_API UELDynamiteMatchMenuWidgetBase : public UELCareerWidgetBase
     GENERATED_BODY()
 public:
     UELDynamiteMatchMenuWidgetBase();
+
 };
 

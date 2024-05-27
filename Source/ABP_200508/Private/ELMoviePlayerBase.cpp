@@ -1,5 +1,8 @@
 #include "ELMoviePlayerBase.h"
 
+UELMoviePlayerBase::UELMoviePlayerBase() {
+}
+
 bool UELMoviePlayerBase::Stop() {
     return false;
 }
@@ -102,6 +105,4 @@ bool UELMoviePlayerBase::ChangeMovieResource(const FString& MoviePath) {
     return false;
 }
 
-UELMoviePlayerBase::UELMoviePlayerBase() {
-}
 

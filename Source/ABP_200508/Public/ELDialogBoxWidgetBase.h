@@ -12,6 +12,7 @@ public:
     FDialogBoxExternalResultDelegate ExternalResultDelegate;
     
     UELDialogBoxWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestClose();
     

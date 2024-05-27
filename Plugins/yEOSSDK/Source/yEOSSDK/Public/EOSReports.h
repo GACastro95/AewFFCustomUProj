@@ -14,6 +14,7 @@ public:
     FEOSReportsSendPlayerBehaviorReportDispatcher SendPlayerBehaviorReportDispatcher;
     
     UEOSReports();
+
     UFUNCTION(BlueprintCallable)
     static void SetApiVersion(FEOSReportsAPIVersionSettings _stAPIVerSetting);
     

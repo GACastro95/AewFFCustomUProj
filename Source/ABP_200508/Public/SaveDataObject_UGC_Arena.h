@@ -11,6 +11,7 @@ class ABP_200508_API USaveDataObject_UGC_Arena : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_UGC_Arena();
+
     UFUNCTION(BlueprintCallable)
     void SortArenaCustomizeParam(UPARAM(Ref) TArray<FArenaCustomizeParam>& Param);
     

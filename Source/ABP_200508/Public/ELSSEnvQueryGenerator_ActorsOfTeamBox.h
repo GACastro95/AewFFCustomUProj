@@ -15,5 +15,6 @@ public:
     bool IsCheckUnlockState;
     
     UELSSEnvQueryGenerator_ActorsOfTeamBox();
+
 };
 

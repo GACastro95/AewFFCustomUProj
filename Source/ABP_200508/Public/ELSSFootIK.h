@@ -34,7 +34,8 @@ protected:
     int32 LandingFootNum;
     
 public:
-    UELSSFootIK();
+    UELSSFootIK(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool UpdateFloorIK();

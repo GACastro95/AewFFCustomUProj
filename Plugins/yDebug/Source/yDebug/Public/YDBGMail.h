@@ -12,6 +12,7 @@ class YDEBUG_API UYDBGMail : public UObject {
     GENERATED_BODY()
 public:
     UYDBGMail();
+
     UFUNCTION(BlueprintCallable)
     bool Send(const FYDBGMailHeader& _stHeader, const FYDBGMailBody& _stBody);
     

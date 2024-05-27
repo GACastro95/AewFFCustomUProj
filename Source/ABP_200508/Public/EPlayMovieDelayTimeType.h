@@ -8,6 +8,5 @@ enum class EPlayMovieDelayTimeType : uint8 {
     EPlayMovieDelayTimeType_In,
     EPlayMovieDelayTimeType_Out,
     EPlayMovieDelayTimeType_ANy,
-    EPlayMovieDelayTimeType_MAX UMETA(Hidden),
 };
 

@@ -1,5 +1,8 @@
 #include "ELTutorialExecutorBase.h"
 
+AELTutorialExecutorBase::AELTutorialExecutorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELTutorialExecutorBase::StartWaitState() {
 }
 
@@ -18,6 +21,4 @@ void AELTutorialExecutorBase::OnStartTutorial_Implementation(FExecuteTutorialDia
 void AELTutorialExecutorBase::EndTutorial() {
 }
 
-AELTutorialExecutorBase::AELTutorialExecutorBase() {
-}
 

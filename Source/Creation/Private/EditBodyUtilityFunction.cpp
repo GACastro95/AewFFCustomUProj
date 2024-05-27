@@ -1,5 +1,8 @@
 #include "EditBodyUtilityFunction.h"
 
+UEditBodyUtilityFunction::UEditBodyUtilityFunction() {
+}
+
 FBaseBodyTypeName UEditBodyUtilityFunction::MakeLiteralBaseBodyTypeName(const FName RowName) {
     return FBaseBodyTypeName{};
 }
@@ -8,6 +11,4 @@ FBodyAdjustParam UEditBodyUtilityFunction::ConvertToBodyAdjustParam(const FEditB
     return FBodyAdjustParam{};
 }
 
-UEditBodyUtilityFunction::UEditBodyUtilityFunction() {
-}
 

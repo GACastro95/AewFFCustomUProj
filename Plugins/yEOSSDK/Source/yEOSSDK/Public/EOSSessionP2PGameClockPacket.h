@@ -8,5 +8,6 @@ class YEOSSDK_API UEOSSessionP2PGameClockPacket : public UEOSSessionP2PPacketBas
     GENERATED_BODY()
 public:
     UEOSSessionP2PGameClockPacket();
+
 };
 

@@ -1,6 +1,7 @@
 #include "ManaComponentTexture.h"
 
 UManaComponentTexture::UManaComponentTexture() {
+    this->NeverStream = true;
     this->SizeX = 0;
     this->SizeY = 0;
     this->Format = PF_G8;
@@ -8,4 +9,5 @@ UManaComponentTexture::UManaComponentTexture() {
     this->AddressX = TA_Wrap;
     this->AddressY = TA_Wrap;
 }
+
 

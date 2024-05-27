@@ -13,6 +13,7 @@ protected:
     
 public:
     UELSSWidgetHUD_RespawnCount();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetRespawnCountText(int32 InSecond);

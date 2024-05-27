@@ -16,7 +16,8 @@ private:
     TArray<ACameraActor*> m_CameraActorArray;
     
 public:
-    AELCareerCameraPawn();
+    AELCareerCameraPawn(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetupCameraActorWithCameraComponent(ECareerMapCameraType eCameraType, UCameraComponent* pCameraComponent);

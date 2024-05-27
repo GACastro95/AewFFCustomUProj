@@ -4,3 +4,4 @@ USaveData_CareerModeSystem::USaveData_CareerModeSystem() {
     this->Snapshots.AddDefaulted(256);
 }
 
+

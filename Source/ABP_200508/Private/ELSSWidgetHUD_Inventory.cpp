@@ -1,5 +1,11 @@
 #include "ELSSWidgetHUD_Inventory.h"
 
+UELSSWidgetHUD_Inventory::UELSSWidgetHUD_Inventory() {
+    this->PlayInWeaponNameAnim = NULL;
+    this->SelectSlotIndex = 0;
+    this->IsFGFballState = false;
+}
+
 
 void UELSSWidgetHUD_Inventory::SetVisibleOperationButton(bool inIsVisible) {
 }
@@ -38,9 +44,4 @@ void UELSSWidgetHUD_Inventory::ApplyFGFBallState(bool IsInDefault, int32 InBallL
 void UELSSWidgetHUD_Inventory::ApplyBareIconGuideState() {
 }
 
-UELSSWidgetHUD_Inventory::UELSSWidgetHUD_Inventory() {
-    this->PlayInWeaponNameAnim = NULL;
-    this->SelectSlotIndex = 0;
-    this->IsFGFballState = false;
-}
 

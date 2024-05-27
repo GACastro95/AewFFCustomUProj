@@ -1,5 +1,6 @@
 #include "ELSSGameSession.h"
 
-AELSSGameSession::AELSSGameSession() {
+AELSSGameSession::AELSSGameSession(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

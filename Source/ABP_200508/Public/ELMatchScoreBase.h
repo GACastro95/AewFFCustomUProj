@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class ABP_200508_API UELMatchScoreBase : public UActorComponent {
     GENERATED_BODY()
 public:
-    UELMatchScoreBase();
+    UELMatchScoreBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

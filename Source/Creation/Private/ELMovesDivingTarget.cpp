@@ -1,5 +1,6 @@
 #include "ELMovesDivingTarget.h"
 
-AELMovesDivingTarget::AELMovesDivingTarget() {
+AELMovesDivingTarget::AELMovesDivingTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

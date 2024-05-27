@@ -11,6 +11,7 @@ class YEOSSDK_API UEOSSessionP2PObjectParamPacket : public UEOSSessionP2PPacketB
     GENERATED_BODY()
 public:
     UEOSSessionP2PObjectParamPacket();
+
     UFUNCTION(BlueprintCallable)
     bool SetPacketInfo(int32 _sIndex, int32 _sMaxNum);
     

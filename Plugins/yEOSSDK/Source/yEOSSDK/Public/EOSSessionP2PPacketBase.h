@@ -12,6 +12,7 @@ class YEOSSDK_API UEOSSessionP2PPacketBase : public UEOSLockebleCommon {
     GENERATED_BODY()
 public:
     UEOSSessionP2PPacketBase();
+
     UFUNCTION(BlueprintCallable)
     bool UnsetUpdateFlag();
     

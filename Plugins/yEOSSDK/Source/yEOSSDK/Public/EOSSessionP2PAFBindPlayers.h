@@ -15,6 +15,7 @@ private:
     
 public:
     UEOSSessionP2PAFBindPlayers();
+
     UFUNCTION(BlueprintCallable)
     bool RetrySendMemberInfo();
     

@@ -44,6 +44,7 @@ private:
     
 public:
     UELWrestlerSkillListWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetupSkillData();

@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_GetSSMasterData : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_GetSSMasterData();
+
     UFUNCTION(BlueprintCallable)
     void SetRequestParams(const FString& stage, const FString& app_ver, bool only_data_id);
     

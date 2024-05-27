@@ -39,7 +39,8 @@ protected:
     float MashBonusTotalSubSec_N;
     
 public:
-    UELShockCounter();
+    UELShockCounter(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SubCounterValue_N(float Value);
     

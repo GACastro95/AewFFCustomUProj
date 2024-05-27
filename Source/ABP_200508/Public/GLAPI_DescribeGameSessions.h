@@ -16,6 +16,7 @@ public:
     FOnDescribeGameSessionsSuccess OnSuccess;
     
     UGLAPI_DescribeGameSessions();
+
     UFUNCTION(BlueprintCallable)
     static UGLAPI_DescribeGameSessions* DescribePlayerSessions(UGameLiftClientObject* client, const FDescribeGameSessions_RequestParam& requestParam);
     

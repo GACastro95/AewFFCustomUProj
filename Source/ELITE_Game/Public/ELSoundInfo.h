@@ -10,6 +10,7 @@ class ELITE_GAME_API UELSoundInfo : public UObject {
     GENERATED_BODY()
 public:
     UELSoundInfo();
+
     UFUNCTION(BlueprintCallable)
     void SetStackPlaySound(bool _stack);
     

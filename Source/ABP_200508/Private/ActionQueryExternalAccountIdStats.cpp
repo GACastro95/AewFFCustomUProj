@@ -1,5 +1,9 @@
 #include "ActionQueryExternalAccountIdStats.h"
 
+UActionQueryExternalAccountIdStats::UActionQueryExternalAccountIdStats() {
+    this->WorldContextObject = NULL;
+}
+
 UActionQueryExternalAccountIdStats* UActionQueryExternalAccountIdStats::ActionQueryExternalAccountIdStats(UObject* NewWorldContextObject, const FString& TargetProductUserId) {
     return NULL;
 }
@@ -7,7 +11,4 @@ UActionQueryExternalAccountIdStats* UActionQueryExternalAccountIdStats::ActionQu
 void UActionQueryExternalAccountIdStats::Abort() {
 }
 
-UActionQueryExternalAccountIdStats::UActionQueryExternalAccountIdStats() {
-    this->WorldContextObject = NULL;
-}
 

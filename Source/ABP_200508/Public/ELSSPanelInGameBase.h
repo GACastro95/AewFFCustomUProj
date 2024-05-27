@@ -137,6 +137,7 @@ protected:
     
 public:
     UELSSPanelInGameBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdatePlayInAnimation(float InDeltaTime);
     

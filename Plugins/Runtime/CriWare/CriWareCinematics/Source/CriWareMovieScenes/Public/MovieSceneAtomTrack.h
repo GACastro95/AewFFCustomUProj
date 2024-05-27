@@ -16,7 +16,8 @@ private:
     
 public:
     UMovieSceneAtomTrack();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,5 +1,8 @@
 #include "ELSSAIUtility.h"
 
+UELSSAIUtility::UELSSAIUtility() {
+}
+
 void UELSSAIUtility::UpdateFgfAI(const UObject* WorldContextObject) {
 }
 
@@ -78,6 +81,4 @@ bool UELSSAIUtility::FindFgfGoalToGo(AELSSPlayerState* inPlayer, TArray<AELSSGim
     return false;
 }
 
-UELSSAIUtility::UELSSAIUtility() {
-}
 

@@ -25,7 +25,8 @@ protected:
     FVector LeftStickInput;
     
 public:
-    AELSSOnlineTestPlayerController();
+    AELSSOnlineTestPlayerController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void UIPrepare_RPC();
     

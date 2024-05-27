@@ -1,5 +1,8 @@
 #include "CareerSnapshotScenarioItem.h"
 
+UCareerSnapshotScenarioItem::UCareerSnapshotScenarioItem() {
+}
+
 void UCareerSnapshotScenarioItem::RemoveSnapshot(UCareerSnapshot* Snapshot) {
 }
 
@@ -39,6 +42,4 @@ void UCareerSnapshotScenarioItem::ConstractTitles(const UDataTable* TitleDataTab
 void UCareerSnapshotScenarioItem::CollectSnapshots(const TArray<UCareerSnapshot*>& Snapshots) {
 }
 
-UCareerSnapshotScenarioItem::UCareerSnapshotScenarioItem() {
-}
 

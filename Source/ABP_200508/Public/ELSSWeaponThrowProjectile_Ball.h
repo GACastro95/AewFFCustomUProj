@@ -25,6 +25,7 @@ private:
     bool bPlayedEffect;
     
 public:
-    AELSSWeaponThrowProjectile_Ball();
+    AELSSWeaponThrowProjectile_Ball(const FObjectInitializer& ObjectInitializer);
+
 };
 

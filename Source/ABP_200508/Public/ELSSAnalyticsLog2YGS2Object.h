@@ -8,5 +8,6 @@ class UELSSAnalyticsLog2YGS2Object : public UObject {
     GENERATED_BODY()
 public:
     UELSSAnalyticsLog2YGS2Object();
+
 };
 

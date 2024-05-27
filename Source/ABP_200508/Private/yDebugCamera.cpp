@@ -1,5 +1,10 @@
 #include "yDebugCamera.h"
 
+AyDebugCamera::AyDebugCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_bWatchingNow = false;
+    this->m_pcController = NULL;
+}
+
 void AyDebugCamera::TakeScreenShot() {
 }
 
@@ -121,8 +126,4 @@ bool AyDebugCamera::DownedDownButton() const {
     return false;
 }
 
-AyDebugCamera::AyDebugCamera() {
-    this->m_bWatchingNow = false;
-    this->m_pcController = NULL;
-}
 

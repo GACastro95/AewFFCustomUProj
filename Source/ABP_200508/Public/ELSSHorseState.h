@@ -25,6 +25,7 @@ protected:
     
 public:
     UELSSHorseState();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayingDamageMontage() const;
     

@@ -18,6 +18,5 @@ enum class ERA_Slot_Intro : uint8 {
     RA_INTRO_CHAMPION,
     RA_INTRO_CHAMPIONS_FIRST,
     RA_INTRO_CHALLENGERS_FIRST,
-    RA_INTRO_MAX UMETA(Hidden),
 };
 

@@ -1,5 +1,8 @@
 #include "ELCareerWidgetBase.h"
 
+UELCareerWidgetBase::UELCareerWidgetBase() {
+}
+
 void UELCareerWidgetBase::InitBroadcastSetting(AELCareerStateManager* CareerStateManager) {
 }
 
@@ -10,6 +13,4 @@ float UELCareerWidgetBase::GetWidgetAnimationSpeed() {
 void UELCareerWidgetBase::ClearBroadcastSetting() {
 }
 
-UELCareerWidgetBase::UELCareerWidgetBase() {
-}
 

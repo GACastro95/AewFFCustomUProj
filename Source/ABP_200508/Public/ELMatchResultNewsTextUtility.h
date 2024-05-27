@@ -14,6 +14,7 @@ class ABP_200508_API UELMatchResultNewsTextUtility : public UBlueprintFunctionLi
     GENERATED_BODY()
 public:
     UELMatchResultNewsTextUtility();
+
     UFUNCTION(BlueprintCallable)
     static void ReplaceWrestlerName(FString& OutText, const FString& Format, const FString& WinWrestlerName, const FString& WinWrestlerShortName, const FString& LoseWrestlerName, const FString& LoseWrestlerShortName, const FString& WinTeamName, const FString& LoseTeamName);
     

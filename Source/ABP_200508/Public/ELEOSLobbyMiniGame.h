@@ -54,7 +54,8 @@ private:
     FOnMiniGameNotify OnMiniGameNotifyEvent;
     
 public:
-    AELEOSLobbyMiniGame();
+    AELEOSLobbyMiniGame(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool Setup(UEOSUser* InSelf, UELEOSLobby* InELEOSLobby, UELEOSLobbyMiniGameInfo* Info, FOnSetupCompleteEvent OnSetupComplete, FOnMiniGameNotify OnNotify, FOnMiniGameOwnerSelectInfo OnOwnerSelectInfo);
     

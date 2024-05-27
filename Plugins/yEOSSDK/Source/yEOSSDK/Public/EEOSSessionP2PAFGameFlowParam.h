@@ -5,6 +5,6 @@
 UENUM(BlueprintType)
 enum class EEOSSessionP2PAFGameFlowParam : uint8 {
     None,
-    StepHistoryMax = 0x10,
+    StepHistoryMax = 16,
 };
 

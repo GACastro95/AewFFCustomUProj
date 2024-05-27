@@ -1,5 +1,9 @@
 #include "EOSFriendUser.h"
 
+UEOSFriendUser::UEOSFriendUser() {
+    this->m_pcPresence = NULL;
+}
+
 bool UEOSFriendUser::RequestGetPresence() {
     return false;
 }
@@ -20,7 +24,4 @@ UEOSPresenceBase* UEOSFriendUser::GetEOSPresence() {
     return NULL;
 }
 
-UEOSFriendUser::UEOSFriendUser() {
-    this->m_pcPresence = NULL;
-}
 

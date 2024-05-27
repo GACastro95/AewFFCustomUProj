@@ -4,3 +4,4 @@ UELSSAnimNotifyState_RestrictUpperBodyAnim::UELSSAnimNotifyState_RestrictUpperBo
     this->ResetAimOffsetAngle = false;
 }
 
+

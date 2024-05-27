@@ -135,7 +135,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NoFallTime;
     
-    UELSSCharacterMovementComponent();
+    UELSSCharacterMovementComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Client, Unreliable)
     void SSServerMoveResponse(const FSSMoveResponse& response, int32 inMultiMoved);

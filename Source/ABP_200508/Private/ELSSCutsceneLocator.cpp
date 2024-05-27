@@ -1,5 +1,6 @@
 #include "ELSSCutsceneLocator.h"
 
-AELSSCutsceneLocator::AELSSCutsceneLocator() {
+AELSSCutsceneLocator::AELSSCutsceneLocator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -16,6 +16,7 @@ private:
     
 public:
     UELEOSLobbyPacketRequest();
+
     UFUNCTION(BlueprintCallable)
     void SetData(EELEOSLobbyPacketRequestType Type, UObject* Data);
     

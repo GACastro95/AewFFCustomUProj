@@ -15,6 +15,7 @@ class CREATION_API UFELMovesUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFELMovesUtility();
+
 private:
     UFUNCTION(BlueprintCallable)
     static void SortPlayerStartArray(UPARAM(Ref) TArray<APlayerStart*>& PlayerStartArray);

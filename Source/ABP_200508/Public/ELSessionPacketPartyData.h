@@ -16,6 +16,7 @@ private:
     
 public:
     UELSessionPacketPartyData();
+
     UFUNCTION(BlueprintCallable)
     TArray<FString> GetPartyMemberPUID();
     

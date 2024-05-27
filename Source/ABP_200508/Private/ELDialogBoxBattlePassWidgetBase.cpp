@@ -1,5 +1,8 @@
 #include "ELDialogBoxBattlePassWidgetBase.h"
 
+UELDialogBoxBattlePassWidgetBase::UELDialogBoxBattlePassWidgetBase() {
+}
+
 void UELDialogBoxBattlePassWidgetBase::Setup(int32 _addPoint) {
 }
 
@@ -19,6 +22,4 @@ FLevelProgressRateParam UELDialogBoxBattlePassWidgetBase::GetLevelProgressRatePa
 void UELDialogBoxBattlePassWidgetBase::EndDialog() {
 }
 
-UELDialogBoxBattlePassWidgetBase::UELDialogBoxBattlePassWidgetBase() {
-}
 

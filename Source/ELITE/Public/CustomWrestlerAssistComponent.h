@@ -127,7 +127,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UMyWrestlerDataObject* EditingData;
     
-    UCustomWrestlerAssistComponent();
+    UCustomWrestlerAssistComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ValidateFaceType(EFaceType& NowFaceType);
     

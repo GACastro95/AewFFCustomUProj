@@ -11,7 +11,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FButtonClick_Delegate ButtonClick_Dispatcher;
     
-    UInGameMovesPreviewMenu();
+    UInGameMovesPreviewMenu(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSelectIndex(int32 _SelectIndex);
     

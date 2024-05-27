@@ -15,6 +15,7 @@ public:
     FMoviePlayerEvent OnMoviePlayerEvent;
     
     UELMoviePlayerBase();
+
     UFUNCTION(BlueprintCallable)
     bool Stop();
     

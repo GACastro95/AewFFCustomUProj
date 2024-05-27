@@ -7,7 +7,7 @@ enum class ESaveDataAccessFlag : uint8 {
     None,
     Validation,
     Comparation,
-    Type = 0x4,
-    ALL = 0xFF,
+    Type = 4,
+    ALL = 255,
 };
 

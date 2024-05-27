@@ -16,6 +16,7 @@ class ABP_200508_API UUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UUtilityFunction();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static float TwoVectorsFromAngle(FVector _Vec1, FVector _Vec2);
     

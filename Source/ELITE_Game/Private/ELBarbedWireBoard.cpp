@@ -1,5 +1,6 @@
 #include "ELBarbedWireBoard.h"
 
-AELBarbedWireBoard::AELBarbedWireBoard() {
+AELBarbedWireBoard::AELBarbedWireBoard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

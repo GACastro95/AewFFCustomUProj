@@ -14,7 +14,8 @@ protected:
     EELNetRole ELNetRole;
     
 public:
-    AELNetPawn();
+    AELNetPawn(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool SetELNetTemporaryAuthorityBP(bool bEnabled);
     
@@ -102,7 +103,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EventInput_EntranceCamera_Next_Pressed();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

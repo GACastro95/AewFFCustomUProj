@@ -1,5 +1,19 @@
 #include "ELIngameHUDHPGaugeBase.h"
 
+UELIngameHUDHPGaugeBase::UELIngameHUDHPGaugeBase() {
+    this->NormalGaugeTexture = NULL;
+    this->MaxGaugeTexture = NULL;
+    this->SpecialGaugeTexture = NULL;
+    this->DangerGaugeTexture = NULL;
+    this->KOGaugeTexture = NULL;
+    this->OwnerPlayerIndex = -1;
+    this->ParameterDataTable = NULL;
+    this->GaugeAnimation_DelayTime = 0.00f;
+    this->GaugeAnimation_AnimationSpeed = 1.00f;
+    this->bUseTagActiveIcon_N = false;
+    this->UseEliminateCount_N = false;
+}
+
 void UELIngameHUDHPGaugeBase::UpdateGaugeColor_Native(UImage* HUDGauge, UImage* HUDGaugeDiff, UImage* SpecialTex, UImage* RingtimeTex) {
 }
 
@@ -90,17 +104,4 @@ UTexture2D* UELIngameHUDHPGaugeBase::GetGaugeTexture(bool NewIsExciteState, bool
 void UELIngameHUDHPGaugeBase::GetGaugeMaterialParameter(float& MainParam, float& DiffParam, bool& IsPlus) {
 }
 
-UELIngameHUDHPGaugeBase::UELIngameHUDHPGaugeBase() {
-    this->NormalGaugeTexture = NULL;
-    this->MaxGaugeTexture = NULL;
-    this->SpecialGaugeTexture = NULL;
-    this->DangerGaugeTexture = NULL;
-    this->KOGaugeTexture = NULL;
-    this->OwnerPlayerIndex = -1;
-    this->ParameterDataTable = NULL;
-    this->GaugeAnimation_DelayTime = 0.00f;
-    this->GaugeAnimation_AnimationSpeed = 1.00f;
-    this->bUseTagActiveIcon_N = false;
-    this->UseEliminateCount_N = false;
-}
 

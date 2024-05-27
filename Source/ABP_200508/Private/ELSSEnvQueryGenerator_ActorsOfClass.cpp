@@ -5,3 +5,4 @@ UELSSEnvQueryGenerator_ActorsOfClass::UELSSEnvQueryGenerator_ActorsOfClass() {
     this->SSActorType = ESSActorType::Misc;
 }
 
+

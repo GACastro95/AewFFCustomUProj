@@ -13,6 +13,7 @@ class CRIWARERUNTIME_API UAtomProfileData : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAtomProfileData();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static TArray<FAtomProfileItem> CriWareAdx2ProfileDataUpdate(const UObject* WorldContextObject);
     

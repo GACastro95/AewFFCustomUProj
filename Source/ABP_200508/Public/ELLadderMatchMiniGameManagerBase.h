@@ -11,7 +11,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELLadderMatchMiniGameManagerBase : public AActor {
     GENERATED_BODY()
 public:
-    AELLadderMatchMiniGameManagerBase();
+    AELLadderMatchMiniGameManagerBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetProgress(int32 Progress);

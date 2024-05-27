@@ -1,5 +1,9 @@
 #include "EliteGameSettings.h"
 
+UEliteGameSettings::UEliteGameSettings() {
+    this->bEnableIK = true;
+}
+
 UDataTable* UEliteGameSettings::GetSfxListTable() {
     return NULL;
 }
@@ -32,7 +36,4 @@ UDataTable* UEliteGameSettings::GetHomeTownTable() {
     return NULL;
 }
 
-UEliteGameSettings::UEliteGameSettings() {
-    this->bEnableIK = true;
-}
 

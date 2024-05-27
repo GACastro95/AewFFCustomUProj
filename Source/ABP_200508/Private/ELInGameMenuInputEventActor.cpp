@@ -1,5 +1,8 @@
 #include "ELInGameMenuInputEventActor.h"
 
+AELInGameMenuInputEventActor::AELInGameMenuInputEventActor() {
+}
+
 void AELInGameMenuInputEventActor::UnBindInputEventOtherController() {
 }
 
@@ -27,6 +30,4 @@ bool AELInGameMenuInputEventActor::BindInputEvent(AELInGamePlayerControllerBase*
     return false;
 }
 
-AELInGameMenuInputEventActor::AELInGameMenuInputEventActor() {
-}
 

@@ -14,5 +14,6 @@ public:
     FString UniqueNetID;
     
     USSModeAntiCheatData();
+
 };
 

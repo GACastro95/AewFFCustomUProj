@@ -10,6 +10,7 @@ class ABP_200508_API UELGaugeRoster : public UUserWidget {
     GENERATED_BODY()
 public:
     UELGaugeRoster();
+
     UFUNCTION(BlueprintCallable)
     void SetTagActive_N(bool bActive);
     

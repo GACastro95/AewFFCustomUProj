@@ -1,5 +1,10 @@
 #include "ELEntranceCutsceneFadeManager.h"
 
+UELEntranceCutsceneFadeManager::UELEntranceCutsceneFadeManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->FadeWidgetClass = NULL;
+    this->FadeWidget = NULL;
+}
+
 bool UELEntranceCutsceneFadeManager::IsFadeFinished() const {
     return false;
 }
@@ -14,8 +19,4 @@ UUserWidget* UELEntranceCutsceneFadeManager::CreateFadeWidget() {
     return NULL;
 }
 
-UELEntranceCutsceneFadeManager::UELEntranceCutsceneFadeManager() {
-    this->FadeWidgetClass = NULL;
-    this->FadeWidget = NULL;
-}
 

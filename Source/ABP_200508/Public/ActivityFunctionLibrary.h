@@ -11,6 +11,7 @@ class UActivityFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UActivityFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void StartActivity(const FString& ActivityId);
     

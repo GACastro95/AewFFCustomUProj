@@ -1,5 +1,20 @@
 #include "ELOnlineRankCalculator.h"
 
+UELOnlineRankCalculator::UELOnlineRankCalculator() {
+    this->RankArray.AddDefaulted(11);
+    this->SSPlayerRankTable.AddDefaulted(12);
+    this->WinPoint = 10;
+    this->LosePoint = -4;
+    this->WinStreakCoeff = 0.00f;
+    this->WinStreakCoeff2 = 1.00f;
+    this->LoseStreakCoeff = -1.00f;
+    this->LoseStreakCoeff2 = 0.00f;
+    this->RankDiffWinBonus = 10;
+    this->RankDiffLosePenalty = -10;
+    this->LeaderboardRankMax = 100;
+    this->RankPointMax = 999999990;
+}
+
 int32 UELOnlineRankCalculator::GetSSPlayerRankFromPlayerRankPoint(int32 RankPoint, int32 LeaderboardRank) const {
     return 0;
 }
@@ -32,18 +47,4 @@ int32 UELOnlineRankCalculator::CalcAddPoint(bool Win, bool Lose, int32 WinStreak
     return 0;
 }
 
-UELOnlineRankCalculator::UELOnlineRankCalculator() {
-    this->RankArray.AddDefaulted(11);
-    this->SSPlayerRankTable.AddDefaulted(12);
-    this->WinPoint = 10;
-    this->LosePoint = -4;
-    this->WinStreakCoeff = 0.00f;
-    this->WinStreakCoeff2 = 1.00f;
-    this->LoseStreakCoeff = -1.00f;
-    this->LoseStreakCoeff2 = 0.00f;
-    this->RankDiffWinBonus = 10;
-    this->RankDiffLosePenalty = -10;
-    this->LeaderboardRankMax = 100;
-    this->RankPointMax = 999999990;
-}
 

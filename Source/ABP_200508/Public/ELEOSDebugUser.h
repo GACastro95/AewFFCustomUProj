@@ -23,6 +23,7 @@ private:
     bool ForceSanitizeText;
     
 public:
-    AELEOSDebugUser();
+    AELEOSDebugUser(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -9,6 +9,7 @@ class UELChunkInstallUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELChunkInstallUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SetChunkInstallSuccessDelegate(FChunkInstallDelegate chunkInstallDelegate);
     

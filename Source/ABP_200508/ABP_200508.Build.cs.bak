@@ -1,0 +1,33 @@
+using UnrealBuildTool;
+
+public class ABP_200508 : ModuleRules {
+    public ABP_200508(ReadOnlyTargetRules Target) : base(Target) {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        bLegacyPublicIncludePaths = false;
+        ShadowVariableWarningLevel = WarningLevel.Warning;
+        
+        PublicDependencyModuleNames.AddRange(new string[] {
+            "AIModule",
+            "AnimationSharing",
+            "ApexDestruction",
+            "CableComponent",
+            "CinematicCamera",
+            "Core",
+            "CoreUObject",
+            "Creation",
+            "CriWareRuntime",
+            "DeveloperSettings",
+            "ELITE_Core",
+            "ELITE_Game",
+            "Engine",
+            "GameplayCameras",
+            "InputCore",
+            "LevelSequence",
+            "PhysXVehicles",
+            "SlateCore",
+            "UMG",
+            "yEOSSDK",
+            "yGS2Client",
+        });
+    }
+}

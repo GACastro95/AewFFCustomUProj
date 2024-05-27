@@ -16,6 +16,7 @@ protected:
     
 public:
     UFileManaMovie();
+
     UFUNCTION(BlueprintCallable)
     void SetFilePath(const FString& Path);
     

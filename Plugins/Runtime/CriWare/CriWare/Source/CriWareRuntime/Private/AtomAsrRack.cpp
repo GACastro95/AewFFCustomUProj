@@ -1,5 +1,9 @@
 #include "AtomAsrRack.h"
 
+UAtomAsrRack::UAtomAsrRack() {
+    this->RackId = -1;
+}
+
 void UAtomAsrRack::SetEffectBypass(const FString& BusName, const FString& EffectName, bool Bypasses) {
 }
 
@@ -50,7 +54,4 @@ void UAtomAsrRack::AttachDspBusSetting(const FString& SettingName) {
 void UAtomAsrRack::ApplyDspBusSnapshot(const FString& SnapshotName, int32 Milliseconds) {
 }
 
-UAtomAsrRack::UAtomAsrRack() {
-    this->RackId = -1;
-}
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class CRIWARERUNTIME_API UAtomUnrealSoundRenderer : public USoundWaveProcedural {
     GENERATED_BODY()
 public:
-    UAtomUnrealSoundRenderer(const FObjectInitializer& ObjectInitializer);
+    UAtomUnrealSoundRenderer();
+
 };
 

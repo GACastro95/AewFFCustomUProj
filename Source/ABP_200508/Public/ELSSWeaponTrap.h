@@ -28,9 +28,10 @@ protected:
     int32 Quantity;
     
 public:
-    AELSSWeaponTrap();
+    AELSSWeaponTrap(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetQuantity(int32 inQuantity);

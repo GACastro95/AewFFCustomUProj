@@ -1,5 +1,12 @@
 #include "EditWrestlerPartsAsset.h"
 
+UEditWrestlerPartsAsset::UEditWrestlerPartsAsset() {
+    this->bHasPartsCategoryDetails = false;
+    this->SkeletalMesh = NULL;
+    this->bReplaceMesh = false;
+    this->bTexChange = false;
+}
+
 void UEditWrestlerPartsAsset::UpdateEditPartsCategoryDetails() {
 }
 
@@ -17,10 +24,4 @@ int32 UEditWrestlerPartsAsset::GetColorSettingNum() const {
     return 0;
 }
 
-UEditWrestlerPartsAsset::UEditWrestlerPartsAsset() {
-    this->bHasPartsCategoryDetails = false;
-    this->SkeletalMesh = NULL;
-    this->bReplaceMesh = false;
-    this->bTexChange = false;
-}
 

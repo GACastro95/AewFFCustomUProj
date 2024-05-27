@@ -12,6 +12,7 @@ class ABP_200508_API UELKeyConfigUtilityFunction : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UELKeyConfigUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SwapKeyMapSettingData(UPARAM(Ref) FKeyMapSettingData& _dataA, UPARAM(Ref) FKeyMapSettingData& _dataB);
     

@@ -20,7 +20,8 @@ protected:
     int32 TextureType;
     
 public:
-    AELSSMainMenuBackScreenManager();
+    AELSSMainMenuBackScreenManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateBackScreenTick(float InDeltaTime);

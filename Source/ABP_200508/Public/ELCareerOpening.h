@@ -8,5 +8,6 @@ class ABP_200508_API UELCareerOpening : public UELCareerMovieSceneWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerOpening();
+
 };
 

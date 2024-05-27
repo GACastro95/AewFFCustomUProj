@@ -1,5 +1,8 @@
 #include "ELChallengeUtilityFunction.h"
 
+UELChallengeUtilityFunction::UELChallengeUtilityFunction() {
+}
+
 void UELChallengeUtilityFunction::UpdateTwoPlatoonCntRankMatch(int32 _cnt) {
 }
 
@@ -234,6 +237,4 @@ void UELChallengeUtilityFunction::AddBlowOpponentWhoCamebackFromRope() {
 void UELChallengeUtilityFunction::AddBecameFinisher() {
 }
 
-UELChallengeUtilityFunction::UELChallengeUtilityFunction() {
-}
 

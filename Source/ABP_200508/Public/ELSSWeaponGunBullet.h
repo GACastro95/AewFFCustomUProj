@@ -86,9 +86,10 @@ protected:
     float AfterHitLifeSpan;
     
 public:
-    AELSSWeaponGunBullet();
+    AELSSWeaponGunBullet(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void Setup(AELSSPlayer* inAttackUser, int32 inWeaponId, int32 inMoveId, int32 inStateHash);
     
@@ -96,7 +97,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

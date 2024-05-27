@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_SetSSPlayerData : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_SetSSPlayerData();
+
     UFUNCTION(BlueprintCallable)
     void SetPlayerData(FYGS2SSPlayerData Data);
     

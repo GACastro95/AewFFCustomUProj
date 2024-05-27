@@ -26,6 +26,7 @@ private:
     
 public:
     UELShopGeneralWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateParameter(EShopDisplayCategory _targetCategory);

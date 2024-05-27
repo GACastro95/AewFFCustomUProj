@@ -12,5 +12,6 @@ public:
     ESSWeaponTrapObjectType WeaponTrapObjectType;
     
     UELSSEnvQueryGenerator_ActorsOfWeaponTrapObject();
+
 };
 

@@ -35,6 +35,7 @@ protected:
     
 public:
     UAtomWavePlayer();
+
     UFUNCTION(BlueprintCallable)
     void StopDelayed(float DelayTime);
     

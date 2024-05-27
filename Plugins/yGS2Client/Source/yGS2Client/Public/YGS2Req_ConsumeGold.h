@@ -10,6 +10,7 @@ class YGS2CLIENT_API UYGS2Req_ConsumeGold : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_ConsumeGold();
+
     UFUNCTION(BlueprintCallable)
     void SetListMode(int32 _sOffset, int32 _sLimit, int32 _sContentKind, const FString& _strContentID);
     

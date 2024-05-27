@@ -21,6 +21,7 @@ class ABP_200508_API UYMiniGameOptions_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYMiniGameOptions_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetCorrectAnswer(const FString& _CorrectAnswer);
     

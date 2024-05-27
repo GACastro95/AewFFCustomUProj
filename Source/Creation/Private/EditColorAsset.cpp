@@ -1,5 +1,8 @@
 #include "EditColorAsset.h"
 
+UEditColorAsset::UEditColorAsset() {
+}
+
 bool UEditColorAsset::GetIndexedColor(const int32 ColorID, FLinearColor& Out) const {
     return false;
 }
@@ -8,6 +11,4 @@ bool UEditColorAsset::GetGroupColors(const FEditColorGroupID inGroupId, TArray<i
     return false;
 }
 
-UEditColorAsset::UEditColorAsset() {
-}
 

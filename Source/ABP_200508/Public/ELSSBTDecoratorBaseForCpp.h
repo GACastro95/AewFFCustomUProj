@@ -8,5 +8,6 @@ class ABP_200508_API UELSSBTDecoratorBaseForCpp : public UELSSBTDecoratorBase {
     GENERATED_BODY()
 public:
     UELSSBTDecoratorBaseForCpp();
+
 };
 

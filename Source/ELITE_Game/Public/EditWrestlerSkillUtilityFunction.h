@@ -11,6 +11,7 @@ class ELITE_GAME_API UEditWrestlerSkillUtilityFunction : public UBlueprintFuncti
     GENERATED_BODY()
 public:
     UEditWrestlerSkillUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SetPassiveSkill(UPARAM(Ref) FWrestlingSkillParam& Param, const int32 Type, const bool Value);
     

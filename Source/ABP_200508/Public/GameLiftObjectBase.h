@@ -21,6 +21,7 @@ public:
     TArray<FPingData> msTargetRegionData;
     
     UGameLiftObjectBase();
+
     UFUNCTION(BlueprintCallable)
     void UpdateTargetRegionLatencyData();
     

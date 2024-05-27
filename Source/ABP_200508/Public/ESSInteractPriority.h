@@ -5,12 +5,12 @@
 UENUM(BlueprintType)
 enum class ESSInteractPriority : uint8 {
     Default,
-    Player = 0xFF,
-    Vehicle = 0xFE,
-    TreasureBox = 0xFD,
-    GimmickInteractable = 0xFC,
-    PickupDefault = 0xFB,
-    PickupWeapon = 0xFA,
-    PickupItem = 0xF9,
+    Player = 255,
+    Vehicle = 254,
+    TreasureBox = 253,
+    GimmickInteractable = 252,
+    PickupDefault = 251,
+    PickupWeapon = 250,
+    PickupItem = 249,
 };
 

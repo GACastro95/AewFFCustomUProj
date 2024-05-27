@@ -8,5 +8,6 @@ class USessionPlayerStateData : public UEOSSessionP2PPacketBase {
     GENERATED_BODY()
 public:
     USessionPlayerStateData();
+
 };
 

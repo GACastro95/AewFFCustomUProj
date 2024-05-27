@@ -13,6 +13,7 @@ class YEOSSDK_API UEOSNatP2PStringPacket : public UEOSNatP2PPacketBase {
     GENERATED_BODY()
 public:
     UEOSNatP2PStringPacket();
+
     UFUNCTION(BlueprintCallable)
     bool SetString(const FString& _strText);
     

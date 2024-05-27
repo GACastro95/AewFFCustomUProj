@@ -8,6 +8,7 @@ class ABP_200508_API UELCareerStatusWidgetBase : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerStatusWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateToDynamiteSquareNum(bool _bAnimation);
     

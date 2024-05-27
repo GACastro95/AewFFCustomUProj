@@ -11,6 +11,7 @@ class ELITE_GAME_API URA_SlotVictoryChampionShip : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     URA_SlotVictoryChampionShip();
+
 private:
     UFUNCTION(BlueprintCallable)
     static USoundAtomCue* GetSlotVictoryChampionShipSoundAtom(const FRA_SlotVictoryChampionShip_Info& _SlotVictoryChampionShip_Info);

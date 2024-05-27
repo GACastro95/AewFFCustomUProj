@@ -8,6 +8,7 @@ class ELITE_API UELShopAEWGoldWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELShopAEWGoldWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPressedMoveTab(bool _isLeft);

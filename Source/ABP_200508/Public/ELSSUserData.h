@@ -11,6 +11,7 @@ class ABP_200508_API UELSSUserData : public UObject {
     GENERATED_BODY()
 public:
     UELSSUserData();
+
     UFUNCTION(BlueprintCallable)
     void SetSSUserData(const FYGS2SSPlayerData& dat);
     

@@ -16,6 +16,7 @@ public:
     UDataTable* EditItemListTable;
     
     UELEditItemListDataAssetBase();
+
     UFUNCTION(BlueprintCallable)
     void LoadDataTable(const TSoftObjectPtr<UDataTable>& Source, UDataTable*& DataTable);
     

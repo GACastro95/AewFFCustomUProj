@@ -16,6 +16,7 @@ public:
     FOnCreateGameSessionSuccess onCreateGameSession_Success;
     
     UGLAPI_CreateGameSession();
+
     UFUNCTION(BlueprintCallable)
     static UGLAPI_CreateGameSession* CreateGameSessionAPI(UGameLiftClientObject* client, FCreateGameSession_RequestParam createConfig);
     

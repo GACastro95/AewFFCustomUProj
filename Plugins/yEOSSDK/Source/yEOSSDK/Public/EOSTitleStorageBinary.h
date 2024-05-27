@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSTitleStorageBinary : public UEOSCommon {
     GENERATED_BODY()
 public:
     UEOSTitleStorageBinary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool Unzip(TArray<FEOSFileOnMemory>& _cFiles) const;
     

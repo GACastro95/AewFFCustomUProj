@@ -134,6 +134,7 @@ public:
     FOnUpdateMemberCount OnUpdateMemberCount;
     
     UELEOSGameSessionMatching();
+
     UFUNCTION(BlueprintCallable)
     bool Setup(UELEOSGameSession* _GameSession, UELEOSLobby* _Lobby, UEOSUser* _User);
     

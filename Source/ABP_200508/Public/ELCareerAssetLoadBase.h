@@ -45,7 +45,8 @@ private:
     TArray<UAnimMontage*> m_pPropAnimation;
     
 public:
-    AELCareerAssetLoadBase();
+    AELCareerAssetLoadBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetDataTable_TalkAnimation(UDataTable* pDataTable);

@@ -21,6 +21,7 @@ public:
     FOnStartGameSessionPlacementFailed OnFailed;
     
     UGLAPI_StartGameSessionPlace();
+
     UFUNCTION(BlueprintCallable)
     static UGLAPI_StartGameSessionPlace* StartGameSessionPlacementAPItoRequestParam(UGameLiftClientObject* client);
     

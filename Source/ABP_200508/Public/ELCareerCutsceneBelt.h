@@ -12,7 +12,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerCutsceneBelt : public AELEntranceCutsceneWeaponBase {
     GENERATED_BODY()
 public:
-    AELCareerCutsceneBelt();
+    AELCareerCutsceneBelt(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UMeshComponent* GetMesh(ECareerCutsceneCastType Cast);
     

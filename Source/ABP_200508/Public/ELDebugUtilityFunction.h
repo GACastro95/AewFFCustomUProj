@@ -11,6 +11,7 @@ class ABP_200508_API UELDebugUtilityFunction : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UELDebugUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static FString TakeScreenShotsCore(bool _showUI, const FString& _settingfileName, const FString& _fileDirectory);
     

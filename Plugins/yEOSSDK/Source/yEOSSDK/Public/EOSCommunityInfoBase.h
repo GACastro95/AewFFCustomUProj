@@ -41,6 +41,7 @@ protected:
     
 public:
     UEOSCommunityInfoBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsOwnerUser(const UEOSUserBase* User) const;
     

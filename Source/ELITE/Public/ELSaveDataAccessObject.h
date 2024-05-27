@@ -14,6 +14,7 @@ private:
     
 public:
     UELSaveDataAccessObject();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnInitFileList(const ESaveDataType SaveDataType, TArray<FString>& Out);

@@ -8,5 +8,6 @@ class ABP_200508_API UELSSGuardState : public UELSSActionStateBase {
     GENERATED_BODY()
 public:
     UELSSGuardState();
+
 };
 

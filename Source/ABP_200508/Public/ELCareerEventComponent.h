@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ABP_200508_API UELCareerEventComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UELCareerEventComponent();
+    UELCareerEventComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

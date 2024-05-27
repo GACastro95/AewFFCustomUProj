@@ -1,5 +1,6 @@
 #include "ELWireBarricade.h"
 
-AELWireBarricade::AELWireBarricade() {
+AELWireBarricade::AELWireBarricade(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

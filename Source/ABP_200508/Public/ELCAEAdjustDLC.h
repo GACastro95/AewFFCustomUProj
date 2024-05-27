@@ -33,6 +33,7 @@ public:
     TSoftObjectPtr<UDataTable> MovieDataTable;
     
     UELCAEAdjustDLC();
+
     UFUNCTION(BlueprintCallable)
     void Setup();
     

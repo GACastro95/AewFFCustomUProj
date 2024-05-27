@@ -71,8 +71,9 @@ protected:
     
 public:
     AELSSDestructiblePropBase();
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Setup();
@@ -106,7 +107,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void AddAttentionPoint(AActor* Actor);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

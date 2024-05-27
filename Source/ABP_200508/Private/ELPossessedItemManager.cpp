@@ -1,5 +1,8 @@
 #include "ELPossessedItemManager.h"
 
+UELPossessedItemManager::UELPossessedItemManager() {
+}
+
 void UELPossessedItemManager::SetupPossessedItemDataTable(TSoftObjectPtr<UDataTable> _itemDT, UObject* _pWorldContextObject) {
 }
 
@@ -36,6 +39,4 @@ void UELPossessedItemManager::GetAllItemParam(TArray<FPossessedItemParam>& _outR
 void UELPossessedItemManager::AddItemQuantity(TArray<FAddPossessItemQuantity> _addItem, FUpdateItemQuantityCompleteDelegate OnResultDelegate) {
 }
 
-UELPossessedItemManager::UELPossessedItemManager() {
-}
 

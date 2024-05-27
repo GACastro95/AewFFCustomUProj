@@ -45,7 +45,8 @@ protected:
     float DefaultEyeHighlightLevel;
     
 public:
-    UELCostume();
+    UELCostume(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateEyeHighlightParameter(float HighlightLevel);
     

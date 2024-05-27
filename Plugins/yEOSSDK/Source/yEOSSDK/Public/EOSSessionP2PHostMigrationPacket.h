@@ -13,6 +13,7 @@ class YEOSSDK_API UEOSSessionP2PHostMigrationPacket : public UEOSSessionP2PSynch
     GENERATED_BODY()
 public:
     UEOSSessionP2PHostMigrationPacket();
+
     UFUNCTION(BlueprintCallable)
     bool SetSessionInfo(UEOSSessionInfo* _pcSessionInfo);
     

@@ -8,6 +8,7 @@ class ABP_200508_API UYHighlights_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYHighlights_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetStartCaptureVideo(bool _bHilights);
     

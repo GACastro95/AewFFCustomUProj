@@ -1,5 +1,14 @@
 #include "ActionWaitPlayerState.h"
 
+UActionWaitPlayerState::UActionWaitPlayerState() {
+    this->WorldContextObject = NULL;
+    this->StateName = ESessionPlayerStateNameType::Initialize;
+    this->State = ESessionPlayerStateType::Num_0;
+    this->bAllMatched = false;
+    this->bSetState = false;
+    this->bCompleted = false;
+}
+
 void UActionWaitPlayerState::OnSessionEvent(EELEOSSessionEventType EventType, EELEOSSessionEventResult EventResult) {
 }
 
@@ -17,12 +26,4 @@ UActionWaitPlayerState* UActionWaitPlayerState::ActionWaitPlayerState(UObject* N
 void UActionWaitPlayerState::Abort() {
 }
 
-UActionWaitPlayerState::UActionWaitPlayerState() {
-    this->WorldContextObject = NULL;
-    this->StateName = ESessionPlayerStateNameType::Initialize;
-    this->State = ESessionPlayerStateType::Num_0;
-    this->bAllMatched = false;
-    this->bSetState = false;
-    this->bCompleted = false;
-}
 

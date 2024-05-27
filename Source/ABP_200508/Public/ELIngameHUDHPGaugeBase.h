@@ -105,6 +105,7 @@ protected:
     
 public:
     UELIngameHUDHPGaugeBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateGaugeColor_Native(UImage* HUDGauge, UImage* HUDGaugeDiff, UImage* SpecialTex, UImage* RingtimeTex);

@@ -1,5 +1,8 @@
 #include "EOSSessionP2PShootingGameControlPacket.h"
 
+UEOSSessionP2PShootingGameControlPacket::UEOSSessionP2PShootingGameControlPacket() {
+}
+
 void UEOSSessionP2PShootingGameControlPacket::SetTransform(FTransform _stTransform) {
 }
 
@@ -35,6 +38,4 @@ int32 UEOSSessionP2PShootingGameControlPacket::GetControlBits() {
 void UEOSSessionP2PShootingGameControlPacket::AppendControlBits(int32 _sControlBits) {
 }
 
-UEOSSessionP2PShootingGameControlPacket::UEOSSessionP2PShootingGameControlPacket() {
-}
 

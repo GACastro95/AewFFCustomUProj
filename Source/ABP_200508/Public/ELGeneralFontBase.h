@@ -16,6 +16,7 @@ private:
     
 public:
     UELGeneralFontBase();
+
     UFUNCTION(BlueprintCallable)
     void ValidForceDisplayIconType(EDisplayButtonIconType _changeIconType);
     

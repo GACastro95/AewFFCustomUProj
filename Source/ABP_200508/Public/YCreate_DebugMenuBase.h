@@ -8,6 +8,7 @@ class ABP_200508_API UYCreate_DebugMenuBase : public UObject {
     GENERATED_BODY()
 public:
     UYCreate_DebugMenuBase();
+
     UFUNCTION(BlueprintCallable)
     void SetLogString(const FString& _LogString);
     

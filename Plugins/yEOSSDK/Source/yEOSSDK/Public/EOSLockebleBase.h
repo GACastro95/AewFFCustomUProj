@@ -9,7 +9,8 @@ class YEOSSDK_API UEOSLockebleBase : public UObject, public IEOSLockableInterfac
     GENERATED_BODY()
 public:
     UEOSLockebleBase();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

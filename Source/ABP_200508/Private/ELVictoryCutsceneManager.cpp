@@ -1,5 +1,8 @@
 #include "ELVictoryCutsceneManager.h"
 
+AELVictoryCutsceneManager::AELVictoryCutsceneManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 
 void AELVictoryCutsceneManager::StartObserveBreakOut() {
 }
@@ -41,6 +44,4 @@ void AELVictoryCutsceneManager::GetMatchRecord_Tag(EWrestlerID_N WrestlerID, FGu
 void AELVictoryCutsceneManager::GetMatchRecord_Single(EWrestlerID_N WrestlerID, FGuid UID, int32& Win, int32& Lose, int32& Draw, bool& IsCareerRecord) {
 }
 
-AELVictoryCutsceneManager::AELVictoryCutsceneManager() {
-}
 

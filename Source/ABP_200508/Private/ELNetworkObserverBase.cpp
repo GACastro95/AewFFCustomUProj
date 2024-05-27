@@ -1,5 +1,8 @@
 #include "ELNetworkObserverBase.h"
 
+UELNetworkObserverBase::UELNetworkObserverBase() {
+}
+
 void UELNetworkObserverBase::SetNetworkEquipment(EELNetworkStatus NetworkStatus) {
 }
 
@@ -24,6 +27,4 @@ void UELNetworkObserverBase::Debug_SetDisableNetwork(bool Disable) {
 void UELNetworkObserverBase::Debug_SetDisableEOS(bool Disable) {
 }
 
-UELNetworkObserverBase::UELNetworkObserverBase() {
-}
 

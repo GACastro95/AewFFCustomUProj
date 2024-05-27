@@ -55,6 +55,7 @@ protected:
     
 public:
     UELSSWidgetHUD_MiniMapInfo();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetAreaShrinkTime(float InSecond);

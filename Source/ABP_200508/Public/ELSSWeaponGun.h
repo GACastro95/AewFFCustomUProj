@@ -16,9 +16,10 @@ protected:
     int32 ammo;
     
 public:
-    AELSSWeaponGun();
+    AELSSWeaponGun(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetAmmo(int32 NewAmmo);

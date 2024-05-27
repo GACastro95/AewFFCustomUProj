@@ -22,6 +22,7 @@ protected:
     
 public:
     UELDialogBoxManagerBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestOpenTutorialDialog(const FDialogBoxResultDelegate& ResultDelegate, UELDialogBoxWidgetBase*& ResultDialog, bool& ResultOpen);
     
@@ -54,6 +55,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestForceCloseDialog(bool CloseALL);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void RequestDlcInfoDialog(const FText& HeaderText, const TArray<FText>& DLCText, const FDialogBoxResultDelegate& ResultDelegate, UELDialogBoxWidgetBase*& ResultDialog, bool& ResultOpen);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestDisconnectedGamePadMessageDialog(int32 MessageType, const FText& Text, const TArray<yEnDialogBoxChoices>& Choises, bool IsSystemDialog, const FDialogBoxResultDelegate& ResultDelegate, const FDialogBoxBeginResultDelegate& BeginResultDelegate, UELDialogBoxWidgetBase*& ResultDialog, bool& ResultOpen);

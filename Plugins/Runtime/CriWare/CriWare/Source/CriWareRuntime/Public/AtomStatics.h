@@ -26,6 +26,7 @@ class CRIWARERUNTIME_API UAtomStatics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAtomStatics();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateDistanceFactorForAllSounds(float ArgDistanceFactor);
     

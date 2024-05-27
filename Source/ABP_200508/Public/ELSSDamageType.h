@@ -8,5 +8,6 @@ class UELSSDamageType : public UDamageType {
     GENERATED_BODY()
 public:
     UELSSDamageType();
+
 };
 

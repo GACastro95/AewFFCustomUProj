@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSSessionP2PLatencyInfoPacket : public UEOSSessionP2PSynchro
     GENERATED_BODY()
 public:
     UEOSSessionP2PLatencyInfoPacket();
+
     UFUNCTION(BlueprintCallable)
     bool Send(int32 _uPacketIndex);
     

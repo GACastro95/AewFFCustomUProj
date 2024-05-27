@@ -1,5 +1,8 @@
 #include "SaveDataObject_CareerMode.h"
 
+USaveDataObject_CareerMode::USaveDataObject_CareerMode() {
+}
+
 bool USaveDataObject_CareerMode::WriteDataFromMyScout(UMyWrestlerDataObject* MyScout) {
     return false;
 }
@@ -316,6 +319,4 @@ void USaveDataObject_CareerMode::AddChoicesSelectResult(int32 _targetId, ECareer
 void USaveDataObject_CareerMode::AddCareerPostCommandEventList(int32 _targetId, FCareerPostCommandEventList _postCommandEventList) {
 }
 
-USaveDataObject_CareerMode::USaveDataObject_CareerMode() {
-}
 

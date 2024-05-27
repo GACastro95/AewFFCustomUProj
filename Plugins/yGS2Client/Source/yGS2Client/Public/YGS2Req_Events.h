@@ -8,6 +8,7 @@ class YGS2CLIENT_API UYGS2Req_Events : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_Events();
+
     UFUNCTION(BlueprintCallable)
     void SetEventData(const FString& _strEventName, const FString& _strDataType, const FString& _strTextData, bool _bAddToDB, bool _bAddToRAW);
     

@@ -24,7 +24,8 @@ protected:
     float SyncHitHeightDiff;
     
 public:
-    UELSSDamageComponent();
+    UELSSDamageComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetBlowVector(const FVector& inVec);
     

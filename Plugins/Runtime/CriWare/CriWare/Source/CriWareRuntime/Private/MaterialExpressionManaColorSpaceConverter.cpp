@@ -8,3 +8,4 @@ UMaterialExpressionManaColorSpaceConverter::UMaterialExpressionManaColorSpaceCon
     this->ConstGamma = 2.20f;
 }
 
+

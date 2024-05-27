@@ -1,5 +1,9 @@
 #include "EOSNatP2PContentPacket.h"
 
+UEOSNatP2PContentPacket::UEOSNatP2PContentPacket() {
+    this->m_pcBinary = NULL;
+}
+
 bool UEOSNatP2PContentPacket::SetContentBinary(UEOSUserContentBinary* _pcContent) {
     return false;
 }
@@ -20,7 +24,4 @@ bool UEOSNatP2PContentPacket::CreateContentPacket(UEOSNatP2PContentPacket*& _pcC
     return false;
 }
 
-UEOSNatP2PContentPacket::UEOSNatP2PContentPacket() {
-    this->m_pcBinary = NULL;
-}
 

@@ -8,6 +8,9 @@ struct FTipsLoadingSaveData {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool IsVisibleTitleDlc;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTipsLoadingExecCountInfo> ExecCountInfoList;
     
     ELITE_GAME_API FTipsLoadingSaveData();

@@ -10,6 +10,5 @@ enum class ESSGameMultiModeState : uint8 {
     EGameMultiModeState_Prepare,
     EGameMultiModeState_Game,
     EGameMultiModeState_End,
-    EGameMultiModeState_MAX UMETA(Hidden),
 };
 

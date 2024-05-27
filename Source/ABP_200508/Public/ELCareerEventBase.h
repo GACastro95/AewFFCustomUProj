@@ -27,7 +27,8 @@ private:
     TArray<AActor*> m_PropArray;
     
 public:
-    AELCareerEventBase();
+    AELCareerEventBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SwitchCameraBP(int32 Index);

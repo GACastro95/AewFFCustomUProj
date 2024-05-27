@@ -8,5 +8,6 @@ class ELITE_CORE_API UEnumUtil : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UEnumUtil();
+
 };
 

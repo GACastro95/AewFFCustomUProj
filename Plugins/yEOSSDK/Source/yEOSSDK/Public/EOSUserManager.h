@@ -58,6 +58,7 @@ private:
     
 public:
     UEOSUserManager();
+
     UFUNCTION(BlueprintCallable)
     bool RemoveUser(UEOSUserBase* _pcUser);
     

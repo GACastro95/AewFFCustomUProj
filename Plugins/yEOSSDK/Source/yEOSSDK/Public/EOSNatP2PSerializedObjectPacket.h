@@ -15,6 +15,7 @@ private:
     
 public:
     UEOSNatP2PSerializedObjectPacket();
+
     UFUNCTION(BlueprintCallable)
     bool SetObject(UObject* _pcObject, int32 _sType, int32 _sId);
     

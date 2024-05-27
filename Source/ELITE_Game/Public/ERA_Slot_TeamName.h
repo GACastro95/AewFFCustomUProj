@@ -28,6 +28,5 @@ enum class ERA_Slot_TeamName : uint8 {
     RA_TN_FTR,
     RA_TN_THE_BROTHERHOOD,
     RA_TN_VARSITY_BLONDES,
-    RA_TN_MAX UMETA(Hidden),
 };
 

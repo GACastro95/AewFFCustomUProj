@@ -10,6 +10,7 @@ class ABP_200508_API UELGameplayUtilityFunction : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UELGameplayUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static UDataTable* GetMovesDataTable_SystemReferee();
     

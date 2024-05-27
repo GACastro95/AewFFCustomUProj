@@ -1,5 +1,11 @@
 #include "ELCostume.h"
 
+UELCostume::UELCostume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MaskMaterial = NULL;
+    this->bCanSkinTone = true;
+    this->DefaultEyeHighlightLevel = 1.00f;
+}
+
 void UELCostume::UpdateEyeHighlightParameter(float HighlightLevel) {
 }
 
@@ -94,9 +100,4 @@ USkeletalMeshComponent* UELCostume::AddPartsAsset(const EEditPartsSlot Slot, UEd
     return NULL;
 }
 
-UELCostume::UELCostume() {
-    this->MaskMaterial = NULL;
-    this->bCanSkinTone = true;
-    this->DefaultEyeHighlightLevel = 1.00f;
-}
 

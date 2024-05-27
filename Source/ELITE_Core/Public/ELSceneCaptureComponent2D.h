@@ -10,6 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StreamingFactor;
     
-    UELSceneCaptureComponent2D();
+    UELSceneCaptureComponent2D(const FObjectInitializer& ObjectInitializer);
+
 };
 

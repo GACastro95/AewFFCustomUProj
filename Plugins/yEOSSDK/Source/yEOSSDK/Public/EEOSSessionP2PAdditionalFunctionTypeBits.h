@@ -7,7 +7,7 @@ enum class EEOSSessionP2PAdditionalFunctionTypeBits : uint8 {
     None,
     DataSharing,
     BindPlayers,
-    HostMigration = 0x4,
-    GameFlowManager = 0x8,
+    HostMigration = 4,
+    GameFlowManager = 8,
 };
 

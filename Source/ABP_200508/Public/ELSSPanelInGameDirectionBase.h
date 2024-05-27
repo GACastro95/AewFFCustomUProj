@@ -18,6 +18,7 @@ protected:
     
 public:
     UELSSPanelInGameDirectionBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetVisibleWatchVC();
     

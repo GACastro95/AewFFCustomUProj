@@ -1,5 +1,8 @@
 #include "ELSSOutGameParamUtility.h"
 
+UELSSOutGameParamUtility::UELSSOutGameParamUtility() {
+}
+
 bool UELSSOutGameParamUtility::GetWrestlerTypeParam(const UObject* WorldContextObject, ESSWrestlerType inWrestlerType, FSSWrestlerTypeParam& OutRow) {
     return false;
 }
@@ -51,6 +54,4 @@ bool UELSSOutGameParamUtility::GetSSOutGameAbilityParam(const UObject* WorldCont
 void UELSSOutGameParamUtility::GetHeatSkillIdAndLevelFromTree(const UObject* WorldContextObject, ESSHeatSkillCategory inCategory, int32 inRow, int32 inColumn, int32& outHeatSkillId, int32& outConditionHeatLevel) {
 }
 
-UELSSOutGameParamUtility::UELSSOutGameParamUtility() {
-}
 

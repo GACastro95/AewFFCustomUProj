@@ -11,6 +11,7 @@ class ABP_200508_API UELMessageWindowMenuWidgetBase : public UELCareerWidgetBase
     GENERATED_BODY()
 public:
     UELMessageWindowMenuWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupTextByStringID(FName _StringID, bool _bReplace, FName _ReplaceString, ECareerRewardEffectType _type);
     

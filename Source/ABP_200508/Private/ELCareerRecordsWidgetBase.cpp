@@ -1,5 +1,8 @@
 #include "ELCareerRecordsWidgetBase.h"
 
+UELCareerRecordsWidgetBase::UELCareerRecordsWidgetBase() {
+}
+
 
 
 bool UELCareerRecordsWidgetBase::IsBeltDispThumbnail(EELBelt eBelt) {
@@ -10,6 +13,4 @@ EELBelt UELCareerRecordsWidgetBase::GetBeltHighestRank() {
     return EELBelt::None;
 }
 
-UELCareerRecordsWidgetBase::UELCareerRecordsWidgetBase() {
-}
 

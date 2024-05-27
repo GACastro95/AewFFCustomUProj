@@ -13,6 +13,7 @@ class ABP_200508_API UELSSSyncMotion : public UObject {
     GENERATED_BODY()
 public:
     UELSSSyncMotion();
+
     UFUNCTION(BlueprintCallable)
     void UpdateTransform(float DeltaTime);
     

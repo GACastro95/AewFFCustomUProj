@@ -11,6 +11,7 @@ class ABP_200508_API USSMenuWrestlerSelectData : public UObject {
     GENERATED_BODY()
 public:
     USSMenuWrestlerSelectData();
+
     UFUNCTION(BlueprintCallable)
     void SetSelectWrestlerParam(const EWrestlerID_N selectWrestlerId, const int32 EditWrestlerID);
     

@@ -1,5 +1,8 @@
 #include "ELChunkInstallUtilityFunction.h"
 
+UELChunkInstallUtilityFunction::UELChunkInstallUtilityFunction() {
+}
+
 void UELChunkInstallUtilityFunction::SetChunkInstallSuccessDelegate(FChunkInstallDelegate chunkInstallDelegate) {
 }
 
@@ -10,6 +13,4 @@ bool UELChunkInstallUtilityFunction::IsAllChunkInstalled() {
 void UELChunkInstallUtilityFunction::CheckAllChunkInstalled() {
 }
 
-UELChunkInstallUtilityFunction::UELChunkInstallUtilityFunction() {
-}
 

@@ -16,7 +16,8 @@ protected:
     int32 DataVersion;
     
 public:
-    AELSSMasterDataLoaderForBotClient();
+    AELSSMasterDataLoaderForBotClient(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetVersionInfo(int32 inDataVersion, const FString& inYGS2URL);
     

@@ -7,9 +7,9 @@ enum class EGfeSDKHighlightType : uint8 {
     NONE,
     Milestone,
     Achievement,
-    Incident = 0x4,
-    StateChange = 0x8,
-    Unannounced = 0x10,
-    MAX = 0x20,
+    Incident = 4,
+    StateChange = 8,
+    Unannounced = 16,
+    MAX = 32,
 };
 

@@ -1,5 +1,8 @@
 #include "EOSAntiCheatDedicatedServer.h"
 
+UEOSAntiCheatDedicatedServer::UEOSAntiCheatDedicatedServer() {
+}
+
 bool UEOSAntiCheatDedicatedServer::SetupInternalCallback() {
     return false;
 }
@@ -15,6 +18,4 @@ bool UEOSAntiCheatDedicatedServer::BeginSession(EEOSAntiCheatClientMode _enCline
     return false;
 }
 
-UEOSAntiCheatDedicatedServer::UEOSAntiCheatDedicatedServer() {
-}
 

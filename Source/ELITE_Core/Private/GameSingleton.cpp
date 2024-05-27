@@ -1,5 +1,10 @@
 #include "GameSingleton.h"
 
+UGameSingleton::UGameSingleton() {
+    this->bTickableWhenPaused = false;
+    this->bTickableInEditor = false;
+}
+
 
 
 
@@ -20,8 +25,4 @@ bool UGameSingleton::CreateSingletonInstance(UGameSingleton*& Instance, const FS
     return false;
 }
 
-UGameSingleton::UGameSingleton() {
-    this->bTickableWhenPaused = false;
-    this->bTickableInEditor = false;
-}
 

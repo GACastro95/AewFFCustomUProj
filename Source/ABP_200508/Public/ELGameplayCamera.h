@@ -60,7 +60,8 @@ protected:
     TArray<AELCharacter_Native*> ViewCharacters;
     
 public:
-    AELGameplayCamera();
+    AELGameplayCamera(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetNativeParam(UCameraComponent* Camera);

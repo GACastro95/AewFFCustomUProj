@@ -11,6 +11,7 @@ class ELITE_GAME_API URA_SlotRosterName : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URA_SlotRosterName();
+
 private:
     UFUNCTION(BlueprintCallable)
     static USoundAtomCue* GetSlotRosterNameSoundAtom(ERA_Slot_RosterName _eRA_Slot_RosterName);

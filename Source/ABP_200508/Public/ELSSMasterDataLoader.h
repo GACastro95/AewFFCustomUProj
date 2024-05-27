@@ -28,7 +28,8 @@ protected:
     UYGS2RequestBase* CurrentYGS2Request;
     
 public:
-    AELSSMasterDataLoader();
+    AELSSMasterDataLoader(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnCompleteLoading(bool inSuccess);
     

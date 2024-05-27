@@ -22,7 +22,8 @@ protected:
     FSSCameraCorrectVolumeInfo CameraCorrectInfo;
     
 public:
-    AELSSMapAreaVolume();
+    AELSSMapAreaVolume(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnEndOverlap(AActor* inOtherActor);
     

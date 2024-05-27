@@ -1,5 +1,14 @@
 #include "ELSSLobbyManager.h"
 
+UELSSLobbyManager::UELSSLobbyManager() {
+    this->bActiveSSLobby = false;
+    this->bProcessingInitialize = false;
+    this->CachedLobby = NULL;
+    this->LastState = EELSSLobbyState::Default;
+    this->LocalMenuState = EELSSLobbyMenuState::Idle;
+    this->bEnableGameSessionMultiPlayFeature = false;
+}
+
 bool UELSSLobbyManager::UpdateMemberAttributes() {
     return false;
 }
@@ -123,12 +132,4 @@ bool UELSSLobbyManager::ChangeMenuState(EELSSLobbyMenuState State) {
     return false;
 }
 
-UELSSLobbyManager::UELSSLobbyManager() {
-    this->bActiveSSLobby = false;
-    this->bProcessingInitialize = false;
-    this->CachedLobby = NULL;
-    this->LastState = EELSSLobbyState::Default;
-    this->LocalMenuState = EELSSLobbyMenuState::Idle;
-    this->bEnableGameSessionMultiPlayFeature = false;
-}
 

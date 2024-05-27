@@ -1,12 +1,14 @@
 #include "RibbonBase.h"
 #include "Components/SkeletalMeshComponent.h"
 
-void ARibbonBase::StartPhysicsSimulation() {
-}
-
-ARibbonBase::ARibbonBase() {
-    this->MeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+ARibbonBase::ARibbonBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+    this->MeshComponent = (USkeletalMeshComponent*)RootComponent;
     this->DefaultPhysics = NULL;
     this->SimulatedPhysics = NULL;
 }
+
+void ARibbonBase::StartPhysicsSimulation() {
+}
+
 

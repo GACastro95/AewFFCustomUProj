@@ -10,6 +10,7 @@ class ELITE_API UELDisplayOptionSettingFunction : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UELDisplayOptionSettingFunction();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     static void InitializeDisplayOptionSetting(UObject* _pWorldContextObject);
     

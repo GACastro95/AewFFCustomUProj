@@ -256,6 +256,7 @@ private:
     
 public:
     UELEOSManager();
+
     UFUNCTION(BlueprintCallable)
     void UpdateEOS();
     
@@ -298,6 +299,9 @@ private:
 public:
     UFUNCTION(BlueprintCallable)
     void SetLastError(EELEOSApiType Type, int32 Value);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetDebug_LobbyDebugMode(int32 _value);
     
     UFUNCTION(BlueprintCallable)
     bool SetCheatPenalty();
@@ -563,6 +567,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UELEOSDebug* GetELEOSDebug() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetDebug_LobbyDebugMode() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetConfigPingUpdateInterval();

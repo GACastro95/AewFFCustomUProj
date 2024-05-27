@@ -1,5 +1,12 @@
 #include "ELSSOnlineTestAnimInstance.h"
 
+UELSSOnlineTestAnimInstance::UELSSOnlineTestAnimInstance() {
+    this->enableDirectionSlot = false;
+    this->directionSlotAngle = 0.00f;
+    this->OwningActor = NULL;
+    this->actorSpeed = 0.00f;
+}
+
 void UELSSOnlineTestAnimInstance::SetEnableDirectionSlot(bool inEnable) {
 }
 
@@ -19,10 +26,4 @@ float UELSSOnlineTestAnimInstance::GetActorSpeed() const {
     return 0.0f;
 }
 
-UELSSOnlineTestAnimInstance::UELSSOnlineTestAnimInstance() {
-    this->enableDirectionSlot = false;
-    this->directionSlotAngle = 0.00f;
-    this->OwningActor = NULL;
-    this->actorSpeed = 0.00f;
-}
 

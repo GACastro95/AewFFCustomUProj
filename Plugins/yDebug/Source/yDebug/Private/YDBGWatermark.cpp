@@ -1,5 +1,8 @@
 #include "YDBGWatermark.h"
 
+UYDBGWatermark::UYDBGWatermark() {
+}
+
 bool UYDBGWatermark::Setup(const FString& _strChangelistFileName) {
     return false;
 }
@@ -40,6 +43,4 @@ bool UYDBGWatermark::CreateYDBGWatermark(UYDBGWatermark*& _pcInst) {
     return false;
 }
 
-UYDBGWatermark::UYDBGWatermark() {
-}
 

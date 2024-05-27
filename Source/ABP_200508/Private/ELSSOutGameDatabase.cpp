@@ -1,5 +1,16 @@
 #include "ELSSOutGameDatabase.h"
 
+AELSSOutGameDatabase::AELSSOutGameDatabase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WrestlerParamTable = NULL;
+    this->WrestlerTypeParamTable = NULL;
+    this->AbilityParamTable = NULL;
+    this->HeatSkillParamTable = NULL;
+    this->HeatSkillTreeParamTable = NULL;
+    this->HeatSkillIconTable = NULL;
+    this->MoveParamTable = NULL;
+    this->MenuFinisherParamTable = NULL;
+}
+
 bool AELSSOutGameDatabase::GetWrestlerTypeParam(ESSWrestlerType inWrestlerType, FSSWrestlerTypeParam& OutRow) {
     return false;
 }
@@ -50,14 +61,4 @@ bool AELSSOutGameDatabase::GetAbilityParam(int32 ID, FSSAbilityParam& OutRow) {
     return false;
 }
 
-AELSSOutGameDatabase::AELSSOutGameDatabase() {
-    this->WrestlerParamTable = NULL;
-    this->WrestlerTypeParamTable = NULL;
-    this->AbilityParamTable = NULL;
-    this->HeatSkillParamTable = NULL;
-    this->HeatSkillTreeParamTable = NULL;
-    this->HeatSkillIconTable = NULL;
-    this->MoveParamTable = NULL;
-    this->MenuFinisherParamTable = NULL;
-}
 

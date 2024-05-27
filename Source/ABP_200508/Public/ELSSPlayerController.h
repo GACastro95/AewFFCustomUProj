@@ -199,7 +199,8 @@ private:
     USSModeAntiCheatData* ssAntiCheatData;
     
 public:
-    AELSSPlayerController();
+    AELSSPlayerController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void WatchTeam_OnReleaseMenuDecision();
     

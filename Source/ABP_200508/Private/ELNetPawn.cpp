@@ -1,5 +1,9 @@
 #include "ELNetPawn.h"
 
+AELNetPawn::AELNetPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ELNetRole = EELNetRole::ROLE_None;
+}
+
 bool AELNetPawn::SetELNetTemporaryAuthorityBP(bool bEnabled) {
     return false;
 }
@@ -42,7 +46,4 @@ bool AELNetPawn::HasELNetAuthorityBP() {
 
 
 
-AELNetPawn::AELNetPawn() {
-    this->ELNetRole = EELNetRole::ROLE_None;
-}
 

@@ -1,5 +1,16 @@
 #include "ELSSVictoryCutscene.h"
 
+AELSSVictoryCutscene::AELSSVictoryCutscene(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->LevelSequence = NULL;
+    this->LSPlayer = NULL;
+    this->LSActor = NULL;
+    this->Locator = NULL;
+    this->IsDonePlay = false;
+    this->TeamCharaPlaceWidth = 800.00f;
+    this->TeamCharaEffectDelayTime = 1.00f;
+    this->TeamCharaMotionDelayTime = 2.00f;
+}
+
 
 
 
@@ -24,14 +35,4 @@ void AELSSVictoryCutscene::OnFinishedPlay_Implementation() {
 void AELSSVictoryCutscene::GetEditWrestlerMusicId(bool& out_success, int32& out_musicId) const {
 }
 
-AELSSVictoryCutscene::AELSSVictoryCutscene() {
-    this->LevelSequence = NULL;
-    this->LSPlayer = NULL;
-    this->LSActor = NULL;
-    this->Locator = NULL;
-    this->IsDonePlay = false;
-    this->TeamCharaPlaceWidth = 800.00f;
-    this->TeamCharaEffectDelayTime = 1.00f;
-    this->TeamCharaMotionDelayTime = 2.00f;
-}
 

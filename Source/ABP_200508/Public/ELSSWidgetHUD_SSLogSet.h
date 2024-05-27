@@ -31,6 +31,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSLogSet();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateLogShowState(float InDeltaTime);

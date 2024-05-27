@@ -1,5 +1,11 @@
 #include "EOSVoice.h"
 
+UEOSVoice::UEOSVoice() {
+    this->m_fInputVolume = 1.00f;
+    this->m_fOutputVolume = 1.00f;
+    this->m_sUserIndex = -1;
+}
+
 bool UEOSVoice::SetOutputVolume(const float _fVolume) {
     return false;
 }
@@ -43,9 +49,4 @@ FString UEOSVoice::GetInputDeviceId() const {
     return TEXT("");
 }
 
-UEOSVoice::UEOSVoice() {
-    this->m_fInputVolume = 1.00f;
-    this->m_fOutputVolume = 1.00f;
-    this->m_sUserIndex = -1;
-}
 

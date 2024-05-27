@@ -7,6 +7,7 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CREATION_API UMyWrestlerDataEditComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UMyWrestlerDataEditComponent();
+    UMyWrestlerDataEditComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_GetInfo : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_GetInfo();
+
     UFUNCTION(BlueprintCallable)
     void SetAccountInfo(const FString& EpicAccountID, const FString& ProductUserID, const FString& EOSIDHash);
     

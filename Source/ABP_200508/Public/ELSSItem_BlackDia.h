@@ -17,6 +17,7 @@ protected:
     int32 Jewel;
     
 public:
-    AELSSItem_BlackDia();
+    AELSSItem_BlackDia(const FObjectInitializer& ObjectInitializer);
+
 };
 

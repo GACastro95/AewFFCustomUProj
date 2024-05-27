@@ -13,5 +13,6 @@ public:
     UEOSStats* m_pcStats;
     
     UEOSStatsOwnRequest();
+
 };
 

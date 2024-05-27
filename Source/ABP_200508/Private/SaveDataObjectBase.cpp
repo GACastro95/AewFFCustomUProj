@@ -1,5 +1,9 @@
 #include "SaveDataObjectBase.h"
 
+USaveDataObjectBase::USaveDataObjectBase() {
+    this->m_pcSaveGameBase = NULL;
+}
+
 void USaveDataObjectBase::SetProductUserID(const FString& _strProductUserID) {
 }
 
@@ -38,7 +42,4 @@ bool USaveDataObjectBase::GetHeader(FELSaveDataHeader& _stHeader) const {
 void USaveDataObjectBase::Dispose() {
 }
 
-USaveDataObjectBase::USaveDataObjectBase() {
-    this->m_pcSaveGameBase = NULL;
-}
 

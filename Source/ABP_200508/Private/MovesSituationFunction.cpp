@@ -1,5 +1,8 @@
 #include "MovesSituationFunction.h"
 
+UMovesSituationFunction::UMovesSituationFunction() {
+}
+
 void UMovesSituationFunction::SearchSpecialDataArray(TArray<FMovesSituation>& OutKeys, const TArray<FMovesSituation>& SortedMovesSituetionArray, bool bIsFinisher, bool bIsTeamFinisher) {
 }
 
@@ -13,6 +16,4 @@ int32 UMovesSituationFunction::GetDataTableIndex(const UDataTable* _Table, const
     return 0;
 }
 
-UMovesSituationFunction::UMovesSituationFunction() {
-}
 

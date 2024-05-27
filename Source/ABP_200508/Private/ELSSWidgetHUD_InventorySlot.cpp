@@ -1,5 +1,24 @@
 #include "ELSSWidgetHUD_InventorySlot.h"
 
+UELSSWidgetHUD_InventorySlot::UELSSWidgetHUD_InventorySlot() {
+    this->StateActiveAnim = NULL;
+    this->StateInActiveAnim = NULL;
+    this->EmptyAnim = NULL;
+    this->DurabilityWidget = NULL;
+    this->GuideButtonWidget = NULL;
+    this->ItemThumbnailTexImage = NULL;
+    this->ItemThumbnailShadowImage = NULL;
+    this->RarityTexImage = NULL;
+    this->RarityTexAddImage = NULL;
+    this->UnlockableItemRarityDataTable = NULL;
+    this->ItemId = 0;
+    this->DurabilityValue = 0;
+    this->PickupType = ESSPickupType::None;
+    this->IsEmptyFlag = false;
+    this->IsSelected = false;
+    this->IsWatchGameMode = false;
+}
+
 
 
 
@@ -58,22 +77,4 @@ void UELSSWidgetHUD_InventorySlot::CheckDonePlayAnimations() {
 void UELSSWidgetHUD_InventorySlot::ApplyWatchGameMode() {
 }
 
-UELSSWidgetHUD_InventorySlot::UELSSWidgetHUD_InventorySlot() {
-    this->StateActiveAnim = NULL;
-    this->StateInActiveAnim = NULL;
-    this->EmptyAnim = NULL;
-    this->DurabilityWidget = NULL;
-    this->GuideButtonWidget = NULL;
-    this->ItemThumbnailTexImage = NULL;
-    this->ItemThumbnailShadowImage = NULL;
-    this->RarityTexImage = NULL;
-    this->RarityTexAddImage = NULL;
-    this->UnlockableItemRarityDataTable = NULL;
-    this->ItemId = 0;
-    this->DurabilityValue = 0;
-    this->PickupType = ESSPickupType::None;
-    this->IsEmptyFlag = false;
-    this->IsSelected = false;
-    this->IsWatchGameMode = false;
-}
 

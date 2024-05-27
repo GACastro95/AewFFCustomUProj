@@ -1,5 +1,11 @@
 #include "SaveDataSystem.h"
 
+USaveDataSystem::USaveDataSystem() {
+    this->m_pcDebugBase = NULL;
+    this->m_pcLowerEngine = NULL;
+    this->m_pcCache = NULL;
+}
+
 bool USaveDataSystem::UpdateLocalFileList_Immediate(bool _bProjectSavedDir) {
     return false;
 }
@@ -203,9 +209,4 @@ bool USaveDataSystem::ChangeAccount(const FString& _strEpicAccountUserID) {
     return false;
 }
 
-USaveDataSystem::USaveDataSystem() {
-    this->m_pcDebugBase = NULL;
-    this->m_pcLowerEngine = NULL;
-    this->m_pcCache = NULL;
-}
 

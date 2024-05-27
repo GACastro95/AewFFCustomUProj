@@ -10,7 +10,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerSnapShotManager : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerSnapShotManager();
+    AELCareerSnapShotManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ResizeSnapshotResolutionFromPlatform(UTextureRenderTarget2D* pTextureRenderTarget2D);

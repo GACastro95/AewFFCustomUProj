@@ -16,6 +16,7 @@ private:
     
 public:
     UEOSIssueNotifyDisabler();
+
     UFUNCTION(BlueprintCallable)
     static bool CreateIssueNotifyDisabler(UEOSIssueNotifyDisabler*& _pcInstance);
     

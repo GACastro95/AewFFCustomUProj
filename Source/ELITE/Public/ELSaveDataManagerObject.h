@@ -13,6 +13,7 @@ protected:
     
 public:
     UELSaveDataManagerObject();
+
 protected:
     UFUNCTION(BlueprintCallable)
     int32 GetMaxSlotNum_N(int32 ItemId);

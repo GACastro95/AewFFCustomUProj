@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_RankMatchRecord : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_RankMatchRecord();
+
     UFUNCTION(BlueprintCallable)
     void SetRankMatchRecord(int32 _sSeasonNo, int32 _sOneOnOneWinNum, int32 _sTwoOnTwoWinNum, int32 _sThreeWayWinNum, int32 _sFourWayWinNum, int32 _sCasinoBrWinNum);
     

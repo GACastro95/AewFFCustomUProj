@@ -8,6 +8,7 @@ class YEOSSDK_API UEOSSessionP2PConnectionPacket : public UEOSSessionP2PPacketBa
     GENERATED_BODY()
 public:
     UEOSSessionP2PConnectionPacket();
+
     UFUNCTION(BlueprintCallable)
     void SetParams(const FString& _strSessionName, const FString& _strDisplayName, const FString& _strProductUserID, const FString& _strEpicAccountID, bool _bNewJoinInUser);
     

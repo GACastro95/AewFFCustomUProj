@@ -11,6 +11,5 @@ enum class EELSessionPacketNotifyType : uint8 {
     NOTIFY_REQUEST_RESENDPLAYERDATA,
     NOTIFY_TEST,
     NOTIFY_TEST_RESPONSE,
-    NOTIFY_MAX UMETA(Hidden),
 };
 

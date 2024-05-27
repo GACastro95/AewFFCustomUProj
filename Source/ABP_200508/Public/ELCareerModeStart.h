@@ -8,5 +8,6 @@ class ABP_200508_API UELCareerModeStart : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerModeStart();
+
 };
 

@@ -13,6 +13,7 @@ class ABP_200508_API UYDebugMenuRootForSSMode : public UELSSInGameDebugMenuRootB
     GENERATED_BODY()
 public:
     UYDebugMenuRootForSSMode();
+
     UFUNCTION(BlueprintCallable)
     bool CreateMenu(const FYDebugMenuParamForSSMode& _stParam);
     

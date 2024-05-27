@@ -18,7 +18,8 @@ private:
     TArray<FCareerItemData> m_CareerItemTableBase;
     
 public:
-    AELCareerItemManager();
+    AELCareerItemManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool UseItems(UELCareerGameParam* _pGameParam, ECareerItemNo _ItemNo);
     

@@ -1,6 +1,17 @@
 #include "AtomAreaSoundVolume.h"
 #include "Net/UnrealNetwork.h"
 
+AAtomAreaSoundVolume::AAtomAreaSoundVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Priority = 0.00f;
+    this->bEnabled = true;
+    this->CollisionProfile = TEXT("NoCollision");
+    this->SoundStopDistance = 100000.00f;
+    this->bIsEnableAtomCompoentPack = false;
+    this->bIsAutoPlaySound = true;
+    this->bIsDeterminationFromVolumeBoundaryPlane = false;
+    this->bEnableRepeatPlayWhenSoundStop = false;
+}
+
 void AAtomAreaSoundVolume::SetPriority(float NewPriority) {
 }
 
@@ -31,14 +42,4 @@ void AAtomAreaSoundVolume::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(AAtomAreaSoundVolume, bEnabled);
 }
 
-AAtomAreaSoundVolume::AAtomAreaSoundVolume() {
-    this->Priority = 0.00f;
-    this->bEnabled = true;
-    this->CollisionProfile = TEXT("NoCollision");
-    this->SoundStopDistance = 100000.00f;
-    this->bIsEnableAtomCompoentPack = false;
-    this->bIsAutoPlaySound = true;
-    this->bIsDeterminationFromVolumeBoundaryPlane = false;
-    this->bEnableRepeatPlayWhenSoundStop = false;
-}
 

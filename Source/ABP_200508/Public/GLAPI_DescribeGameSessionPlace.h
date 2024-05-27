@@ -20,6 +20,7 @@ public:
     FOnDescribeGameSessionPlacementFailed OnFailed;
     
     UGLAPI_DescribeGameSessionPlace();
+
     UFUNCTION(BlueprintCallable)
     static UGLAPI_DescribeGameSessionPlace* DescribeGameSessionPlacementAPI(UGameLiftClientObject* client, const FString& GameSessionPlacementId);
     

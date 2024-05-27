@@ -8,6 +8,7 @@ class ABP_200508_API UYPossessedItem_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYPossessedItem_DebugMenu();
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnUpdatePossessedItemQuantity(bool Result);

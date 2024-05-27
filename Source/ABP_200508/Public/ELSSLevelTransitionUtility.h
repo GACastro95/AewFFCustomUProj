@@ -8,5 +8,6 @@ class ABP_200508_API UELSSLevelTransitionUtility : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UELSSLevelTransitionUtility();
+
 };
 

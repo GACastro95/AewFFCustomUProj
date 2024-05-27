@@ -1,5 +1,9 @@
 #include "CharacterDataManager.h"
 
+UCharacterDataManager::UCharacterDataManager() {
+    this->bImported = false;
+}
+
 void UCharacterDataManager::SortWrestler() {
 }
 
@@ -203,7 +207,4 @@ bool UCharacterDataManager::AddCustomWrestler(UMyWrestlerDataObject* MyWrestlerO
     return false;
 }
 
-UCharacterDataManager::UCharacterDataManager() {
-    this->bImported = false;
-}
 

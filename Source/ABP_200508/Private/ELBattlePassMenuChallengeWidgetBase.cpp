@@ -1,5 +1,8 @@
 #include "ELBattlePassMenuChallengeWidgetBase.h"
 
+UELBattlePassMenuChallengeWidgetBase::UELBattlePassMenuChallengeWidgetBase() {
+}
+
 void UELBattlePassMenuChallengeWidgetBase::SortChallengeProgressDetailInfoList(TArray<FChallengeProgressDetailInfo> _In, TArray<FChallengeProgressDetailInfo>& _out) {
 }
 
@@ -13,6 +16,4 @@ void UELBattlePassMenuChallengeWidgetBase::ResetMoveCursorType() {
 
 
 
-UELBattlePassMenuChallengeWidgetBase::UELBattlePassMenuChallengeWidgetBase() {
-}
 

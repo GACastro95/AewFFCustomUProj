@@ -15,8 +15,9 @@ public:
     TArray<FControlIK> Items;
     
     UELAnimNotify_ControlIK();
+
     UFUNCTION(BlueprintCallable)
-    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
+    void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const;
     
 };
 

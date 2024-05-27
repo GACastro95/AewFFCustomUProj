@@ -103,6 +103,7 @@ protected:
     
 public:
     UELSSWidgetHUD_HpGauge();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateWrestlerHp(float InDeltaTime);

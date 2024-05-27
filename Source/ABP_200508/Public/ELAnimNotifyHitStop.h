@@ -12,6 +12,7 @@ class ABP_200508_API UELAnimNotifyHitStop : public UAnimNotify {
     GENERATED_BODY()
 public:
     UELAnimNotifyHitStop();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELCharacter_Native* GetMainAnimCharacter_N(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) const;
     

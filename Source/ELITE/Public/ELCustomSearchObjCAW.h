@@ -10,6 +10,7 @@ class ELITE_API UELCustomSearchObjCAW : public UELCustomSearchObjBase {
     GENERATED_BODY()
 public:
     UELCustomSearchObjCAW();
+
     UFUNCTION(BlueprintCallable)
     void SearchEditParts(const TArray<FELCustomSearchEditPartsData>& _EditData, const TSet<EELCustomSearch>& CustomSearchSet, TArray<FELCustomSearchEditPartsData>& outData);
     

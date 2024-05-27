@@ -1,5 +1,8 @@
 #include "SaveDataObject_GameSystem.h"
 
+USaveDataObject_GameSystem::USaveDataObject_GameSystem() {
+}
+
 void USaveDataObject_GameSystem::SetSystem_NewsLatestVersion(int32 _value) {
 }
 
@@ -420,6 +423,4 @@ bool USaveDataObject_GameSystem::GetAccount_DisableCrossPlay() const {
     return false;
 }
 
-USaveDataObject_GameSystem::USaveDataObject_GameSystem() {
-}
 

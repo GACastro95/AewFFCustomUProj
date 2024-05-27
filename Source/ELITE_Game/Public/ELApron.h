@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ELITE_GAME_API AELApron : public AActor {
     GENERATED_BODY()
 public:
-    AELApron();
+    AELApron(const FObjectInitializer& ObjectInitializer);
+
 };
 

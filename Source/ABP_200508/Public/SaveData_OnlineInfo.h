@@ -18,5 +18,6 @@ public:
     int32 m_StickerHistory[10];
     
     USaveData_OnlineInfo();
+
 };
 

@@ -15,6 +15,7 @@ private:
     
 public:
     UGameSingletonSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void ReleaseInstance(UClass* Class);
     

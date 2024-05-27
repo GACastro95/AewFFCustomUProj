@@ -53,6 +53,7 @@ private:
     
 public:
     UEOSSession();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

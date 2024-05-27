@@ -6,3 +6,4 @@ UEOSLobbyOwnRequest::UEOSLobbyOwnRequest() {
     this->m_pcUser = NULL;
 }
 
+

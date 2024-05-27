@@ -8,5 +8,6 @@ class YEOSSDK_API UEOSCommonUserData : public UEOSCommon {
     GENERATED_BODY()
 public:
     UEOSCommonUserData();
+
 };
 

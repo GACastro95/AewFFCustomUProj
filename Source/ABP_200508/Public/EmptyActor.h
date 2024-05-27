@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
     
-    AEmptyActor();
+    AEmptyActor(const FObjectInitializer& ObjectInitializer);
+
 };
 

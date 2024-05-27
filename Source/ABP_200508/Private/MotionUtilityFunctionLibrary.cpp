@@ -1,6 +1,9 @@
 #include "MotionUtilityFunctionLibrary.h"
 #include "Templates/SubclassOf.h"
 
+UMotionUtilityFunctionLibrary::UMotionUtilityFunctionLibrary() {
+}
+
 bool UMotionUtilityFunctionLibrary::IsExistAnimNotifyState(const UAnimSequenceBase* AnimSequence, TSubclassOf<UAnimNotifyState> NotifyFilter) {
     return false;
 }
@@ -64,6 +67,4 @@ FRotator UMotionUtilityFunctionLibrary::ConvertMotionBuilderEulerToUnrealEngineE
 void UMotionUtilityFunctionLibrary::CallRefreshBoneTransforms(USkeletalMeshComponent* Mesh) {
 }
 
-UMotionUtilityFunctionLibrary::UMotionUtilityFunctionLibrary() {
-}
 

@@ -1,5 +1,6 @@
 #include "MyWrestlerDataEditComponent.h"
 
-UMyWrestlerDataEditComponent::UMyWrestlerDataEditComponent() {
+UMyWrestlerDataEditComponent::UMyWrestlerDataEditComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

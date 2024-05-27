@@ -15,6 +15,7 @@ public:
     FOnSearchGameSessionsSuccess OnSuccess;
     
     UGLAPI_SearchGameSessions();
+
     UFUNCTION(BlueprintCallable)
     static UGLAPI_SearchGameSessions* SearchGameSessionsAPI(UGameLiftClientObject* client, const FString& fleetId, const FString& aliasID, const FString& filterExpression, const FString& sortExpression);
     

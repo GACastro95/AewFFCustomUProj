@@ -20,6 +20,7 @@ private:
     
 public:
     UELShopTestWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdataGoldNum(int32 _value);

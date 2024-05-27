@@ -8,5 +8,6 @@ class ELITE_API UELAdjustDlcObjectForTournament : public UELAdjustDlcSaveDataAcc
     GENERATED_BODY()
 public:
     UELAdjustDlcObjectForTournament();
+
 };
 

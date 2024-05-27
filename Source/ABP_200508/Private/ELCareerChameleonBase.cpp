@@ -1,6 +1,7 @@
 #include "ELCareerChameleonBase.h"
 
-
-AELCareerChameleonBase::AELCareerChameleonBase() {
+AELCareerChameleonBase::AELCareerChameleonBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
 

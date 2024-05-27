@@ -1,5 +1,8 @@
 #include "EliteGameSettingsUtilityFunctions.h"
 
+UEliteGameSettingsUtilityFunctions::UEliteGameSettingsUtilityFunctions() {
+}
+
 UDataTable* UEliteGameSettingsUtilityFunctions::GetMovieTable() {
     return NULL;
 }
@@ -36,6 +39,4 @@ UDataTable* UEliteGameSettingsUtilityFunctions::GetCharacterModelTable() {
     return NULL;
 }
 
-UEliteGameSettingsUtilityFunctions::UEliteGameSettingsUtilityFunctions() {
-}
 

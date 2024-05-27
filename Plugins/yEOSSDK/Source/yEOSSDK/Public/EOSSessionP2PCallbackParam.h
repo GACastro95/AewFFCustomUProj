@@ -14,5 +14,6 @@ public:
     TArray<TScriptInterface<IEOSSessionP2PCallbackInterface>> m_cIntarfaces;
     
     UEOSSessionP2PCallbackParam();
+
 };
 

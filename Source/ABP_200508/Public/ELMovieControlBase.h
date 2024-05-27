@@ -24,6 +24,7 @@ private:
     
 public:
     UELMovieControlBase();
+
     UFUNCTION(BlueprintCallable)
     bool SuspendAll(TArray<int32> Excludes);
     

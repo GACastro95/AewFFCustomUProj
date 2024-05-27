@@ -21,6 +21,7 @@ protected:
     
 public:
     UWrestlerDataObjectBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void SwitchGender(EGender& resultType) const;
     

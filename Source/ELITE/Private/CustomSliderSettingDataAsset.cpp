@@ -5,3 +5,4 @@ UCustomSliderSettingDataAsset::UCustomSliderSettingDataAsset() {
     this->UnitType = EUnit::Bytes;
 }
 
+

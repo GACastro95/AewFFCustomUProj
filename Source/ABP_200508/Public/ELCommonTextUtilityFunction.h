@@ -11,6 +11,7 @@ class ABP_200508_API UELCommonTextUtilityFunction : public UBlueprintFunctionLib
     GENERATED_BODY()
 public:
     UELCommonTextUtilityFunction();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="_pWorldContextObject"))
     static FText GetTextEntryBase(UObject* _pWorldContextObject);
     

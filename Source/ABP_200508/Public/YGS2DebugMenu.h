@@ -17,6 +17,7 @@ private:
     
 public:
     UYGS2DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetSkipLogin();
     

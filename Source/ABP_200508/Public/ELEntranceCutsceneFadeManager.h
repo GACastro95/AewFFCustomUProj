@@ -18,7 +18,8 @@ private:
     UUserWidget* FadeWidget;
     
 public:
-    UELEntranceCutsceneFadeManager();
+    UELEntranceCutsceneFadeManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFadeFinished() const;
     

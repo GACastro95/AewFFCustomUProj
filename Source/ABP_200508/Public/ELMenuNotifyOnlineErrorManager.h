@@ -33,6 +33,7 @@ public:
     FDetactionOfflineState OnDetactionOfflineStateDelegate;
     
     UELMenuNotifyOnlineErrorManager();
+
     UFUNCTION(BlueprintCallable)
     void StartErrorCheck();
     

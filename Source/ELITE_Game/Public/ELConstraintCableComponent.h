@@ -28,7 +28,8 @@ protected:
     FString KeyNamePrefix;
     
 public:
-    UELConstraintCableComponent();
+    UELConstraintCableComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateConstraintLocation(const FName SocketName, const FVector SocketLocation, const AActor* Actor, const bool bDirX);
     

@@ -1,5 +1,8 @@
 #include "EOSNatP2PBinary.h"
 
+UEOSNatP2PBinary::UEOSNatP2PBinary() {
+}
+
 bool UEOSNatP2PBinary::IsDeleteInstance() const {
     return false;
 }
@@ -16,6 +19,4 @@ uint8 UEOSNatP2PBinary::GetChannel() const {
     return 0;
 }
 
-UEOSNatP2PBinary::UEOSNatP2PBinary() {
-}
 

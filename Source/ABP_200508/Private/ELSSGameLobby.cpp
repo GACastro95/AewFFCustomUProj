@@ -1,6 +1,14 @@
 #include "ELSSGameLobby.h"
 #include "Net/UnrealNetwork.h"
 
+UELSSGameLobby::UELSSGameLobby() {
+    this->tGameStartLimit = 0.00f;
+    this->ssGamePlayerCount = 0;
+    this->ssGameNpcCount = 0;
+    this->ssGameLobbyState = eSSLobbyState::eSSLobbyState_None;
+    this->IsInitialized = false;
+}
+
 void UELSSGameLobby::Update(const float DeltaTime) {
 }
 
@@ -81,11 +89,4 @@ void UELSSGameLobby::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(UELSSGameLobby, ssLobbyData);
 }
 
-UELSSGameLobby::UELSSGameLobby() {
-    this->tGameStartLimit = 0.00f;
-    this->ssGamePlayerCount = 0;
-    this->ssGameNpcCount = 0;
-    this->ssGameLobbyState = eSSLobbyState::eSSLobbyState_None;
-    this->IsInitialized = false;
-}
 

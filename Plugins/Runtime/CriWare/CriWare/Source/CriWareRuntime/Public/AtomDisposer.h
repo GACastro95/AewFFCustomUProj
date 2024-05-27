@@ -7,6 +7,7 @@ UCLASS(Blueprintable, MinimalAPI)
 class AAtomDisposer : public AActor {
     GENERATED_BODY()
 public:
-    AAtomDisposer();
+    AAtomDisposer(const FObjectInitializer& ObjectInitializer);
+
 };
 

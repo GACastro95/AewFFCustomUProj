@@ -9,6 +9,7 @@ class ELITE_API UELCATMenuWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELCATMenuWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSameCreateTeamParam(const FCreateTeamParam& A, const FCreateTeamParam& B);
     

@@ -1,5 +1,8 @@
 #include "ELMainMenuTopWidgetBase.h"
 
+UELMainMenuTopWidgetBase::UELMainMenuTopWidgetBase() {
+}
+
 void UELMainMenuTopWidgetBase::OnUpdateCheckEOSSSParamEvent_Implementation() {
 }
 
@@ -35,6 +38,4 @@ uint8 UELMainMenuTopWidgetBase::GetMenuEOSSSParamStatus() {
 
 
 
-UELMainMenuTopWidgetBase::UELMainMenuTopWidgetBase() {
-}
 

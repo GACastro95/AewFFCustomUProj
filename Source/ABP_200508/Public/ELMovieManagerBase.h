@@ -11,7 +11,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELMovieManagerBase : public AActor {
     GENERATED_BODY()
 public:
-    AELMovieManagerBase();
+    AELMovieManagerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Seek(int32 MovieSlotID, FTimespan AddTime, FName MovieDataIDName, bool IsDebug);
     

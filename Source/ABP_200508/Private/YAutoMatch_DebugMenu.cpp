@@ -1,5 +1,8 @@
 #include "YAutoMatch_DebugMenu.h"
 
+UYAutoMatch_DebugMenu::UYAutoMatch_DebugMenu() {
+}
+
 void UYAutoMatch_DebugMenu::Setup(const FAutoMatchSettings& _stSettings) {
 }
 
@@ -84,6 +87,4 @@ int32 UYAutoMatch_DebugMenu::GetOnlineIdentificationNum() const {
 void UYAutoMatch_DebugMenu::AddResultText(const FString& _text) {
 }
 
-UYAutoMatch_DebugMenu::UYAutoMatch_DebugMenu() {
-}
 

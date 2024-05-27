@@ -1,5 +1,14 @@
 #include "ELSSGameMatchMakeSystem.h"
 
+UELSSGameMatchMakeSystem::UELSSGameMatchMakeSystem() {
+    this->ssMatchMakeState = eSSGameMatchMakeState::eSSGameMatchMakeState_Stay;
+    this->ssIsNextUpdateWaitSkip = false;
+    this->ssIsRequestCancel = false;
+    this->ssMatchRequestRef = NULL;
+    this->ssCancelRequestRef = NULL;
+    this->RequestedCancel = false;
+}
+
 bool UELSSGameMatchMakeSystem::UpdateMatchMakeRequest() {
     return false;
 }
@@ -68,12 +77,4 @@ bool UELSSGameMatchMakeSystem::CanStopMatchMake() {
     return false;
 }
 
-UELSSGameMatchMakeSystem::UELSSGameMatchMakeSystem() {
-    this->ssMatchMakeState = eSSGameMatchMakeState::eSSGameMatchMakeState_Stay;
-    this->ssIsNextUpdateWaitSkip = false;
-    this->ssIsRequestCancel = false;
-    this->ssMatchRequestRef = NULL;
-    this->ssCancelRequestRef = NULL;
-    this->RequestedCancel = false;
-}
 

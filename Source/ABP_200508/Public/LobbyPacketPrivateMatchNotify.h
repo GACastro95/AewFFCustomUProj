@@ -15,6 +15,7 @@ private:
     
 public:
     ULobbyPacketPrivateMatchNotify();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ELobbyPacketNotifyType GetNotifyType() const;
     

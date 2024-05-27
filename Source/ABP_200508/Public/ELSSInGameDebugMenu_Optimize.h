@@ -8,5 +8,6 @@ class ABP_200508_API UELSSInGameDebugMenu_Optimize : public UELSSInGameDebugMenu
     GENERATED_BODY()
 public:
     UELSSInGameDebugMenu_Optimize();
+
 };
 

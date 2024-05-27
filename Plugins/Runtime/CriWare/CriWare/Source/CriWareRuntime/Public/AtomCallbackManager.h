@@ -11,6 +11,7 @@ class CRIWARERUNTIME_API UAtomCallbackManager : public UObject {
     GENERATED_BODY()
 public:
     UAtomCallbackManager();
+
 private:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void NativeBreakAtomSequenceInfo(const FAtomSequenceInfo& SequenceInfo, float& Time, FString& TagName, EAtomSequenceEventType& EventType, int32& CallbackID);

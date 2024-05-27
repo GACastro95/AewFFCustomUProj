@@ -1,5 +1,13 @@
 #include "ELSSBTTaskBase.h"
 
+UELSSBTTaskBase::UELSSBTTaskBase() {
+    this->AIOwner = NULL;
+    this->ActorOwner = NULL;
+    this->bShowPropertyDetails = true;
+    this->SSAIController = NULL;
+    this->SSPlayer = NULL;
+}
+
 bool UELSSBTTaskBase::SSPlayerShoot(const UObject* WorldContextObject) {
     return false;
 }
@@ -76,11 +84,4 @@ void UELSSBTTaskBase::FinishExecute(bool bSuccess) {
 void UELSSBTTaskBase::FinishAbort() {
 }
 
-UELSSBTTaskBase::UELSSBTTaskBase() {
-    this->AIOwner = NULL;
-    this->ActorOwner = NULL;
-    this->bShowPropertyDetails = true;
-    this->SSAIController = NULL;
-    this->SSPlayer = NULL;
-}
 

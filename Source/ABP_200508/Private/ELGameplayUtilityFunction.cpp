@@ -1,5 +1,8 @@
 #include "ELGameplayUtilityFunction.h"
 
+UELGameplayUtilityFunction::UELGameplayUtilityFunction() {
+}
+
 UDataTable* UELGameplayUtilityFunction::GetMovesDataTable_SystemReferee() {
     return NULL;
 }
@@ -32,6 +35,4 @@ UDataTable* UELGameplayUtilityFunction::GetGameplayDataTable_PlayerColor() {
     return NULL;
 }
 
-UELGameplayUtilityFunction::UELGameplayUtilityFunction() {
-}
 

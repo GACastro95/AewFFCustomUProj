@@ -1,5 +1,8 @@
 #include "SSMenuWrestlerSelectData.h"
 
+USSMenuWrestlerSelectData::USSMenuWrestlerSelectData() {
+}
+
 void USSMenuWrestlerSelectData::SetSelectWrestlerParam(const EWrestlerID_N selectWrestlerId, const int32 EditWrestlerID) {
 }
 
@@ -50,6 +53,4 @@ int32 USSMenuWrestlerSelectData::GetSelectCustomWrestlerId() {
     return 0;
 }
 
-USSMenuWrestlerSelectData::USSMenuWrestlerSelectData() {
-}
 

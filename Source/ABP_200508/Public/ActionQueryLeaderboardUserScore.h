@@ -40,6 +40,7 @@ public:
     TArray<FString> UserIds;
     
     UActionQueryLeaderboardUserScore();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UActionQueryLeaderboardUserScore* ActionQueryLeaderboardUserScore(UObject* NewWorldContextObject, const TArray<FString>& NewUserIds, const FString& Name, int32 Season, bool PlatformOnly, float NewScoreScale, bool NewBForce);
     

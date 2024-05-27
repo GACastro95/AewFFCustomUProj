@@ -11,6 +11,7 @@ class ELITE_API UFL_CAWTempFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFL_CAWTempFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void ConvertToWrestlerDataObject(const FCAWTempParam& _InTempParam, bool _UpdateProfile, int32 _PresetIndex, UMyWrestlerDataObject* _OutWrestlerDataObject);
     

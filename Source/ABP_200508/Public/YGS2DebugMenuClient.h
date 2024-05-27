@@ -13,6 +13,7 @@ public:
     FYGS2DebugMenuClientUpdateDispatcher DebugMenuClientUpdateDispatcher;
     
     UYGS2DebugMenuClient();
+
     UFUNCTION(BlueprintCallable)
     FString GetRequestErrorString();
     

@@ -8,6 +8,7 @@ class ABP_200508_API UyMenuUI_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UyMenuUI_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetDebugWindow(bool _Flg);
     

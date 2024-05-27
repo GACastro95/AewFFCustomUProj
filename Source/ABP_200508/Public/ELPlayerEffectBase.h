@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* EffectDataTable;
     
-    UELPlayerEffectBase();
+    UELPlayerEffectBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void Setup(int32 ControllerId);
     

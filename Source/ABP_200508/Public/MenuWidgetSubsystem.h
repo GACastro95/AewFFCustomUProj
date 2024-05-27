@@ -28,6 +28,7 @@ private:
     
 public:
     UMenuWidgetSubsystem();
+
 private:
     UFUNCTION(BlueprintCallable)
     void SetupBottomHelpManager();

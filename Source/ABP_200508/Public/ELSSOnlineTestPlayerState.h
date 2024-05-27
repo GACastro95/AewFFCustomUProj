@@ -14,7 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EWrestlerID_N WrestlerID;
     
-    AELSSOnlineTestPlayerState();
+    AELSSOnlineTestPlayerState(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void DoneUIPrepare_Server();

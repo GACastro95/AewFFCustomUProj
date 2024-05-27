@@ -13,6 +13,5 @@ enum class EPlatformType : uint8 {
     PLATFORM_TYPE_STEAM,
     PLATFORM_TYPE_EPIC,
     PLATFORM_TYPE_NONE,
-    PLATFORM_TYPE_MAX UMETA(Hidden),
 };
 

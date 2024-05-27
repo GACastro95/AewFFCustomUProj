@@ -32,6 +32,7 @@ private:
     
 public:
     UELPossessedItemManager();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     void SetupPossessedItemDataTable(TSoftObjectPtr<UDataTable> _itemDT, UObject* _pWorldContextObject);
     

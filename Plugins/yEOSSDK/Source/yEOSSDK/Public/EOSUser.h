@@ -25,6 +25,7 @@ protected:
     
 public:
     UEOSUser();
+
     UFUNCTION(BlueprintCallable)
     bool RequestSetPresenceStatus(EEOSPresenceStatus _enStatus);
     

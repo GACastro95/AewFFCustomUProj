@@ -8,6 +8,7 @@ class ELITE_CORE_API UTextUtil : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UTextUtil();
+
     UFUNCTION(BlueprintCallable)
     static int32 Len(const FText& Text);
     

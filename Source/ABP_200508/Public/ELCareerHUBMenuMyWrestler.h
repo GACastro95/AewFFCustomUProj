@@ -9,6 +9,7 @@ class ABP_200508_API UELCareerHUBMenuMyWrestler : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerHUBMenuMyWrestler();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetMenuTopState(bool IsTop);

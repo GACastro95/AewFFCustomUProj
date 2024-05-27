@@ -8,5 +8,6 @@ class ABP_200508_API UELSSUseItemState : public UELSSActionStateBase {
     GENERATED_BODY()
 public:
     UELSSUseItemState();
+
 };
 

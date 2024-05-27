@@ -15,6 +15,5 @@ enum class ERA_Slot_VictoryChampionShip : uint8 {
     RA_VIC_CHAMPION_NEW_AEW_WOMEN,
     RA_VIC_CHAMPION_NEW_AEW_TAG,
     RA_VIC_CHAMPION_NEW_FTW,
-    RA_VIC_CHAMPION_MAX UMETA(Hidden),
 };
 

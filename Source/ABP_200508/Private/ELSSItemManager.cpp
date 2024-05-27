@@ -1,6 +1,37 @@
 #include "ELSSItemManager.h"
 #include "Templates/SubclassOf.h"
 
+AELSSItemManager::AELSSItemManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->AttentionExpItem_SpawnVelocityXY = 20.00f;
+    this->AttentionExpItem_SpawnVelocityZ = -1200.00f;
+    this->AttentionExpItem_GravityScale = 2.00f;
+    this->FrontOfActor_SpawnVelocityXY = 0.00f;
+    this->FrontOfActor_SpawnVelocityZ = 60.00f;
+    this->FrontOfActor_GravityScale = 2.00f;
+    this->WeaponClass = NULL;
+    this->WeaponMeleeClass = NULL;
+    this->WeaponGunClass = NULL;
+    this->WeaponThrowClass = NULL;
+    this->WeaponTrapClass = NULL;
+    this->WeaponFgfBallClass = NULL;
+    this->ShieldClass = NULL;
+    this->DefaultSpawnVelocityXY = 300.00f;
+    this->DefaultSpawnVelocityZ = 60.00f;
+    this->DefaultGravityScale = 1.00f;
+    this->PickupCanTouchReservedTime_Attention = -1.00f;
+    this->PickupCanTouchReservedTime_Gimmick = 0.30f;
+    this->PickupCanTouchReservedTime_ItemBox = 0.00f;
+    this->MasterData = NULL;
+    this->LotRarityParamTable = NULL;
+    this->ItemBoxParamTable = NULL;
+    this->TreasureBoxItemSpawnVelocityXY = 100.00f;
+    this->TreasureBoxItemSpawnVelocityZ = 750.00f;
+    this->TreasureBoxItemSpawnGravityScale = 2.00f;
+}
+
 TArray<AActor*> AELSSItemManager::SpawnSpecifiedNumFromItemBox(ESSItemBoxType inItemBoxType, int32 inSpawnNum, const FVector& InLocation, const FRotator& InRotation) {
     return TArray<AActor*>();
 }
@@ -113,31 +144,4 @@ FTransform AELSSItemManager::CalcAbilityItemBoxLocation_Implementation(const FVe
     return FTransform{};
 }
 
-AELSSItemManager::AELSSItemManager() {
-    this->AttentionExpItem_SpawnVelocityXY = 20.00f;
-    this->AttentionExpItem_SpawnVelocityZ = -1200.00f;
-    this->AttentionExpItem_GravityScale = 2.00f;
-    this->FrontOfActor_SpawnVelocityXY = 0.00f;
-    this->FrontOfActor_SpawnVelocityZ = 60.00f;
-    this->FrontOfActor_GravityScale = 2.00f;
-    this->WeaponClass = NULL;
-    this->WeaponMeleeClass = NULL;
-    this->WeaponGunClass = NULL;
-    this->WeaponThrowClass = NULL;
-    this->WeaponTrapClass = NULL;
-    this->WeaponFgfBallClass = NULL;
-    this->ShieldClass = NULL;
-    this->DefaultSpawnVelocityXY = 300.00f;
-    this->DefaultSpawnVelocityZ = 60.00f;
-    this->DefaultGravityScale = 1.00f;
-    this->PickupCanTouchReservedTime_Attention = -1.00f;
-    this->PickupCanTouchReservedTime_Gimmick = 0.30f;
-    this->PickupCanTouchReservedTime_ItemBox = 0.00f;
-    this->MasterData = NULL;
-    this->LotRarityParamTable = NULL;
-    this->ItemBoxParamTable = NULL;
-    this->TreasureBoxItemSpawnVelocityXY = 100.00f;
-    this->TreasureBoxItemSpawnVelocityZ = 750.00f;
-    this->TreasureBoxItemSpawnGravityScale = 2.00f;
-}
 

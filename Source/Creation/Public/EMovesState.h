@@ -78,6 +78,5 @@ enum class EMovesState : uint8 {
     State_071,
     State_072,
     State_073,
-    State_MAX UMETA(Hidden),
 };
 

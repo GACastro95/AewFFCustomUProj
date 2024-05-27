@@ -1,5 +1,9 @@
 #include "ELSSHottestPlayer.h"
 
+AELSSHottestPlayer::AELSSHottestPlayer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CostumeID = 0;
+}
+
 float AELSSHottestPlayer::PlayMotion(UAnimMontage* PlayMontage) {
     return 0.0f;
 }
@@ -16,7 +20,4 @@ FWrestlerSetupParam AELSSHottestPlayer::CreateWrestlerSetupParam(const FSSWrestl
     return FWrestlerSetupParam{};
 }
 
-AELSSHottestPlayer::AELSSHottestPlayer() {
-    this->CostumeID = 0;
-}
 

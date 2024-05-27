@@ -1,9 +1,10 @@
 #include "ELSSCameraLocatorComponent.h"
 
-UELSSCameraLocatorComponent::UELSSCameraLocatorComponent() {
+UELSSCameraLocatorComponent::UELSSCameraLocatorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LocatorId = 1;
     this->FocalLength = 10.00f;
     this->LookAtMode = ESSStationalCameraLookAt::None;
     this->TrackingInterpSpeed = 1.00f;
 }
+
 

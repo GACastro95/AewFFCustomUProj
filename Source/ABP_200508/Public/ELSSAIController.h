@@ -23,7 +23,8 @@ private:
     int32 HateActorsMax;
     
 public:
-    AELSSAIController();
+    AELSSAIController(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateHateActors(AActor* newActor);
     

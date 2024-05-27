@@ -13,6 +13,7 @@ protected:
     
 public:
     UELBattlePassChallengeListSetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     int32 MovePage(bool IsUp, bool& Moved);

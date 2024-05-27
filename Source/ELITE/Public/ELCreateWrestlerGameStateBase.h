@@ -19,6 +19,7 @@ private:
     UCustomWrestlerAssistComponent* EditWrestlerCoreComponent;
     
 public:
-    AELCreateWrestlerGameStateBase();
+    AELCreateWrestlerGameStateBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

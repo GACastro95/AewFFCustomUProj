@@ -104,5 +104,6 @@ public:
     FDamageChallengeShowAnnounceTime showAnnounceTimeDispatcher;
     
     UYMiniGameOptions_MenuSettings();
+
 };
 

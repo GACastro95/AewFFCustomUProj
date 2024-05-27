@@ -20,6 +20,7 @@ public:
     FOnUpdateScheduleId OnUpdateScheduleId;
     
     UELSSRuleSelect();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     bool UpdateList(UObject* WorldContextObject);
     

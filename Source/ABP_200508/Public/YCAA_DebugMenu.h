@@ -22,6 +22,7 @@ protected:
     
 public:
     UYCAA_DebugMenu();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Initialize();
     

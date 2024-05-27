@@ -15,6 +15,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMenuEnd_Delegate MenuEnd_Dispatcher;
     
-    ATitleMenu_QuickSettings_ImGui();
+    ATitleMenu_QuickSettings_ImGui(const FObjectInitializer& ObjectInitializer);
+
 };
 

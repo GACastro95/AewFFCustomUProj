@@ -14,6 +14,7 @@ private:
     
 public:
     UELLocalQuotaProcessObject();
+
     UFUNCTION(BlueprintCallable)
     bool RequestGetLocalQuotaInfo(FLocalQuotaUpdateCompleteDelegate _delegate);
     

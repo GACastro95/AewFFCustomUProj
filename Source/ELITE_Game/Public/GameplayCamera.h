@@ -9,7 +9,8 @@ UCLASS(Blueprintable)
 class ELITE_GAME_API AGameplayCamera : public AActor {
     GENERATED_BODY()
 public:
-    AGameplayCamera();
+    AGameplayCamera(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RequestSkipInterpolation();
     

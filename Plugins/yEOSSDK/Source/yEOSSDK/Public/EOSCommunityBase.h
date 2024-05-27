@@ -33,6 +33,7 @@ protected:
     
 public:
     UEOSCommunityBase();
+
     UFUNCTION(BlueprintCallable)
     TMap<FString, UEOSCommunityInfoBase*> GetOwnCommunities();
     

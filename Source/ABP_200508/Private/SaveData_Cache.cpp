@@ -1,5 +1,8 @@
 #include "SaveData_Cache.h"
 
+USaveData_Cache::USaveData_Cache() {
+}
+
 bool USaveData_Cache::Unregist(const FString& _strRegKey) {
     return false;
 }
@@ -16,6 +19,4 @@ bool USaveData_Cache::ClearAll() {
     return false;
 }
 
-USaveData_Cache::USaveData_Cache() {
-}
 

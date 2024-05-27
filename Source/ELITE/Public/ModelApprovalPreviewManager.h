@@ -40,7 +40,8 @@ private:
     float m_fWrestlerIntervalMax;
     
 public:
-    AModelApprovalPreviewManager();
+    AModelApprovalPreviewManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ToggleShowMenu(EnPreviewMenu eMenu);

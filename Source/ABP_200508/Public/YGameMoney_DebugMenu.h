@@ -12,6 +12,7 @@ class ABP_200508_API UYGameMoney_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYGameMoney_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void OnUserContentsEvent(EEOSUserContentsEvent _enUserContentsEvent, UEOSUserContentsBase* _pcUserContentsBase, const FEOSUserContentProgress& _rstProgress);
     

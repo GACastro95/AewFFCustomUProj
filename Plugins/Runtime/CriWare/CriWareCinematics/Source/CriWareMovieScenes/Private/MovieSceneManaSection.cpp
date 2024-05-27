@@ -9,3 +9,4 @@ UMovieSceneManaSection::UMovieSceneManaSection() {
     this->ExternalManaPlayer = NULL;
 }
 
+

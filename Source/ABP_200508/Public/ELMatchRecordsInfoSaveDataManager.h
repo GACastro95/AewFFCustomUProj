@@ -8,5 +8,6 @@ class ABP_200508_API UELMatchRecordsInfoSaveDataManager : public UObject {
     GENERATED_BODY()
 public:
     UELMatchRecordsInfoSaveDataManager();
+
 };
 

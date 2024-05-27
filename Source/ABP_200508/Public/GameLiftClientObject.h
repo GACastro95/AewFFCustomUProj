@@ -10,6 +10,7 @@ class ABP_200508_API UGameLiftClientObject : public UObject {
     GENERATED_BODY()
 public:
     UGameLiftClientObject();
+
     UFUNCTION(BlueprintCallable)
     void SetUniquePlayerId(const FString& uniqId);
     

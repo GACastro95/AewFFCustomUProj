@@ -59,6 +59,7 @@ protected:
     
 public:
     UELSSGameMatchMakeSystem();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateMatchMakeRequest();
     

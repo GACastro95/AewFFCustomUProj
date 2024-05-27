@@ -11,6 +11,7 @@ class ELITE_GAME_API UELUserWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UELUserWidget();
+
     UFUNCTION(BlueprintCallable)
     UUMGSequencePlayer* SkipLastFrameAnimation(UWidgetAnimation* InAnimation);
     

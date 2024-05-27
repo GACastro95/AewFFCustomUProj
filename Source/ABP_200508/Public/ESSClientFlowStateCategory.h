@@ -5,10 +5,10 @@
 UENUM(BlueprintType)
 enum class ESSClientFlowStateCategory : uint8 {
     None,
-    BeforeGamePlay = 0x10,
-    GamePlay = 0x20,
-    ResultFlow = 0x40,
-    AfterResult = 0x50,
-    Closing = 0x70,
+    BeforeGamePlay = 16,
+    GamePlay = 32,
+    ResultFlow = 64,
+    AfterResult = 80,
+    Closing = 112,
 };
 

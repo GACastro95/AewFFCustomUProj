@@ -17,6 +17,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EELEntranceCutsceneBeltPositionType Position;
     
-    AELEntranceCutsceneBelt();
+    AELEntranceCutsceneBelt(const FObjectInitializer& ObjectInitializer);
+
 };
 

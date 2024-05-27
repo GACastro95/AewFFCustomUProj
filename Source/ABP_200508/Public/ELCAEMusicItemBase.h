@@ -8,5 +8,6 @@ class ABP_200508_API UELCAEMusicItemBase : public UObject {
     GENERATED_BODY()
 public:
     UELCAEMusicItemBase();
+
 };
 

@@ -25,6 +25,7 @@ public:
     TArray<FName> ColorParameterNames;
     
     UEditWrestlerPaintAsset();
+
     UFUNCTION(BlueprintCallable)
     void UpdateColor(const FIndexedColorList& In, FColorParameterList& Out);
     

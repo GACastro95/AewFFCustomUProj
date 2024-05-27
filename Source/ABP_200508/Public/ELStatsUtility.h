@@ -17,6 +17,7 @@ class UELStatsUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELStatsUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static int32 SetWrestlerStat(const UObject* WorldContextObject, EELWrestlerStat Stat, EWrestlerID_N WrestlerID, int32 Value);
     

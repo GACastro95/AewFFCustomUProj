@@ -53,7 +53,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AutoPlay;
     
-    ARingAnnouncePreviewMenu();
+    ARingAnnouncePreviewMenu(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void ChangeNextState();
     

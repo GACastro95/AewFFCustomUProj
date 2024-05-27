@@ -1,5 +1,9 @@
 #include "YDebugMenuManager.h"
 
+UYDebugMenuManager::UYDebugMenuManager() {
+    this->m_pcController = NULL;
+}
+
 bool UYDebugMenuManager::UnregistRoot(const FString& _strRegistKey) {
     return false;
 }
@@ -98,7 +102,4 @@ bool UYDebugMenuManager::ClearDebugMenuManagerGlobalInstance() {
     return false;
 }
 
-UYDebugMenuManager::UYDebugMenuManager() {
-    this->m_pcController = NULL;
-}
 

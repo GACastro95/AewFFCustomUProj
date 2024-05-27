@@ -1,5 +1,10 @@
 #include "ELSSSoundData.h"
 
+UELSSSoundData::UELSSSoundData() {
+    this->DamageSEDataTable = NULL;
+    this->OwnerActor = NULL;
+}
+
 void UELSSSoundData::SetOwner(AActor* inOwner) {
 }
 
@@ -17,8 +22,4 @@ USoundAtomCue* UELSSSoundData::GetSoundAtomCue_Damage_Implementation(ESSDamageSE
     return NULL;
 }
 
-UELSSSoundData::UELSSSoundData() {
-    this->DamageSEDataTable = NULL;
-    this->OwnerActor = NULL;
-}
 

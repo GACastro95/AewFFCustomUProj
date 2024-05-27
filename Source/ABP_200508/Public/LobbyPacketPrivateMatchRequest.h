@@ -19,6 +19,7 @@ private:
     
 public:
     ULobbyPacketPrivateMatchRequest();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetOnlineModeType() const;
     

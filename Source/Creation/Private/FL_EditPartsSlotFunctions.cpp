@@ -1,5 +1,8 @@
 #include "FL_EditPartsSlotFunctions.h"
 
+UFL_EditPartsSlotFunctions::UFL_EditPartsSlotFunctions() {
+}
+
 EPreviewAttire UFL_EditPartsSlotFunctions::ToPreviewAttire_EditParts(const EAttireType AttireType, const EEditPartsSlot PartsSlot) {
     return EPreviewAttire::Ring;
 }
@@ -32,6 +35,4 @@ void UFL_EditPartsSlotFunctions::GetEditPartsSlot(const FEditPartsSlot& Data, EE
 void UFL_EditPartsSlotFunctions::GetEditPaintSlot(const FEditPartsSlot& Data, EEditTexTarget& Out, EBasicFindResult& resultType) {
 }
 
-UFL_EditPartsSlotFunctions::UFL_EditPartsSlotFunctions() {
-}
 

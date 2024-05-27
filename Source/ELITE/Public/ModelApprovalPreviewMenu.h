@@ -11,7 +11,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FChangeWrestler EventChangeWrestler;
     
-    AModelApprovalPreviewMenu();
+    AModelApprovalPreviewMenu(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     int32 GetSelectWrestlerID();
     

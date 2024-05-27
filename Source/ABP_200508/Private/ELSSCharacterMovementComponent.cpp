@@ -1,18 +1,8 @@
 #include "ELSSCharacterMovementComponent.h"
 
-void UELSSCharacterMovementComponent::SSServerMoveResponse_Implementation(const FSSMoveResponse& response, int32 inMultiMoved) {
-}
-
-void UELSSCharacterMovementComponent::SSServerMove_Implementation(const FSSMoveRequestHistory& inRequest) {
-}
-
-void UELSSCharacterMovementComponent::SetDesiredRotation(const FRotator& inRotatioCn) {
-}
-
-void UELSSCharacterMovementComponent::OrientDesiredRotationToAccelerate() {
-}
-
-UELSSCharacterMovementComponent::UELSSCharacterMovementComponent() {
+UELSSCharacterMovementComponent::UELSSCharacterMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bOrientRotationToMovement = true;
+    this->bAllowPhysicsRotationDuringAnimRootMotion = true;
     this->DesiredRotationKeepDuration = 0.00f;
     this->bOrientDesiredRotationToAcc = false;
     this->LastReceivedServerMoveTimeStamp = 0.00f;
@@ -43,4 +33,17 @@ UELSSCharacterMovementComponent::UELSSCharacterMovementComponent() {
     this->ClientUpdatingOnBeginState = false;
     this->NoFallTime = 0.00f;
 }
+
+void UELSSCharacterMovementComponent::SSServerMoveResponse_Implementation(const FSSMoveResponse& response, int32 inMultiMoved) {
+}
+
+void UELSSCharacterMovementComponent::SSServerMove_Implementation(const FSSMoveRequestHistory& inRequest) {
+}
+
+void UELSSCharacterMovementComponent::SetDesiredRotation(const FRotator& inRotatioCn) {
+}
+
+void UELSSCharacterMovementComponent::OrientDesiredRotationToAccelerate() {
+}
+
 

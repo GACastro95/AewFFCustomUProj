@@ -1,5 +1,8 @@
 #include "EOSSessionP2PPacketBase.h"
 
+UEOSSessionP2PPacketBase::UEOSSessionP2PPacketBase() {
+}
+
 bool UEOSSessionP2PPacketBase::UnsetUpdateFlag() {
     return false;
 }
@@ -31,6 +34,4 @@ bool UEOSSessionP2PPacketBase::CopyPacketData(UEOSSessionP2PPacketBase* _pcPacke
     return false;
 }
 
-UEOSSessionP2PPacketBase::UEOSSessionP2PPacketBase() {
-}
 

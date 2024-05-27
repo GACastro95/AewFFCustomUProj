@@ -11,6 +11,7 @@ class ABP_200508_API UYGS2DebugMenuCommandRunner : public UObject {
     GENERATED_BODY()
 public:
     UYGS2DebugMenuCommandRunner();
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnYGS2Response(EYGS2ErrorType _enYGS2ErrorType, UYGS2RequestBase* _pcYGS2RequestBase);

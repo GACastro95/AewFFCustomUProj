@@ -8,5 +8,6 @@ class ELITE_API UELCustomizeArenaMenuWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELCustomizeArenaMenuWidgetBase();
+
 };
 

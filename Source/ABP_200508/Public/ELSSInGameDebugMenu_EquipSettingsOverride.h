@@ -8,6 +8,7 @@ class ABP_200508_API UELSSInGameDebugMenu_EquipSettingsOverride : public UELSSIn
     GENERATED_BODY()
 public:
     UELSSInGameDebugMenu_EquipSettingsOverride();
+
     UFUNCTION(BlueprintCallable)
     bool CreateMenu();
     

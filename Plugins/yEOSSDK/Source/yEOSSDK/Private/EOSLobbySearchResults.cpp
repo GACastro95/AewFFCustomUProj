@@ -4,3 +4,4 @@ UEOSLobbySearchResults::UEOSLobbySearchResults() {
     this->m_pcLobby = NULL;
 }
 
+

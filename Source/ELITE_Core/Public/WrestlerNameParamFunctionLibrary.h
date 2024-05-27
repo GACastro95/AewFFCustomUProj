@@ -10,6 +10,7 @@ class ELITE_CORE_API UWrestlerNameParamFunctionLibrary : public UBlueprintFuncti
     GENERATED_BODY()
 public:
     UWrestlerNameParamFunctionLibrary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void ToWrestlerNameText(const FWrestlerNameString& Target, FWrestlerNameText& Out);
     

@@ -8,5 +8,6 @@ class ABP_200508_API UELDarkMatchMenuWidgetBase : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELDarkMatchMenuWidgetBase();
+
 };
 

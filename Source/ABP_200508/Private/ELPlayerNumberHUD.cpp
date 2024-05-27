@@ -1,5 +1,11 @@
 #include "ELPlayerNumberHUD.h"
 
+UELPlayerNumberHUD::UELPlayerNumberHUD() : UUserWidget(FObjectInitializer::Get()) {
+    this->bInitialized_N = false;
+    this->bHideControllerID_N = false;
+    this->ShowTimer_N = 0.00f;
+}
+
 void UELPlayerNumberHUD::SetTagIcons(TArray<UELTagMatchIconBase*> InTagIcons) {
 }
 
@@ -11,9 +17,4 @@ ESlateVisibility UELPlayerNumberHUD::GetTopVisibility_N() const {
     return ESlateVisibility::Visible;
 }
 
-UELPlayerNumberHUD::UELPlayerNumberHUD() : UUserWidget(FObjectInitializer::Get()) {
-    this->bInitialized_N = false;
-    this->bHideControllerID_N = false;
-    this->ShowTimer_N = 0.00f;
-}
 

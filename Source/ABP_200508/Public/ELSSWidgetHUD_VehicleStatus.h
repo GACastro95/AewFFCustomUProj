@@ -52,6 +52,7 @@ protected:
     
 public:
     UELSSWidgetHUD_VehicleStatus();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

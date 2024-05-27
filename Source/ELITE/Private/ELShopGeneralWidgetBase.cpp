@@ -1,5 +1,8 @@
 #include "ELShopGeneralWidgetBase.h"
 
+UELShopGeneralWidgetBase::UELShopGeneralWidgetBase() {
+}
+
 void UELShopGeneralWidgetBase::UpdateParameter(EShopDisplayCategory _targetCategory) {
 }
 
@@ -62,6 +65,4 @@ void UELShopGeneralWidgetBase::CheckValidNormalDisplayCursorIndex() {
 void UELShopGeneralWidgetBase::ChangeListViewType(bool IsTextType) {
 }
 
-UELShopGeneralWidgetBase::UELShopGeneralWidgetBase() {
-}
 

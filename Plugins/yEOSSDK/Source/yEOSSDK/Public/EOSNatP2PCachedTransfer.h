@@ -40,6 +40,7 @@ protected:
     
 public:
     UEOSNatP2PCachedTransfer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update();

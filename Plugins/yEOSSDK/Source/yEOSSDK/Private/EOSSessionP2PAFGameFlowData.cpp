@@ -1,5 +1,8 @@
 #include "EOSSessionP2PAFGameFlowData.h"
 
+UEOSSessionP2PAFGameFlowData::UEOSSessionP2PAFGameFlowData() {
+}
+
 void UEOSSessionP2PAFGameFlowData::SetPossibleChangeGameFlowStep(EEOSSessionP2PAFGameFlowStep _enStep) {
 }
 
@@ -18,6 +21,4 @@ bool UEOSSessionP2PAFGameFlowData::ChangeGameFlow(EEOSSessionP2PAFGameFlowStep _
     return false;
 }
 
-UEOSSessionP2PAFGameFlowData::UEOSSessionP2PAFGameFlowData() {
-}
 

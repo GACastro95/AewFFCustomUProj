@@ -10,6 +10,7 @@ class ELITE_CORE_API UTableRowNameUtilityFunction : public UBlueprintFunctionLib
     GENERATED_BODY()
 public:
     UTableRowNameUtilityFunction();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTableRowName ToTableRowName(const FName& RowName);
     

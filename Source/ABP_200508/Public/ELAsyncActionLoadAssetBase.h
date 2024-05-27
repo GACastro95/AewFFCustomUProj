@@ -8,5 +8,6 @@ class UELAsyncActionLoadAssetBase : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
     UELAsyncActionLoadAssetBase();
+
 };
 

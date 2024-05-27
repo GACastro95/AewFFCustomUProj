@@ -1,5 +1,8 @@
 #include "ELEOSVoiceChatUtility.h"
 
+UELEOSVoiceChatUtility::UELEOSVoiceChatUtility() {
+}
+
 bool UELEOSVoiceChatUtility::UpdateVoiceMutedAllMembers(const UObject* WorldContextObject) {
     return false;
 }
@@ -76,6 +79,4 @@ bool UELEOSVoiceChatUtility::BlockVoiceChat(const UObject* WorldContextObject, c
     return false;
 }
 
-UELEOSVoiceChatUtility::UELEOSVoiceChatUtility() {
-}
 

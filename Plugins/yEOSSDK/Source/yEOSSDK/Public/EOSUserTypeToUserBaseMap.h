@@ -14,6 +14,7 @@ public:
     TMap<EEOSUserType, UEOSUserBase*> m_cUserTypeMap;
     
     UEOSUserTypeToUserBaseMap();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<EEOSUserType, UEOSUserBase*> GetUserMap() const;
     

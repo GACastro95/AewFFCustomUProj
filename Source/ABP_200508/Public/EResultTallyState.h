@@ -10,6 +10,5 @@ enum class EResultTallyState : uint8 {
     EResultTally_Failed,
     EResultTally_Skip,
     EResultTally_NotLogin,
-    EResultTally_MAX UMETA(Hidden),
 };
 

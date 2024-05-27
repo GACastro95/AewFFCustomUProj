@@ -11,6 +11,7 @@ class ABP_200508_API UELFindMiniGameWidget : public UELUserWidget {
     GENERATED_BODY()
 public:
     UELFindMiniGameWidget();
+
     UFUNCTION(BlueprintCallable)
     void GetTexture2DPixelColorAll(UTexture2D* Texture, TArray<FColor>& OutColorList);
     

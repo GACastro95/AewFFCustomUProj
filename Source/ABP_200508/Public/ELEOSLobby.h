@@ -26,6 +26,7 @@
 #include "ELobbyProcStatus.h"
 #include "ELobbyProcTypes.h"
 #include "EOSLobbyEvent2Delegate.h"
+#include "EOSLobbyEventNotifyDelegate.h"
 #include "EOSLobbyJoinErrorDelegate.h"
 #include "EOSLobbyReceiveMessageEventDelegate.h"
 #include "EOSLobbyReceivePacketEventDelegate.h"
@@ -356,6 +357,9 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnStatusUpdatedOnJoinedStep OnStatusUpdatedOnJoinedStep;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FEOSLobbyEventNotify OnEOSLobbyDebugEvent;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UELSSLobbyManager* SSLobbyManager;
@@ -365,6 +369,7 @@ protected:
     
 public:
     UELEOSLobby();
+
 private:
     UFUNCTION(BlueprintCallable)
     bool UpdateStepForStatusUpdatedOnJoined();
@@ -652,6 +657,9 @@ public:
     bool Join(UEOSCommunityInfoBase* LobbyInfo);
     
     UFUNCTION(BlueprintCallable)
+    bool IsWaitingToJoinLobby();
+    
+    UFUNCTION(BlueprintCallable)
     bool IsUsingMultiplayerFeature();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -680,6 +688,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistInviteUser();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsDigestingJoinRequest() const;
     
     UFUNCTION(BlueprintCallable)
     bool IsCompleteCurrentWrestler();

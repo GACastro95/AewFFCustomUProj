@@ -36,6 +36,7 @@ protected:
     
 public:
     UELCareerHUBMenuItem();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetCanMoveCursor(bool bFlag);

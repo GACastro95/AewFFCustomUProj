@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class EAtomSequenceEventType : uint8 {
     SEQUENCE_TYPE_CALLBACK,
     SEQUENCE_TYPESIZE_4BYTE,
-    SEQUENCE_MAX UMETA(Hidden),
 };
 

@@ -71,6 +71,7 @@ protected:
     
 public:
     UELSSWidgetHUD_ShieldGauge();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateShow(float inDistance, float InDeltaTime);

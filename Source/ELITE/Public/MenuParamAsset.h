@@ -8,5 +8,6 @@ class ELITE_API UMenuParamAsset : public UELDataAssetBase {
     GENERATED_BODY()
 public:
     UMenuParamAsset();
+
 };
 

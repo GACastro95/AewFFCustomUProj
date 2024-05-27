@@ -12,5 +12,6 @@ public:
     TArray<FCareerSnapshotRaw> Snapshots;
     
     USaveData_CareerModeSystem();
+
 };
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ELITE_GAME_API AELPlayerState : public APlayerState {
     GENERATED_BODY()
 public:
-    AELPlayerState();
+    AELPlayerState(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -8,6 +8,7 @@ class UELShareControlSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UELShareControlSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void SetEnableRecord(bool _Enable);
     

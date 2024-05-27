@@ -1,5 +1,11 @@
 #include "ELNetPlayerController.h"
 
+AELNetPlayerController::AELNetPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ClickEventKeys.AddDefaulted(1);
+    this->ELControllerID = -1;
+    this->ELNetRole = EELNetRole::ROLE_None;
+}
+
 bool AELNetPlayerController::SetELNetTemporaryAuthorityBP(bool bEnabled) {
     return false;
 }
@@ -29,8 +35,4 @@ int32 AELNetPlayerController::GetControllerId() const {
     return 0;
 }
 
-AELNetPlayerController::AELNetPlayerController() {
-    this->ELControllerID = -1;
-    this->ELNetRole = EELNetRole::ROLE_None;
-}
 

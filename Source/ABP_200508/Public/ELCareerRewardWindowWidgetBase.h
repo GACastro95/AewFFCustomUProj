@@ -10,6 +10,7 @@ class ABP_200508_API UELCareerRewardWindowWidgetBase : public UELCareerWidgetBas
     GENERATED_BODY()
 public:
     UELCareerRewardWindowWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupTextNew(FCareerRewardGet stCareerRewardGet, bool bLast);
     

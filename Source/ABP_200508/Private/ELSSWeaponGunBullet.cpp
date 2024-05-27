@@ -5,23 +5,12 @@
 #include "Components/StaticMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void AELSSWeaponGunBullet::Setup(AELSSPlayer* inAttackUser, int32 inWeaponId, int32 inMoveId, int32 inStateHash) {
-}
-
-void AELSSWeaponGunBullet::OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) {
-}
-
-void AELSSWeaponGunBullet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AELSSWeaponGunBullet, BulletOwner);
-    DOREPLIFETIME(AELSSWeaponGunBullet, TeamId);
-    DOREPLIFETIME(AELSSWeaponGunBullet, MoveId);
-    DOREPLIFETIME(AELSSWeaponGunBullet, WeaponID);
-}
-
-AELSSWeaponGunBullet::AELSSWeaponGunBullet() {
-    this->SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("RootComponent"));
+AELSSWeaponGunBullet::AELSSWeaponGunBullet(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->RootComponent = CreateDefaultSubobject<USphereComponent>(TEXT("RootComponent"));
+    this->SphereComponent = (USphereComponent*)RootComponent;
     this->StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponent"));
     this->ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
@@ -40,5 +29,23 @@ AELSSWeaponGunBullet::AELSSWeaponGunBullet() {
     this->AfterHitCollisionProfile = TEXT("PhysicsActor");
     this->AfterHitGravityScale = 1.00f;
     this->AfterHitLifeSpan = 1.00f;
+    this->StaticMesh->SetupAttachment(RootComponent);
+    this->SkeletalMeshComponent->SetupAttachment(RootComponent);
 }
+
+void AELSSWeaponGunBullet::Setup(AELSSPlayer* inAttackUser, int32 inWeaponId, int32 inMoveId, int32 inStateHash) {
+}
+
+void AELSSWeaponGunBullet::OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) {
+}
+
+void AELSSWeaponGunBullet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AELSSWeaponGunBullet, BulletOwner);
+    DOREPLIFETIME(AELSSWeaponGunBullet, TeamId);
+    DOREPLIFETIME(AELSSWeaponGunBullet, MoveId);
+    DOREPLIFETIME(AELSSWeaponGunBullet, WeaponID);
+}
+
 

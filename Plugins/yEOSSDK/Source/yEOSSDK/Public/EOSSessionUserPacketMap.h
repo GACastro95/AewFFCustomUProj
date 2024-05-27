@@ -32,6 +32,7 @@ private:
     
 public:
     UEOSSessionUserPacketMap();
+
     UFUNCTION(BlueprintCallable)
     bool Setup(UEOSSessionUser* _pcSessionUser);
     

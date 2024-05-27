@@ -41,6 +41,7 @@ protected:
     
 public:
     UELSSWidgetHUD_AreaCountDown();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void PlayOut();

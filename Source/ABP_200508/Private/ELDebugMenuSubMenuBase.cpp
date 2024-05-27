@@ -1,5 +1,8 @@
 #include "ELDebugMenuSubMenuBase.h"
 
+UELDebugMenuSubMenuBase::UELDebugMenuSubMenuBase() {
+}
+
 bool UELDebugMenuSubMenuBase::UpdateSimpleMenuUIRecursive(const FELDebugMenuSimpleUIParam& _rstSubRootMenu, const FString& _strRegistKey) {
     return false;
 }
@@ -47,6 +50,4 @@ bool UELDebugMenuSubMenuBase::AddSubMenu(UELDebugMenuSubMenuBase* _pcSubMenu, co
     return false;
 }
 
-UELDebugMenuSubMenuBase::UELDebugMenuSubMenuBase() {
-}
 

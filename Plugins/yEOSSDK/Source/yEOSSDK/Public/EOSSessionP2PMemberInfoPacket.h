@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSSessionP2PMemberInfoPacket : public UEOSSessionP2PSynchron
     GENERATED_BODY()
 public:
     UEOSSessionP2PMemberInfoPacket();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateMember(int32 _sIndex, int32 _sMemberIndex, const FString& _strProductUserID, bool _bRemvoed, bool _bDisconnected);
     

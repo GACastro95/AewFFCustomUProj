@@ -8,5 +8,6 @@ class ABP_200508_API UELSSAnimNotify_PutTrap : public UELSSAnimNotifyBase {
     GENERATED_BODY()
 public:
     UELSSAnimNotify_PutTrap();
+
 };
 

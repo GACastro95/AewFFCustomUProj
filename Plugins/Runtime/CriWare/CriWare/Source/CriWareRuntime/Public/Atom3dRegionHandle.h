@@ -8,5 +8,6 @@ class CRIWARERUNTIME_API UAtom3dRegionHandle : public UObject {
     GENERATED_BODY()
 public:
     UAtom3dRegionHandle();
+
 };
 

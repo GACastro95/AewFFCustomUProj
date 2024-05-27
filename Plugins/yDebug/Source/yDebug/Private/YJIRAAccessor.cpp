@@ -1,5 +1,8 @@
 #include "YJIRAAccessor.h"
 
+UYJIRAAccessor::UYJIRAAccessor() {
+}
+
 void UYJIRAAccessor::Setup(const FJIRASetupParam& _pstSetupParam) {
 }
 
@@ -31,6 +34,4 @@ bool UYJIRAAccessor::CreateYJIRAAccessor(UYJIRAAccessor*& _pcInst) {
     return false;
 }
 
-UYJIRAAccessor::UYJIRAAccessor() {
-}
 

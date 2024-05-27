@@ -1,5 +1,8 @@
 #include "ELCareerItemManager.h"
 
+AELCareerItemManager::AELCareerItemManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 bool AELCareerItemManager::UseItems(UELCareerGameParam* _pGameParam, ECareerItemNo _ItemNo) {
     return false;
 }
@@ -25,6 +28,4 @@ void AELCareerItemManager::AddCareerItemData(FCareerItemData _Data) {
 void AELCareerItemManager::ActiveItemEffect(UELCareerGameParam* _pGameParam) {
 }
 
-AELCareerItemManager::AELCareerItemManager() {
-}
 

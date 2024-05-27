@@ -1,5 +1,8 @@
 #include "XeSSBlueprintLibrary.h"
 
+UXeSSBlueprintLibrary::UXeSSBlueprintLibrary() {
+}
+
 void UXeSSBlueprintLibrary::SetXeSSQualityMode(EXeSSQualityMode QualityMode) {
 }
 
@@ -23,6 +26,4 @@ EXeSSQualityMode UXeSSBlueprintLibrary::GetDefaultXeSSQualityMode(FIntPoint Scre
     return EXeSSQualityMode::Off;
 }
 
-UXeSSBlueprintLibrary::UXeSSBlueprintLibrary() {
-}
 

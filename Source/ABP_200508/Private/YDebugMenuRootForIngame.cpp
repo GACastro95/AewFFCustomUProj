@@ -1,5 +1,8 @@
 #include "YDebugMenuRootForIngame.h"
 
+UYDebugMenuRootForIngame::UYDebugMenuRootForIngame() {
+}
+
 bool UYDebugMenuRootForIngame::CreateMenu(const FYDebugMenuParamForIngame& _stParam) {
     return false;
 }
@@ -8,6 +11,4 @@ bool UYDebugMenuRootForIngame::CreateAndRegistForIngameDebugMenu(UYDebugMenuRoot
     return false;
 }
 
-UYDebugMenuRootForIngame::UYDebugMenuRootForIngame() {
-}
 

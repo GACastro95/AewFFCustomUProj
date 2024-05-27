@@ -19,7 +19,8 @@ private:
     FSSWrestlerSettings WrestlerSettingsDummy;
     
 public:
-    AELSSSaveDataManager();
+    AELSSSaveDataManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetLoadoutPresetName(int32 inPresetIndex, const FString& inPresetName);
     

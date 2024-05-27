@@ -8,5 +8,6 @@ class ABP_200508_API USaveDataObject_UGC_Room : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_UGC_Room();
+
 };
 

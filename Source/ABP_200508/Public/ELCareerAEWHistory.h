@@ -8,5 +8,6 @@ class ABP_200508_API UELCareerAEWHistory : public UELCareerMovieSceneWidgetBase 
     GENERATED_BODY()
 public:
     UELCareerAEWHistory();
+
 };
 

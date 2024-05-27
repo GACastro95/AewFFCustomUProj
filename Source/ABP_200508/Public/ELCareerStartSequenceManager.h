@@ -18,7 +18,8 @@ private:
     UELCareerWrestlerSelect* m_pWrestlerSelect;
     
 public:
-    AELCareerStartSequenceManager();
+    AELCareerStartSequenceManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void CheckState(int32 _value);
     

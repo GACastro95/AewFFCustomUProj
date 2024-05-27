@@ -40,6 +40,7 @@ protected:
     
 public:
     UELSSSoundData();
+
     UFUNCTION(BlueprintCallable)
     void SetOwner(AActor* inOwner);
     

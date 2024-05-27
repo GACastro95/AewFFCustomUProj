@@ -8,5 +8,6 @@ class ELITE_CORE_API UELDeveloperSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
     UELDeveloperSettings();
+
 };
 

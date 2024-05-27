@@ -1,5 +1,9 @@
 #include "EOSAuth.h"
 
+UEOSAuth::UEOSAuth() {
+    this->m_sConnectLoggingCount = 0;
+}
+
 void UEOSAuth::SetLoginUserDisplayName(const FString& _strDisplayName) {
 }
 
@@ -113,7 +117,4 @@ EEOSLoginStatus UEOSAuth::GetAuthLoginStatus(const FString& _strEpicAccountID) {
     return EEOSLoginStatus::NotLoggedin;
 }
 
-UEOSAuth::UEOSAuth() {
-    this->m_sConnectLoggingCount = 0;
-}
 

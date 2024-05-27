@@ -7,7 +7,7 @@ enum class ESSPickupHideFlag : uint8 {
     None,
     Internal,
     External,
-    UnEquip = 0x4,
-    ActionState = 0x8,
+    UnEquip = 4,
+    ActionState = 8,
 };
 

@@ -10,6 +10,7 @@ class ELITE_CORE_API UMiscUtil : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UMiscUtil();
+
     UFUNCTION(BlueprintCallable)
     static void ToMeterText(FText& Out, const float InInch, const int32 FractionalDigits);
     

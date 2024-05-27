@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCriFsLoaderComponent* LoaderComponent;
     
-    ACriFsLoader();
+    ACriFsLoader(const FObjectInitializer& ObjectInitializer);
+
 };
 

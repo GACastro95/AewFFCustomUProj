@@ -1,5 +1,8 @@
 #include "ELReplayBase.h"
 
+UELReplayBase::UELReplayBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UELReplayBase::StopReplay() {
 }
 
@@ -53,6 +56,4 @@ float UELReplayBase::GetDamageTime() const {
 void UELReplayBase::ConvertReplayIndex_N(int32& Index, float& Rate, const float Sec) const {
 }
 
-UELReplayBase::UELReplayBase() {
-}
 

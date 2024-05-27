@@ -16,6 +16,7 @@ protected:
     
 public:
     UELSSWidgetHUD_InteractPointContainer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

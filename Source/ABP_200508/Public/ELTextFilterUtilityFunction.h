@@ -12,6 +12,7 @@ class UELTextFilterUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELTextFilterUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static bool TextFilterSteam(int32 _FilterCategory, const FString& _SrcText, FString& _DstText, const FString& ExternalAccountId);
     

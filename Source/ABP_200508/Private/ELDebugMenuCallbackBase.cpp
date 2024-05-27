@@ -1,5 +1,8 @@
 #include "ELDebugMenuCallbackBase.h"
 
+UELDebugMenuCallbackBase::UELDebugMenuCallbackBase() {
+}
+
 
 void UELDebugMenuCallbackBase::RequestExit() {
 }
@@ -34,6 +37,4 @@ void UELDebugMenuCallbackBase::BindResetUI() {
 void UELDebugMenuCallbackBase::BindClickUI() {
 }
 
-UELDebugMenuCallbackBase::UELDebugMenuCallbackBase() {
-}
 

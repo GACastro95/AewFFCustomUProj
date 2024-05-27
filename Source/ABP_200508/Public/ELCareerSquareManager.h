@@ -21,7 +21,8 @@ private:
     ECareerCity m_NextPlayerStayCity;
     
 public:
-    AELCareerSquareManager();
+    AELCareerSquareManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetNextPlayerStayCity(ECareerCity _City);
     

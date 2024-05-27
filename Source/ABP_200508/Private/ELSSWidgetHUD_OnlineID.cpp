@@ -1,5 +1,15 @@
 #include "ELSSWidgetHUD_OnlineID.h"
 
+UELSSWidgetHUD_OnlineID::UELSSWidgetHUD_OnlineID() {
+    this->TextWidget = NULL;
+    this->MedalWidget = NULL;
+    this->MatchIconWidget = NULL;
+    this->TargetActor = NULL;
+    this->PlayerController = NULL;
+    this->Validratio = 0.05f;
+    this->DoneFirstVisible = false;
+}
+
 void UELSSWidgetHUD_OnlineID::UpdatePosAndVisible() {
 }
 
@@ -31,13 +41,4 @@ AActor* UELSSWidgetHUD_OnlineID::GetTargetActor() {
     return NULL;
 }
 
-UELSSWidgetHUD_OnlineID::UELSSWidgetHUD_OnlineID() {
-    this->TextWidget = NULL;
-    this->MedalWidget = NULL;
-    this->MatchIconWidget = NULL;
-    this->TargetActor = NULL;
-    this->PlayerController = NULL;
-    this->Validratio = 0.05f;
-    this->DoneFirstVisible = false;
-}
 

@@ -1,5 +1,14 @@
 #include "ELSSWidgetHUD_SSSessionMemberIcon.h"
 
+UELSSWidgetHUD_SSSessionMemberIcon::UELSSWidgetHUD_SSSessionMemberIcon() {
+    this->TextWidget = NULL;
+    this->TargetActor = NULL;
+    this->PlayerController = NULL;
+    this->MemberIndex = 0;
+    this->Validratio = 0.05f;
+    this->DoneFirstVisible = false;
+}
+
 void UELSSWidgetHUD_SSSessionMemberIcon::UpdatePosAndVisible(float InDeltaTime) {
 }
 
@@ -31,12 +40,4 @@ AActor* UELSSWidgetHUD_SSSessionMemberIcon::GetTargetActor() {
 }
 
 
-UELSSWidgetHUD_SSSessionMemberIcon::UELSSWidgetHUD_SSSessionMemberIcon() {
-    this->TextWidget = NULL;
-    this->TargetActor = NULL;
-    this->PlayerController = NULL;
-    this->MemberIndex = 0;
-    this->Validratio = 0.05f;
-    this->DoneFirstVisible = false;
-}
 

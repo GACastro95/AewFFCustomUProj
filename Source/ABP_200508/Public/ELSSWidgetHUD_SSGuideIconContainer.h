@@ -21,6 +21,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSGuideIconContainer();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

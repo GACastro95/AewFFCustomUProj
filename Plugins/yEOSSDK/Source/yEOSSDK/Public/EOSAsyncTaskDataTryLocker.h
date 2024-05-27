@@ -16,6 +16,7 @@ private:
     
 public:
     UEOSAsyncTaskDataTryLocker();
+
     UFUNCTION(BlueprintCallable)
     bool IsLocked();
     

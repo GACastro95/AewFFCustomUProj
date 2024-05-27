@@ -1,17 +1,5 @@
 #include "YCAW_DebugMenu.h"
 
-
-
-void UYCAW_DebugMenu::ReadFile(int32 Slot) {
-}
-
-void UYCAW_DebugMenu::OutputFile(int32 Slot, bool bThumbnail) {
-}
-
-
-
-
-
 UYCAW_DebugMenu::UYCAW_DebugMenu() {
     this->OutputFileSlot = 0;
     this->ReadFileSlot = 0;
@@ -25,4 +13,17 @@ UYCAW_DebugMenu::UYCAW_DebugMenu() {
     this->bApplyDarkSkinModeToAttire = false;
     this->bApplyPatternTextureToAttire = false;
 }
+
+
+
+void UYCAW_DebugMenu::ReadFile(int32 Slot) {
+}
+
+void UYCAW_DebugMenu::OutputFile(int32 Slot, bool bThumbnail) {
+}
+
+
+
+
+
 

@@ -10,6 +10,7 @@ class ABP_200508_API UELSSWidgetHUD_SSSpectateWindow : public UELSSWidgetBase {
     GENERATED_BODY()
 public:
     UELSSWidgetHUD_SSSpectateWindow();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSpectatedUserInfo(AELSSPlayerState* inPlayerState);
     

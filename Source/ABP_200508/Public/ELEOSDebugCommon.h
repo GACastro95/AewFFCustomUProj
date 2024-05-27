@@ -18,6 +18,7 @@ private:
     bool DebugDisableTextFilter;
     
 public:
-    AELEOSDebugCommon();
+    AELEOSDebugCommon(const FObjectInitializer& ObjectInitializer);
+
 };
 

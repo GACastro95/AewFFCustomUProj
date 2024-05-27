@@ -1,5 +1,8 @@
 #include "ELAdjustDlcSaveDataAccessObjectBase.h"
 
+UELAdjustDlcSaveDataAccessObjectBase::UELAdjustDlcSaveDataAccessObjectBase() {
+}
+
 void UELAdjustDlcSaveDataAccessObjectBase::StartCheck(FUnavailableDlcData _unavailableDlcData, FAdjustedDlcSaveDataDelegate _delegate) {
 }
 
@@ -17,6 +20,4 @@ UELAdjustDlcSaveDataAccessObjectBase* UELAdjustDlcSaveDataAccessObjectBase::Chec
     return NULL;
 }
 
-UELAdjustDlcSaveDataAccessObjectBase::UELAdjustDlcSaveDataAccessObjectBase() {
-}
 

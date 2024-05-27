@@ -12,6 +12,7 @@ protected:
     int32 JewelRadar;
     
 public:
-    AELSSItem_JewelRadar();
+    AELSSItem_JewelRadar(const FObjectInitializer& ObjectInitializer);
+
 };
 

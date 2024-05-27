@@ -36,6 +36,7 @@ protected:
     
 public:
     UYCAM_DebugMenu();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateIsScreenShot();
     

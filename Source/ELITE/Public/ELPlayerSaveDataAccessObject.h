@@ -8,5 +8,6 @@ class ELITE_API UELPlayerSaveDataAccessObject : public UELGeneralSaveDataAccessO
     GENERATED_BODY()
 public:
     UELPlayerSaveDataAccessObject();
+
 };
 

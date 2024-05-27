@@ -8,6 +8,5 @@ enum class ECareerStartInfo : uint8 {
     Career_Start_NewGame,
     Career_Start_Continue,
     Career_Start_Through,
-    Career_Start_MAX UMETA(Hidden),
 };
 

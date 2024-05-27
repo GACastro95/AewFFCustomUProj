@@ -1,5 +1,16 @@
 #include "ELEOSFriend.h"
 
+UELEOSFriend::UELEOSFriend() {
+    this->EOSManager = NULL;
+    this->EOSUser = NULL;
+    this->EOSFriend = NULL;
+    this->EOSStats = NULL;
+    this->EOSLeaderboard = NULL;
+    this->EOSNatP2P = NULL;
+    this->EOSNatP2PTransfer = NULL;
+    this->DefaultSocketID = TEXT("Party");
+}
+
 void UELEOSFriend::UpdateInfo() {
 }
 
@@ -71,14 +82,4 @@ UEOSFriendUser* UELEOSFriend::FindFriendUser(const FString& _PUID) const {
 void UELEOSFriend::ClosePersonalChat(const FString& _PUID) {
 }
 
-UELEOSFriend::UELEOSFriend() {
-    this->EOSManager = NULL;
-    this->EOSUser = NULL;
-    this->EOSFriend = NULL;
-    this->EOSStats = NULL;
-    this->EOSLeaderboard = NULL;
-    this->EOSNatP2P = NULL;
-    this->EOSNatP2PTransfer = NULL;
-    this->DefaultSocketID = TEXT("Party");
-}
 

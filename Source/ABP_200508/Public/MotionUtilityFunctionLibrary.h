@@ -20,6 +20,7 @@ class ABP_200508_API UMotionUtilityFunctionLibrary : public UBlueprintFunctionLi
     GENERATED_BODY()
 public:
     UMotionUtilityFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static bool IsExistAnimNotifyState(const UAnimSequenceBase* AnimSequence, TSubclassOf<UAnimNotifyState> NotifyFilter);
     

@@ -1,5 +1,8 @@
 #include "ELSSLocatorManager.h"
 
+AELSSLocatorManager::AELSSLocatorManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 TArray<AELSSLocator*> AELSSLocatorManager::GetPlayerStartLocatorList(ESSPlayerStartLocatorType StartType) const {
     return TArray<AELSSLocator*>();
 }
@@ -16,6 +19,4 @@ TArray<AELSSLocator*> AELSSLocatorManager::GetLocatorListForRespawn(ESSLocatorTy
     return TArray<AELSSLocator*>();
 }
 
-AELSSLocatorManager::AELSSLocatorManager() {
-}
 

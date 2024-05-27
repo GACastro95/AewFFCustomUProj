@@ -1,5 +1,8 @@
 #include "ELPlatformAccountStatusManagementSubsystem.h"
 
+UELPlatformAccountStatusManagementSubsystem::UELPlatformAccountStatusManagementSubsystem() {
+}
+
 void UELPlatformAccountStatusManagementSubsystem::SwitchProfile() {
 }
 
@@ -36,6 +39,4 @@ void UELPlatformAccountStatusManagementSubsystem::FinishedSwitchProfile() {
 void UELPlatformAccountStatusManagementSubsystem::ClosedDialog() {
 }
 
-UELPlatformAccountStatusManagementSubsystem::UELPlatformAccountStatusManagementSubsystem() {
-}
 

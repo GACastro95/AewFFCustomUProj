@@ -12,6 +12,5 @@ enum class EMovesDataTable_Type : uint8 {
     DT_StandTaunt,
     DT_TwoPlatoons,
     DT_WhipAttack,
-    DT_MAX UMETA(Hidden),
 };
 

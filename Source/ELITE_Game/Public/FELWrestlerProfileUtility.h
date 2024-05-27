@@ -11,6 +11,7 @@ class ELITE_GAME_API UFELWrestlerProfileUtility : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UFELWrestlerProfileUtility();
+
     UFUNCTION(BlueprintCallable)
     static void GetWrestlerSNS(FString& _outName, EWrestlerID_N _WrestlerID, bool Capital);
     

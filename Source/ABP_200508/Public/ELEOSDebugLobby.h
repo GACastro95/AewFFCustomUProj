@@ -20,6 +20,7 @@ private:
     bool bShow;
     
 public:
-    AELEOSDebugLobby();
+    AELEOSDebugLobby(const FObjectInitializer& ObjectInitializer);
+
 };
 

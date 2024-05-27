@@ -1,5 +1,8 @@
 #include "ELUserProfileManager.h"
 
+UELUserProfileManager::UELUserProfileManager() {
+}
+
 void UELUserProfileManager::UpdateWeaponSymbolIcon(int32 _iconID) {
 }
 
@@ -78,6 +81,4 @@ void UELUserProfileManager::GetBadgeList(bool& IsEditedBadge, TArray<int32>& _ou
 void UELUserProfileManager::ApplySaveDataToParam(USaveDataObject_PlayerData* _playerData) {
 }
 
-UELUserProfileManager::UELUserProfileManager() {
-}
 

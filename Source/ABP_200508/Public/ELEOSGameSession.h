@@ -401,6 +401,7 @@ public:
     FOnChangeStartableSessionSearch OnChangeStartableSessionSearch;
     
     UELEOSGameSession();
+
 private:
     UFUNCTION(BlueprintCallable)
     void UpdatePlayerList(bool bRemove);

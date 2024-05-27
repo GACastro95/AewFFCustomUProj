@@ -17,6 +17,7 @@ private:
     
 public:
     ULobbyPacketPlayerIndex();
+
     UFUNCTION(BlueprintCallable)
     void GetPlayerIndex(TArray<FString>& _PlayerIndexArray);
     

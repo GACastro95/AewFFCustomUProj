@@ -44,9 +44,10 @@ protected:
     float AfterDeadDuration;
     
 public:
-    AELSSOnlineTestCharacter();
+    AELSSOnlineTestCharacter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SpawnAttackProjectile_RPC();
     

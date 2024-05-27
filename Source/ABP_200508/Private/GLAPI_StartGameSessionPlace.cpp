@@ -1,5 +1,8 @@
 #include "GLAPI_StartGameSessionPlace.h"
 
+UGLAPI_StartGameSessionPlace::UGLAPI_StartGameSessionPlace() {
+}
+
 UGLAPI_StartGameSessionPlace* UGLAPI_StartGameSessionPlace::StartGameSessionPlacementAPItoRequestParam(UGameLiftClientObject* client) {
     return NULL;
 }
@@ -8,6 +11,4 @@ EGameLiftActivateStatus UGLAPI_StartGameSessionPlace::Activate_RequestParam(FSta
     return EGameLiftActivateStatus::eACTIVATE_Success;
 }
 
-UGLAPI_StartGameSessionPlace::UGLAPI_StartGameSessionPlace() {
-}
 

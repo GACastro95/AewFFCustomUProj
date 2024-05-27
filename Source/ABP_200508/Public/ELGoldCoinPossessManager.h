@@ -15,6 +15,7 @@ class ABP_200508_API UELGoldCoinPossessManager : public UObject {
     GENERATED_BODY()
 public:
     UELGoldCoinPossessManager();
+
     UFUNCTION(BlueprintCallable)
     bool RequestDownloadDataFromEOS(FDonwloadedGoldCoinDelegate OnResultDelegate);
     

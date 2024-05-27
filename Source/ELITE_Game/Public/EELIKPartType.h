@@ -5,7 +5,7 @@
 UENUM(BlueprintType)
 enum class EELIKPartType : uint8 {
     Empty,
-    ArmIK_Begin = 0x0,
+    ArmIK_Begin = Empty,
     Hand_L,
     Hand_R,
     Elbow_L,
@@ -13,7 +13,7 @@ enum class EELIKPartType : uint8 {
     Shoulder_L,
     Shoulder_R,
     ArmIK_End,
-    LegIK_Begin = 0x80,
+    LegIK_Begin = 128,
     Leg_L,
     Leg_R,
     Foot_L,

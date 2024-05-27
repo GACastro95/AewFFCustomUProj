@@ -37,6 +37,7 @@ public:
     bool m_bBool;
     
     UEOSAttribute();
+
     UFUNCTION(BlueprintCallable)
     void SetVisibility(EEOSAttrVisibility _enVisibility);
     

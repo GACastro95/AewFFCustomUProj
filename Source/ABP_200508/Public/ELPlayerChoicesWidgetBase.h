@@ -8,6 +8,7 @@ class ABP_200508_API UELPlayerChoicesWidgetBase : public UELMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELPlayerChoicesWidgetBase();
+
     UFUNCTION(BlueprintCallable)
     void SetTitleText(FText _TitleText);
     

@@ -3,6 +3,30 @@
 #include "Components/StaticMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSDestructiblePropBase::AELSSDestructiblePropBase() {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->NetDormancy = DORM_DormantAll;
+    this->RootComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
+    this->DefaultSceneComponent = NULL;
+    this->StaticMeshComponent = (UStaticMeshComponent*)RootComponent;
+    this->DestructibleComponent = CreateDefaultSubobject<UDestructibleComponent>(TEXT("DestructibleComponent"));
+    this->DestructibleMeshAsset = NULL;
+    this->SoundCue_Break = NULL;
+    this->IsCopyMaterialToDM = false;
+    this->IsPhysicsDP = false;
+    this->DisableInvolveFeedbackReaction = false;
+    this->ImpulseStrength = 1000.00f;
+    this->DamageToPlayer = 5.00f;
+    this->HitEffectLineTraceScale = 0.50f;
+    this->IsBroken = false;
+    this->AttentionPoint = 5;
+    this->RemainDurability = 0;
+    this->MaxDurability = 1;
+    this->DestructibleComponent->SetupAttachment(RootComponent);
+}
+
 void AELSSDestructiblePropBase::Setup_Implementation() {
 }
 
@@ -39,21 +63,4 @@ void AELSSDestructiblePropBase::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(AELSSDestructiblePropBase, IsBroken);
 }
 
-AELSSDestructiblePropBase::AELSSDestructiblePropBase() {
-    this->DefaultSceneComponent = NULL;
-    this->StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
-    this->DestructibleComponent = CreateDefaultSubobject<UDestructibleComponent>(TEXT("DestructibleComponent"));
-    this->DestructibleMeshAsset = NULL;
-    this->SoundCue_Break = NULL;
-    this->IsCopyMaterialToDM = false;
-    this->IsPhysicsDP = false;
-    this->DisableInvolveFeedbackReaction = false;
-    this->ImpulseStrength = 1000.00f;
-    this->DamageToPlayer = 5.00f;
-    this->HitEffectLineTraceScale = 0.50f;
-    this->IsBroken = false;
-    this->AttentionPoint = 5;
-    this->RemainDurability = 0;
-    this->MaxDurability = 1;
-}
 

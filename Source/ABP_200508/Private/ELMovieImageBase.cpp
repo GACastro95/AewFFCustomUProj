@@ -1,5 +1,8 @@
 #include "ELMovieImageBase.h"
 
+UELMovieImageBase::UELMovieImageBase() : UUserWidget(FObjectInitializer::Get()) {
+}
+
 void UELMovieImageBase::StopMovie_N() {
 }
 
@@ -23,6 +26,4 @@ UELMoviePlayerBase* UELMovieImageBase::GetMoviePlayer() {
     return NULL;
 }
 
-UELMovieImageBase::UELMovieImageBase() : UUserWidget(FObjectInitializer::Get()) {
-}
 

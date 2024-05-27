@@ -13,6 +13,7 @@ public:
     FEOSSanctionsQueryPlayerSanctionsDispatcher QueryPlayerSanctionsDispatcher;
     
     UEOSSanctions();
+
     UFUNCTION(BlueprintCallable)
     static void SetApiVersion(FEOSSanctionsAPIVersionSettings _stAPIVerSetting);
     

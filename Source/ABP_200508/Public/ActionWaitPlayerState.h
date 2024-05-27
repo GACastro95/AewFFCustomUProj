@@ -37,6 +37,7 @@ public:
     bool bCompleted;
     
     UActionWaitPlayerState();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnSessionEvent(EELEOSSessionEventType EventType, EELEOSSessionEventResult EventResult);

@@ -4,3 +4,4 @@ UPlatformManaMovie::UPlatformManaMovie() {
     this->ManaMovie = NULL;
 }
 
+

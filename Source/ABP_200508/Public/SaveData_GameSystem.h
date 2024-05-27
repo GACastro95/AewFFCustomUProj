@@ -188,5 +188,6 @@ public:
     int32 m_News_LatestVersion;
     
     USaveData_GameSystem();
+
 };
 

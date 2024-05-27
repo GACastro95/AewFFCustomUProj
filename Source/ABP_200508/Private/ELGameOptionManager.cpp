@@ -1,5 +1,8 @@
 #include "ELGameOptionManager.h"
 
+UELGameOptionManager::UELGameOptionManager() {
+}
+
 void UELGameOptionManager::ApplySaveDataToParam(UObject* _pWorldContextObject, bool bApplyLanguage) {
 }
 
@@ -10,6 +13,4 @@ int32 UELGameOptionManager::ApplyDefaultMatchMatchMekingCode() {
     return 0;
 }
 
-UELGameOptionManager::UELGameOptionManager() {
-}
 

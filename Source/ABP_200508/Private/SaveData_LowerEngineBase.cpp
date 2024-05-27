@@ -1,5 +1,8 @@
 #include "SaveData_LowerEngineBase.h"
 
+USaveData_LowerEngineBase::USaveData_LowerEngineBase() {
+}
+
 bool USaveData_LowerEngineBase::UpdateLocalFileList(bool _bProjectSavedDir) {
     return false;
 }
@@ -40,6 +43,4 @@ bool USaveData_LowerEngineBase::CheckValidAllocationOnLocal(int32 _sFileSize) {
     return false;
 }
 
-USaveData_LowerEngineBase::USaveData_LowerEngineBase() {
-}
 

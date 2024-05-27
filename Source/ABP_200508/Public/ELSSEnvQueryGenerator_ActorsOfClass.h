@@ -15,5 +15,6 @@ public:
     ESSActorType SSActorType;
     
     UELSSEnvQueryGenerator_ActorsOfClass();
+
 };
 

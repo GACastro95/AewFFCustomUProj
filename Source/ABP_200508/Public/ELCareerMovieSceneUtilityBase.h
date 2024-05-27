@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerMovieSceneUtilityBase : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerMovieSceneUtilityBase();
+    AELCareerMovieSceneUtilityBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

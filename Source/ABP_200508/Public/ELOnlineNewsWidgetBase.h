@@ -11,6 +11,7 @@ class UELOnlineNewsWidgetBase : public UELUserWidget {
     GENERATED_BODY()
 public:
     UELOnlineNewsWidgetBase();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     UELOnlineNewsData* GetDisplayOnlineNewsData(const UObject* WorldContextObject);
     

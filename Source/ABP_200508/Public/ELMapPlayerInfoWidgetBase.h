@@ -8,6 +8,7 @@ class ABP_200508_API UELMapPlayerInfoWidgetBase : public UELMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELMapPlayerInfoWidgetBase();
+
     UFUNCTION(BlueprintCallable)
     void UpdateParameter();
     

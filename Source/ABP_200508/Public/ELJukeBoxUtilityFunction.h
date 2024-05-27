@@ -16,6 +16,7 @@ class ABP_200508_API UELJukeBoxUtilityFunction : public UBlueprintFunctionLibrar
     GENERATED_BODY()
 public:
     UELJukeBoxUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateJukeboxSaveData(uint8 _saveDataAccessFlag);
     

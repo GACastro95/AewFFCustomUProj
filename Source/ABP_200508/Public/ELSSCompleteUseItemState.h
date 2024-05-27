@@ -13,6 +13,7 @@ private:
     
 public:
     UELSSCompleteUseItemState();
+
 private:
     UFUNCTION(BlueprintCallable)
     void UseItem();

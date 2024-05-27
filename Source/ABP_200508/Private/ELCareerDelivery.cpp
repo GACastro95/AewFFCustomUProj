@@ -1,5 +1,8 @@
 #include "ELCareerDelivery.h"
 
+UELCareerDelivery::UELCareerDelivery() {
+}
+
 void UELCareerDelivery::SetPersonalityType(EPersonalityType EPersonalityType) {
 }
 
@@ -77,6 +80,4 @@ ECareerStartInfo UELCareerDelivery::GetCareerStartInfo() {
     return ECareerStartInfo::Career_Start_NotSet;
 }
 
-UELCareerDelivery::UELCareerDelivery() {
-}
 

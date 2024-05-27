@@ -22,7 +22,8 @@ protected:
     APlayerController* PlayerController;
     
 public:
-    AELSSUIManagerBase();
+    AELSSUIManagerBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Unload(UELSSUIManagerHandle* Handle);

@@ -1,5 +1,8 @@
 #include "ELTournamentUtilityFunction.h"
 
+UELTournamentUtilityFunction::UELTournamentUtilityFunction() {
+}
+
 bool UELTournamentUtilityFunction::SetupTournamentSaveData() {
     return false;
 }
@@ -19,6 +22,10 @@ bool UELTournamentUtilityFunction::SaveLocalTournamentProgressData(UObject* Worl
 }
 
 bool UELTournamentUtilityFunction::ResetTournamentProgressData(UObject* WorldContextObject) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::ResetLocalTournamentProgressData(UObject* WorldContextObject) {
     return false;
 }
 
@@ -56,6 +63,14 @@ bool UELTournamentUtilityFunction::IsTournamentClear(UObject* WorldContextObject
     return false;
 }
 
+bool UELTournamentUtilityFunction::IsLocalTournamentPlaying(UObject* WorldContextObject) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::IsLocalTournamentEntryWrestlerOnSaveData(UObject* WorldContextObject, EWrestlerID_N WrestlerID, FGuid Guid) {
+    return false;
+}
+
 bool UELTournamentUtilityFunction::IsLocalTournamentEntryWrestler(UObject* WorldContextObject, EWrestlerID_N WrestlerID, FGuid Guid) {
     return false;
 }
@@ -64,7 +79,15 @@ bool UELTournamentUtilityFunction::IsLocalTournamentBracketCompleted(UObject* Wo
     return false;
 }
 
+bool UELTournamentUtilityFunction::IsLocalTournamentArenaOnSaveData(UObject* WorldContextObject, uint8 ArenaID, FGuid CustomArenaID, bool bCustomArena) {
+    return false;
+}
+
 bool UELTournamentUtilityFunction::IsBusyTournamentSaveProcess(uint8 _saveDataAccessFlag) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::IsAlreadyLocalTournamentBracket(UObject* WorldContextObject) {
     return false;
 }
 
@@ -98,7 +121,21 @@ bool UELTournamentUtilityFunction::GetLocalTournamentVictoryCutsceneType(UObject
     return false;
 }
 
-void UELTournamentUtilityFunction::GetLocalTournamentAllMatchBracketList(UObject* WorldContextObject, TArray<FELTournamentBracket>& BracketList) {
+void UELTournamentUtilityFunction::GetLocalTournamentSelectableMatch(UObject* WorldContextObject, int32 MatchNo, bool bLoop, int32& StartMatch, int32& LastMatch, int32& CurrentMatch, int32& PrevMatch, int32& NextMatch, EELLocalTournamentStageType& stage) {
+}
+
+EELLocalTournamentNodeState UELTournamentUtilityFunction::GetLocalTournamentNodeState(UObject* WorldContextObject, int32 NodeIndex, int32 SelectIndex, bool bEditMode) {
+    return EELLocalTournamentNodeState::Edit_Empty;
+}
+
+void UELTournamentUtilityFunction::GetLocalTournamentEntryNo(UObject* WorldContextObject, int32 MatchNo, int32& TeamA, int32& TeamB) {
+}
+
+void UELTournamentUtilityFunction::GetLocalTournamentBracketAllWrestlerList(UObject* WorldContextObject, TArray<FELTournamentBracket>& BracketList) {
+}
+
+bool UELTournamentUtilityFunction::GetLocalTournamentArenaDataOnSaveData(bool& bOutCustomArena, uint8& OutArenaId, FGuid& OutArenaGuid) {
+    return false;
 }
 
 bool UELTournamentUtilityFunction::CheckUnavaliableWrestler(UObject* WorldContextObject, EWrestlerID_N WrestlerID) {
@@ -106,6 +143,10 @@ bool UELTournamentUtilityFunction::CheckUnavaliableWrestler(UObject* WorldContex
 }
 
 bool UELTournamentUtilityFunction::CheckUnavailableTournamentProgressSaveData(UObject* WorldContextObject, FELTournamentProgressSaveData& ProgressData) {
+    return false;
+}
+
+bool UELTournamentUtilityFunction::CheckUnavailableLocalTournamentSaveData(UObject* WorldContextObject, TArray<FText>& UnavailableDlcNameList) {
     return false;
 }
 
@@ -124,6 +165,4 @@ bool UELTournamentUtilityFunction::AddTournamentClearCount(UObject* WorldContext
     return false;
 }
 
-UELTournamentUtilityFunction::UELTournamentUtilityFunction() {
-}
 

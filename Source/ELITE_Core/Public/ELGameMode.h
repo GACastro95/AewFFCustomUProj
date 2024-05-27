@@ -9,7 +9,8 @@ UCLASS(Blueprintable, NonTransient)
 class ELITE_CORE_API AELGameMode : public AGameMode {
     GENERATED_BODY()
 public:
-    AELGameMode();
+    AELGameMode(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void ToggleGlobalInvalidation(const bool bNewState);

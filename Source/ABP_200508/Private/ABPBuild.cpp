@@ -1,5 +1,8 @@
 #include "ABPBuild.h"
 
+UABPBuild::UABPBuild() {
+}
+
 FString UABPBuild::GetVersion(bool _bGetSubminorVersion) {
     return TEXT("");
 }
@@ -32,6 +35,4 @@ bool UABPBuild::CreateABPBuild(UABPBuild*& _pcInst) {
     return false;
 }
 
-UABPBuild::UABPBuild() {
-}
 

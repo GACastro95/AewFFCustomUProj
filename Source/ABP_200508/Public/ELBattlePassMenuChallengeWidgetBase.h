@@ -11,6 +11,7 @@ class ABP_200508_API UELBattlePassMenuChallengeWidgetBase : public UELMainMenuWi
     GENERATED_BODY()
 public:
     UELBattlePassMenuChallengeWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SortChallengeProgressDetailInfoList(TArray<FChallengeProgressDetailInfo> _In, TArray<FChallengeProgressDetailInfo>& _out);

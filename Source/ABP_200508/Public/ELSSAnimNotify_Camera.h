@@ -38,6 +38,7 @@ protected:
     
 public:
     UELSSAnimNotify_Camera();
+
     UFUNCTION(BlueprintCallable)
     void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     

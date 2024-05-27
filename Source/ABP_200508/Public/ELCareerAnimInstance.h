@@ -42,6 +42,7 @@ private:
     
 public:
     UELCareerAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void UpdateVariables(float fDeltaTime);
     

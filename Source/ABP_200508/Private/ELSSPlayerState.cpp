@@ -1,6 +1,54 @@
 #include "ELSSPlayerState.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSPlayerState::AELSSPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MasterData = NULL;
+    this->KillCountRep = 0;
+    this->KillCountLocal = 0;
+    this->WatcherLocal = NULL;
+    this->WatchedPlayerNum = 0;
+    this->SyncStatus_InteractTarget = NULL;
+    this->AttentionPoint = 0;
+    this->AttentionGaugeState = ESSAttentionGaugeState::Default;
+    this->FeverTimeBeginTime = -1.00f;
+    this->NegativeTimer = 0.00f;
+    this->ExpItemSpawnDelayTime = 0.20f;
+    this->AfterFeverTimeDuration = 0.50f;
+    this->SurvivorRanking = 0;
+    this->ExpItemPoint = 0;
+    this->ExpItemPointLoopCount = 0;
+    this->FgfDefenseTarget = NULL;
+    this->CachedTeamState = NULL;
+    this->RespawnReservedTime = -1.00f;
+    this->SettingAbilityId_1 = 0;
+    this->SettingAbilityId_2 = 0;
+    this->SettingAbilityId_3 = 0;
+    this->UseDefaultUserSettings = true;
+    this->ProgressFlags = 0;
+    this->Log_HeatLevel = 1;
+    this->Log_TotalAttack = 0;
+    this->Log_TotalDamage = 0;
+    this->Log_Mileage = 0.00f;
+    this->Log_ReviveFromKoCount = 0;
+    this->Log_StrikeCount = 0;
+    this->Log_GrappleCount = 0;
+    this->Log_WeaponAttackCount = 0;
+    this->Log_FinisherId = 0;
+    this->Log_FinisherCount = 0;
+    this->Log_VehicleRideCount = 0;
+    this->Log_AbilityUseCount.AddDefaulted(3);
+    this->Log_VendingUseCount = 0;
+    this->Log_SlotMachineUseCount = 0;
+    this->EndGameReasonOnServer = ESSEndGameReason::None;
+    this->WrestlerID = EWrestlerID_N::None;
+    this->ServerPlayerStateIndex = -1;
+    this->KillerPlayerIndex = -1;
+    this->ClientIPForServer = TEXT("0.0.0.0");
+    this->isResultTallyState = EResultTallyState::EResultTally_None;
+    this->SelectSpawnPointId = -1;
+    this->LeaderboardRank = 0;
+}
+
 void AELSSPlayerState::UpdateSyncStatusForWatch() {
 }
 
@@ -468,51 +516,4 @@ void AELSSPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AELSSPlayerState, ssPlayerInfoSyncData);
 }
 
-AELSSPlayerState::AELSSPlayerState() {
-    this->MasterData = NULL;
-    this->KillCountRep = 0;
-    this->KillCountLocal = 0;
-    this->WatcherLocal = NULL;
-    this->WatchedPlayerNum = 0;
-    this->SyncStatus_InteractTarget = NULL;
-    this->AttentionPoint = 0;
-    this->AttentionGaugeState = ESSAttentionGaugeState::Default;
-    this->FeverTimeBeginTime = -1.00f;
-    this->NegativeTimer = 0.00f;
-    this->ExpItemSpawnDelayTime = 0.20f;
-    this->AfterFeverTimeDuration = 0.50f;
-    this->SurvivorRanking = 0;
-    this->ExpItemPoint = 0;
-    this->ExpItemPointLoopCount = 0;
-    this->FgfDefenseTarget = NULL;
-    this->CachedTeamState = NULL;
-    this->RespawnReservedTime = -1.00f;
-    this->SettingAbilityId_1 = 0;
-    this->SettingAbilityId_2 = 0;
-    this->SettingAbilityId_3 = 0;
-    this->UseDefaultUserSettings = true;
-    this->ProgressFlags = 0;
-    this->Log_HeatLevel = 1;
-    this->Log_TotalAttack = 0;
-    this->Log_TotalDamage = 0;
-    this->Log_Mileage = 0.00f;
-    this->Log_ReviveFromKoCount = 0;
-    this->Log_StrikeCount = 0;
-    this->Log_GrappleCount = 0;
-    this->Log_WeaponAttackCount = 0;
-    this->Log_FinisherId = 0;
-    this->Log_FinisherCount = 0;
-    this->Log_VehicleRideCount = 0;
-    this->Log_AbilityUseCount.AddDefaulted(3);
-    this->Log_VendingUseCount = 0;
-    this->Log_SlotMachineUseCount = 0;
-    this->EndGameReasonOnServer = ESSEndGameReason::None;
-    this->WrestlerID = EWrestlerID_N::None;
-    this->ServerPlayerStateIndex = -1;
-    this->KillerPlayerIndex = -1;
-    this->ClientIPForServer = TEXT("0.0.0.0");
-    this->isResultTallyState = EResultTallyState::EResultTally_None;
-    this->SelectSpawnPointId = -1;
-    this->LeaderboardRank = 0;
-}
 

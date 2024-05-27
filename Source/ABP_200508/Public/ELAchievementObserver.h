@@ -12,6 +12,7 @@ protected:
     float StealFinisherTimer_N;
     
 public:
-    UELAchievementObserver();
+    UELAchievementObserver(const FObjectInitializer& ObjectInitializer);
+
 };
 

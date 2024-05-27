@@ -1,5 +1,8 @@
 #include "MiscUtil.h"
 
+UMiscUtil::UMiscUtil() {
+}
+
 void UMiscUtil::ToMeterText(FText& Out, const float InInch, const int32 FractionalDigits) {
 }
 
@@ -25,6 +28,4 @@ bool UMiscUtil::EvaluateGenderConditions(const EGenderConditions& Conditions, co
     return false;
 }
 
-UMiscUtil::UMiscUtil() {
-}
 

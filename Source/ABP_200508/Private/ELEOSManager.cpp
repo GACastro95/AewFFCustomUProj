@@ -1,5 +1,53 @@
 #include "ELEOSManager.h"
 
+UELEOSManager::UELEOSManager() {
+    this->bRunningLoginFlow = false;
+    this->EOSManager = NULL;
+    this->EOSAuth = NULL;
+    this->EOSUserManager = NULL;
+    this->EOSUser = NULL;
+    this->EOSUserContents = NULL;
+    this->EOSInternalIssueNotify = NULL;
+    this->EOSPresence = NULL;
+    this->EOSLeaderboard = NULL;
+    this->EOSStats = NULL;
+    this->ELGameSession = NULL;
+    this->ELEOSLobby = NULL;
+    this->ELEOSGameChatSession = NULL;
+    this->ELEOSFriend = NULL;
+    this->EOSAntiCheatClient = NULL;
+    this->EOSAntiCheatServer = NULL;
+    this->EOSReports = NULL;
+    this->EOSSanctions = NULL;
+    this->EOSVoice = NULL;
+    this->EOSTitleStorage = NULL;
+    this->ELEOSTitleStorageProgress = NULL;
+    this->ELEOSTitleStorageProgressRequireFiles = NULL;
+    this->EOSApiBase = NULL;
+    this->ELOnlineNews = NULL;
+    this->ELEOSGameSessionMatching = NULL;
+    this->RankCalculator = NULL;
+    this->ELEOSManagerUtility = NULL;
+    this->isLogin = false;
+    this->IsLoggingin = false;
+    this->LastGeneralEvent = EEOSGeneralEvent::Success;
+    this->LastGeneralErrorEvent = EEOSGeneralEvent::Success;
+    this->ExternalLoginUserControllerId = -1;
+    this->bUseEAS = false;
+    this->bAutoLinkEAS = false;
+    this->NetworkObserver = NULL;
+    this->ELEOSDebug = NULL;
+    this->bEnabledCrossPlay = false;
+    this->bEnabledCheckEOSServices = false;
+    this->bSetLastResponseDateTime = false;
+    this->ELYGS2SetupStep = EELYGS2SetupStep::None;
+    this->ELEOSManagerUtility_Subclass = NULL;
+    this->ELEOSManagerUtility_BpIns = NULL;
+    this->SSModeServiceParam = NULL;
+    this->OnlineNotifyAction_NextTick = EELOnlineNotifyAction::None;
+    this->SSMode_EOSTitleStorageFileParams.AddDefaulted(2);
+}
+
 void UELEOSManager::UpdateEOS() {
 }
 
@@ -41,6 +89,9 @@ void UELEOSManager::SetLastResponseDateTime(const FDateTime& DateTime) {
 }
 
 void UELEOSManager::SetLastError(EELEOSApiType Type, int32 Value) {
+}
+
+void UELEOSManager::SetDebug_LobbyDebugMode(int32 _value) {
 }
 
 bool UELEOSManager::SetCheatPenalty() {
@@ -370,6 +421,10 @@ UELEOSDebug* UELEOSManager::GetELEOSDebug() const {
     return NULL;
 }
 
+int32 UELEOSManager::GetDebug_LobbyDebugMode() const {
+    return 0;
+}
+
 int32 UELEOSManager::GetConfigPingUpdateInterval() {
     return 0;
 }
@@ -421,51 +476,4 @@ void UELEOSManager::CallLoginPortalAfterEOSAPIBaseEvent() {
 void UELEOSManager::ApplicationStatusChanged(EELApplicationStatus AppStatus) {
 }
 
-UELEOSManager::UELEOSManager() {
-    this->bRunningLoginFlow = false;
-    this->EOSManager = NULL;
-    this->EOSAuth = NULL;
-    this->EOSUserManager = NULL;
-    this->EOSUser = NULL;
-    this->EOSUserContents = NULL;
-    this->EOSInternalIssueNotify = NULL;
-    this->EOSPresence = NULL;
-    this->EOSLeaderboard = NULL;
-    this->EOSStats = NULL;
-    this->ELGameSession = NULL;
-    this->ELEOSLobby = NULL;
-    this->ELEOSGameChatSession = NULL;
-    this->ELEOSFriend = NULL;
-    this->EOSAntiCheatClient = NULL;
-    this->EOSAntiCheatServer = NULL;
-    this->EOSReports = NULL;
-    this->EOSSanctions = NULL;
-    this->EOSVoice = NULL;
-    this->EOSTitleStorage = NULL;
-    this->ELEOSTitleStorageProgress = NULL;
-    this->ELEOSTitleStorageProgressRequireFiles = NULL;
-    this->EOSApiBase = NULL;
-    this->ELOnlineNews = NULL;
-    this->ELEOSGameSessionMatching = NULL;
-    this->RankCalculator = NULL;
-    this->ELEOSManagerUtility = NULL;
-    this->isLogin = false;
-    this->IsLoggingin = false;
-    this->LastGeneralEvent = EEOSGeneralEvent::Success;
-    this->LastGeneralErrorEvent = EEOSGeneralEvent::Success;
-    this->ExternalLoginUserControllerId = -1;
-    this->bUseEAS = false;
-    this->bAutoLinkEAS = false;
-    this->NetworkObserver = NULL;
-    this->ELEOSDebug = NULL;
-    this->bEnabledCrossPlay = false;
-    this->bEnabledCheckEOSServices = false;
-    this->bSetLastResponseDateTime = false;
-    this->ELYGS2SetupStep = EELYGS2SetupStep::None;
-    this->ELEOSManagerUtility_Subclass = NULL;
-    this->ELEOSManagerUtility_BpIns = NULL;
-    this->SSModeServiceParam = NULL;
-    this->OnlineNotifyAction_NextTick = EELOnlineNotifyAction::None;
-    this->SSMode_EOSTitleStorageFileParams.AddDefaulted(2);
-}
 

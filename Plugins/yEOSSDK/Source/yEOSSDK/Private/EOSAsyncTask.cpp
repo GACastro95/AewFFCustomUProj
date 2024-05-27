@@ -1,5 +1,9 @@
 #include "EOSAsyncTask.h"
 
+UEOSAsyncTask::UEOSAsyncTask() {
+    this->m_pcUserObject = NULL;
+}
+
 void UEOSAsyncTask::Unlock() {
 }
 
@@ -41,7 +45,4 @@ UEOSAsyncTask* UEOSAsyncTask::CreateAndRanLoopTask(EEOSResForSwitch& EEOSResForS
     return NULL;
 }
 
-UEOSAsyncTask::UEOSAsyncTask() {
-    this->m_pcUserObject = NULL;
-}
 

@@ -8,5 +8,6 @@ class ABP_200508_API UELSSDebugMenuAnimEvent : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UELSSDebugMenuAnimEvent();
+
 };
 

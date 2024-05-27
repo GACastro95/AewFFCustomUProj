@@ -1,5 +1,6 @@
 #include "ELCareerScriptManager.h"
 
-AELCareerScriptManager::AELCareerScriptManager() {
+AELCareerScriptManager::AELCareerScriptManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

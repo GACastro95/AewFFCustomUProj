@@ -1,5 +1,10 @@
 #include "ELAnimInstance_IK.h"
 
+UELAnimInstance_IK::UELAnimInstance_IK() {
+    this->bEnableIK = true;
+    this->bDisableUpdate = false;
+}
+
 
 void UELAnimInstance_IK::TransformBoneSpaceLocation(FVector& BoneSpaceLocation, const FName BoneName, const FVector InLocation) const {
 }
@@ -63,8 +68,4 @@ FName UELAnimInstance_IK::ConvertPartType2NodeName(const EELIKPartType PartType)
     return NAME_None;
 }
 
-UELAnimInstance_IK::UELAnimInstance_IK() {
-    this->bEnableIK = true;
-    this->bDisableUpdate = false;
-}
 

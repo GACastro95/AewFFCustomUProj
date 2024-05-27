@@ -8,5 +8,6 @@ class ELITE_API UELAnimNotifyState_AttachBS : public UELAnimNotifyState_Attach {
     GENERATED_BODY()
 public:
     UELAnimNotifyState_AttachBS();
+
 };
 

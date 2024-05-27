@@ -16,6 +16,7 @@ private:
     
 public:
     UELOnlineNewsData();
+
     UFUNCTION(BlueprintCallable)
     FString ToJson(bool PlatformSwitch);
     

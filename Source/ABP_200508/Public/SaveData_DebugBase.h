@@ -14,6 +14,7 @@ public:
     FSaveData_DebugDispatcher SaveData_DebugDispatcher;
     
     USaveData_DebugBase();
+
     UFUNCTION(BlueprintCallable)
     bool StartDataReset(bool _bProjectSavedDir, const FString& _strTargetFileName, USaveDataSystem* _pcSaveDataSystem);
     

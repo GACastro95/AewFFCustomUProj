@@ -20,6 +20,7 @@ protected:
     
 public:
     UELSSWidgetHUD_OtherWrestlerStatus();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

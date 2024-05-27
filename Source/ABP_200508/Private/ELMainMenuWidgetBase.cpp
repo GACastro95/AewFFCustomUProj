@@ -1,5 +1,8 @@
 #include "ELMainMenuWidgetBase.h"
 
+UELMainMenuWidgetBase::UELMainMenuWidgetBase() {
+}
+
 void UELMainMenuWidgetBase::SetEnableHoldOkPerController(int32 ControllerId, bool bEnable) {
 }
 
@@ -115,6 +118,4 @@ void UELMainMenuWidgetBase::CalcGridCursorDown(int32 Current, int32 Size, int32 
 void UELMainMenuWidgetBase::CalcGridCursor(int32 Current, int32 ChangeXNum, int32 ChangeYNum, int32 Size, int32 Width, bool IsRepeat, int32& Next, bool& bMoved) {
 }
 
-UELMainMenuWidgetBase::UELMainMenuWidgetBase() {
-}
 

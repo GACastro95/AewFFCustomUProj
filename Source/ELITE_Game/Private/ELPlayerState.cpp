@@ -1,5 +1,6 @@
 #include "ELPlayerState.h"
 
-AELPlayerState::AELPlayerState() {
+AELPlayerState::AELPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

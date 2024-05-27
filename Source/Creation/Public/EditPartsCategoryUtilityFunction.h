@@ -11,6 +11,7 @@ class CREATION_API UEditPartsCategoryUtilityFunction : public UBlueprintFunction
     GENERATED_BODY()
 public:
     UEditPartsCategoryUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void GetPartsCategoryDetails(const FEditPartsCategoryName& CategoryName, FEditPartsCategoryDetails& EditPartsCategoryDetails);
     

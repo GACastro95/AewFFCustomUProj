@@ -1,6 +1,9 @@
 #include "ELSSInGameUtility.h"
 #include "Templates/SubclassOf.h"
 
+UELSSInGameUtility::UELSSInGameUtility() {
+}
+
 TArray<FELSSLobbyMatchPlayerDataToClient> UELSSInGameUtility::SortClientMatchPlayerList(const UObject* WorldContextObject, TArray<FELSSLobbyMatchPlayerDataToClient> Source) {
     return TArray<FELSSLobbyMatchPlayerDataToClient>();
 }
@@ -200,6 +203,4 @@ void UELSSInGameUtility::AddValidInteractableObjectToGameState(const UObject* Wo
 void UELSSInGameUtility::AddPool(const UObject* WorldContextObject, TSubclassOf<AActor> actorClass, int32 PoolSize) {
 }
 
-UELSSInGameUtility::UELSSInGameUtility() {
-}
 

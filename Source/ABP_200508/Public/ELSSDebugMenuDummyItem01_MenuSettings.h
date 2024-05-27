@@ -16,5 +16,6 @@ public:
     FChangeValue_DebugDispatcher ChangeValue_DebugDispatcher;
     
     UELSSDebugMenuDummyItem01_MenuSettings();
+
 };
 

@@ -8,14 +8,15 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSGimmickBase : public AActor, public IELSSActorCommonInterface {
     GENERATED_BODY()
 public:
-    AELSSGimmickBase();
+    AELSSGimmickBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnActorLanding(AActor* Actor);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnActorLanded(AActor* Actor);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

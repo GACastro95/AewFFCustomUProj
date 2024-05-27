@@ -8,5 +8,6 @@ class YEOSSDK_API UEOSAPIRequestCallback : public UObject {
     GENERATED_BODY()
 public:
     UEOSAPIRequestCallback();
+
 };
 

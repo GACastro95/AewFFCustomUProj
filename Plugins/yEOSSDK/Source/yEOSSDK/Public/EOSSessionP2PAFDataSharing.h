@@ -8,5 +8,6 @@ class YEOSSDK_API UEOSSessionP2PAFDataSharing : public UEOSSessionP2PAdditionalF
     GENERATED_BODY()
 public:
     UEOSSessionP2PAFDataSharing();
+
 };
 

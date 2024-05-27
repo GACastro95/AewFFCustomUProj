@@ -1,5 +1,9 @@
 #include "ELBottomHelpManager.h"
 
+UELBottomHelpManager::UELBottomHelpManager() {
+    this->m_BottomHelpWidget = NULL;
+}
+
 void UELBottomHelpManager::SetCommonLayoutWidget(UUserWidget* _widget) {
 }
 
@@ -11,7 +15,4 @@ UUserWidget* UELBottomHelpManager::GetBottomHelpWidget() {
     return NULL;
 }
 
-UELBottomHelpManager::UELBottomHelpManager() {
-    this->m_BottomHelpWidget = NULL;
-}
 

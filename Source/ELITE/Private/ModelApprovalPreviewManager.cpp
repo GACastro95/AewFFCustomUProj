@@ -1,5 +1,13 @@
 #include "ModelApprovalPreviewManager.h"
 
+AModelApprovalPreviewManager::AModelApprovalPreviewManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PreviewMenu = NULL;
+    this->MailMenu = NULL;
+    this->m_sCharacterMax = 1;
+    this->m_fWrestlerIntervalMin = 35.00f;
+    this->m_fWrestlerIntervalMax = 200.00f;
+}
+
 void AModelApprovalPreviewManager::ToggleShowMenu(EnPreviewMenu eMenu) {
 }
 
@@ -73,11 +81,4 @@ void AModelApprovalPreviewManager::ChangeBox() {
 void AModelApprovalPreviewManager::AdjustWrestlerInterval(bool Increase) {
 }
 
-AModelApprovalPreviewManager::AModelApprovalPreviewManager() {
-    this->PreviewMenu = NULL;
-    this->MailMenu = NULL;
-    this->m_sCharacterMax = 1;
-    this->m_fWrestlerIntervalMin = 35.00f;
-    this->m_fWrestlerIntervalMax = 200.00f;
-}
 

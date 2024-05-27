@@ -1,5 +1,8 @@
 #include "SaveDataObject_UGC_Team.h"
 
+USaveDataObject_UGC_Team::USaveDataObject_UGC_Team() {
+}
+
 void USaveDataObject_UGC_Team::SetUnlockId(int32 Index, int32 _UnlockId) {
 }
 
@@ -110,6 +113,4 @@ int32 USaveDataObject_UGC_Team::GetAnnounceId(int32 Index) const {
     return 0;
 }
 
-USaveDataObject_UGC_Team::USaveDataObject_UGC_Team() {
-}
 

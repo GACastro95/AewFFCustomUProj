@@ -36,6 +36,7 @@ protected:
     
 public:
     UELOSSLocalPlayer();
+
     UFUNCTION(BlueprintCallable)
     void UnlockOSSAchievement(const FName AchievementName);
     

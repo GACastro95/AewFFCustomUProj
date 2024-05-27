@@ -229,7 +229,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CyberScan_N;
     
-    AELChameleon();
+    AELChameleon(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ZoneFunc_Impl();
     

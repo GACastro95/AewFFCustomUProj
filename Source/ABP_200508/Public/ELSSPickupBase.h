@@ -107,9 +107,10 @@ protected:
     FVector InteractUIOffset;
     
 public:
-    AELSSPickupBase();
+    AELSSPickupBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateLostTimer(float DeltaTime);
@@ -232,7 +233,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AttachRarityEffect();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

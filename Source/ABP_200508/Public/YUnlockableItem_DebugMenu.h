@@ -10,9 +10,15 @@ class ABP_200508_API UYUnlockableItem_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYUnlockableItem_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetEnableUnlockSkip(bool bEnable);
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void OnCloseOnlineShop(bool bFlag);
+    
+public:
     UFUNCTION(BlueprintCallable)
     void ExecuteRevertDefault();
     

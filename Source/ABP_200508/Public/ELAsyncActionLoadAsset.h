@@ -16,6 +16,7 @@ public:
     FOnELAssetLoaded Completed;
     
     UELAsyncActionLoadAsset();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UELAsyncActionLoadAsset* ELAsyncLoadAssetPath(UObject* WorldContextObject, const FSoftObjectPath& Asset);
     

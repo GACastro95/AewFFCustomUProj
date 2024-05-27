@@ -16,7 +16,7 @@ class UDataTable;
 class UMyWrestlerDataObject;
 class UTemplateScoutAsset;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class ABP_200508_API UCharacterDataManager : public USingletonBase, public IMyWrestlerInterface {
     GENERATED_BODY()
 public:
@@ -48,6 +48,7 @@ protected:
     
 public:
     UCharacterDataManager();
+
     UFUNCTION(BlueprintCallable)
     void SortWrestler();
     
@@ -219,7 +220,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool AddCustomWrestler(UMyWrestlerDataObject* MyWrestlerObject, bool& bAdded);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

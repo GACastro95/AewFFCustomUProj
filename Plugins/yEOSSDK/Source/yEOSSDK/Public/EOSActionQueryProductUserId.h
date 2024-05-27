@@ -42,6 +42,7 @@ public:
     bool bSuccess;
     
     UEOSActionQueryProductUserId();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UEOSActionQueryProductUserId* EOSActionQueryProductUserId(UObject* NewWorldContextObject, UEOSUserManager* NewUserManager, const FString& NewLocalProductID, const TArray<FString>& NewTargetAccountIDs, EExternalAccountType NewAccountType);
     

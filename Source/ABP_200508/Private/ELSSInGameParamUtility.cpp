@@ -1,5 +1,8 @@
 #include "ELSSInGameParamUtility.h"
 
+UELSSInGameParamUtility::UELSSInGameParamUtility() {
+}
+
 bool UELSSInGameParamUtility::GetWrestlerTypeResourceParam(const UObject* WorldContextObject, ESSWrestlerType inWrestlerType, FSSWrestlerTypeResourceParam& OutRow) {
     return false;
 }
@@ -222,6 +225,4 @@ int32 UELSSInGameParamUtility::CalcAttentionLevelFromPoint(const UObject* WorldC
     return 0;
 }
 
-UELSSInGameParamUtility::UELSSInGameParamUtility() {
-}
 

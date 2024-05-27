@@ -9,6 +9,7 @@ class YGS2CLIENT_API UYGS2Req_GetSSPlayerData : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_GetSSPlayerData();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FYGS2SSPlayerData GetPlayerData() const;
     

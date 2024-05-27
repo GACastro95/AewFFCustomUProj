@@ -29,6 +29,7 @@ private:
     
 public:
     UEOSFriend();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

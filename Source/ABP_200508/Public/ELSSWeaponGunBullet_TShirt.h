@@ -14,6 +14,7 @@ private:
     USoundAtomCue* SoundCue_TShirt;
     
 public:
-    AELSSWeaponGunBullet_TShirt();
+    AELSSWeaponGunBullet_TShirt(const FObjectInitializer& ObjectInitializer);
+
 };
 

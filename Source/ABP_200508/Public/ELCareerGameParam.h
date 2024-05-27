@@ -210,6 +210,7 @@ private:
     
 public:
     UELCareerGameParam();
+
     UFUNCTION(BlueprintCallable)
     void SetWinnerWrestler(EWrestlerID_N eWrestlerID);
     

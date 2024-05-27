@@ -15,7 +15,8 @@ private:
     TArray<FCareerStory> m_StoryDataTable;
     
 public:
-    AELCareerStoryDataActor();
+    AELCareerStoryDataActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupStoryDataFromStoryList(FName _key);
     

@@ -1,5 +1,6 @@
 #include "ELSteelStep.h"
 
-AELSteelStep::AELSteelStep() {
+AELSteelStep::AELSteelStep(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

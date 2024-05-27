@@ -1,6 +1,12 @@
 #include "ELSSVehicleManager.h"
 #include "Templates/SubclassOf.h"
 
+AELSSVehicleManager::AELSSVehicleManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+}
+
 AActor* AELSSVehicleManager::SpawnVehicleToLocator(int32 inVehicleId, AELSSLocator_Vehicle* inLocator) {
     return NULL;
 }
@@ -28,6 +34,4 @@ TSubclassOf<AActor> AELSSVehicleManager::GetVehicleClass(int32 inDatabaseId) {
     return NULL;
 }
 
-AELSSVehicleManager::AELSSVehicleManager() {
-}
 

@@ -12,6 +12,7 @@ protected:
     int32 FgfGoalLocatorId;
     
 public:
-    AELSSLocator_FgfGoal();
+    AELSSLocator_FgfGoal(const FObjectInitializer& ObjectInitializer);
+
 };
 

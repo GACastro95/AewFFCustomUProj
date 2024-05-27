@@ -56,6 +56,7 @@ protected:
     
 public:
     UELMenuWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateFromStackPrevious();

@@ -1,5 +1,8 @@
 #include "EOSTitleStorageBase.h"
 
+UEOSTitleStorageBase::UEOSTitleStorageBase() {
+}
+
 void UEOSTitleStorageBase::SetRequestReadBytes(int32 _sRequestReadBytes) {
 }
 
@@ -42,6 +45,4 @@ bool UEOSTitleStorageBase::ClearDownloadProgress(const FString& _strFileName) {
     return false;
 }
 
-UEOSTitleStorageBase::UEOSTitleStorageBase() {
-}
 

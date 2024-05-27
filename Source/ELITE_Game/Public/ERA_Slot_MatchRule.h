@@ -20,6 +20,5 @@ enum class ERA_Slot_MatchRule : uint8 {
     RA_MR_LIGHTSOUT,
     RA_MR_EXPLODING,
     RA_MR_TRAINING,
-    RA_MR_MAX UMETA(Hidden),
 };
 

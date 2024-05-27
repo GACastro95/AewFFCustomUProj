@@ -47,6 +47,7 @@ protected:
     
 public:
     UELSSWidgetHUD_OnlineID();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdatePosAndVisible();

@@ -11,6 +11,7 @@ class ELITE_CORE_API UAttireTypeUtilityFunction : public UBlueprintFunctionLibra
     GENERATED_BODY()
 public:
     UAttireTypeUtilityFunction();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool EvaluateBit(const EAttireType& Value, const int32 ConditionFlags);
     

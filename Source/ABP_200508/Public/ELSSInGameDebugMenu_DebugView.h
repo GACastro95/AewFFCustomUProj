@@ -8,5 +8,6 @@ class ABP_200508_API UELSSInGameDebugMenu_DebugView : public UELSSInGameDebugMen
     GENERATED_BODY()
 public:
     UELSSInGameDebugMenu_DebugView();
+
 };
 

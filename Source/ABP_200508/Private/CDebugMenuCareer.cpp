@@ -1,5 +1,6 @@
 #include "CDebugMenuCareer.h"
 
-ACDebugMenuCareer::ACDebugMenuCareer() {
+ACDebugMenuCareer::ACDebugMenuCareer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

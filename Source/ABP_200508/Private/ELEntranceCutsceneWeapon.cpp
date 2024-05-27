@@ -1,6 +1,7 @@
 #include "ELEntranceCutsceneWeapon.h"
 
-AELEntranceCutsceneWeapon::AELEntranceCutsceneWeapon() {
+AELEntranceCutsceneWeapon::AELEntranceCutsceneWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->VanishedWhenNonDefaultEntrance = false;
 }
+
 

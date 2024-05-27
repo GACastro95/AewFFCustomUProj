@@ -67,6 +67,7 @@ public:
     FEOSLobbyReceivePacketEvent OnLobbyReceivePacket;
     
     UELEOSFriend();
+
     UFUNCTION(BlueprintCallable)
     void UpdateInfo();
     

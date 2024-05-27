@@ -88,5 +88,6 @@ public:
     int32 DataVersion;
     
     UELSSMasterDataRawData();
+
 };
 

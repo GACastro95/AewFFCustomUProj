@@ -16,7 +16,8 @@ private:
     FOnFinishedVehicleMove_ResultInteger OnFinishedVehicleMove;
     
 public:
-    AELCareerVehicleActor();
+    AELCareerVehicleActor(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateBottomHelp(bool bFlag);
@@ -24,7 +25,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void MeshVisibleBP(ECareerCityMoveVehicleType eVehicleType);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)

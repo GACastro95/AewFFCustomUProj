@@ -16,6 +16,7 @@ protected:
     
 public:
     UELCareerTonyKhanTweetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetText() const;

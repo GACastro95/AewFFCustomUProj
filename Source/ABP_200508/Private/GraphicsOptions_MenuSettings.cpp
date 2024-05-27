@@ -11,3 +11,4 @@ UGraphicsOptions_MenuSettings::UGraphicsOptions_MenuSettings() {
     this->m_VSync = true;
 }
 
+

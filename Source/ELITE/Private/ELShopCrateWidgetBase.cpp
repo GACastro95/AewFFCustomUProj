@@ -1,5 +1,8 @@
 #include "ELShopCrateWidgetBase.h"
 
+UELShopCrateWidgetBase::UELShopCrateWidgetBase() {
+}
+
 
 
 
@@ -14,6 +17,4 @@ bool UELShopCrateWidgetBase::IsPlayLevelSequence() const {
 void UELShopCrateWidgetBase::ChangePlayLevelSequence(bool State) {
 }
 
-UELShopCrateWidgetBase::UELShopCrateWidgetBase() {
-}
 

@@ -20,6 +20,7 @@ protected:
     
 public:
     UEOSIDs();
+
     UFUNCTION(BlueprintCallable)
     bool SetIDsWithInst(UEOSIDs* _pcEOSIDs);
     

@@ -18,6 +18,7 @@ protected:
     AELSSItemBox* SpawnedItemBox;
     
 public:
-    AELSSLocator_ItemBox();
+    AELSSLocator_ItemBox(const FObjectInitializer& ObjectInitializer);
+
 };
 

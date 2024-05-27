@@ -1,5 +1,21 @@
 #include "ELSSActionCameraController.h"
 
+UELSSActionCameraController::UELSSActionCameraController() {
+    this->ActiveTargetLocation = false;
+    this->TargetLocationLerpAlphaSpeed = 0.00f;
+    this->TargetLocationLerpHeightCoef = 0.00f;
+    this->TargetLocationLerpAlphaTarget = 0.00f;
+    this->TargetLocationLerpAlpha = 0.00f;
+    this->StatusIsEnableUserRotate = false;
+    this->StatusIsEnableUpdateState = false;
+    this->MainPlayer = NULL;
+    this->OpponentPlayer = NULL;
+    this->GameplayCamera = NULL;
+    this->ParamManager = NULL;
+    this->CurrentStep = 0;
+    this->StatusIsActive = false;
+}
+
 void UELSSActionCameraController::UpdateOnTick(float inDeltaSeconds) {
 }
 
@@ -52,19 +68,4 @@ void UELSSActionCameraController::Finish() {
 void UELSSActionCameraController::ChangeStep(int32 inStep) {
 }
 
-UELSSActionCameraController::UELSSActionCameraController() {
-    this->ActiveTargetLocation = false;
-    this->TargetLocationLerpAlphaSpeed = 0.00f;
-    this->TargetLocationLerpHeightCoef = 0.00f;
-    this->TargetLocationLerpAlphaTarget = 0.00f;
-    this->TargetLocationLerpAlpha = 0.00f;
-    this->StatusIsEnableUserRotate = false;
-    this->StatusIsEnableUpdateState = false;
-    this->MainPlayer = NULL;
-    this->OpponentPlayer = NULL;
-    this->GameplayCamera = NULL;
-    this->ParamManager = NULL;
-    this->CurrentStep = 0;
-    this->StatusIsActive = false;
-}
 

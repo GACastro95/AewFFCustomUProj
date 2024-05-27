@@ -21,5 +21,6 @@ public:
     bool bWeaponHitEffect_N;
     
     UELAnimNotifyState_AOn();
+
 };
 

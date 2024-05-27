@@ -16,6 +16,7 @@ protected:
     
 public:
     UGameTickObject();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTick(float DeltaSeconds);
     

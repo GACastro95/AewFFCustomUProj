@@ -9,6 +9,7 @@ class UELKismetArrayLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELKismetArrayLibrary();
+
 private:
     UFUNCTION(BlueprintCallable)
     static void Array_Shuffle(const TArray<int32>& TargetArray, UPARAM(Ref) FRandomStream& RandomStream);

@@ -1,5 +1,8 @@
 #include "EOSUserContentsBase.h"
 
+UEOSUserContentsBase::UEOSUserContentsBase() {
+}
+
 void UEOSUserContentsBase::SetRequestReadBytes(int32 _sRequestReadBytes) {
 }
 
@@ -42,6 +45,4 @@ bool UEOSUserContentsBase::ClearDownloadProgress(const FString& _strFileName) {
     return false;
 }
 
-UEOSUserContentsBase::UEOSUserContentsBase() {
-}
 

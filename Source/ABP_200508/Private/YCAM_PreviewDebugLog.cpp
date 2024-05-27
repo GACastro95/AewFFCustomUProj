@@ -1,5 +1,14 @@
 #include "YCAM_PreviewDebugLog.h"
 
+UYCAM_PreviewDebugLog::UYCAM_PreviewDebugLog() {
+    this->ErrAnimLogHeader = TEXT("DataIndex,MontageID,MovesName,UnlockID,CategoryID,DTName,DTIndex,ErrorInfo,PreviewIndex,DateTime,DistanceOffset,AllOffset,RecordTime");
+    this->ErrAnimLogFileTitle = TEXT("MovesAnimDebugLog.csv");
+    this->ErrAnimLogMovesLogPath = TEXT("C:/Users/Gabriel/AppData/Local/AEWFightForever/Saved/MovesLog/");
+    this->isPrintOutputLog = true;
+    this->isPoolLog = true;
+    this->isScreenShot = false;
+}
+
 void UYCAM_PreviewDebugLog::Uninit_Implementation() {
 }
 
@@ -38,12 +47,4 @@ FString UYCAM_PreviewDebugLog::ErrInfoToString(const FAnimErrInfo& In_ErrInfo) {
 void UYCAM_PreviewDebugLog::AddErrorLog(const FAnimErrInfo& In_AnimErrInfo) {
 }
 
-UYCAM_PreviewDebugLog::UYCAM_PreviewDebugLog() {
-    this->ErrAnimLogHeader = TEXT("DataIndex,MontageID,MovesName,UnlockID,CategoryID,DTName,DTIndex,ErrorInfo,PreviewIndex,DateTime,DistanceOffset,AllOffset,RecordTime");
-    this->ErrAnimLogFileTitle = TEXT("MovesAnimDebugLog.csv");
-    this->ErrAnimLogMovesLogPath = TEXT("C:/Users/Gabriel/AppData/Local/AEWFightForever/Saved/MovesLog/");
-    this->isPrintOutputLog = true;
-    this->isPoolLog = true;
-    this->isScreenShot = false;
-}
 

@@ -8,5 +8,6 @@ class ABP_200508_API UELGameSettingOprionScirptBase : public UObject {
     GENERATED_BODY()
 public:
     UELGameSettingOprionScirptBase();
+
 };
 

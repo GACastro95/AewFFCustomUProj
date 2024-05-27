@@ -7,11 +7,11 @@ enum class EGfeSDKHighlightSignificance : uint8 {
     NONE,
     ExtremelyBad,
     VeryBad,
-    Bad = 0x4,
-    Neutral = 0x8,
-    Good = 0x10,
-    VeryGood = 0x20,
-    ExtremelyGood = 0x40,
-    MAX = 0x80,
+    Bad = 4,
+    Neutral = 8,
+    Good = 16,
+    VeryGood = 32,
+    ExtremelyGood = 64,
+    MAX = 128,
 };
 

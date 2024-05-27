@@ -1,5 +1,9 @@
 #include "GameSettings.h"
 
+UGameSettings::UGameSettings() {
+    this->ValidShippingSSmode = true;
+}
+
 bool UGameSettings::IsValidSSmode() {
     return false;
 }
@@ -17,7 +21,4 @@ void UGameSettings::GetSaveDataAccessParams(TArray<FSaveDataAccessParam>& Out) {
 void UGameSettings::GetAdjustDlcSaveDataAccessParams(TArray<FAdjustDlcSaveDataParam>& Out) {
 }
 
-UGameSettings::UGameSettings() {
-    this->ValidShippingSSmode = false;
-}
 

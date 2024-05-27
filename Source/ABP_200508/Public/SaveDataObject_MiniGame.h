@@ -9,6 +9,7 @@ class ABP_200508_API USaveDataObject_MiniGame : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_MiniGame();
+
     UFUNCTION(BlueprintCallable)
     void SetMiniGamePlayedStatus(EMiniGameID _MiniGameID, bool _IsPlayed);
     

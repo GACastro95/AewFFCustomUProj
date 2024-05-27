@@ -19,6 +19,7 @@ public:
     FOnHighlightsOperationResultCallback OnFailure;
     
     UHighlightsOpenGroupAsync();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UHighlightsOpenGroupAsync* HighlightsOpenGroup(UObject* WorldContextObject, const FGfeSDKHighlightOpenGroupParams& Params);
     

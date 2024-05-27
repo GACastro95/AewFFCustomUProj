@@ -7,6 +7,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ABP_200508_API UELEntranceCutsceneDataManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UELEntranceCutsceneDataManager();
+    UELEntranceCutsceneDataManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

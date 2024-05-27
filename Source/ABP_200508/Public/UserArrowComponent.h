@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class ABP_200508_API UUserArrowComponent : public UArrowComponent {
     GENERATED_BODY()
 public:
-    UUserArrowComponent();
+    UUserArrowComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

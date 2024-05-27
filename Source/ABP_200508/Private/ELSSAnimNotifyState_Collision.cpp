@@ -5,3 +5,4 @@ UELSSAnimNotifyState_Collision::UELSSAnimNotifyState_Collision() {
     this->MoveCollisionRadiusScale = 1.00f;
 }
 
+

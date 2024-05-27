@@ -1,5 +1,8 @@
 #include "EOSSessionP2PConnectionPacket.h"
 
+UEOSSessionP2PConnectionPacket::UEOSSessionP2PConnectionPacket() {
+}
+
 void UEOSSessionP2PConnectionPacket::SetParams(const FString& _strSessionName, const FString& _strDisplayName, const FString& _strProductUserID, const FString& _strEpicAccountID, bool _bNewJoinInUser) {
 }
 
@@ -23,6 +26,4 @@ FString UEOSSessionP2PConnectionPacket::GetAccountDisplayName() {
     return TEXT("");
 }
 
-UEOSSessionP2PConnectionPacket::UEOSSessionP2PConnectionPacket() {
-}
 

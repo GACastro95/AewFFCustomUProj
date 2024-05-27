@@ -1,5 +1,8 @@
 #include "ELSkillMenuWidgetBase.h"
 
+UELSkillMenuWidgetBase::UELSkillMenuWidgetBase() {
+}
+
 void UELSkillMenuWidgetBase::SetTabTick(bool _bTick) {
 }
 
@@ -26,6 +29,4 @@ void UELSkillMenuWidgetBase::AddSkillMenuCanvasPanelTypeWidget(UUserWidget* _wid
 void UELSkillMenuWidgetBase::AddSkillMenuBorderTabTypeWidget(int32 _Tab, UUserWidget* _widget) {
 }
 
-UELSkillMenuWidgetBase::UELSkillMenuWidgetBase() {
-}
 

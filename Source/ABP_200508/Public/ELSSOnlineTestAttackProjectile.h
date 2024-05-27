@@ -40,7 +40,8 @@ protected:
     AActor* AttackUser;
     
 public:
-    AELSSOnlineTestAttackProjectile();
+    AELSSOnlineTestAttackProjectile(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void OnProjectileImpact(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);

@@ -1,5 +1,6 @@
 #include "ELSSOnlineTestLocator.h"
 
-AELSSOnlineTestLocator::AELSSOnlineTestLocator() {
+AELSSOnlineTestLocator::AELSSOnlineTestLocator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

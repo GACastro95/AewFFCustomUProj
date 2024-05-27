@@ -12,6 +12,7 @@ class YEOSSDK_API UEOSReadLocker : public UObject {
     GENERATED_BODY()
 public:
     UEOSReadLocker();
+
     UFUNCTION(BlueprintCallable)
     static UEOSReadLocker* CreateObjectReadLocker(TScriptInterface<IEOSLockableInterface> _cLockableObject);
     

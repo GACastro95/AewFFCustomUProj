@@ -9,6 +9,7 @@ class ABP_200508_API USessionGamePlayerData : public UEOSSessionP2PPacketBase {
     GENERATED_BODY()
 public:
     USessionGamePlayerData();
+
     UFUNCTION(BlueprintCallable)
     bool SetParameters(const FSessionGamePlayerDataBP& _stPlayerData);
     

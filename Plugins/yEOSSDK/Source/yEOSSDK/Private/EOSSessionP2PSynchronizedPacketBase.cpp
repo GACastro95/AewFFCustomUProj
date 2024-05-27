@@ -1,5 +1,8 @@
 #include "EOSSessionP2PSynchronizedPacketBase.h"
 
+UEOSSessionP2PSynchronizedPacketBase::UEOSSessionP2PSynchronizedPacketBase() {
+}
+
 bool UEOSSessionP2PSynchronizedPacketBase::UpdateFrameCount() {
     return false;
 }
@@ -58,6 +61,4 @@ bool UEOSSessionP2PSynchronizedPacketBase::Compare(UEOSSessionP2PSynchronizedPac
     return false;
 }
 
-UEOSSessionP2PSynchronizedPacketBase::UEOSSessionP2PSynchronizedPacketBase() {
-}
 

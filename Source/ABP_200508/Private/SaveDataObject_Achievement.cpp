@@ -1,5 +1,8 @@
 #include "SaveDataObject_Achievement.h"
 
+USaveDataObject_Achievement::USaveDataObject_Achievement() {
+}
+
 void USaveDataObject_Achievement::SetAchievementStatus(EELAchievementList _Achievement, bool _Status) {
 }
 
@@ -18,6 +21,4 @@ int32 USaveDataObject_Achievement::AddAchievementCount(EELAchievementList _Achie
     return 0;
 }
 
-USaveDataObject_Achievement::USaveDataObject_Achievement() {
-}
 

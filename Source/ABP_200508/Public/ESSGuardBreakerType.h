@@ -14,6 +14,6 @@ enum class ESSGuardBreakerType : uint8 {
     Weapon2,
     Weapon3,
     IgnoreGuard,
-    Default = 0x0,
+    Default = Strike1,
 };
 

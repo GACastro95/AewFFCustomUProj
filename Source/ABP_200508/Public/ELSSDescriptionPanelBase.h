@@ -8,6 +8,7 @@ class ABP_200508_API UELSSDescriptionPanelBase : public UELSSPanelBase {
     GENERATED_BODY()
 public:
     UELSSDescriptionPanelBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OpenDescriptionWindow();
     

@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API ACDebugCareerBase : public AActor {
     GENERATED_BODY()
 public:
-    ACDebugCareerBase();
+    ACDebugCareerBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -22,6 +22,7 @@ protected:
     
 public:
     UELCAWMenuWidgetBase();
+
     UFUNCTION(BlueprintCallable)
     void UnlockBlockAllInput(const bool bBlockAllInput);
     

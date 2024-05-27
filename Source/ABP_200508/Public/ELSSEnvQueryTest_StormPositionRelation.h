@@ -8,5 +8,6 @@ class ABP_200508_API UELSSEnvQueryTest_StormPositionRelation : public UEnvQueryT
     GENERATED_BODY()
 public:
     UELSSEnvQueryTest_StormPositionRelation();
+
 };
 

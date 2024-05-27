@@ -20,6 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AELSSSilhouetteActor> SilhouetteActorClass;
     
-    AELSSSilhouetteActorManager();
+    AELSSSilhouetteActorManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

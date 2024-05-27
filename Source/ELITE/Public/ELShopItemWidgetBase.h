@@ -13,6 +13,7 @@ class ELITE_API UELShopItemWidgetBase : public UUserWidget {
     GENERATED_BODY()
 public:
     UELShopItemWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void GetUniqueID(const FShopGeneralItemManageData& _targetData, int32& OutResult);

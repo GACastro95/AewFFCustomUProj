@@ -13,11 +13,11 @@ enum class ESSPlayerProgress : uint8 {
     DoneDescription,
     DoneActorSpawned,
     DoneSyncTeamState,
-    ReadyToNext_FromLoading = 0xA,
+    ReadyToNext_FromLoading = 10,
     ReadyToNext_FromSetup,
     ReadyToNext_FromEntrance,
     ReadyToNext_FromOpenGamePlayScreen,
     ReadyToNext_FromDescription,
-    NotifiedFromServer_Dead = 0x14,
+    NotifiedFromServer_Dead = 20,
 };
 

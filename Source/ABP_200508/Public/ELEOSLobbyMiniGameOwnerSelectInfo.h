@@ -19,6 +19,7 @@ private:
     
 public:
     UELEOSLobbyMiniGameOwnerSelectInfo();
+
     UFUNCTION(BlueprintCallable)
     void SetOwnerSelect(int32 InNextCursor, bool InDecide, bool InCancel);
     

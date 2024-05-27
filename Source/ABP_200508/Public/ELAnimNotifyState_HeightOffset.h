@@ -17,5 +17,6 @@ public:
     float OutBlendSeconds;
     
     UELAnimNotifyState_HeightOffset();
+
 };
 

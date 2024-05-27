@@ -52,6 +52,7 @@ protected:
     
 public:
     UELSSAnimInstance();
+
     UFUNCTION(BlueprintCallable)
     void SetUpperBodyAnimState(ESSUpperBodyAnimState State);
     

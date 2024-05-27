@@ -22,6 +22,7 @@ private:
     
 public:
     UELEOSManagerUtility();
+
     UFUNCTION(BlueprintCallable)
     void RequestSanitizeWrestlerName(FEOSSanitizeWrestlerNameTextEvent Delegate, UELEOSSanitizeTextWrestlerData* UserData);
     

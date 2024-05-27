@@ -13,7 +13,8 @@ private:
     AActor* m_pCharacter;
     
 public:
-    AELCareerPropBase();
+    AELCareerPropBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetAnimInstanceClass(ECareerProp ePeop);

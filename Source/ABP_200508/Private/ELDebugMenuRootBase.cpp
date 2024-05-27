@@ -1,5 +1,8 @@
 #include "ELDebugMenuRootBase.h"
 
+UELDebugMenuRootBase::UELDebugMenuRootBase() {
+}
+
 bool UELDebugMenuRootBase::UpdateSimpleMenuUIRecursive(const FELDebugMenuSimpleUIParam& _rstParam, const FString& _strRegistKey) {
     return false;
 }
@@ -107,6 +110,4 @@ bool UELDebugMenuRootBase::AddSubMenu(UELDebugMenuSubMenuBase* _pcSubMenu, const
 void UELDebugMenuRootBase::AddShortcut(const FString& _strRegistKey, const TArray<FELDebugMenuShortcutKeySettings>& _cKeys, EELDebugMenuShortcutType _eShortCutType) {
 }
 
-UELDebugMenuRootBase::UELDebugMenuRootBase() {
-}
 

@@ -60,7 +60,8 @@ protected:
     bool DisableForwardCheck;
     
 public:
-    AELSSSituationMoveTrigger();
+    AELSSSituationMoveTrigger(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool IsDisableCamera() const;
     

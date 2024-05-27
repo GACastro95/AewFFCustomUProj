@@ -1,5 +1,8 @@
 #include "YGS2Req_Ping.h"
 
+UYGS2Req_Ping::UYGS2Req_Ping() {
+}
+
 void UYGS2Req_Ping::SetAreaName(const FString& _AreaName) {
 }
 
@@ -19,6 +22,4 @@ FString UYGS2Req_Ping::GetAreaName() const {
     return TEXT("");
 }
 
-UYGS2Req_Ping::UYGS2Req_Ping() {
-}
 

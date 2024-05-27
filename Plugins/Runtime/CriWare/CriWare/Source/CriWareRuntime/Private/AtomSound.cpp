@@ -1,7 +1,9 @@
 #include "AtomSound.h"
 #include "AtomComponent.h"
 
-AAtomSound::AAtomSound() {
-    this->AtomComponent = CreateDefaultSubobject<UAtomComponent>(TEXT("AtomComponent0"));
+AAtomSound::AAtomSound(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UAtomComponent>(TEXT("AtomComponent0"));
+    this->AtomComponent = (UAtomComponent*)RootComponent;
 }
+
 

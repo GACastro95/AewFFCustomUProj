@@ -1,5 +1,8 @@
 #include "ELStatsUtility.h"
 
+UELStatsUtility::UELStatsUtility() {
+}
+
 int32 UELStatsUtility::SetWrestlerStat(const UObject* WorldContextObject, EELWrestlerStat Stat, EWrestlerID_N WrestlerID, int32 Value) {
     return 0;
 }
@@ -304,6 +307,4 @@ int32 UELStatsUtility::AddBattlePassTotalPointStat(const UObject* WorldContextOb
     return 0;
 }
 
-UELStatsUtility::UELStatsUtility() {
-}
 

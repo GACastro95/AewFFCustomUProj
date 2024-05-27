@@ -23,6 +23,7 @@ protected:
     
 public:
     UELLadderMatchMiniGameHUDBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetProgress(int32 Step, float Percent);
     

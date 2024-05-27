@@ -17,7 +17,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimMontage* AnimMontage;
     
-    AELEntranceCutsceneWeaponBase();
+    AELEntranceCutsceneWeaponBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Setup(int32 InWeaponNo);
     

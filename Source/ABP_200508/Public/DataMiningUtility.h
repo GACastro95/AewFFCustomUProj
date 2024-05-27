@@ -13,6 +13,7 @@ class ABP_200508_API UDataMiningUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UDataMiningUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void WriteMiniGamePlayData(const UObject* WorldContextObject, const FMiniGamePlayData& SendData);
     

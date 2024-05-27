@@ -1,5 +1,8 @@
 #include "EOSSearchResultsBase.h"
 
+UEOSSearchResultsBase::UEOSSearchResultsBase() {
+}
+
 FString UEOSSearchResultsBase::GetSearchName() const {
     return TEXT("");
 }
@@ -16,6 +19,4 @@ int32 UEOSSearchResultsBase::AnalyzeResults() {
     return 0;
 }
 
-UEOSSearchResultsBase::UEOSSearchResultsBase() {
-}
 

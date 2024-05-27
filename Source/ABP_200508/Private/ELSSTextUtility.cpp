@@ -1,5 +1,8 @@
 #include "ELSSTextUtility.h"
 
+UELSSTextUtility::UELSSTextUtility() {
+}
+
 FText UELSSTextUtility::GetSSWeaponName(int32 inDatabaseId) {
     return FText::GetEmpty();
 }
@@ -52,6 +55,4 @@ FText UELSSTextUtility::GetLocalizeText(const FString& stNS, const FString& stKe
     return FText::GetEmpty();
 }
 
-UELSSTextUtility::UELSSTextUtility() {
-}
 

@@ -25,6 +25,7 @@ public:
     EELCustomSearchMenuState m_eMenuState;
     
     UELCustomSearchBase();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void InitializeTable();
     

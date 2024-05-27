@@ -20,6 +20,7 @@ class ABP_200508_API UELSSEffectUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSEffectUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void StopEffectAndSinkToPool(const UObject* WorldContextObject, AActor* effectActor, int32 loopSEUniqueId);
     

@@ -76,6 +76,7 @@ protected:
     
 public:
     AELSSStationalCamera(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool Setup(AActor* inTargetActor, const FVector& inWorldOffset);
     
@@ -98,7 +99,7 @@ public:
     void Finish();
     
     UFUNCTION(BlueprintCallable)
-    bool CheckCollision(FTransform inBaseTransform, int32 inLocatorId, float inCurrentLocatorTime);
+    bool CheckCollision(const FVector& inTargetLocation, const FTransform& inBaseTransform, int32 inLocatorId, float inCurrentLocatorTime);
     
     UFUNCTION(BlueprintCallable)
     void ChangeLocator(FTransform inBaseTransform, int32 inLocatorId, float inInterpDuration, ESSStationalCameraEaseType inEaseType);

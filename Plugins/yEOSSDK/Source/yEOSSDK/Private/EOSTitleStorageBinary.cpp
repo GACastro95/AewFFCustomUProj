@@ -1,5 +1,8 @@
 #include "EOSTitleStorageBinary.h"
 
+UEOSTitleStorageBinary::UEOSTitleStorageBinary() {
+}
+
 bool UEOSTitleStorageBinary::Unzip(TArray<FEOSFileOnMemory>& _cFiles) const {
     return false;
 }
@@ -32,6 +35,4 @@ bool UEOSTitleStorageBinary::ConvertFileOnMemoryToString(FString& _rText, const 
     return false;
 }
 
-UEOSTitleStorageBinary::UEOSTitleStorageBinary() {
-}
 

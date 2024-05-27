@@ -18,6 +18,7 @@ private:
     
 public:
     UELBottomHelpManager();
+
     UFUNCTION(BlueprintCallable)
     void SetCommonLayoutWidget(UUserWidget* _widget);
     

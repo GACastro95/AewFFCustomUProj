@@ -19,6 +19,7 @@ class ABP_200508_API UELMenuUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELMenuUtilityFunction();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     static void StartTipsLoadingScreenWithOverrideNextLevel(UObject* _pWorldContextObject, ETipsLoadingCategory _nextGameMode, const FName& _nextLevel, const FString& _nextLevelOption);
     

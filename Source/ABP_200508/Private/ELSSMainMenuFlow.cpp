@@ -1,5 +1,18 @@
 #include "ELSSMainMenuFlow.h"
 
+AELSSMainMenuFlow::AELSSMainMenuFlow(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PrevState = ESSMainMenuFlowState::None;
+    this->LobbyStatus_RuleChangeFlow = ESSLobbyRequestStatus::NoRequest;
+    this->LobbyStatus_SetMaxMember = ESSLobbyRequestStatus::NoRequest;
+    this->LobbyStatus_SetRuleId = ESSLobbyRequestStatus::NoRequest;
+    this->CachedTutorialManager = NULL;
+    this->IsRuleChanged = false;
+    this->SubLevelManagerClass = NULL;
+    this->SubLevelManager = NULL;
+    this->IsRequestedUpdateWrestlers = false;
+    this->IsBoundLobbyFunctions = false;
+}
+
 void AELSSMainMenuFlow::UnbindEOSLobbyFuctions() {
 }
 
@@ -195,16 +208,4 @@ void AELSSMainMenuFlow::BindEOSLobbyFuctions() {
 }
 
 
-AELSSMainMenuFlow::AELSSMainMenuFlow() {
-    this->PrevState = ESSMainMenuFlowState::None;
-    this->LobbyStatus_RuleChangeFlow = ESSLobbyRequestStatus::NoRequest;
-    this->LobbyStatus_SetMaxMember = ESSLobbyRequestStatus::NoRequest;
-    this->LobbyStatus_SetRuleId = ESSLobbyRequestStatus::NoRequest;
-    this->CachedTutorialManager = NULL;
-    this->IsRuleChanged = false;
-    this->SubLevelManagerClass = NULL;
-    this->SubLevelManager = NULL;
-    this->IsRequestedUpdateWrestlers = false;
-    this->IsBoundLobbyFunctions = false;
-}
 

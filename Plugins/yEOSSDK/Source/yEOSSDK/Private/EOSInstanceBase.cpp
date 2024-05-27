@@ -1,5 +1,9 @@
 #include "EOSInstanceBase.h"
 
+UEOSInstanceBase::UEOSInstanceBase() {
+    this->m_pcRefAPIRequestManager = NULL;
+}
+
 EEOSObjectType UEOSInstanceBase::GetObjectType() const {
     return EEOSObjectType::Unknown;
 }
@@ -12,7 +16,4 @@ uint8 UEOSInstanceBase::GetInstanceID() const {
     return 0;
 }
 
-UEOSInstanceBase::UEOSInstanceBase() {
-    this->m_pcRefAPIRequestManager = NULL;
-}
 

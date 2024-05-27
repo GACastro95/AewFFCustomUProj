@@ -12,6 +12,7 @@ protected:
     int32 Exp;
     
 public:
-    AELSSItem_Exp();
+    AELSSItem_Exp(const FObjectInitializer& ObjectInitializer);
+
 };
 

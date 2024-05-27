@@ -2,6 +2,26 @@
 #include "Components/BoxComponent.h"
 #include "Components/SceneComponent.h"
 
+AELSSSituationMoveTrigger::AELSSSituationMoveTrigger(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    this->TriggerCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("TriggerCollision"));
+    this->IdealLocation = CreateDefaultSubobject<USceneComponent>(TEXT("IdealLocation"));
+    this->MoveIdNormal = 0;
+    this->MoveIdNormalBackDamage = 0;
+    this->MoveIdHighFly = 0;
+    this->MoveIdHighFlyBackDamage = 0;
+    this->MoveIdPower = 0;
+    this->MoveIdPowerBackDamage = 0;
+    this->DisableCamera = false;
+    this->OffsetToReceiverY = false;
+    this->OffsetCamera = true;
+    this->DisableIdealLocation = false;
+    this->DisableCameraLocator = false;
+    this->DisableForwardCheck = false;
+    this->TriggerCollision->SetupAttachment(RootComponent);
+    this->IdealLocation->SetupAttachment(RootComponent);
+}
+
 bool AELSSSituationMoveTrigger::IsDisableCamera() const {
     return false;
 }
@@ -37,20 +57,4 @@ FVector AELSSSituationMoveTrigger::GetCameraOffset(const FVector& inActionSyncLo
 void AELSSSituationMoveTrigger::ExecuteSituation_Implementation() {
 }
 
-AELSSSituationMoveTrigger::AELSSSituationMoveTrigger() {
-    this->TriggerCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("TriggerCollision"));
-    this->IdealLocation = CreateDefaultSubobject<USceneComponent>(TEXT("IdealLocation"));
-    this->MoveIdNormal = 0;
-    this->MoveIdNormalBackDamage = 0;
-    this->MoveIdHighFly = 0;
-    this->MoveIdHighFlyBackDamage = 0;
-    this->MoveIdPower = 0;
-    this->MoveIdPowerBackDamage = 0;
-    this->DisableCamera = false;
-    this->OffsetToReceiverY = false;
-    this->OffsetCamera = true;
-    this->DisableIdealLocation = false;
-    this->DisableCameraLocator = false;
-    this->DisableForwardCheck = false;
-}
 

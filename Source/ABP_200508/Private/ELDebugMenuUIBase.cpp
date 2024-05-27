@@ -1,5 +1,8 @@
 #include "ELDebugMenuUIBase.h"
 
+UELDebugMenuUIBase::UELDebugMenuUIBase() {
+}
+
 bool UELDebugMenuUIBase::UpdateChildMenuUI(const FELDebugMenuSimpleUIParam& _rstParam, const FString& _strRegistKey) {
     return false;
 }
@@ -37,6 +40,4 @@ bool UELDebugMenuUIBase::AddUI(const FELDebugMenuSimpleUIParam& _stParam, const 
     return false;
 }
 
-UELDebugMenuUIBase::UELDebugMenuUIBase() {
-}
 

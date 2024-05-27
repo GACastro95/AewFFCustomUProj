@@ -23,6 +23,7 @@ public:
     FOnSavePlayerDataEnded OnSavePlayerDataEnded;
     
     UGamePlaySubsystem();
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnSavedPlayerData(ESaveDataAccessorEvent Event, USaveData_AccessorBase* SaveDataAccessor, ESaveDataProcResult Result);

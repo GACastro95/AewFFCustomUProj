@@ -8,6 +8,7 @@ class ELITE_API UELBootScreenWidgetBase : public UELMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELBootScreenWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPressedSkip();

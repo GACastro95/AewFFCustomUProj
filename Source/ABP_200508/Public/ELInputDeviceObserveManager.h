@@ -58,6 +58,7 @@ private:
     
 public:
     UELInputDeviceObserveManager();
+
     UFUNCTION(BlueprintCallable)
     void UpdateInputDeviceMap(const int32 _updateSrcDeviceIndex, const int32 _updateDstDeviceIndex);
     

@@ -1,5 +1,8 @@
 #include "ELCareerSquareActor.h"
 
+AELCareerSquareActor::AELCareerSquareActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELCareerSquareActor::SetSquareData(FCareerSquareData _Param) {
 }
 
@@ -14,6 +17,4 @@ FVector AELCareerSquareActor::GetHeliport() const {
 void AELCareerSquareActor::BroadcastActionFinished() {
 }
 
-AELCareerSquareActor::AELCareerSquareActor() {
-}
 

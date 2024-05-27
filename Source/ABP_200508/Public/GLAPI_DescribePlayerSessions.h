@@ -18,6 +18,7 @@ public:
     FOnFOnDescribePlayerSessionsFailed OnFailed;
     
     UGLAPI_DescribePlayerSessions();
+
     UFUNCTION(BlueprintCallable)
     EGameLiftActivateStatus Activate(const FDescribePlayerSessions_RequestParam& requestParam);
     

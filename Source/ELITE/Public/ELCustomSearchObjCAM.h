@@ -16,6 +16,7 @@ public:
     TMap<int32, UObject*> m_ItemInfoMap;
     
     UELCustomSearchObjCAM();
+
     UFUNCTION(BlueprintCallable)
     void SearchMoves(const TArray<FELCustomSearchMovesData>& _MovesData, const TSet<EELCustomSearch>& CustomSearchSet, const TArray<int32>& _CategoryList, TArray<FELCustomSearchMovesData>& outData);
     

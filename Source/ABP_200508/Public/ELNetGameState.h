@@ -43,7 +43,8 @@ protected:
     float RealDeltaTimeAverageInner;
     
 public:
-    AELNetGameState();
+    AELNetGameState(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool ToggleUseFixedFrameRate();
     
@@ -92,7 +93,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FELNetworkGUID GetNextReplicationGuid();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

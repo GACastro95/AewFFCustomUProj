@@ -12,7 +12,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerBalanceAdjustParam : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerBalanceAdjustParam();
+    AELCareerBalanceAdjustParam(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetDataTable_WorkOut_Reward_SuccessRate(UDataTable* pDataTable);
     

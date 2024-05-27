@@ -12,6 +12,5 @@ enum class EMovesAttribute : uint8 {
     Attribute_005,
     Attribute_006,
     Attribute_007,
-    Attribute_MAX UMETA(Hidden),
 };
 

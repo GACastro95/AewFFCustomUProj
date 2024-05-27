@@ -12,6 +12,5 @@ enum class EMiniGameDebugAIBatterFlags : uint8 {
     RadioButton_Hit3,
     RadioButton_Hit4,
     RadioButton_Homerun,
-    RadioButton_MAX UMETA(Hidden),
 };
 

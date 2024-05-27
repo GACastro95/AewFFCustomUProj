@@ -18,7 +18,8 @@ protected:
     bool bTrainingMode_N;
     
 public:
-    AELAIController();
+    AELAIController(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SwitchAIController_N(const EBehaviorTreeType NewType);

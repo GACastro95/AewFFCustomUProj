@@ -14,7 +14,8 @@ protected:
     FCommentaryLoadingCompleteDelegate CompleteDelegate;
     
 public:
-    AELCommentaryLoadingExecutorBase();
+    AELCommentaryLoadingExecutorBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnStartLoadingScreen(FCommentaryLoadingExecResource _textureInfo, const FText& _commentText);
     

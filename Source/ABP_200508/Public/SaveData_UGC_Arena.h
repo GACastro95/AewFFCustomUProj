@@ -12,5 +12,6 @@ public:
     TArray<FArenaSaveData> ArenaSaveDataArray;
     
     USaveData_UGC_Arena();
+
 };
 

@@ -19,7 +19,8 @@ private:
     UInputComponent* m_InputComponent;
     
 public:
-    AELCareerMapPlayerControllerBase();
+    AELCareerMapPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void TransferOperatePawn(APawn* ApplyPawn);

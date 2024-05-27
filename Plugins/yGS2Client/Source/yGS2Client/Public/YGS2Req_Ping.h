@@ -13,6 +13,7 @@ private:
     
 public:
     UYGS2Req_Ping();
+
     UFUNCTION(BlueprintCallable)
     void SetAreaName(const FString& _AreaName);
     

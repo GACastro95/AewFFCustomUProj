@@ -1,5 +1,15 @@
 #include "ELSSBTDecoratorBase.h"
 
+UELSSBTDecoratorBase::UELSSBTDecoratorBase() {
+    this->AIOwner = NULL;
+    this->ActorOwner = NULL;
+    this->bShowPropertyDetails = true;
+    this->bCheckConditionOnlyBlackBoardChanges = false;
+    this->bIsObservingBB = false;
+    this->SSAIController = NULL;
+    this->SSPlayer = NULL;
+}
+
 bool UELSSBTDecoratorBase::SSPlayerShouldUnlockDefenseTeamTreasureBox(const UObject* WorldContextObject, float inDist, AELSSItemBox*& outBox) const {
     return false;
 }
@@ -66,12 +76,17 @@ void UELSSBTDecoratorBase::SetBlackboardValue_SSPlayerState(const FBlackboardKey
 void UELSSBTDecoratorBase::SetBlackboardValue_Actor(const FBlackboardKeySelector& Key, AActor* InActor) {
 }
 
-//void UELSSBTDecoratorBase::ReceiveExecutionFinishAI(AELSSAIController* OwnerController, AELSSPlayer* ControlledPawn, EBTNodeResult::Type NodeResult) {
-//}
-//
-//
-//void UELSSBTDecoratorBase::ReceiveExecutionFinish(AActor* OwnerActor, EBTNodeResult::Type NodeResult) {
-//}
+
+
+
+
+
+
+
+
+
+
+
 
 bool UELSSBTDecoratorBase::IsSSFgfBallFree() const {
     return false;
@@ -121,13 +136,4 @@ bool UELSSBTDecoratorBase::ExistSSTeamTreasureBoxOpening() const {
     return false;
 }
 
-UELSSBTDecoratorBase::UELSSBTDecoratorBase() {
-    this->AIOwner = NULL;
-    this->ActorOwner = NULL;
-    this->bShowPropertyDetails = true;
-    this->bCheckConditionOnlyBlackBoardChanges = false;
-    this->bIsObservingBB = false;
-    this->SSAIController = NULL;
-    this->SSPlayer = NULL;
-}
 

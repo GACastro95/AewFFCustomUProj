@@ -1,5 +1,8 @@
 #include "ELWrestlerSkillListWidgetBase.h"
 
+UELWrestlerSkillListWidgetBase::UELWrestlerSkillListWidgetBase() : UUserWidget(FObjectInitializer::Get()) {
+}
+
 void UELWrestlerSkillListWidgetBase::SetupSkillData() {
 }
 
@@ -24,6 +27,4 @@ FText UELWrestlerSkillListWidgetBase::GetCareerMenuText(const FName InDataTableK
 void UELWrestlerSkillListWidgetBase::GetActionSkill_ItemParam(const UObject* WorldContextObject, const FELWrestlerSkill_Action& InActionSkill, const int32& inSkillIndex, bool& SkillUsed, int32& SortIndex, ECareerSkillState& SkillState, int32& SkillNo, int32& SkillCost, FText& SkillName, FText& SkillDetail, TSoftObjectPtr<UTexture2D>& SkillThumbnail, TSoftObjectPtr<UTexture2D>& SkillImage) {
 }
 
-UELWrestlerSkillListWidgetBase::UELWrestlerSkillListWidgetBase() : UUserWidget(FObjectInitializer::Get()) {
-}
 

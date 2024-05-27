@@ -1,5 +1,8 @@
 #include "ELPlayerChoicesWidgetBase.h"
 
+UELPlayerChoicesWidgetBase::UELPlayerChoicesWidgetBase() {
+}
+
 void UELPlayerChoicesWidgetBase::SetTitleText(FText _TitleText) {
 }
 
@@ -35,6 +38,4 @@ TArray<FText> UELPlayerChoicesWidgetBase::GetPlayerChoicesText() {
     return TArray<FText>();
 }
 
-UELPlayerChoicesWidgetBase::UELPlayerChoicesWidgetBase() {
-}
 

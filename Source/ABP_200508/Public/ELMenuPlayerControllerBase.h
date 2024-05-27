@@ -9,7 +9,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELMenuPlayerControllerBase : public AELGameCommonPlayerControllerBase {
     GENERATED_BODY()
 public:
-    AELMenuPlayerControllerBase();
+    AELMenuPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void RemoveActionWithMultiPadManager();
     

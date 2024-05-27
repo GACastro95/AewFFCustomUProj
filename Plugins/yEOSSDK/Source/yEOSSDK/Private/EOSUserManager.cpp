@@ -1,5 +1,9 @@
 #include "EOSUserManager.h"
 
+UEOSUserManager::UEOSUserManager() {
+    this->m_pcRefAPIRequestManager = NULL;
+}
+
 bool UEOSUserManager::RemoveUser(UEOSUserBase* _pcUser) {
     return false;
 }
@@ -63,7 +67,4 @@ bool UEOSUserManager::AddEpicAccountUser(UEOSUserBase* _pcUser) {
     return false;
 }
 
-UEOSUserManager::UEOSUserManager() {
-    this->m_pcRefAPIRequestManager = NULL;
-}
 

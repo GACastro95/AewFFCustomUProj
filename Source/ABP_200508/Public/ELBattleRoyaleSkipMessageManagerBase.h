@@ -8,6 +8,7 @@ class ABP_200508_API AELBattleRoyaleSkipMessageManagerBase : public AELInGameMen
     GENERATED_BODY()
 public:
     AELBattleRoyaleSkipMessageManagerBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnInputRight();

@@ -29,6 +29,7 @@ class ABP_200508_API UFELMovesFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFELMovesFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SetSceneCaptureOnly(TArray<AActor*> SceneActors, bool Flag);
     

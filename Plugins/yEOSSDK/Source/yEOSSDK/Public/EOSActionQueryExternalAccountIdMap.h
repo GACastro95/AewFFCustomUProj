@@ -38,6 +38,7 @@ public:
     bool bSuccess;
     
     UEOSActionQueryExternalAccountIdMap();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UEOSActionQueryExternalAccountIdMap* EOSActionQueryExternalAccountIdMap(UObject* NewWorldContextObject, UEOSUserManager* NewUserManager, const FString& NewLocalProductID, const TArray<FString>& NewTargetProductIDs);
     

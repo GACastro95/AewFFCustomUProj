@@ -14,6 +14,7 @@ class ELITE_CORE_API UELGameplayCoreFunctions : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UELGameplayCoreFunctions();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static AGameStateBase* GetGameStateAs(const UObject* WorldContextObject, const TSubclassOf<AGameStateBase> Class, EBasicFunctionResult& resultType);
     

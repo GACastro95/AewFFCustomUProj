@@ -1,5 +1,8 @@
 #include "ELAsyncActionLoadAssetList.h"
 
+UELAsyncActionLoadAssetList::UELAsyncActionLoadAssetList() {
+}
+
 UELAsyncActionLoadAssetList* UELAsyncActionLoadAssetList::ELAsyncLoadAssetPathList(UObject* WorldContextObject, const TArray<FSoftObjectPath>& AssetList) {
     return NULL;
 }
@@ -8,6 +11,4 @@ UELAsyncActionLoadAssetList* UELAsyncActionLoadAssetList::ELAsyncLoadAssetList(U
     return NULL;
 }
 
-UELAsyncActionLoadAssetList::UELAsyncActionLoadAssetList() {
-}
 

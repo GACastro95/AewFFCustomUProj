@@ -28,6 +28,7 @@ public:
     FString TargetProductID;
     
     UEOSActionQueryExternalAccountIds();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UEOSActionQueryExternalAccountIds* EOSActionQueryExternalAccountIds(UObject* NewWorldContextObject, UEOSUserManager* NewUserManager, const FString& NewLocalProductID, const FString& NewTargetProductID);
     

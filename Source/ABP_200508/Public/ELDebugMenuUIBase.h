@@ -15,6 +15,7 @@ public:
     FELDebugMenuNotifyDispatcher DebugMenuNotifyDispatcher;
     
     UELDebugMenuUIBase();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateChildMenuUI(const FELDebugMenuSimpleUIParam& _rstParam, const FString& _strRegistKey);
     

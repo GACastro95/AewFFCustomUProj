@@ -34,6 +34,7 @@ private:
     
 public:
     UEOSAuth();
+
     UFUNCTION(BlueprintCallable)
     void SetLoginUserDisplayName(const FString& _strDisplayName);
     

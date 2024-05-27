@@ -30,9 +30,10 @@ protected:
     USoundAtomCue* SpawnedSound;
     
 public:
-    AELSSGimmickHorseSpawnPoint();
+    AELSSGimmickHorseSpawnPoint(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void SpawnVehicle_Server(AELSSPlayer* inInteractPlayer);

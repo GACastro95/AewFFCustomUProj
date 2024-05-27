@@ -23,6 +23,7 @@ protected:
     
 public:
     UELSSPanelBase();
+
     UFUNCTION(BlueprintCallable)
     void SetZOrderInPanel(UELSSWidgetBase* widgetBase, int32 ZOrder);
     

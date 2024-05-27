@@ -35,7 +35,7 @@ enum class EGfeSDKReturnCode : uint8 {
     ErrorLibraryCallFailed,
     ErrorIPCFailed,
     ErrorConnection,
-    ErrorLibCallTimeout = 0x20,
+    ErrorLibCallTimeout = 32,
     ErrorApplicationLookupFailed,
     ErrorApplicationNotKnown,
     ErrorFeatureDisabled,

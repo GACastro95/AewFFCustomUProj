@@ -1,5 +1,10 @@
 #include "MyWrestlerDataObject.h"
 
+UMyWrestlerDataObject::UMyWrestlerDataObject() {
+    this->PresetUnlockID = 0;
+    this->GamePlayFlags = 0;
+}
+
 void UMyWrestlerDataObject::UpdatePresetAttireExParamForDLCLocking(bool IsEntrance, int32 PresetIndex, const FAttireExParam& AttireExParam) {
 }
 
@@ -295,8 +300,4 @@ int32 UMyWrestlerDataObject::AddPreset(const int32 SrcIndex, const FString& NewN
 void UMyWrestlerDataObject::AddGamePlayFlag(const EWrestlerDataGamePlayFlag Flag) {
 }
 
-UMyWrestlerDataObject::UMyWrestlerDataObject() {
-    this->PresetUnlockID = 0;
-    this->GamePlayFlags = 0;
-}
 

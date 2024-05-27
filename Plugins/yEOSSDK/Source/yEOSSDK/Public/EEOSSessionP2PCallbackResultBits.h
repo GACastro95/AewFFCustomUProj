@@ -7,6 +7,6 @@ enum class EEOSSessionP2PCallbackResultBits : uint8 {
     Success,
     Skiped,
     Success_EndCallback,
-    Success_CachePacket = 0x4,
+    Success_CachePacket = 4,
 };
 

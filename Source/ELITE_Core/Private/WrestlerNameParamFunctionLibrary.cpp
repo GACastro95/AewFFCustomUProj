@@ -1,5 +1,8 @@
 #include "WrestlerNameParamFunctionLibrary.h"
 
+UWrestlerNameParamFunctionLibrary::UWrestlerNameParamFunctionLibrary() {
+}
+
 void UWrestlerNameParamFunctionLibrary::ToWrestlerNameText(const FWrestlerNameString& Target, FWrestlerNameText& Out) {
 }
 
@@ -54,6 +57,4 @@ void UWrestlerNameParamFunctionLibrary::GetMultiLineWrestlerNameText(const FWres
 void UWrestlerNameParamFunctionLibrary::GetMultiLineWrestlerNameAsText(const FWrestlerNameString Param, const bool bUpper, FText& Out) {
 }
 
-UWrestlerNameParamFunctionLibrary::UWrestlerNameParamFunctionLibrary() {
-}
 

@@ -11,6 +11,7 @@ class ELITE_GAME_API UEditWrestlerCareerUtilityFunction : public UBlueprintFunct
     GENERATED_BODY()
 public:
     UEditWrestlerCareerUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SetIntParam(UPARAM(Ref) FPersonalityParam& Param, const EPersonalityIntParamType Type, const int32 Value);
     

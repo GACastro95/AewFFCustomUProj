@@ -30,7 +30,8 @@ private:
     float SessionLeftTime;
     
 public:
-    AELEOSDebugGameSession();
+    AELEOSDebugGameSession(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void OnSessionSearchStartEvent();

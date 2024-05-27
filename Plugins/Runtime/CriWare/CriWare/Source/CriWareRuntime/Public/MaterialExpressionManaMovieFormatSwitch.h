@@ -12,5 +12,6 @@ public:
     FExpressionInput Inputs[5];
     
     UDEPRECATED_MaterialExpressionManaMovieFormatSwitch();
+
 };
 

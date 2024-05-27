@@ -1,5 +1,8 @@
 #include "ELMovesAdjust.h"
 
+UELMovesAdjust::UELMovesAdjust() {
+}
+
 bool UELMovesAdjust::AdjustWrestlerMoves(FWrestlerMoves& _Result, const FWrestlerMoves& _WrestlerMoves, const FWrestlerMoves& _TemplateMoves, const TSet<int32>& _UnlockIDList) {
     return false;
 }
@@ -12,6 +15,4 @@ bool UELMovesAdjust::AdjustELMoves(FELMoves& _Result, const FELMoves& _WrestlerM
     return false;
 }
 
-UELMovesAdjust::UELMovesAdjust() {
-}
 

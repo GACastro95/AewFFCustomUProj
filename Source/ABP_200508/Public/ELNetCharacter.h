@@ -29,9 +29,10 @@ protected:
     EELNetRole ELNetRole;
     
 public:
-    AELNetCharacter();
+    AELNetCharacter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     bool SetELNetTemporaryAuthorityBP(bool bEnabled);
     
@@ -89,7 +90,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 AddComponentsToReplication(UELReplicationManager* ReplicationManager, const FELNetworkGUID BaseGuid);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

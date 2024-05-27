@@ -16,8 +16,9 @@ private:
     ACameraActor* m_TargetCamera;
     
 public:
-    AELCareerCameraManagerBase();
-    
+    AELCareerCameraManagerBase(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     void EventInput_TriggerR_Released() override PURE_VIRTUAL(EventInput_TriggerR_Released,);

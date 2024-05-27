@@ -17,6 +17,7 @@ private:
     
 public:
     UELTextFilterManager();
+
     UFUNCTION(BlueprintCallable)
     bool TextFilterSteam(int32 filterCategory, const FString& _SrcText, FString& _DstText, const FString& ExternalAccountId);
     

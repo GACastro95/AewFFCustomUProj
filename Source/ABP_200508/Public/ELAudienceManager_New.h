@@ -27,7 +27,8 @@ protected:
     bool bDestroyed_N;
     
 public:
-    AELAudienceManager_New();
+    AELAudienceManager_New(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Tick_UpdateCrowd_N(const float DeltaSeconds);

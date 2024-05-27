@@ -10,6 +10,7 @@ class UELCreateMode_MenuInfoSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UELCreateMode_MenuInfoSubsystem();
+
     UFUNCTION(BlueprintCallable)
     void SetMainMenuAction(EELMainMenuAction _MainMenuAction);
     

@@ -12,6 +12,5 @@ enum class EMovesTag_MovesIndex : uint8 {
     MV_Drop,
     MV_Piledriver,
     MV_Backbreaker,
-    MV_MAX UMETA(Hidden),
 };
 

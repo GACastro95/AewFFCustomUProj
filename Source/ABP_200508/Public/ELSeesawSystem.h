@@ -30,7 +30,8 @@ protected:
     bool bPenaltyBuff_N;
     
 public:
-    UELSeesawSystem();
+    UELSeesawSystem(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetBuffType_N(ESeesawBuffType_N NewBuffType);
     

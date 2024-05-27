@@ -1,5 +1,8 @@
 #include "ELCareerPlayerStatus.h"
 
+UELCareerPlayerStatus::UELCareerPlayerStatus() {
+}
+
 
 
 void UELCareerPlayerStatus::UpdateParameter(float InDeltaTime) {
@@ -54,6 +57,4 @@ int32 UELCareerPlayerStatus::GetCareerMoney() {
 
 
 
-UELCareerPlayerStatus::UELCareerPlayerStatus() {
-}
 

@@ -7,7 +7,7 @@
 
 class UEasyInstancedHelper;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ELITE_CORE_API UEasyGameInstanceSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -20,6 +20,7 @@ private:
     
 public:
     UEasyGameInstanceSubsystem();
+
     UFUNCTION(BlueprintCallable)
     UEasyInstancedHelper* GetHelperObject(const TSubclassOf<UEasyInstancedHelper> Class);
     

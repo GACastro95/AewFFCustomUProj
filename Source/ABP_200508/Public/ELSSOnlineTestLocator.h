@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSOnlineTestLocator : public AELSSLocator {
     GENERATED_BODY()
 public:
-    AELSSOnlineTestLocator();
+    AELSSOnlineTestLocator(const FObjectInitializer& ObjectInitializer);
+
 };
 

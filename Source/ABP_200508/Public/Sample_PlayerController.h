@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API ASample_PlayerController : public APlayerController {
     GENERATED_BODY()
 public:
-    ASample_PlayerController();
+    ASample_PlayerController(const FObjectInitializer& ObjectInitializer);
+
 };
 

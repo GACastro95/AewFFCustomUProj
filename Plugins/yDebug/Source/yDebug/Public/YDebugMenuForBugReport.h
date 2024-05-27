@@ -11,6 +11,7 @@ class YDEBUG_API UYDebugMenuForBugReport : public UYDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYDebugMenuForBugReport();
+
     UFUNCTION(BlueprintCallable)
     void Setup(const FBugReportSettings& _stSettings);
     

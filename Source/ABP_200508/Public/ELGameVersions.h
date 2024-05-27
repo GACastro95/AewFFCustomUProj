@@ -3,7 +3,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "ELGameVersions.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=GameVersion)
+UCLASS(Blueprintable, DefaultConfig, Config=GameVersion)
 class ABP_200508_API UELGameVersions : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -26,6 +26,7 @@ public:
     FString DebugOnlineVersion;
     
     UELGameVersions();
+
     UFUNCTION(BlueprintCallable)
     static FString GetTitleVersionName();
     

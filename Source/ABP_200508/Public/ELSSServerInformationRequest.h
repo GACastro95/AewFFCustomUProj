@@ -19,6 +19,7 @@ public:
     FELSSServerInformation_ResponseData ssResponseData;
     
     UELSSServerInformationRequest();
+
 private:
     UFUNCTION(BlueprintCallable)
     void RequestResult(const int32 responseCode, const FString& responseData, eSSRequestResultType resultType);

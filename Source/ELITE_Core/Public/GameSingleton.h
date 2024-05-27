@@ -19,6 +19,7 @@ protected:
     
 public:
     UGameSingleton();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTick(float DeltaSeconds);
     

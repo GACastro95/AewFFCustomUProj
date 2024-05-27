@@ -4,3 +4,4 @@ UELSSAnimNotifyState_AimOffset::UELSSAnimNotifyState_AimOffset() {
     this->ResetAimOffsetAngle = false;
 }
 
+

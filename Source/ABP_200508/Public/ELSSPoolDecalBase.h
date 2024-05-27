@@ -36,7 +36,7 @@ public:
     UFUNCTION(BlueprintCallable)
     UDecalComponent* GetDecalComponent() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

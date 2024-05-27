@@ -1,5 +1,8 @@
 #include "FL_SetupWrestlerUtilityFunctions.h"
 
+UFL_SetupWrestlerUtilityFunctions::UFL_SetupWrestlerUtilityFunctions() {
+}
+
 void UFL_SetupWrestlerUtilityFunctions::GetWrestlerNameText(const FWrestlerSetupParam& SetupWrestler, const bool bUpper, FText& Out) {
 }
 
@@ -43,6 +46,4 @@ int32 UFL_SetupWrestlerUtilityFunctions::GetFightStyle(const FWrestlerSetupParam
 void UFL_SetupWrestlerUtilityFunctions::GetEntranceParam(const FWrestlerSetupParam& SetupWrestler, FELWrestlerProfile_CutScene& Out) {
 }
 
-UFL_SetupWrestlerUtilityFunctions::UFL_SetupWrestlerUtilityFunctions() {
-}
 

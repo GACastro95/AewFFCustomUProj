@@ -1,5 +1,8 @@
 #include "EOSCommunityUserBase.h"
 
+UEOSCommunityUserBase::UEOSCommunityUserBase() {
+}
+
 FString UEOSCommunityUserBase::GetInviteID() const {
     return TEXT("");
 }
@@ -16,6 +19,4 @@ bool UEOSCommunityUserBase::Equal(const UEOSCommunityUserBase* User) const {
     return false;
 }
 
-UEOSCommunityUserBase::UEOSCommunityUserBase() {
-}
 

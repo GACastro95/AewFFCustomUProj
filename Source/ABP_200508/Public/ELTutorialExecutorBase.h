@@ -18,7 +18,8 @@ protected:
     FTutorialStartWaitState StartWaitStateDelegate;
     
 public:
-    AELTutorialExecutorBase();
+    AELTutorialExecutorBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StartWaitState();

@@ -49,6 +49,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSSkillGetNotice();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

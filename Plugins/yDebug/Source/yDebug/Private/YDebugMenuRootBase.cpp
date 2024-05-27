@@ -1,5 +1,8 @@
 #include "YDebugMenuRootBase.h"
 
+UYDebugMenuRootBase::UYDebugMenuRootBase() {
+}
+
 bool UYDebugMenuRootBase::UpdateSimpleMenuUIRecursive(const FYDebugMenuSimpleUIParam& _rstSubRootMenu, const FString& _strRegistKey) {
     return false;
 }
@@ -94,6 +97,4 @@ bool UYDebugMenuRootBase::AddSubMenu(UYDebugMenuSubMenuBase* _pcSubMenu, const F
 void UYDebugMenuRootBase::AddShortcut(const FString& _strRegistKey, const TArray<FDebugMenuShortcutKeySettings>& _cKey, EYDebugMenuShortcutType _eShortCutType) {
 }
 
-UYDebugMenuRootBase::UYDebugMenuRootBase() {
-}
 

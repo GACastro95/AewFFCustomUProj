@@ -1,5 +1,8 @@
 #include "YMiniGameOptions_DebugMenu.h"
 
+UYMiniGameOptions_DebugMenu::UYMiniGameOptions_DebugMenu() {
+}
+
 void UYMiniGameOptions_DebugMenu::SetCorrectAnswer(const FString& _CorrectAnswer) {
 }
 
@@ -80,6 +83,4 @@ void UYMiniGameOptions_DebugMenu::DisableDebugTick() {
 void UYMiniGameOptions_DebugMenu::DisableDebugStateAndTick() {
 }
 
-UYMiniGameOptions_DebugMenu::UYMiniGameOptions_DebugMenu() {
-}
 

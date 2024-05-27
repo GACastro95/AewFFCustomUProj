@@ -1,5 +1,8 @@
 #include "ELBattlePassManager.h"
 
+UELBattlePassManager::UELBattlePassManager() {
+}
+
 void UELBattlePassManager::UpdatePossessedPremiumPass(bool _state) {
 }
 
@@ -93,6 +96,4 @@ void UELBattlePassManager::CheckValidSeason(FCheckedValidSeasonDelegate OnResult
 void UELBattlePassManager::CheckValidPersonalData(FCheckedValidPersonalDataDelegate OnResultDelegate) {
 }
 
-UELBattlePassManager::UELBattlePassManager() {
-}
 

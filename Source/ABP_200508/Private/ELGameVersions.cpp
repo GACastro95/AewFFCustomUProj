@@ -1,5 +1,12 @@
 #include "ELGameVersions.h"
 
+UELGameVersions::UELGameVersions() {
+    this->TitleVersion = TEXT("1.10");
+    this->BuildVersion = TEXT("0000");
+    this->OnlineVersion = TEXT("0012");
+    this->SSModeVersion = TEXT("0144");
+}
+
 FString UELGameVersions::GetTitleVersionName() {
     return TEXT("");
 }
@@ -34,10 +41,4 @@ void UELGameVersions::Debug_SetOverrideTitleVersionName(const FString& Value) {
 void UELGameVersions::Debug_SetOverrideOnlineVersionName(const FString& Value) {
 }
 
-UELGameVersions::UELGameVersions() {
-    this->TitleVersion = TEXT("1.09");
-    this->BuildVersion = TEXT("0000");
-    this->OnlineVersion = TEXT("0011");
-    this->SSModeVersion = TEXT("0142");
-}
 

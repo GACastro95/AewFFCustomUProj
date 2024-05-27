@@ -1,5 +1,9 @@
 #include "ELOnlineNews.h"
 
+UELOnlineNews::UELOnlineNews() {
+    this->CurrentOnlineNewsData = NULL;
+}
+
 UELOnlineNewsData* UELOnlineNews::GetCurrentOnlineNewsData() {
     return NULL;
 }
@@ -7,7 +11,4 @@ UELOnlineNewsData* UELOnlineNews::GetCurrentOnlineNewsData() {
 void UELOnlineNews::ClearCurrentOnlineNewData() {
 }
 
-UELOnlineNews::UELOnlineNews() {
-    this->CurrentOnlineNewsData = NULL;
-}
 

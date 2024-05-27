@@ -8,6 +8,7 @@ class ABP_200508_API UELOnlineSaveDataUtilityFunction : public UBlueprintFunctio
     GENERATED_BODY()
 public:
     UELOnlineSaveDataUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static bool UpdateStickerHistory(const TArray<int32>& _stickerHistory);
     

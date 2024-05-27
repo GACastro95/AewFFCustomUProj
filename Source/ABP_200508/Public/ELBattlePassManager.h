@@ -33,6 +33,7 @@ private:
     
 public:
     UELBattlePassManager();
+
     UFUNCTION(BlueprintCallable)
     void UpdatePossessedPremiumPass(bool _state);
     

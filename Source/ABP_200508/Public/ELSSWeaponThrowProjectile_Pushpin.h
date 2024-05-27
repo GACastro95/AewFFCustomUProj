@@ -30,9 +30,10 @@ protected:
     USoundAtomCue* SoundCue_Pushpin;
     
 public:
-    AELSSWeaponThrowProjectile_Pushpin();
+    AELSSWeaponThrowProjectile_Pushpin(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void PerformOnImpact_Multicast(const FVector_NetQuantize10& NewLocation, float inYaw);

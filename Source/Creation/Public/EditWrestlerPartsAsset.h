@@ -43,6 +43,7 @@ public:
     TArray<UEditWrestlerPaintAsset*> ReplaceTextures;
     
     UEditWrestlerPartsAsset();
+
     UFUNCTION(BlueprintCallable)
     void UpdateEditPartsCategoryDetails();
     

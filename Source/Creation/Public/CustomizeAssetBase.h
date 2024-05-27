@@ -8,5 +8,6 @@ class CREATION_API UCustomizeAssetBase : public UObject {
     GENERATED_BODY()
 public:
     UCustomizeAssetBase();
+
 };
 

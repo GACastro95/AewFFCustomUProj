@@ -1,5 +1,8 @@
 #include "YGS2Req_UserStats.h"
 
+UYGS2Req_UserStats::UYGS2Req_UserStats() {
+}
+
 void UYGS2Req_UserStats::SetUpdateItems(const FString& _strKind, const TMap<FString, FString>& _cUpdateItems, const FString& _strStructID, bool _bSave) {
 }
 
@@ -33,6 +36,4 @@ FString UYGS2Req_UserStats::GetKind() const {
     return TEXT("");
 }
 
-UYGS2Req_UserStats::UYGS2Req_UserStats() {
-}
 

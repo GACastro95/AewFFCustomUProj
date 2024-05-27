@@ -138,6 +138,12 @@ private:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bModifiedVehicleCollisionResponse;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ForceIgnoreVehicleCollisionResponseTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSSPlayerEventDispatcher EventOnAttack;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -664,6 +670,9 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float DisableSyncHeightRate;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool StationalCameraDisable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -948,9 +957,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DebugTickAutoInputPressInterval;
     
-    AELSSPlayer();
+    AELSSPlayer(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void UseCurrentItem_Server();
@@ -1832,6 +1842,9 @@ public:
     float GetElapsedTime() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetDisableSyncHeightRate() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetDamageVector() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -2311,7 +2324,7 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void ActivateBadStatus_Multicast(ESSBadStatus InType, float InValue, int32 inMoveId, int32 inAttackHitId, float InDuration, AELSSPlayer* inInstigator, float inSyncTime);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELEntranceFallingObjectBase : public AActor {
     GENERATED_BODY()
 public:
-    AELEntranceFallingObjectBase();
+    AELEntranceFallingObjectBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

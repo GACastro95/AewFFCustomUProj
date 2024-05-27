@@ -16,6 +16,7 @@ protected:
     
 public:
     UEOSUserContents();
+
     UFUNCTION(BlueprintCallable)
     void SetRequestWriteBytes(int32 _sRequestWriteBytes);
     

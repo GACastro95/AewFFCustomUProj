@@ -10,6 +10,7 @@ class UXeSSBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UXeSSBlueprintLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetXeSSQualityMode(EXeSSQualityMode QualityMode);
     

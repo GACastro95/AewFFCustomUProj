@@ -3,7 +3,7 @@
 #include "ELDeveloperSettings.h"
 #include "ELSystemSettings.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ELITE_CORE_API UELSystemSettings : public UELDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -14,5 +14,6 @@ public:
     float DpiScaleSizeY;
     
     UELSystemSettings();
+
 };
 

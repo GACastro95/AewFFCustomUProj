@@ -207,6 +207,7 @@ protected:
     
 public:
     UELSSWidgetHUD_MiniMapZoom();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D WorldPosToCanvasPos(const FVector& InWorldPos);

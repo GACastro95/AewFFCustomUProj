@@ -8,5 +8,6 @@ class ABP_200508_API UELSSAnimNotifyState_Running : public UELSSAnimNotifyStateB
     GENERATED_BODY()
 public:
     UELSSAnimNotifyState_Running();
+
 };
 

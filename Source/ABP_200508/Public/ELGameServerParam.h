@@ -3,7 +3,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "ELGameServerParam.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=OnlineServer)
+UCLASS(Blueprintable, DefaultConfig, Config=OnlineServer)
 class ABP_200508_API UELGameServerParam : public UDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -50,6 +50,7 @@ public:
     FString SaveDataEncryptKey;
     
     UELGameServerParam();
+
     UFUNCTION(BlueprintCallable)
     static FString GetSaveFileEncKey();
     

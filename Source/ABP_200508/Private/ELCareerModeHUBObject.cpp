@@ -1,5 +1,8 @@
 #include "ELCareerModeHUBObject.h"
 
+AELCareerModeHUBObject::AELCareerModeHUBObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELCareerModeHUBObject::UpdateUseTableInfo() {
 }
 
@@ -52,6 +55,4 @@ void AELCareerModeHUBObject::ClearStoryCard() {
 void AELCareerModeHUBObject::ClearGlobalCareerParams() {
 }
 
-AELCareerModeHUBObject::AELCareerModeHUBObject() {
-}
 

@@ -8,6 +8,5 @@ enum class ECareerChoicesPattern : uint8 {
     SELECT_B,
     SELECT_C,
     SELECT_D,
-    SELECT_MAX UMETA(Hidden),
 };
 

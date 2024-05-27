@@ -1,5 +1,31 @@
 #include "ELEOSLobby.h"
 
+UELEOSLobby::UELEOSLobby() {
+    this->EOSManager = NULL;
+    this->EOSLobby = NULL;
+    this->EOSLobbyInfo = NULL;
+    this->LastestInvite = NULL;
+    this->EOSUser = NULL;
+    this->EOSGameSession = NULL;
+    this->EOSNatP2P = NULL;
+    this->EOSNatP2PTransfer = NULL;
+    this->SocketID = TEXT("Party");
+    this->LobbyPlayerNum = 0;
+    this->SelectNPCWrestlerArray.AddDefaulted(4);
+    this->SelectArenaData = NULL;
+    this->SelectArenaDataUpdate = false;
+    this->SelectMinigameData = NULL;
+    this->MyPlayerRank = 0;
+    this->MyBattlePassPoint = 0;
+    this->bVoiceChatStartMuted = false;
+    this->MuteFlag = EEOSLobbyUserMuteFlag::None;
+    this->RequestResendCurrentWrestlerDataFlag = false;
+    this->RequestResendCurrentWrestlerDataTimer = 0.00f;
+    this->LobbyMPAStatus = ELobbyMPAStatus::MPA_Destroy;
+    this->SSLobbyManager = NULL;
+    this->bShouldChangeGameModeToJoinInvitedLobby = false;
+}
+
 bool UELEOSLobby::UpdateStepForStatusUpdatedOnJoined() {
     return false;
 }
@@ -338,6 +364,10 @@ bool UELEOSLobby::Join(UEOSCommunityInfoBase* LobbyInfo) {
     return false;
 }
 
+bool UELEOSLobby::IsWaitingToJoinLobby() {
+    return false;
+}
+
 bool UELEOSLobby::IsUsingMultiplayerFeature() {
     return false;
 }
@@ -375,6 +405,10 @@ bool UELEOSLobby::IsJoinedLobby() const {
 }
 
 bool UELEOSLobby::IsExistInviteUser() {
+    return false;
+}
+
+bool UELEOSLobby::IsDigestingJoinRequest() const {
     return false;
 }
 
@@ -641,29 +675,4 @@ bool UELEOSLobby::Block(const FString& ProductUserID) {
     return false;
 }
 
-UELEOSLobby::UELEOSLobby() {
-    this->EOSManager = NULL;
-    this->EOSLobby = NULL;
-    this->EOSLobbyInfo = NULL;
-    this->LastestInvite = NULL;
-    this->EOSUser = NULL;
-    this->EOSGameSession = NULL;
-    this->EOSNatP2P = NULL;
-    this->EOSNatP2PTransfer = NULL;
-    this->SocketID = TEXT("Party");
-    this->LobbyPlayerNum = 0;
-    this->SelectNPCWrestlerArray.AddDefaulted(4);
-    this->SelectArenaData = NULL;
-    this->SelectArenaDataUpdate = false;
-    this->SelectMinigameData = NULL;
-    this->MyPlayerRank = 0;
-    this->MyBattlePassPoint = 0;
-    this->bVoiceChatStartMuted = false;
-    this->MuteFlag = EEOSLobbyUserMuteFlag::None;
-    this->RequestResendCurrentWrestlerDataFlag = false;
-    this->RequestResendCurrentWrestlerDataTimer = 0.00f;
-    this->LobbyMPAStatus = ELobbyMPAStatus::MPA_Destroy;
-    this->SSLobbyManager = NULL;
-    this->bShouldChangeGameModeToJoinInvitedLobby = false;
-}
 

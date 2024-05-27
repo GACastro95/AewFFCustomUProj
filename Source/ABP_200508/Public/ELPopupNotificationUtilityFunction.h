@@ -9,6 +9,7 @@ class ABP_200508_API UELPopupNotificationUtilityFunction : public UBlueprintFunc
     GENERATED_BODY()
 public:
     UELPopupNotificationUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void RequestPopup_Online(EPopupOnlineStatusType _statusType, const FString& _execUserName, TArray<FString> _targetUserName);
     

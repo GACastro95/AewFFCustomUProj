@@ -14,3 +14,4 @@ USaveData_OnlineInfo::USaveData_OnlineInfo() {
     this->m_StickerHistory[9] = -1;
 }
 
+

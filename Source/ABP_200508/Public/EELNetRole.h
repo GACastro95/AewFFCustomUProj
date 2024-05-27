@@ -7,10 +7,9 @@ enum class EELNetRole : uint8 {
     ROLE_None,
     ROLE_Authority,
     ROLE_TempAuthority,
-    ROLE_AuthorityMask = 0xF,
+    ROLE_AuthorityMask = 15,
     ROLE_ELMode,
-    ROLE_DisabledRPC = 0x20,
-    ROLE_ModeMask = 0xF0,
-    ROLE_MAX UMETA(Hidden),
+    ROLE_DisabledRPC = 32,
+    ROLE_ModeMask = 240,
 };
 

@@ -1,5 +1,8 @@
 #include "YDBGMail.h"
 
+UYDBGMail::UYDBGMail() {
+}
+
 bool UYDBGMail::Send(const FYDBGMailHeader& _stHeader, const FYDBGMailBody& _stBody) {
     return false;
 }
@@ -20,6 +23,4 @@ bool UYDBGMail::Connect(const FString& _strIP, int32 _sPort) {
     return false;
 }
 
-UYDBGMail::UYDBGMail() {
-}
 

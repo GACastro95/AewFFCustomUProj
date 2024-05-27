@@ -1,5 +1,12 @@
 #include "ELSSPanelOutGameBase.h"
 
+UELSSPanelOutGameBase::UELSSPanelOutGameBase() {
+    this->panelId = 0;
+    this->uiOutGameManager = NULL;
+    this->uiMovieWidget = NULL;
+    this->isParentInputEnable = true;
+}
+
 void UELSSPanelOutGameBase::Setup(const int32 ID, AELSSUIManagerBase* uiManager, UUserWidget* commonWidget, UUserWidget* movieWidget) {
 }
 
@@ -70,10 +77,4 @@ void UELSSPanelOutGameBase::Close() {
 void UELSSPanelOutGameBase::ActivateOutGameEvent(const EOutGamePanelEventType Type) {
 }
 
-UELSSPanelOutGameBase::UELSSPanelOutGameBase() {
-    this->panelId = 0;
-    this->uiOutGameManager = NULL;
-    this->uiMovieWidget = NULL;
-    this->isParentInputEnable = true;
-}
 

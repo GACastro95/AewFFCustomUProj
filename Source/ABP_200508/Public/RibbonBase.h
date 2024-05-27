@@ -19,7 +19,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UPhysicsAsset* SimulatedPhysics;
     
-    ARibbonBase();
+    ARibbonBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StartPhysicsSimulation();
     

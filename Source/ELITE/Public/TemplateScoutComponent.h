@@ -19,7 +19,8 @@ private:
     UTemplateScoutListAsset* TemplateListAsset_Female;
     
 public:
-    UTemplateScoutComponent();
+    UTemplateScoutComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void GetScoutTemplateList(TArray<FTemplateScoutParam>& List, const EGender Gender);
     

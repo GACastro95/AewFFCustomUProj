@@ -1,5 +1,8 @@
 #include "YDebugMenuUIBase.h"
 
+UYDebugMenuUIBase::UYDebugMenuUIBase() {
+}
+
 bool UYDebugMenuUIBase::UpdateChildMenuUI(const FYDebugMenuSimpleUIParam& _stDebugMenuSimpleUIParam, const FString& _strRegistKey) {
     return false;
 }
@@ -34,6 +37,4 @@ bool UYDebugMenuUIBase::AddUI(const FYDebugMenuSimpleUIParam& _stParam, const FS
     return false;
 }
 
-UYDebugMenuUIBase::UYDebugMenuUIBase() {
-}
 

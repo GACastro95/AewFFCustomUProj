@@ -9,6 +9,7 @@ class ABP_200508_API UYAutoMatch_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYAutoMatch_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void Setup(const FAutoMatchSettings& _stSettings);
     

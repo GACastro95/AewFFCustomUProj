@@ -41,7 +41,8 @@ protected:
     FString DebugStringBuffer;
     
 public:
-    AELSSDebugHUD();
+    AELSSDebugHUD(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateDebugText();

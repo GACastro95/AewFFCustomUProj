@@ -1,9 +1,5 @@
 #include "CreationSettings.h"
 
-TSoftObjectPtr<USkeletalMesh> UCreationSettings::GetCustomBodyAsset(const EGender Gender) {
-    return NULL;
-}
-
 UCreationSettings::UCreationSettings() {
     this->ScoutSlotUnlockID = 10001;
     this->ScoutPresetUnlockID = 399999;
@@ -11,4 +7,9 @@ UCreationSettings::UCreationSettings() {
     this->EditWrestlerMultipleSaveMode = true;
     this->EditWrestlerSaveNumPerFile = 5;
 }
+
+TSoftObjectPtr<USkeletalMesh> UCreationSettings::GetCustomBodyAsset(const EGender Gender) {
+    return NULL;
+}
+
 

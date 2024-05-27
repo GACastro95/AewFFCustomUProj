@@ -8,6 +8,7 @@ class ELITE_LOADINGSCREEN_API UELLoadingWidget : public UUserWidget {
     GENERATED_BODY()
 public:
     UELLoadingWidget();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnStopLoadingScreen();
     

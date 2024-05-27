@@ -4,3 +4,4 @@ UELSSAnimNotifyState_OverrideDamageReceiverState::UELSSAnimNotifyState_OverrideD
     this->OverrideState = ESSDamageReceiverState::Default;
 }
 
+

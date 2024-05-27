@@ -18,7 +18,8 @@ protected:
     FSSStormPhaseParam phaseParam;
     
 public:
-    AELSSStormAnchor();
+    AELSSStormAnchor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetParam(const FSSStormPhaseParam& Param);
     

@@ -1,5 +1,14 @@
 #include "ELSSWeaponThrow.h"
+#include "ESSWeaponType.h"
 #include "Net/UnrealNetwork.h"
+
+AELSSWeaponThrow::AELSSWeaponThrow(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WeaponType = ESSWeaponType::Throw;
+    this->MoveId = 0;
+    this->StockedProjectile = NULL;
+    this->VisualProjectile = NULL;
+    this->Quantity = 0;
+}
 
 void AELSSWeaponThrow::SetQuantity(int32 inQuantity) {
 }
@@ -21,10 +30,4 @@ void AELSSWeaponThrow::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AELSSWeaponThrow, Quantity);
 }
 
-AELSSWeaponThrow::AELSSWeaponThrow() {
-    this->MoveId = 0;
-    this->StockedProjectile = NULL;
-    this->VisualProjectile = NULL;
-    this->Quantity = 0;
-}
 

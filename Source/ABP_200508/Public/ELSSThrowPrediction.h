@@ -27,7 +27,8 @@ protected:
     ESSThrowPredictionType Type;
     
 public:
-    AELSSThrowPrediction();
+    AELSSThrowPrediction(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdatePrediction_Native(const FPredictProjectilePathResult& InParam);
     

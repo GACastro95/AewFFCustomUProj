@@ -1,5 +1,6 @@
 #include "ELMiniGameBase.h"
 
-AELMiniGameBase::AELMiniGameBase() {
+AELMiniGameBase::AELMiniGameBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

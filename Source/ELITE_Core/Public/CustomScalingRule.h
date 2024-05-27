@@ -8,5 +8,6 @@ class ELITE_CORE_API UCustomScalingRule : public UDPICustomScalingRule {
     GENERATED_BODY()
 public:
     UCustomScalingRule();
+
 };
 

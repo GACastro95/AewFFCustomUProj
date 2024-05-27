@@ -1,5 +1,8 @@
 #include "ELEntranceNameplateCommentUtilityFunction.h"
 
+UELEntranceNameplateCommentUtilityFunction::UELEntranceNameplateCommentUtilityFunction() {
+}
+
 bool UELEntranceNameplateCommentUtilityFunction::GetValueForReplaceParameter(EELEntranceNameplateCommentValueType ValueType, EWrestlerID_N WrestlerID, FGuid UID, EWrestlerID_N ManagerID, FGuid ManagerUID, EELBelt Belt, EBodyWeightType WeightType, EELTeamID TeamId, const FELMoves_Finisher& Finisher, int32& Value) {
     return false;
 }
@@ -20,6 +23,4 @@ bool UELEntranceNameplateCommentUtilityFunction::CompareTeamParameter(const USav
     return false;
 }
 
-UELEntranceNameplateCommentUtilityFunction::UELEntranceNameplateCommentUtilityFunction() {
-}
 

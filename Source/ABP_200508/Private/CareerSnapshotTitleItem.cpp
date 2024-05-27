@@ -1,5 +1,8 @@
 #include "CareerSnapshotTitleItem.h"
 
+UCareerSnapshotTitleItem::UCareerSnapshotTitleItem() {
+}
+
 void UCareerSnapshotTitleItem::RemoveSnapshot(UCareerSnapshot* Snapshot) {
 }
 
@@ -29,6 +32,4 @@ UCareerSnapshot* UCareerSnapshotTitleItem::GetRecentSnapshot() const {
 void UCareerSnapshotTitleItem::CollectSnapshots(TArray<UCareerSnapshot*>& Snapshots) {
 }
 
-UCareerSnapshotTitleItem::UCareerSnapshotTitleItem() {
-}
 

@@ -41,6 +41,7 @@ protected:
     
 public:
     UELSSWebAPIFactoryBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     static void SetInstance(UELSSWebAPIFactoryBase* Instance);

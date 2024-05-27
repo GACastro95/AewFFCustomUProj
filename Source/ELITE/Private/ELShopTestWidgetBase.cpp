@@ -1,5 +1,9 @@
 #include "ELShopTestWidgetBase.h"
 
+UELShopTestWidgetBase::UELShopTestWidgetBase() {
+    this->m_pcPlayerDataObject = NULL;
+}
+
 void UELShopTestWidgetBase::UpdataGoldNum(int32 _value) {
 }
 
@@ -32,7 +36,4 @@ void UELShopTestWidgetBase::CreateLocalPlayerDataObject(USaveDataSystem* _saveDa
 void UELShopTestWidgetBase::CheckCurrentGoldNum(ERequestGoldCheckType _checkType) {
 }
 
-UELShopTestWidgetBase::UELShopTestWidgetBase() {
-    this->m_pcPlayerDataObject = NULL;
-}
 

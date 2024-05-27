@@ -56,6 +56,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSGuideIcon();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdatePosAndVisible(float InDeltaTime);

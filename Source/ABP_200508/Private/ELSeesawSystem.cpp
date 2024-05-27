@@ -1,5 +1,12 @@
 #include "ELSeesawSystem.h"
 
+UELSeesawSystem::UELSeesawSystem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->StateType_N = ESeesawRelationType_N::Neutral;
+    this->BuffType_N = ESeesawBuffType_N::None;
+    this->BuffActiveSec_N = 0.00f;
+    this->bPenaltyBuff_N = false;
+}
+
 void UELSeesawSystem::SetBuffType_N(ESeesawBuffType_N NewBuffType) {
 }
 
@@ -18,10 +25,4 @@ float UELSeesawSystem::CalSeesawValue_N(ESeesawRelationType_N RelationType, bool
     return 0.0f;
 }
 
-UELSeesawSystem::UELSeesawSystem() {
-    this->StateType_N = ESeesawRelationType_N::Neutral;
-    this->BuffType_N = ESeesawBuffType_N::None;
-    this->BuffActiveSec_N = 0.00f;
-    this->bPenaltyBuff_N = false;
-}
 

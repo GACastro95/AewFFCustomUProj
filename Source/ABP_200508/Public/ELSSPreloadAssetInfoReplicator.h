@@ -13,9 +13,10 @@ protected:
     FSSPreloadAssetInfo PreloadAssetInfo;
     
 public:
-    AELSSPreloadAssetInfoReplicator();
+    AELSSPreloadAssetInfoReplicator(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnRep_PreloadAssetInfo();
     

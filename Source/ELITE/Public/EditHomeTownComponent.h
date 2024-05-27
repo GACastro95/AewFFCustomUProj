@@ -11,7 +11,8 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ELITE_API UEditHomeTownComponent : public UMyWrestlerDataEditComponent {
     GENERATED_BODY()
 public:
-    UEditHomeTownComponent();
+    UEditHomeTownComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetHomeTown(UMyWrestlerDataObject* Target, const FHomeTownID& NewHomeTown);
     

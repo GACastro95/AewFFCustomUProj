@@ -1,5 +1,8 @@
 #include "SaveDataObject_CareerModeSystem.h"
 
+USaveDataObject_CareerModeSystem::USaveDataObject_CareerModeSystem() {
+}
+
 void USaveDataObject_CareerModeSystem::SetSnapshotParams(const TArray<FCareerSnapshotParam>& Params) {
 }
 
@@ -22,6 +25,4 @@ bool USaveDataObject_CareerModeSystem::GetSnapshotParam(int32 Index, FCareerSnap
     return false;
 }
 
-USaveDataObject_CareerModeSystem::USaveDataObject_CareerModeSystem() {
-}
 

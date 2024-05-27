@@ -17,6 +17,7 @@ class ABP_200508_API UELSSCheatManager : public UCheatManager {
     GENERATED_BODY()
 public:
     UELSSCheatManager();
+
     UFUNCTION(BlueprintCallable, Exec)
     void SSVisualizeStormCourse(bool IsOn);
     

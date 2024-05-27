@@ -10,6 +10,7 @@ class YEOSSDK_API UEOSSessionP2PShootingGameControlPacket : public UEOSSessionP2
     GENERATED_BODY()
 public:
     UEOSSessionP2PShootingGameControlPacket();
+
     UFUNCTION(BlueprintCallable)
     void SetTransform(FTransform _stTransform);
     

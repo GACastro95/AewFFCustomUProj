@@ -57,6 +57,7 @@ protected:
     
 public:
     UELLeaderboards();
+
     UFUNCTION(BlueprintCallable)
     void SetEOSLeaderboards(UEOSLeaderboard* InEOSLeaderboards);
     

@@ -39,6 +39,7 @@ protected:
     
 public:
     UELAnimInstance_FootIK();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateHipsBlendRatio(const float DeltaTime, const bool bEnable, const float OverrideSpeed);

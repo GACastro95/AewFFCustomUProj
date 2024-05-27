@@ -73,9 +73,10 @@ protected:
     AActor* UIManagerActor;
     
 public:
-    AELSSRoundManager();
+    AELSSRoundManager(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void StartRound0();
     
@@ -114,7 +115,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESSRound GetCurrentRound() const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,6 +1,11 @@
 #include "ELSSWheeledVehicleMovement.h"
 #include "Net/UnrealNetwork.h"
 
+UELSSWheeledVehicleMovement::UELSSWheeledVehicleMovement(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WheelSetups.AddDefaulted(4);
+    this->ReplicatedRawThrottleInput = 0.00f;
+}
+
 void UELSSWheeledVehicleMovement::ServerUpdateStateExtend_Implementation(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32 CurrentGear, float InRawThrottleInput) {
 }
 
@@ -26,7 +31,4 @@ void UELSSWheeledVehicleMovement::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(UELSSWheeledVehicleMovement, ReplicatedRawThrottleInput);
 }
 
-UELSSWheeledVehicleMovement::UELSSWheeledVehicleMovement() {
-    this->ReplicatedRawThrottleInput = 0.00f;
-}
 

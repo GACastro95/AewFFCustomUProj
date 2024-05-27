@@ -9,6 +9,7 @@ class ABP_200508_API UYDebugCamera_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYDebugCamera_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetUseDebugCamera(bool _bHilights);
     

@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "ELSSModeConfigData.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=SSModeConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=SSModeConfig)
 class ABP_200508_API UELSSModeConfigData : public UObject {
     GENERATED_BODY()
 public:
@@ -32,5 +32,6 @@ public:
     bool SSModeDebug_ConnectDev2;
     
     UELSSModeConfigData();
+
 };
 

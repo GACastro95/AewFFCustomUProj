@@ -9,6 +9,7 @@ class UGrantedItemID_UtilitieFunctions : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UGrantedItemID_UtilitieFunctions();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetUID(const FPickableItemID& Target, int32& Out);
     

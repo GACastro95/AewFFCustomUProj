@@ -9,6 +9,7 @@ class ELITE_GAME_API UFL_PersonPramUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFL_PersonPramUtility();
+
     UFUNCTION(BlueprintCallable)
     static FText GetDisplayText(const EBodyWeightToWightClass BodyWeightRank);
     

@@ -1,5 +1,8 @@
 #include "ELMessageWindowMenuWidgetBase.h"
 
+UELMessageWindowMenuWidgetBase::UELMessageWindowMenuWidgetBase() {
+}
+
 
 
 
@@ -14,6 +17,4 @@ FName UELMessageWindowMenuWidgetBase::GetMessageKey() {
     return NAME_None;
 }
 
-UELMessageWindowMenuWidgetBase::UELMessageWindowMenuWidgetBase() {
-}
 

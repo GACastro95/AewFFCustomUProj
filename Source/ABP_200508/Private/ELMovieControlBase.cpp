@@ -1,5 +1,8 @@
 #include "ELMovieControlBase.h"
 
+UELMovieControlBase::UELMovieControlBase() {
+}
+
 bool UELMovieControlBase::SuspendAll(TArray<int32> Excludes) {
     return false;
 }
@@ -78,6 +81,4 @@ bool UELMovieControlBase::ChangeMovieResource(UELMoviePlayerBase*& Player, int32
     return false;
 }
 
-UELMovieControlBase::UELMovieControlBase() {
-}
 

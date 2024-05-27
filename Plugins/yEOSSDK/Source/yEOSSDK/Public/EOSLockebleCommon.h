@@ -9,7 +9,8 @@ class YEOSSDK_API UEOSLockebleCommon : public UEOSCommon, public IEOSLockableInt
     GENERATED_BODY()
 public:
     UEOSLockebleCommon();
-    
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

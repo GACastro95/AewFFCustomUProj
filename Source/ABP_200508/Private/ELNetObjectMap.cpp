@@ -1,5 +1,8 @@
 #include "ELNetObjectMap.h"
 
+UELNetObjectMap::UELNetObjectMap() {
+}
+
 bool UELNetObjectMap::RemoveObjectById(FELNetworkGUID Guid) {
     return false;
 }
@@ -31,6 +34,4 @@ bool UELNetObjectMap::AddObject(FELNetworkGUID Guid, const UObject* Object) {
     return false;
 }
 
-UELNetObjectMap::UELNetObjectMap() {
-}
 

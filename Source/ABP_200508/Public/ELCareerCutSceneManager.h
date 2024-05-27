@@ -19,7 +19,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AELCareerSequencePlayerBase* m_pSequencePlayer;
     
-    AELCareerCutSceneManager();
+    AELCareerCutSceneManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetState(ECareerCutSceneState State);
     
@@ -40,7 +41,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void CheckState(int32 _value);
     
-    
+
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)
     void EventInput_TriggerR_Released() override PURE_VIRTUAL(EventInput_TriggerR_Released,);

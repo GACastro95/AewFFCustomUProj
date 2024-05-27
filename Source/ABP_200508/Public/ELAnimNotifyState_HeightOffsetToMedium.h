@@ -14,5 +14,6 @@ public:
     float OutBlendSeconds;
     
     UELAnimNotifyState_HeightOffsetToMedium();
+
 };
 

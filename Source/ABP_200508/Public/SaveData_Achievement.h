@@ -14,5 +14,6 @@ public:
     TArray<int32> m_sAchievementCountArray;
     
     USaveData_Achievement();
+
 };
 

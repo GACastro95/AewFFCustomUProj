@@ -12,6 +12,7 @@ protected:
     float RecoveryRate;
     
 public:
-    AELSSItem_RecoveryShield();
+    AELSSItem_RecoveryShield(const FObjectInitializer& ObjectInitializer);
+
 };
 

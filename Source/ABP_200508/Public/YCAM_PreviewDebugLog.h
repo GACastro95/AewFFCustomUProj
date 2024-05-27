@@ -43,6 +43,7 @@ protected:
     
 public:
     UYCAM_PreviewDebugLog();
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Uninit();
     

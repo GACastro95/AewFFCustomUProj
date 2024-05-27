@@ -8,7 +8,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerChameleonBase : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerChameleonBase();
+    AELCareerChameleonBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void EnableEffect(ECareerScreenEffect eScreenEfffect);
     

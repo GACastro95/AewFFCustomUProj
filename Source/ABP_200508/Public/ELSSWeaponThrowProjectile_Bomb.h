@@ -21,7 +21,8 @@ protected:
     float DamageRadius;
     
 public:
-    AELSSWeaponThrowProjectile_Bomb();
+    AELSSWeaponThrowProjectile_Bomb(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     bool TakeDamageToAny(AActor* OtherActor);

@@ -8,6 +8,7 @@ class ABP_200508_API UyJukeBox_Menu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UyJukeBox_Menu();
+
     UFUNCTION(BlueprintCallable)
     bool IsEnableJukeBoxMenu();
     

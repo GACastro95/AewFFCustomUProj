@@ -39,6 +39,7 @@ protected:
     
 public:
     UEOSSessionP2PAFHostMigration();
+
     UFUNCTION(BlueprintCallable)
     void SetRetryParams(int32 _sRetryCountForAPI, int32 _sRetryCountForRequestStatus, float _fTimerInterval, float _fRetryInterval);
     

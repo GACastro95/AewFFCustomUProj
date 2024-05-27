@@ -10,6 +10,7 @@ class ELITE_API UMessageDialog : public UObject {
     GENERATED_BODY()
 public:
     UMessageDialog();
+
     UFUNCTION(BlueprintCallable)
     static bool CreateMessageDialog(UMessageDialog*& _pcInst);
     

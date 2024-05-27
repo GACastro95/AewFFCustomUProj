@@ -29,7 +29,8 @@ private:
     FSSOnlinePlayerData joinPlayerDataToDummy;
     
 public:
-    AGameLiftGameServerMode();
+    AGameLiftGameServerMode(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdatePlayerSessionPolicyIsStopPlayerJoin();
     

@@ -8,5 +8,6 @@ class ABP_200508_API UELSSCameraShake : public UMatineeCameraShake {
     GENERATED_BODY()
 public:
     UELSSCameraShake();
+
 };
 

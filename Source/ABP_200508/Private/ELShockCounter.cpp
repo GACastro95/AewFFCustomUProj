@@ -1,5 +1,14 @@
 #include "ELShockCounter.h"
 
+UELShockCounter::UELShockCounter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->CounterValue_N = 0.00f;
+    this->AdditionalDownSecond_N = 0.00f;
+    this->RingDownSec_N = 0.00f;
+    this->ArenaDownSec_N = 0.00f;
+    this->MashBonusSecond_N = 0.00f;
+    this->MashBonusTotalSubSec_N = 0.00f;
+}
+
 void UELShockCounter::SubCounterValue_N(float Value) {
 }
 
@@ -21,12 +30,4 @@ float UELShockCounter::GetShockCounterValue_N() const {
 void UELShockCounter::ClearRepeatLimit_N() {
 }
 
-UELShockCounter::UELShockCounter() {
-    this->CounterValue_N = 0.00f;
-    this->AdditionalDownSecond_N = 0.00f;
-    this->RingDownSec_N = 0.00f;
-    this->ArenaDownSec_N = 0.00f;
-    this->MashBonusSecond_N = 0.00f;
-    this->MashBonusTotalSubSec_N = 0.00f;
-}
 

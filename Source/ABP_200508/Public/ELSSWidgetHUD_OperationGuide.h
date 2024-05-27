@@ -29,6 +29,7 @@ protected:
     
 public:
     UELSSWidgetHUD_OperationGuide();
+
     UFUNCTION(BlueprintCallable)
     void UpdateOperationGuide();
     

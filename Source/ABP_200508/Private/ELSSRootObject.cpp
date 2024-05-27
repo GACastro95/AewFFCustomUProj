@@ -1,5 +1,19 @@
 #include "ELSSRootObject.h"
 
+UELSSRootObject::UELSSRootObject() {
+    this->SSModePlayCountToDay = 0;
+    this->m_pSSGameDataManager = NULL;
+    this->CommonDatabase = NULL;
+    this->LastEndGameReason = ESSEndGameReason::None;
+    this->GameServerError = ESSGameServerError::None;
+    this->LocalInGameFlag = false;
+    this->VisibleFadeForChangeLevel = false;
+    this->LobbyManager = NULL;
+    this->RuleSelect = NULL;
+    this->DebugMenuManager = NULL;
+    this->Notice = NULL;
+}
+
 
 void UELSSRootObject::SetSSDebugParam(const FSSDebugParam& inDebugParam) {
 }
@@ -72,17 +86,4 @@ void UELSSRootObject::ClearGameServerError() {
 }
 
 
-UELSSRootObject::UELSSRootObject() {
-    this->SSModePlayCountToDay = 0;
-    this->m_pSSGameDataManager = NULL;
-    this->CommonDatabase = NULL;
-    this->LastEndGameReason = ESSEndGameReason::None;
-    this->GameServerError = ESSGameServerError::None;
-    this->LocalInGameFlag = false;
-    this->VisibleFadeForChangeLevel = false;
-    this->LobbyManager = NULL;
-    this->RuleSelect = NULL;
-    this->DebugMenuManager = NULL;
-    this->Notice = NULL;
-}
 

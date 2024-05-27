@@ -8,7 +8,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELNotifyOnlineError : public AActor {
     GENERATED_BODY()
 public:
-    AELNotifyOnlineError();
+    AELNotifyOnlineError(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnNotifyOnlineError(EELEOSEventType EventType);
     

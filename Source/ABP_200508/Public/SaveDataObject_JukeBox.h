@@ -12,6 +12,7 @@ class ABP_200508_API USaveDataObject_JukeBox : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_JukeBox();
+
     UFUNCTION(BlueprintCallable)
     void UpdateSavedataForTmpData(FELTmpJukeboxSaveData _tmpData);
     

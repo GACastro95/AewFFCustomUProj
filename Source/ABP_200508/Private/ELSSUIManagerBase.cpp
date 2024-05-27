@@ -1,6 +1,10 @@
 #include "ELSSUIManagerBase.h"
 #include "Templates/SubclassOf.h"
 
+AELSSUIManagerBase::AELSSUIManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PlayerController = NULL;
+}
+
 void AELSSUIManagerBase::Unload(UELSSUIManagerHandle* Handle) {
 }
 
@@ -47,7 +51,4 @@ bool AELSSUIManagerBase::Check(UELSSUIManagerHandle* lhs, UELSSUIManagerHandle* 
     return false;
 }
 
-AELSSUIManagerBase::AELSSUIManagerBase() {
-    this->PlayerController = NULL;
-}
 

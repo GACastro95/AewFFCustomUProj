@@ -1,5 +1,8 @@
 #include "ELSSCharacterSetupComponent.h"
 
+UELSSCharacterSetupComponent::UELSSCharacterSetupComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UELSSCharacterSetupComponent::UpdateDefaultMotion(EWrestlerID_N inWrestlerId, const FWrestlerSetupParam& inWrestlerSetupParam) {
 }
 
@@ -8,6 +11,4 @@ bool UELSSCharacterSetupComponent::CheckBlockedUserUGC(const FSSWrestlerSetupPar
     return false;
 }
 
-UELSSCharacterSetupComponent::UELSSCharacterSetupComponent() {
-}
 

@@ -7,9 +7,9 @@ enum class EUserPrivilegeBit : uint8 {
     None,
     CanPlay,
     CanPlayOnline,
-    CanCommunicateOnline = 0x4,
-    CanUseUserGeneratedContent = 0x8,
-    CanUserCrossPlay = 0x10,
-    All = 0xFF,
+    CanCommunicateOnline = 4,
+    CanUseUserGeneratedContent = 8,
+    CanUserCrossPlay = 16,
+    All = 255,
 };
 

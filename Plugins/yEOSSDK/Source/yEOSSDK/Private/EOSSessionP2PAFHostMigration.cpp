@@ -1,5 +1,13 @@
 #include "EOSSessionP2PAFHostMigration.h"
 
+UEOSSessionP2PAFHostMigration::UEOSSessionP2PAFHostMigration() {
+    this->m_pcLatencyInfo = NULL;
+    this->m_pcNextHostUserPacketMap = NULL;
+    this->m_pcSessionInfoOld = NULL;
+    this->m_pcSessionInfoNext = NULL;
+    this->m_pcCheckForHostSession = NULL;
+}
+
 void UEOSSessionP2PAFHostMigration::SetRetryParams(int32 _sRetryCountForAPI, int32 _sRetryCountForRequestStatus, float _fTimerInterval, float _fRetryInterval) {
 }
 
@@ -101,11 +109,4 @@ bool UEOSSessionP2PAFHostMigration::GetEOSSessionInfoForAfter(UEOSSessionInfo*& 
     return false;
 }
 
-UEOSSessionP2PAFHostMigration::UEOSSessionP2PAFHostMigration() {
-    this->m_pcLatencyInfo = NULL;
-    this->m_pcNextHostUserPacketMap = NULL;
-    this->m_pcSessionInfoOld = NULL;
-    this->m_pcSessionInfoNext = NULL;
-    this->m_pcCheckForHostSession = NULL;
-}
 

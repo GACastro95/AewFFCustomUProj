@@ -11,6 +11,7 @@ class UELEOSErrorUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELEOSErrorUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 CreateEOSSessionShortErrorCodeNumber(const EELEOSSessionErrorType errType);
     

@@ -21,6 +21,7 @@ protected:
     
 public:
     UELPopupNotificationManagerBase();
+
     UFUNCTION(BlueprintCallable)
     void RequestPopup_Online(EPopupOnlineStatusType _statusType, const FString& _execUserName, TArray<FString> _targetUserName);
     

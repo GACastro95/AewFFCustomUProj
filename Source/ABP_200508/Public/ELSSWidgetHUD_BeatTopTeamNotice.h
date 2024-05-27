@@ -18,6 +18,7 @@ protected:
     
 public:
     UELSSWidgetHUD_BeatTopTeamNotice();
+
     UFUNCTION(BlueprintCallable)
     void PlayInNotice(bool InPlayIn);
     

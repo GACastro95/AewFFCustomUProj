@@ -8,6 +8,7 @@ class YGS2CLIENT_API UYGS2Req_SetPlayerData : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_SetPlayerData();
+
     UFUNCTION(BlueprintCallable)
     void SetGamerTag(const FString& _strGameTag);
     

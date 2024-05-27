@@ -8,8 +8,9 @@ UCLASS(Blueprintable)
 class AELSSManagerActor : public AActor, public IELSSManagerActorInterface {
     GENERATED_BODY()
 public:
-    AELSSManagerActor();
-    
+    AELSSManagerActor(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

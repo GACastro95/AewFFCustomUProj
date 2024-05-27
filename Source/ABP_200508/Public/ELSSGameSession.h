@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSGameSession : public AGameSession {
     GENERATED_BODY()
 public:
-    AELSSGameSession();
+    AELSSGameSession(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -104,5 +104,6 @@ public:
     TArray<FKeyMapSettingData> _ssKeyboardMouseKeyConfigList;
     
     USaveData_PlayerData();
+
 };
 

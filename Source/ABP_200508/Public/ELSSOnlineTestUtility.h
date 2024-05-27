@@ -10,6 +10,7 @@ class ABP_200508_API UELSSOnlineTestUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSOnlineTestUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsSSModeOnlineTest();
     

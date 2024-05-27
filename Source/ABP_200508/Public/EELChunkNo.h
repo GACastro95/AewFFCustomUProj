@@ -16,6 +16,5 @@ enum class EELChunkNo : uint8 {
     CHUNK_NO_09,
     CHUNK_NO_10,
     CHUNK_NUM,
-    CHUNK_MAX UMETA(Hidden),
 };
 

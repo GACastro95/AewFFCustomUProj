@@ -52,6 +52,7 @@ protected:
     
 public:
     UELStats();
+
     UFUNCTION(BlueprintCallable)
     void SetYGS2Manager(UELYGS2Manager* InManager);
     

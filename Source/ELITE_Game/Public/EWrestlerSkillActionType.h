@@ -22,6 +22,5 @@ enum class EWrestlerSkillActionType : uint8 {
     Type_015,
     Type_016,
     Type_017,
-    Type_MAX UMETA(Hidden),
 };
 

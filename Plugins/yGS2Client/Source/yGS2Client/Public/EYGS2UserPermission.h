@@ -7,6 +7,6 @@ enum class EYGS2UserPermission : uint8 {
     None,
     Test,
     Development,
-    Development_SS = 0x4,
+    Development_SS = 4,
 };
 

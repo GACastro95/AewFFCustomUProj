@@ -13,6 +13,7 @@ class ABP_200508_API USaveData_UploaderOnEOS : public USaveData_UploaderBase {
     GENERATED_BODY()
 public:
     USaveData_UploaderOnEOS();
+
     UFUNCTION(BlueprintCallable)
     bool SetupEOS(UEOSUserContents* _pcEOSUserContents);
     

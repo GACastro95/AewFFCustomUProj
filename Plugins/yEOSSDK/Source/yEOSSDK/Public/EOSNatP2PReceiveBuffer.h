@@ -13,5 +13,6 @@ protected:
     
 public:
     UEOSNatP2PReceiveBuffer();
+
 };
 

@@ -12,6 +12,7 @@ class ABP_200508_API UELTagMatchIconBase : public UELIngameHUDBase {
     GENERATED_BODY()
 public:
     UELTagMatchIconBase();
+
     UFUNCTION(BlueprintCallable)
     void Update(AELCharacter_Native* Player, FVector2D Location);
     

@@ -1,5 +1,14 @@
 #include "ActionWaitPlayerStateGreaterOrEqual.h"
 
+UActionWaitPlayerStateGreaterOrEqual::UActionWaitPlayerStateGreaterOrEqual() {
+    this->WorldContextObject = NULL;
+    this->StateName = ESessionPlayerStateNameType::Initialize;
+    this->State = ESessionPlayerStateType::Num_0;
+    this->bAllMatched = false;
+    this->bSetState = false;
+    this->bCompleted = false;
+}
+
 void UActionWaitPlayerStateGreaterOrEqual::OnSessionEvent(EELEOSSessionEventType EventType, EELEOSSessionEventResult EventResult) {
 }
 
@@ -17,12 +26,4 @@ UActionWaitPlayerStateGreaterOrEqual* UActionWaitPlayerStateGreaterOrEqual::Acti
 void UActionWaitPlayerStateGreaterOrEqual::Abort() {
 }
 
-UActionWaitPlayerStateGreaterOrEqual::UActionWaitPlayerStateGreaterOrEqual() {
-    this->WorldContextObject = NULL;
-    this->StateName = ESessionPlayerStateNameType::Initialize;
-    this->State = ESessionPlayerStateType::Num_0;
-    this->bAllMatched = false;
-    this->bSetState = false;
-    this->bCompleted = false;
-}
 

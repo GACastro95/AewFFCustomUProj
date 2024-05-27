@@ -20,6 +20,7 @@ class ABP_200508_API UELEntranceNameplateCommentUtilityFunction : public UBluepr
     GENERATED_BODY()
 public:
     UELEntranceNameplateCommentUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static bool GetValueForReplaceParameter(EELEntranceNameplateCommentValueType ValueType, EWrestlerID_N WrestlerID, FGuid UID, EWrestlerID_N ManagerID, FGuid ManagerUID, EELBelt Belt, EBodyWeightType WeightType, EELTeamID TeamId, const FELMoves_Finisher& Finisher, int32& Value);
     

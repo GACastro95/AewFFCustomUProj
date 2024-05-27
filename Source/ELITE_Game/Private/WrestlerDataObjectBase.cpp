@@ -1,5 +1,9 @@
 #include "WrestlerDataObjectBase.h"
 
+UWrestlerDataObjectBase::UWrestlerDataObjectBase() {
+    this->StatusFlags = 0;
+}
+
 void UWrestlerDataObjectBase::SwitchGender(EGender& resultType) const {
 }
 
@@ -96,7 +100,4 @@ void UWrestlerDataObjectBase::CancelSaveRequest() {
 void UWrestlerDataObjectBase::AddWrestlerDataFlag(const EWrestlerDataObjectFlag FlagType) {
 }
 
-UWrestlerDataObjectBase::UWrestlerDataObjectBase() {
-    this->StatusFlags = 0;
-}
 

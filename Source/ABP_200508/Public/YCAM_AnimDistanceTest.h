@@ -8,7 +8,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AYCAM_AnimDistanceTest : public AActor {
     GENERATED_BODY()
 public:
-    AYCAM_AnimDistanceTest();
+    AYCAM_AnimDistanceTest(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     float GetStrikeAnimAtkTime(const FAnimNotifyEvent& In_AnimNotify);
     

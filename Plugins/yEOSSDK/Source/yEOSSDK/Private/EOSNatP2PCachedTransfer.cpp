@@ -1,5 +1,11 @@
 #include "EOSNatP2PCachedTransfer.h"
 
+UEOSNatP2PCachedTransfer::UEOSNatP2PCachedTransfer() {
+    this->m_pcReceiveBuffer = NULL;
+    this->m_pcNatP2P = NULL;
+    this->m_pcCommnuityBase = NULL;
+}
+
 void UEOSNatP2PCachedTransfer::Update() {
 }
 
@@ -66,9 +72,4 @@ bool UEOSNatP2PCachedTransfer::AddUser(UEOSUserBase* _pcUserBase, bool _bSystemU
     return false;
 }
 
-UEOSNatP2PCachedTransfer::UEOSNatP2PCachedTransfer() {
-    this->m_pcReceiveBuffer = NULL;
-    this->m_pcNatP2P = NULL;
-    this->m_pcCommnuityBase = NULL;
-}
 

@@ -1,6 +1,9 @@
 #include "ELGameplayCoreFunctions.h"
 #include "Templates/SubclassOf.h"
 
+UELGameplayCoreFunctions::UELGameplayCoreFunctions() {
+}
+
 AGameStateBase* UELGameplayCoreFunctions::GetGameStateAs(const UObject* WorldContextObject, const TSubclassOf<AGameStateBase> Class, EBasicFunctionResult& resultType) {
     return NULL;
 }
@@ -17,6 +20,4 @@ float UELGameplayCoreFunctions::GetAverageFPS() {
     return 0.0f;
 }
 
-UELGameplayCoreFunctions::UELGameplayCoreFunctions() {
-}
 

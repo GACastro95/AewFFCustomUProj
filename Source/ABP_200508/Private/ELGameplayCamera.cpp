@@ -1,9 +1,6 @@
 #include "ELGameplayCamera.h"
 
-void AELGameplayCamera::SetNativeParam(UCameraComponent* Camera) {
-}
-
-AELGameplayCamera::AELGameplayCamera() {
+AELGameplayCamera::AELGameplayCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GameplayCameraParamDataTable = NULL;
     this->DebugDispCollision = false;
     this->RequestSkipInterpolationFlag = false;
@@ -12,4 +9,8 @@ AELGameplayCamera::AELGameplayCamera() {
     this->ZoomDelaySubmissionEnd = false;
     this->bIncludeManagerCharacters_N = false;
 }
+
+void AELGameplayCamera::SetNativeParam(UCameraComponent* Camera) {
+}
+
 

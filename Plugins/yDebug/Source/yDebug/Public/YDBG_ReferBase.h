@@ -8,6 +8,7 @@ class YDEBUG_API UYDBG_ReferBase : public UObject {
     GENERATED_BODY()
 public:
     UYDBG_ReferBase();
+
     UFUNCTION(BlueprintCallable)
     void RemRef();
     

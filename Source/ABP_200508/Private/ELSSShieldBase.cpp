@@ -1,6 +1,23 @@
 #include "ELSSShieldBase.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "ESSPickupType.h"
 #include "Net/UnrealNetwork.h"
+
+AELSSShieldBase::AELSSShieldBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->PickupType = ESSPickupType::Shield;
+    this->SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponent"));
+    this->MaxDurability = 0;
+    this->RemainDurability = 0;
+    this->IsEnableAbsorbMovement = false;
+    this->IsPerformAbsorbMovement = false;
+    this->AbsorbMovementDelay = 0.14f;
+    this->AbsorbMovementDuration = 0.30f;
+    this->AbsorbMovementTimer = 0.00f;
+    this->OriginalScale = 0.00f;
+    this->AbsorbMovementEndScale = 0.30f;
+    this->AbsorbMoveTo = NULL;
+    this->SkeletalMeshComponent->SetupAttachment(RootComponent);
+}
 
 void AELSSShieldBase::StartAbsorbMovement(AActor* OtherActor) {
 }
@@ -46,17 +63,4 @@ void AELSSShieldBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AELSSShieldBase, AbsorbMoveTo);
 }
 
-AELSSShieldBase::AELSSShieldBase() {
-    this->SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponent"));
-    this->MaxDurability = 0;
-    this->RemainDurability = 0;
-    this->IsEnableAbsorbMovement = false;
-    this->IsPerformAbsorbMovement = false;
-    this->AbsorbMovementDelay = 0.14f;
-    this->AbsorbMovementDuration = 0.30f;
-    this->AbsorbMovementTimer = 0.00f;
-    this->OriginalScale = 0.00f;
-    this->AbsorbMovementEndScale = 0.30f;
-    this->AbsorbMoveTo = NULL;
-}
 

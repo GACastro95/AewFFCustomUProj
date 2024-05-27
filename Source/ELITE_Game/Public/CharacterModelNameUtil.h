@@ -10,6 +10,7 @@ class ELITE_GAME_API UCharacterModelNameUtil : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UCharacterModelNameUtil();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsValid(const FCharacterModelName& Name);
     

@@ -11,6 +11,7 @@ class ABP_200508_API UELMatchRecordsUtilityFunction : public UBlueprintFunctionL
     GENERATED_BODY()
 public:
     UELMatchRecordsUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateMatchRecordsInfo(const FELMatchRecordsProfileInfo_BP& ProfileInfo, const TArray<FELMatchRecordsWrestlerInfo_BP>& WrestlerInfos, FDateTime Now, uint8 _saveDataAccessFlag);
     

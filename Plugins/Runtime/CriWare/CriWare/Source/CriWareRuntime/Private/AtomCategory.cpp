@@ -1,5 +1,8 @@
 #include "AtomCategory.h"
 
+UAtomCategory::UAtomCategory() {
+}
+
 void UAtomCategory::StopByName(const FString& CategoryName) {
 }
 
@@ -53,6 +56,4 @@ void UAtomCategory::GetAttachedAisacInfoByName(const FString& CategoryName, int3
 void UAtomCategory::GetAttachedAisacInfoById(int32 CategoryID, int32 AisacAttachedIndex, bool& IsSuccess, FAtomAisacInfo& AisacInfo) {
 }
 
-UAtomCategory::UAtomCategory() {
-}
 

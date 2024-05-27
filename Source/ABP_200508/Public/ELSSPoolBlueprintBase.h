@@ -8,8 +8,9 @@ UCLASS(Abstract, Blueprintable)
 class ABP_200508_API AELSSPoolBlueprintBase : public AActor, public IELSSPoolActorInterface {
     GENERATED_BODY()
 public:
-    AELSSPoolBlueprintBase();
-    
+    AELSSPoolBlueprintBase(const FObjectInitializer& ObjectInitializer);
+
+
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -1,5 +1,11 @@
 #include "YCAM_AutoAnimPreview.h"
 
+AYCAM_AutoAnimPreview::AYCAM_AutoAnimPreview(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Mode = EAutoAnimMode::None;
+    this->isPlayAnim = false;
+    this->isDuplicateCategory = false;
+}
+
 void AYCAM_AutoAnimPreview::Uninit_Implementation() {
 }
 
@@ -40,9 +46,4 @@ void AYCAM_AutoAnimPreview::AddPlaySituationFromCategoryItemID(const TArray<int3
 void AYCAM_AutoAnimPreview::AddCategoryItemIDFromSettingMenuID(int32 In_SettingMenuID, TArray<int32>& Out_CategoryItemIDs) {
 }
 
-AYCAM_AutoAnimPreview::AYCAM_AutoAnimPreview() {
-    this->Mode = EAutoAnimMode::None;
-    this->isPlayAnim = false;
-    this->isDuplicateCategory = false;
-}
 

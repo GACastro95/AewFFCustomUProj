@@ -18,6 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat OffsetRotation;
     
-    UELNavModifierComponent();
+    UELNavModifierComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

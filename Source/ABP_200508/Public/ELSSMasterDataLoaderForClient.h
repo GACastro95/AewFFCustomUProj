@@ -11,7 +11,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSMasterDataLoaderForClient : public AELSSMasterDataLoader {
     GENERATED_BODY()
 public:
-    AELSSMasterDataLoaderForClient();
+    AELSSMasterDataLoaderForClient(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     UYGS2RequestBase* Request_GetSSMasterDataVersion(bool inDataVersionOnly);

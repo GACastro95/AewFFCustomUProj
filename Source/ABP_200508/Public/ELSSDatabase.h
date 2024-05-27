@@ -163,7 +163,8 @@ protected:
     TArray<FSSFgfBallLevelParam> FgfBallLevelParamArray;
     
 public:
-    AELSSDatabase();
+    AELSSDatabase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool GetWeaponTrapParam(int32 ID, FSSWeaponTrapParam& OutRow);
     

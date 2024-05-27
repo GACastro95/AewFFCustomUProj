@@ -1,5 +1,8 @@
 #include "OnlinePlayerData.h"
 
+UOnlinePlayerData::UOnlinePlayerData() {
+}
+
 int32 UOnlinePlayerData::SubGamePoint(int32 _sValue) {
     return 0;
 }
@@ -81,6 +84,4 @@ int32 UOnlinePlayerData::AddGamePoint(int32 _sValue) {
     return 0;
 }
 
-UOnlinePlayerData::UOnlinePlayerData() {
-}
 

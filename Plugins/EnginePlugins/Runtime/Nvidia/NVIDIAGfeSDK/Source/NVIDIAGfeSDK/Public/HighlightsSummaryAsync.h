@@ -19,6 +19,7 @@ public:
     FOnHighlightsOperationResultCallback OnFailure;
     
     UHighlightsSummaryAsync();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UHighlightsSummaryAsync* HighlightsOpenSummary(UObject* WorldContextObject, const FGfeSDKHighlightSummaryParams& Params);
     

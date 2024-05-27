@@ -86,3 +86,4 @@ UCriWarePluginSettings::UCriWarePluginSettings() {
     this->bMoviesAreSkippable = false;
 }
 
+

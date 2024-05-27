@@ -1,5 +1,9 @@
 #include "ELManaMoviePlayer.h"
 
+UELManaMoviePlayer::UELManaMoviePlayer() {
+    this->m_pManaPlayer = NULL;
+}
+
 bool UELManaMoviePlayer::ResourceExist(const FString& MoviePath) {
     return false;
 }
@@ -40,7 +44,4 @@ bool UELManaMoviePlayer::ChangeMovieResourceForManaMovie(UManaMovie* ManaMovie) 
     return false;
 }
 
-UELManaMoviePlayer::UELManaMoviePlayer() {
-    this->m_pManaPlayer = NULL;
-}
 

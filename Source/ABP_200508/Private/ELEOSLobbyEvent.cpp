@@ -7,3 +7,4 @@ UELEOSLobbyEvent::UELEOSLobbyEvent() {
     this->CommunityUser = NULL;
 }
 
+

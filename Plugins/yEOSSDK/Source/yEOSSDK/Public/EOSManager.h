@@ -58,6 +58,7 @@ private:
     
 public:
     UEOSManager();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateForDispose();
     

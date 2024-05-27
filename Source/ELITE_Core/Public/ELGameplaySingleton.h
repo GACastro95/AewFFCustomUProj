@@ -8,5 +8,6 @@ class ELITE_CORE_API UELGameplaySingleton : public USingletonBase {
     GENERATED_BODY()
 public:
     UELGameplaySingleton();
+
 };
 

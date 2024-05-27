@@ -10,6 +10,7 @@ class ABP_200508_API UELCareerHUBMenuMain : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerHUBMenuMain();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetupChildWidgetBroadcast(AELCareerStateManager* pManager);
     

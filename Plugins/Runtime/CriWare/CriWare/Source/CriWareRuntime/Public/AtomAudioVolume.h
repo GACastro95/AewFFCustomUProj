@@ -45,9 +45,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AAtomEntranceVolume*> EntranceVolumes;
     
-    AAtomAudioVolume();
+    AAtomAudioVolume(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetReverbSettings(const FSnapshotSwitchSettings& NewReverbSettings);
     

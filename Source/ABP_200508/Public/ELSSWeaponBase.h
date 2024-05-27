@@ -65,7 +65,8 @@ protected:
     float StickFinishedVelocityGravity;
     
 public:
-    AELSSWeaponBase();
+    AELSSWeaponBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool StickToPlayer(AELSSPlayer* inTarget, int32 inRequiredStateId, const FName& inAttachParamRowName);
     

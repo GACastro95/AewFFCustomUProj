@@ -1,5 +1,8 @@
 #include "ELUserPrivilegesSubsystem.h"
 
+UELUserPrivilegesSubsystem::UELUserPrivilegesSubsystem() {
+}
+
 bool UELUserPrivilegesSubsystem::IsCanUseUserGeneratedContent(APlayerController* _playerController, const bool _showPrivilegeUI) {
     return false;
 }
@@ -20,6 +23,4 @@ bool UELUserPrivilegesSubsystem::IsCanCommunicateOutsideXBoxUser(APlayerControll
     return false;
 }
 
-UELUserPrivilegesSubsystem::UELUserPrivilegesSubsystem() {
-}
 

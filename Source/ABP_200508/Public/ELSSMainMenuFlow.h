@@ -66,7 +66,8 @@ protected:
     bool IsBoundLobbyFunctions;
     
 public:
-    AELSSMainMenuFlow();
+    AELSSMainMenuFlow(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnbindEOSLobbyFuctions();
     

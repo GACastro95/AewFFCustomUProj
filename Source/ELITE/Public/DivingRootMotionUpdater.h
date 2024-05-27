@@ -9,7 +9,8 @@ UCLASS(Blueprintable)
 class ELITE_API ADivingRootMotionUpdater : public AActor {
     GENERATED_BODY()
 public:
-    ADivingRootMotionUpdater();
+    ADivingRootMotionUpdater(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Setup(ACharacter* Chara, bool ignoreEndResetMovementMode);

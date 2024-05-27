@@ -1,5 +1,8 @@
 #include "ELGameServerSelector.h"
 
+UELGameServerSelector::UELGameServerSelector() {
+}
+
 bool UELGameServerSelector::SetupServers(const FString& Data, const FString& Key, const FString& SubKey) {
     return false;
 }
@@ -31,6 +34,4 @@ FString UELGameServerSelector::GetServerId() {
     return TEXT("");
 }
 
-UELGameServerSelector::UELGameServerSelector() {
-}
 

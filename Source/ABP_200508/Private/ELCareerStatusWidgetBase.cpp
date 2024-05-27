@@ -1,5 +1,8 @@
 #include "ELCareerStatusWidgetBase.h"
 
+UELCareerStatusWidgetBase::UELCareerStatusWidgetBase() {
+}
+
 
 
 
@@ -55,6 +58,4 @@ int32 UELCareerStatusWidgetBase::GetCareerMoneyNum() {
 }
 
 
-UELCareerStatusWidgetBase::UELCareerStatusWidgetBase() {
-}
 

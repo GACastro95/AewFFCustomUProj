@@ -8,6 +8,7 @@ class ABP_200508_API UELDBG_ReferBase : public UObject {
     GENERATED_BODY()
 public:
     UELDBG_ReferBase();
+
     UFUNCTION(BlueprintCallable)
     void RemRef();
     

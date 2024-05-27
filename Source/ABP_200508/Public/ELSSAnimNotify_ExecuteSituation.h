@@ -11,6 +11,7 @@ class ABP_200508_API UELSSAnimNotify_ExecuteSituation : public UELSSAnimNotifyBa
     GENERATED_BODY()
 public:
     UELSSAnimNotify_ExecuteSituation();
+
     UFUNCTION(BlueprintCallable)
     void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);
     

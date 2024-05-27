@@ -1,5 +1,17 @@
 #include "ELSSWidgetHUD_SSGuideIcon.h"
 
+UELSSWidgetHUD_SSGuideIcon::UELSSWidgetHUD_SSGuideIcon() {
+    this->IconImage = NULL;
+    this->TextWidget = NULL;
+    this->TargetActor = NULL;
+    this->PlayerController = NULL;
+    this->Validratio = 0.05f;
+    this->DoneFirstVisible = false;
+    this->IconType = 0;
+    this->ParentContainer = NULL;
+    this->GuideIconType = ESSGuideIconType::None;
+}
+
 void UELSSWidgetHUD_SSGuideIcon::UpdatePosAndVisible(float InDeltaTime) {
 }
 
@@ -38,15 +50,4 @@ ESSGuideIconType UELSSWidgetHUD_SSGuideIcon::GetGuideIconType() {
 }
 
 
-UELSSWidgetHUD_SSGuideIcon::UELSSWidgetHUD_SSGuideIcon() {
-    this->IconImage = NULL;
-    this->TextWidget = NULL;
-    this->TargetActor = NULL;
-    this->PlayerController = NULL;
-    this->Validratio = 0.05f;
-    this->DoneFirstVisible = false;
-    this->IconType = 0;
-    this->ParentContainer = NULL;
-    this->GuideIconType = ESSGuideIconType::None;
-}
 

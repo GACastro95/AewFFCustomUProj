@@ -8,6 +8,7 @@ class ABP_200508_API UELGameOptionManager : public UObject {
     GENERATED_BODY()
 public:
     UELGameOptionManager();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     void ApplySaveDataToParam(UObject* _pWorldContextObject, bool bApplyLanguage);
     

@@ -1,5 +1,9 @@
 #include "ELLocalizeFontManager.h"
 
+UELLocalizeFontManager::UELLocalizeFontManager() {
+    this->m_fontParamTable = NULL;
+}
+
 void UELLocalizeFontManager::SetDataTable(UDataTable* FontDataTable) {
 }
 
@@ -7,7 +11,4 @@ UFont* UELLocalizeFontManager::GetCurrentLanguageFont(UObject* _pWorldContextObj
     return NULL;
 }
 
-UELLocalizeFontManager::UELLocalizeFontManager() {
-    this->m_fontParamTable = NULL;
-}
 

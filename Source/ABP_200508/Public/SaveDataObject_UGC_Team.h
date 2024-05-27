@@ -15,6 +15,7 @@ class ABP_200508_API USaveDataObject_UGC_Team : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_UGC_Team();
+
     UFUNCTION(BlueprintCallable)
     void SetUnlockId(int32 Index, int32 _UnlockId);
     

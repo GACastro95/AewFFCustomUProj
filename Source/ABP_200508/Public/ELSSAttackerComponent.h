@@ -73,7 +73,8 @@ protected:
     bool bExecutingAttack;
     
 public:
-    UELSSAttackerComponent();
+    UELSSAttackerComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UpdateInvolveCollision();
     

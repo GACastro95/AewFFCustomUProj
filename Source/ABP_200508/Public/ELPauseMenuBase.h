@@ -17,6 +17,7 @@ protected:
     
 public:
     UELPauseMenuBase();
+
     UFUNCTION(BlueprintCallable)
     void TabRight(bool Repeat);
     

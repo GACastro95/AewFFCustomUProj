@@ -16,6 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAtom3dRegion* Region;
     
-    UAtomParameterComponent();
+    UAtomParameterComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

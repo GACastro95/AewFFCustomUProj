@@ -19,6 +19,7 @@ public:
     FDebugSettingActiveFlagChangedDispatcher DebugSettingActiveFlagChangedDispatcher;
     
     UYDBGSettingReader();
+
     UFUNCTION(BlueprintCallable)
     bool SetValue(const float _fValue, const FString& _strKey);
     

@@ -47,6 +47,7 @@ protected:
     
 public:
     UELSSWidgetHUD_ItemInteractParts();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetRarityTexture(ESSRarity inRarity);

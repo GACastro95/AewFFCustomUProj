@@ -14,6 +14,7 @@ class CREATION_API UFL_EditWrestlerUtilityFunctions : public UBlueprintFunctionL
     GENERATED_BODY()
 public:
     UFL_EditWrestlerUtilityFunctions();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateCompatiable(UPARAM(Ref) FAttireData& AttireData, UPARAM(Ref) TSet<EEditPartsSlot>& ExcludeParts, const TSet<FName>& ExcludeCategories);
     

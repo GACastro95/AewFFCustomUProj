@@ -11,6 +11,7 @@ class ELITE_GAME_API UELRingAnnounceUtilityFunction : public UBlueprintFunctionL
     GENERATED_BODY()
 public:
     UELRingAnnounceUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static USoundAtomCue* GetRAAtomCue(const FString& _CueId, const FString& _CueName, ERingAnnounceTable _tableNo, int32 CueNo);
     

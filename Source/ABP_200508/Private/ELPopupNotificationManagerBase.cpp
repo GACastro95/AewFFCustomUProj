@@ -1,5 +1,12 @@
 #include "ELPopupNotificationManagerBase.h"
 
+UELPopupNotificationManagerBase::UELPopupNotificationManagerBase() {
+    this->bTickableWhenPaused = true;
+    this->bTickableInEditor = true;
+    this->PopupWidget_N = NULL;
+    this->ZOrder_N = 310;
+}
+
 void UELPopupNotificationManagerBase::RequestPopup_Online(EPopupOnlineStatusType _statusType, const FString& _execUserName, TArray<FString> _targetUserName) {
 }
 
@@ -27,8 +34,4 @@ void UELPopupNotificationManagerBase::CheckLayoutViewport_N() {
 void UELPopupNotificationManagerBase::ChangeExecutePopup(bool _state) {
 }
 
-UELPopupNotificationManagerBase::UELPopupNotificationManagerBase() {
-    this->PopupWidget_N = NULL;
-    this->ZOrder_N = 310;
-}
 

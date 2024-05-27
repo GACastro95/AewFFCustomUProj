@@ -1,5 +1,35 @@
 #include "ELSSPlayerController.h"
+#include "ELSSCheatManager.h"
 #include "ELSSGameplayCamera.h"
+
+AELSSPlayerController::AELSSPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAutoManageActiveCameraTarget = false;
+    this->CheatClass = UELSSCheatManager::StaticClass();
+    this->ClickEventKeys.AddDefaulted(1);
+    this->IsRestrictMoveOnly = false;
+    this->IsNetworkError = false;
+    this->IsApiDisabled = false;
+    this->MouseControlMode = ESSMouseControlMode::Menu;
+    this->GameplayCameraType = AELSSGameplayCamera::StaticClass();
+    this->GameplayCamera = NULL;
+    this->StationalCameraType = NULL;
+    this->StationalCamera = NULL;
+    this->PrevState = ESSClientFlowState::None;
+    this->EndGameReason = ESSEndGameReason::None;
+    this->MenuOperationalWidgetManager = NULL;
+    this->WatchTargetPlayerState = NULL;
+    this->WatchTargetTeamState = NULL;
+    this->WatchGameIgnoreDecisionTime = 1.00f;
+    this->IsOpenedConfirmDialog_LeaveWatchTeam = false;
+    this->IsLeavedFromWatchTeam = false;
+    this->VictoryCutscene = NULL;
+    this->ShowNearPlayerStatusDistance = 500.00f;
+    this->InteractableObjectDotIconDistance = 1000.00f;
+    this->IsEnableOpenPauseMenu = false;
+    this->InputOnly = false;
+    this->ParentPlayerController = NULL;
+    this->ssAntiCheatData = NULL;
+}
 
 void AELSSPlayerController::WatchTeam_OnReleaseMenuDecision() {
 }
@@ -598,29 +628,4 @@ void AELSSPlayerController::BeginViewControlledPawn() {
 
 
 
-AELSSPlayerController::AELSSPlayerController() {
-    this->IsRestrictMoveOnly = false;
-    this->IsNetworkError = false;
-    this->IsApiDisabled = false;
-    this->MouseControlMode = ESSMouseControlMode::Menu;
-    this->GameplayCameraType = AELSSGameplayCamera::StaticClass();
-    this->GameplayCamera = NULL;
-    this->StationalCameraType = NULL;
-    this->StationalCamera = NULL;
-    this->PrevState = ESSClientFlowState::None;
-    this->EndGameReason = ESSEndGameReason::None;
-    this->MenuOperationalWidgetManager = NULL;
-    this->WatchTargetPlayerState = NULL;
-    this->WatchTargetTeamState = NULL;
-    this->WatchGameIgnoreDecisionTime = 1.00f;
-    this->IsOpenedConfirmDialog_LeaveWatchTeam = false;
-    this->IsLeavedFromWatchTeam = false;
-    this->VictoryCutscene = NULL;
-    this->ShowNearPlayerStatusDistance = 500.00f;
-    this->InteractableObjectDotIconDistance = 1000.00f;
-    this->IsEnableOpenPauseMenu = false;
-    this->InputOnly = false;
-    this->ParentPlayerController = NULL;
-    this->ssAntiCheatData = NULL;
-}
 

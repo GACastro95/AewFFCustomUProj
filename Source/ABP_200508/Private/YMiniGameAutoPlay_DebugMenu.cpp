@@ -1,5 +1,8 @@
 #include "YMiniGameAutoPlay_DebugMenu.h"
 
+UYMiniGameAutoPlay_DebugMenu::UYMiniGameAutoPlay_DebugMenu() {
+}
+
 void UYMiniGameAutoPlay_DebugMenu::SetEnableAutoPlay(bool _EnableAutoPlay) {
 }
 
@@ -27,6 +30,4 @@ EWrestlerID_N UYMiniGameAutoPlay_DebugMenu::GetAllWrestlerID() {
     return EWrestlerID_N::None;
 }
 
-UYMiniGameAutoPlay_DebugMenu::UYMiniGameAutoPlay_DebugMenu() {
-}
 

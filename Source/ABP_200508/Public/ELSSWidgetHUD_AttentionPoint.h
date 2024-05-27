@@ -40,6 +40,7 @@ protected:
     
 public:
     UELSSWidgetHUD_AttentionPoint();
+
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);
     

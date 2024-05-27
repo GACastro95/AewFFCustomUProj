@@ -1,5 +1,8 @@
 #include "YGS2Req_ConsumeGold.h"
 
+UYGS2Req_ConsumeGold::UYGS2Req_ConsumeGold() {
+}
+
 void UYGS2Req_ConsumeGold::SetListMode(int32 _sOffset, int32 _sLimit, int32 _sContentKind, const FString& _strContentID) {
 }
 
@@ -17,6 +20,4 @@ FYGS2Response_ConsumeGold UYGS2Req_ConsumeGold::GetConsumeGoldResult() const {
     return FYGS2Response_ConsumeGold{};
 }
 
-UYGS2Req_ConsumeGold::UYGS2Req_ConsumeGold() {
-}
 

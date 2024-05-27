@@ -277,6 +277,7 @@ private:
     
 public:
     UELGameInstance();
+
     UFUNCTION(BlueprintCallable)
     void WrestlerSelectStart();
     
@@ -465,10 +466,25 @@ public:
     void SetLocalTournamentSetting(const FELLocalTournamentBaseSetting& Setting);
     
     UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentSelectWrestler(int32 PositionIndex, const FELTournamentWrestlerIdentifier& SelectWrester);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentSelectEntryNo(int32 EntryNo);
+    
+    UFUNCTION(BlueprintCallable)
     void SetLocalTournamentName(const FString& Name);
     
     UFUNCTION(BlueprintCallable)
-    void SetLocalTournamentMatchResult(const TArray<uint8>& Result);
+    void SetLocalTournamentMode(bool bSet);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentMatchResultAll(const TArray<uint8>& Result);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentMatchResult(int32 MatchNo, int32 WinTeamNo);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalTournamentMatchNo(int32 MatchNo);
     
     UFUNCTION(BlueprintCallable)
     void SetLocalTournamentLastMatchResult(int32 WinTeamNo);
@@ -480,7 +496,7 @@ public:
     void SetLocalTournamentBracket(const TArray<FELTournamentBracket>& Brackt);
     
     UFUNCTION(BlueprintCallable)
-    void SetLocalTournamentArenaSetting(FELLocalTournamentArenaSetting& Setting);
+    void SetLocalTournamentArenaSetting(const FELLocalTournamentArenaSetting& Setting);
     
     UFUNCTION(BlueprintCallable)
     void SetLastSelectedMenuByDevice(bool IsGamepad);
@@ -734,6 +750,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetLocalTournamentSetting();
     
+    UFUNCTION(BlueprintCallable)
+    void ResetLocalTournamentBracket();
+    
 private:
     UFUNCTION(BlueprintCallable)
     void OnQueryStatsInternal();
@@ -806,9 +825,6 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsShowBuldFlow();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool IsReadyLocalTournamentBracket() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayCareerMiniGame();
@@ -1098,10 +1114,22 @@ public:
     EELLocalTournamentState GetLocalTournamentState() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    void GetLocalTournamentSelectWrestler(int32 PositionIndex, FELTournamentWrestlerIdentifier& SelectWrester) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetLocalTournamentSelectEntryNo() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetLocalTournamentName() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    TArray<uint8> GetLocalTournamentMatchResult() const;
+    TArray<uint8> GetLocalTournamentMatchResultAll() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    uint8 GetLocalTournamentMatchResult(int32 MatchNo) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetLocalTournamentMatchNo() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EELLocalTournamentEntryScale GetLocalTournamentEntryScale() const;
@@ -1399,6 +1427,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void ClearWrestlerSelectParams();
     
+    UFUNCTION(BlueprintCallable)
+    void ClearLocalTournamentSelectWrestler();
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ChangeWorldRequested(const FString& LevelName);
     
@@ -1407,6 +1438,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CareerBackToLevel();
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyLocalTournamentSelectWrestler();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AfterTransitionCleaning();

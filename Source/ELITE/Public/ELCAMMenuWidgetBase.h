@@ -8,5 +8,6 @@ class ELITE_API UELCAMMenuWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELCAMMenuWidgetBase();
+
 };
 

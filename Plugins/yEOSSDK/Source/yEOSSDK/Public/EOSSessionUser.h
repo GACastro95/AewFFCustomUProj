@@ -15,6 +15,7 @@ private:
     
 public:
     UEOSSessionUser();
+
     UFUNCTION(BlueprintCallable)
     bool SetupGameFlow();
     

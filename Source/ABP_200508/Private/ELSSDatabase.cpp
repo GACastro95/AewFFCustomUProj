@@ -1,5 +1,39 @@
 #include "ELSSDatabase.h"
 
+AELSSDatabase::AELSSDatabase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->EffectParamTable = NULL;
+    this->HitEffectParamTable = NULL;
+    this->ItemResourceParamTable = NULL;
+    this->UseItemParamTable = NULL;
+    this->ShieldParamTable = NULL;
+    this->WeaponParamTable = NULL;
+    this->WeaponMeleeParamTable = NULL;
+    this->WeaponGunParamTable = NULL;
+    this->WeaponThrowParamTable = NULL;
+    this->WeaponTrapParamTable = NULL;
+    this->VehicleParamTable = NULL;
+    this->VehicleSpawnParamForRoundTable = NULL;
+    this->AttachParamTable = NULL;
+    this->SystemMotionParamTable = NULL;
+    this->DamageReactionParamTable = NULL;
+    this->AIPlayerParamTable = NULL;
+    this->AIPlayerStampedeLevelParamTable = NULL;
+    this->GuardReactionParamTable = NULL;
+    this->GuardConditionParamTable = NULL;
+    this->FallParamTable = NULL;
+    this->ResultKillCountGradeTable = NULL;
+    this->ResultAttentionGradeTable = NULL;
+    this->ResultFeverGradeTable = NULL;
+    this->ResultStarGradeTable = NULL;
+    this->ResultJewelGradeTable = NULL;
+    this->ResultBallLevelGradeTable = NULL;
+    this->VictoryCutsceneParamTable = NULL;
+    this->PlayerStartLocatorParamTable = NULL;
+    this->RuleAdjustParamTable = NULL;
+    this->FgfFieldPatternParamTable = NULL;
+    this->FgfBallLevelParamTable = NULL;
+}
+
 bool AELSSDatabase::GetWeaponTrapParam(int32 ID, FSSWeaponTrapParam& OutRow) {
     return false;
 }
@@ -108,37 +142,4 @@ ESSGuardReactionType AELSSDatabase::CalcGuardReactionType(ESSGuardBreakerType in
     return ESSGuardReactionType::None;
 }
 
-AELSSDatabase::AELSSDatabase() {
-    this->EffectParamTable = NULL;
-    this->HitEffectParamTable = NULL;
-    this->ItemResourceParamTable = NULL;
-    this->UseItemParamTable = NULL;
-    this->ShieldParamTable = NULL;
-    this->WeaponParamTable = NULL;
-    this->WeaponMeleeParamTable = NULL;
-    this->WeaponGunParamTable = NULL;
-    this->WeaponThrowParamTable = NULL;
-    this->WeaponTrapParamTable = NULL;
-    this->VehicleParamTable = NULL;
-    this->VehicleSpawnParamForRoundTable = NULL;
-    this->AttachParamTable = NULL;
-    this->SystemMotionParamTable = NULL;
-    this->DamageReactionParamTable = NULL;
-    this->AIPlayerParamTable = NULL;
-    this->AIPlayerStampedeLevelParamTable = NULL;
-    this->GuardReactionParamTable = NULL;
-    this->GuardConditionParamTable = NULL;
-    this->FallParamTable = NULL;
-    this->ResultKillCountGradeTable = NULL;
-    this->ResultAttentionGradeTable = NULL;
-    this->ResultFeverGradeTable = NULL;
-    this->ResultStarGradeTable = NULL;
-    this->ResultJewelGradeTable = NULL;
-    this->ResultBallLevelGradeTable = NULL;
-    this->VictoryCutsceneParamTable = NULL;
-    this->PlayerStartLocatorParamTable = NULL;
-    this->RuleAdjustParamTable = NULL;
-    this->FgfFieldPatternParamTable = NULL;
-    this->FgfBallLevelParamTable = NULL;
-}
 

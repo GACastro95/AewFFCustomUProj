@@ -1,5 +1,8 @@
 #include "ELCreateMode_MenuInfoSubsystem.h"
 
+UELCreateMode_MenuInfoSubsystem::UELCreateMode_MenuInfoSubsystem() {
+}
+
 void UELCreateMode_MenuInfoSubsystem::SetMainMenuAction(EELMainMenuAction _MainMenuAction) {
 }
 
@@ -22,6 +25,4 @@ EGender UELCreateMode_MenuInfoSubsystem::GetGender() {
     return EGender::Male;
 }
 
-UELCreateMode_MenuInfoSubsystem::UELCreateMode_MenuInfoSubsystem() {
-}
 

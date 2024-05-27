@@ -8,5 +8,6 @@ class ABP_200508_API UELCareerConfirmationScreen : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerConfirmationScreen();
+
 };
 

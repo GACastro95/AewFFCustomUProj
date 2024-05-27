@@ -15,6 +15,7 @@ private:
     
 public:
     UELOnlineNews();
+
     UFUNCTION(BlueprintCallable)
     UELOnlineNewsData* GetCurrentOnlineNewsData();
     

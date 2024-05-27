@@ -51,5 +51,6 @@ protected:
     
 public:
     UELAnimInstance_Helper();
+
 };
 

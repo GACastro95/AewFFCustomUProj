@@ -11,6 +11,7 @@ class ABP_200508_API USaveDataObject_CareerModeSystem : public USaveDataObjectBa
     GENERATED_BODY()
 public:
     USaveDataObject_CareerModeSystem();
+
     UFUNCTION(BlueprintCallable)
     void SetSnapshotParams(const TArray<FCareerSnapshotParam>& Params);
     

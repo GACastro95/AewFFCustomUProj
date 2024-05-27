@@ -1,6 +1,9 @@
 #include "ELMatchResultMenuFlowControllerBase.h"
 #include "Templates/SubclassOf.h"
 
+AELMatchResultMenuFlowControllerBase::AELMatchResultMenuFlowControllerBase() {
+}
+
 UELMatchResultMenuBase* AELMatchResultMenuFlowControllerBase::StartExtraMenuSequence(TSubclassOf<UELMatchResultMenuBase> InMenuClass) {
     return NULL;
 }
@@ -28,6 +31,4 @@ void AELMatchResultMenuFlowControllerBase::EndExtraMenuSequence() {
 }
 
 
-AELMatchResultMenuFlowControllerBase::AELMatchResultMenuFlowControllerBase() {
-}
 

@@ -21,6 +21,7 @@ public:
     FString ProductUserID;
     
     UActionQueryExternalAccountIdStats();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UActionQueryExternalAccountIdStats* ActionQueryExternalAccountIdStats(UObject* NewWorldContextObject, const FString& TargetProductUserId);
     

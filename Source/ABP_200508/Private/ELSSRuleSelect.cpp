@@ -1,5 +1,8 @@
 #include "ELSSRuleSelect.h"
 
+UELSSRuleSelect::UELSSRuleSelect() {
+}
+
 bool UELSSRuleSelect::UpdateList(UObject* WorldContextObject) {
     return false;
 }
@@ -156,6 +159,4 @@ void UELSSRuleSelect::ApplyRule(UObject* WorldContextObject, const FSSRuleSelect
 void UELSSRuleSelect::ApplyDefaultRule(UObject* WorldContextObject) {
 }
 
-UELSSRuleSelect::UELSSRuleSelect() {
-}
 

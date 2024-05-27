@@ -43,6 +43,7 @@ protected:
     
 public:
     UELSSBTTaskBase();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     bool SSPlayerShoot(const UObject* WorldContextObject);
     

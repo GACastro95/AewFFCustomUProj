@@ -11,6 +11,7 @@ class YDEBUG_API UYDBGWatermark : public UObject {
     GENERATED_BODY()
 public:
     UYDBGWatermark();
+
     UFUNCTION(BlueprintCallable)
     bool Setup(const FString& _strChangelistFileName);
     

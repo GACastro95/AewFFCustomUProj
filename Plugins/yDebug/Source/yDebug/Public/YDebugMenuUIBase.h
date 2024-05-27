@@ -15,6 +15,7 @@ public:
     FDebugMenuNotifyDispatcher DebugMenuNotifyDispatcher;
     
     UYDebugMenuUIBase();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateChildMenuUI(const FYDebugMenuSimpleUIParam& _stDebugMenuSimpleUIParam, const FString& _strRegistKey);
     

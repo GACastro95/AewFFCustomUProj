@@ -8,6 +8,7 @@ class YGS2CLIENT_API UYGS2Req_UserStats : public UYGS2RequestBase {
     GENERATED_BODY()
 public:
     UYGS2Req_UserStats();
+
     UFUNCTION(BlueprintCallable)
     void SetUpdateItems(const FString& _strKind, const TMap<FString, FString>& _cUpdateItems, const FString& _strStructID, bool _bSave);
     

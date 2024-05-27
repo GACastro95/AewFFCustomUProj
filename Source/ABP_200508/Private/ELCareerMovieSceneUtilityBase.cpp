@@ -1,5 +1,6 @@
 #include "ELCareerMovieSceneUtilityBase.h"
 
-AELCareerMovieSceneUtilityBase::AELCareerMovieSceneUtilityBase() {
+AELCareerMovieSceneUtilityBase::AELCareerMovieSceneUtilityBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

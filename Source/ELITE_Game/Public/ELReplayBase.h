@@ -17,7 +17,8 @@ protected:
     TArray<float> TickTime;
     
 public:
-    UELReplayBase();
+    UELReplayBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopReplay();
     

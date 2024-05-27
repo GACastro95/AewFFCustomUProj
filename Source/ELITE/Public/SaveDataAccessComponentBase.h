@@ -44,7 +44,8 @@ private:
     TArray<ESaveDataType> SaveDataTypeList;
     
 public:
-    USaveDataAccessComponentBase();
+    USaveDataAccessComponentBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StartSave(const TArray<ESaveDataType>& List);
     

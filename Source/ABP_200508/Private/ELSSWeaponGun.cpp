@@ -1,5 +1,11 @@
 #include "ELSSWeaponGun.h"
+#include "ESSWeaponType.h"
 #include "Net/UnrealNetwork.h"
+
+AELSSWeaponGun::AELSSWeaponGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WeaponType = ESSWeaponType::Gun;
+    this->ammo = 0;
+}
 
 void AELSSWeaponGun::SetAmmo(int32 NewAmmo) {
 }
@@ -21,7 +27,4 @@ void AELSSWeaponGun::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(AELSSWeaponGun, ammo);
 }
 
-AELSSWeaponGun::AELSSWeaponGun() {
-    this->ammo = 0;
-}
 

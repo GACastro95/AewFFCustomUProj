@@ -40,6 +40,7 @@ private:
     
 public:
     UGameLiftMatchMakeSystem();
+
     UFUNCTION(BlueprintCallable)
     void Update(const float& Delta);
     

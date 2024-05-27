@@ -12,6 +12,7 @@ class ABP_200508_API AELPauseMenuManagerBase : public AELInGameMenuInputEventAct
     GENERATED_BODY()
 public:
     AELPauseMenuManagerBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetTopPauseMenu(UELPauseMenuBase* InPauseMenu);

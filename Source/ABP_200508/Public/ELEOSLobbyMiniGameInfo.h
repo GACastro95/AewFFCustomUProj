@@ -17,6 +17,7 @@ private:
     
 public:
     UELEOSLobbyMiniGameInfo();
+
     UFUNCTION(BlueprintCallable)
     void SetMiniGameUnlockInfo(EMiniGameID MiniGameId, bool Unlock);
     

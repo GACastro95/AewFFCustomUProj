@@ -57,6 +57,7 @@ protected:
     
 public:
     UELSSWidgetHUD_Vehicle();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdatePos();

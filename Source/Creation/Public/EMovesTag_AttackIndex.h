@@ -18,6 +18,5 @@ enum class EMovesTag_AttackIndex : uint8 {
     AT_BreakFeet,
     AT_BreakArm,
     AT_Dirty,
-    AT_MAX UMETA(Hidden),
 };
 

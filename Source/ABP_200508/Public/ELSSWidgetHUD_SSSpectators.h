@@ -25,6 +25,7 @@ protected:
     
 public:
     UELSSWidgetHUD_SSSpectators();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void StopAllAnim();

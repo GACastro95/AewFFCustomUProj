@@ -16,6 +16,7 @@ class ABP_200508_API UELCAEUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELCAEUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void SortUnlockableItems(const TArray<FELCAEMenuItemInfo>& UnlockItems, UELUnlockableItemManagerBase* UnlockableItemManager, TArray<FELCAEMenuItemInfo>& SortedItems);
     

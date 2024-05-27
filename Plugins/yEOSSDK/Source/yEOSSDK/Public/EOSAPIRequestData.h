@@ -31,5 +31,6 @@ private:
     
 public:
     UEOSAPIRequestData();
+
 };
 

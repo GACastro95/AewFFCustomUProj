@@ -67,6 +67,7 @@ protected:
     
 public:
     UELSSWidgetHUD_InventorySlot();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SkipPlayInActiveAnim();

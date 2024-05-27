@@ -7,7 +7,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerSequencePlayerBase : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerSequencePlayerBase();
+    AELCareerSequencePlayerBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlaySequenceBP(int32 No);

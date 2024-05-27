@@ -1,5 +1,8 @@
 #include "ELPlayerDataUtilityFunction.h"
 
+UELPlayerDataUtilityFunction::UELPlayerDataUtilityFunction() {
+}
+
 void UELPlayerDataUtilityFunction::UpdateUnlockItemSaveData(FELUnlockItemSaveData _updateParam, UObject* _pWorldContextObject, uint8 _saveDataAccessFlag) {
 }
 
@@ -142,6 +145,4 @@ void UELPlayerDataUtilityFunction::AddPossessedItemQuantity(TArray<FAddPossessIt
 void UELPlayerDataUtilityFunction::AddCrateTicketNum(int32 _addValue, uint8 _saveDataAccessFlag) {
 }
 
-UELPlayerDataUtilityFunction::UELPlayerDataUtilityFunction() {
-}
 

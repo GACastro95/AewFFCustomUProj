@@ -11,5 +11,6 @@ public:
     TArray<bool> m_bAlreadyPlayedMiniGameArray;
     
     USaveData_MiniGame();
+
 };
 

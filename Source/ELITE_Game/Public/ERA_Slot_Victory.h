@@ -6,6 +6,5 @@ UENUM(BlueprintType)
 enum class ERA_Slot_Victory : uint8 {
     RA_VIC_WINNER,
     RA_VIC_WINNERS,
-    RA_VIC_MAX UMETA(Hidden),
 };
 

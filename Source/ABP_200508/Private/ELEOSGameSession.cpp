@@ -1,5 +1,57 @@
 #include "ELEOSGameSession.h"
 
+UELEOSGameSession::UELEOSGameSession() {
+    this->EOSManager = NULL;
+    this->EOSUser = NULL;
+    this->EOSAntiCheatClient = NULL;
+    this->EOSSession = NULL;
+    this->EOSSessionInfo = NULL;
+    this->EOSSessionSearchResults = NULL;
+    this->EOSSessionP2P = NULL;
+    this->EOSNatP2PSession = NULL;
+    this->EOSNatP2P = NULL;
+    this->EOSNatP2PTransfer = NULL;
+    this->EOSNatP2PTransferRPC = NULL;
+    this->EOSSessionP2PAFBindPlayers = NULL;
+    this->EOSSessionP2PAFDataSharing = NULL;
+    this->EOSSessionP2PAFGameFlowManager = NULL;
+    this->ELEOSGameChatSession = NULL;
+    this->IsAutoCreateSession = false;
+    this->IsSearching = false;
+    this->SessionAutoStartGame = false;
+    this->SessionSearchCancel = false;
+    this->StartMatch = false;
+    this->Cancelable = true;
+    this->SessionRequestStartGame = false;
+    this->DirtyPlayerData = false;
+    this->NeedsUpdatePlayerList = false;
+    this->EACSession = false;
+    this->PlayerPositionRanked.AddDefaulted(4);
+    this->EnableBuildVersionCheck = true;
+    this->SelectNPCCharacter.AddDefaulted(4);
+    this->OnlineModeType = 0;
+    this->ELOnlineModeType = EELOnlineModeType::OnlineModeType_RANKED;
+    this->RequiredWrestlerNum = 1;
+    this->SendPlayerDataInterval = 0.00f;
+    this->SessionRequestStartGameInterval = 0.00f;
+    this->RequestStartGameSession = false;
+    this->ResendPlayerDataFlag = false;
+    this->ResendPlayerStateFlag = false;
+    this->RequestResendPlayerDataFlag = false;
+    this->RequestResendPlayerStateFlag = false;
+    this->RequestStartGameSessionTimer = 3.00f;
+    this->ResendPlayerDataTimer = 3.00f;
+    this->ResendPlayerStateTimer = 3.00f;
+    this->RequestResendPlayerDataTimer = 3.00f;
+    this->RequestResendPlayerStateTimer = 3.00f;
+    this->AllReadyPlayerDataTimer = 0.00f;
+    this->RequestUpateLatencyTimer = 0.00f;
+    this->RequestUpateLatencyInterval = 20.00f;
+    this->P2PTimeoutLatency = 5.00f;
+    this->P2PTimeoutRetryCount = 3;
+    this->SessionState = EELEOSSessionState::STATE_SESSION_NONE;
+}
+
 void UELEOSGameSession::UpdatePlayerList(bool bRemove) {
 }
 
@@ -610,55 +662,4 @@ void UELEOSGameSession::Activity_DestroyMatch(const TArray<FELActivity_MatchResu
 void UELEOSGameSession::Activity_CreateMatch(const FELActivity_InitInfo& InActivityInfo) {
 }
 
-UELEOSGameSession::UELEOSGameSession() {
-    this->EOSManager = NULL;
-    this->EOSUser = NULL;
-    this->EOSAntiCheatClient = NULL;
-    this->EOSSession = NULL;
-    this->EOSSessionInfo = NULL;
-    this->EOSSessionSearchResults = NULL;
-    this->EOSSessionP2P = NULL;
-    this->EOSNatP2PSession = NULL;
-    this->EOSNatP2P = NULL;
-    this->EOSNatP2PTransfer = NULL;
-    this->EOSNatP2PTransferRPC = NULL;
-    this->EOSSessionP2PAFBindPlayers = NULL;
-    this->EOSSessionP2PAFDataSharing = NULL;
-    this->EOSSessionP2PAFGameFlowManager = NULL;
-    this->ELEOSGameChatSession = NULL;
-    this->IsAutoCreateSession = false;
-    this->IsSearching = false;
-    this->SessionAutoStartGame = false;
-    this->SessionSearchCancel = false;
-    this->StartMatch = false;
-    this->Cancelable = true;
-    this->SessionRequestStartGame = false;
-    this->DirtyPlayerData = false;
-    this->NeedsUpdatePlayerList = false;
-    this->EACSession = false;
-    this->PlayerPositionRanked.AddDefaulted(4);
-    this->EnableBuildVersionCheck = true;
-    this->SelectNPCCharacter.AddDefaulted(4);
-    this->OnlineModeType = 0;
-    this->ELOnlineModeType = EELOnlineModeType::OnlineModeType_RANKED;
-    this->RequiredWrestlerNum = 1;
-    this->SendPlayerDataInterval = 0.00f;
-    this->SessionRequestStartGameInterval = 0.00f;
-    this->RequestStartGameSession = false;
-    this->ResendPlayerDataFlag = false;
-    this->ResendPlayerStateFlag = false;
-    this->RequestResendPlayerDataFlag = false;
-    this->RequestResendPlayerStateFlag = false;
-    this->RequestStartGameSessionTimer = 3.00f;
-    this->ResendPlayerDataTimer = 3.00f;
-    this->ResendPlayerStateTimer = 3.00f;
-    this->RequestResendPlayerDataTimer = 3.00f;
-    this->RequestResendPlayerStateTimer = 3.00f;
-    this->AllReadyPlayerDataTimer = 0.00f;
-    this->RequestUpateLatencyTimer = 0.00f;
-    this->RequestUpateLatencyInterval = 20.00f;
-    this->P2PTimeoutLatency = 5.00f;
-    this->P2PTimeoutRetryCount = 3;
-    this->SessionState = EELEOSSessionState::STATE_SESSION_NONE;
-}
 

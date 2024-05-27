@@ -1,5 +1,8 @@
 #include "ELUnlockableItemManagerBase.h"
 
+UELUnlockableItemManagerBase::UELUnlockableItemManagerBase() {
+}
+
 void UELUnlockableItemManagerBase::UnlockingItemList(TArray<int32> _targetIdList) {
 }
 
@@ -105,12 +108,18 @@ int32 UELUnlockableItemManagerBase::GetCurrentAEW_CASH() {
     return 0;
 }
 
+ELDownloadContentBelongInSeasonType UELUnlockableItemManagerBase::GetBelongSeasonType(int32 _targetId) const {
+    return ELDownloadContentBelongInSeasonType::None;
+}
+
 void UELUnlockableItemManagerBase::GetAllUnlockableItemSaveData(TArray<FELUnlockItemSaveData>& ResultList) {
+}
+
+bool UELUnlockableItemManagerBase::CheckNotEntitledDlc() {
+    return false;
 }
 
 void UELUnlockableItemManagerBase::CheckEntitlementedDlc(TArray<FText>& ReleasedItemName, TArray<FText>& ShortageGameVersionItemName, TArray<FText>& NotFoundItemName) {
 }
 
-UELUnlockableItemManagerBase::UELUnlockableItemManagerBase() {
-}
 

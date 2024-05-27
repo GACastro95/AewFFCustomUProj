@@ -10,6 +10,7 @@ class ABP_200508_API UELGameSystemDataUtilityFunction : public UBlueprintFunctio
     GENERATED_BODY()
 public:
     UELGameSystemDataUtilityFunction();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="_pWorldContextObject"))
     static void SetSystem_NewsLatestVersion(int32 _value, UObject* _pWorldContextObject);
     

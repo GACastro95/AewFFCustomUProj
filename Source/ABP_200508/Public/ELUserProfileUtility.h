@@ -14,6 +14,7 @@ class ABP_200508_API UELUserProfileUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELUserProfileUtility();
+
     UFUNCTION(BlueprintCallable)
     static void SetUserDesignToWeaponPreCreatedMID(UPARAM(Ref) UMaterialInstanceDynamic*& InDynamicMaterial_Logo, UPARAM(Ref) UMaterialInstanceDynamic*& InDynamicMaterial_Base, const FLinearColor& InUserColor, UTexture* InUserTexture, UTexture* InSymbolTexture);
     

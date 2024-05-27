@@ -1,5 +1,8 @@
 #include "ELCareerSkillManager.h"
 
+AELCareerSkillManager::AELCareerSkillManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 bool AELCareerSkillManager::UnlockSkill(int32 _SelectIndex, int32 _LevelIndex) {
     return false;
 }
@@ -92,6 +95,4 @@ void AELCareerSkillManager::AddCareerParameterSkillData(FCareerParameterSkillDat
 void AELCareerSkillManager::AddCareerActionSkillData(FCareerActionSkillData _Data) {
 }
 
-AELCareerSkillManager::AELCareerSkillManager() {
-}
 

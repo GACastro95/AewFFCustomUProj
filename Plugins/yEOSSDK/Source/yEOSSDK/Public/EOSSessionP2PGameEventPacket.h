@@ -10,6 +10,7 @@ class YEOSSDK_API UEOSSessionP2PGameEventPacket : public UEOSSessionP2PSynchroni
     GENERATED_BODY()
 public:
     UEOSSessionP2PGameEventPacket();
+
     UFUNCTION(BlueprintCallable)
     bool Request(EEOSSessionGameEventType _enEOSSessionGameEventType);
     

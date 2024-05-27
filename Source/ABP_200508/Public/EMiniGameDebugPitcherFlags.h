@@ -9,6 +9,5 @@ enum class EMiniGameDebugPitcherFlags : uint8 {
     RadioButton_StraightDown,
     RadioButton_Changeup,
     RadioButton_Slowball,
-    RadioButton_MAX UMETA(Hidden),
 };
 

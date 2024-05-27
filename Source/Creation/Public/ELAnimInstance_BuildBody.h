@@ -94,6 +94,7 @@ public:
     bool bDisableUpdate;
     
     UELAnimInstance_BuildBody();
+
     UFUNCTION(BlueprintCallable)
     void UpdateState();
     
@@ -101,7 +102,7 @@ public:
     void UpdateParam(const bool bForce);
     
     UFUNCTION(BlueprintCallable)
-    virtual void PostInitProperties() override;
+    void PostInitProperties();
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnUpdateState();

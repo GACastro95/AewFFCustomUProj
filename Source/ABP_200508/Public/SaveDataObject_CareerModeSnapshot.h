@@ -8,5 +8,6 @@ class ABP_200508_API USaveDataObject_CareerModeSnapshot : public USaveDataObject
     GENERATED_BODY()
 public:
     USaveDataObject_CareerModeSnapshot();
+
 };
 

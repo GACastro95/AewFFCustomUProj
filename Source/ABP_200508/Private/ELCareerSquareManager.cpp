@@ -1,5 +1,10 @@
 #include "ELCareerSquareManager.h"
 
+AELCareerSquareManager::AELCareerSquareManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_CurrentPlayerStayCity = ECareerCity::None;
+    this->m_NextPlayerStayCity = ECareerCity::None;
+}
+
 void AELCareerSquareManager::SetNextPlayerStayCity(ECareerCity _City) {
 }
 
@@ -33,8 +38,4 @@ TArray<AELCareerSquareActor*> AELCareerSquareManager::GetCareerSquareTable() {
     return TArray<AELCareerSquareActor*>();
 }
 
-AELCareerSquareManager::AELCareerSquareManager() {
-    this->m_CurrentPlayerStayCity = ECareerCity::None;
-    this->m_NextPlayerStayCity = ECareerCity::None;
-}
 

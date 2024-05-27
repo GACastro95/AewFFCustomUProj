@@ -4,3 +4,4 @@ AELSSPauseMenuManagerBase::AELSSPauseMenuManagerBase() {
     this->IsFocusGame = true;
 }
 
+

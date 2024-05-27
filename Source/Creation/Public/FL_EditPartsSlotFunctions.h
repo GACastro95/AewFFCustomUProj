@@ -14,6 +14,7 @@ class CREATION_API UFL_EditPartsSlotFunctions : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UFL_EditPartsSlotFunctions();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EPreviewAttire ToPreviewAttire_EditParts(const EAttireType AttireType, const EEditPartsSlot PartsSlot);
     

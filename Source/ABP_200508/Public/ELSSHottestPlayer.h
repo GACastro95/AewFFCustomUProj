@@ -20,7 +20,8 @@ protected:
     int32 CostumeID;
     
 public:
-    AELSSHottestPlayer();
+    AELSSHottestPlayer(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     float PlayMotion(UAnimMontage* PlayMontage);
     
@@ -33,7 +34,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FWrestlerSetupParam CreateWrestlerSetupParam(const FSSWrestlerSetupParam& inSSWrestlerSetupParam) const;
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

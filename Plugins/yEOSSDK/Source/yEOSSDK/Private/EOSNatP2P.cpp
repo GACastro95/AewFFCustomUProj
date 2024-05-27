@@ -1,5 +1,9 @@
 #include "EOSNatP2P.h"
 
+UEOSNatP2P::UEOSNatP2P() {
+    this->m_pcUserManager = NULL;
+}
+
 bool UEOSNatP2P::Update() {
     return false;
 }
@@ -92,7 +96,4 @@ bool UEOSNatP2P::AddAcceptSocket(const FString& _strSocketID) {
     return false;
 }
 
-UEOSNatP2P::UEOSNatP2P() {
-    this->m_pcUserManager = NULL;
-}
 

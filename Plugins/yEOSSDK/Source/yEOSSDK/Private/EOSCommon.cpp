@@ -1,5 +1,8 @@
 #include "EOSCommon.h"
 
+UEOSCommon::UEOSCommon() {
+}
+
 int32 UEOSCommon::GetLastResult() const {
     return 0;
 }
@@ -20,6 +23,4 @@ bool UEOSCommon::BeginRelease() {
     return false;
 }
 
-UEOSCommon::UEOSCommon() {
-}
 

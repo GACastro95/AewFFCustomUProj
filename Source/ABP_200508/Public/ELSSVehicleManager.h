@@ -22,7 +22,8 @@ protected:
     TArray<AActor*> ValidVehicles;
     
 public:
-    AELSSVehicleManager();
+    AELSSVehicleManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     AActor* SpawnVehicleToLocator(int32 inVehicleId, AELSSLocator_Vehicle* inLocator);
     
@@ -47,7 +48,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TSubclassOf<AActor> GetVehicleClass(int32 inDatabaseId);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

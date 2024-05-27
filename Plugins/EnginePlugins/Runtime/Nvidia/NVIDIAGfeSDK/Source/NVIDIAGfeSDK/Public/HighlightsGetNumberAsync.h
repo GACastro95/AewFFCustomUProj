@@ -21,6 +21,7 @@ public:
     FOnHighlightsOperationResultCallback OnFailure;
     
     UHighlightsGetNumberAsync();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UHighlightsGetNumberAsync* HighlightsGetNumberOfHighlights(UObject* WorldContextObject, const FString& GroupId, const EGfeSDKHighlightType& TagFilter, const EGfeSDKHighlightSignificance& SignificanceFilter);
     

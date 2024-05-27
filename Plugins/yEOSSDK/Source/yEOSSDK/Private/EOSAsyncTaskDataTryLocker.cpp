@@ -1,5 +1,9 @@
 #include "EOSAsyncTaskDataTryLocker.h"
 
+UEOSAsyncTaskDataTryLocker::UEOSAsyncTaskDataTryLocker() {
+    this->m_pcTask = NULL;
+}
+
 bool UEOSAsyncTaskDataTryLocker::IsLocked() {
     return false;
 }
@@ -8,7 +12,4 @@ UEOSAsyncTaskDataTryLocker* UEOSAsyncTaskDataTryLocker::CreateAsyncTaskTryLocker
     return NULL;
 }
 
-UEOSAsyncTaskDataTryLocker::UEOSAsyncTaskDataTryLocker() {
-    this->m_pcTask = NULL;
-}
 

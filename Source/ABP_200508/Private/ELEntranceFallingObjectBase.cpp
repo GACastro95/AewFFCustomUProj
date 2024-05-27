@@ -1,5 +1,6 @@
 #include "ELEntranceFallingObjectBase.h"
 
-AELEntranceFallingObjectBase::AELEntranceFallingObjectBase() {
+AELEntranceFallingObjectBase::AELEntranceFallingObjectBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

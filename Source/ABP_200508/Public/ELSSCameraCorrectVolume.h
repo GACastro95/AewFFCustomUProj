@@ -13,7 +13,8 @@ protected:
     FSSCameraCorrectVolumeInfo CameraCorrectInfo;
     
 public:
-    AELSSCameraCorrectVolume();
+    AELSSCameraCorrectVolume(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnEndOverlap(AActor* inOtherActor);
     

@@ -15,6 +15,7 @@ protected:
     bool bCanPutOnFoot;
     
 public:
-    UELHoldComponent();
+    UELHoldComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

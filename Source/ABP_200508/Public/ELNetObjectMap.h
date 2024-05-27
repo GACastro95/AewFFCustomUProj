@@ -18,6 +18,7 @@ protected:
     
 public:
     UELNetObjectMap();
+
     UFUNCTION(BlueprintCallable)
     bool RemoveObjectById(FELNetworkGUID Guid);
     

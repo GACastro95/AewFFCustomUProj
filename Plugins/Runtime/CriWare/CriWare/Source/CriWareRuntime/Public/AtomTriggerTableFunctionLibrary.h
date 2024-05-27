@@ -11,6 +11,7 @@ class CRIWARERUNTIME_API UAtomTriggerTableFunctionLibrary : public UBlueprintFun
     GENERATED_BODY()
 public:
     UAtomTriggerTableFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static bool GetDataTableRowFromName(UDataTable* Table, FName RowName, FAtomTriggerRow& OutRow);
     

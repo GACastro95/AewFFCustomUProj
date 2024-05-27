@@ -13,6 +13,7 @@ class CREATION_API UMovesSituation_SlotDetail : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UMovesSituation_SlotDetail();
+
 private:
     UFUNCTION(BlueprintCallable)
     static void GetSlotDetailArray(const FMovesSituation& _Moves, TArray<FELMovesSituation_SlotDetail>& _SlotDetailArray);

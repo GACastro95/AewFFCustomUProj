@@ -44,6 +44,7 @@ private:
     
 public:
     UEOSNatP2P();
+
     UFUNCTION(BlueprintCallable)
     bool Update();
     

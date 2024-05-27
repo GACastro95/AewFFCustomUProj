@@ -8,6 +8,5 @@ enum class EMovesTag_DamagePartIndex : uint8 {
     DP_Body,
     DP_Arms,
     DP_Legs,
-    DP_MAX UMETA(Hidden),
 };
 

@@ -8,5 +8,6 @@ class ABP_200508_API UELSSPoolManager : public UObject {
     GENERATED_BODY()
 public:
     UELSSPoolManager();
+
 };
 

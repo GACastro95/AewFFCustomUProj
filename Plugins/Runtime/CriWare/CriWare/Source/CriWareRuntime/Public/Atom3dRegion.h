@@ -15,6 +15,7 @@ private:
     
 public:
     UAtom3dRegion();
+
     UFUNCTION(BlueprintCallable)
     void SetHandle(UAtom3dRegionHandle* InHandle);
     

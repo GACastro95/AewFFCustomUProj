@@ -10,6 +10,7 @@ class ABP_200508_API UYMiniGameAutoPlay_DebugMenu : public UELDebugMenuRootBase 
     GENERATED_BODY()
 public:
     UYMiniGameAutoPlay_DebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetEnableAutoPlay(bool _EnableAutoPlay);
     

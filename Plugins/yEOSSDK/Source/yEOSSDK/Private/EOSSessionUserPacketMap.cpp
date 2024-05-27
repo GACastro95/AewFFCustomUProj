@@ -1,5 +1,9 @@
 #include "EOSSessionUserPacketMap.h"
 
+UEOSSessionUserPacketMap::UEOSSessionUserPacketMap() {
+    this->m_pcSessionUser = NULL;
+}
+
 bool UEOSSessionUserPacketMap::Setup(UEOSSessionUser* _pcSessionUser) {
     return false;
 }
@@ -60,7 +64,4 @@ bool UEOSSessionUserPacketMap::FindReceivedPacket(UEOSSessionP2PPacketBase*& _pc
     return false;
 }
 
-UEOSSessionUserPacketMap::UEOSSessionUserPacketMap() {
-    this->m_pcSessionUser = NULL;
-}
 

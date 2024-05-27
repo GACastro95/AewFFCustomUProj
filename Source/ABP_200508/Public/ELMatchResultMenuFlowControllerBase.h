@@ -11,6 +11,7 @@ class ABP_200508_API AELMatchResultMenuFlowControllerBase : public AELInGameMenu
     GENERATED_BODY()
 public:
     AELMatchResultMenuFlowControllerBase();
+
     UFUNCTION(BlueprintCallable)
     UELMatchResultMenuBase* StartExtraMenuSequence(TSubclassOf<UELMatchResultMenuBase> InMenuClass);
     

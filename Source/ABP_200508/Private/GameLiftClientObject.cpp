@@ -1,5 +1,8 @@
 #include "GameLiftClientObject.h"
 
+UGameLiftClientObject::UGameLiftClientObject() {
+}
+
 void UGameLiftClientObject::SetUniquePlayerId(const FString& uniqId) {
 }
 
@@ -11,6 +14,4 @@ UGameLiftClientObject* UGameLiftClientObject::CreateGameLiftObject(const FString
     return NULL;
 }
 
-UGameLiftClientObject::UGameLiftClientObject() {
-}
 

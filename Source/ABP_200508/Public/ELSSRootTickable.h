@@ -8,6 +8,7 @@ class ABP_200508_API UELSSRootTickable : public UGameSingleton {
     GENERATED_BODY()
 public:
     UELSSRootTickable();
+
     UFUNCTION(BlueprintCallable)
     void OnTick_Native(float DeltaSeconds);
     

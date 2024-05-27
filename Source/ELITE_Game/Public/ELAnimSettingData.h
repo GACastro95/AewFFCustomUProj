@@ -26,6 +26,7 @@ public:
     bool bAttachSB;
     
     UELAnimSettingData();
+
     UFUNCTION(BlueprintCallable)
     static void TryGetAnimSettingData(UELAnimSettingData*& AnimSettingData, UAnimationAsset* Animation);
     

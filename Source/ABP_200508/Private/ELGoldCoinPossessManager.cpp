@@ -1,5 +1,8 @@
 #include "ELGoldCoinPossessManager.h"
 
+UELGoldCoinPossessManager::UELGoldCoinPossessManager() {
+}
+
 bool UELGoldCoinPossessManager::RequestDownloadDataFromEOS(FDonwloadedGoldCoinDelegate OnResultDelegate) {
     return false;
 }
@@ -16,6 +19,4 @@ void UELGoldCoinPossessManager::OnYGS2Response_DownloadData(EYGS2ErrorType _erro
 void UELGoldCoinPossessManager::OnEosUserContentsEvent(EEOSUserContentsEvent _enUserContentsEvent, UEOSUserContentsBase* _pcUserContentsBase, const FEOSUserContentProgress& _rstProgress) {
 }
 
-UELGoldCoinPossessManager::UELGoldCoinPossessManager() {
-}
 

@@ -19,6 +19,7 @@ public:
     TMap<FName, FBlendSocketParam> AttachSocketOffset;
     
     UBlendAPData();
+
     UFUNCTION(BlueprintCallable)
     static FTransform TryGetBlendedAPSocketTransform(USkeletalMeshComponent* MeshComp, const FName SocketName, const FBodyMorphParam& MorphParam, const TEnumAsByte<ERelativeTransformSpace> TransformSpace);
     

@@ -8,5 +8,6 @@ class YEOSSDK_API UEOSECommerce : public UEOSIDs {
     GENERATED_BODY()
 public:
     UEOSECommerce();
+
 };
 

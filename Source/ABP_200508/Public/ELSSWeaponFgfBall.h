@@ -85,9 +85,10 @@ protected:
     TArray<AELSSFgfMapAreaVolume*> OverlappingFgfMapAreaVolume;
     
 public:
-    AELSSWeaponFgfBall();
+    AELSSWeaponFgfBall(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateLaunchedMove(float DeltaTime);

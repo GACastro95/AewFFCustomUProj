@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELMiniGameBase : public AActor {
     GENERATED_BODY()
 public:
-    AELMiniGameBase();
+    AELMiniGameBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

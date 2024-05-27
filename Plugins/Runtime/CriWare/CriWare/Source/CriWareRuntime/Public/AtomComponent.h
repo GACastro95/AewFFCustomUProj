@@ -144,7 +144,8 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAtomSequenceCallbackDelegate OnAtomSequenceCallback;
     
-    UAtomComponent();
+    UAtomComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopWithoutReleaseTime();
     
@@ -343,7 +344,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void AdjustAttenuation(const FSoundAttenuationSettings& InAttenuationSettings);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

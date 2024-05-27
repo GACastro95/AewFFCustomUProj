@@ -9,6 +9,7 @@ class ELITE_GAME_API UELWrestlerProfileCutsceneUtility : public UBlueprintFuncti
     GENERATED_BODY()
 public:
     UELWrestlerProfileCutsceneUtility();
+
 private:
     UFUNCTION(BlueprintCallable)
     static bool IsSameCutscene(const FELWrestlerProfile_CutScene& CutsceneA, const FELWrestlerProfile_CutScene& CutsceneB);

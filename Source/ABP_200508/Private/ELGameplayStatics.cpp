@@ -1,5 +1,8 @@
 #include "ELGameplayStatics.h"
 
+UELGameplayStatics::UELGameplayStatics() {
+}
+
 void UELGameplayStatics::SetPlayerControllerID(APlayerController* Player, int32 ControllerId) {
 }
 
@@ -35,6 +38,4 @@ APlayerController* UELGameplayStatics::CreatePlayer(const UObject* WorldContextO
     return NULL;
 }
 
-UELGameplayStatics::UELGameplayStatics() {
-}
 

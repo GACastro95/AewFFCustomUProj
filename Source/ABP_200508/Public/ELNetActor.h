@@ -14,7 +14,8 @@ protected:
     EELNetRole ELNetRole;
     
 public:
-    AELNetActor();
+    AELNetActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool SetELNetTemporaryAuthorityBP(bool bEnabled);
     
@@ -33,7 +34,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasELNetAuthorityBP();
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

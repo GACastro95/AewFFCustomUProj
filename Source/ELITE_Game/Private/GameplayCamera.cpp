@@ -1,5 +1,8 @@
 #include "GameplayCamera.h"
 
+AGameplayCamera::AGameplayCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 
 float AGameplayCamera::GetMinProjection(FVector Normal, const TArray<FVector>& Points, float Size) {
     return 0.0f;
@@ -9,6 +12,4 @@ FVector AGameplayCamera::CalcCameraLocationByTargetPoints(const TArray<FVector>&
     return FVector{};
 }
 
-AGameplayCamera::AGameplayCamera() {
-}
 

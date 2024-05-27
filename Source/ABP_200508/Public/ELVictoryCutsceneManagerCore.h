@@ -25,7 +25,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* VictoryCutsceneAnimation;
     
-    AELVictoryCutsceneManagerCore();
+    AELVictoryCutsceneManagerCore(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void UnloadAssets();
     

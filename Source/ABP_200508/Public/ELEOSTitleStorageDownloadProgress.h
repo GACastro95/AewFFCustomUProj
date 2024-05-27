@@ -16,5 +16,6 @@ public:
     UObject* OnCompleteDownloadFilesDelegate;
     
     UELEOSTitleStorageDownloadProgress();
+
 };
 

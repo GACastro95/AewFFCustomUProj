@@ -1,5 +1,6 @@
 #include "ELSSPostUpdateWorkComponent.h"
 
-UELSSPostUpdateWorkComponent::UELSSPostUpdateWorkComponent() {
+UELSSPostUpdateWorkComponent::UELSSPostUpdateWorkComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

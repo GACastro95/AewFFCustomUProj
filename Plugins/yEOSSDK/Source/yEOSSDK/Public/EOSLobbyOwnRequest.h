@@ -21,5 +21,6 @@ public:
     UEOSCommunityUserBase* m_pcUser;
     
     UEOSLobbyOwnRequest();
+
 };
 

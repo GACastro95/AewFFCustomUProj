@@ -1,5 +1,12 @@
 #include "ELMenuNotifyOnlineErrorManager.h"
 
+UELMenuNotifyOnlineErrorManager::UELMenuNotifyOnlineErrorManager() {
+    this->m_bInitialized = false;
+    this->m_bPausedErrorCheck = false;
+    this->m_bOnlineGameMode = false;
+    this->m_NotifyOnlineErrorActor = NULL;
+}
+
 void UELMenuNotifyOnlineErrorManager::StartErrorCheck() {
 }
 
@@ -28,10 +35,4 @@ void UELMenuNotifyOnlineErrorManager::EndErrorCheck() {
 void UELMenuNotifyOnlineErrorManager::DebugForceError() {
 }
 
-UELMenuNotifyOnlineErrorManager::UELMenuNotifyOnlineErrorManager() {
-    this->m_bInitialized = false;
-    this->m_bPausedErrorCheck = false;
-    this->m_bOnlineGameMode = false;
-    this->m_NotifyOnlineErrorActor = NULL;
-}
 

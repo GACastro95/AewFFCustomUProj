@@ -2,6 +2,13 @@
 #include "Net/UnrealNetwork.h"
 #include "Sample_ThirdPersonProjectile.h"
 
+ASample_ThirdPersonCharacter::ASample_ThirdPersonCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->MaxHealth = 1000.00f;
+    this->CurrentHealth = 1000.00f;
+    this->ProjectileClass = ASample_ThirdPersonProjectile::StaticClass();
+    this->FireRate = 0.25f;
+}
+
 float ASample_ThirdPersonCharacter::TakeDamage(float DamageTaken, const FDamageEvent& DamageEvent, AController* EventInstigator, AActor* DamageCauser) {
     return 0.0f;
 }
@@ -46,10 +53,4 @@ void ASample_ThirdPersonCharacter::GetLifetimeReplicatedProps(TArray<FLifetimePr
     DOREPLIFETIME(ASample_ThirdPersonCharacter, CurrentHealth);
 }
 
-ASample_ThirdPersonCharacter::ASample_ThirdPersonCharacter() {
-    this->MaxHealth = 1000.00f;
-    this->CurrentHealth = 1000.00f;
-    this->ProjectileClass = ASample_ThirdPersonProjectile::StaticClass();
-    this->FireRate = 0.25f;
-}
 

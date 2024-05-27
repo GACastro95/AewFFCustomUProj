@@ -50,6 +50,5 @@ enum class ECareerState : uint8 {
     ECareerState_TotalResult,
     ECareerState_Result,
     ECareerState_End,
-    ECareerState_MAX UMETA(Hidden),
 };
 

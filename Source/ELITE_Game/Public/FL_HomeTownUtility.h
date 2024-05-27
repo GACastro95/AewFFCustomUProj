@@ -10,6 +10,7 @@ class ELITE_GAME_API UFL_HomeTownUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFL_HomeTownUtility();
+
     UFUNCTION(BlueprintCallable)
     static FText GetHomeTownText(const FHomeTownID& HomeTownID, const bool bUpper, const bool bCountry, const bool bState, const bool bCity);
     

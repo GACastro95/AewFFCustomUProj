@@ -1,6 +1,16 @@
 #include "ELSSWeaponTrap.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "ESSWeaponType.h"
 #include "Net/UnrealNetwork.h"
+
+AELSSWeaponTrap::AELSSWeaponTrap(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WeaponType = ESSWeaponType::Trap;
+    this->SkeletalMeshComponent_Attach = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponent_Attach"));
+    this->StockedObjectRep = NULL;
+    this->StockedObjectLocal = NULL;
+    this->Quantity = 0;
+    this->SkeletalMeshComponent_Attach->SetupAttachment(RootComponent);
+}
 
 void AELSSWeaponTrap::SetQuantity(int32 inQuantity) {
 }
@@ -26,10 +36,4 @@ void AELSSWeaponTrap::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AELSSWeaponTrap, Quantity);
 }
 
-AELSSWeaponTrap::AELSSWeaponTrap() {
-    this->SkeletalMeshComponent_Attach = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMeshComponent_Attach"));
-    this->StockedObjectRep = NULL;
-    this->StockedObjectLocal = NULL;
-    this->Quantity = 0;
-}
 

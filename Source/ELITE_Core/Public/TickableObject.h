@@ -8,6 +8,7 @@ class ELITE_CORE_API UTickableObject : public UCommonObject {
     GENERATED_BODY()
 public:
     UTickableObject();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTick(float DeltaSeconds);
     

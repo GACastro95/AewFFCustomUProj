@@ -1,5 +1,8 @@
 #include "ELSSCommonParamUtility.h"
 
+UELSSCommonParamUtility::UELSSCommonParamUtility() {
+}
+
 bool UELSSCommonParamUtility::MakeSSRuleStatusByScheduleId(const UObject* WorldContextObject, int32 inRuleScheduleId, FSSRuleStatus& OutParam) {
     return false;
 }
@@ -222,6 +225,4 @@ int32 UELSSCommonParamUtility::CalcSSAttentionLevelFromPoint(const UObject* Worl
     return 0;
 }
 
-UELSSCommonParamUtility::UELSSCommonParamUtility() {
-}
 

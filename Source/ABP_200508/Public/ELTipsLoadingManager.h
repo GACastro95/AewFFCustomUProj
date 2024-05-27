@@ -38,12 +38,22 @@ private:
     int32 m_TipsTypeProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool m_IsVisibleTitleDlc;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool m_IsDebugScreen;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTipsLoadingSequence m_SequenceParam;
     
 public:
     UELTipsLoadingManager();
+
     UFUNCTION(BlueprintCallable)
     bool StartScreen(ETipsLoadingCategory _displayCategory, FTipsLoadingCompleteDelegate _completeDelegate, bool _isFadeInStart, int32 _baseZOrder);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetVisibleTitleDlc(bool _Flag);
     
     UFUNCTION(BlueprintCallable)
     void SetOverrideNextLevel(const FName& _nextLevel, const FString& _optionString);
@@ -52,6 +62,14 @@ private:
     UFUNCTION(BlueprintCallable)
     void OnCompleteLoading();
     
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsVisibleTitleDlc() const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsDebugScreen();
+    
+private:
     UFUNCTION(BlueprintCallable)
     bool GetResourceInfo(ETipsLoadingCategory _displayCategory, int32 _targetIndex, FTipsLoadingResourceInfo& _outResourceInfo);
     
@@ -64,6 +82,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearOverrideNextLevel();
+    
+    UFUNCTION(BlueprintCallable)
+    bool CheckUseTipsLoadingTitleDlc();
     
 };
 

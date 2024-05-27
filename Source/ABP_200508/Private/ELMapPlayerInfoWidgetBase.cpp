@@ -1,5 +1,8 @@
 #include "ELMapPlayerInfoWidgetBase.h"
 
+UELMapPlayerInfoWidgetBase::UELMapPlayerInfoWidgetBase() {
+}
+
 void UELMapPlayerInfoWidgetBase::UpdateParameter() {
 }
 
@@ -24,6 +27,4 @@ FString UELMapPlayerInfoWidgetBase::GetStrCareerMoney() {
     return TEXT("");
 }
 
-UELMapPlayerInfoWidgetBase::UELMapPlayerInfoWidgetBase() {
-}
 

@@ -8,5 +8,6 @@ class USteamAuthComponentModuleInterface : public UHandlerComponentFactory {
     GENERATED_BODY()
 public:
     USteamAuthComponentModuleInterface();
+
 };
 

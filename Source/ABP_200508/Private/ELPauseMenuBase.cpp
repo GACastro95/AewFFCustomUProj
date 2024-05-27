@@ -1,5 +1,9 @@
 #include "ELPauseMenuBase.h"
 
+UELPauseMenuBase::UELPauseMenuBase() {
+    this->IsPadPause = false;
+}
+
 void UELPauseMenuBase::TabRight(bool Repeat) {
 }
 
@@ -84,7 +88,4 @@ void UELPauseMenuBase::Cancel() {
 void UELPauseMenuBase::AnyKey(FKey InKey) {
 }
 
-UELPauseMenuBase::UELPauseMenuBase() {
-    this->IsPadPause = false;
-}
 

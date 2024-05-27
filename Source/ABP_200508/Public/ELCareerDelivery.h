@@ -15,6 +15,7 @@ class ABP_200508_API UELCareerDelivery : public UObject {
     GENERATED_BODY()
 public:
     UELCareerDelivery();
+
     UFUNCTION(BlueprintCallable)
     void SetPersonalityType(EPersonalityType EPersonalityType);
     

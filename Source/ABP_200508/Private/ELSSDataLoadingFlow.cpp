@@ -1,5 +1,10 @@
 #include "ELSSDataLoadingFlow.h"
 
+AELSSDataLoadingFlow::AELSSDataLoadingFlow(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Result = ESSDataLoadingResult::None;
+    this->PrevState = ESSDataLoadingFlowState::None;
+}
+
 
 
 
@@ -29,8 +34,4 @@ bool AELSSDataLoadingFlow::IsInitialized() const {
 void AELSSDataLoadingFlow::ChangeState(ESSDataLoadingFlowState inState) {
 }
 
-AELSSDataLoadingFlow::AELSSDataLoadingFlow() {
-    this->Result = ESSDataLoadingResult::None;
-    this->PrevState = ESSDataLoadingFlowState::None;
-}
 

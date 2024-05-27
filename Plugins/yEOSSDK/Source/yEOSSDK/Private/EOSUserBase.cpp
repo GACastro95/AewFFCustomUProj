@@ -1,5 +1,10 @@
 #include "EOSUserBase.h"
 
+UEOSUserBase::UEOSUserBase() {
+    this->m_sExternalPlatformType = EExternalAccountType::Unknown;
+    this->m_pcContents = NULL;
+}
+
 void UEOSUserBase::SetExternalPlatformType(EExternalAccountType _sExternalPlatformType) {
 }
 
@@ -66,8 +71,4 @@ bool UEOSUserBase::CheckSendPacket() {
     return false;
 }
 
-UEOSUserBase::UEOSUserBase() {
-    this->m_sExternalPlatformType = EExternalAccountType::Unknown;
-    this->m_pcContents = NULL;
-}
 

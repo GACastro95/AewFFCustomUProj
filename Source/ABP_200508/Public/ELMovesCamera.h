@@ -16,7 +16,8 @@ protected:
     FGameplayCameraParam GameplayCameraParam;
     
 public:
-    AELMovesCamera();
+    AELMovesCamera(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateLocation(const float DeltaSeconds, const bool HeightScale, const bool SkipInterpolation, const bool KeepLocation);

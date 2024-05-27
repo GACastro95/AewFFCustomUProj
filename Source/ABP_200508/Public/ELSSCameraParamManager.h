@@ -50,6 +50,7 @@ protected:
     
 public:
     UELSSCameraParamManager();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetStateParam(ESSCameraState inState);
     

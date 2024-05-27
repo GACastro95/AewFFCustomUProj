@@ -1,5 +1,8 @@
 #include "EOSLobbyUser.h"
 
+UEOSLobbyUser::UEOSLobbyUser() {
+}
+
 bool UEOSLobbyUser::IsTextBlocked() const {
     return false;
 }
@@ -32,6 +35,4 @@ EEOSLobbyUserAudioStatus UEOSLobbyUser::GetAudioStatus() const {
     return EEOSLobbyUserAudioStatus::Unsupported;
 }
 
-UEOSLobbyUser::UEOSLobbyUser() {
-}
 

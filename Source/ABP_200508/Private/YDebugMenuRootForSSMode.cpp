@@ -1,5 +1,8 @@
 #include "YDebugMenuRootForSSMode.h"
 
+UYDebugMenuRootForSSMode::UYDebugMenuRootForSSMode() {
+}
+
 bool UYDebugMenuRootForSSMode::CreateMenu(const FYDebugMenuParamForSSMode& _stParam) {
     return false;
 }
@@ -8,6 +11,4 @@ bool UYDebugMenuRootForSSMode::CreateAndRegistForSSModeDebugMenu(UYDebugMenuRoot
     return false;
 }
 
-UYDebugMenuRootForSSMode::UYDebugMenuRootForSSMode() {
-}
 

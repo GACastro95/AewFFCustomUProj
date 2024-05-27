@@ -21,6 +21,7 @@ private:
     
 public:
     UEOSAsyncTask();
+
     UFUNCTION(BlueprintCallable)
     void Unlock();
     

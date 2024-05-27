@@ -5,9 +5,10 @@
 UENUM(BlueprintType)
 enum class EELLocalTournamentState : uint8 {
     None,
-    Edit,
+    NewEdit,
+    Continue,
+    WrestlerSelect,
     NextMatch,
     MatchResult,
-    Winner,
 };
 

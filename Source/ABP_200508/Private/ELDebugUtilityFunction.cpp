@@ -1,5 +1,8 @@
 #include "ELDebugUtilityFunction.h"
 
+UELDebugUtilityFunction::UELDebugUtilityFunction() {
+}
+
 FString UELDebugUtilityFunction::TakeScreenShotsCore(bool _showUI, const FString& _settingfileName, const FString& _fileDirectory) {
     return TEXT("");
 }
@@ -209,6 +212,4 @@ FString UELDebugUtilityFunction::AutoMatchCreateLog(bool isError, const FString&
     return TEXT("");
 }
 
-UELDebugUtilityFunction::UELDebugUtilityFunction() {
-}
 

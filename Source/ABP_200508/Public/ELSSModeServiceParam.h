@@ -5,11 +5,12 @@
 #include "ESSModeServiceState.h"
 #include "ELSSModeServiceParam.generated.h"
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=OnlineServer)
+UCLASS(Blueprintable, DefaultConfig, Config=OnlineServer)
 class ABP_200508_API UELSSModeServiceParam : public UObject {
     GENERATED_BODY()
 public:
     UELSSModeServiceParam();
+
     UFUNCTION(BlueprintCallable)
     bool Setup(const FString& Data);
     

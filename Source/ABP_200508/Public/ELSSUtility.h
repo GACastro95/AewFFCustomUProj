@@ -61,6 +61,7 @@ class ABP_200508_API UELSSUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void UpdateSSCurrentRuleStatus(const UObject* WorldContextObject);
     

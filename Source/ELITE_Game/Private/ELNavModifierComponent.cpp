@@ -1,5 +1,6 @@
 #include "ELNavModifierComponent.h"
 
-UELNavModifierComponent::UELNavModifierComponent() {
+UELNavModifierComponent::UELNavModifierComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

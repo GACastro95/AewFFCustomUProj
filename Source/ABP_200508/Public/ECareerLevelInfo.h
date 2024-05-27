@@ -14,6 +14,5 @@ enum class ECareerLevelInfo : uint8 {
     Career_Level_LayoutScene,
     Career_Level_OtherMenu,
     Career_Level_StartSequence,
-    Career_Level_MAX UMETA(Hidden),
 };
 

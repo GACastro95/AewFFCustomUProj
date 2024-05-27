@@ -12,6 +12,7 @@ protected:
     int32 Jewel;
     
 public:
-    AELSSItem_Jewel();
+    AELSSItem_Jewel(const FObjectInitializer& ObjectInitializer);
+
 };
 

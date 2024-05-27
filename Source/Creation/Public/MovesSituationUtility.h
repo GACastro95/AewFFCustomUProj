@@ -19,6 +19,7 @@ class CREATION_API UMovesSituationUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UMovesSituationUtility();
+
     UFUNCTION(BlueprintCallable)
     static void SearchDataArray_DataTable(TArray<FMovesSituation>& OutKeys, UDataTable* inSituationTable, UDataTable* inTable);
     

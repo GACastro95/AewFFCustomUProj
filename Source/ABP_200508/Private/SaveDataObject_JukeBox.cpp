@@ -1,5 +1,8 @@
 #include "SaveDataObject_JukeBox.h"
 
+USaveDataObject_JukeBox::USaveDataObject_JukeBox() {
+}
+
 void USaveDataObject_JukeBox::UpdateSavedataForTmpData(FELTmpJukeboxSaveData _tmpData) {
 }
 
@@ -99,6 +102,4 @@ USoundAtomCue* USaveDataObject_JukeBox::GetCurrentJukeBoxPlayCue() {
     return NULL;
 }
 
-USaveDataObject_JukeBox::USaveDataObject_JukeBox() {
-}
 

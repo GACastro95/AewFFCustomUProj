@@ -1,5 +1,17 @@
 #include "ELCareerAnimInstance.h"
 
+UELCareerAnimInstance::UELCareerAnimInstance() {
+    this->m_strCurrentFacialAnimation = TEXT("None");
+    this->m_strRequestFacialAnimation = TEXT("None");
+    this->m_strCurrentTalkAnimation = TEXT("NoMove");
+    this->m_strRequestTalkAnimation = TEXT("NoMove");
+    this->m_strCurrentMenuAnimation = TEXT("Idle_Lv1");
+    this->m_strRequestMenuAnimation = TEXT("Idle_Lv1");
+    this->m_strCurrentEventAnimation = TEXT("NONE");
+    this->m_strRequestEventAnimation = TEXT("NONE");
+    this->m_pTargetActor = NULL;
+}
+
 void UELCareerAnimInstance::UpdateVariables(float fDeltaTime) {
 }
 
@@ -49,15 +61,4 @@ float UELCareerAnimInstance::GetLookAtAlpha() {
     return 0.0f;
 }
 
-UELCareerAnimInstance::UELCareerAnimInstance() {
-    this->m_strCurrentFacialAnimation = TEXT("None");
-    this->m_strRequestFacialAnimation = TEXT("None");
-    this->m_strCurrentTalkAnimation = TEXT("NoMove");
-    this->m_strRequestTalkAnimation = TEXT("NoMove");
-    this->m_strCurrentMenuAnimation = TEXT("Idle_Lv1");
-    this->m_strRequestMenuAnimation = TEXT("Idle_Lv1");
-    this->m_strCurrentEventAnimation = TEXT("NONE");
-    this->m_strRequestEventAnimation = TEXT("NONE");
-    this->m_pTargetActor = NULL;
-}
 

@@ -46,6 +46,7 @@ protected:
     
 public:
     UELSSWidgetHUD_HeatMeter();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void Update(float InDeltaTime);

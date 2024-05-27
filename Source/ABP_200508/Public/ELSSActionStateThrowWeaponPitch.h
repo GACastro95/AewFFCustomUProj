@@ -8,5 +8,6 @@ class ABP_200508_API UELSSActionStateThrowWeaponPitch : public UELSSActionStateB
     GENERATED_BODY()
 public:
     UELSSActionStateThrowWeaponPitch();
+
 };
 

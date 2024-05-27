@@ -5,3 +5,4 @@ UELIngameHUDBase::UELIngameHUDBase() {
     this->AutoRemoveFromParent = false;
 }
 
+

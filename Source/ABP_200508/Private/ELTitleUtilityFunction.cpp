@@ -1,5 +1,8 @@
 #include "ELTitleUtilityFunction.h"
 
+UELTitleUtilityFunction::UELTitleUtilityFunction() {
+}
+
 bool UELTitleUtilityFunction::SortByPriority(TArray<EELBelt>& Out, const TArray<EELBelt>& In, bool PrioritizeTagBelt) {
     return false;
 }
@@ -94,6 +97,4 @@ bool UELTitleUtilityFunction::CanChallengedTheTitle(EELBelt Belt, EWrestlerID_N 
 void UELTitleUtilityFunction::BreakupTeam(FGuid TeamUID) {
 }
 
-UELTitleUtilityFunction::UELTitleUtilityFunction() {
-}
 

@@ -37,6 +37,7 @@ protected:
     
 public:
     UELSSWidgetHUD_JewelList();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetVisibleTilde(bool inIsVisible);

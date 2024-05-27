@@ -8,5 +8,6 @@ class ABP_200508_API UELAnimNotifyState_HeightOffsetBase : public UAnimNotifySta
     GENERATED_BODY()
 public:
     UELAnimNotifyState_HeightOffsetBase();
+
 };
 

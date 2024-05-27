@@ -1,5 +1,11 @@
 #include "ELMatchResultMenuBase.h"
 
+UELMatchResultMenuBase::UELMatchResultMenuBase() {
+    this->StarData = NULL;
+    this->EvaluationParamTable = NULL;
+    this->DelayTime = 0.00f;
+}
+
 void UELMatchResultMenuBase::StartDelay(float InDelayTime) {
 }
 
@@ -55,9 +61,4 @@ AELMatchResultMenuFlowControllerBase* UELMatchResultMenuBase::GetFlowController(
 void UELMatchResultMenuBase::CallCustomEvent(const FString& EventName) {
 }
 
-UELMatchResultMenuBase::UELMatchResultMenuBase() {
-    this->StarData = NULL;
-    this->EvaluationParamTable = NULL;
-    this->DelayTime = 0.00f;
-}
 

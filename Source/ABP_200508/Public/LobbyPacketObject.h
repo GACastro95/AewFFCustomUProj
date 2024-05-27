@@ -15,6 +15,7 @@ private:
     
 public:
     ULobbyPacketObject();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* GetData() const;
     

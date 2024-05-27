@@ -8,6 +8,7 @@ class ABP_200508_API UYGamePadMonitorDebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYGamePadMonitorDebugMenu();
+
     UFUNCTION(BlueprintCallable)
     void SetMonitorType(int32 _sMonitorType);
     

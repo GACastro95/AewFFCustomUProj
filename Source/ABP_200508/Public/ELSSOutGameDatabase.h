@@ -61,7 +61,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSSMenuFinisherParam> MenuFinisherParamArray;
     
-    AELSSOutGameDatabase();
+    AELSSOutGameDatabase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     bool GetWrestlerTypeParam(ESSWrestlerType inWrestlerType, FSSWrestlerTypeParam& OutRow);
     

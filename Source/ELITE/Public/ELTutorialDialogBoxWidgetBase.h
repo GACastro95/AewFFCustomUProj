@@ -8,5 +8,6 @@ class ELITE_API UELTutorialDialogBoxWidgetBase : public UELDialogBoxWidgetBase {
     GENERATED_BODY()
 public:
     UELTutorialDialogBoxWidgetBase();
+
 };
 

@@ -52,6 +52,7 @@ protected:
     
 public:
     UELReplicationManager();
+
     UFUNCTION(BlueprintCallable)
     void UpdateSessionUsers(UEOSSessionP2P* InSessionP2P);
     

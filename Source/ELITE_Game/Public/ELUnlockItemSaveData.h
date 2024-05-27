@@ -31,7 +31,7 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsNewlyAvailable;
-
+    
     FELUnlockItemSaveData();
 };
 

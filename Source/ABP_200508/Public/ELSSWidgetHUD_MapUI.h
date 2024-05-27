@@ -190,6 +190,7 @@ protected:
     
 public:
     UELSSWidgetHUD_MapUI();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D WorldLocationToUI(const FVector& InWorldLocation);

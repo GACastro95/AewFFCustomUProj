@@ -1,5 +1,8 @@
 #include "ELSSDebugUtility.h"
 
+UELSSDebugUtility::UELSSDebugUtility() {
+}
+
 void UELSSDebugUtility::SSDebugLog_LocalNetworkVersion() {
 }
 
@@ -141,6 +144,4 @@ void UELSSDebugUtility::ClearSSDebugStringOnScreen(const UObject* WorldContextOb
 void UELSSDebugUtility::ApplySSDebugDisableWorldRendering(const UObject* WorldContextObject) {
 }
 
-UELSSDebugUtility::UELSSDebugUtility() {
-}
 

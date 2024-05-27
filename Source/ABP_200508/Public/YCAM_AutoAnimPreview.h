@@ -37,7 +37,8 @@ protected:
     bool isDuplicateCategory;
     
 public:
-    AYCAM_AutoAnimPreview();
+    AYCAM_AutoAnimPreview(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Uninit();
     

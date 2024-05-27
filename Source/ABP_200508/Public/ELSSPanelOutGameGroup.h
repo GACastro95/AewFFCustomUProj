@@ -24,6 +24,7 @@ protected:
     
 public:
     UELSSPanelOutGameGroup();
+
     UFUNCTION(BlueprintCallable)
     void SetVisibleGroupAll(const bool IsOn);
     

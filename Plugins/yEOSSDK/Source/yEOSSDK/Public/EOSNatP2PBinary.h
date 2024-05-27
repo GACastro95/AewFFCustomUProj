@@ -8,6 +8,7 @@ class YEOSSDK_API UEOSNatP2PBinary : public UEOSCommon {
     GENERATED_BODY()
 public:
     UEOSNatP2PBinary();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDeleteInstance() const;
     

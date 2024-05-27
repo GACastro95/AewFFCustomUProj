@@ -20,9 +20,10 @@ public:
     UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_bEnabled, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<AAtomAudioVolume>> NeighbourhoodAudioVolumeArray;
     
-    AAtomEntranceVolume();
+    AAtomEntranceVolume(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetPriority(float NewPriority);
     

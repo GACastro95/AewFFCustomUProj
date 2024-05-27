@@ -1,5 +1,11 @@
 #include "AtomWavePlayer.h"
 
+UAtomWavePlayer::UAtomWavePlayer() {
+    this->bIsUISound = false;
+    this->SoundAtomCue = NULL;
+    this->bLoop = false;
+}
+
 void UAtomWavePlayer::StopDelayed(float DelayTime) {
 }
 
@@ -54,9 +60,4 @@ USoundAtomCue* UAtomWavePlayer::GetCue() const {
 void UAtomWavePlayer::AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel) {
 }
 
-UAtomWavePlayer::UAtomWavePlayer() {
-    this->bIsUISound = false;
-    this->SoundAtomCue = NULL;
-    this->bLoop = false;
-}
 

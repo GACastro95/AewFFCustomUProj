@@ -8,6 +8,7 @@ class YEOSSDK_API UEOSFriendPresence : public UEOSPresenceBase {
     GENERATED_BODY()
 public:
     UEOSFriendPresence();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetProductVersion() const;
     

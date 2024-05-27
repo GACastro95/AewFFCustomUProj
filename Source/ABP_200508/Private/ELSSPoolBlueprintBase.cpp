@@ -1,5 +1,6 @@
 #include "ELSSPoolBlueprintBase.h"
 
-AELSSPoolBlueprintBase::AELSSPoolBlueprintBase() {
+AELSSPoolBlueprintBase::AELSSPoolBlueprintBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -2,6 +2,67 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
+UELSSActionStatePlayerComponent::UELSSActionStatePlayerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->DonePrepare = false;
+    this->IdleState = NULL;
+    this->JumpState = NULL;
+    this->HighFlyJumpState = NULL;
+    this->RunJumpState = NULL;
+    this->HighFlyRunJumpState = NULL;
+    this->DoubleJumpState = NULL;
+    this->LandState = NULL;
+    this->RunJumpLandState = NULL;
+    this->DoubleJumpLandState = NULL;
+    this->SyncReceiverState = NULL;
+    this->DamageState = NULL;
+    this->AirDamageState = NULL;
+    this->BlowState = NULL;
+    this->DownState = NULL;
+    this->WallHitState = NULL;
+    this->WallOverState = NULL;
+    this->WaitSituationState = NULL;
+    this->KoIdleState = NULL;
+    this->InteractState = NULL;
+    this->UseItemState = NULL;
+    this->CompleteUseItemState = NULL;
+    this->DrivingState = NULL;
+    this->HorseState = NULL;
+    this->GunAimState = NULL;
+    this->ThrowWeaponAimState = NULL;
+    this->PutTrapAimState = NULL;
+    this->GuardState = NULL;
+    this->GuardStopState = NULL;
+    this->TauntState = NULL;
+    this->ReviveState = NULL;
+    this->LocalState = NULL;
+    this->StateTimeCount = 0.00f;
+    this->PrevInAir = false;
+    this->LastLandStateHash = 0;
+    this->LastLandServerTransitId = 0;
+    this->LastRequestId = 0;
+    this->LastServerTransitId = 0;
+    this->LastExecutedServerTransitId = 0;
+    this->ExecutedBeginStateMulticastParamTransitId = 0;
+    this->bPendingExpired = false;
+    this->PendingDamageReaction = false;
+    this->DisableStateMulticast = true;
+    this->DisablePendingTransit = false;
+    this->DefaultMovementObj = NULL;
+    this->MovementAdjustStateHash = 0;
+    this->MovementAdjustPlayTime = 0.00f;
+    this->DisableRepMoveDuration = 0.00f;
+    this->StartedMove = 0;
+    this->CurrentMove = 0;
+    this->CurrentMoveCommand = ESSMoveCommand::None;
+    this->DefaultIdleMontage = NULL;
+    this->DefaultIdleMontageFemale = NULL;
+    this->UseExternalParams = false;
+    this->PrevUnmovable = false;
+    this->WaitingSituationMoveTrigger = NULL;
+    this->BackDamage = false;
+    this->ActionSpeedRate = 1.00f;
+}
+
 bool UELSSActionStatePlayerComponent::UpdateLanding() {
     return false;
 }
@@ -348,64 +409,4 @@ void UELSSActionStatePlayerComponent::GetLifetimeReplicatedProps(TArray<FLifetim
     DOREPLIFETIME(UELSSActionStatePlayerComponent, ReplicatedBeginStateMulticastParam);
 }
 
-UELSSActionStatePlayerComponent::UELSSActionStatePlayerComponent() {
-    this->DonePrepare = false;
-    this->IdleState = NULL;
-    this->JumpState = NULL;
-    this->HighFlyJumpState = NULL;
-    this->RunJumpState = NULL;
-    this->HighFlyRunJumpState = NULL;
-    this->DoubleJumpState = NULL;
-    this->LandState = NULL;
-    this->RunJumpLandState = NULL;
-    this->DoubleJumpLandState = NULL;
-    this->SyncReceiverState = NULL;
-    this->DamageState = NULL;
-    this->AirDamageState = NULL;
-    this->BlowState = NULL;
-    this->DownState = NULL;
-    this->WallHitState = NULL;
-    this->WallOverState = NULL;
-    this->WaitSituationState = NULL;
-    this->KoIdleState = NULL;
-    this->InteractState = NULL;
-    this->UseItemState = NULL;
-    this->CompleteUseItemState = NULL;
-    this->DrivingState = NULL;
-    this->HorseState = NULL;
-    this->GunAimState = NULL;
-    this->ThrowWeaponAimState = NULL;
-    this->PutTrapAimState = NULL;
-    this->GuardState = NULL;
-    this->GuardStopState = NULL;
-    this->TauntState = NULL;
-    this->ReviveState = NULL;
-    this->LocalState = NULL;
-    this->StateTimeCount = 0.00f;
-    this->PrevInAir = false;
-    this->LastLandStateHash = 0;
-    this->LastLandServerTransitId = 0;
-    this->LastRequestId = 0;
-    this->LastServerTransitId = 0;
-    this->LastExecutedServerTransitId = 0;
-    this->ExecutedBeginStateMulticastParamTransitId = 0;
-    this->bPendingExpired = false;
-    this->PendingDamageReaction = false;
-    this->DisableStateMulticast = true;
-    this->DisablePendingTransit = false;
-    this->DefaultMovementObj = NULL;
-    this->MovementAdjustStateHash = 0;
-    this->MovementAdjustPlayTime = 0.00f;
-    this->DisableRepMoveDuration = 0.00f;
-    this->StartedMove = 0;
-    this->CurrentMove = 0;
-    this->CurrentMoveCommand = ESSMoveCommand::None;
-    this->DefaultIdleMontage = NULL;
-    this->DefaultIdleMontageFemale = NULL;
-    this->UseExternalParams = false;
-    this->PrevUnmovable = false;
-    this->WaitingSituationMoveTrigger = NULL;
-    this->BackDamage = false;
-    this->ActionSpeedRate = 1.00f;
-}
 

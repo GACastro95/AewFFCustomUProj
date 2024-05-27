@@ -11,6 +11,5 @@ enum class EGameLiftMatchMakeState : uint8 {
     eGameLiftMatchMakeState_JoinPlayerSession,
     eGameLiftMatchMakeState_SessionStart,
     eGameLiftMatchMakeState_RandomMatching,
-    eGameLiftMatchMakeState_MAX UMETA(Hidden),
 };
 

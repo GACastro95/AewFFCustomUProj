@@ -13,7 +13,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSWebAPIDebugMenuActor : public AActor {
     GENERATED_BODY()
 public:
-    AELSSWebAPIDebugMenuActor();
+    AELSSWebAPIDebugMenuActor(const FObjectInitializer& ObjectInitializer);
+
 private:
     UFUNCTION(BlueprintCallable)
     void onSetSSSessionResultIngest(EYGS2ErrorType enYGS2ErrorType, UYGS2RequestBase* pcYGS2RequestBase);

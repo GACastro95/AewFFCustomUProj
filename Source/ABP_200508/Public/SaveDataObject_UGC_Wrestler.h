@@ -11,6 +11,7 @@ class ABP_200508_API USaveDataObject_UGC_Wrestler : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_UGC_Wrestler();
+
     UFUNCTION(BlueprintCallable)
     bool WriteDataFromMyWrestler(UObject* MyWrestler);
     

@@ -99,7 +99,8 @@ private:
     bool bTemporaryOverrideHipOffset;
     
 public:
-    UELFootIK();
+    UELFootIK(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCheckFloor() const;
     

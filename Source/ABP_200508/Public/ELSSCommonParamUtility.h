@@ -50,6 +50,7 @@ class ABP_200508_API UELSSCommonParamUtility : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UELSSCommonParamUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool MakeSSRuleStatusByScheduleId(const UObject* WorldContextObject, int32 inRuleScheduleId, FSSRuleStatus& OutParam);
     

@@ -21,6 +21,7 @@ private:
     
 public:
     ULobbyPacketMenuInput();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ELobbyPacketMenuInputSendType GetSendType() const;
     

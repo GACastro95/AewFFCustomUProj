@@ -10,6 +10,7 @@ class ABP_200508_API UABPBuild : public UObject {
     GENERATED_BODY()
 public:
     UABPBuild();
+
     UFUNCTION(BlueprintCallable)
     FString GetVersion(bool _bGetSubminorVersion);
     

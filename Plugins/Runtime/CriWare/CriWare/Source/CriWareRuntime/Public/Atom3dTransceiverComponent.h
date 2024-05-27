@@ -24,6 +24,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefaultCrossfadeDistance;
     
-    UAtom3dTransceiverComponent();
+    UAtom3dTransceiverComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

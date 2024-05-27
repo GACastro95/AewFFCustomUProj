@@ -23,6 +23,7 @@ private:
     
 public:
     UELManaMoviePlayer();
+
     UFUNCTION(BlueprintCallable)
     static bool ResourceExist(const FString& MoviePath);
     

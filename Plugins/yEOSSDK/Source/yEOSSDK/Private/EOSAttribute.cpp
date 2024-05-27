@@ -1,5 +1,14 @@
 #include "EOSAttribute.h"
 
+UEOSAttribute::UEOSAttribute() {
+    this->m_sInt64 = 0;
+    this->m_fFloat = 0.00f;
+    this->m_enVariableType = EEOSAttrVariableType::Boolean;
+    this->m_enJudgeType = EEOSAttrJudgeType::Equal;
+    this->m_enVisibility = EEOSAttrVisibility::Public;
+    this->m_bBool = false;
+}
+
 void UEOSAttribute::SetVisibility(EEOSAttrVisibility _enVisibility) {
 }
 
@@ -77,12 +86,4 @@ bool UEOSAttribute::Create(UEOSAttribute*& _pcInst) {
 void UEOSAttribute::CopyFrom(const UEOSAttribute* _pcAttr) {
 }
 
-UEOSAttribute::UEOSAttribute() {
-    this->m_sInt64 = 0;
-    this->m_fFloat = 0.00f;
-    this->m_enVariableType = EEOSAttrVariableType::Boolean;
-    this->m_enJudgeType = EEOSAttrJudgeType::Equal;
-    this->m_enVisibility = EEOSAttrVisibility::Public;
-    this->m_bBool = false;
-}
 

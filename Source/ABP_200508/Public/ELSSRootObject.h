@@ -61,6 +61,7 @@ protected:
     
 public:
     UELSSRootObject();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetVisibleFadeForChangeLevel(bool inEnable, bool inWithLoadingIcon);
     

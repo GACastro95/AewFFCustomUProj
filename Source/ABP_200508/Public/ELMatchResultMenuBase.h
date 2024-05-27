@@ -32,6 +32,7 @@ public:
     FOnCallCustomEvent OnCallCustomEvent;
     
     UELMatchResultMenuBase();
+
     UFUNCTION(BlueprintCallable)
     void StartDelay(float InDelayTime);
     

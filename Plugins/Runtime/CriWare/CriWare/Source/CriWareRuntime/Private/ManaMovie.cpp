@@ -1,5 +1,13 @@
 #include "ManaMovie.h"
 
+UManaMovie::UManaMovie() {
+    this->NumSubtitleChannels = 0;
+    this->MaxSubtitleSize = 0;
+    this->MinBufferSize = 0;
+    this->MaxChunkSize = 0;
+    this->bIsAlpha = false;
+}
+
 bool UManaMovie::Validate() const {
     return false;
 }
@@ -36,11 +44,4 @@ float UManaMovie::GetAverageBitrate() {
     return 0.0f;
 }
 
-UManaMovie::UManaMovie() {
-    this->NumSubtitleChannels = 0;
-    this->MaxSubtitleSize = 0;
-    this->MinBufferSize = 0;
-    this->MaxChunkSize = 0;
-    this->bIsAlpha = false;
-}
 

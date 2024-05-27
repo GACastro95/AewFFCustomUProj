@@ -11,6 +11,7 @@ class ELITE_CORE_API UActorUtilityFunctionLibrary : public UBlueprintFunctionLib
     GENERATED_BODY()
 public:
     UActorUtilityFunctionLibrary();
+
 private:
     UFUNCTION(BlueprintCallable)
     static void ChangeRootComponent(AActor* Actor, USceneComponent* NewRootComponent);

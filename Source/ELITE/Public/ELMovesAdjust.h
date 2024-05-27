@@ -8,7 +8,7 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ELITE_API UELMovesAdjust : public UObject {
     GENERATED_BODY()
 public:
@@ -18,6 +18,7 @@ private:
     
 public:
     UELMovesAdjust();
+
     UFUNCTION(BlueprintCallable)
     bool AdjustWrestlerMoves(FWrestlerMoves& _Result, const FWrestlerMoves& _WrestlerMoves, const FWrestlerMoves& _TemplateMoves, const TSet<int32>& _UnlockIDList);
     

@@ -25,5 +25,6 @@ public:
     UEOSCommunityUserBase* CommunityUser;
     
     UELEOSLobbyEvent();
+
 };
 

@@ -15,6 +15,7 @@ public:
     FEOSPresenceJoinGameEventDispatcher PresenceJoinGameEventDispatcher;
     
     UEOSPresence();
+
     UFUNCTION(BlueprintCallable)
     bool RequestSetStatus(EEOSPresenceStatus _enStatus);
     

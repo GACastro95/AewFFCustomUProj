@@ -13,6 +13,7 @@ private:
     
 public:
     UELCareerAutoEventManager();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void LoadDataTable();
     

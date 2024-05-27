@@ -1,5 +1,8 @@
 #include "StringUtil.h"
 
+UStringUtil::UStringUtil() {
+}
+
 FString UStringUtil::ToASCIIOnly(const FString& Str, bool& isChanged) {
     return TEXT("");
 }
@@ -23,6 +26,4 @@ int32 UStringUtil::Compare(const FString& A, const FString& B, const bool bSensi
     return 0;
 }
 
-UStringUtil::UStringUtil() {
-}
 

@@ -12,9 +12,10 @@ protected:
     int32 RemainDurability;
     
 public:
-    AELSSWeaponMelee();
+    AELSSWeaponMelee(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetRemainDurability(int32 Durability);

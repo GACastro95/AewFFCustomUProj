@@ -1,6 +1,35 @@
 #include "ELSSFgfManager.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSFgfManager::AELSSFgfManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bAlwaysRelevant = true;
+    this->bReplicates = true;
+    const FProperty* p_RemoteRole = GetClass()->FindPropertyByName("RemoteRole");
+    (*p_RemoteRole->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(this)) = ROLE_SimulatedProxy;
+    this->CachedFirstLocalSSPlayerController = NULL;
+    this->LocalFlowStateForDebug = ESSFgfRoundFlowState::None;
+    this->ServerFlowStateForDebug = ESSFgfRoundFlowState::None;
+    this->ServerRoundNoForDebug = 0;
+    this->ServerIsFirstHalfForDebug = 0;
+    this->CurrentRoundNo = 0;
+    this->FirstHalfFlag = false;
+    this->FinishedMatchType = ESSFinishedMatchType::None;
+    this->RoundEndTime = -1.00f;
+    this->EndRoundReason = ESSFgfEndRoundReason::None;
+    this->ExecutingResetFgfRoundFlag = false;
+    this->FgfRoundActiveFlag = true;
+    this->FgfBall = NULL;
+    this->FgfBallExp = 0;
+    this->CachedFgfBallLevel = 0;
+    this->DefenseBonus = 0;
+    this->bForceOffenseFever = false;
+    this->bForceDefenseFever = false;
+    this->BallOwnerSpeedScale = 1.00f;
+    this->MoveFrictionOverride = -1.00f;
+    this->MoveAdjustDurationOverride = -1.00f;
+    this->AppliedSpeedScale = 1.00f;
+}
+
 void AELSSFgfManager::TickState_RoundSetup_Implementation(float inDeltaSeconds) {
 }
 
@@ -193,28 +222,4 @@ void AELSSFgfManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AELSSFgfManager, MoveAdjustDurationOverride);
 }
 
-AELSSFgfManager::AELSSFgfManager() {
-    this->CachedFirstLocalSSPlayerController = NULL;
-    this->LocalFlowStateForDebug = ESSFgfRoundFlowState::None;
-    this->ServerFlowStateForDebug = ESSFgfRoundFlowState::None;
-    this->ServerRoundNoForDebug = 0;
-    this->ServerIsFirstHalfForDebug = 0;
-    this->CurrentRoundNo = 0;
-    this->FirstHalfFlag = false;
-    this->FinishedMatchType = ESSFinishedMatchType::None;
-    this->RoundEndTime = -1.00f;
-    this->EndRoundReason = ESSFgfEndRoundReason::None;
-    this->ExecutingResetFgfRoundFlag = false;
-    this->FgfRoundActiveFlag = true;
-    this->FgfBall = NULL;
-    this->FgfBallExp = 0;
-    this->CachedFgfBallLevel = 0;
-    this->DefenseBonus = 0;
-    this->bForceOffenseFever = false;
-    this->bForceDefenseFever = false;
-    this->BallOwnerSpeedScale = 1.00f;
-    this->MoveFrictionOverride = -1.00f;
-    this->MoveAdjustDurationOverride = -1.00f;
-    this->AppliedSpeedScale = 1.00f;
-}
 

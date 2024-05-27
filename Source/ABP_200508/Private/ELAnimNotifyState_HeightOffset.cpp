@@ -6,3 +6,4 @@ UELAnimNotifyState_HeightOffset::UELAnimNotifyState_HeightOffset() {
     this->OutBlendSeconds = 0.00f;
 }
 
+

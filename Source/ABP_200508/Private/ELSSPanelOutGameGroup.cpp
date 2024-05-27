@@ -1,5 +1,10 @@
 #include "ELSSPanelOutGameGroup.h"
 
+UELSSPanelOutGameGroup::UELSSPanelOutGameGroup() {
+    this->grpActivePanelNow = NULL;
+    this->grpActivePanelPrev = NULL;
+}
+
 void UELSSPanelOutGameGroup::SetVisibleGroupAll(const bool IsOn) {
 }
 
@@ -28,8 +33,4 @@ UELSSPanelOutGameBase* UELSSPanelOutGameGroup::GetActivePanel() {
 void UELSSPanelOutGameGroup::EndPanelGroup() {
 }
 
-UELSSPanelOutGameGroup::UELSSPanelOutGameGroup() {
-    this->grpActivePanelNow = NULL;
-    this->grpActivePanelPrev = NULL;
-}
 

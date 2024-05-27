@@ -23,7 +23,8 @@ protected:
     TArray<AELSSLocator_PlayerStart*> SubLocators;
     
 public:
-    AELSSLocator_PlayerStart();
+    AELSSLocator_PlayerStart(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESSPlayerStartLocatorType GetPlayerStartLocatorType() const;
     

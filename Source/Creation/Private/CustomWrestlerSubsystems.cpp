@@ -1,5 +1,8 @@
 #include "CustomWrestlerSubsystems.h"
 
+UCustomWrestlerSubsystems::UCustomWrestlerSubsystems() {
+}
+
 void UCustomWrestlerSubsystems::SetEditPartsListTableOnlyEditor(UDataTable* DataTable) {
 }
 
@@ -27,6 +30,4 @@ EFaceType UCustomWrestlerSubsystems::FindFaceType(const int32 PartsID) {
     return EFaceType::Default;
 }
 
-UCustomWrestlerSubsystems::UCustomWrestlerSubsystems() {
-}
 

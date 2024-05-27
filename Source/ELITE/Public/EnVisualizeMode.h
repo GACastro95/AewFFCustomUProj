@@ -10,6 +10,6 @@ enum class EnVisualizeMode : uint8 {
     AO,
     Roughness,
     Metallic,
-    MAX = 0x5,
+    MAX = Metallic,
 };
 

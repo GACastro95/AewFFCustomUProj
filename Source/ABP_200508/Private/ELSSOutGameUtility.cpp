@@ -1,5 +1,8 @@
 #include "ELSSOutGameUtility.h"
 
+UELSSOutGameUtility::UELSSOutGameUtility() {
+}
+
 void UELSSOutGameUtility::SetSSMainMenuWrestlerVisibility(const UObject* WorldContextObject, bool IsVisible) {
 }
 
@@ -56,6 +59,4 @@ bool UELSSOutGameUtility::CanSSRuleChange(const UObject* WorldContextObject) {
     return false;
 }
 
-UELSSOutGameUtility::UELSSOutGameUtility() {
-}
 

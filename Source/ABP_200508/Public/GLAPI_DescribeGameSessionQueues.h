@@ -20,6 +20,7 @@ public:
     FOnDescribeGameSessionQueuesFailed OnFailed;
     
     UGLAPI_DescribeGameSessionQueues();
+
     UFUNCTION(BlueprintCallable)
     static UGLAPI_DescribeGameSessionQueues* DescribeGameSessionQueues(UGameLiftClientObject* client, const FString& QueueName);
     

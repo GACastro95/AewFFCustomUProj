@@ -1,5 +1,6 @@
 #include "NetImguiDemoActor.h"
 
-ANetImguiDemoActor::ANetImguiDemoActor() {
+ANetImguiDemoActor::ANetImguiDemoActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

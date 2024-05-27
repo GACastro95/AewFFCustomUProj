@@ -1,5 +1,8 @@
 #include "EOSNatP2PStringPacket.h"
 
+UEOSNatP2PStringPacket::UEOSNatP2PStringPacket() {
+}
+
 bool UEOSNatP2PStringPacket::SetString(const FString& _strText) {
     return false;
 }
@@ -20,6 +23,4 @@ bool UEOSNatP2PStringPacket::CreateStringPacket(UEOSNatP2PStringPacket*& _pcStri
     return false;
 }
 
-UEOSNatP2PStringPacket::UEOSNatP2PStringPacket() {
-}
 

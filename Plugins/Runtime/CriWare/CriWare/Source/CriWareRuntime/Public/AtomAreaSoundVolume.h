@@ -43,9 +43,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundAtomCue*> Sounds;
     
-    AAtomAreaSoundVolume();
+    AAtomAreaSoundVolume(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetPriority(float NewPriority);
     

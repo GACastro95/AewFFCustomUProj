@@ -1,5 +1,10 @@
 #include "ELSSGameModeDataManager.h"
 
+UELSSGameModeDataManager::UELSSGameModeDataManager() {
+    this->ssUserData = NULL;
+    this->selectWrestlerData = NULL;
+}
+
 void UELSSGameModeDataManager::SetSSUserDataToDummy() {
 }
 
@@ -49,8 +54,4 @@ void UELSSGameModeDataManager::GetPlayerEquipSettings(FSSPlayerEquipSettings& ou
 void UELSSGameModeDataManager::CheckSelectedWrestlerIsValid(bool inUGCLimit) {
 }
 
-UELSSGameModeDataManager::UELSSGameModeDataManager() {
-    this->ssUserData = NULL;
-    this->selectWrestlerData = NULL;
-}
 

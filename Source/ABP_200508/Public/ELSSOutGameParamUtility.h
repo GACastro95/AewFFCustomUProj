@@ -21,6 +21,7 @@ class ABP_200508_API UELSSOutGameParamUtility : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 public:
     UELSSOutGameParamUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetWrestlerTypeParam(const UObject* WorldContextObject, ESSWrestlerType inWrestlerType, FSSWrestlerTypeParam& OutRow);
     

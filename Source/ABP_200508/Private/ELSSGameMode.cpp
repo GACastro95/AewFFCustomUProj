@@ -1,6 +1,25 @@
 #include "ELSSGameMode.h"
 #include "Templates/SubclassOf.h"
 
+AELSSGameMode::AELSSGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->IsDoneInitGame = false;
+    this->DataVersion = 0;
+    this->GroupId = 0;
+    this->ChangeList = 0;
+    this->LaunchType = ESSModeLaunchType::DedicatedServer;
+    this->NumberOfPlayersRequiredToStart = 0;
+    this->NumberOfPlayersMax = 0;
+    this->MatchLobbyTime = 0.00f;
+    this->SSGameState = NULL;
+    this->WaitJoinElapsedTime = 0.00f;
+    this->SavingAnalyticsTimer = 60.00f;
+    this->AnalyticsLog2YGS2Object = NULL;
+    this->TitleStorageDownloadingTimeTotal = 0.00f;
+    this->TitleStorageDownloadingTimeLimit = 60.00f;
+    this->IsInitialized = false;
+    this->IsMatchDataGetEnd = false;
+}
+
 EWrestlerID_N AELSSGameMode::WrestlerIdToCastEnum(const int32 idx) {
     return EWrestlerID_N::None;
 }
@@ -191,22 +210,4 @@ TArray<EWrestlerID_N> AELSSGameMode::CalcRandomWrestlerIDs(int32 Amount) const {
     return TArray<EWrestlerID_N>();
 }
 
-AELSSGameMode::AELSSGameMode() {
-    this->IsDoneInitGame = false;
-    this->DataVersion = 0;
-    this->GroupId = 0;
-    this->ChangeList = 0;
-    this->LaunchType = ESSModeLaunchType::DedicatedServer;
-    this->NumberOfPlayersRequiredToStart = 0;
-    this->NumberOfPlayersMax = 0;
-    this->MatchLobbyTime = 0.00f;
-    this->SSGameState = NULL;
-    this->WaitJoinElapsedTime = 0.00f;
-    this->SavingAnalyticsTimer = 60.00f;
-    this->AnalyticsLog2YGS2Object = NULL;
-    this->TitleStorageDownloadingTimeTotal = 0.00f;
-    this->TitleStorageDownloadingTimeLimit = 60.00f;
-    this->IsInitialized = false;
-    this->IsMatchDataGetEnd = false;
-}
 

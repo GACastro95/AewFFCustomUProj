@@ -55,6 +55,5 @@ enum class EMovesCategory : uint8 {
     MainCategory_048,
     MainCategory_049,
     MainCategory_050,
-    MainCategory_MAX UMETA(Hidden),
 };
 

@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSStormFinalLocator : public AActor {
     GENERATED_BODY()
 public:
-    AELSSStormFinalLocator();
+    AELSSStormFinalLocator(const FObjectInitializer& ObjectInitializer);
+
 };
 

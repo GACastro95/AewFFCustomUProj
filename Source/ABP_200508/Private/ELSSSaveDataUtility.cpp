@@ -1,5 +1,8 @@
 #include "ELSSSaveDataUtility.h"
 
+UELSSSaveDataUtility::UELSSSaveDataUtility() {
+}
+
 void UELSSSaveDataUtility::SetUsingLoadoutPresetFlag(const UObject* WorldContextObject, int32 inPresetIndex, bool InFlag) {
 }
 
@@ -79,6 +82,4 @@ void UELSSSaveDataUtility::CopySSModeSaveDataToGameData(const UObject* WorldCont
 void UELSSSaveDataUtility::CopyGameDataToSSModeSaveData(const UObject* WorldContextObject, uint8 _saveDataAccessFlag) {
 }
 
-UELSSSaveDataUtility::UELSSSaveDataUtility() {
-}
 

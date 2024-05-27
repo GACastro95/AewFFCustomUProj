@@ -1,5 +1,10 @@
 #include "ELSSWidgetHUD_ItemInteract.h"
 
+UELSSWidgetHUD_ItemInteract::UELSSWidgetHUD_ItemInteract() {
+    this->PickupParts = NULL;
+    this->InventoryParts = NULL;
+}
+
 void UELSSWidgetHUD_ItemInteract::SetKeyConfig(EKeyMappingType InKeyMapType) {
 }
 
@@ -12,8 +17,4 @@ void UELSSWidgetHUD_ItemInteract::SetInteractItem(ESSInteractOperate InInteractO
 void UELSSWidgetHUD_ItemInteract::ApplyWatchGameMode() {
 }
 
-UELSSWidgetHUD_ItemInteract::UELSSWidgetHUD_ItemInteract() {
-    this->PickupParts = NULL;
-    this->InventoryParts = NULL;
-}
 

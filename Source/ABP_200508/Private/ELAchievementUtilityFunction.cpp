@@ -1,5 +1,8 @@
 #include "ELAchievementUtilityFunction.h"
 
+UELAchievementUtilityFunction::UELAchievementUtilityFunction() {
+}
+
 void UELAchievementUtilityFunction::UnlockCareerStackAchievment() {
 }
 
@@ -95,6 +98,4 @@ int32 UELAchievementUtilityFunction::AddAchievementCount(EELAchievementList _Ach
     return 0;
 }
 
-UELAchievementUtilityFunction::UELAchievementUtilityFunction() {
-}
 

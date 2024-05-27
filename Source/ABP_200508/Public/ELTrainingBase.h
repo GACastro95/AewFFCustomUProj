@@ -11,6 +11,7 @@ class ABP_200508_API UELTrainingBase : public UUserWidget {
     GENERATED_BODY()
 public:
     UELTrainingBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool Tick_UpdateTargetCharacter();

@@ -15,6 +15,7 @@
 
 class AActor;
 class AELSSPlayer;
+class AELSSWeaponThrowProjectile_FireBottle;
 class UAtomComponent;
 class UBoxComponent;
 class UELSSWheeledVehicleMovement;
@@ -194,10 +195,18 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 IsLockInputBrake: 1;
     
-public:
-    AELSSWheeledVehicle();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AELSSWeaponThrowProjectile_FireBottle*> FireBottles;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FireBottleTimeCount;
+    
+public:
+    AELSSWheeledVehicle(const FObjectInitializer& ObjectInitializer);
+
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void UpdateEngineSE(float engineRatio);
@@ -354,7 +363,7 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 AddDurability(int32 Value);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

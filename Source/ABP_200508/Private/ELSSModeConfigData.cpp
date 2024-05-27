@@ -11,3 +11,4 @@ UELSSModeConfigData::UELSSModeConfigData() {
     this->SSModeDebug_ConnectDev2 = false;
 }
 
+

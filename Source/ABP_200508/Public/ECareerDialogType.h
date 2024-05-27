@@ -13,6 +13,5 @@ enum class ECareerDialogType : uint8 {
     Dialog_SpecialReward,
     Dialog_FinishCareerMode,
     Dialog_GetAEWCash,
-    Dialog_MAX UMETA(Hidden),
 };
 

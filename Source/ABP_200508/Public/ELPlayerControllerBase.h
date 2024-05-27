@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELPlayerControllerBase : public AELGameCommonPlayerControllerBase {
     GENERATED_BODY()
 public:
-    AELPlayerControllerBase();
+    AELPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
+
 };
 

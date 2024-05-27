@@ -100,6 +100,5 @@ enum class ERA_Slot_RosterName : uint8 {
     RA_NAME_ROSTER_DIAMANTE,
     RA_NAME_ROSTER_IVELISSE,
     RA_NAME_ROSTER_REDVELVET,
-    RA_NAME_ROSTER_MAX UMETA(Hidden),
 };
 

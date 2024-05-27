@@ -27,9 +27,10 @@ protected:
     float FireRate;
     
 public:
-    ASample_ThirdPersonCharacter();
+    ASample_ThirdPersonCharacter(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
     UFUNCTION(BlueprintCallable)
     float TakeDamage(float DamageTaken, const FDamageEvent& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
     

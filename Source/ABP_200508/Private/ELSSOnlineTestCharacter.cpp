@@ -2,6 +2,18 @@
 #include "ELSSOnlineTestAttackProjectile.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSOnlineTestCharacter::AELSSOnlineTestCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WrestlerID = EWrestlerID_N::None;
+    this->CostumeID = 0;
+    this->joinID = 0;
+    this->HP = 0;
+    this->LocalHP = 0;
+    this->maxHP = 0;
+    this->dead = false;
+    this->AttackProjectileType = AELSSOnlineTestAttackProjectile::StaticClass();
+    this->AfterDeadDuration = 3.50f;
+}
+
 void AELSSOnlineTestCharacter::SpawnAttackProjectile_RPC_Implementation() {
 }
 
@@ -49,15 +61,4 @@ void AELSSOnlineTestCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProper
     DOREPLIFETIME(AELSSOnlineTestCharacter, HP);
 }
 
-AELSSOnlineTestCharacter::AELSSOnlineTestCharacter() {
-    this->WrestlerID = EWrestlerID_N::None;
-    this->CostumeID = 0;
-    this->joinID = 0;
-    this->HP = 0;
-    this->LocalHP = 0;
-    this->maxHP = 0;
-    this->dead = false;
-    this->AttackProjectileType = AELSSOnlineTestAttackProjectile::StaticClass();
-    this->AfterDeadDuration = 3.50f;
-}
 

@@ -10,6 +10,7 @@ class UELPlatformErrorUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELPlatformErrorUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 CreatePlatformShortErrorCodeNumber(const EELPlatformErrorID PlatformErrorID, const EELPlatformErrorType PlatformErrorType);
     

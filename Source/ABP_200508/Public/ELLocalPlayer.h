@@ -10,6 +10,7 @@ class UELLocalPlayer : public UELOSSLocalPlayer {
     GENERATED_BODY()
 public:
     UELLocalPlayer();
+
     UFUNCTION(BlueprintCallable)
     bool Login(UELEOSManager* ELEOSManager);
     

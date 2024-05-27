@@ -1,5 +1,11 @@
 #include "EOSNatP2PPacketBase.h"
 
+UEOSNatP2PPacketBase::UEOSNatP2PPacketBase() {
+    this->m_pcUserBase = NULL;
+    this->m_pcCachedTransfer = NULL;
+    this->m_Reliability = EEOSPacketReliability::UnreliableUnordered;
+}
+
 bool UEOSNatP2PPacketBase::SetupByCachedTransfer(UEOSUserBase* _pcUserBase, UEOSNatP2PCachedTransfer* _pcCachedTransfer, EEOSPacketReliability _Reliability) {
     return false;
 }
@@ -32,9 +38,4 @@ FString UEOSNatP2PPacketBase::GetSocketID() const {
     return TEXT("");
 }
 
-UEOSNatP2PPacketBase::UEOSNatP2PPacketBase() {
-    this->m_pcUserBase = NULL;
-    this->m_pcCachedTransfer = NULL;
-    this->m_Reliability = EEOSPacketReliability::UnreliableUnordered;
-}
 

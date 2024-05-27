@@ -23,6 +23,7 @@ protected:
     
 public:
     UEOSTitleStorageBase();
+
     UFUNCTION(BlueprintCallable)
     void SetRequestReadBytes(int32 _sRequestReadBytes);
     

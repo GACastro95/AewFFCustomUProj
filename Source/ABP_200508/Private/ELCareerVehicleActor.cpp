@@ -1,7 +1,8 @@
 #include "ELCareerVehicleActor.h"
 
-
-
-AELCareerVehicleActor::AELCareerVehicleActor() {
+AELCareerVehicleActor::AELCareerVehicleActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
+
+
 

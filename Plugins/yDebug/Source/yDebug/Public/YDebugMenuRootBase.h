@@ -31,6 +31,7 @@ protected:
     
 public:
     UYDebugMenuRootBase();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateSimpleMenuUIRecursive(const FYDebugMenuSimpleUIParam& _rstSubRootMenu, const FString& _strRegistKey);
     

@@ -1,5 +1,6 @@
 #include "ELSSManagerActor.h"
 
-AELSSManagerActor::AELSSManagerActor() {
+AELSSManagerActor::AELSSManagerActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -10,6 +10,7 @@ class UCharacterProfilesBase : public UCommonObject {
     GENERATED_BODY()
 public:
     UCharacterProfilesBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AELCharacter_Native* GetOwner() const;

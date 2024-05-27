@@ -15,6 +15,7 @@ public:
     FOnError onRequestError;
     
     UGLAPI_Base();
+
     UFUNCTION(BlueprintCallable)
     static FSSGameLiftConnectData GetGameLiftConnectData(const ESSGameLiftConnectType accsessTarget);
     

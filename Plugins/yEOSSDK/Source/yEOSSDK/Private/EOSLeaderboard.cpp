@@ -1,5 +1,8 @@
 #include "EOSLeaderboard.h"
 
+UEOSLeaderboard::UEOSLeaderboard() {
+}
+
 void UEOSLeaderboard::SetLeaderboardApiVersion(FEOSLeaderboardAPIVersionSettings _stAPIVerSetting) {
 }
 
@@ -27,6 +30,4 @@ bool UEOSLeaderboard::GetLeaderboardDefinitionDataFromCache(FEOSLeaderboardsDefi
     return false;
 }
 
-UEOSLeaderboard::UEOSLeaderboard() {
-}
 

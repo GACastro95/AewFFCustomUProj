@@ -1,5 +1,8 @@
 #include "EOSAntiCheatDedicatedClient.h"
 
+UEOSAntiCheatDedicatedClient::UEOSAntiCheatDedicatedClient() {
+}
+
 bool UEOSAntiCheatDedicatedClient::SetupInternalCallback() {
     return false;
 }
@@ -15,6 +18,4 @@ bool UEOSAntiCheatDedicatedClient::BeginSession() {
     return false;
 }
 
-UEOSAntiCheatDedicatedClient::UEOSAntiCheatDedicatedClient() {
-}
 

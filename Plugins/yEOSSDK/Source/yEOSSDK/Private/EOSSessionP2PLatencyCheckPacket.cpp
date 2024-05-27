@@ -1,5 +1,8 @@
 #include "EOSSessionP2PLatencyCheckPacket.h"
 
+UEOSSessionP2PLatencyCheckPacket::UEOSSessionP2PLatencyCheckPacket() {
+}
+
 void UEOSSessionP2PLatencyCheckPacket::Reset() {
 }
 
@@ -38,6 +41,4 @@ bool UEOSSessionP2PLatencyCheckPacket::CheckTimeout(float _fSeconds) {
     return false;
 }
 
-UEOSSessionP2PLatencyCheckPacket::UEOSSessionP2PLatencyCheckPacket() {
-}
 

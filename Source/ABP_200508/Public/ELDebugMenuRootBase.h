@@ -31,6 +31,7 @@ protected:
     
 public:
     UELDebugMenuRootBase();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateSimpleMenuUIRecursive(const FELDebugMenuSimpleUIParam& _rstParam, const FString& _strRegistKey);
     

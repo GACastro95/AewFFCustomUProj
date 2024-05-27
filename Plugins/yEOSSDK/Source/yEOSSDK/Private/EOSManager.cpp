@@ -1,5 +1,15 @@
 #include "EOSManager.h"
 
+UEOSManager::UEOSManager() {
+    this->m_pcActiveUserEOSAuth = NULL;
+    this->m_pcFileAccessor = NULL;
+    this->m_pcUserManager = NULL;
+    this->m_pcLobby = NULL;
+    this->m_pcSession = NULL;
+    this->m_pcTitleStorage = NULL;
+    this->m_pcAPIRequestManager = NULL;
+}
+
 bool UEOSManager::UpdateForDispose() {
     return false;
 }
@@ -145,13 +155,4 @@ bool UEOSManager::ConfirmNetworkRequest() {
     return false;
 }
 
-UEOSManager::UEOSManager() {
-    this->m_pcActiveUserEOSAuth = NULL;
-    this->m_pcFileAccessor = NULL;
-    this->m_pcUserManager = NULL;
-    this->m_pcLobby = NULL;
-    this->m_pcSession = NULL;
-    this->m_pcTitleStorage = NULL;
-    this->m_pcAPIRequestManager = NULL;
-}
 

@@ -52,9 +52,10 @@ private:
     AELSSPlayer* AbsorbMoveTo;
     
 public:
-    AELSSShieldBase();
+    AELSSShieldBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 private:
     UFUNCTION(BlueprintCallable)
     void StartAbsorbMovement(AActor* OtherActor);

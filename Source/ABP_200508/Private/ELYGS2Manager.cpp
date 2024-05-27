@@ -1,5 +1,9 @@
 #include "ELYGS2Manager.h"
 
+UELYGS2Manager::UELYGS2Manager() {
+    this->m_pNetworkObserver = NULL;
+}
+
 bool UELYGS2Manager::SetServerListData(const FString& Data) {
     return false;
 }
@@ -118,7 +122,4 @@ void UELYGS2Manager::ClearNetworkErrorFlag() {
 void UELYGS2Manager::ApplicationStatusChanged(EELApplicationStatus AppStatus) {
 }
 
-UELYGS2Manager::UELYGS2Manager() {
-    this->m_pNetworkObserver = NULL;
-}
 

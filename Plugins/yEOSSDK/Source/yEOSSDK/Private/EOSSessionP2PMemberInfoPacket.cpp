@@ -1,5 +1,8 @@
 #include "EOSSessionP2PMemberInfoPacket.h"
 
+UEOSSessionP2PMemberInfoPacket::UEOSSessionP2PMemberInfoPacket() {
+}
+
 bool UEOSSessionP2PMemberInfoPacket::UpdateMember(int32 _sIndex, int32 _sMemberIndex, const FString& _strProductUserID, bool _bRemvoed, bool _bDisconnected) {
     return false;
 }
@@ -24,6 +27,4 @@ bool UEOSSessionP2PMemberInfoPacket::AddMember(int32 _sMemberIndex, const FStrin
     return false;
 }
 
-UEOSSessionP2PMemberInfoPacket::UEOSSessionP2PMemberInfoPacket() {
-}
 

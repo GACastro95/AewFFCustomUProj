@@ -12,6 +12,7 @@ class CRIWARERUNTIME_API UCriWareFunctionLibrary : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UCriWareFunctionLibrary();
+
     UFUNCTION(BlueprintCallable)
     static void SetSpeakerAngleArray(ECriWareSpeakerSystem SpeakerSystem, const TArray<float>& Angles);
     

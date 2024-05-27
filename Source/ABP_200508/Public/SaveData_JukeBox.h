@@ -27,5 +27,6 @@ public:
     EJukeBoxFilterType m_JukeBoxFilter;
     
     USaveData_JukeBox();
+
 };
 

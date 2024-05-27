@@ -1,5 +1,9 @@
 #include "ELCareerCutSceneManager.h"
 
+AELCareerCutSceneManager::AELCareerCutSceneManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_pSequencePlayer = NULL;
+}
+
 void AELCareerCutSceneManager::SetState(ECareerCutSceneState State) {
 }
 
@@ -16,7 +20,4 @@ void AELCareerCutSceneManager::SetCameraHeightCorrection(ACineCameraActor* pCine
 void AELCareerCutSceneManager::CheckState(int32 _value) {
 }
 
-AELCareerCutSceneManager::AELCareerCutSceneManager() {
-    this->m_pSequencePlayer = NULL;
-}
 

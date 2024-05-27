@@ -13,6 +13,7 @@ class ELITE_GAME_API UEliteGameSettingsUtilityFunctions : public UBlueprintFunct
     GENERATED_BODY()
 public:
     UEliteGameSettingsUtilityFunctions();
+
     UFUNCTION(BlueprintCallable)
     static UDataTable* GetMovieTable();
     

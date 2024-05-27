@@ -4,3 +4,4 @@ UELSSAnimNotifyState_Attack::UELSSAnimNotifyState_Attack() {
     this->AttackHitId = 1;
 }
 
+

@@ -1,8 +1,6 @@
 #include "ELSSFootIK.h"
 
-
-
-UELSSFootIK::UELSSFootIK() {
+UELSSFootIK::UELSSFootIK(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bEnableIK = false;
     this->bEnableDrivingIK = false;
     this->FootBoneName_L = TEXT("J_Foot_L");
@@ -11,4 +9,7 @@ UELSSFootIK::UELSSFootIK() {
     this->bPlayerDisabled = false;
     this->LandingFootNum = 0;
 }
+
+
+
 

@@ -12,7 +12,8 @@ private:
     AActor* m_pControlledActor;
     
 public:
-    AELCareerMultiPadManager();
+    AELCareerMultiPadManager(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetControlledActor(AActor* pControlledActor);
     

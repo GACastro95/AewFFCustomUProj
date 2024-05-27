@@ -1,5 +1,36 @@
 #include "AtomComponent.h"
 
+UAtomComponent::UAtomComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ComponentTags.AddDefaulted(1);
+    this->bAutoActivate = true;
+    this->bUseAttachParentBound = true;
+    this->Sound = NULL;
+    this->Region = NULL;
+    this->bAutoDestroy = false;
+    this->bPersistAcrossLevelTransition = false;
+    this->bStopWhenOwnerDestroyed = true;
+    this->bIsUISound = false;
+    this->DefaultVolume = 1.00f;
+    this->bEnableMultipleSoundPlayback = false;
+    this->bUsePlaylist = false;
+    this->bIsMovable = true;
+    this->bCanStraddleAudioVolume = true;
+    this->bUseAudioVolume = true;
+    this->bUseAreaSoundVolume = true;
+    this->SoundObject = NULL;
+    this->DefaultBlockIndex = 0;
+    this->bIsOverrideAisacControlSettingsWithVelocity = false;
+    this->LoopSetting = EAtomLoopSetting::Inherited;
+    this->bOnly2DSound = false;
+    this->PlayWorld = NULL;
+    this->GameViewport = NULL;
+    this->DefaultSoundObject = NULL;
+    this->bOverrideAttenuation = false;
+    this->AttenuationSettings = NULL;
+    this->CueSheet = NULL;
+    this->AppliedSoundObject = NULL;
+}
+
 void UAtomComponent::StopWithoutReleaseTime() {
 }
 
@@ -230,31 +261,4 @@ void UAtomComponent::AttachAreaSoundVolume(AAtomAreaSoundVolume* sound_shape_vol
 void UAtomComponent::AdjustAttenuation(const FSoundAttenuationSettings& InAttenuationSettings) {
 }
 
-UAtomComponent::UAtomComponent() {
-    this->Sound = NULL;
-    this->Region = NULL;
-    this->bAutoDestroy = false;
-    this->bPersistAcrossLevelTransition = false;
-    this->bStopWhenOwnerDestroyed = true;
-    this->bIsUISound = false;
-    this->DefaultVolume = 1.00f;
-    this->bEnableMultipleSoundPlayback = false;
-    this->bUsePlaylist = false;
-    this->bIsMovable = true;
-    this->bCanStraddleAudioVolume = true;
-    this->bUseAudioVolume = true;
-    this->bUseAreaSoundVolume = true;
-    this->SoundObject = NULL;
-    this->DefaultBlockIndex = 0;
-    this->bIsOverrideAisacControlSettingsWithVelocity = false;
-    this->LoopSetting = EAtomLoopSetting::Inherited;
-    this->bOnly2DSound = false;
-    this->PlayWorld = NULL;
-    this->GameViewport = NULL;
-    this->DefaultSoundObject = NULL;
-    this->bOverrideAttenuation = false;
-    this->AttenuationSettings = NULL;
-    this->CueSheet = NULL;
-    this->AppliedSoundObject = NULL;
-}
 

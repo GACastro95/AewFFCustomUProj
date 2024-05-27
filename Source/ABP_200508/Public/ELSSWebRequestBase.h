@@ -24,6 +24,7 @@ public:
     FErrorRequestRetryEvent mErrRetryEvent;
     
     UELSSWebRequestBase();
+
     UFUNCTION(BlueprintCallable)
     bool RequestWebAPI();
     

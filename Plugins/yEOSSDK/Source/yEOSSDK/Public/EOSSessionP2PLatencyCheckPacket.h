@@ -8,6 +8,7 @@ class YEOSSDK_API UEOSSessionP2PLatencyCheckPacket : public UEOSSessionP2PPacket
     GENERATED_BODY()
 public:
     UEOSSessionP2PLatencyCheckPacket();
+
     UFUNCTION(BlueprintCallable)
     void Reset();
     

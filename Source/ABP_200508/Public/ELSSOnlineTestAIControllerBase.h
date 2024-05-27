@@ -7,7 +7,8 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELSSOnlineTestAIControllerBase : public AAIController {
     GENERATED_BODY()
 public:
-    AELSSOnlineTestAIControllerBase();
+    AELSSOnlineTestAIControllerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void StopOnlineAI();
     

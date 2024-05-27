@@ -1,6 +1,18 @@
 #include "ELNetGameState.h"
 #include "ELReplicationComponent.h"
 
+AELNetGameState::AELNetGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->ELNetRole = EELNetRole::ROLE_None;
+    this->ReplicationRPCComponent = CreateDefaultSubobject<UELReplicationComponent>(TEXT("RPCComponent"));
+    this->ReplicationPropertyComponent = CreateDefaultSubobject<UELReplicationComponent>(TEXT("ReplicationComponent"));
+    this->ReplicationManager = NULL;
+    this->WorldTimeSecondsFromStart = 0.00f;
+    this->WorldRealTimeSecondsFromStart = 0.00f;
+    this->RealDeltaTime = 0.00f;
+    this->ScaledRealDeltaTime = 0.00f;
+    this->RealDeltaTimeAverageInner = 0.10f;
+}
+
 bool AELNetGameState::ToggleUseFixedFrameRate() {
     return false;
 }
@@ -60,15 +72,4 @@ FELNetworkGUID AELNetGameState::GetNextReplicationGuid() {
     return FELNetworkGUID{};
 }
 
-AELNetGameState::AELNetGameState() {
-    this->ELNetRole = EELNetRole::ROLE_None;
-    this->ReplicationRPCComponent = CreateDefaultSubobject<UELReplicationComponent>(TEXT("RPCComponent"));
-    this->ReplicationPropertyComponent = CreateDefaultSubobject<UELReplicationComponent>(TEXT("ReplicationComponent"));
-    this->ReplicationManager = NULL;
-    this->WorldTimeSecondsFromStart = 0.00f;
-    this->WorldRealTimeSecondsFromStart = 0.00f;
-    this->RealDeltaTime = 0.00f;
-    this->ScaledRealDeltaTime = 0.00f;
-    this->RealDeltaTimeAverageInner = 0.10f;
-}
 

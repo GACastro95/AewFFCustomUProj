@@ -12,6 +12,7 @@ class ABP_200508_API UELSSDamageUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSDamageUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static ESSDamageReason ConvertToDamageReason(const UObject* WorldContextObject, ESSAttackType AttackType, bool IsPlayingSyncMotion, bool isWeaponAttack, bool isIgnoreGuard);
     

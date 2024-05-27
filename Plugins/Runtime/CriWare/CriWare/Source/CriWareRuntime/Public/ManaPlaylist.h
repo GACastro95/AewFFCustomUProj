@@ -24,6 +24,7 @@ protected:
     
 public:
     UManaPlaylist();
+
     UFUNCTION(BlueprintCallable)
     void RemoveAt(int32 Index);
     

@@ -1,5 +1,25 @@
 #include "ELSSWidgetHUD_ShieldGauge.h"
 
+UELSSWidgetHUD_ShieldGauge::UELSSWidgetHUD_ShieldGauge() {
+    this->ShieldGaugeMaterial = NULL;
+    this->ShieldGaugeDiffMaterial = NULL;
+    this->GaugeWidget = NULL;
+    this->TargetActor = NULL;
+    this->PlayerController = NULL;
+    this->ShieldDurableMaxValue = 0;
+    this->IdealShieldDurableValue = 0;
+    this->ShieldDurableValue = 0.00f;
+    this->ShieldDurableValueDuration = 0.00f;
+    this->ShieldDurableElapsed = 0.00f;
+    this->IsCompleteShieldDuration = false;
+    this->BarShowElapsed = 0.00f;
+    this->IsGaugeVisible = false;
+    this->MaxDistance = 1300.00f;
+    this->MinDistance = 300.00f;
+    this->MAXSCALE = 1.00f;
+    this->MINSCALE = 0.50f;
+}
+
 void UELSSWidgetHUD_ShieldGauge::UpdateShow(float inDistance, float InDeltaTime) {
 }
 
@@ -38,23 +58,4 @@ void UELSSWidgetHUD_ShieldGauge::ApplyShieldGauge(float InShieldDurableValueRati
 void UELSSWidgetHUD_ShieldGauge::ApplyShieldDurableValue(int32 InNowShieldDurableValue, int32 InShieldDurableValue, int32 InMaxShieldDurableValue) {
 }
 
-UELSSWidgetHUD_ShieldGauge::UELSSWidgetHUD_ShieldGauge() {
-    this->ShieldGaugeMaterial = NULL;
-    this->ShieldGaugeDiffMaterial = NULL;
-    this->GaugeWidget = NULL;
-    this->TargetActor = NULL;
-    this->PlayerController = NULL;
-    this->ShieldDurableMaxValue = 0;
-    this->IdealShieldDurableValue = 0;
-    this->ShieldDurableValue = 0.00f;
-    this->ShieldDurableValueDuration = 0.00f;
-    this->ShieldDurableElapsed = 0.00f;
-    this->IsCompleteShieldDuration = false;
-    this->BarShowElapsed = 0.00f;
-    this->IsGaugeVisible = false;
-    this->MaxDistance = 1300.00f;
-    this->MinDistance = 300.00f;
-    this->MAXSCALE = 1.00f;
-    this->MINSCALE = 0.50f;
-}
 

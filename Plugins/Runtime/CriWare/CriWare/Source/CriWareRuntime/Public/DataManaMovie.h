@@ -8,6 +8,7 @@ class CRIWARERUNTIME_API UDataManaMovie : public UManaMovie {
     GENERATED_BODY()
 public:
     UDataManaMovie();
+
     UFUNCTION(BlueprintCallable)
     void SetDataArray(UPARAM(Ref) TArray<uint8>& InDataArray);
     

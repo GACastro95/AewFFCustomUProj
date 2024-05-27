@@ -1,5 +1,8 @@
 #include "ELLadderMatchMiniGameManagerBase.h"
 
+AELLadderMatchMiniGameManagerBase::AELLadderMatchMiniGameManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELLadderMatchMiniGameManagerBase::SetProgress(int32 Progress) {
 }
 
@@ -20,6 +23,4 @@ void AELLadderMatchMiniGameManagerBase::HUDFinishedFailedAnim() {
 }
 
 
-AELLadderMatchMiniGameManagerBase::AELLadderMatchMiniGameManagerBase() {
-}
 

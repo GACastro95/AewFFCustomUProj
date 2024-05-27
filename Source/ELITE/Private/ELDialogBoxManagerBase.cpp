@@ -1,5 +1,9 @@
 #include "ELDialogBoxManagerBase.h"
 
+UELDialogBoxManagerBase::UELDialogBoxManagerBase() {
+}
+
+
 
 
 
@@ -35,6 +39,4 @@ void UELDialogBoxManagerBase::DisplayDialogBoxStackListEmpty() {
 }
 
 
-UELDialogBoxManagerBase::UELDialogBoxManagerBase() {
-}
 

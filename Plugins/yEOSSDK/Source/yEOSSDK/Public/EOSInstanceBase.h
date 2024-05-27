@@ -17,6 +17,7 @@ protected:
     
 public:
     UEOSInstanceBase();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EEOSObjectType GetObjectType() const;
     

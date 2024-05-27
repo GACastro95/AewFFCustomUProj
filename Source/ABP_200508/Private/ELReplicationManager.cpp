@@ -1,5 +1,16 @@
 #include "ELReplicationManager.h"
 
+UELReplicationManager::UELReplicationManager() {
+    this->NatP2P = NULL;
+    this->P2PRPCPacket = NULL;
+    this->P2PRPCTransfer = NULL;
+    this->SocketID = TEXT("RPC");
+    this->GuidSeed = 121;
+    this->CurrentGuidIndex = 256;
+    this->SentPacketSize = 0;
+    this->bEnabledReplication = true;
+}
+
 void UELReplicationManager::UpdateSessionUsers(UEOSSessionP2P* InSessionP2P) {
 }
 
@@ -84,14 +95,4 @@ bool UELReplicationManager::AddObject(FELNetworkGUID Guid, const UObject* Object
     return false;
 }
 
-UELReplicationManager::UELReplicationManager() {
-    this->NatP2P = NULL;
-    this->P2PRPCPacket = NULL;
-    this->P2PRPCTransfer = NULL;
-    this->SocketID = TEXT("RPC");
-    this->GuidSeed = 121;
-    this->CurrentGuidIndex = 256;
-    this->SentPacketSize = 0;
-    this->bEnabledReplication = true;
-}
 

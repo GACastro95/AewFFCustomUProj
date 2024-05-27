@@ -1,5 +1,11 @@
 #include "ELVictoryCutsceneManagerCore.h"
 
+AELVictoryCutsceneManagerCore::AELVictoryCutsceneManagerCore(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->IntractiveVictoryParameter = NULL;
+    this->VictoryCutsceneParameter = NULL;
+    this->VictoryCutsceneAnimation = NULL;
+}
+
 void AELVictoryCutsceneManagerCore::UnloadAssets() {
 }
 
@@ -36,9 +42,4 @@ AELCharacter_Native* AELVictoryCutsceneManagerCore::GetLoser() {
     return NULL;
 }
 
-AELVictoryCutsceneManagerCore::AELVictoryCutsceneManagerCore() {
-    this->IntractiveVictoryParameter = NULL;
-    this->VictoryCutsceneParameter = NULL;
-    this->VictoryCutsceneAnimation = NULL;
-}
 

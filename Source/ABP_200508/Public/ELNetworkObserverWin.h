@@ -8,6 +8,7 @@ class UELNetworkObserverWin : public UELNetworkObserverBase {
     GENERATED_BODY()
 public:
     UELNetworkObserverWin();
+
     UFUNCTION(BlueprintCallable)
     void OnWindowFocusChanged(bool _bIsFocused);
     

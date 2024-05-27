@@ -1,5 +1,9 @@
 #include "ELCrateManager.h"
 
+UELCrateManager::UELCrateManager() {
+    this->m_CrateItemDataTable = NULL;
+}
+
 void UELCrateManager::UpdateRandomSeed() {
 }
 
@@ -30,7 +34,4 @@ int32 UELCrateManager::GetEjectedItemsRate() {
 void UELCrateManager::GetAllEjectItemParamList(TArray<FCrateItemStateParam>& _outList) {
 }
 
-UELCrateManager::UELCrateManager() {
-    this->m_CrateItemDataTable = NULL;
-}
 

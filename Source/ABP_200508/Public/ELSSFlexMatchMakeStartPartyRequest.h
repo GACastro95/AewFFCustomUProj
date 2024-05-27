@@ -31,6 +31,7 @@ public:
     UELSSLobbyManager* LobbyManager;
     
     UELSSFlexMatchMakeStartPartyRequest();
+
 private:
     UFUNCTION(BlueprintCallable)
     void RequestResult(const int32 responseCode, const FString& responseData, eSSRequestResultType resultType);

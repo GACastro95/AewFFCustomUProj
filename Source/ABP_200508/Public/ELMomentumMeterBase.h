@@ -47,9 +47,10 @@ protected:
     float RemoveEndPercent_N;
     
 public:
-    UELMomentumMeterBase();
+    UELMomentumMeterBase(const FObjectInitializer& ObjectInitializer);
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SubMeterValue_Impl(float Value, bool Direct, ESpecialMovesType RecieveSpecialDamageType, bool RemoveMode);

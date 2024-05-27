@@ -24,6 +24,7 @@ class ABP_200508_API USaveDataObject_CareerMode : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_CareerMode();
+
     UFUNCTION(BlueprintCallable)
     bool WriteDataFromMyScout(UMyWrestlerDataObject* MyScout);
     

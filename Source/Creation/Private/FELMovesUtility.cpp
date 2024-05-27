@@ -1,5 +1,8 @@
 #include "FELMovesUtility.h"
 
+UFELMovesUtility::UFELMovesUtility() {
+}
+
 void UFELMovesUtility::SortPlayerStartArray(TArray<APlayerStart*>& PlayerStartArray) {
 }
 
@@ -21,6 +24,4 @@ void UFELMovesUtility::GetRateScale(const UAnimMontage* AnimationSequence, float
 void UFELMovesUtility::ConvertArray(FELMoves& _Moves, TArray<int32>& _OutArray) {
 }
 
-UFELMovesUtility::UFELMovesUtility() {
-}
 

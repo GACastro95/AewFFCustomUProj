@@ -1,5 +1,9 @@
 #include "ELEditItemListDataAssetBase.h"
 
+UELEditItemListDataAssetBase::UELEditItemListDataAssetBase() {
+    this->EditItemListTable = NULL;
+}
+
 void UELEditItemListDataAssetBase::LoadDataTable(const TSoftObjectPtr<UDataTable>& Source, UDataTable*& DataTable) {
 }
 
@@ -13,7 +17,4 @@ UDataTable* UELEditItemListDataAssetBase::GetEditItemDataTable() {
     return NULL;
 }
 
-UELEditItemListDataAssetBase::UELEditItemListDataAssetBase() {
-    this->EditItemListTable = NULL;
-}
 

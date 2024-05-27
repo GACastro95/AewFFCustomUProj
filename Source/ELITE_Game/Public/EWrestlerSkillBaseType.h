@@ -13,6 +13,5 @@ enum class EWrestlerSkillBaseType : uint8 {
     Type_006,
     Type_007,
     Type_008,
-    Type_MAX UMETA(Hidden),
 };
 

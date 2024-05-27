@@ -1,5 +1,8 @@
 #include "ELSSModeServiceParam.h"
 
+UELSSModeServiceParam::UELSSModeServiceParam() {
+}
+
 bool UELSSModeServiceParam::Setup(const FString& Data) {
     return false;
 }
@@ -32,6 +35,4 @@ FString UELSSModeServiceParam::GetBody(const FString& Language) const {
     return TEXT("");
 }
 
-UELSSModeServiceParam::UELSSModeServiceParam() {
-}
 

@@ -25,6 +25,7 @@ private:
     
 public:
     UELSaveIconScreenManager();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRunningIconScreen() const;
     

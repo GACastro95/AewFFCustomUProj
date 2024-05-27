@@ -41,5 +41,6 @@ public:
     float ConstGamma;
     
     UMaterialExpressionManaColorSpaceConverter();
+
 };
 

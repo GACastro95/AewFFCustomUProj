@@ -1,5 +1,8 @@
 #include "ELCareerUtilityFunction.h"
 
+UELCareerUtilityFunction::UELCareerUtilityFunction() {
+}
+
 void UELCareerUtilityFunction::UpdateSceneCapture(const UObject* WorldContextObject, ASceneCapture2D* pSceneCapture2D) {
 }
 
@@ -340,6 +343,4 @@ int32 UELCareerUtilityFunction::CalcMatchRewardDifficulity(const UObject* WorldC
     return 0;
 }
 
-UELCareerUtilityFunction::UELCareerUtilityFunction() {
-}
 

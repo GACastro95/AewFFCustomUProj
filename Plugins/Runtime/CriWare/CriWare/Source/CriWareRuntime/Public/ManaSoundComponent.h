@@ -61,7 +61,8 @@ protected:
     UManaPlayer* ManaPlayer;
     
 public:
-    UManaSoundComponent();
+    UManaSoundComponent(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetManaPlayer(UManaPlayer* NewManaPlayer);
     

@@ -1,5 +1,11 @@
 #include "ELSSWeaponMelee.h"
+#include "ESSWeaponType.h"
 #include "Net/UnrealNetwork.h"
+
+AELSSWeaponMelee::AELSSWeaponMelee(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->WeaponType = ESSWeaponType::Melee;
+    this->RemainDurability = 0;
+}
 
 void AELSSWeaponMelee::SetRemainDurability(int32 Durability) {
 }
@@ -21,7 +27,4 @@ void AELSSWeaponMelee::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AELSSWeaponMelee, RemainDurability);
 }
 
-AELSSWeaponMelee::AELSSWeaponMelee() {
-    this->RemainDurability = 0;
-}
 

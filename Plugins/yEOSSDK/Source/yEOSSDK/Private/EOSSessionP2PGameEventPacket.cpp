@@ -1,5 +1,8 @@
 #include "EOSSessionP2PGameEventPacket.h"
 
+UEOSSessionP2PGameEventPacket::UEOSSessionP2PGameEventPacket() {
+}
+
 bool UEOSSessionP2PGameEventPacket::Request(EEOSSessionGameEventType _enEOSSessionGameEventType) {
     return false;
 }
@@ -16,6 +19,4 @@ EEOSSessionGameEventRequestType UEOSSessionP2PGameEventPacket::GetGameEventReque
     return EEOSSessionGameEventRequestType::None;
 }
 
-UEOSSessionP2PGameEventPacket::UEOSSessionP2PGameEventPacket() {
-}
 

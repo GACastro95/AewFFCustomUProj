@@ -1,5 +1,22 @@
 #include "ELSSWidgetHUD_Interact.h"
 
+UELSSWidgetHUD_Interact::UELSSWidgetHUD_Interact() {
+    this->PlayInAnim = NULL;
+    this->PlayOutAnim = NULL;
+    this->GeneralInteract = NULL;
+    this->TeamTreasureBoxInteract = NULL;
+    this->LayoutWidget = NULL;
+    this->ItemInteract = NULL;
+    this->VehicleGauge = NULL;
+    this->TargetActor = NULL;
+    this->PlayerController = NULL;
+    this->InteractType = ESSInteractExecute::None;
+    this->PreInteractType = ESSInteractExecute::None;
+    this->OpacityElapsed = 0.00f;
+    this->IsOpacityAnimation = false;
+    this->FadeoutLengthTime = 0.25f;
+}
+
 void UELSSWidgetHUD_Interact::UpdateOpacityAnimation(float InDeltaTime) {
 }
 
@@ -29,20 +46,4 @@ void UELSSWidgetHUD_Interact::ApplyWatchGameMode() {
 }
 
 
-UELSSWidgetHUD_Interact::UELSSWidgetHUD_Interact() {
-    this->PlayInAnim = NULL;
-    this->PlayOutAnim = NULL;
-    this->GeneralInteract = NULL;
-    this->TeamTreasureBoxInteract = NULL;
-    this->LayoutWidget = NULL;
-    this->ItemInteract = NULL;
-    this->VehicleGauge = NULL;
-    this->TargetActor = NULL;
-    this->PlayerController = NULL;
-    this->InteractType = ESSInteractExecute::None;
-    this->PreInteractType = ESSInteractExecute::None;
-    this->OpacityElapsed = 0.00f;
-    this->IsOpacityAnimation = false;
-    this->FadeoutLengthTime = 0.25f;
-}
 

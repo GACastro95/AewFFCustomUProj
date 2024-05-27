@@ -13,6 +13,5 @@ enum class EOutGamePanelEventType : uint8 {
     EOutGamePanelEventType_MOVIE_PLAY_END,
     EOutGamePanelEventType_MOVIE_PLAY_FAILED,
     EOutGamePanelEventType_MOVIE_PLAY_ALL_END,
-    EOutGamePanelEventType_MAX UMETA(Hidden),
 };
 

@@ -9,6 +9,7 @@ class ABP_200508_API UELCareerHUBMenuOption : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerHUBMenuOption();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SaveAndExitOutAnimation();
     

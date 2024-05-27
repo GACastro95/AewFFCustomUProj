@@ -13,7 +13,8 @@ protected:
     FSSFgfMapAreaVolumeInfo FgfMapAreaInfo;
     
 public:
-    AELSSFgfMapAreaVolume();
+    AELSSFgfMapAreaVolume(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void OnEndOverlap(AActor* inOtherActor);
     

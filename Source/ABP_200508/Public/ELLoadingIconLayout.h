@@ -8,5 +8,6 @@ class ABP_200508_API UELLoadingIconLayout : public UUserWidget {
     GENERATED_BODY()
 public:
     UELLoadingIconLayout();
+
 };
 

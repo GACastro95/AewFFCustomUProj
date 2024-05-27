@@ -1,5 +1,8 @@
 #include "ELCAEAdjustDLC.h"
 
+UELCAEAdjustDLC::UELCAEAdjustDLC() {
+}
+
 void UELCAEAdjustDLC::Setup() {
 }
 
@@ -8,6 +11,4 @@ bool UELCAEAdjustDLC::DeleteDLCItem(FELWrestlerProfile_CutScene& NewCutsceneProf
     return false;
 }
 
-UELCAEAdjustDLC::UELCAEAdjustDLC() {
-}
 

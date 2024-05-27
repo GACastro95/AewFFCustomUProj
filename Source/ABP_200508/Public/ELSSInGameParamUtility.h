@@ -58,6 +58,7 @@ class ABP_200508_API UELSSInGameParamUtility : public UBlueprintFunctionLibrary 
     GENERATED_BODY()
 public:
     UELSSInGameParamUtility();
+
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static bool GetWrestlerTypeResourceParam(const UObject* WorldContextObject, ESSWrestlerType inWrestlerType, FSSWrestlerTypeResourceParam& OutRow);
     

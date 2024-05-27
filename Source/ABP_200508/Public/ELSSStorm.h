@@ -58,7 +58,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRandomStream RandomStream;
     
-    AELSSStorm();
+    AELSSStorm(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateZone(float timeSinceStart);
@@ -136,7 +137,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void AddSchedule(int32 phaseLevel);
     
-    
+
     // Fix for true pure virtual functions not being implemented
 };
 

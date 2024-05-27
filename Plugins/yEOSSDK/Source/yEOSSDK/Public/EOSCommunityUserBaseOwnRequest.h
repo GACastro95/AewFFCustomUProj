@@ -13,5 +13,6 @@ public:
     UEOSCommunityUserBase* m_pcUser;
     
     UEOSCommunityUserBaseOwnRequest();
+
 };
 

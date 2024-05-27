@@ -8,5 +8,6 @@ class CRIWARERUNTIME_API UManaSource : public UObject {
     GENERATED_BODY()
 public:
     UManaSource();
+
 };
 

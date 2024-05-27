@@ -9,6 +9,7 @@ class YEOSSDK_API UEOSSessionP2PAFGameFlowData : public UEOSLockebleCommon {
     GENERATED_BODY()
 public:
     UEOSSessionP2PAFGameFlowData();
+
     UFUNCTION(BlueprintCallable)
     void SetPossibleChangeGameFlowStep(EEOSSessionP2PAFGameFlowStep _enStep);
     

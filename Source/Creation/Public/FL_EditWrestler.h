@@ -9,6 +9,7 @@ class CREATION_API UFL_EditWrestler : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UFL_EditWrestler();
+
     UFUNCTION(BlueprintCallable)
     static FEditPartsCategoryData Append(const FEditPartsCategoryData& A, const FEditPartsCategoryData& B);
     

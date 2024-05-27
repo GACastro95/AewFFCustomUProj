@@ -53,6 +53,7 @@ private:
     
 public:
     UELOnlineRankCalculator();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSSPlayerRankFromPlayerRankPoint(int32 RankPoint, int32 LeaderboardRank) const;
     

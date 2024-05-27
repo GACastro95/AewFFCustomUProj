@@ -9,6 +9,7 @@ class UELSSGameRankDataUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELSSGameRankDataUtility();
+
     UFUNCTION(BlueprintCallable)
     static void SetSSPlayerRankExp(UPARAM(Ref) FELSSGameRankData& RankData, int32 Exp);
     

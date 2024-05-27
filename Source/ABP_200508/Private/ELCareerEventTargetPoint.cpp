@@ -1,5 +1,6 @@
 #include "ELCareerEventTargetPoint.h"
 
-AELCareerEventTargetPoint::AELCareerEventTargetPoint() {
+AELCareerEventTargetPoint::AELCareerEventTargetPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

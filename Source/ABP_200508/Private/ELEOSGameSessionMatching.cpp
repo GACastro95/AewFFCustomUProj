@@ -1,5 +1,21 @@
 #include "ELEOSGameSessionMatching.h"
 
+UELEOSGameSessionMatching::UELEOSGameSessionMatching() {
+    this->ELGameSession = NULL;
+    this->ELLobby = NULL;
+    this->EOSUser = NULL;
+    this->SetupComplete = false;
+    this->SearchSessionResultCount = 0;
+    this->CreateSessionMaxPlayerCount = 0;
+    this->UpdateMember = false;
+    this->UpdatePermission = false;
+    this->UpdatePositionData = false;
+    this->MatchingComplete = false;
+    this->bSearchSessionCancel = false;
+    this->UpdateMemberCount = false;
+    this->OnlineMatchCount = 0;
+}
+
 bool UELEOSGameSessionMatching::Setup(UELEOSGameSession* _GameSession, UELEOSLobby* _Lobby, UEOSUser* _User) {
     return false;
 }
@@ -94,19 +110,4 @@ bool UELEOSGameSessionMatching::CreateSession(const FEOSSessionSettings& _Settin
     return false;
 }
 
-UELEOSGameSessionMatching::UELEOSGameSessionMatching() {
-    this->ELGameSession = NULL;
-    this->ELLobby = NULL;
-    this->EOSUser = NULL;
-    this->SetupComplete = false;
-    this->SearchSessionResultCount = 0;
-    this->CreateSessionMaxPlayerCount = 0;
-    this->UpdateMember = false;
-    this->UpdatePermission = false;
-    this->UpdatePositionData = false;
-    this->MatchingComplete = false;
-    this->bSearchSessionCancel = false;
-    this->UpdateMemberCount = false;
-    this->OnlineMatchCount = 0;
-}
 

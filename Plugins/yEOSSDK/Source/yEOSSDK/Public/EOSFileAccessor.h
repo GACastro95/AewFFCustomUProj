@@ -11,6 +11,7 @@ class YEOSSDK_API UEOSFileAccessor : public UEOSCommon {
     GENERATED_BODY()
 public:
     UEOSFileAccessor();
+
     UFUNCTION(BlueprintCallable)
     static bool WriteBinaryToGameSavedDir(UEOSUserContentBinary* _pcBinary, const FString& _strFileName, const FString& _strSubDir);
     

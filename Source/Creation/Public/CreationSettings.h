@@ -8,7 +8,7 @@
 
 class USkeletalMesh;
 
-UCLASS(Blueprintable, Config=Engine, DefaultConfig, Config=Game)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class CREATION_API UCreationSettings : public UELDeveloperSettings {
     GENERATED_BODY()
 public:
@@ -61,6 +61,7 @@ public:
     int32 EditWrestlerSaveNumPerFile;
     
     UCreationSettings();
+
     UFUNCTION(BlueprintCallable)
     static TSoftObjectPtr<USkeletalMesh> GetCustomBodyAsset(const EGender Gender);
     

@@ -14,7 +14,8 @@ protected:
     AELSSPlayer* TargetPlayer;
     
 public:
-    AELSSSilhouetteActor();
+    AELSSSilhouetteActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool UpdatePose();
     

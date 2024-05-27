@@ -1,5 +1,11 @@
 #include "ELCareerEventSceneManager.h"
 
+AELCareerEventSceneManager::AELCareerEventSceneManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->m_pBackStageObject = NULL;
+    this->m_EventSceneResult = ECareerStoryResultCondition::NONE;
+    this->m_CurrentState = ECareerEventState::ECareerEventState_None;
+}
+
 
 void AELCareerEventSceneManager::SetUseEventMessageData(FCareerEventMessage _Data) {
 }
@@ -37,9 +43,4 @@ void AELCareerEventSceneManager::CheckState(int32 _value) {
 void AELCareerEventSceneManager::ChangeStateSnapShotPrepare() {
 }
 
-AELCareerEventSceneManager::AELCareerEventSceneManager() {
-    this->m_pBackStageObject = NULL;
-    this->m_EventSceneResult = ECareerStoryResultCondition::NONE;
-    this->m_CurrentState = ECareerEventState::ECareerEventState_None;
-}
 

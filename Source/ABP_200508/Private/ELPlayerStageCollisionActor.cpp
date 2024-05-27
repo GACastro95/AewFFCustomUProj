@@ -1,7 +1,9 @@
 #include "ELPlayerStageCollisionActor.h"
 #include "Components/CapsuleComponent.h"
 
-AELPlayerStageCollisionActor::AELPlayerStageCollisionActor() {
-    this->Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CollisionCapsule"));
+AELPlayerStageCollisionActor::AELPlayerStageCollisionActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CollisionCapsule"));
+    this->Capsule = (UCapsuleComponent*)RootComponent;
 }
+
 

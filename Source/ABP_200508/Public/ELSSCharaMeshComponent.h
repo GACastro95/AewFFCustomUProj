@@ -53,6 +53,7 @@ protected:
     bool bPerformCharacterMovement;
     
 public:
-    UELSSCharaMeshComponent();
+    UELSSCharaMeshComponent(const FObjectInitializer& ObjectInitializer);
+
 };
 

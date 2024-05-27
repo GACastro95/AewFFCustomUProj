@@ -11,6 +11,7 @@ class CREATION_API UCreationSettingsUtilityFunctions : public UBlueprintFunction
     GENERATED_BODY()
 public:
     UCreationSettingsUtilityFunctions();
+
     UFUNCTION(BlueprintCallable)
     static UDataTable* GetVoiceTypeTable();
     

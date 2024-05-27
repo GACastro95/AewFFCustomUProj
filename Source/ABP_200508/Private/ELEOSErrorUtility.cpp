@@ -1,5 +1,8 @@
 #include "ELEOSErrorUtility.h"
 
+UELEOSErrorUtility::UELEOSErrorUtility() {
+}
+
 int32 UELEOSErrorUtility::CreateEOSSessionShortErrorCodeNumber(const EELEOSSessionErrorType errType) {
     return 0;
 }
@@ -24,6 +27,4 @@ FString UELEOSErrorUtility::CreateEOSLoginErrorCode(const EELEOSLoginErrorType e
     return TEXT("");
 }
 
-UELEOSErrorUtility::UELEOSErrorUtility() {
-}
 

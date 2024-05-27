@@ -8,6 +8,7 @@ class ABP_200508_API UELSSWidgetWindow_Result : public UELSSWidgetBase {
     GENERATED_BODY()
 public:
     UELSSWidgetWindow_Result();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Update(float InDeltaTime);

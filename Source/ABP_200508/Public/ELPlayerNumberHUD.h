@@ -36,6 +36,7 @@ protected:
     
 public:
     UELPlayerNumberHUD();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetTagIcons(TArray<UELTagMatchIconBase*> InTagIcons);

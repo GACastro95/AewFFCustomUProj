@@ -89,6 +89,7 @@ protected:
     
 public:
     UELSSWidgetHUD_AbilitySlot();
+
     UFUNCTION(BlueprintCallable)
     void SetStateSlotButtonVisible(bool inIsVisible);
     

@@ -15,6 +15,7 @@ protected:
     
 public:
     UELCommonLayout();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RemoveAllChildWidgets();
     

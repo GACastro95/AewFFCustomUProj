@@ -12,6 +12,7 @@ class ABP_200508_API UELChallengeUtilityFunction : public UBlueprintFunctionLibr
     GENERATED_BODY()
 public:
     UELChallengeUtilityFunction();
+
     UFUNCTION(BlueprintCallable)
     static void UpdateTwoPlatoonCntRankMatch(int32 _cnt);
     

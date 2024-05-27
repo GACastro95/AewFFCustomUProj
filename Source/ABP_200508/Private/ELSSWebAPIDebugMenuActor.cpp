@@ -1,5 +1,8 @@
 #include "ELSSWebAPIDebugMenuActor.h"
 
+AELSSWebAPIDebugMenuActor::AELSSWebAPIDebugMenuActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELSSWebAPIDebugMenuActor::onSetSSSessionResultIngest(EYGS2ErrorType enYGS2ErrorType, UYGS2RequestBase* pcYGS2RequestBase) {
 }
 
@@ -21,6 +24,4 @@ void AELSSWebAPIDebugMenuActor::onGetSSMasterDataIngest(EYGS2ErrorType enYGS2Err
 void AELSSWebAPIDebugMenuActor::onGetSSInfoIngest(EYGS2ErrorType enYGS2ErrorType, UYGS2RequestBase* pcYGS2RequestBase) {
 }
 
-AELSSWebAPIDebugMenuActor::AELSSWebAPIDebugMenuActor() {
-}
 

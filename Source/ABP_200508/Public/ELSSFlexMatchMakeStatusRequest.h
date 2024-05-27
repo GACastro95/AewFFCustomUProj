@@ -23,6 +23,7 @@ public:
     FELSSFlexMatchMakeStatus_ResponseData ssResponseData;
     
     UELSSFlexMatchMakeStatusRequest();
+
 private:
     UFUNCTION(BlueprintCallable)
     void RequestResult(const int32 responseCode, const FString& responseData, eSSRequestResultType resultType);

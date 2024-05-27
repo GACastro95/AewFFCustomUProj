@@ -64,7 +64,8 @@ protected:
     FVector PrevInputVector;
     
 public:
-    UELSSHorseMovementComponent();
+    UELSSHorseMovementComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UFUNCTION(BlueprintCallable, Server, Unreliable)
     void SendForward(float inYaw, bool inBackMoving);

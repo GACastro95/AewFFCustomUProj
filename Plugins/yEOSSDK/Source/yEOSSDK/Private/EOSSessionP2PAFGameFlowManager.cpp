@@ -1,5 +1,8 @@
 #include "EOSSessionP2PAFGameFlowManager.h"
 
+UEOSSessionP2PAFGameFlowManager::UEOSSessionP2PAFGameFlowManager() {
+}
+
 bool UEOSSessionP2PAFGameFlowManager::UnregistGameFlowCallbackInterface(TScriptInterface<IEOSSessionP2PAFGameFlowCallbackInterface> _pcIntarface) {
     return false;
 }
@@ -32,6 +35,4 @@ bool UEOSSessionP2PAFGameFlowManager::ChangedGameFlowStepForAllPlayers(EEOSSessi
     return false;
 }
 
-UEOSSessionP2PAFGameFlowManager::UEOSSessionP2PAFGameFlowManager() {
-}
 

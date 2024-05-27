@@ -72,5 +72,6 @@ public:
     FChangeVSync_DebugDispatcher ChangeVSync_DebugDispatcher;
     
     UGraphicsOptions_MenuSettings();
+
 };
 

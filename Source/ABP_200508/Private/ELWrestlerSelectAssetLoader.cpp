@@ -1,5 +1,11 @@
 #include "ELWrestlerSelectAssetLoader.h"
 
+UELWrestlerSelectAssetLoader::UELWrestlerSelectAssetLoader() {
+    this->m_PositionIndex = -1;
+    this->m_WrestlerID = EWrestlerID_N::None;
+    this->m_PresetIndex = -1;
+}
+
 void UELWrestlerSelectAssetLoader::ReleaseAssets() {
 }
 
@@ -13,9 +19,4 @@ bool UELWrestlerSelectAssetLoader::IsLoadedOnlineAsset(const FWrestlerSetupParam
     return false;
 }
 
-UELWrestlerSelectAssetLoader::UELWrestlerSelectAssetLoader() {
-    this->m_PositionIndex = -1;
-    this->m_WrestlerID = EWrestlerID_N::None;
-    this->m_PresetIndex = -1;
-}
 

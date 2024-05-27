@@ -1,8 +1,5 @@
 #include "ManaTexture.h"
 
-void UManaTexture::SetMovieSource(UManaSource* InSource) {
-}
-
 UManaTexture::UManaTexture() {
     this->MovieSource = NULL;
     this->bRenderToTexture = false;
@@ -13,4 +10,8 @@ UManaTexture::UManaTexture() {
     this->bOverrideDimensions = false;
     this->OverrideFormat = PF_Unknown;
 }
+
+void UManaTexture::SetMovieSource(UManaSource* InSource) {
+}
+
 

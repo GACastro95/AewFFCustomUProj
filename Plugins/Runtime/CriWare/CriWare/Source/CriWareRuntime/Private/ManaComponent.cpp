@@ -1,5 +1,22 @@
 #include "ManaComponent.h"
 
+UManaComponent::UManaComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->Movie = NULL;
+    this->Playlist = NULL;
+    this->PlaylistIndex = 0;
+    this->bLoop = false;
+    this->AlphaTrack = 0;
+    this->AudioTrack = 0;
+    this->SubAudioTrack = -1;
+    this->ExtraAudioTrack = -1;
+    this->bSubtitlesEnabled = false;
+    this->SubtitlesChannel = 0;
+    this->SubtitlesEncoding = EManaSubtitlesEncoding::Default;
+    this->EndFrameAction = EManaFrameAction::Default;
+    this->PlaybackTimer = EManaPlaybackTimer::Default;
+    this->MaxFrameDrop = EManaMaxFrameDrop::Two;
+}
+
 bool UManaComponent::ToIndex(int32 Index) {
     return false;
 }
@@ -171,20 +188,4 @@ void UManaComponent::ChangeSubtitlesChannel(int32 Channel) {
 void UManaComponent::AdvanceTime(FTimespan DeltaTime) {
 }
 
-UManaComponent::UManaComponent() {
-    this->Movie = NULL;
-    this->Playlist = NULL;
-    this->PlaylistIndex = 0;
-    this->bLoop = false;
-    this->AlphaTrack = 0;
-    this->AudioTrack = 0;
-    this->SubAudioTrack = -1;
-    this->ExtraAudioTrack = -1;
-    this->bSubtitlesEnabled = false;
-    this->SubtitlesChannel = 0;
-    this->SubtitlesEncoding = EManaSubtitlesEncoding::Default;
-    this->EndFrameAction = EManaFrameAction::Default;
-    this->PlaybackTimer = EManaPlaybackTimer::Default;
-    this->MaxFrameDrop = EManaMaxFrameDrop::Two;
-}
 

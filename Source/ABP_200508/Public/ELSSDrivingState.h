@@ -24,6 +24,7 @@ protected:
     
 public:
     UELSSDrivingState();
+
     UFUNCTION(BlueprintCallable)
     void RequestDamageMotion(float inCauserYaw);
     

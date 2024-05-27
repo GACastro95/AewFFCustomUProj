@@ -8,5 +8,6 @@ class ABP_200508_API UYGraphicsOptions_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYGraphicsOptions_DebugMenu();
+
 };
 

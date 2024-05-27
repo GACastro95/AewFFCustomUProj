@@ -1,5 +1,11 @@
 #include "EOSSessionP2P.h"
 
+UEOSSessionP2P::UEOSSessionP2P() {
+    this->m_pcSession = NULL;
+    this->m_pcSessionInfo = NULL;
+    this->m_pcPacketQueue = NULL;
+}
+
 bool UEOSSessionP2P::Update() {
     return false;
 }
@@ -212,9 +218,4 @@ bool UEOSSessionP2P::AddUserMap(UEOSSessionUserPacketMap*& _pcUserPacketMap, UEO
     return false;
 }
 
-UEOSSessionP2P::UEOSSessionP2P() {
-    this->m_pcSession = NULL;
-    this->m_pcSessionInfo = NULL;
-    this->m_pcPacketQueue = NULL;
-}
 

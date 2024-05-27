@@ -27,6 +27,7 @@ public:
     FEOSAntiCheatIntegrityViolatedDispatcher ClientViolatedDispatcher;
     
     UEOSAntiCheatClient();
+
     UFUNCTION(BlueprintCallable)
     bool SetupInternalCallback();
     

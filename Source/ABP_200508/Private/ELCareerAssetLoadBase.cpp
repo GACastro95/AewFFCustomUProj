@@ -1,5 +1,8 @@
 #include "ELCareerAssetLoadBase.h"
 
+AELCareerAssetLoadBase::AELCareerAssetLoadBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELCareerAssetLoadBase::SetDataTable_TalkAnimation(UDataTable* pDataTable) {
 }
 
@@ -24,6 +27,4 @@ void AELCareerAssetLoadBase::LoadAsset_Event() {
 void AELCareerAssetLoadBase::LoadAsset_CareerMenu() {
 }
 
-AELCareerAssetLoadBase::AELCareerAssetLoadBase() {
-}
 

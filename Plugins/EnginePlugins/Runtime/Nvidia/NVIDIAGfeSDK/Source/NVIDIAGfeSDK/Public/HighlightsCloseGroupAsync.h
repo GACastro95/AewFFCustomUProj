@@ -18,6 +18,7 @@ public:
     FOnHighlightsOperationResultCallback OnFailure;
     
     UHighlightsCloseGroupAsync();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UHighlightsCloseGroupAsync* HighlightsCloseGroup(UObject* WorldContextObject, const FString& GroupId, const bool& DestroyHighlights);
     

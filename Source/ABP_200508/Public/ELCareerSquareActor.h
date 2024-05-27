@@ -18,7 +18,8 @@ protected:
     FString SquareID;
     
 public:
-    AELCareerSquareActor();
+    AELCareerSquareActor(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetSquareData(FCareerSquareData _Param);
     

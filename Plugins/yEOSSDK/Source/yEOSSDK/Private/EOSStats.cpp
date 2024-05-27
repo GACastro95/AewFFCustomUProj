@@ -1,5 +1,8 @@
 #include "EOSStats.h"
 
+UEOSStats::UEOSStats() {
+}
+
 void UEOSStats::SetApiVersion(FEOSStatsAPIVersionSettings _stAPIVerSetting) {
 }
 
@@ -43,6 +46,4 @@ bool UEOSStats::GetStat(FEOSStatData& _stStatData, int32 _sIndex) {
     return false;
 }
 
-UEOSStats::UEOSStats() {
-}
 

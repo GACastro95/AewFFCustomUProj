@@ -27,6 +27,7 @@ public:
     FNetworkConnectionStatusChanged NetworkConnectionStatusChanged;
     
     UELNetworkObserverBase();
+
     UFUNCTION(BlueprintCallable)
     void SetNetworkEquipment(EELNetworkStatus NetworkStatus);
     

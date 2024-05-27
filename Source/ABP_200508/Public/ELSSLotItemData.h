@@ -8,5 +8,6 @@ class ABP_200508_API UELSSLotItemData : public UObject {
     GENERATED_BODY()
 public:
     UELSSLotItemData();
+
 };
 

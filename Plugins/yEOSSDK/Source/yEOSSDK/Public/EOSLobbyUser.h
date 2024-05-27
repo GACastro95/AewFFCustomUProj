@@ -10,6 +10,7 @@ class YEOSSDK_API UEOSLobbyUser : public UEOSCommunityUserBase {
     GENERATED_BODY()
 public:
     UEOSLobbyUser();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTextBlocked() const;
     

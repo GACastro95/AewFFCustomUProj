@@ -1,5 +1,8 @@
 #include "ELSSSaveDataManager.h"
 
+AELSSSaveDataManager::AELSSSaveDataManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELSSSaveDataManager::SetLoadoutPresetName(int32 inPresetIndex, const FString& inPresetName) {
 }
 
@@ -63,6 +66,4 @@ int32 AELSSSaveDataManager::GetLoadoutPresetAbility(int32 inPresetIndex, int32 i
 void AELSSSaveDataManager::ConvertJsonTest() {
 }
 
-AELSSSaveDataManager::AELSSSaveDataManager() {
-}
 

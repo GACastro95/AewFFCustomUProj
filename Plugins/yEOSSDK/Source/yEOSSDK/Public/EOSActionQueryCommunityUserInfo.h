@@ -22,6 +22,7 @@ public:
     UEOSCommunityUserBase* User;
     
     UEOSActionQueryCommunityUserInfo();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UEOSActionQueryCommunityUserInfo* EOSActionQueryCommunityUserInfo(UObject* NewWorldContextObject, UEOSCommunityUserBase* NewUser);
     

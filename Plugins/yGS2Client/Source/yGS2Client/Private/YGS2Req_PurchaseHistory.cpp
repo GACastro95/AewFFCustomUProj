@@ -1,5 +1,8 @@
 #include "YGS2Req_PurchaseHistory.h"
 
+UYGS2Req_PurchaseHistory::UYGS2Req_PurchaseHistory() {
+}
+
 void UYGS2Req_PurchaseHistory::SetPurchaseData(const FString& _strPlatform, const FString& _strTransactionID, const FString& _strShopItemID, int32 _sGoldAdd, int32 _sGoldBefore, int32 _sGoldAfter, int32 _sCurrencyValue, const FString& _strCurrencyType) {
 }
 
@@ -21,6 +24,4 @@ int32 UYGS2Req_PurchaseHistory::GetAEWGoldAdd() const {
     return 0;
 }
 
-UYGS2Req_PurchaseHistory::UYGS2Req_PurchaseHistory() {
-}
 

@@ -20,5 +20,6 @@ public:
     FLoadMoney_DebugDelegate LoadMoney_DebugDelegate;
     
     UGameMoney_MenuSettings();
+
 };
 

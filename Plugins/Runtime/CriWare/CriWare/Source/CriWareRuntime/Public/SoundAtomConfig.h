@@ -12,6 +12,7 @@ public:
     FString AcfFilePath;
     
     USoundAtomConfig();
+
     UFUNCTION(BlueprintCallable)
     static TArray<FAtomCategoryInfoParam> GetCategoryInfoArray();
     

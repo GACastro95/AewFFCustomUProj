@@ -127,6 +127,7 @@ protected:
     
 public:
     UELSSWidgetHUD_WrestlerStatus();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateWrestlerHp(float InDeltaTime);

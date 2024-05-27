@@ -8,6 +8,5 @@ enum class ESSRequestVerbType : uint8 {
     ESSRequestVerbType_POST,
     ESSRequestVerbType_PUT,
     ESSRequestVerbType_NUM,
-    ESSRequestVerbType_MAX UMETA(Hidden),
 };
 

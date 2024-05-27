@@ -31,6 +31,7 @@ private:
     
 public:
     UELCrateManager();
+
     UFUNCTION(BlueprintCallable)
     void UpdateRandomSeed();
     

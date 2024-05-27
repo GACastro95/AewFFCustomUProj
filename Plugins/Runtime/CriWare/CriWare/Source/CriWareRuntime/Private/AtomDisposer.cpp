@@ -1,5 +1,6 @@
 #include "AtomDisposer.h"
 
-AAtomDisposer::AAtomDisposer() {
+AAtomDisposer::AAtomDisposer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

@@ -1,5 +1,8 @@
 #include "InGameMovesPreviewMenu.h"
 
+UInGameMovesPreviewMenu::UInGameMovesPreviewMenu(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void UInGameMovesPreviewMenu::SetSelectIndex(int32 _SelectIndex) {
 }
 
@@ -17,6 +20,4 @@ int32 UInGameMovesPreviewMenu::GetSelectIndex() {
 void UInGameMovesPreviewMenu::ChangeSequentialExecution() {
 }
 
-UInGameMovesPreviewMenu::UInGameMovesPreviewMenu() {
-}
 

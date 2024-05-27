@@ -1,5 +1,10 @@
 #include "EOSIDs.h"
 
+UEOSIDs::UEOSIDs() {
+    this->m_pcAuth = NULL;
+    this->m_pcRefAuth = NULL;
+}
+
 bool UEOSIDs::SetIDsWithInst(UEOSIDs* _pcEOSIDs) {
     return false;
 }
@@ -32,8 +37,4 @@ bool UEOSIDs::GetEOSAuth(UEOSAuth*& _ppAuth) {
     return false;
 }
 
-UEOSIDs::UEOSIDs() {
-    this->m_pcAuth = NULL;
-    this->m_pcRefAuth = NULL;
-}
 

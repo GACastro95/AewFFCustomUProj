@@ -1,6 +1,17 @@
 #include "AtomAudioVolume.h"
 #include "Net/UnrealNetwork.h"
 
+AAtomAudioVolume::AAtomAudioVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bColored = true;
+    this->Priority = 0.00f;
+    this->bEnabled = true;
+    this->CollisionProfile = TEXT("NoCollision");
+    this->bAutoSettingEntranceVolume = false;
+    this->bAutoSettingNeighbourAudioVolumeToEntranceVolume = false;
+    this->bOverrideAtomAudioVolume = true;
+    this->AtomAudioVolumeSettings = NULL;
+}
+
 void AAtomAudioVolume::SetReverbSettings(const FSnapshotSwitchSettings& NewReverbSettings) {
 }
 
@@ -30,13 +41,4 @@ void AAtomAudioVolume::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AAtomAudioVolume, bEnabled);
 }
 
-AAtomAudioVolume::AAtomAudioVolume() {
-    this->Priority = 0.00f;
-    this->bEnabled = true;
-    this->CollisionProfile = TEXT("NoCollision");
-    this->bAutoSettingEntranceVolume = false;
-    this->bAutoSettingNeighbourAudioVolumeToEntranceVolume = false;
-    this->bOverrideAtomAudioVolume = true;
-    this->AtomAudioVolumeSettings = NULL;
-}
 

@@ -1,5 +1,11 @@
 #include "ELSSAIController.h"
 
+AELSSAIController::AELSSAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bWantsPlayerState = true;
+    this->MoveToFgfGoalObstructed = false;
+    this->HateActorsMax = 1;
+}
+
 void AELSSAIController::UpdateHateActors(AActor* newActor) {
 }
 
@@ -89,8 +95,4 @@ AActor* AELSSAIController::CalcNewAITargetByHate() const {
     return NULL;
 }
 
-AELSSAIController::AELSSAIController() {
-    this->MoveToFgfGoalObstructed = false;
-    this->HateActorsMax = 1;
-}
 

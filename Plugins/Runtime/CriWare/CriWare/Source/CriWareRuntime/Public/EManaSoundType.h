@@ -7,6 +7,6 @@ enum class EManaSoundType : uint8 {
     Adx,
     HCA,
     Num,
-    Unknown = 0xFF,
+    Unknown = 255,
 };
 

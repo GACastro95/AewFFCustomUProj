@@ -1,5 +1,11 @@
 #include "TemplateScoutAsset.h"
 
+UTemplateScoutAsset::UTemplateScoutAsset() {
+    this->PoseID = 0;
+    this->DataVersion = 0;
+    this->LastDataVersion = 22082500;
+}
+
 FGuid UTemplateScoutAsset::GetUID() const {
     return FGuid{};
 }
@@ -12,9 +18,4 @@ FString UTemplateScoutAsset::GenerateFileName() const {
     return TEXT("");
 }
 
-UTemplateScoutAsset::UTemplateScoutAsset() {
-    this->PoseID = 0;
-    this->DataVersion = 0;
-    this->LastDataVersion = 22082500;
-}
 

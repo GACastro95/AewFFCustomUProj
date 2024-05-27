@@ -8,5 +8,6 @@ class ABP_200508_API UYScreenShot_DebugMenu : public UELDebugMenuRootBase {
     GENERATED_BODY()
 public:
     UYScreenShot_DebugMenu();
+
 };
 

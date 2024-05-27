@@ -34,6 +34,7 @@ private:
     
 public:
     UEOSVoice();
+
     UFUNCTION(BlueprintCallable)
     bool SetOutputVolume(const float _fVolume);
     

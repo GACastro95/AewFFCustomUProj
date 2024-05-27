@@ -22,7 +22,7 @@ enum class EEditTexTarget : uint8 {
     Hair,
     TShirt,
     Num,
-    ExtraParts_01 = 0x64,
+    ExtraParts_01 = 100,
     ExtraParts_02,
     ExtraParts_03,
     ExtraParts_04,

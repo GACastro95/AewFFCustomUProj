@@ -172,5 +172,6 @@ public:
     TArray<uint8> DummyData;
     
     USaveData_CareerMode();
+
 };
 

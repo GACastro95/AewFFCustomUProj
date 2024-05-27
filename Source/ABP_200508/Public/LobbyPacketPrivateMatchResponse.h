@@ -13,6 +13,7 @@ private:
     
 public:
     ULobbyPacketPrivateMatchResponse();
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetAccept() const;
     

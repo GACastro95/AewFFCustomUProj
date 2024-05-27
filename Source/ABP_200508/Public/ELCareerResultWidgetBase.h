@@ -8,5 +8,6 @@ class ABP_200508_API UELCareerResultWidgetBase : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerResultWidgetBase();
+
 };
 

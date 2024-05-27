@@ -8,5 +8,6 @@ class ABP_200508_API UELSSActionStateAttack : public UELSSActionStateBase {
     GENERATED_BODY()
 public:
     UELSSActionStateAttack();
+
 };
 

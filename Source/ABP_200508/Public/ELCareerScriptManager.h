@@ -7,6 +7,7 @@ UCLASS(Blueprintable)
 class ABP_200508_API AELCareerScriptManager : public AActor {
     GENERATED_BODY()
 public:
-    AELCareerScriptManager();
+    AELCareerScriptManager(const FObjectInitializer& ObjectInitializer);
+
 };
 

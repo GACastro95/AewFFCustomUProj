@@ -89,7 +89,8 @@ protected:
     float FootWareOffset_Female;
     
 public:
-    UELBuildBody();
+    UELBuildBody(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable)
     void SetupBuildBody(const FEditBodyParam& InParam, const EGender Gender, const bool bFootWearOffset);
     

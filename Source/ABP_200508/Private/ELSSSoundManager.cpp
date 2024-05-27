@@ -1,5 +1,11 @@
 #include "ELSSSoundManager.h"
 
+AELSSSoundManager::AELSSSoundManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->LoopSEUniqueIdGenerator = 0;
+    this->SoundData = NULL;
+    this->StatusIsLoadCompleted = false;
+}
+
 void AELSSSoundManager::StopLoopSE_Implementation(int32 loopSEUniqueId) {
 }
 
@@ -58,9 +64,4 @@ bool AELSSSoundManager::IsLoadCompleted() const {
 void AELSSSoundManager::CompleteLoading() {
 }
 
-AELSSSoundManager::AELSSSoundManager() {
-    this->LoopSEUniqueIdGenerator = 0;
-    this->SoundData = NULL;
-    this->StatusIsLoadCompleted = false;
-}
 

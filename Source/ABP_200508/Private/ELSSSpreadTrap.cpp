@@ -1,6 +1,11 @@
 #include "ELSSSpreadTrap.h"
 #include "Net/UnrealNetwork.h"
 
+AELSSSpreadTrap::AELSSSpreadTrap(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->OwnerActor = NULL;
+    this->WholeRadius = 145.00f;
+}
+
 void AELSSSpreadTrap::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
@@ -8,8 +13,4 @@ void AELSSSpreadTrap::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AELSSSpreadTrap, WholeRadius);
 }
 
-AELSSSpreadTrap::AELSSSpreadTrap() {
-    this->OwnerActor = NULL;
-    this->WholeRadius = 145.00f;
-}
 

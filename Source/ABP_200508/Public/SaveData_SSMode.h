@@ -27,5 +27,6 @@ public:
     FSSResultRecoveryData ResultRecoveryData;
     
     USaveData_SSMode();
+
 };
 

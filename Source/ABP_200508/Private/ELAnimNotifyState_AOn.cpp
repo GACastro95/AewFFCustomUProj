@@ -6,3 +6,4 @@ UELAnimNotifyState_AOn::UELAnimNotifyState_AOn() {
     this->bWeaponHitEffect_N = false;
 }
 
+

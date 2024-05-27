@@ -1,5 +1,9 @@
 #include "ELSSWebRequestBase.h"
 
+UELSSWebRequestBase::UELSSWebRequestBase() {
+    this->requestAPIType = eSSModeAPIType::eSSModeAPIType_None;
+}
+
 bool UELSSWebRequestBase::RequestWebAPI() {
     return false;
 }
@@ -18,7 +22,4 @@ bool UELSSWebRequestBase::AnyRequestWebAPI(const FELSSRequestData& activateData)
     return false;
 }
 
-UELSSWebRequestBase::UELSSWebRequestBase() {
-    this->requestAPIType = eSSModeAPIType::eSSModeAPIType_None;
-}
 

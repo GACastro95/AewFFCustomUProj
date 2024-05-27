@@ -8,5 +8,6 @@ class ELITE_CORE_API UCommonObject : public UObject {
     GENERATED_BODY()
 public:
     UCommonObject();
+
 };
 

@@ -12,6 +12,7 @@ class ABP_200508_API UELSSAnimNotifyBase : public UAnimNotify {
     GENERATED_BODY()
 public:
     UELSSAnimNotifyBase();
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UELSSActionStateBase* GetOwnerPlayerState(USkeletalMeshComponent* inMeshComp) const;

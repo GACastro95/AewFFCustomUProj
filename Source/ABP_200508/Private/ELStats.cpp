@@ -1,5 +1,15 @@
 #include "ELStats.h"
 
+UELStats::UELStats() {
+    this->EOSStats = NULL;
+    this->YGS2Manager = NULL;
+    this->bDirtySave = false;
+    this->bDirtyEOS = false;
+    this->bFirstQueryCompleted = false;
+    this->YGSStatsGroups.AddDefaulted(22);
+    this->RankMatchSeason = 0;
+}
+
 void UELStats::SetYGS2Manager(UELYGS2Manager* InManager) {
 }
 
@@ -108,13 +118,4 @@ bool UELStats::AddAndSetStats(const FString& Name, int32 Value, bool bIngestEOS)
     return false;
 }
 
-UELStats::UELStats() {
-    this->EOSStats = NULL;
-    this->YGS2Manager = NULL;
-    this->bDirtySave = false;
-    this->bDirtyEOS = false;
-    this->bFirstQueryCompleted = false;
-    this->YGSStatsGroups.AddDefaulted(22);
-    this->RankMatchSeason = 0;
-}
 

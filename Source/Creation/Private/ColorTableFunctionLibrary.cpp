@@ -1,5 +1,8 @@
 #include "ColorTableFunctionLibrary.h"
 
+UColorTableFunctionLibrary::UColorTableFunctionLibrary() {
+}
+
 void UColorTableFunctionLibrary::MakeEditColorPack(const int32 ColorSlotNo, const int32 DefaultColorID, const TArray<FEditColorGroupID> Groups, FEditColorPack& Out) {
 }
 
@@ -29,6 +32,4 @@ void UColorTableFunctionLibrary::BreakColorIDs2(const FIndexedColorList InIDs, i
 void UColorTableFunctionLibrary::BreakColorIDs1(const FIndexedColorList InIDs, int32& Color1) {
 }
 
-UColorTableFunctionLibrary::UColorTableFunctionLibrary() {
-}
 

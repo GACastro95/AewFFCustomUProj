@@ -19,6 +19,7 @@ private:
     
 public:
     UEOSNatP2PContentPacket();
+
     UFUNCTION(BlueprintCallable)
     bool SetContentBinary(UEOSUserContentBinary* _pcContent);
     

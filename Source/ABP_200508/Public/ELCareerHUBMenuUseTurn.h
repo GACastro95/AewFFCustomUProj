@@ -12,6 +12,7 @@ class ABP_200508_API UELCareerHUBMenuUseTurn : public UELCareerWidgetBase {
     GENERATED_BODY()
 public:
     UELCareerHUBMenuUseTurn();
+
     UFUNCTION(BlueprintCallable)
     void SetMenuTopState(bool IsTop);
     

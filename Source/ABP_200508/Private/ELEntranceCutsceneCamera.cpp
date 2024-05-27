@@ -1,5 +1,8 @@
 #include "ELEntranceCutsceneCamera.h"
 
+AELEntranceCutsceneCamera::AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 void AELEntranceCutsceneCamera::StopCameraOffsetHeight(float InterpolationTime) {
 }
 
@@ -13,6 +16,4 @@ float AELEntranceCutsceneCamera::GetCameraOffsetHeightRate() {
     return 0.0f;
 }
 
-AELEntranceCutsceneCamera::AELEntranceCutsceneCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-}
 

@@ -8,6 +8,7 @@ class ABP_200508_API USaveDataObject_GameSystem : public USaveDataObjectBase {
     GENERATED_BODY()
 public:
     USaveDataObject_GameSystem();
+
     UFUNCTION(BlueprintCallable)
     void SetSystem_NewsLatestVersion(int32 _value);
     

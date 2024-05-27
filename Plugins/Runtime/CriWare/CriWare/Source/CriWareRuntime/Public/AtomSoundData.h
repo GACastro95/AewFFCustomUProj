@@ -12,6 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundAtomCueSheet* CueSheet;
     
-    AAtomSoundData();
+    AAtomSoundData(const FObjectInitializer& ObjectInitializer);
+
 };
 

@@ -32,6 +32,7 @@ public:
     EExternalAccountType AccountType;
     
     UEOSActionQueryExternalAccountId();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static UEOSActionQueryExternalAccountId* EOSActionQueryExternalAccountId(UObject* NewWorldContextObject, UEOSUserManager* NewUserManager, const FString& NewLocalProductID, const FString& NewTargetProductID, EExternalAccountType NewAccountType);
     

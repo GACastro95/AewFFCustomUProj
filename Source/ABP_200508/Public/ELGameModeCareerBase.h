@@ -112,7 +112,8 @@ private:
     UELCareerDebugInfoWidget* m_pCareerDebugInfoWidget;
     
 public:
-    AELGameModeCareerBase();
+    AELGameModeCareerBase(const FObjectInitializer& ObjectInitializer);
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UCareerSnapshot* TakeSnapshotCaputureFrameBuffer();
     

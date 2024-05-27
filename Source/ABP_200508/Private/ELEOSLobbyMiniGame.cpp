@@ -1,5 +1,12 @@
 #include "ELEOSLobbyMiniGame.h"
 
+AELEOSLobbyMiniGame::AELEOSLobbyMiniGame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bSetup = false;
+    this->ELEOSLobby = NULL;
+    this->Step = EELEOSLobbyMiniGameSteps::None;
+    this->ELEOSLobbyMiniGameInfo = NULL;
+}
+
 bool AELEOSLobbyMiniGame::Setup(UEOSUser* InSelf, UELEOSLobby* InELEOSLobby, UELEOSLobbyMiniGameInfo* Info, FOnSetupCompleteEvent OnSetupComplete, FOnMiniGameNotify OnNotify, FOnMiniGameOwnerSelectInfo OnOwnerSelectInfo) {
     return false;
 }
@@ -26,10 +33,4 @@ UELEOSLobbyMiniGameInfo* AELEOSLobbyMiniGame::GetELEOSLobbyMiniGameInfo() const 
 void AELEOSLobbyMiniGame::Dispose() {
 }
 
-AELEOSLobbyMiniGame::AELEOSLobbyMiniGame() {
-    this->bSetup = false;
-    this->ELEOSLobby = NULL;
-    this->Step = EELEOSLobbyMiniGameSteps::None;
-    this->ELEOSLobbyMiniGameInfo = NULL;
-}
 

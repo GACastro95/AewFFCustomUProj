@@ -1,5 +1,6 @@
 #include "ELCareerEventComponent.h"
 
-UELCareerEventComponent::UELCareerEventComponent() {
+UELCareerEventComponent::UELCareerEventComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
+
 

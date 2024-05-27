@@ -57,6 +57,7 @@ class ABP_200508_API UELEOSUtility : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UELEOSUtility();
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void YGS2AnlyticsLobbyParams(const UObject* WorldContextObject, FYGS2AnalyticsData& AnalyticsData);
     

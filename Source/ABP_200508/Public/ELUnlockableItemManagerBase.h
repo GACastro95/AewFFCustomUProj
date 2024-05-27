@@ -1,6 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
+#include "ELDownloadContentBelongInSeasonParam.h"
+#include "ELDownloadContentBelongInSeasonType.h"
 #include "ELRefUnlockableItemInfo.h"
 #include "ELUnlockItemSaveData.h"
 #include "EUnlockItemCategory.h"
@@ -40,6 +42,12 @@ private:
     TMap<int32, FELRefUnlockableItemInfo> m_ItemInfoMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<int32, ELDownloadContentBelongInSeasonType> m_SeasonDataMap;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FELDownloadContentBelongInSeasonParam> m_SeasonParamList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<int32> m_BadgeIdSet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -47,6 +55,7 @@ private:
     
 public:
     UELUnlockableItemManagerBase();
+
     UFUNCTION(BlueprintCallable)
     void UnlockingItemList(TArray<int32> _targetIdList);
     
@@ -148,8 +157,14 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentAEW_CASH();
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    ELDownloadContentBelongInSeasonType GetBelongSeasonType(int32 _targetId) const;
+    
     UFUNCTION(BlueprintCallable)
     void GetAllUnlockableItemSaveData(TArray<FELUnlockItemSaveData>& ResultList);
+    
+    UFUNCTION(BlueprintCallable)
+    bool CheckNotEntitledDlc();
     
     UFUNCTION(BlueprintCallable)
     void CheckEntitlementedDlc(TArray<FText>& ReleasedItemName, TArray<FText>& ShortageGameVersionItemName, TArray<FText>& NotFoundItemName);

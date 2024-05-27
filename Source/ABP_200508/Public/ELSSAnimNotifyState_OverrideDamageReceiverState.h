@@ -14,5 +14,6 @@ protected:
     
 public:
     UELSSAnimNotifyState_OverrideDamageReceiverState();
+
 };
 

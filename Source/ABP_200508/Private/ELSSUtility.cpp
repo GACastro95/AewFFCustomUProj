@@ -1,6 +1,9 @@
 #include "ELSSUtility.h"
 #include "Templates/SubclassOf.h"
 
+UELSSUtility::UELSSUtility() {
+}
+
 void UELSSUtility::UpdateSSCurrentRuleStatus(const UObject* WorldContextObject) {
 }
 
@@ -528,6 +531,4 @@ bool UELSSUtility::CanUseSSMasterData(const UObject* WorldContextObject) {
     return false;
 }
 
-UELSSUtility::UELSSUtility() {
-}
 

@@ -1,5 +1,8 @@
 #include "SaveDataObject_PlayerData.h"
 
+USaveDataObject_PlayerData::USaveDataObject_PlayerData() {
+}
+
 void USaveDataObject_PlayerData::UpdateUnlockItemSaveData(FELUnlockItemSaveData _Param) {
 }
 
@@ -119,6 +122,4 @@ void USaveDataObject_PlayerData::AddPossessedItemQuantity(TArray<FAddPossessItem
 void USaveDataObject_PlayerData::AddAutoAddDlcTeamList(FGuid _teamId) {
 }
 
-USaveDataObject_PlayerData::USaveDataObject_PlayerData() {
-}
 

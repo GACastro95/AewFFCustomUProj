@@ -8,6 +8,7 @@ class ABP_200508_API UELCareerLayoutSceneWidgetBase : public UELCareerWidgetBase
     GENERATED_BODY()
 public:
     UELCareerLayoutSceneWidgetBase();
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void StartLayoutScene();
     

@@ -1,5 +1,8 @@
 #include "EOSSessionP2PHostMigrationPacket.h"
 
+UEOSSessionP2PHostMigrationPacket::UEOSSessionP2PHostMigrationPacket() {
+}
+
 bool UEOSSessionP2PHostMigrationPacket::SetSessionInfo(UEOSSessionInfo* _pcSessionInfo) {
     return false;
 }
@@ -48,6 +51,4 @@ EEOSSessionHostMigrationClientResultType UEOSSessionP2PHostMigrationPacket::GetC
     return EEOSSessionHostMigrationClientResultType::None;
 }
 
-UEOSSessionP2PHostMigrationPacket::UEOSSessionP2PHostMigrationPacket() {
-}
 

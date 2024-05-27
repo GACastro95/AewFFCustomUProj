@@ -1,5 +1,8 @@
 #include "ELShopItemWidgetBase.h"
 
+UELShopItemWidgetBase::UELShopItemWidgetBase() : UUserWidget(FObjectInitializer::Get()) {
+}
+
 void UELShopItemWidgetBase::GetUniqueID(const FShopGeneralItemManageData& _targetData, int32& OutResult) {
 }
 
@@ -18,6 +21,4 @@ void UELShopItemWidgetBase::GetName(const FShopGeneralItemManageData& _targetDat
 void UELShopItemWidgetBase::GetCurrencyType(const FShopGeneralItemManageData& _targetData, EUnlockableItemCurrencyType& OutResult) {
 }
 
-UELShopItemWidgetBase::UELShopItemWidgetBase() : UUserWidget(FObjectInitializer::Get()) {
-}
 

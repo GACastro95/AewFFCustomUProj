@@ -8,6 +8,7 @@ class ELITE_API UELShopCrateDetailWidgetBase : public UELMainMenuWidgetBase {
     GENERATED_BODY()
 public:
     UELShopCrateDetailWidgetBase();
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetMoveCursorValue(int32 _value);

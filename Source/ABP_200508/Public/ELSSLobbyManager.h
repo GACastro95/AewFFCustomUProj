@@ -40,6 +40,7 @@ protected:
     
 public:
     UELSSLobbyManager();
+
     UFUNCTION(BlueprintCallable)
     bool UpdateMemberAttributes();
     

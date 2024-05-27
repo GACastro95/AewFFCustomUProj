@@ -1,5 +1,8 @@
 #include "EOSFileAccessor.h"
 
+UEOSFileAccessor::UEOSFileAccessor() {
+}
+
 bool UEOSFileAccessor::WriteBinaryToGameSavedDir(UEOSUserContentBinary* _pcBinary, const FString& _strFileName, const FString& _strSubDir) {
     return false;
 }
@@ -32,6 +35,4 @@ bool UEOSFileAccessor::GetSaveDataPath(FString& _strPath, const FString& _strFil
     return false;
 }
 
-UEOSFileAccessor::UEOSFileAccessor() {
-}
 

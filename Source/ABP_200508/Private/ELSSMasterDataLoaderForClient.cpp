@@ -1,5 +1,8 @@
 #include "ELSSMasterDataLoaderForClient.h"
 
+AELSSMasterDataLoaderForClient::AELSSMasterDataLoaderForClient(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+}
+
 UYGS2RequestBase* AELSSMasterDataLoaderForClient::Request_GetSSMasterDataVersion(bool inDataVersionOnly) {
     return NULL;
 }
@@ -31,6 +34,4 @@ int32 AELSSMasterDataLoaderForClient::GetDataVersionFromResponse(UYGS2RequestBas
     return 0;
 }
 
-AELSSMasterDataLoaderForClient::AELSSMasterDataLoaderForClient() {
-}
 
