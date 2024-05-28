@@ -6,7 +6,7 @@
 #include "ELSSHorseMovementComponent.h"
 #include "Net/UnrealNetwork.h"
 
-AELSSHorse::AELSSHorse(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UELSSHorseMovementComponent>(TEXT("CharMoveComp"))) {
+AELSSHorse::AELSSHorse() {
     this->GetOffLocation = CreateDefaultSubobject<USceneComponent>(TEXT("GetOffLocation"));
     this->HitCollision_1 = CreateDefaultSubobject<UCapsuleComponent>(TEXT("HitCollision_1"));
     const FProperty* p_Mesh_Parent = GetClass()->FindPropertyByName("Mesh");
@@ -45,14 +45,6 @@ AELSSHorse::AELSSHorse(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->NeighDurabilityCost = 2;
     this->NeighHitDurabilityCost = 5;
     this->FireBottleTimeCount = 0.00f;
-    this->GetOffLocation->SetupAttachment(RootComponent);
-    this->HitCollision_1->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->HitCollision_2->SetupAttachment(RootComponent);
-    this->GetOnCollision->SetupAttachment(RootComponent);
-    this->RunOverCollision->SetupAttachment(RootComponent);
-    this->PhysicsOverlapDetectionComponent->SetupAttachment(RootComponent);
-    this->VehicleOwnerCollision->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->NeighAttackCollision->SetupAttachment(RootComponent);
 }
 
 void AELSSHorse::TryTramp(AActor* inReceiveActor, const FVector& inIdealLocation, float inTrampDuration) {

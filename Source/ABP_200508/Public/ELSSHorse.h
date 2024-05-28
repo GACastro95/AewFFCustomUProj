@@ -193,7 +193,7 @@ protected:
     float FireBottleTimeCount;
     
 public:
-    AELSSHorse(const FObjectInitializer& ObjectInitializer);
+    AELSSHorse();
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 

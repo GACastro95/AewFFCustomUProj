@@ -206,9 +206,6 @@ AELSSPlayer::AELSSPlayer(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->FgfBallRunTimeCount = 0.00f;
     this->PlayerDebugFlags = 0;
     this->DebugTickAutoInputPressInterval = 0.15f;
-    this->CharaBaseSceneComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<UELSSCharaMeshComponent>(this));
-    this->HitCollision->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<UELSSCharaMeshComponent>(this));
-    this->PhysicsCollision->SetupAttachment(RootComponent);
 }
 
 void AELSSPlayer::UseCurrentItem_Server_Implementation() {
