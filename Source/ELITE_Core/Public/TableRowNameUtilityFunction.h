@@ -9,22 +9,21 @@ UCLASS(Blueprintable)
 class ELITE_CORE_API UTableRowNameUtilityFunction : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
-    UTableRowNameUtilityFunction();
+    UTableRowNameUtilityFunction(const FObjectInitializer& ObjectInitializer);
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+        static FTableRowName ToTableRowName(const FName& RowName);
 
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static FTableRowName ToTableRowName(const FName& RowName);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    static FName ToFName(const FTableRowName& TableRowName);
-    
+        static FName ToFName(const FTableRowName& TableRowName);
+
     UFUNCTION(BlueprintCallable)
-    static FDataTableRowHandle ToDataTableRowHandle(const FTableRowName& TableRowName);
-    
+        static FDataTableRowHandle ToDataTableRowHandle(const FTableRowName& TableRowName);
+
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static bool IsEqual_FName(const FTableRowName& TableRowName, const FName& Name);
-    
+        static bool IsEqual_FName(const FTableRowName& TableRowName, const FName& Name);
+
     UFUNCTION(BlueprintCallable)
-    static void ConvertToNameSet(const TSet<FTableRowName>& TableRowNameSet, TSet<FName>& NameSet);
-    
+        static void ConvertToNameSet(const TSet<FTableRowName>& TableRowNameSet, TSet<FName>& NameSet);
+
 };
 
