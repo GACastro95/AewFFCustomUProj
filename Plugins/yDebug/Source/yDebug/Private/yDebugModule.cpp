@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_MODULE(FDefaultGameModuleImpl, yDebug);
+IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, yDebug);

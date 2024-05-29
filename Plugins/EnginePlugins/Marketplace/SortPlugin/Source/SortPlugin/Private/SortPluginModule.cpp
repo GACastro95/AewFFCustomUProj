@@ -1,3 +1,3 @@
 #include "Modules/ModuleManager.h"
 
-IMPLEMENT_MODULE(FDefaultGameModuleImpl, SortPlugin);
+IMPLEMENT_GAME_MODULE(FDefaultGameModuleImpl, SortPlugin);
